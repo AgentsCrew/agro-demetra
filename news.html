@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="bg" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Агро Блог, Новини & Пръскачен Календар | AGRO DEMETRA</title>
+  <meta name="description" content="Агрономически бюлетин, прогнози за болести и вредители от БАБХ, схеми за пръскане на лозя, овощни и зеленчуци от дипломирани агрономи на Агро Деметра.">
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              50: '#f0fdf4',
+              100: '#dcfce7',
+              200: '#bbf7d0',
+              300: '#86efac',
+              400: '#4ade80',
+              500: '#22c55e',
+              600: '#16a34a',
+              700: '#15803d',
+              800: '#166534',
+              900: '#14532d',
+              950: '#052e16',
+            },
+            harvest: {
+              400: '#fbbf24',
+              500: '#f59e0b',
+              600: '#d97706',
+              700: '#b45309'
+            }
+          },
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'system-ui', '-apple-system', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Google Fonts & Lucide Icons -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <style>
+    body { font-family: 'Plus Jakarta Sans', sans-serif; }
+  </style>
+</head>
+<body class="bg-slate-50 text-slate-800 antialiased selection:bg-brand-500 selection:text-white">
+
+  <!-- TOP ANNOUNCEMENT BAR -->
+  <div class="bg-gradient-to-r from-red-700 via-brand-950 to-red-800 text-white text-xs font-medium py-2 px-4 shadow-sm">
+    <div class="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-2 text-center sm:text-left">
+      <span class="flex items-center gap-2">
+        <span class="bg-amber-400 text-slate-950 font-black px-1.5 py-0.5 rounded text-[10px] uppercase">Седмичен Бюлетин</span>
+        <span>Сигнал № 14: Опасност от оидиум и сиво гниене при лозята в Тракийската низина.</span>
+      </span>
+      <a href="category.html?cat=fungicides" class="text-amber-200 hover:underline font-bold text-[11px]">Виж препоръчаните фунгициди ›</a>
+    </div>
+  </div>
+
+  <!-- MAIN HEADER -->
+  <header class="bg-white border-b border-slate-200 sticky top-0 z-40 shadow-sm">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3.5 flex items-center justify-between gap-4">
+      
+      <a href="index.html" class="flex items-center gap-3 shrink-0">
+        <div class="w-10 h-10 sm:w-11 sm:h-11 rounded-xl bg-gradient-to-tr from-brand-900 via-brand-700 to-emerald-500 flex items-center justify-center text-white shadow-md shadow-brand-900/20">
+          <i data-lucide="sprout" class="w-6 h-6 text-amber-300"></i>
+        </div>
+        <div>
+          <span class="text-xl sm:text-2xl font-black tracking-tight text-brand-950 font-sans">AGRO<span class="text-brand-600">DEMETRA</span></span>
+          <p class="text-[10px] font-semibold uppercase text-slate-400">Агрономически Бюлетин & Съвети</p>
+        </div>
+      </a>
+
+      <div class="flex items-center gap-4 text-xs font-bold">
+        <a href="index.html" class="text-slate-600 hover:text-brand-700">Начало</a>
+        <a href="category.html" class="text-slate-600 hover:text-brand-700">Каталог</a>
+        <a href="category.html" class="flex items-center gap-2 bg-brand-700 hover:bg-brand-800 text-white px-3.5 py-2 rounded-xl transition shadow-sm">
+          <i data-lucide="shopping-bag" class="w-4 h-4"></i>
+          <span>Към Магазина</span>
+        </a>
+      </div>
+
+    </div>
+  </header>
+
+  <!-- BLOG HERO & TOPICS -->
+  <section class="bg-white border-b border-slate-200 py-8">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="max-w-2xl">
+        <span class="text-xs font-bold text-brand-700 uppercase tracking-wider">Знание за Стопани</span>
+        <h1 class="text-3xl font-black text-slate-900 mt-1 tracking-tight">
+          Агро Блог, Новини & Схеми за Пръскане
+        </h1>
+        <p class="text-xs sm:text-sm text-slate-500 mt-2 leading-relaxed">
+          Практически съвети за растителна защита, пръскачни календари по месеци, биологичен контрол и дозировки от дипломираните агрономи на Агро Деметра.
+        </p>
+      </div>
+
+      <!-- Category Filter Pills -->
+      <div class="flex flex-wrap items-center gap-2 mt-6 pt-4 border-t border-slate-100 text-xs font-semibold">
+        <button onclick="filterNews('all', this)" class="news-tab px-3.5 py-1.5 rounded-xl bg-brand-700 text-white font-bold shadow-sm">
+          Всички статии (6)
+        </button>
+        <button onclick="filterNews('vines', this)" class="news-tab px-3.5 py-1.5 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-700 transition">
+          🍇 Лозарство
+        </button>
+        <button onclick="filterNews('orchards', this)" class="news-tab px-3.5 py-1.5 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-700 transition">
+          🍎 Овощарство
+        </button>
+        <button onclick="filterNews('vegetables', this)" class="news-tab px-3.5 py-1.5 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-700 transition">
+          🍅 Зеленчуци
+        </button>
+        <button onclick="filterNews('wine', this)" class="news-tab px-3.5 py-1.5 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-700 transition">
+          🍷 Винарство
+        </button>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- MAIN BLOG CONTENT -->
+  <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+      
+      <!-- ARTICLES COLUMN -->
+      <div class="lg:col-span-8 space-y-8">
+        
+        <!-- FEATURED ARTICLE 1 -->
+        <article class="news-item bg-white rounded-3xl border border-slate-200 overflow-hidden shadow-sm hover:shadow-xl transition duration-300 group flex flex-col" data-cat="vines">
+          <div class="relative h-72 sm:h-80 overflow-hidden">
+            <img 
+              src="https://images.unsplash.com/photo-1506377247377-2a5b3b417ebb?auto=format&fit=crop&w=1200&q=80" 
+              alt="Лозя" 
+              class="w-full h-full object-cover group-hover:scale-105 transition duration-500"
+            >
+            <span class="absolute top-4 left-4 bg-brand-700 text-white text-xs font-black uppercase px-3 py-1 rounded-lg shadow-md">
+              Лозарство · Водеща тема
+            </span>
+          </div>
+
+          <div class="p-6 sm:p-8 space-y-4">
+            <div class="flex items-center gap-3 text-xs text-slate-400">
+              <span class="font-bold text-slate-700">д-р агр. Стефан Димитров</span>
+              <span>•</span>
+              <span>15 Септември 2026</span>
+              <span>•</span>
+              <span class="flex items-center gap-1"><i data-lucide="clock" class="w-3.5 h-3.5"></i> 6 мин четене</span>
+            </div>
+
+            <h2 class="text-xl sm:text-2xl font-black text-slate-900 group-hover:text-brand-700 transition leading-snug">
+              Цялостна Схема за Защита на Лозята от Цъфтеж до Гроздобер: Стратегия срещу Оидиум и Сиво Гниене
+            </h2>
+
+            <p class="text-xs sm:text-sm text-slate-600 leading-relaxed">
+              Периодът преди гроздобера изисква строг контрол на сивото гниене (Botrytis cinerea) и брашнестата мана (Uncinula necator). Използването на системния фунгицид <strong>Луна Кеър ВГ</strong> (доза 250 г/дка) с 14-дневен карантинен срок и ботритицида <strong>Суич 62.5 ВГ</strong> осигурява безупречни гроздове с максимална захарност.
+            </p>
+
+            <div class="p-4 bg-emerald-50 rounded-2xl border border-emerald-200 flex flex-col sm:flex-row items-center justify-between gap-3">
+              <div class="text-xs">
+                <span class="font-bold text-brand-950 block">Препоръчан препарат в статията:</span>
+                <span class="text-slate-600">Луна Кеър ВГ (1 кг) – наличен за бърза доставка</span>
+              </div>
+              <a href="product.html?prod=luna" class="px-4 py-2 rounded-xl bg-brand-700 hover:bg-brand-800 text-white font-bold text-xs shrink-0 transition flex items-center gap-1">
+                <span>Виж продукта & дозите</span>
+                <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- ARTICLE 2: Есенно пръскане на овошки -->
+        <article class="news-item bg-white rounded-2xl border border-slate-200 overflow-hidden shadow-sm hover:shadow-lg transition p-6 flex flex-col sm:flex-row gap-6 items-start" data-cat="orchards">
+          <img src="https://images.unsplash.com/photo-1592417817098-8f3d6910985c?auto=format&fit=crop&w=400&q=80" class="w-full sm:w-48 h-36 object-cover rounded-xl shrink-0">
+          <div class="flex-1 space-y-2">
+            <div class="flex items-center gap-2 text-[11px] text-slate-400">
+              <span class="text-amber-700 font-bold bg-amber-50 px-2 py-0.5 rounded">Овощарство</span>
+              <span>12 Септември 2026</span>
+            </div>
+            <h3 class="text-base font-bold text-slate-900 hover:text-brand-700 transition">
+              Есенно Третиране на Овошки с Бордолезов Разтвор 20 ВП и Карбамид
+            </h3>
+            <p class="text-xs text-slate-500 leading-relaxed">
+              Пръскането при 70% окапване на листата с 1.5% Бордолезов разтвор и 5% карбамид унищожава зимуващите спори на струпясване по ябълките и сачмянка по костилковите овошки.
+            </p>
+            <a href="category.html?cat=fungicides" class="inline-block text-xs font-bold text-brand-700 hover:underline pt-1">
+              Купи Бордолезов разтвор (€ 8.20) ›
+            </a>
+          </div>
+        </article>
+
+        <!-- ARTICLE 3: Доматен молец в оранжерии -->
+        <article class="news-item bg-white rounded-2xl border border-slate-200 overflow-hidden shadow-sm hover:shadow-lg transition p-6 flex flex-col sm:flex-row gap-6 items-start" data-cat="vegetables">
+          <img src="https://images.unsplash.com/photo-1597362925123-77861d3fbac7?auto=format&fit=crop&w=400&q=80" class="w-full sm:w-48 h-36 object-cover rounded-xl shrink-0">
+          <div class="flex-1 space-y-2">
+            <div class="flex items-center gap-2 text-[11px] text-slate-400">
+              <span class="text-emerald-700 font-bold bg-emerald-50 px-2 py-0.5 rounded">Зеленчукопроизводство</span>
+              <span>09 Септември 2026</span>
+            </div>
+            <h3 class="text-base font-bold text-slate-900 hover:text-brand-700 transition">
+              Интегриран Контрол на Доматен Миниращ Молец (Tuta Absoluta)
+            </h3>
+            <p class="text-xs text-slate-500 leading-relaxed">
+              Схема за оранжерии с домати: поставяне на черни лепливи уловки с феромон и редуване на инсектицидите Кораген 20 СК и Моспилан 20 СП с минимален карантинен срок.
+            </p>
+            <a href="product.html?prod=mospilan" class="inline-block text-xs font-bold text-brand-700 hover:underline pt-1">
+              Виж Моспилан 20 СП (€ 9.80) ›
+            </a>
+          </div>
+        </article>
+
+        <!-- ARTICLE 4: Винарство и селектирани дрожди -->
+        <article class="news-item bg-white rounded-2xl border border-slate-200 overflow-hidden shadow-sm hover:shadow-lg transition p-6 flex flex-col sm:flex-row gap-6 items-start" data-cat="wine">
+          <img src="https://images.unsplash.com/photo-1510812431401-41d2bd2722f3?auto=format&fit=crop&w=400&q=80" class="w-full sm:w-48 h-36 object-cover rounded-xl shrink-0">
+          <div class="flex-1 space-y-2">
+            <div class="flex items-center gap-2 text-[11px] text-slate-400">
+              <span class="text-purple-700 font-bold bg-purple-50 px-2 py-0.5 rounded">Винарство & Ракия</span>
+              <span>04 Септември 2026</span>
+            </div>
+            <h3 class="text-base font-bold text-slate-900 hover:text-brand-700 transition">
+              Засяване на Селектирани Дрожди Lalvin и Температурни Режими
+            </h3>
+            <p class="text-xs text-slate-500 leading-relaxed">
+              Как да захраним дрождите EC-1118 в хладка вода с малко захар преди внасяне в джибрите и защо температурата не трябва да надвишава 28°C.
+            </p>
+            <a href="category.html?cat=wine" class="inline-block text-xs font-bold text-purple-700 hover:underline pt-1">
+              Разгледай винарската серия ›
+            </a>
+          </div>
+        </article>
+
+      </div>
+
+      <!-- SIDEBAR: CALENDAR & ASK AGRONOMIST -->
+      <aside class="lg:col-span-4 space-y-6">
+        
+        <!-- Interactive Monthly Spray Calendar -->
+        <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm space-y-4">
+          <div class="flex items-center gap-2 pb-3 border-b border-slate-100">
+            <div class="w-8 h-8 rounded-lg bg-amber-100 text-amber-800 flex items-center justify-center font-bold">
+              <i data-lucide="calendar" class="w-4 h-4"></i>
+            </div>
+            <div>
+              <h3 class="text-xs font-black uppercase tracking-wider text-slate-900">Пръскачен Календар: Септември</h3>
+              <p class="text-[10px] text-slate-400">Критични дати за третиране</p>
+            </div>
+          </div>
+
+          <div class="space-y-3 text-xs">
+            <div class="p-3 rounded-xl bg-slate-50 border border-slate-100">
+              <div class="flex justify-between font-bold text-slate-900">
+                <span>🍇 Лозя (преди беритба)</span>
+                <span class="text-brand-700">1 - 10 Септ</span>
+              </div>
+              <p class="text-[11px] text-slate-500 mt-1">Сиво гниене: Суич 62.5 ВГ или Луна Кеър. Съобразете 14-дневния карантинен срок.</p>
+            </div>
+
+            <div class="p-3 rounded-xl bg-slate-50 border border-slate-100">
+              <div class="flex justify-between font-bold text-slate-900">
+                <span>🍎 Късни ябълки & круши</span>
+                <span class="text-brand-700">10 - 20 Септ</span>
+              </div>
+              <p class="text-[11px] text-slate-500 mt-1">Плодов червей (2-ро пок.): Децис 100 ЕК или Кораген 20 СК.</p>
+            </div>
+
+            <div class="p-3 rounded-xl bg-slate-50 border border-slate-100">
+              <div class="flex justify-between font-bold text-slate-900">
+                <span>🌳 Листопад овошки</span>
+                <span class="text-brand-700">20 - 30 Септ</span>
+              </div>
+              <p class="text-[11px] text-slate-500 mt-1">Бордолезов разтвор 20 ВП (1.5%) + 5% карбамид за изгаряне на спорите.</p>
+            </div>
+          </div>
+
+          <a href="category.html" class="w-full bg-slate-100 hover:bg-slate-200 text-slate-800 font-bold text-xs py-2.5 rounded-xl transition flex items-center justify-center gap-1">
+            <i data-lucide="shopping-cart" class="w-3.5 h-3.5"></i> Поръчай препаратите за календара
+          </a>
+        </div>
+
+        <!-- Ask Agronomist Widget -->
+        <div class="bg-gradient-to-br from-brand-900 to-emerald-950 text-white p-6 rounded-2xl shadow-md space-y-4">
+          <div class="flex items-center gap-2">
+            <i data-lucide="message-square" class="w-5 h-5 text-amber-300"></i>
+            <div>
+              <h3 class="text-xs font-black uppercase tracking-wider">Попитай Дипломиран Агроном</h3>
+              <p class="text-[10px] text-emerald-300">Безплатен отговор до 2 часа</p>
+            </div>
+          </div>
+
+          <form onsubmit="event.preventDefault(); alert('Вашето запитване е прието! Наш агроном ще се свърже с Вас.');" class="space-y-2.5 text-xs text-slate-800">
+            <input 
+              type="text" 
+              required
+              placeholder="Вашето име..." 
+              class="w-full p-2.5 rounded-xl bg-white border border-emerald-300 focus:outline-none"
+            >
+            <input 
+              type="tel" 
+              required
+              placeholder="Телефон за връзка..." 
+              class="w-full p-2.5 rounded-xl bg-white border border-emerald-300 focus:outline-none"
+            >
+            <textarea 
+              rows="3" 
+              required
+              placeholder="Опишете проблема: каква е културата, какви симптоми или вредители виждате..." 
+              class="w-full p-2.5 rounded-xl bg-white border border-emerald-300 focus:outline-none"
+            ></textarea>
+            
+            <button type="submit" class="w-full bg-amber-400 hover:bg-amber-300 text-slate-950 font-black text-xs uppercase py-3 rounded-xl transition shadow-md">
+              Изпрати въпрос до агронома
+            </button>
+          </form>
+
+          <div class="pt-2 text-center text-[10px] text-emerald-200 border-t border-white/10">
+            Или звъннете директно: <a href="tel:0888123456" class="text-white font-bold underline">0888 123 456</a>
+          </div>
+        </div>
+
+      </aside>
+
+    </div>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="bg-slate-900 text-slate-400 py-10 border-t border-slate-800 text-xs">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-4">
+      <div class="flex items-center gap-2 text-white font-bold">
+        <i data-lucide="sprout" class="w-5 h-5 text-amber-300"></i>
+        <span>AGRO DEMETRA — Онлайн Агроаптека</span>
+      </div>
+      <p>© 2026 AGRO DEMETRA. Всички права запазени. Лиценз БАБХ № 1042-ПРЗ.</p>
+    </div>
+  </footer>
+
+  <script>
+    lucide.createIcons();
+
+    function filterNews(cat, btn) {
+      document.querySelectorAll('.news-tab').forEach(t => {
+        t.classList.remove('bg-brand-700', 'text-white', 'font-bold');
+        t.classList.add('bg-slate-100', 'text-slate-700');
+      });
+      btn.classList.add('bg-brand-700', 'text-white', 'font-bold');
+      btn.classList.remove('bg-slate-100', 'text-slate-700');
+
+      document.querySelectorAll('.news-item').forEach(item => {
+        if (cat === 'all' || item.getAttribute('data-cat') === cat) {
+          item.classList.remove('hidden');
+        } else {
+          item.classList.add('hidden');
+        }
+      });
+    }
+  </script>
+</body>
+</html>
