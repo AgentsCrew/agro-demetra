@@ -124,6 +124,9 @@
           <button onclick="filterCategory('herbicides', this)" class="cat-pill text-slate-300 hover:text-white px-3 py-1 rounded-lg">
             Хербициди
           </button>
+          <button onclick="filterCategory('biocides', this)" class="cat-pill text-slate-300 hover:text-white px-3 py-1 rounded-lg">
+            Биоциди & ДДД
+          </button>
           <button onclick="filterCategory('fertilizers', this)" class="cat-pill text-slate-300 hover:text-white px-3 py-1 rounded-lg">
             Торове
           </button>
@@ -219,11 +222,17 @@
         <!-- Filter: Производител -->
         <div class="pt-4 border-t border-slate-100">
           <h4 class="text-xs font-bold text-slate-900 mb-2">Производител</h4>
-          <div class="space-y-1.5 text-xs">
+          <div class="space-y-1.5 text-xs max-h-48 overflow-y-auto pr-1">
             <label class="flex items-center gap-2 cursor-pointer"><input type="checkbox" checked onchange="applyFacetedFilters()" class="brand-check rounded" value="bayer"> Bayer Crop Science</label>
-            <label class="flex items-center gap-2 cursor-pointer"><input type="checkbox" checked onchange="applyFacetedFilters()" class="brand-check rounded" value="syngenta"> Syngenta</label>
+            <label class="flex items-center gap-2 cursor-pointer"><input type="checkbox" checked onchange="applyFacetedFilters()" class="brand-check rounded" value="syngenta"> Syngenta AG</label>
+            <label class="flex items-center gap-2 cursor-pointer"><input type="checkbox" checked onchange="applyFacetedFilters()" class="brand-check rounded" value="basf"> BASF SE</label>
+            <label class="flex items-center gap-2 cursor-pointer"><input type="checkbox" checked onchange="applyFacetedFilters()" class="brand-check rounded" value="corteva"> Corteva Agriscience</label>
             <label class="flex items-center gap-2 cursor-pointer"><input type="checkbox" checked onchange="applyFacetedFilters()" class="brand-check rounded" value="nippon"> Nippon Soda</label>
-            <label class="flex items-center gap-2 cursor-pointer"><input type="checkbox" checked onchange="applyFacetedFilters()" class="brand-check rounded" value="manica"> Manica SpA</label>
+            <label class="flex items-center gap-2 cursor-pointer"><input type="checkbox" checked onchange="applyFacetedFilters()" class="brand-check rounded" value="manica"> Manica SpA / Агрия</label>
+            <label class="flex items-center gap-2 cursor-pointer"><input type="checkbox" checked onchange="applyFacetedFilters()" class="brand-check rounded" value="adama"> ADAMA Solutions</label>
+            <label class="flex items-center gap-2 cursor-pointer"><input type="checkbox" checked onchange="applyFacetedFilters()" class="brand-check rounded" value="yara"> Yara International</label>
+            <label class="flex items-center gap-2 cursor-pointer"><input type="checkbox" checked onchange="applyFacetedFilters()" class="brand-check rounded" value="amitica"> Амитица / Био</label>
+            <label class="flex items-center gap-2 cursor-pointer"><input type="checkbox" checked onchange="applyFacetedFilters()" class="brand-check rounded" value="sortovi"> Сортови Семена</label>
             <label class="flex items-center gap-2 cursor-pointer"><input type="checkbox" checked onchange="applyFacetedFilters()" class="brand-check rounded" value="lalvin"> Lallemand (Lalvin)</label>
           </div>
         </div>
@@ -249,345 +258,29 @@
 
           <div class="flex items-center gap-2 text-xs">
             <span class="text-slate-400">Подреди:</span>
-            <select class="bg-slate-50 border border-slate-300 rounded-lg px-2.5 py-1.5 font-bold text-slate-800 focus:outline-none">
-              <option>Най-популярни (Препоръчани)</option>
-              <option>Цена (ниска към висока)</option>
-              <option>Цена (висока към ниска)</option>
+            <select id="catalogSortSelect" onchange="applyFacetedFilters()" class="bg-slate-50 border border-slate-300 rounded-lg px-2.5 py-1.5 font-bold text-slate-800 focus:outline-none">
+              <option value="popular">Най-популярни (Препоръчани)</option>
+              <option value="price-asc">Цена (ниска към висока)</option>
+              <option value="price-desc">Цена (висока към ниска)</option>
+              <option value="rating">Най-висока оценка (★)</option>
+              <option value="name">Име (А-Я)</option>
             </select>
           </div>
         </div>
 
-        <!-- 8 REAL AGRO-PHARMACY PRODUCTS -->
-        <div id="productGrid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-          
-          <!-- Product 1: Луна Кеър ВГ (Luna Care) -->
-          <div class="product-item bg-white rounded-2xl border border-slate-200 hover:border-brand-500 shadow-sm hover:shadow-xl transition duration-300 flex flex-col group overflow-hidden relative" data-category="fungicides" data-brand="bayer" data-use="nonprof" data-crop="лозя,овощни">
-            <div class="absolute top-3 left-3 z-10 flex flex-col gap-1">
-              <span class="bg-brand-600 text-white text-[10px] font-black uppercase px-2 py-0.5 rounded shadow-sm">Топ Избор</span>
-              <span class="bg-emerald-100 text-emerald-900 border border-emerald-300 text-[9px] font-bold px-1.5 py-0.5 rounded">Непрофесионална кат.</span>
-            </div>
+        <!-- DYNAMIC AGRO-PHARMACY PRODUCTS GRID (230 PRODUCTS) -->
+        <div id="productGrid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 min-h-[400px]">
+          <!-- Populated dynamically by products-data.js -->
+        </div>
 
-            <a href="product.html?prod=luna" class="block relative h-52 bg-slate-50 overflow-hidden flex items-center justify-center p-4">
-              <img src="https://images.unsplash.com/photo-1585314062340-f1a5a7c9328d?auto=format&fit=crop&w=600&q=80" alt="Луна Кеър ВГ" class="max-h-full max-w-full object-contain group-hover:scale-105 transition duration-300">
-            </a>
-
-            <div class="p-4 flex-1 flex flex-col justify-between">
-              <div>
-                <div class="text-[10px] text-slate-400 uppercase font-semibold">Фунгицид · Bayer Crop Science</div>
-                <h3 class="text-sm font-bold text-slate-900 mt-1 group-hover:text-brand-700 transition leading-snug">
-                  <a href="product.html?prod=luna">Луна Кеър ВГ – системен фунгицид с флуопирам и фозетил-Al</a>
-                </h3>
-                <p class="text-[11px] text-slate-500 mt-1">Оидиум по лозя, струпясване по ябълки</p>
-                <div class="mt-2 text-[11px] text-slate-600">Доза: <strong>200 - 250 г/дка</strong> · Карантина: <strong>14 дни</strong></div>
-              </div>
-
-              <div class="mt-4 pt-3 border-t border-slate-100">
-                <div class="flex items-baseline justify-between mb-2">
-                  <div>
-                    <span class="text-lg font-black text-slate-900">€ 69.90</span>
-                    <span class="text-[10px] text-slate-400 block">136.71 лв. за 1 кг</span>
-                  </div>
-                  <span class="text-[10px] font-semibold text-emerald-700 bg-emerald-50 px-2 py-0.5 rounded-full">В наличност</span>
-                </div>
-                <div class="grid grid-cols-2 gap-2">
-                  <a href="product.html?prod=luna" class="py-2 text-center text-xs font-bold text-brand-700 bg-brand-50 hover:bg-brand-100 rounded-xl transition">
-                    Калкулатор
-                  </a>
-                  <button onclick="addToCartLive('Луна Кеър ВГ (1 кг)', 69.90)" class="py-2 text-center text-xs font-bold text-white bg-brand-700 hover:bg-brand-800 rounded-xl transition flex items-center justify-center gap-1">
-                    <i data-lucide="shopping-cart" class="w-3.5 h-3.5"></i> Купи
-                  </button>
-                </div>
-              </div>
-            </div>
+        <!-- PAGINATION CONTROLS -->
+        <div id="paginationControls" class="bg-white p-4 rounded-2xl border border-slate-200 shadow-sm flex flex-col sm:flex-row items-center justify-between gap-4 mt-8">
+          <div class="text-xs text-slate-500" id="paginationRangeText">
+            Показване на продукти
           </div>
-
-          <!-- Product 2: Моспилан 20 СП (Mospilan) -->
-          <div class="product-item bg-white rounded-2xl border border-slate-200 hover:border-brand-500 shadow-sm hover:shadow-xl transition duration-300 flex flex-col group overflow-hidden relative" data-category="insecticides" data-brand="nippon" data-use="nonprof" data-crop="домати,овощни,картофи">
-            <div class="absolute top-3 left-3 z-10 flex flex-col gap-1">
-              <span class="bg-amber-500 text-slate-950 text-[10px] font-black uppercase px-2 py-0.5 rounded shadow-sm">Хит Сезон</span>
-              <span class="bg-emerald-100 text-emerald-900 border border-emerald-300 text-[9px] font-bold px-1.5 py-0.5 rounded">Непрофесионална кат.</span>
-            </div>
-
-            <a href="product.html?prod=mospilan" class="block relative h-52 bg-slate-50 overflow-hidden flex items-center justify-center p-4">
-              <img src="https://images.unsplash.com/photo-1527842891421-42eec6e703ea?auto=format&fit=crop&w=600&q=80" alt="Моспилан 20 СП" class="max-h-full max-w-full object-contain group-hover:scale-105 transition duration-300">
-            </a>
-
-            <div class="p-4 flex-1 flex flex-col justify-between">
-              <div>
-                <div class="text-[10px] text-slate-400 uppercase font-semibold">Инсектицид · Nippon Soda</div>
-                <h3 class="text-sm font-bold text-slate-900 mt-1 group-hover:text-brand-700 transition leading-snug">
-                  <a href="product.html?prod=mospilan">Моспилан 20 СП – инсектицид с ацетамиприд срещу въшки и мухи</a>
-                </h3>
-                <p class="text-[11px] text-slate-500 mt-1">Листни въшки, колорадски бръмбар, белокрилки</p>
-                <div class="mt-2 text-[11px] text-slate-600">Доза: <strong>12.5 - 25 г/дка</strong> · Карантина: <strong>3-7 дни</strong></div>
-              </div>
-
-              <div class="mt-4 pt-3 border-t border-slate-100">
-                <div class="flex items-baseline justify-between mb-2">
-                  <div>
-                    <span class="text-lg font-black text-slate-900">€ 9.80</span>
-                    <span class="text-[10px] text-slate-400 block">19.17 лв. за 50 г</span>
-                  </div>
-                  <span class="text-[10px] font-semibold text-emerald-700 bg-emerald-50 px-2 py-0.5 rounded-full">В наличност</span>
-                </div>
-                <div class="grid grid-cols-2 gap-2">
-                  <a href="product.html?prod=mospilan" class="py-2 text-center text-xs font-bold text-brand-700 bg-brand-50 hover:bg-brand-100 rounded-xl transition">
-                    Калкулатор
-                  </a>
-                  <button onclick="addToCartLive('Моспилан 20 СП (50 г)', 9.80)" class="py-2 text-center text-xs font-bold text-white bg-brand-700 hover:bg-brand-800 rounded-xl transition flex items-center justify-center gap-1">
-                    <i data-lucide="shopping-cart" class="w-3.5 h-3.5"></i> Купи
-                  </button>
-                </div>
-              </div>
-            </div>
+          <div class="flex items-center gap-1.5 flex-wrap justify-center" id="paginationButtons">
+            <!-- Dynamically generated page buttons -->
           </div>
-
-          <!-- Product 3: Децис 100 ЕК (Decis 100 EC) -->
-          <div class="product-item bg-white rounded-2xl border border-slate-200 hover:border-brand-500 shadow-sm hover:shadow-xl transition duration-300 flex flex-col group overflow-hidden relative" data-category="insecticides" data-brand="bayer" data-use="prof" data-crop="овощни,лозя,житни">
-            <div class="absolute top-3 left-3 z-10 flex flex-col gap-1">
-              <span class="bg-red-600 text-white text-[10px] font-black uppercase px-2 py-0.5 rounded shadow-sm">ПРОМО -15%</span>
-              <span class="bg-amber-100 text-amber-900 border border-amber-300 text-[9px] font-bold px-1.5 py-0.5 rounded">II Професионална кат.</span>
-            </div>
-
-            <a href="product.html?prod=decis" class="block relative h-52 bg-slate-50 overflow-hidden flex items-center justify-center p-4">
-              <img src="https://images.unsplash.com/photo-1587293852726-70cdb56c2866?auto=format&fit=crop&w=600&q=80" alt="Децис 100 ЕК" class="max-h-full max-w-full object-contain group-hover:scale-105 transition duration-300">
-            </a>
-
-            <div class="p-4 flex-1 flex flex-col justify-between">
-              <div>
-                <div class="text-[10px] text-slate-400 uppercase font-semibold">Инсектицид · Bayer Crop Science</div>
-                <h3 class="text-sm font-bold text-slate-900 mt-1 group-hover:text-brand-700 transition leading-snug">
-                  <a href="product.html?prod=decis">Децис 100 ЕК – инсектицид с делтаметрин 100 г/л</a>
-                </h3>
-                <p class="text-[11px] text-slate-500 mt-1">Плодови червеи, молци, въшки, листозавивачки</p>
-                <div class="mt-2 text-[11px] text-slate-600">Доза: <strong>7.5 - 12.5 мл/дка</strong> · Карантина: <strong>3-7 дни</strong></div>
-              </div>
-
-              <div class="mt-4 pt-3 border-t border-slate-100">
-                <div class="flex items-baseline justify-between mb-2">
-                  <div>
-                    <div class="flex items-center gap-2">
-                      <span class="text-lg font-black text-red-600">€ 14.50</span>
-                      <span class="text-xs text-slate-400 line-through">€ 17.00</span>
-                    </div>
-                    <span class="text-[10px] text-slate-400 block">28.36 лв. за 50 мл</span>
-                  </div>
-                  <span class="text-[10px] font-semibold text-emerald-700 bg-emerald-50 px-2 py-0.5 rounded-full">В наличност</span>
-                </div>
-                <div class="grid grid-cols-2 gap-2">
-                  <a href="product.html?prod=decis" class="py-2 text-center text-xs font-bold text-brand-700 bg-brand-50 hover:bg-brand-100 rounded-xl transition">
-                    Калкулатор
-                  </a>
-                  <button onclick="addToCartLive('Децис 100 ЕК (50 мл)', 14.50)" class="py-2 text-center text-xs font-bold text-white bg-brand-700 hover:bg-brand-800 rounded-xl transition flex items-center justify-center gap-1">
-                    <i data-lucide="shopping-cart" class="w-3.5 h-3.5"></i> Купи
-                  </button>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Product 4: Раундъп Класик Про (Roundup Classic Pro) -->
-          <div class="product-item bg-white rounded-2xl border border-slate-200 hover:border-brand-500 shadow-sm hover:shadow-xl transition duration-300 flex flex-col group overflow-hidden relative" data-category="herbicides" data-brand="bayer" data-use="prof" data-crop="лозя,овощни,житни">
-            <div class="absolute top-3 left-3 z-10 flex flex-col gap-1">
-              <span class="bg-slate-900 text-white text-[10px] font-black uppercase px-2 py-0.5 rounded shadow-sm">Тотален Контрол</span>
-              <span class="bg-amber-100 text-amber-900 border border-amber-300 text-[9px] font-bold px-1.5 py-0.5 rounded">II Професионална кат.</span>
-            </div>
-
-            <a href="product.html?prod=roundup" class="block relative h-52 bg-slate-50 overflow-hidden flex items-center justify-center p-4">
-              <img src="https://images.unsplash.com/photo-1530595467537-0b5996c41f2d?auto=format&fit=crop&w=600&q=80" alt="Раундъп Класик Про" class="max-h-full max-w-full object-contain group-hover:scale-105 transition duration-300">
-            </a>
-
-            <div class="p-4 flex-1 flex flex-col justify-between">
-              <div>
-                <div class="text-[10px] text-slate-400 uppercase font-semibold">Хербицид · Bayer Crop Science</div>
-                <h3 class="text-sm font-bold text-slate-900 mt-1 group-hover:text-brand-700 transition leading-snug">
-                  <a href="product.html?prod=roundup">Раундъп Класик Про – тотален системен хербицид с глифозат 360 г/л</a>
-                </h3>
-                <p class="text-[11px] text-slate-500 mt-1">Пълен контрол на едногодишни и многогодишни плевели</p>
-                <div class="mt-2 text-[11px] text-slate-600">Доза: <strong>300 - 600 мл/дка</strong></div>
-              </div>
-
-              <div class="mt-4 pt-3 border-t border-slate-100">
-                <div class="flex items-baseline justify-between mb-2">
-                  <div>
-                    <span class="text-lg font-black text-slate-900">€ 11.90</span>
-                    <span class="text-[10px] text-slate-400 block">23.27 лв. за 1 л</span>
-                  </div>
-                  <span class="text-[10px] font-semibold text-emerald-700 bg-emerald-50 px-2 py-0.5 rounded-full">В наличност</span>
-                </div>
-                <div class="grid grid-cols-2 gap-2">
-                  <a href="product.html?prod=roundup" class="py-2 text-center text-xs font-bold text-brand-700 bg-brand-50 hover:bg-brand-100 rounded-xl transition">
-                    Калкулатор
-                  </a>
-                  <button onclick="addToCartLive('Раундъп Класик Про (1 л)', 11.90)" class="py-2 text-center text-xs font-bold text-white bg-brand-700 hover:bg-brand-800 rounded-xl transition flex items-center justify-center gap-1">
-                    <i data-lucide="shopping-cart" class="w-3.5 h-3.5"></i> Купи
-                  </button>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Product 5: Скор 250 ЕК (Score 250 EC) -->
-          <div class="product-item bg-white rounded-2xl border border-slate-200 hover:border-brand-500 shadow-sm hover:shadow-xl transition duration-300 flex flex-col group overflow-hidden relative" data-category="fungicides" data-brand="syngenta" data-use="nonprof" data-crop="лозя,овощни">
-            <div class="absolute top-3 left-3 z-10 flex flex-col gap-1">
-              <span class="bg-emerald-100 text-emerald-900 border border-emerald-300 text-[9px] font-bold px-1.5 py-0.5 rounded">Непрофесионална кат.</span>
-            </div>
-
-            <a href="product.html?prod=score" class="block relative h-52 bg-slate-50 overflow-hidden flex items-center justify-center p-4">
-              <img src="https://images.unsplash.com/photo-1592417817098-8f3d6910985c?auto=format&fit=crop&w=600&q=80" alt="Скор 250 ЕК" class="max-h-full max-w-full object-contain group-hover:scale-105 transition duration-300">
-            </a>
-
-            <div class="p-4 flex-1 flex flex-col justify-between">
-              <div>
-                <div class="text-[10px] text-slate-400 uppercase font-semibold">Фунгицид · Syngenta</div>
-                <h3 class="text-sm font-bold text-slate-900 mt-1 group-hover:text-brand-700 transition leading-snug">
-                  <a href="product.html?prod=score">СКОР 250 ЕК – фунгицид с дифеноконазол срещу оидиум и струпясване</a>
-                </h3>
-                <p class="text-[11px] text-slate-500 mt-1">Оидиум по лозя, струпясване по ябълка</p>
-                <div class="mt-2 text-[11px] text-slate-600">Доза: <strong>20 мл/дка</strong> · Карантина: <strong>14 дни</strong></div>
-              </div>
-
-              <div class="mt-4 pt-3 border-t border-slate-100">
-                <div class="flex items-baseline justify-between mb-2">
-                  <div>
-                    <span class="text-lg font-black text-slate-900">€ 5.60</span>
-                    <span class="text-[10px] text-slate-400 block">10.95 лв. за 20 мл</span>
-                  </div>
-                  <span class="text-[10px] font-semibold text-emerald-700 bg-emerald-50 px-2 py-0.5 rounded-full">В наличност</span>
-                </div>
-                <div class="grid grid-cols-2 gap-2">
-                  <a href="product.html?prod=score" class="py-2 text-center text-xs font-bold text-brand-700 bg-brand-50 hover:bg-brand-100 rounded-xl transition">
-                    Калкулатор
-                  </a>
-                  <button onclick="addToCartLive('Скор 250 ЕК (20 мл)', 5.60)" class="py-2 text-center text-xs font-bold text-white bg-brand-700 hover:bg-brand-800 rounded-xl transition flex items-center justify-center gap-1">
-                    <i data-lucide="shopping-cart" class="w-3.5 h-3.5"></i> Купи
-                  </button>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Product 6: Бордолезов разтвор 20 ВП (Bordeaux Mixture) -->
-          <div class="product-item bg-white rounded-2xl border border-slate-200 hover:border-brand-500 shadow-sm hover:shadow-xl transition duration-300 flex flex-col group overflow-hidden relative" data-category="fungicides" data-brand="manica" data-use="nonprof" data-crop="лозя,овощни,домати">
-            <div class="absolute top-3 left-3 z-10 flex flex-col gap-1">
-              <span class="bg-blue-700 text-white text-[10px] font-black uppercase px-2 py-0.5 rounded shadow-sm">Био Разрешен</span>
-              <span class="bg-emerald-100 text-emerald-900 border border-emerald-300 text-[9px] font-bold px-1.5 py-0.5 rounded">Меден Еталон</span>
-            </div>
-
-            <a href="product.html" class="block relative h-52 bg-slate-50 overflow-hidden flex items-center justify-center p-4">
-              <img src="https://images.unsplash.com/photo-1628352081506-83c43123ed6d?auto=format&fit=crop&w=600&q=80" alt="Бордолезов разтвор" class="max-h-full max-w-full object-contain group-hover:scale-105 transition duration-300">
-            </a>
-
-            <div class="p-4 flex-1 flex flex-col justify-between">
-              <div>
-                <div class="text-[10px] text-slate-400 uppercase font-semibold">Меден Фунгицид · Manica SpA</div>
-                <h3 class="text-sm font-bold text-slate-900 mt-1 group-hover:text-brand-700 transition leading-snug">
-                  <a href="product.html">Бордолезов разтвор 20 ВП – неутрализиран меден сулфат</a>
-                </h3>
-                <p class="text-[11px] text-slate-500 mt-1">Обикновена мана по лозя, сачмянка и ранно кафяво гниене</p>
-                <div class="mt-2 text-[11px] text-slate-600">Доза: <strong>1.5% (1.5 кг / 100 л)</strong></div>
-              </div>
-
-              <div class="mt-4 pt-3 border-t border-slate-100">
-                <div class="flex items-baseline justify-between mb-2">
-                  <div>
-                    <span class="text-lg font-black text-slate-900">€ 8.20</span>
-                    <span class="text-[10px] text-slate-400 block">16.04 лв. за 1 кг</span>
-                  </div>
-                  <span class="text-[10px] font-semibold text-emerald-700 bg-emerald-50 px-2 py-0.5 rounded-full">В наличност</span>
-                </div>
-                <div class="grid grid-cols-2 gap-2">
-                  <a href="product.html" class="py-2 text-center text-xs font-bold text-brand-700 bg-brand-50 hover:bg-brand-100 rounded-xl transition">
-                    Калкулатор
-                  </a>
-                  <button onclick="addToCartLive('Бордолезов разтвор 20 ВП (1 кг)', 8.20)" class="py-2 text-center text-xs font-bold text-white bg-brand-700 hover:bg-brand-800 rounded-xl transition flex items-center justify-center gap-1">
-                    <i data-lucide="shopping-cart" class="w-3.5 h-3.5"></i> Купи
-                  </button>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Product 7: Винени Дрожди Lalvin EC-1118 -->
-          <div class="product-item bg-white rounded-2xl border border-slate-200 hover:border-brand-500 shadow-sm hover:shadow-xl transition duration-300 flex flex-col group overflow-hidden relative" data-category="wine" data-brand="lalvin" data-use="nonprof" data-crop="лозя">
-            <div class="absolute top-3 left-3 z-10 flex flex-col gap-1">
-              <span class="bg-purple-700 text-white text-[10px] font-black uppercase px-2 py-0.5 rounded shadow-sm">Винарски Хит</span>
-            </div>
-
-            <a href="product.html" class="block relative h-52 bg-slate-50 overflow-hidden flex items-center justify-center p-4">
-              <img src="https://images.unsplash.com/photo-1510812431401-41d2bd2722f3?auto=format&fit=crop&w=600&q=80" alt="Винени Дрожди Lalvin" class="max-h-full max-w-full object-contain group-hover:scale-105 transition duration-300">
-            </a>
-
-            <div class="p-4 flex-1 flex flex-col justify-between">
-              <div>
-                <div class="text-[10px] text-slate-400 uppercase font-semibold">Винарство · Lallemand Canada</div>
-                <h3 class="text-sm font-bold text-slate-900 mt-1 group-hover:text-purple-700 transition leading-snug">
-                  <a href="product.html">Селектирани винени дрожди Lalvin EC-1118 (500 г)</a>
-                </h3>
-                <p class="text-[11px] text-slate-500 mt-1">Шампанска раса за чиста ферментация и рестарт при спиране</p>
-                <div class="mt-2 text-[11px] text-slate-600">Доза: <strong>20 - 30 г на 100 л мъст</strong></div>
-              </div>
-
-              <div class="mt-4 pt-3 border-t border-slate-100">
-                <div class="flex items-baseline justify-between mb-2">
-                  <div>
-                    <span class="text-lg font-black text-slate-900">€ 24.50</span>
-                    <span class="text-[10px] text-slate-400 block">47.92 лв. за 500 г</span>
-                  </div>
-                  <span class="text-[10px] font-semibold text-emerald-700 bg-emerald-50 px-2 py-0.5 rounded-full">В наличност</span>
-                </div>
-                <div class="grid grid-cols-2 gap-2">
-                  <a href="product.html" class="py-2 text-center text-xs font-bold text-purple-700 bg-purple-50 hover:bg-purple-100 rounded-xl transition">
-                    Детайли
-                  </a>
-                  <button onclick="addToCartLive('Винени дрожди Lalvin EC-1118', 24.50)" class="py-2 text-center text-xs font-bold text-white bg-purple-700 hover:bg-purple-800 rounded-xl transition flex items-center justify-center gap-1">
-                    <i data-lucide="shopping-cart" class="w-3.5 h-3.5"></i> Купи
-                  </button>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Product 8: Семена Домати Розово Сърце БГ -->
-          <div class="product-item bg-white rounded-2xl border border-slate-200 hover:border-brand-500 shadow-sm hover:shadow-xl transition duration-300 flex flex-col group overflow-hidden relative" data-category="seeds" data-brand="bayer" data-use="nonprof" data-crop="домати">
-            <div class="absolute top-3 left-3 z-10 flex flex-col gap-1">
-              <span class="bg-amber-600 text-white text-[10px] font-black uppercase px-2 py-0.5 rounded shadow-sm">Български Сорт</span>
-            </div>
-
-            <a href="product.html" class="block relative h-52 bg-slate-50 overflow-hidden flex items-center justify-center p-4">
-              <img src="https://images.unsplash.com/photo-1597362925123-77861d3fbac7?auto=format&fit=crop&w=600&q=80" alt="Семена за домати Розово сърце" class="max-h-full max-w-full object-contain group-hover:scale-105 transition duration-300">
-            </a>
-
-            <div class="p-4 flex-1 flex flex-col justify-between">
-              <div>
-                <div class="text-[10px] text-slate-400 uppercase font-semibold">Семена · Сортови Семена</div>
-                <h3 class="text-sm font-bold text-slate-900 mt-1 group-hover:text-brand-700 transition leading-snug">
-                  <a href="product.html">Семена за Домати Розово сърце БГ (1 г / ~250 семена)</a>
-                </h3>
-                <p class="text-[11px] text-slate-500 mt-1">Традиционен гигантски български домат, изключителен вкус</p>
-                <div class="mt-2 text-[11px] text-slate-600">Кълняемост: <strong>92%</strong> · За оранжерии и открито</div>
-              </div>
-
-              <div class="mt-4 pt-3 border-t border-slate-100">
-                <div class="flex items-baseline justify-between mb-2">
-                  <div>
-                    <span class="text-lg font-black text-slate-900">€ 2.20</span>
-                    <span class="text-[10px] text-slate-400 block">4.30 лв. пакет</span>
-                  </div>
-                  <span class="text-[10px] font-semibold text-emerald-700 bg-emerald-50 px-2 py-0.5 rounded-full">В наличност</span>
-                </div>
-                <div class="grid grid-cols-2 gap-2">
-                  <a href="product.html" class="py-2 text-center text-xs font-bold text-brand-700 bg-brand-50 hover:bg-brand-100 rounded-xl transition">
-                    Детайли
-                  </a>
-                  <button onclick="addToCartLive('Семена Домати Розово сърце', 2.20)" class="py-2 text-center text-xs font-bold text-white bg-brand-700 hover:bg-brand-800 rounded-xl transition flex items-center justify-center gap-1">
-                    <i data-lucide="shopping-cart" class="w-3.5 h-3.5"></i> Купи
-                  </button>
-                </div>
-              </div>
-            </div>
-          </div>
-
         </div>
 
       </section>
@@ -606,30 +299,60 @@
     </div>
   </footer>
 
-  <!-- Filter & Search Script -->
+  <!-- Products Database -->
+  <script src="js/products-data.js"></script>
+
+  <!-- Filter, Search & Pagination Script -->
   <script>
     lucide.createIcons();
 
-    // Check URL parameters on page load
+    let currentCategory = 'all';
+    let currentPage = 1;
+    const PAGE_SIZE = 18;
+    let filteredProducts = [];
+
+    const categoryTitles = {
+      'all': 'Всички продукти',
+      'prz': 'Растителна Защита (ПРЗ)',
+      'fungicides': 'Фунгициди (Противогъбични)',
+      'insecticides': 'Инсектициди & Акарициди',
+      'herbicides': 'Хербициди (Плевели)',
+      'biocides': 'Биоциди & ДДД Препарати',
+      'fertilizers': 'Торове & Биостимулатори',
+      'seeds': 'Зеленчукови & Цветни Семена',
+      'wine': 'Винарство & Ракия (Енология)'
+    };
+
     window.addEventListener('DOMContentLoaded', () => {
       const params = new URLSearchParams(window.location.search);
       const cat = params.get('cat');
       const q = params.get('q');
 
       if (cat) {
-        filterCategory(cat);
+        currentCategory = cat;
+        // Highlight active pill
+        document.querySelectorAll('.cat-pill').forEach(btn => {
+          if (btn.getAttribute('onclick')?.includes(`'${cat}'`)) {
+            btn.classList.add('bg-brand-700', 'text-white', 'font-bold');
+            btn.classList.remove('text-slate-300');
+          } else {
+            btn.classList.remove('bg-brand-700', 'text-white', 'font-bold');
+            btn.classList.add('text-slate-300');
+          }
+        });
       }
+
       if (q) {
         document.getElementById('liveCatalogSearch').value = q;
-        filterProductsByKeyword();
       }
-    });
 
-    let currentCategory = 'all';
+      applyFacetedFilters(1);
+    });
 
     function filterCategory(cat, btn) {
       currentCategory = cat;
-      
+      currentPage = 1;
+
       // Update top pill active state
       if (btn) {
         document.querySelectorAll('.cat-pill').forEach(p => {
@@ -640,79 +363,343 @@
         btn.classList.remove('text-slate-300');
       }
 
-      applyFacetedFilters();
+      // Update titles
+      const title = categoryTitles[cat] || 'Всички продукти';
+      document.getElementById('breadcrumbCurrent').innerText = title;
+      document.getElementById('categoryPageTitle').innerText = `${title} – Продуктов Каталог`;
+
+      applyFacetedFilters(1);
     }
 
     function filterProductsByKeyword() {
-      applyFacetedFilters();
+      applyFacetedFilters(1);
     }
 
-    function applyFacetedFilters() {
-      const keyword = document.getElementById('liveCatalogSearch').value.toLowerCase().trim();
-      const nonProfChecked = document.getElementById('filterNonProf').checked;
-      const profChecked = document.getElementById('filterProf').checked;
+    function applyFacetedFilters(page = 1) {
+      if (!window.AGRO_PRODUCTS || !window.AGRO_PRODUCTS.length) {
+        console.warn('AGRO_PRODUCTS database not loaded');
+        return;
+      }
 
-      // Selected crops
+      const keyword = (document.getElementById('liveCatalogSearch')?.value || '').toLowerCase().trim();
+      const nonProfChecked = document.getElementById('filterNonProf')?.checked ?? true;
+      const profChecked = document.getElementById('filterProf')?.checked ?? true;
+
+      // Selected crops & brands
+      const allCropCheckboxes = document.querySelectorAll('.crop-check');
       const selectedCrops = Array.from(document.querySelectorAll('.crop-check:checked')).map(cb => cb.value);
-      // Selected brands
+      const allCropsChecked = selectedCrops.length === allCropCheckboxes.length;
+
+      const allBrandCheckboxes = document.querySelectorAll('.brand-check');
       const selectedBrands = Array.from(document.querySelectorAll('.brand-check:checked')).map(cb => cb.value);
+      const allBrandsChecked = selectedBrands.length === allBrandCheckboxes.length;
 
-      const items = document.querySelectorAll('.product-item');
-      let visibleCount = 0;
+      const sortOrder = document.getElementById('catalogSortSelect')?.value || 'popular';
 
-      items.forEach(item => {
-        const itemCat = item.getAttribute('data-category');
-        const itemBrand = item.getAttribute('data-brand');
-        const itemUse = item.getAttribute('data-use');
-        const itemCrops = item.getAttribute('data-crop') || '';
-        const itemText = item.innerText.toLowerCase();
-
-        // Check category match
-        let matchCat = (currentCategory === 'all' || currentCategory === 'prz' || itemCat === currentCategory);
-        if (currentCategory === 'prz' && (itemCat === 'fungicides' || itemCat === 'insecticides' || itemCat === 'herbicides')) {
-          matchCat = true;
+      // 1. Filter
+      filteredProducts = window.AGRO_PRODUCTS.filter(p => {
+        // Category check
+        if (currentCategory !== 'all') {
+          if (currentCategory === 'prz') {
+            if (!['fungicides', 'insecticides', 'herbicides'].includes(p.category)) return false;
+          } else if (p.category !== currentCategory) {
+            return false;
+          }
         }
 
-        // Check use category
-        let matchUse = false;
-        if (itemUse === 'nonprof' && nonProfChecked) matchUse = true;
-        if (itemUse === 'prof' && profChecked) matchUse = true;
+        // Use category check
+        if (p.useCategory === 'nonprof' && !nonProfChecked) return false;
+        if (p.useCategory === 'prof' && !profChecked) return false;
 
-        // Check keyword
-        let matchKey = !keyword || itemText.includes(keyword);
-
-        // Check crop match (if any crop matches)
-        let matchCrop = selectedCrops.length === 0;
-        selectedCrops.forEach(c => {
-          if (itemCrops.includes(c)) matchCrop = true;
-        });
-
-        // Check brand match
-        let matchBrand = selectedBrands.length === 0 || selectedBrands.includes(itemBrand);
-
-        if (matchCat && matchUse && matchKey && matchCrop && matchBrand) {
-          item.classList.remove('hidden');
-          visibleCount++;
-        } else {
-          item.classList.add('hidden');
+        // Brand check
+        if (!allBrandsChecked && !selectedBrands.includes(p.brand)) {
+          return false;
         }
+
+        // Crop check
+        if (!allCropsChecked && selectedCrops.length > 0) {
+          if (p.crops && p.crops.length > 0) {
+            const hasCropMatch = p.crops.some(c => selectedCrops.includes(c));
+            if (!hasCropMatch) return false;
+          }
+        }
+
+        // Keyword text search
+        if (keyword) {
+          const haystack = (p.name + ' ' + p.title + ' ' + (p.active || '') + ' ' + (p.desc || '') + ' ' + p.brandName + ' ' + p.categoryName + ' ' + (p.reg || '')).toLowerCase();
+          if (!haystack.includes(keyword)) return false;
+        }
+
+        return true;
       });
 
-      document.getElementById('productCountDisplay').innerText = `${visibleCount} реални продукта`;
+      // 2. Sort
+      if (sortOrder === 'price-asc') {
+        filteredProducts.sort((a, b) => a.price - b.price);
+      } else if (sortOrder === 'price-desc') {
+        filteredProducts.sort((a, b) => b.price - a.price);
+      } else if (sortOrder === 'rating') {
+        filteredProducts.sort((a, b) => (b.rating || 0) - (a.rating || 0));
+      } else if (sortOrder === 'name') {
+        filteredProducts.sort((a, b) => a.name.localeCompare(b.name, 'bg'));
+      }
+
+      // 3. Render Page
+      renderPage(page);
+    }
+
+    function renderPage(page = 1) {
+      const totalItems = filteredProducts.length;
+      const totalPages = Math.max(1, Math.ceil(totalItems / PAGE_SIZE));
+      currentPage = Math.min(Math.max(1, page), totalPages);
+
+      const startIndex = (currentPage - 1) * PAGE_SIZE;
+      const endIndex = Math.min(startIndex + PAGE_SIZE, totalItems);
+      const pageItems = filteredProducts.slice(startIndex, endIndex);
+
+      // Update Counts
+      const countEl = document.getElementById('productCountDisplay');
+      if (countEl) {
+        countEl.innerText = `${totalItems} реални продукта`;
+      }
+
+      const rangeEl = document.getElementById('paginationRangeText');
+      if (rangeEl) {
+        rangeEl.innerText = totalItems === 0
+          ? 'Няма намерени продукти по зададените критерии'
+          : `Показване на ${startIndex + 1}–${endIndex} от ${totalItems} продукта`;
+      }
+
+      // Render Grid
+      const grid = document.getElementById('productGrid');
+      if (!grid) return;
+
+      if (totalItems === 0) {
+        grid.innerHTML = `
+          <div class="col-span-full py-16 text-center bg-white rounded-3xl border border-slate-200 p-8 space-y-4">
+            <div class="w-16 h-16 rounded-2xl bg-amber-50 text-amber-600 mx-auto flex items-center justify-center">
+              <i data-lucide="package-search" class="w-8 h-8"></i>
+            </div>
+            <h3 class="text-base font-black text-slate-900">Няма открити продукти</h3>
+            <p class="text-xs text-slate-500 max-w-md mx-auto">
+              Опитайте да промените филтрите за производител, култура или изчистете търсенето.
+            </p>
+            <button onclick="resetFilters()" class="inline-flex items-center gap-1.5 px-4 py-2 rounded-xl bg-brand-700 text-white text-xs font-bold hover:bg-brand-800 transition">
+              <i data-lucide="rotate-ccw" class="w-3.5 h-3.5"></i> Изчисти всички филтри
+            </button>
+          </div>
+        `;
+        document.getElementById('paginationButtons').innerHTML = '';
+        lucide.createIcons();
+        return;
+      }
+
+      grid.innerHTML = pageItems.map(p => `
+        <div class="product-item group bg-white rounded-2xl border border-slate-200 hover:border-brand-500 hover:shadow-xl transition-all duration-300 flex flex-col justify-between overflow-hidden">
+          <div class="relative p-5 pb-0 flex flex-col items-center">
+            <!-- Badges -->
+            <div class="w-full flex items-start justify-between gap-1 mb-2">
+              <span class="bg-brand-700 text-white text-[10px] font-black uppercase px-2 py-0.5 rounded shadow-sm truncate max-w-[150px]">
+                ${p.badge || p.brandName.split(' ')[0]}
+              </span>
+              <span class="bg-slate-100 text-slate-700 border border-slate-200 text-[10px] font-bold px-2 py-0.5 rounded shrink-0">
+                ${p.useCategory === 'nonprof' ? 'Непрофесионален' : 'II Проф.'}
+              </span>
+            </div>
+            
+            <!-- Product Image -->
+            <a href="product.html?prod=${p.id}" class="w-full h-44 flex items-center justify-center p-2 group-hover:scale-105 transition duration-300">
+              <img src="${p.image}" alt="${p.name}" class="max-h-full max-w-full object-contain drop-shadow-sm" loading="lazy">
+            </a>
+            
+            <!-- Quarantine or Reg Tag -->
+            <div class="w-full mt-2 text-center">
+              ${p.quarantine ? `
+                <span class="inline-block bg-amber-50 text-amber-900 border border-amber-200 text-[10px] font-bold px-2.5 py-0.5 rounded-full">
+                  Карантина: ${p.quarantine}
+                </span>
+              ` : `
+                <span class="inline-block bg-slate-50 text-slate-600 border border-slate-200 text-[10px] font-bold px-2.5 py-0.5 rounded-full">
+                  ${p.categoryName}
+                </span>
+              `}
+            </div>
+          </div>
+
+          <div class="p-5 flex flex-col flex-1 justify-between">
+            <div>
+              <div class="flex items-center justify-between text-[11px] text-slate-400 mb-1">
+                <span class="font-bold uppercase tracking-wider text-brand-800 truncate mr-2">${p.brandName}</span>
+                <span class="flex items-center gap-1 font-bold text-slate-700 shrink-0">★ ${p.rating} <span class="text-slate-400">(${p.reviewsCount})</span></span>
+              </div>
+              
+              <a href="product.html?prod=${p.id}" class="text-sm font-bold text-slate-900 group-hover:text-brand-700 transition line-clamp-2 block leading-snug">
+                ${p.name}
+              </a>
+              
+              <p class="text-xs text-slate-500 mt-1.5 line-clamp-2 leading-relaxed">
+                ${p.active ? `<span class="font-medium text-slate-700">${p.active}.</span> ` : ''}${p.desc}
+              </p>
+              
+              <div class="mt-2.5 text-[11px] text-slate-500 flex items-center gap-1.5 flex-wrap">
+                <span class="font-semibold text-slate-700">Опаковка:</span>
+                <span class="bg-slate-100 text-slate-800 px-2 py-0.5 rounded font-bold">${p.unit}</span>
+                ${p.dose ? `<span class="text-slate-400 text-[10px]">• Доза: ${p.dose}</span>` : ''}
+              </div>
+            </div>
+
+            <div class="pt-4 mt-4 border-t border-slate-100 flex items-center justify-between gap-2">
+              <div>
+                <div class="text-base font-black text-brand-900 leading-none">
+                  € ${p.price.toFixed(2)}
+                </div>
+                <div class="text-[10px] font-semibold text-slate-400 mt-0.5">
+                  ${(p.price * 1.95583).toFixed(2)} лв. с ДДС
+                </div>
+              </div>
+
+              <div class="flex items-center gap-1.5">
+                <a href="product.html?prod=${p.id}" class="text-xs font-bold text-slate-600 hover:text-brand-700 border border-slate-200 hover:border-brand-300 px-3 py-1.5 rounded-xl transition">
+                  Детайли
+                </a>
+                <button onclick="addToCartLive('${p.name.replace(/'/g, "\\'")}', ${p.price})" class="bg-brand-700 hover:bg-brand-800 text-white p-2 rounded-xl transition shadow-sm" title="Добави в количка">
+                  <i data-lucide="shopping-cart" class="w-4 h-4"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      `).join('');
+
+      // Render Pagination Buttons
+      renderPagination(totalPages);
+
+      lucide.createIcons();
+    }
+
+    function renderPagination(totalPages) {
+      const container = document.getElementById('paginationButtons');
+      if (!container) return;
+
+      if (totalPages <= 1) {
+        container.innerHTML = '';
+        return;
+      }
+
+      let html = '';
+
+      // Prev button
+      html += `
+        <button 
+          onclick="goToPage(${currentPage - 1})" 
+          class="px-3 py-1.5 rounded-lg border text-xs font-bold transition flex items-center gap-1 ${
+            currentPage === 1 
+              ? 'border-slate-200 text-slate-300 cursor-not-allowed' 
+              : 'border-slate-300 text-slate-700 hover:bg-slate-100'
+          }"
+          ${currentPage === 1 ? 'disabled' : ''}
+        >
+          <i data-lucide="chevron-left" class="w-3.5 h-3.5"></i> Предишна
+        </button>
+      `;
+
+      // Page numbers with ellipsis
+      const maxButtons = 7;
+      let startPage = Math.max(1, currentPage - 2);
+      let endPage = Math.min(totalPages, currentPage + 2);
+
+      if (currentPage <= 3) {
+        endPage = Math.min(totalPages, 5);
+      }
+      if (currentPage >= totalPages - 2) {
+        startPage = Math.max(1, totalPages - 4);
+      }
+
+      if (startPage > 1) {
+        html += `<button onclick="goToPage(1)" class="w-8 h-8 rounded-lg border border-slate-200 text-xs font-bold text-slate-700 hover:bg-slate-100">1</button>`;
+        if (startPage > 2) {
+          html += `<span class="px-1 text-slate-400">...</span>`;
+        }
+      }
+
+      for (let i = startPage; i <= endPage; i++) {
+        const isActive = i === currentPage;
+        html += `
+          <button 
+            onclick="goToPage(${i})" 
+            class="w-8 h-8 rounded-lg text-xs font-bold transition ${
+              isActive 
+                ? 'bg-brand-700 text-white shadow-sm' 
+                : 'border border-slate-200 text-slate-700 hover:bg-slate-100'
+            }"
+          >
+            ${i}
+          </button>
+        `;
+      }
+
+      if (endPage < totalPages) {
+        if (endPage < totalPages - 1) {
+          html += `<span class="px-1 text-slate-400">...</span>`;
+        }
+        html += `<button onclick="goToPage(${totalPages})" class="w-8 h-8 rounded-lg border border-slate-200 text-xs font-bold text-slate-700 hover:bg-slate-100">${totalPages}</button>`;
+      }
+
+      // Next button
+      html += `
+        <button 
+          onclick="goToPage(${currentPage + 1})" 
+          class="px-3 py-1.5 rounded-lg border text-xs font-bold transition flex items-center gap-1 ${
+            currentPage === totalPages 
+              ? 'border-slate-200 text-slate-300 cursor-not-allowed' 
+              : 'border-slate-300 text-slate-700 hover:bg-slate-100'
+          }"
+          ${currentPage === totalPages ? 'disabled' : ''}
+        >
+          Следваща <i data-lucide="chevron-right" class="w-3.5 h-3.5"></i>
+        </button>
+      `;
+
+      container.innerHTML = html;
+    }
+
+    function goToPage(page) {
+      applyFacetedFilters(page);
+      document.getElementById('productGrid')?.scrollIntoView({ behavior: 'smooth', block: 'start' });
     }
 
     function resetFilters() {
-      document.getElementById('liveCatalogSearch').value = '';
-      document.getElementById('filterNonProf').checked = true;
-      document.getElementById('filterProf').checked = true;
+      const searchEl = document.getElementById('liveCatalogSearch');
+      if (searchEl) searchEl.value = '';
+      const nonProfEl = document.getElementById('filterNonProf');
+      if (nonProfEl) nonProfEl.checked = true;
+      const profEl = document.getElementById('filterProf');
+      if (profEl) profEl.checked = true;
       document.querySelectorAll('.crop-check').forEach(c => c.checked = true);
       document.querySelectorAll('.brand-check').forEach(b => b.checked = true);
+      const sortSelect = document.getElementById('catalogSortSelect');
+      if (sortSelect) sortSelect.value = 'popular';
       currentCategory = 'all';
-      applyFacetedFilters();
+
+      // Reset pill active styles
+      document.querySelectorAll('.cat-pill').forEach((p, idx) => {
+        if (idx === 0) {
+          p.classList.add('bg-brand-700', 'text-white', 'font-bold');
+          p.classList.remove('text-slate-300');
+        } else {
+          p.classList.remove('bg-brand-700', 'text-white', 'font-bold');
+          p.classList.add('text-slate-300');
+        }
+      });
+
+      document.getElementById('breadcrumbCurrent').innerText = 'Всички категории';
+      document.getElementById('categoryPageTitle').innerText = 'Продуктов Каталог – Растителна Защита, Семена & Торове';
+
+      applyFacetedFilters(1);
     }
 
     function addToCartLive(name, price) {
-      alert(`Добавено в количката: ${name} за € ${price.toFixed(2)}`);
+      alert(`Добавено в количката:\n${name}\nЦена: € ${price.toFixed(2)} (${(price * 1.95583).toFixed(2)} лв.)`);
     }
   </script>
 </body>

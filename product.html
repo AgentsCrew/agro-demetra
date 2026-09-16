@@ -327,6 +327,25 @@
       </div>
     </div>
 
+    <!-- RELATED PRODUCTS SECTION -->
+    <section class="bg-white p-6 sm:p-8 rounded-3xl border border-slate-200 shadow-sm space-y-6">
+      <div class="flex items-center justify-between">
+        <div>
+          <h2 class="text-lg sm:text-xl font-black text-slate-900">
+            Свързани продукти от категория <span id="relatedCategoryTitle" class="text-brand-700"></span>
+          </h2>
+          <p class="text-xs text-slate-500 mt-0.5">Оригинални алтернативи и съвместими препарати за растителна защита</p>
+        </div>
+        <a id="viewCategoryLink" href="category.html" class="text-xs font-bold text-brand-700 hover:underline flex items-center gap-1">
+          Виж всички <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+        </a>
+      </div>
+
+      <div id="relatedProductsGrid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <!-- Injected dynamically -->
+      </div>
+    </section>
+
   </main>
 
   <!-- FOOTER -->
@@ -340,144 +359,199 @@
     </div>
   </footer>
 
+  <!-- Products Database -->
+  <script src="js/products-data.js"></script>
+
   <script>
     lucide.createIcons();
 
-    // Multi-Product Dataset
-    const productsDB = {
-      luna: {
-        title: "Луна Кеър ВГ – системен фунгицид с флуопирам и фозетил-Al",
-        manufacturer: "Bayer Crop Science AG",
-        formulation: "ВГ (Вододиспергируеми гранули)",
-        active: "Флуопирам (50 г/кг) + Фозетил-Al (666 г/кг)",
-        quarantine: "14 дни (Лозя) / 28 дни (Ябълки)",
-        category: "Фунгициди",
-        useCat: "Непрофесионална категория",
-        reg: "БАБХ: № 01658-ПРЗ-1",
-        desc: "Високоефективен фунгицид с предпазно и системно лечебно действие за контрол на брашнеста мана (оидиум), струпясване и бактериален пригор при лозя, ябълки и круши.",
-        price: 69.90,
-        unit: "€ 69.90 / кг",
-        rates: [
-          { val: 200, label: "200 г/дка (Лозя - превантивно)" },
-          { val: 250, label: "250 г/дка (Лозя - лечебно)" },
-          { val: 300, label: "300 г/дка (Ябълки)" }
-        ]
-      },
-      mospilan: {
-        title: "Моспилан 20 СП – системен инсектицид с ацетамиприд",
-        manufacturer: "Nippon Soda (Япония)",
-        formulation: "СП (Разтворим прах)",
-        active: "Ацетамиприд (200 г/кг)",
-        quarantine: "3-7 дни (Зеленчуци) / 14 дни (Овощни)",
-        category: "Инсектициди",
-        useCat: "Непрофесионална категория",
-        reg: "БАБХ: № 0118-ПРЗ",
-        desc: "Еталон за контрол на смучещи и гризещи неприятели: листни въшки, оранжерийна белокрилка, трипси и колорадски бръмбар.",
-        price: 9.80,
-        unit: "€ 196.00 / кг",
-        rates: [
-          { val: 12.5, label: "12.5 г/дка (Колорадски бръмбар)" },
-          { val: 20, label: "20 г/дка (Листни въшки)" },
-          { val: 25, label: "25 г/дка (Оранжерийна белокрилка)" }
-        ]
-      },
-      decis: {
-        title: "Децис 100 ЕК – пиретроиден инсектицид с делтаметрин 100 г/л",
-        manufacturer: "Bayer Crop Science AG",
-        formulation: "ЕК (Емулсионен концентрат)",
-        active: "Делтаметрин (100 г/л)",
-        quarantine: "3 дни (Зеленчуци) / 7 дни (Овощни)",
-        category: "Инсектициди",
-        useCat: "II Професионална категория",
-        reg: "БАБХ: № 01452-ПРЗ",
-        desc: "Бързо нокдаун действие срещу плодови червеи, нощенки, гъсеници, листни въшки и трипси.",
-        price: 14.50,
-        unit: "€ 290.00 / л",
-        rates: [
-          { val: 7.5, label: "7.5 мл/дка (Листни въшки)" },
-          { val: 12.5, label: "12.5 мл/дка (Плодови червеи)" }
-        ]
-      },
-      roundup: {
-        title: "Раундъп Класик Про – тотален системен хербицид с глифозат 360 г/л",
-        manufacturer: "Bayer Crop Science AG",
-        formulation: "РЗ (Разтворим концентрат)",
-        active: "Глифозат (360 г/л)",
-        quarantine: "Преди сеитба / прибиране",
-        category: "Хербициди",
-        useCat: "II Професионална категория",
-        reg: "БАБХ: № 01720-ПРЗ",
-        desc: "Тотален системен хербицид за борба срещу едногодишни и многогодишни житни и широколистни плевели.",
-        price: 11.90,
-        unit: "€ 11.90 / л",
-        rates: [
-          { val: 300, label: "300 мл/дка (Едногодишни плевели)" },
-          { val: 500, label: "500 мл/дка (Многогодишни плевели - балур, троскот)" }
-        ]
-      }
-    };
-
-    // Load URL product or fallback to Luna
+    // Universal Dynamic Product Loader
     const urlParams = new URLSearchParams(window.location.search);
-    const prodKey = urlParams.get('prod') || 'luna';
-    const currentProd = productsDB[prodKey] || productsDB.luna;
+    const prodKey = urlParams.get('prod') || 'luna-kear-vg';
+    const currentProd = (window.getProductById && window.getProductById(prodKey)) || (window.AGRO_PRODUCTS && window.AGRO_PRODUCTS[0]);
 
-    document.getElementById('productMainTitle').innerText = currentProd.title;
-    document.getElementById('productDescription').innerText = currentProd.desc;
-    document.getElementById('breadcrumbTitle').innerText = currentProd.title.split('–')[0].trim();
-    document.getElementById('breadcrumbCategory').innerText = currentProd.category;
-    document.getElementById('specManufacturer').innerText = currentProd.manufacturer;
-    document.getElementById('specFormulation').innerText = currentProd.formulation;
-    document.getElementById('specActive').innerText = currentProd.active;
-    document.getElementById('specQuarantine').innerText = currentProd.quarantine;
-    document.getElementById('badgeRegistration').innerText = currentProd.reg;
-    document.getElementById('badgeCategory').innerText = currentProd.useCat;
-    document.getElementById('displayPrice').innerText = `€ ${currentProd.price.toFixed(2)}`;
-    document.getElementById('displayUnitPrice').innerText = `(${currentProd.unit})`;
-    document.getElementById('displayBgnPrice').innerText = `${(currentProd.price * 1.95583).toFixed(2)} лв. с вкл. ДДС`;
+    if (!currentProd) {
+      console.error('Product not found for key:', prodKey);
+    } else {
+      // SEO & Page Title
+      document.title = `${currentProd.name} (${currentProd.unit}) – ${currentProd.brandName} | AGRO DEMETRA`;
+      
+      // Texts & Badges
+      const mainTitleEl = document.getElementById('productMainTitle');
+      if (mainTitleEl) mainTitleEl.innerText = currentProd.title || currentProd.name;
 
-    // Populate calculator rates
-    const rateSelect = document.getElementById('calcRate');
-    rateSelect.innerHTML = '';
-    currentProd.rates.forEach(r => {
-      const opt = document.createElement('option');
-      opt.value = r.val;
-      opt.innerText = r.label;
-      rateSelect.appendChild(opt);
-    });
+      const descEl = document.getElementById('productDescription');
+      if (descEl) descEl.innerText = currentProd.desc;
 
-    let currentPrice = currentProd.price;
-    function selectPack(qty, price, unit) {
-      currentPrice = price;
-      document.getElementById('displayPrice').innerText = `€ ${price.toFixed(2)}`;
-      document.getElementById('displayUnitPrice').innerText = `(${unit})`;
-      document.getElementById('displayBgnPrice').innerText = `${(price * 1.95583).toFixed(2)} лв. с вкл. ДДС`;
+      const breadcrumbTitleEl = document.getElementById('breadcrumbTitle');
+      if (breadcrumbTitleEl) breadcrumbTitleEl.innerText = currentProd.name;
+
+      const breadcrumbCatEl = document.getElementById('breadcrumbCategory');
+      if (breadcrumbCatEl) breadcrumbCatEl.innerText = currentProd.categoryName;
+
+      const specManEl = document.getElementById('specManufacturer');
+      if (specManEl) specManEl.innerText = currentProd.brandName;
+
+      const specFormEl = document.getElementById('specFormulation');
+      if (specFormEl) specFormEl.innerText = currentProd.formulation || 'ЕК';
+
+      const specActEl = document.getElementById('specActive');
+      if (specActEl) specActEl.innerText = currentProd.active || 'Оригинален състав';
+
+      const specQuarEl = document.getElementById('specQuarantine');
+      if (specQuarEl) specQuarEl.innerText = currentProd.quarantine || 'Съгласно етикета';
+
+      const badgeRegEl = document.getElementById('badgeRegistration');
+      if (badgeRegEl) badgeRegEl.innerText = currentProd.reg || 'БАБХ регистриран';
+
+      const badgeCatEl = document.getElementById('badgeCategory');
+      if (badgeCatEl) badgeCatEl.innerText = currentProd.useCategoryName || 'Свободна продажба';
+
+      const badgeManEl = document.getElementById('badgeManufacturer');
+      if (badgeManEl) badgeManEl.innerText = currentProd.badge || currentProd.brandName.split(' ')[0];
+
+      // Images
+      const mainImg = document.getElementById('mainProductImage');
+      if (mainImg) mainImg.src = currentProd.image;
+      const thumb1 = document.getElementById('thumb1');
+      if (thumb1) thumb1.src = currentProd.image;
+
+      // Pack Sizes & Pricing
+      let selectedPrice = currentProd.price;
+      let selectedUnit = currentProd.unit;
+
+      const packContainer = document.getElementById('packVariantSelector');
+      if (packContainer && currentProd.packSizes && currentProd.packSizes.length > 0) {
+        packContainer.innerHTML = currentProd.packSizes.map((ps, idx) => `
+          <button onclick="selectPackSize(${idx})" class="pack-btn p-3 rounded-xl border ${idx === 0 ? 'border-2 border-brand-600 bg-emerald-50/50' : 'border-slate-200 bg-white hover:border-brand-600'} text-left transition relative">
+            ${idx === 0 ? '<span class="absolute -top-2 right-2 bg-brand-700 text-white text-[9px] font-black uppercase px-1.5 py-0.2 rounded">Препоръчан</span>' : ''}
+            <span class="block text-xs font-bold text-slate-900">${ps.label}</span>
+            <span class="text-sm font-black ${idx === 0 ? 'text-brand-900' : 'text-slate-800'}">€ ${ps.price.toFixed(2)}</span>
+            <span class="block text-[10px] text-slate-500">${ps.unit}</span>
+          </button>
+        `).join('');
+      }
+
+      window.selectPackSize = function(idx) {
+        const ps = currentProd.packSizes[idx];
+        if (!ps) return;
+        selectedPrice = ps.price;
+        selectedUnit = ps.label;
+
+        document.querySelectorAll('#packVariantSelector .pack-btn').forEach((btn, i) => {
+          if (i === idx) {
+            btn.className = 'pack-btn p-3 rounded-xl border-2 border-brand-600 bg-emerald-50/50 text-left transition relative';
+          } else {
+            btn.className = 'pack-btn p-3 rounded-xl border border-slate-200 hover:border-brand-600 bg-white text-left transition relative';
+          }
+        });
+
+        updatePriceDisplays(selectedPrice, ps.unit);
+        calculateDoseLive();
+      };
+
+      function updatePriceDisplays(price, unitText) {
+        const displayPriceEl = document.getElementById('displayPrice');
+        if (displayPriceEl) displayPriceEl.innerText = `€ ${price.toFixed(2)}`;
+
+        const displayUnitPriceEl = document.getElementById('displayUnitPrice');
+        if (displayUnitPriceEl) displayUnitPriceEl.innerText = `(${unitText || currentProd.unit})`;
+
+        const displayBgnEl = document.getElementById('displayBgnPrice');
+        if (displayBgnEl) displayBgnEl.innerText = `${(price * 1.95583).toFixed(2)} лв. с вкл. 20% ДДС`;
+      }
+
+      updatePriceDisplays(selectedPrice, currentProd.packSizes?.[0]?.unit);
+
+      // Calculator Rates
+      const rateSelect = document.getElementById('calcRate');
+      if (rateSelect) {
+        rateSelect.innerHTML = '';
+        const rates = (currentProd.rates && currentProd.rates.length > 0) ? currentProd.rates : [
+          { val: 200, label: `200 г/дка (Препоръчителна доза: ${currentProd.dose || 'според културата'})` },
+          { val: 250, label: '250 г/дка (При силно нападение)' }
+        ];
+        rates.forEach(r => {
+          const opt = document.createElement('option');
+          opt.value = r.val;
+          opt.innerText = r.label;
+          rateSelect.appendChild(opt);
+        });
+      }
+
+      let qty = 1;
+      window.adjustQty = function(diff) {
+        qty = Math.max(1, qty + diff);
+        const qtyEl = document.getElementById('qtyInput');
+        if (qtyEl) qtyEl.innerText = qty;
+      };
+
+      window.calculateDoseLive = function() {
+        const area = parseFloat(document.getElementById('calcArea')?.value) || 0;
+        const rate = parseFloat(document.getElementById('calcRate')?.value) || 200;
+
+        const totalNeeded = area * rate;
+        const waterLiters = Math.round(area * 100);
+        const costPerDka = ((rate / 1000) * selectedPrice).toFixed(2);
+
+        const totalProductEl = document.getElementById('calcTotalProduct');
+        if (totalProductEl) {
+          totalProductEl.innerText = totalNeeded >= 1000 ? `${(totalNeeded/1000).toFixed(2)} кг/л` : `${totalNeeded} г/мл`;
+        }
+        const waterVolumeEl = document.getElementById('calcWaterVolume');
+        if (waterVolumeEl) {
+          waterVolumeEl.innerText = `${waterLiters} л вода`;
+        }
+        const costPerDkaEl = document.getElementById('calcCostPerDka');
+        if (costPerDkaEl) {
+          costPerDkaEl.innerText = `€ ${costPerDka} / дка`;
+        }
+      };
+
       calculateDoseLive();
-    }
 
-    let qty = 1;
-    function adjustQty(diff) {
-      qty = Math.max(1, qty + diff);
-      document.getElementById('qtyInput').innerText = qty;
-    }
+      window.addToCartLiveProduct = function() {
+        alert(`Добавено в количката:\n${currentProd.name} (${selectedUnit})\nКоличество: ${qty} бр.\nОбща сума: € ${(selectedPrice * qty).toFixed(2)} (${((selectedPrice * qty) * 1.95583).toFixed(2)} лв.)`);
+      };
 
-    function calculateDoseLive() {
-      const area = parseFloat(document.getElementById('calcArea').value) || 0;
-      const rate = parseFloat(document.getElementById('calcRate').value) || 200;
+      // Related Products
+      const relGrid = document.getElementById('relatedProductsGrid');
+      const relTitle = document.getElementById('relatedCategoryTitle');
+      const relCatLink = document.getElementById('viewCategoryLink');
+      if (relTitle) relTitle.innerText = currentProd.categoryName;
+      if (relCatLink) relCatLink.href = `category.html?cat=${currentProd.category}`;
 
-      const totalNeeded = area * rate;
-      const waterLiters = Math.round(area * 100);
-      const costPerDka = ((rate / 1000) * currentPrice).toFixed(2);
+      if (relGrid && window.getProductsByCategory) {
+        const related = window.getProductsByCategory(currentProd.category)
+          .filter(p => p.id !== currentProd.id)
+          .slice(0, 4);
 
-      document.getElementById('calcTotalProduct').innerText = totalNeeded >= 1000 ? `${(totalNeeded/1000).toFixed(2)} кг/л` : `${totalNeeded} г/мл`;
-      document.getElementById('calcWaterVolume').innerText = `${waterLiters} л вода`;
-      document.getElementById('calcCostPerDka').innerText = `€ ${costPerDka} / дка`;
-    }
+        relGrid.innerHTML = related.map(rp => `
+          <div class="bg-slate-50 hover:bg-white rounded-2xl p-4 border border-slate-200 hover:border-brand-500 hover:shadow-lg transition flex flex-col justify-between">
+            <div>
+              <a href="product.html?prod=${rp.id}" class="h-32 flex items-center justify-center p-2 mb-3">
+                <img src="${rp.image}" alt="${rp.name}" class="max-h-full max-w-full object-contain" loading="lazy">
+              </a>
+              <span class="text-[10px] font-bold text-brand-700 uppercase">${rp.brandName}</span>
+              <a href="product.html?prod=${rp.id}" class="block text-xs font-bold text-slate-900 hover:text-brand-700 transition line-clamp-2 mt-0.5">
+                ${rp.name}
+              </a>
+              <div class="text-[10px] text-slate-400 mt-1">Опаковка: ${rp.unit}</div>
+            </div>
+            <div class="mt-4 pt-3 border-t border-slate-200 flex items-center justify-between">
+              <div>
+                <div class="text-sm font-black text-brand-900 leading-none">€ ${rp.price.toFixed(2)}</div>
+                <div class="text-[9px] text-slate-400 mt-0.5">${(rp.price * 1.95583).toFixed(2)} лв.</div>
+              </div>
+              <a href="product.html?prod=${rp.id}" class="text-[11px] font-bold bg-brand-700 hover:bg-brand-800 text-white px-3 py-1.5 rounded-lg transition">
+                Виж
+              </a>
+            </div>
+          </div>
+        `).join('');
 
-    calculateDoseLive();
-
-    function addToCartLiveProduct() {
-      alert(`Добавено в количката: ${currentProd.title.split('–')[0]} (${qty} бр.) за € ${(currentPrice * qty).toFixed(2)}`);
+        lucide.createIcons();
+      }
     }
   </script>
 </body>
