@@ -91,32 +91,35 @@ CREATE POLICY "Public read products" ON products FOR SELECT USING (true);
 CREATE POLICY "Public create orders" ON orders FOR INSERT WITH CHECK (true);
 
 -- =====================================================================
--- 8. SEED DATA: CATEGORIES & BRANDS
+-- 8. SEED DATA: CATEGORIES
 -- =====================================================================
-INSERT INTO categories (id, name, icon, display_order) VALUES
-('fungicides', 'Фунгициди', 'shield', 1),
-('insecticides', 'Инсектициди & Акарициди', 'bug', 2),
-('herbicides', 'Хербициди', 'scissors', 3),
-('biocides', 'Биоциди & ДДД Препарати', 'shield-alert', 4),
-('fertilizers', 'Торове & Биостимулатори', 'sprout', 5),
-('seeds', 'Зеленчукови & Цветни Семена', 'flower', 6),
-('wine', 'Вино & Ракия (Енология)', 'wine', 7);
-
-INSERT INTO brands (id, name, country) VALUES
-('bayer', 'Bayer Crop Science AG', 'Германия'),
-('syngenta', 'Syngenta AG', 'Швейцария'),
-('basf', 'BASF SE', 'Германия'),
-('corteva', 'Corteva Agriscience', 'САЩ'),
-('nippon', 'Nippon Soda', 'Япония'),
-('manica', 'Manica SpA / Агрия', 'Италия / България'),
-('adama', 'ADAMA Solutions', 'Израел'),
-('yara', 'Yara International', 'Норвегия'),
-('amitica', 'Амитица / Био', 'България'),
-('sortovi', 'Сортови Семена', 'България'),
-('lalvin', 'Lallemand (Lalvin)', 'Канада / Франция');
+INSERT INTO categories (id, name, icon, display_order) VALUES ('fungicides', 'Фунгициди', 'shield', 1) ON CONFLICT (id) DO NOTHING;
+INSERT INTO categories (id, name, icon, display_order) VALUES ('insecticides', 'Инсектициди & Акарициди', 'bug', 2) ON CONFLICT (id) DO NOTHING;
+INSERT INTO categories (id, name, icon, display_order) VALUES ('herbicides', 'Хербициди', 'scissors', 3) ON CONFLICT (id) DO NOTHING;
+INSERT INTO categories (id, name, icon, display_order) VALUES ('biocides', 'Биоциди & ДДД Препарати', 'shield-alert', 4) ON CONFLICT (id) DO NOTHING;
+INSERT INTO categories (id, name, icon, display_order) VALUES ('fertilizers', 'Торове & Биостимулатори', 'sprout', 5) ON CONFLICT (id) DO NOTHING;
+INSERT INTO categories (id, name, icon, display_order) VALUES ('seeds', 'Зеленчукови & Цветни Семена', 'flower', 6) ON CONFLICT (id) DO NOTHING;
+INSERT INTO categories (id, name, icon, display_order) VALUES ('wine', 'Вино & Ракия (Енология)', 'wine', 7) ON CONFLICT (id) DO NOTHING;
 
 -- =====================================================================
--- 9. SEED DATA: 230 REAL REGISTERED PRODUCTS
+-- 9. SEED DATA: BRANDS (ALL 13 BRANDS INCLUDED)
+-- =====================================================================
+INSERT INTO brands (id, name, country) VALUES ('bayer', 'Bayer Crop Science AG', 'Германия') ON CONFLICT (id) DO NOTHING;
+INSERT INTO brands (id, name, country) VALUES ('syngenta', 'Syngenta AG', 'Швейцария') ON CONFLICT (id) DO NOTHING;
+INSERT INTO brands (id, name, country) VALUES ('basf', 'BASF SE', 'Германия') ON CONFLICT (id) DO NOTHING;
+INSERT INTO brands (id, name, country) VALUES ('corteva', 'Corteva Agriscience', 'САЩ') ON CONFLICT (id) DO NOTHING;
+INSERT INTO brands (id, name, country) VALUES ('nippon', 'Nippon Soda / Nissan', 'Япония') ON CONFLICT (id) DO NOTHING;
+INSERT INTO brands (id, name, country) VALUES ('manica', 'Manica SpA / Агрия / Enartis', 'Италия / България') ON CONFLICT (id) DO NOTHING;
+INSERT INTO brands (id, name, country) VALUES ('adama', 'ADAMA Solutions', 'Израел') ON CONFLICT (id) DO NOTHING;
+INSERT INTO brands (id, name, country) VALUES ('yara', 'Yara International', 'Норвегия') ON CONFLICT (id) DO NOTHING;
+INSERT INTO brands (id, name, country) VALUES ('aglukon', 'Aglukon Spezialdünger (Wuxal)', 'Германия') ON CONFLICT (id) DO NOTHING;
+INSERT INTO brands (id, name, country) VALUES ('valagro', 'Valagro / Bioiberica', 'Италия / Испания') ON CONFLICT (id) DO NOTHING;
+INSERT INTO brands (id, name, country) VALUES ('amitica', 'Амитица / Био', 'България') ON CONFLICT (id) DO NOTHING;
+INSERT INTO brands (id, name, country) VALUES ('sortovi', 'Сортови Семена', 'България') ON CONFLICT (id) DO NOTHING;
+INSERT INTO brands (id, name, country) VALUES ('lalvin', 'Lallemand (Lalvin)', 'Канада / Франция') ON CONFLICT (id) DO NOTHING;
+
+-- =====================================================================
+-- 10. SEED DATA: 230 REAL REGISTERED PRODUCTS
 -- =====================================================================
 INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_category_name, price_eur, price_bgn, unit, crops, active_substance, formulation, quarantine, babh_reg, badge, image_url, description, dose, rating, reviews_count, in_stock, rates, pack_sizes) VALUES (
   'luna-kear-vg',
@@ -143,7 +146,11 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   TRUE,
   '[{"val":100,"label":"Препоръчителна доза: 200-250 г/дка"}]'::jsonb,
   '[{"label":"1 кг","price":69.9,"unit":"€ 69.90 / 1 кг","default":true}]'::jsonb
-);
+) ON CONFLICT (id) DO UPDATE SET
+  name = EXCLUDED.name,
+  price_eur = EXCLUDED.price_eur,
+  price_bgn = EXCLUDED.price_bgn,
+  updated_at = NOW();
 INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_category_name, price_eur, price_bgn, unit, crops, active_substance, formulation, quarantine, babh_reg, badge, image_url, description, dose, rating, reviews_count, in_stock, rates, pack_sizes) VALUES (
   'luna-ekspirians-sk',
   'Луна Експириънс СК',
@@ -169,7 +176,11 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   TRUE,
   '[{"val":100,"label":"Препоръчителна доза: 40-60 мл/дка"}]'::jsonb,
   '[{"label":"1 л","price":74.5,"unit":"€ 74.50 / 1 л","default":true}]'::jsonb
-);
+) ON CONFLICT (id) DO UPDATE SET
+  name = EXCLUDED.name,
+  price_eur = EXCLUDED.price_eur,
+  price_bgn = EXCLUDED.price_bgn,
+  updated_at = NOW();
 INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_category_name, price_eur, price_bgn, unit, crops, active_substance, formulation, quarantine, babh_reg, badge, image_url, description, dose, rating, reviews_count, in_stock, rates, pack_sizes) VALUES (
   'skor-250-ek',
   'Скор 250 ЕК',
@@ -195,7 +206,11 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   TRUE,
   '[{"val":100,"label":"Препоръчителна доза: 20-30 мл/дка"}]'::jsonb,
   '[{"label":"20 мл","price":5.6,"unit":"€ 5.60 / 20 мл","default":true}]'::jsonb
-);
+) ON CONFLICT (id) DO UPDATE SET
+  name = EXCLUDED.name,
+  price_eur = EXCLUDED.price_eur,
+  price_bgn = EXCLUDED.price_bgn,
+  updated_at = NOW();
 INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_category_name, price_eur, price_bgn, unit, crops, active_substance, formulation, quarantine, babh_reg, badge, image_url, description, dose, rating, reviews_count, in_stock, rates, pack_sizes) VALUES (
   'topaz-100-ek',
   'Топаз 100 ЕК',
@@ -221,7 +236,11 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   TRUE,
   '[{"val":100,"label":"Препоръчителна доза: 25-30 мл/дка"}]'::jsonb,
   '[{"label":"10 мл","price":3.8,"unit":"€ 3.80 / 10 мл","default":true}]'::jsonb
-);
+) ON CONFLICT (id) DO UPDATE SET
+  name = EXCLUDED.name,
+  price_eur = EXCLUDED.price_eur,
+  price_bgn = EXCLUDED.price_bgn,
+  updated_at = NOW();
 INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_category_name, price_eur, price_bgn, unit, crops, active_substance, formulation, quarantine, babh_reg, badge, image_url, description, dose, rating, reviews_count, in_stock, rates, pack_sizes) VALUES (
   'shavit-f-72-vdg',
   'Шавит Ф 72 ВДГ',
@@ -247,7 +266,11 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   TRUE,
   '[{"val":100,"label":"Препоръчителна доза: 200 г/дка"}]'::jsonb,
   '[{"label":"1 кг","price":18.4,"unit":"€ 18.40 / 1 кг","default":true}]'::jsonb
-);
+) ON CONFLICT (id) DO UPDATE SET
+  name = EXCLUDED.name,
+  price_eur = EXCLUDED.price_eur,
+  price_bgn = EXCLUDED.price_bgn,
+  updated_at = NOW();
 INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_category_name, price_eur, price_bgn, unit, crops, active_substance, formulation, quarantine, babh_reg, badge, image_url, description, dose, rating, reviews_count, in_stock, rates, pack_sizes) VALUES (
   'ridomil-gold-r-vg',
   'Ридомил Голд Р ВГ',
@@ -273,7 +296,11 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   TRUE,
   '[{"val":100,"label":"Препоръчителна доза: 500 г/дка"}]'::jsonb,
   '[{"label":"1 кг","price":38.5,"unit":"€ 38.50 / 1 кг","default":true}]'::jsonb
-);
+) ON CONFLICT (id) DO UPDATE SET
+  name = EXCLUDED.name,
+  price_eur = EXCLUDED.price_eur,
+  price_bgn = EXCLUDED.price_bgn,
+  updated_at = NOW();
 INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_category_name, price_eur, price_bgn, unit, crops, active_substance, formulation, quarantine, babh_reg, badge, image_url, description, dose, rating, reviews_count, in_stock, rates, pack_sizes) VALUES (
   'kuadris-25-sk',
   'Куадрис 25 СК',
@@ -299,7 +326,11 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   TRUE,
   '[{"val":100,"label":"Препоръчителна доза: 80-100 мл/дка"}]'::jsonb,
   '[{"label":"1 л","price":48,"unit":"€ 48.00 / 1 л","default":true}]'::jsonb
-);
+) ON CONFLICT (id) DO UPDATE SET
+  name = EXCLUDED.name,
+  price_eur = EXCLUDED.price_eur,
+  price_bgn = EXCLUDED.price_bgn,
+  updated_at = NOW();
 INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_category_name, price_eur, price_bgn, unit, crops, active_substance, formulation, quarantine, babh_reg, badge, image_url, description, dose, rating, reviews_count, in_stock, rates, pack_sizes) VALUES (
   'bordolezov-raztvor-20-vp',
   'Бордолезов разтвор 20 ВП',
@@ -325,7 +356,11 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   TRUE,
   '[{"val":100,"label":"Препоръчителна доза: 1.5% (1.5 кг/100 л)"}]'::jsonb,
   '[{"label":"1 кг","price":8.2,"unit":"€ 8.20 / 1 кг","default":true}]'::jsonb
-);
+) ON CONFLICT (id) DO UPDATE SET
+  name = EXCLUDED.name,
+  price_eur = EXCLUDED.price_eur,
+  price_bgn = EXCLUDED.price_bgn,
+  updated_at = NOW();
 INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_category_name, price_eur, price_bgn, unit, crops, active_substance, formulation, quarantine, babh_reg, badge, image_url, description, dose, rating, reviews_count, in_stock, rates, pack_sizes) VALUES (
   'ditan-m-45-vp',
   'Дитан М-45 ВП',
@@ -351,7 +386,11 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   TRUE,
   '[{"val":100,"label":"Препоръчителна доза: 200 г/дка"}]'::jsonb,
   '[{"label":"1 кг","price":13.5,"unit":"€ 13.50 / 1 кг","default":true}]'::jsonb
-);
+) ON CONFLICT (id) DO UPDATE SET
+  name = EXCLUDED.name,
+  price_eur = EXCLUDED.price_eur,
+  price_bgn = EXCLUDED.price_bgn,
+  updated_at = NOW();
 INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_category_name, price_eur, price_bgn, unit, crops, active_substance, formulation, quarantine, babh_reg, badge, image_url, description, dose, rating, reviews_count, in_stock, rates, pack_sizes) VALUES (
   'kabrio-top-vg',
   'Кабрио Топ ВГ',
@@ -377,7 +416,11 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   TRUE,
   '[{"val":100,"label":"Препоръчителна доза: 150-200 г/дка"}]'::jsonb,
   '[{"label":"1 кг","price":49.9,"unit":"€ 49.90 / 1 кг","default":true}]'::jsonb
-);
+) ON CONFLICT (id) DO UPDATE SET
+  name = EXCLUDED.name,
+  price_eur = EXCLUDED.price_eur,
+  price_bgn = EXCLUDED.price_bgn,
+  updated_at = NOW();
 INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_category_name, price_eur, price_bgn, unit, crops, active_substance, formulation, quarantine, babh_reg, badge, image_url, description, dose, rating, reviews_count, in_stock, rates, pack_sizes) VALUES (
   'flint-maks-75-vg',
   'Флинт Макс 75 ВГ',
@@ -403,7 +446,11 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   TRUE,
   '[{"val":100,"label":"Препоръчителна доза: 16-20 г/дка"}]'::jsonb,
   '[{"label":"500 г","price":36.5,"unit":"€ 36.50 / 500 г","default":true}]'::jsonb
-);
+) ON CONFLICT (id) DO UPDATE SET
+  name = EXCLUDED.name,
+  price_eur = EXCLUDED.price_eur,
+  price_bgn = EXCLUDED.price_bgn,
+  updated_at = NOW();
 INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_category_name, price_eur, price_bgn, unit, crops, active_substance, formulation, quarantine, babh_reg, badge, image_url, description, dose, rating, reviews_count, in_stock, rates, pack_sizes) VALUES (
   'serkadis-sk',
   'Серкадис СК',
@@ -429,7 +476,11 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   TRUE,
   '[{"val":100,"label":"Препоръчителна доза: 25-30 мл/дка"}]'::jsonb,
   '[{"label":"1 л","price":88,"unit":"€ 88.00 / 1 л","default":true}]'::jsonb
-);
+) ON CONFLICT (id) DO UPDATE SET
+  name = EXCLUDED.name,
+  price_eur = EXCLUDED.price_eur,
+  price_bgn = EXCLUDED.price_bgn,
+  updated_at = NOW();
 INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_category_name, price_eur, price_bgn, unit, crops, active_substance, formulation, quarantine, babh_reg, badge, image_url, description, dose, rating, reviews_count, in_stock, rates, pack_sizes) VALUES (
   'belis-vg',
   'Белис ВГ',
@@ -455,7 +506,11 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   TRUE,
   '[{"val":100,"label":"Препоръчителна доза: 80 г/дка"}]'::jsonb,
   '[{"label":"1 кг","price":64,"unit":"€ 64.00 / 1 кг","default":true}]'::jsonb
-);
+) ON CONFLICT (id) DO UPDATE SET
+  name = EXCLUDED.name,
+  price_eur = EXCLUDED.price_eur,
+  price_bgn = EXCLUDED.price_bgn,
+  updated_at = NOW();
 INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_category_name, price_eur, price_bgn, unit, crops, active_substance, formulation, quarantine, babh_reg, badge, image_url, description, dose, rating, reviews_count, in_stock, rates, pack_sizes) VALUES (
   'infinito-sk',
   'Инфинито СК',
@@ -481,7 +536,11 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   TRUE,
   '[{"val":100,"label":"Препоръчителна доза: 120-160 мл/дка"}]'::jsonb,
   '[{"label":"1 л","price":43.5,"unit":"€ 43.50 / 1 л","default":true}]'::jsonb
-);
+) ON CONFLICT (id) DO UPDATE SET
+  name = EXCLUDED.name,
+  price_eur = EXCLUDED.price_eur,
+  price_bgn = EXCLUDED.price_bgn,
+  updated_at = NOW();
 INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_category_name, price_eur, price_bgn, unit, crops, active_substance, formulation, quarantine, babh_reg, badge, image_url, description, dose, rating, reviews_count, in_stock, rates, pack_sizes) VALUES (
   'revus-250-sk',
   'Ревус 250 СК',
@@ -507,7 +566,11 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   TRUE,
   '[{"val":100,"label":"Препоръчителна доза: 50-60 мл/дка"}]'::jsonb,
   '[{"label":"1 л","price":52,"unit":"€ 52.00 / 1 л","default":true}]'::jsonb
-);
+) ON CONFLICT (id) DO UPDATE SET
+  name = EXCLUDED.name,
+  price_eur = EXCLUDED.price_eur,
+  price_bgn = EXCLUDED.price_bgn,
+  updated_at = NOW();
 INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_category_name, price_eur, price_bgn, unit, crops, active_substance, formulation, quarantine, babh_reg, badge, image_url, description, dose, rating, reviews_count, in_stock, rates, pack_sizes) VALUES (
   'kosayd-2000-vg',
   'Косайд 2000 ВГ',
@@ -533,7 +596,11 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   TRUE,
   '[{"val":100,"label":"Препоръчителна доза: 155-200 г/дка"}]'::jsonb,
   '[{"label":"1 кг","price":24.8,"unit":"€ 24.80 / 1 кг","default":true}]'::jsonb
-);
+) ON CONFLICT (id) DO UPDATE SET
+  name = EXCLUDED.name,
+  price_eur = EXCLUDED.price_eur,
+  price_bgn = EXCLUDED.price_bgn,
+  updated_at = NOW();
 INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_category_name, price_eur, price_bgn, unit, crops, active_substance, formulation, quarantine, babh_reg, badge, image_url, description, dose, rating, reviews_count, in_stock, rates, pack_sizes) VALUES (
   'funguran-on-50-vp',
   'Фунгуран ОН 50 ВП',
@@ -559,7 +626,11 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   TRUE,
   '[{"val":100,"label":"Препоръчителна доза: 150-200 г/дка"}]'::jsonb,
   '[{"label":"1 кг","price":19.9,"unit":"€ 19.90 / 1 кг","default":true}]'::jsonb
-);
+) ON CONFLICT (id) DO UPDATE SET
+  name = EXCLUDED.name,
+  price_eur = EXCLUDED.price_eur,
+  price_bgn = EXCLUDED.price_bgn,
+  updated_at = NOW();
 INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_category_name, price_eur, price_bgn, unit, crops, active_substance, formulation, quarantine, babh_reg, badge, image_url, description, dose, rating, reviews_count, in_stock, rates, pack_sizes) VALUES (
   'shampion-50-vp',
   'Шампион 50 ВП',
@@ -585,7 +656,11 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   TRUE,
   '[{"val":100,"label":"Препоръчителна доза: 150-300 г/дка"}]'::jsonb,
   '[{"label":"1 кг","price":18.2,"unit":"€ 18.20 / 1 кг","default":true}]'::jsonb
-);
+) ON CONFLICT (id) DO UPDATE SET
+  name = EXCLUDED.name,
+  price_eur = EXCLUDED.price_eur,
+  price_bgn = EXCLUDED.price_bgn,
+  updated_at = NOW();
 INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_category_name, price_eur, price_bgn, unit, crops, active_substance, formulation, quarantine, babh_reg, badge, image_url, description, dose, rating, reviews_count, in_stock, rates, pack_sizes) VALUES (
   'vitisan-bio',
   'Витисан БИО',
@@ -611,7 +686,11 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   TRUE,
   '[{"val":100,"label":"Препоръчителна доза: 500-1000 г/дка"}]'::jsonb,
   '[{"label":"1 кг","price":11.9,"unit":"€ 11.90 / 1 кг","default":true}]'::jsonb
-);
+) ON CONFLICT (id) DO UPDATE SET
+  name = EXCLUDED.name,
+  price_eur = EXCLUDED.price_eur,
+  price_bgn = EXCLUDED.price_bgn,
+  updated_at = NOW();
 INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_category_name, price_eur, price_bgn, unit, crops, active_substance, formulation, quarantine, babh_reg, badge, image_url, description, dose, rating, reviews_count, in_stock, rates, pack_sizes) VALUES (
   'melodi-kompakt-49-vg',
   'Мелоди Компакт 49 ВГ',
@@ -637,7 +716,11 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   TRUE,
   '[{"val":100,"label":"Препоръчителна доза: 150-175 г/дка"}]'::jsonb,
   '[{"label":"1 кг","price":28.5,"unit":"€ 28.50 / 1 кг","default":true}]'::jsonb
-);
+) ON CONFLICT (id) DO UPDATE SET
+  name = EXCLUDED.name,
+  price_eur = EXCLUDED.price_eur,
+  price_bgn = EXCLUDED.price_bgn,
+  updated_at = NOW();
 INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_category_name, price_eur, price_bgn, unit, crops, active_substance, formulation, quarantine, babh_reg, badge, image_url, description, dose, rating, reviews_count, in_stock, rates, pack_sizes) VALUES (
   'kantus-vg',
   'Кантус ВГ',
@@ -663,7 +746,11 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   TRUE,
   '[{"val":100,"label":"Препоръчителна доза: 100-120 г/дка"}]'::jsonb,
   '[{"label":"1 кг","price":72,"unit":"€ 72.00 / 1 кг","default":true}]'::jsonb
-);
+) ON CONFLICT (id) DO UPDATE SET
+  name = EXCLUDED.name,
+  price_eur = EXCLUDED.price_eur,
+  price_bgn = EXCLUDED.price_bgn,
+  updated_at = NOW();
 INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_category_name, price_eur, price_bgn, unit, crops, active_substance, formulation, quarantine, babh_reg, badge, image_url, description, dose, rating, reviews_count, in_stock, rates, pack_sizes) VALUES (
   'skala-sk',
   'Скала СК',
@@ -689,7 +776,11 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   TRUE,
   '[{"val":100,"label":"Препоръчителна доза: 150-200 мл/дка"}]'::jsonb,
   '[{"label":"1 л","price":54,"unit":"€ 54.00 / 1 л","default":true}]'::jsonb
-);
+) ON CONFLICT (id) DO UPDATE SET
+  name = EXCLUDED.name,
+  price_eur = EXCLUDED.price_eur,
+  price_bgn = EXCLUDED.price_bgn,
+  updated_at = NOW();
 INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_category_name, price_eur, price_bgn, unit, crops, active_substance, formulation, quarantine, babh_reg, badge, image_url, description, dose, rating, reviews_count, in_stock, rates, pack_sizes) VALUES (
   'prolektus-50-vg',
   'Пролектус 50 ВГ',
@@ -715,7 +806,11 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   TRUE,
   '[{"val":100,"label":"Препоръчителна доза: 80-120 г/дка"}]'::jsonb,
   '[{"label":"500 г","price":39,"unit":"€ 39.00 / 500 г","default":true}]'::jsonb
-);
+) ON CONFLICT (id) DO UPDATE SET
+  name = EXCLUDED.name,
+  price_eur = EXCLUDED.price_eur,
+  price_bgn = EXCLUDED.price_bgn,
+  updated_at = NOW();
 INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_category_name, price_eur, price_bgn, unit, crops, active_substance, formulation, quarantine, babh_reg, badge, image_url, description, dose, rating, reviews_count, in_stock, rates, pack_sizes) VALUES (
   'sistan-ekozom-ev',
   'Систан Екозом ЕВ',
@@ -741,7 +836,11 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   TRUE,
   '[{"val":100,"label":"Препоръчителна доза: 20-25 мл/дка"}]'::jsonb,
   '[{"label":"50 мл","price":8.5,"unit":"€ 8.50 / 50 мл","default":true}]'::jsonb
-);
+) ON CONFLICT (id) DO UPDATE SET
+  name = EXCLUDED.name,
+  price_eur = EXCLUDED.price_eur,
+  price_bgn = EXCLUDED.price_bgn,
+  updated_at = NOW();
 INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_category_name, price_eur, price_bgn, unit, crops, active_substance, formulation, quarantine, babh_reg, badge, image_url, description, dose, rating, reviews_count, in_stock, rates, pack_sizes) VALUES (
   'suich-625-vg',
   'Суич 62.5 ВГ',
@@ -767,7 +866,11 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   TRUE,
   '[{"val":100,"label":"Препоръчителна доза: 80-100 г/дка"}]'::jsonb,
   '[{"label":"100 г","price":16.9,"unit":"€ 16.90 / 100 г","default":true}]'::jsonb
-);
+) ON CONFLICT (id) DO UPDATE SET
+  name = EXCLUDED.name,
+  price_eur = EXCLUDED.price_eur,
+  price_bgn = EXCLUDED.price_bgn,
+  updated_at = NOW();
 INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_category_name, price_eur, price_bgn, unit, crops, active_substance, formulation, quarantine, babh_reg, badge, image_url, description, dose, rating, reviews_count, in_stock, rates, pack_sizes) VALUES (
   'propuls-250-se',
   'Пропулс 250 СЕ',
@@ -793,7 +896,11 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   TRUE,
   '[{"val":100,"label":"Препоръчителна доза: 80-100 мл/дка"}]'::jsonb,
   '[{"label":"1 л","price":58,"unit":"€ 58.00 / 1 л","default":true}]'::jsonb
-);
+) ON CONFLICT (id) DO UPDATE SET
+  name = EXCLUDED.name,
+  price_eur = EXCLUDED.price_eur,
+  price_bgn = EXCLUDED.price_bgn,
+  updated_at = NOW();
 INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_category_name, price_eur, price_bgn, unit, crops, active_substance, formulation, quarantine, babh_reg, badge, image_url, description, dose, rating, reviews_count, in_stock, rates, pack_sizes) VALUES (
   'tebumaks-250-ev',
   'Тебумакс 250 ЕВ',
@@ -819,7 +926,11 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   TRUE,
   '[{"val":100,"label":"Препоръчителна доза: 100 мл/дка"}]'::jsonb,
   '[{"label":"1 л","price":24.5,"unit":"€ 24.50 / 1 л","default":true}]'::jsonb
-);
+) ON CONFLICT (id) DO UPDATE SET
+  name = EXCLUDED.name,
+  price_eur = EXCLUDED.price_eur,
+  price_bgn = EXCLUDED.price_bgn,
+  updated_at = NOW();
 INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_category_name, price_eur, price_bgn, unit, crops, active_substance, formulation, quarantine, babh_reg, badge, image_url, description, dose, rating, reviews_count, in_stock, rates, pack_sizes) VALUES (
   'folikur-250-ev',
   'Фоликур 250 ЕВ',
@@ -845,7 +956,11 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   TRUE,
   '[{"val":100,"label":"Препоръчителна доза: 100 мл/дка"}]'::jsonb,
   '[{"label":"1 л","price":32,"unit":"€ 32.00 / 1 л","default":true}]'::jsonb
-);
+) ON CONFLICT (id) DO UPDATE SET
+  name = EXCLUDED.name,
+  price_eur = EXCLUDED.price_eur,
+  price_bgn = EXCLUDED.price_bgn,
+  updated_at = NOW();
 INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_category_name, price_eur, price_bgn, unit, crops, active_substance, formulation, quarantine, babh_reg, badge, image_url, description, dose, rating, reviews_count, in_stock, rates, pack_sizes) VALUES (
   'poliram-df',
   'Полирам ДФ',
@@ -871,7 +986,11 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   TRUE,
   '[{"val":100,"label":"Препоръчителна доза: 200 г/дка"}]'::jsonb,
   '[{"label":"1 кг","price":15.6,"unit":"€ 15.60 / 1 кг","default":true}]'::jsonb
-);
+) ON CONFLICT (id) DO UPDATE SET
+  name = EXCLUDED.name,
+  price_eur = EXCLUDED.price_eur,
+  price_bgn = EXCLUDED.price_bgn,
+  updated_at = NOW();
 INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_category_name, price_eur, price_bgn, unit, crops, active_substance, formulation, quarantine, babh_reg, badge, image_url, description, dose, rating, reviews_count, in_stock, rates, pack_sizes) VALUES (
   'tiovit-dzhet-80-vg',
   'Тиовит Джет 80 ВГ',
@@ -897,7 +1016,11 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   TRUE,
   '[{"val":100,"label":"Препоръчителна доза: 300 г/дка"}]'::jsonb,
   '[{"label":"1 кг","price":4.5,"unit":"€ 4.50 / 1 кг","default":true}]'::jsonb
-);
+) ON CONFLICT (id) DO UPDATE SET
+  name = EXCLUDED.name,
+  price_eur = EXCLUDED.price_eur,
+  price_bgn = EXCLUDED.price_bgn,
+  updated_at = NOW();
 INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_category_name, price_eur, price_bgn, unit, crops, active_substance, formulation, quarantine, babh_reg, badge, image_url, description, dose, rating, reviews_count, in_stock, rates, pack_sizes) VALUES (
   'kumulus-df',
   'Кумулус ДФ',
@@ -923,7 +1046,11 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   TRUE,
   '[{"val":100,"label":"Препоръчителна доза: 300-500 г/дка"}]'::jsonb,
   '[{"label":"1 кг","price":4.6,"unit":"€ 4.60 / 1 кг","default":true}]'::jsonb
-);
+) ON CONFLICT (id) DO UPDATE SET
+  name = EXCLUDED.name,
+  price_eur = EXCLUDED.price_eur,
+  price_bgn = EXCLUDED.price_bgn,
+  updated_at = NOW();
 INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_category_name, price_eur, price_bgn, unit, crops, active_substance, formulation, quarantine, babh_reg, badge, image_url, description, dose, rating, reviews_count, in_stock, rates, pack_sizes) VALUES (
   'kuprotsin-mz',
   'Купроцин МЗ',
@@ -949,7 +1076,11 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   TRUE,
   '[{"val":100,"label":"Препоръчителна доза: 250 г/дка"}]'::jsonb,
   '[{"label":"1 кг","price":14.2,"unit":"€ 14.20 / 1 кг","default":true}]'::jsonb
-);
+) ON CONFLICT (id) DO UPDATE SET
+  name = EXCLUDED.name,
+  price_eur = EXCLUDED.price_eur,
+  price_bgn = EXCLUDED.price_bgn,
+  updated_at = NOW();
 INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_category_name, price_eur, price_bgn, unit, crops, active_substance, formulation, quarantine, babh_reg, badge, image_url, description, dose, rating, reviews_count, in_stock, rates, pack_sizes) VALUES (
   'teldor-500-sk',
   'Телдор 500 СК',
@@ -975,7 +1106,11 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   TRUE,
   '[{"val":100,"label":"Препоръчителна доза: 100 мл/дка"}]'::jsonb,
   '[{"label":"100 мл","price":14.8,"unit":"€ 14.80 / 100 мл","default":true}]'::jsonb
-);
+) ON CONFLICT (id) DO UPDATE SET
+  name = EXCLUDED.name,
+  price_eur = EXCLUDED.price_eur,
+  price_bgn = EXCLUDED.price_bgn,
+  updated_at = NOW();
 INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_category_name, price_eur, price_bgn, unit, crops, active_substance, formulation, quarantine, babh_reg, badge, image_url, description, dose, rating, reviews_count, in_stock, rates, pack_sizes) VALUES (
   'folpan-80-vdg',
   'Фолпан 80 ВДГ',
@@ -1001,7 +1136,11 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   TRUE,
   '[{"val":100,"label":"Препоръчителна доза: 150 г/дка"}]'::jsonb,
   '[{"label":"1 кг","price":19.5,"unit":"€ 19.50 / 1 кг","default":true}]'::jsonb
-);
+) ON CONFLICT (id) DO UPDATE SET
+  name = EXCLUDED.name,
+  price_eur = EXCLUDED.price_eur,
+  price_bgn = EXCLUDED.price_bgn,
+  updated_at = NOW();
 INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_category_name, price_eur, price_bgn, unit, crops, active_substance, formulation, quarantine, babh_reg, badge, image_url, description, dose, rating, reviews_count, in_stock, rates, pack_sizes) VALUES (
   'kurzat-m-vg',
   'Курзат М ВГ',
@@ -1027,7 +1166,11 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   TRUE,
   '[{"val":100,"label":"Препоръчителна доза: 200-250 г/дка"}]'::jsonb,
   '[{"label":"1 кг","price":21,"unit":"€ 21.00 / 1 кг","default":true}]'::jsonb
-);
+) ON CONFLICT (id) DO UPDATE SET
+  name = EXCLUDED.name,
+  price_eur = EXCLUDED.price_eur,
+  price_bgn = EXCLUDED.price_bgn,
+  updated_at = NOW();
 INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_category_name, price_eur, price_bgn, unit, crops, active_substance, formulation, quarantine, babh_reg, badge, image_url, description, dose, rating, reviews_count, in_stock, rates, pack_sizes) VALUES (
   'ortiva-top-sk',
   'Ортива Топ СК',
@@ -1053,7 +1196,11 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   TRUE,
   '[{"val":100,"label":"Препоръчителна доза: 100 мл/дка"}]'::jsonb,
   '[{"label":"1 л","price":59,"unit":"€ 59.00 / 1 л","default":true}]'::jsonb
-);
+) ON CONFLICT (id) DO UPDATE SET
+  name = EXCLUDED.name,
+  price_eur = EXCLUDED.price_eur,
+  price_bgn = EXCLUDED.price_bgn,
+  updated_at = NOW();
 INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_category_name, price_eur, price_bgn, unit, crops, active_substance, formulation, quarantine, babh_reg, badge, image_url, description, dose, rating, reviews_count, in_stock, rates, pack_sizes) VALUES (
   'delan-pro-sk',
   'Делан Про СК',
@@ -1079,7 +1226,11 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   TRUE,
   '[{"val":100,"label":"Препоръчителна доза: 250 мл/дка"}]'::jsonb,
   '[{"label":"1 л","price":34,"unit":"€ 34.00 / 1 л","default":true}]'::jsonb
-);
+) ON CONFLICT (id) DO UPDATE SET
+  name = EXCLUDED.name,
+  price_eur = EXCLUDED.price_eur,
+  price_bgn = EXCLUDED.price_bgn,
+  updated_at = NOW();
 INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_category_name, price_eur, price_bgn, unit, crops, active_substance, formulation, quarantine, babh_reg, badge, image_url, description, dose, rating, reviews_count, in_stock, rates, pack_sizes) VALUES (
   'fosifit-eko',
   'Фосифит ЕКО',
@@ -1105,7 +1256,11 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   TRUE,
   '[{"val":100,"label":"Препоръчителна доза: 200-300 мл/дка"}]'::jsonb,
   '[{"label":"1 л","price":12.8,"unit":"€ 12.80 / 1 л","default":true}]'::jsonb
-);
+) ON CONFLICT (id) DO UPDATE SET
+  name = EXCLUDED.name,
+  price_eur = EXCLUDED.price_eur,
+  price_bgn = EXCLUDED.price_bgn,
+  updated_at = NOW();
 INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_category_name, price_eur, price_bgn, unit, crops, active_substance, formulation, quarantine, babh_reg, badge, image_url, description, dose, rating, reviews_count, in_stock, rates, pack_sizes) VALUES (
   'mospilan-20-sp',
   'Моспилан 20 СП',
@@ -1131,7 +1286,11 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   TRUE,
   '[{"val":100,"label":"Препоръчителна доза: 12.5-25 г/дка"}]'::jsonb,
   '[{"label":"50 г","price":3.2,"unit":"€ 3.20 / 50 г","default":true}]'::jsonb
-);
+) ON CONFLICT (id) DO UPDATE SET
+  name = EXCLUDED.name,
+  price_eur = EXCLUDED.price_eur,
+  price_bgn = EXCLUDED.price_bgn,
+  updated_at = NOW();
 INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_category_name, price_eur, price_bgn, unit, crops, active_substance, formulation, quarantine, babh_reg, badge, image_url, description, dose, rating, reviews_count, in_stock, rates, pack_sizes) VALUES (
   'detsis-100-ek',
   'Децис 100 ЕК',
@@ -1157,7 +1316,11 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   TRUE,
   '[{"val":100,"label":"Препоръчителна доза: 12.5-17.5 мл/дка"}]'::jsonb,
   '[{"label":"50 мл","price":4.2,"unit":"€ 4.20 / 50 мл","default":true}]'::jsonb
-);
+) ON CONFLICT (id) DO UPDATE SET
+  name = EXCLUDED.name,
+  price_eur = EXCLUDED.price_eur,
+  price_bgn = EXCLUDED.price_bgn,
+  updated_at = NOW();
 INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_category_name, price_eur, price_bgn, unit, crops, active_substance, formulation, quarantine, babh_reg, badge, image_url, description, dose, rating, reviews_count, in_stock, rates, pack_sizes) VALUES (
   'koragen-20-sk',
   'Кораген 20 СК',
@@ -1183,7 +1346,11 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   TRUE,
   '[{"val":100,"label":"Препоръчителна доза: 16-20 мл/дка"}]'::jsonb,
   '[{"label":"50 мл","price":9.9,"unit":"€ 9.90 / 50 мл","default":true}]'::jsonb
-);
+) ON CONFLICT (id) DO UPDATE SET
+  name = EXCLUDED.name,
+  price_eur = EXCLUDED.price_eur,
+  price_bgn = EXCLUDED.price_bgn,
+  updated_at = NOW();
 INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_category_name, price_eur, price_bgn, unit, crops, active_substance, formulation, quarantine, babh_reg, badge, image_url, description, dose, rating, reviews_count, in_stock, rates, pack_sizes) VALUES (
   'karate-zeon-5-ks',
   'Карате Зеон 5 КС',
@@ -1209,7 +1376,11 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   TRUE,
   '[{"val":100,"label":"Препоръчителна доза: 15-20 мл/дка"}]'::jsonb,
   '[{"label":"50 мл","price":3.5,"unit":"€ 3.50 / 50 мл","default":true}]'::jsonb
-);
+) ON CONFLICT (id) DO UPDATE SET
+  name = EXCLUDED.name,
+  price_eur = EXCLUDED.price_eur,
+  price_bgn = EXCLUDED.price_bgn,
+  updated_at = NOW();
 INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_category_name, price_eur, price_bgn, unit, crops, active_substance, formulation, quarantine, babh_reg, badge, image_url, description, dose, rating, reviews_count, in_stock, rates, pack_sizes) VALUES (
   'sivanto-praym-sl',
   'Сиванто Прайм СЛ',
@@ -1235,7 +1406,11 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   TRUE,
   '[{"val":100,"label":"Препоръчителна доза: 50-90 мл/дка"}]'::jsonb,
   '[{"label":"50 мл","price":7.8,"unit":"€ 7.80 / 50 мл","default":true}]'::jsonb
-);
+) ON CONFLICT (id) DO UPDATE SET
+  name = EXCLUDED.name,
+  price_eur = EXCLUDED.price_eur,
+  price_bgn = EXCLUDED.price_bgn,
+  updated_at = NOW();
 INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_category_name, price_eur, price_bgn, unit, crops, active_substance, formulation, quarantine, babh_reg, badge, image_url, description, dose, rating, reviews_count, in_stock, rates, pack_sizes) VALUES (
   'tepeki-vg',
   'Тепеки ВГ',
@@ -1261,7 +1436,11 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   TRUE,
   '[{"val":100,"label":"Препоръчителна доза: 10-14 г/дка"}]'::jsonb,
   '[{"label":"15 г","price":9.2,"unit":"€ 9.20 / 15 г","default":true}]'::jsonb
-);
+) ON CONFLICT (id) DO UPDATE SET
+  name = EXCLUDED.name,
+  price_eur = EXCLUDED.price_eur,
+  price_bgn = EXCLUDED.price_bgn,
+  updated_at = NOW();
 INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_category_name, price_eur, price_bgn, unit, crops, active_substance, formulation, quarantine, babh_reg, badge, image_url, description, dose, rating, reviews_count, in_stock, rates, pack_sizes) VALUES (
   'avant-150-ek',
   'Авант 150 ЕК',
@@ -1287,7 +1466,11 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   TRUE,
   '[{"val":100,"label":"Препоръчителна доза: 25-33 мл/дка"}]'::jsonb,
   '[{"label":"250 мл","price":38,"unit":"€ 38.00 / 250 мл","default":true}]'::jsonb
-);
+) ON CONFLICT (id) DO UPDATE SET
+  name = EXCLUDED.name,
+  price_eur = EXCLUDED.price_eur,
+  price_bgn = EXCLUDED.price_bgn,
+  updated_at = NOW();
 INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_category_name, price_eur, price_bgn, unit, crops, active_substance, formulation, quarantine, babh_reg, badge, image_url, description, dose, rating, reviews_count, in_stock, rates, pack_sizes) VALUES (
   'vertimek-018-ek',
   'Вертимек 018 ЕК',
@@ -1313,7 +1496,11 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   TRUE,
   '[{"val":100,"label":"Препоръчителна доза: 80-120 мл/дка"}]'::jsonb,
   '[{"label":"100 мл","price":8.9,"unit":"€ 8.90 / 100 мл","default":true}]'::jsonb
-);
+) ON CONFLICT (id) DO UPDATE SET
+  name = EXCLUDED.name,
+  price_eur = EXCLUDED.price_eur,
+  price_bgn = EXCLUDED.price_bgn,
+  updated_at = NOW();
 INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_category_name, price_eur, price_bgn, unit, crops, active_substance, formulation, quarantine, babh_reg, badge, image_url, description, dose, rating, reviews_count, in_stock, rates, pack_sizes) VALUES (
   'nisoran-10-vp',
   'Нисоран 10 ВП',
@@ -1339,7 +1526,11 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   TRUE,
   '[{"val":100,"label":"Препоръчителна доза: 50 г/дка"}]'::jsonb,
   '[{"label":"50 г","price":6.5,"unit":"€ 6.50 / 50 г","default":true}]'::jsonb
-);
+) ON CONFLICT (id) DO UPDATE SET
+  name = EXCLUDED.name,
+  price_eur = EXCLUDED.price_eur,
+  price_bgn = EXCLUDED.price_bgn,
+  updated_at = NOW();
 INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_category_name, price_eur, price_bgn, unit, crops, active_substance, formulation, quarantine, babh_reg, badge, image_url, description, dose, rating, reviews_count, in_stock, rates, pack_sizes) VALUES (
   'ortus-5-sk',
   'Ортус 5 СК',
@@ -1365,7 +1556,11 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   TRUE,
   '[{"val":100,"label":"Препоръчителна доза: 100 мл/дка"}]'::jsonb,
   '[{"label":"50 мл","price":7.2,"unit":"€ 7.20 / 50 мл","default":true}]'::jsonb
-);
+) ON CONFLICT (id) DO UPDATE SET
+  name = EXCLUDED.name,
+  price_eur = EXCLUDED.price_eur,
+  price_bgn = EXCLUDED.price_bgn,
+  updated_at = NOW();
 INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_category_name, price_eur, price_bgn, unit, crops, active_substance, formulation, quarantine, babh_reg, badge, image_url, description, dose, rating, reviews_count, in_stock, rates, pack_sizes) VALUES (
   'masay-vp',
   'Масай ВП',
@@ -1391,7 +1586,11 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   TRUE,
   '[{"val":100,"label":"Препоръчителна доза: 25-30 г/дка"}]'::jsonb,
   '[{"label":"100 г","price":12.5,"unit":"€ 12.50 / 100 г","default":true}]'::jsonb
-);
+) ON CONFLICT (id) DO UPDATE SET
+  name = EXCLUDED.name,
+  price_eur = EXCLUDED.price_eur,
+  price_bgn = EXCLUDED.price_bgn,
+  updated_at = NOW();
 INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_category_name, price_eur, price_bgn, unit, crops, active_substance, formulation, quarantine, babh_reg, badge, image_url, description, dose, rating, reviews_count, in_stock, rates, pack_sizes) VALUES (
   'klouzar-120-sk',
   'Клоузър 120 СК',
@@ -1417,7 +1616,11 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   TRUE,
   '[{"val":100,"label":"Препоръчителна доза: 20-40 мл/дка"}]'::jsonb,
   '[{"label":"50 мл","price":8.1,"unit":"€ 8.10 / 50 мл","default":true}]'::jsonb
-);
+) ON CONFLICT (id) DO UPDATE SET
+  name = EXCLUDED.name,
+  price_eur = EXCLUDED.price_eur,
+  price_bgn = EXCLUDED.price_bgn,
+  updated_at = NOW();
 INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_category_name, price_eur, price_bgn, unit, crops, active_substance, formulation, quarantine, babh_reg, badge, image_url, description, dose, rating, reviews_count, in_stock, rates, pack_sizes) VALUES (
   'voliam-targo-063-sk',
   'Волиам Тарго 063 СК',
@@ -1443,7 +1646,11 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   TRUE,
   '[{"val":100,"label":"Препоръчителна доза: 80 мл/дка"}]'::jsonb,
   '[{"label":"250 мл","price":49,"unit":"€ 49.00 / 250 мл","default":true}]'::jsonb
-);
+) ON CONFLICT (id) DO UPDATE SET
+  name = EXCLUDED.name,
+  price_eur = EXCLUDED.price_eur,
+  price_bgn = EXCLUDED.price_bgn,
+  updated_at = NOW();
 INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_category_name, price_eur, price_bgn, unit, crops, active_substance, formulation, quarantine, babh_reg, badge, image_url, description, dose, rating, reviews_count, in_stock, rates, pack_sizes) VALUES (
   'delegat-250-vg',
   'Делегат 250 ВГ',
@@ -1469,7 +1676,11 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   TRUE,
   '[{"val":100,"label":"Препоръчителна доза: 30 г/дка"}]'::jsonb,
   '[{"label":"100 г","price":29.5,"unit":"€ 29.50 / 100 г","default":true}]'::jsonb
-);
+) ON CONFLICT (id) DO UPDATE SET
+  name = EXCLUDED.name,
+  price_eur = EXCLUDED.price_eur,
+  price_bgn = EXCLUDED.price_bgn,
+  updated_at = NOW();
 INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_category_name, price_eur, price_bgn, unit, crops, active_substance, formulation, quarantine, babh_reg, badge, image_url, description, dose, rating, reviews_count, in_stock, rates, pack_sizes) VALUES (
   'lazer-240-sk-bio',
   'Лазер 240 СК БИО',
@@ -1495,7 +1706,11 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   TRUE,
   '[{"val":100,"label":"Препоръчителна доза: 20-40 мл/дка"}]'::jsonb,
   '[{"label":"50 мл","price":11.5,"unit":"€ 11.50 / 50 мл","default":true}]'::jsonb
-);
+) ON CONFLICT (id) DO UPDATE SET
+  name = EXCLUDED.name,
+  price_eur = EXCLUDED.price_eur,
+  price_bgn = EXCLUDED.price_bgn,
+  updated_at = NOW();
 INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_category_name, price_eur, price_bgn, unit, crops, active_substance, formulation, quarantine, babh_reg, badge, image_url, description, dose, rating, reviews_count, in_stock, rates, pack_sizes) VALUES (
   'nim-azal-ts-bio',
   'Ним Азал Т/С БИО',
@@ -1521,7 +1736,11 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   TRUE,
   '[{"val":100,"label":"Препоръчителна доза: 250-300 мл/дка"}]'::jsonb,
   '[{"label":"100 мл","price":9.8,"unit":"€ 9.80 / 100 мл","default":true}]'::jsonb
-);
+) ON CONFLICT (id) DO UPDATE SET
+  name = EXCLUDED.name,
+  price_eur = EXCLUDED.price_eur,
+  price_bgn = EXCLUDED.price_bgn,
+  updated_at = NOW();
 INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_category_name, price_eur, price_bgn, unit, crops, active_substance, formulation, quarantine, babh_reg, badge, image_url, description, dose, rating, reviews_count, in_stock, rates, pack_sizes) VALUES (
   'lepinoks-plyus-bio',
   'Лепинокс Плюс БИО',
@@ -1547,7 +1766,11 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   TRUE,
   '[{"val":100,"label":"Препоръчителна доза: 100 г/дка"}]'::jsonb,
   '[{"label":"100 г","price":6.9,"unit":"€ 6.90 / 100 г","default":true}]'::jsonb
-);
+) ON CONFLICT (id) DO UPDATE SET
+  name = EXCLUDED.name,
+  price_eur = EXCLUDED.price_eur,
+  price_bgn = EXCLUDED.price_bgn,
+  updated_at = NOW();
 INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_category_name, price_eur, price_bgn, unit, crops, active_substance, formulation, quarantine, babh_reg, badge, image_url, description, dose, rating, reviews_count, in_stock, rates, pack_sizes) VALUES (
   'limotsid-bio',
   'Лимоцид БИО',
@@ -1573,7 +1796,11 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   TRUE,
   '[{"val":100,"label":"Препоръчителна доза: 200-400 мл/дка"}]'::jsonb,
   '[{"label":"200 мл","price":13.9,"unit":"€ 13.90 / 200 мл","default":true}]'::jsonb
-);
+) ON CONFLICT (id) DO UPDATE SET
+  name = EXCLUDED.name,
+  price_eur = EXCLUDED.price_eur,
+  price_bgn = EXCLUDED.price_bgn,
+  updated_at = NOW();
 INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_category_name, price_eur, price_bgn, unit, crops, active_substance, formulation, quarantine, babh_reg, badge, image_url, description, dose, rating, reviews_count, in_stock, rates, pack_sizes) VALUES (
   'madeks-tvin-bio',
   'Мадекс Твин БИО',
@@ -1599,7 +1826,11 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   TRUE,
   '[{"val":100,"label":"Препоръчителна доза: 10 мл/дка"}]'::jsonb,
   '[{"label":"100 мл","price":19.5,"unit":"€ 19.50 / 100 мл","default":true}]'::jsonb
-);
+) ON CONFLICT (id) DO UPDATE SET
+  name = EXCLUDED.name,
+  price_eur = EXCLUDED.price_eur,
+  price_bgn = EXCLUDED.price_bgn,
+  updated_at = NOW();
 INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_category_name, price_eur, price_bgn, unit, crops, active_substance, formulation, quarantine, babh_reg, badge, image_url, description, dose, rating, reviews_count, in_stock, rates, pack_sizes) VALUES (
   'afirm-095-sg',
   'Афирм 095 СГ',
@@ -1625,7 +1856,11 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   TRUE,
   '[{"val":100,"label":"Препоръчителна доза: 150 г/дка"}]'::jsonb,
   '[{"label":"100 г","price":14.2,"unit":"€ 14.20 / 100 г","default":true}]'::jsonb
-);
+) ON CONFLICT (id) DO UPDATE SET
+  name = EXCLUDED.name,
+  price_eur = EXCLUDED.price_eur,
+  price_bgn = EXCLUDED.price_bgn,
+  updated_at = NOW();
 INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_category_name, price_eur, price_bgn, unit, crops, active_substance, formulation, quarantine, babh_reg, badge, image_url, description, dose, rating, reviews_count, in_stock, rates, pack_sizes) VALUES (
   'valmek-ek',
   'Валмек ЕК',
@@ -1651,7 +1886,11 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   TRUE,
   '[{"val":100,"label":"Препоръчителна доза: 100 мл/дка"}]'::jsonb,
   '[{"label":"100 мл","price":7.9,"unit":"€ 7.90 / 100 мл","default":true}]'::jsonb
-);
+) ON CONFLICT (id) DO UPDATE SET
+  name = EXCLUDED.name,
+  price_eur = EXCLUDED.price_eur,
+  price_bgn = EXCLUDED.price_bgn,
+  updated_at = NOW();
 INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_category_name, price_eur, price_bgn, unit, crops, active_substance, formulation, quarantine, babh_reg, badge, image_url, description, dose, rating, reviews_count, in_stock, rates, pack_sizes) VALUES (
   'lamdeks-ekstra-vg',
   'Ламдекс Екстра ВГ',
@@ -1677,7 +1916,11 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   TRUE,
   '[{"val":100,"label":"Препоръчителна доза: 30-50 г/дка"}]'::jsonb,
   '[{"label":"100 г","price":5.5,"unit":"€ 5.50 / 100 г","default":true}]'::jsonb
-);
+) ON CONFLICT (id) DO UPDATE SET
+  name = EXCLUDED.name,
+  price_eur = EXCLUDED.price_eur,
+  price_bgn = EXCLUDED.price_bgn,
+  updated_at = NOW();
 INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_category_name, price_eur, price_bgn, unit, crops, active_substance, formulation, quarantine, babh_reg, badge, image_url, description, dose, rating, reviews_count, in_stock, rates, pack_sizes) VALUES (
   'afikar-100-ev',
   'Афикар 100 ЕВ',
@@ -1703,7 +1946,11 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   TRUE,
   '[{"val":100,"label":"Препоръчителна доза: 12.5-15 мл/дка"}]'::jsonb,
   '[{"label":"50 мл","price":3.9,"unit":"€ 3.90 / 50 мл","default":true}]'::jsonb
-);
+) ON CONFLICT (id) DO UPDATE SET
+  name = EXCLUDED.name,
+  price_eur = EXCLUDED.price_eur,
+  price_bgn = EXCLUDED.price_bgn,
+  updated_at = NOW();
 INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_category_name, price_eur, price_bgn, unit, crops, active_substance, formulation, quarantine, babh_reg, badge, image_url, description, dose, rating, reviews_count, in_stock, rates, pack_sizes) VALUES (
   'mavrik-2-f',
   'Маврик 2 Ф',
@@ -1729,7 +1976,11 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   TRUE,
   '[{"val":100,"label":"Препоръчителна доза: 20-30 мл/дка"}]'::jsonb,
   '[{"label":"100 мл","price":16.5,"unit":"€ 16.50 / 100 мл","default":true}]'::jsonb
-);
+) ON CONFLICT (id) DO UPDATE SET
+  name = EXCLUDED.name,
+  price_eur = EXCLUDED.price_eur,
+  price_bgn = EXCLUDED.price_bgn,
+  updated_at = NOW();
 INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_category_name, price_eur, price_bgn, unit, crops, active_substance, formulation, quarantine, babh_reg, badge, image_url, description, dose, rating, reviews_count, in_stock, rates, pack_sizes) VALUES (
   'harpun-ek',
   'Харпун ЕК',
@@ -1755,7 +2006,11 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   TRUE,
   '[{"val":100,"label":"Препоръчителна доза: 30-40 мл/дка"}]'::jsonb,
   '[{"label":"250 мл","price":21,"unit":"€ 21.00 / 250 мл","default":true}]'::jsonb
-);
+) ON CONFLICT (id) DO UPDATE SET
+  name = EXCLUDED.name,
+  price_eur = EXCLUDED.price_eur,
+  price_bgn = EXCLUDED.price_bgn,
+  updated_at = NOW();
 INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_category_name, price_eur, price_bgn, unit, crops, active_substance, formulation, quarantine, babh_reg, badge, image_url, description, dose, rating, reviews_count, in_stock, rates, pack_sizes) VALUES (
   'sumitsidin-5-ek',
   'Сумицидин 5 ЕК',
@@ -1781,7 +2036,11 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   TRUE,
   '[{"val":100,"label":"Препоръчителна доза: 20-30 мл/дка"}]'::jsonb,
   '[{"label":"30 мл","price":2.5,"unit":"€ 2.50 / 30 мл","default":true}]'::jsonb
-);
+) ON CONFLICT (id) DO UPDATE SET
+  name = EXCLUDED.name,
+  price_eur = EXCLUDED.price_eur,
+  price_bgn = EXCLUDED.price_bgn,
+  updated_at = NOW();
 INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_category_name, price_eur, price_bgn, unit, crops, active_substance, formulation, quarantine, babh_reg, badge, image_url, description, dose, rating, reviews_count, in_stock, rates, pack_sizes) VALUES (
   'sherpa-100-ek',
   'Шерпа 100 ЕК',
@@ -1807,7 +2066,11 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   TRUE,
   '[{"val":100,"label":"Препоръчителна доза: 30-40 мл/дка"}]'::jsonb,
   '[{"label":"100 мл","price":5.2,"unit":"€ 5.20 / 100 мл","default":true}]'::jsonb
-);
+) ON CONFLICT (id) DO UPDATE SET
+  name = EXCLUDED.name,
+  price_eur = EXCLUDED.price_eur,
+  price_bgn = EXCLUDED.price_bgn,
+  updated_at = NOW();
 INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_category_name, price_eur, price_bgn, unit, crops, active_substance, formulation, quarantine, babh_reg, badge, image_url, description, dose, rating, reviews_count, in_stock, rates, pack_sizes) VALUES (
   'muligan-sk',
   'Мулиган СК',
@@ -1833,7 +2096,11 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   TRUE,
   '[{"val":100,"label":"Препоръчителна доза: 40 мл/дка"}]'::jsonb,
   '[{"label":"250 мл","price":18.9,"unit":"€ 18.90 / 250 мл","default":true}]'::jsonb
-);
+) ON CONFLICT (id) DO UPDATE SET
+  name = EXCLUDED.name,
+  price_eur = EXCLUDED.price_eur,
+  price_bgn = EXCLUDED.price_bgn,
+  updated_at = NOW();
 INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_category_name, price_eur, price_bgn, unit, crops, active_substance, formulation, quarantine, babh_reg, badge, image_url, description, dose, rating, reviews_count, in_stock, rates, pack_sizes) VALUES (
   'deka-ek',
   'Дека ЕК',
@@ -1859,7 +2126,11 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   TRUE,
   '[{"val":100,"label":"Препоръчителна доза: 30-50 мл/дка"}]'::jsonb,
   '[{"label":"50 мл","price":2.8,"unit":"€ 2.80 / 50 мл","default":true}]'::jsonb
-);
+) ON CONFLICT (id) DO UPDATE SET
+  name = EXCLUDED.name,
+  price_eur = EXCLUDED.price_eur,
+  price_bgn = EXCLUDED.price_bgn,
+  updated_at = NOW();
 INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_category_name, price_eur, price_bgn, unit, crops, active_substance, formulation, quarantine, babh_reg, badge, image_url, description, dose, rating, reviews_count, in_stock, rates, pack_sizes) VALUES (
   'sanmayt-20-vp',
   'Санмайт 20 ВП',
@@ -1885,7 +2156,11 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   TRUE,
   '[{"val":100,"label":"Препоръчителна доза: 50-75 г/дка"}]'::jsonb,
   '[{"label":"50 г","price":8.8,"unit":"€ 8.80 / 50 г","default":true}]'::jsonb
-);
+) ON CONFLICT (id) DO UPDATE SET
+  name = EXCLUDED.name,
+  price_eur = EXCLUDED.price_eur,
+  price_bgn = EXCLUDED.price_bgn,
+  updated_at = NOW();
 INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_category_name, price_eur, price_bgn, unit, crops, active_substance, formulation, quarantine, babh_reg, badge, image_url, description, dose, rating, reviews_count, in_stock, rates, pack_sizes) VALUES (
   'envidor-240-sk',
   'Енвидор 240 СК',
@@ -1911,7 +2186,11 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   TRUE,
   '[{"val":100,"label":"Препоръчителна доза: 40-60 мл/дка"}]'::jsonb,
   '[{"label":"250 мл","price":34,"unit":"€ 34.00 / 250 мл","default":true}]'::jsonb
-);
+) ON CONFLICT (id) DO UPDATE SET
+  name = EXCLUDED.name,
+  price_eur = EXCLUDED.price_eur,
+  price_bgn = EXCLUDED.price_bgn,
+  updated_at = NOW();
 INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_category_name, price_eur, price_bgn, unit, crops, active_substance, formulation, quarantine, babh_reg, badge, image_url, description, dose, rating, reviews_count, in_stock, rates, pack_sizes) VALUES (
   'minekto-alfa-sk',
   'Минекто Алфа СК',
@@ -1937,7 +2216,11 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   TRUE,
   '[{"val":100,"label":"Препоръчителна доза: 100-125 мл/дка"}]'::jsonb,
   '[{"label":"250 мл","price":68,"unit":"€ 68.00 / 250 мл","default":true}]'::jsonb
-);
+) ON CONFLICT (id) DO UPDATE SET
+  name = EXCLUDED.name,
+  price_eur = EXCLUDED.price_eur,
+  price_bgn = EXCLUDED.price_bgn,
+  updated_at = NOW();
 INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_category_name, price_eur, price_bgn, unit, crops, active_substance, formulation, quarantine, babh_reg, badge, image_url, description, dose, rating, reviews_count, in_stock, rates, pack_sizes) VALUES (
   'helioveks-bio',
   'Хелиовекс БИО',
@@ -1963,7 +2246,11 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   TRUE,
   '[{"val":100,"label":"Препоръчителна доза: 10-20 мл/дка"}]'::jsonb,
   '[{"label":"100 мл","price":22,"unit":"€ 22.00 / 100 мл","default":true}]'::jsonb
-);
+) ON CONFLICT (id) DO UPDATE SET
+  name = EXCLUDED.name,
+  price_eur = EXCLUDED.price_eur,
+  price_bgn = EXCLUDED.price_bgn,
+  updated_at = NOW();
 INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_category_name, price_eur, price_bgn, unit, crops, active_substance, formulation, quarantine, babh_reg, badge, image_url, description, dose, rating, reviews_count, in_stock, rates, pack_sizes) VALUES (
   'rapaks-bio',
   'Рапакс БИО',
@@ -1989,7 +2276,11 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   TRUE,
   '[{"val":100,"label":"Препоръчителна доза: 100-150 мл/дка"}]'::jsonb,
   '[{"label":"250 мл","price":14.5,"unit":"€ 14.50 / 250 мл","default":true}]'::jsonb
-);
+) ON CONFLICT (id) DO UPDATE SET
+  name = EXCLUDED.name,
+  price_eur = EXCLUDED.price_eur,
+  price_bgn = EXCLUDED.price_bgn,
+  updated_at = NOW();
 INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_category_name, price_eur, price_bgn, unit, crops, active_substance, formulation, quarantine, babh_reg, badge, image_url, description, dose, rating, reviews_count, in_stock, rates, pack_sizes) VALUES (
   'sumition-50-ek',
   'Сумитион 50 ЕК',
@@ -2015,7 +2306,11 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   TRUE,
   '[{"val":100,"label":"Препоръчителна доза: 100 мл/дка"}]'::jsonb,
   '[{"label":"200 мл","price":17.5,"unit":"€ 17.50 / 200 мл","default":true}]'::jsonb
-);
+) ON CONFLICT (id) DO UPDATE SET
+  name = EXCLUDED.name,
+  price_eur = EXCLUDED.price_eur,
+  price_bgn = EXCLUDED.price_bgn,
+  updated_at = NOW();
 INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_category_name, price_eur, price_bgn, unit, crops, active_substance, formulation, quarantine, babh_reg, badge, image_url, description, dose, rating, reviews_count, in_stock, rates, pack_sizes) VALUES (
   'kuratsio-bio',
   'Курацио БИО',
@@ -2041,7 +2336,11 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   TRUE,
   '[{"val":100,"label":"Препоръчителна доза: 1.5-2 л/дка"}]'::jsonb,
   '[{"label":"1 л","price":16,"unit":"€ 16.00 / 1 л","default":true}]'::jsonb
-);
+) ON CONFLICT (id) DO UPDATE SET
+  name = EXCLUDED.name,
+  price_eur = EXCLUDED.price_eur,
+  price_bgn = EXCLUDED.price_bgn,
+  updated_at = NOW();
 INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_category_name, price_eur, price_bgn, unit, crops, active_substance, formulation, quarantine, babh_reg, badge, image_url, description, dose, rating, reviews_count, in_stock, rates, pack_sizes) VALUES (
   'piretro-natura-bio',
   'Пиретро Натура БИО',
@@ -2067,7 +2366,11 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   TRUE,
   '[{"val":100,"label":"Препоръчителна доза: 75-100 мл/дка"}]'::jsonb,
   '[{"label":"100 мл","price":14.5,"unit":"€ 14.50 / 100 мл","default":true}]'::jsonb
-);
+) ON CONFLICT (id) DO UPDATE SET
+  name = EXCLUDED.name,
+  price_eur = EXCLUDED.price_eur,
+  price_bgn = EXCLUDED.price_bgn,
+  updated_at = NOW();
 INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_category_name, price_eur, price_bgn, unit, crops, active_substance, formulation, quarantine, babh_reg, badge, image_url, description, dose, rating, reviews_count, in_stock, rates, pack_sizes) VALUES (
   'omit-57-ev',
   'Омит 57 ЕВ',
@@ -2093,7 +2396,11 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   TRUE,
   '[{"val":100,"label":"Препоръчителна доза: 100 мл/дка"}]'::jsonb,
   '[{"label":"200 мл","price":19.8,"unit":"€ 19.80 / 200 мл","default":true}]'::jsonb
-);
+) ON CONFLICT (id) DO UPDATE SET
+  name = EXCLUDED.name,
+  price_eur = EXCLUDED.price_eur,
+  price_bgn = EXCLUDED.price_bgn,
+  updated_at = NOW();
 INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_category_name, price_eur, price_bgn, unit, crops, active_substance, formulation, quarantine, babh_reg, badge, image_url, description, dose, rating, reviews_count, in_stock, rates, pack_sizes) VALUES (
   'raundap-klasik-pro',
   'Раундъп Класик Про',
@@ -2119,7 +2426,11 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   TRUE,
   '[{"val":100,"label":"Препоръчителна доза: 300-800 мл/дка"}]'::jsonb,
   '[{"label":"1 л","price":11.9,"unit":"€ 11.90 / 1 л","default":true}]'::jsonb
-);
+) ON CONFLICT (id) DO UPDATE SET
+  name = EXCLUDED.name,
+  price_eur = EXCLUDED.price_eur,
+  price_bgn = EXCLUDED.price_bgn,
+  updated_at = NOW();
 INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_category_name, price_eur, price_bgn, unit, crops, active_substance, formulation, quarantine, babh_reg, badge, image_url, description, dose, rating, reviews_count, in_stock, rates, pack_sizes) VALUES (
   'raundap-ekstra',
   'Раундъп Екстра',
@@ -2145,7 +2456,11 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   TRUE,
   '[{"val":100,"label":"Препоръчителна доза: 200-500 мл/дка"}]'::jsonb,
   '[{"label":"1 л","price":16.5,"unit":"€ 16.50 / 1 л","default":true}]'::jsonb
-);
+) ON CONFLICT (id) DO UPDATE SET
+  name = EXCLUDED.name,
+  price_eur = EXCLUDED.price_eur,
+  price_bgn = EXCLUDED.price_bgn,
+  updated_at = NOW();
 INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_category_name, price_eur, price_bgn, unit, crops, active_substance, formulation, quarantine, babh_reg, badge, image_url, description, dose, rating, reviews_count, in_stock, rates, pack_sizes) VALUES (
   'nasa-taf',
   'Наса ТАФ',
@@ -2171,7 +2486,11 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   TRUE,
   '[{"val":100,"label":"Препоръчителна доза: 400-800 мл/дка"}]'::jsonb,
   '[{"label":"1 л","price":9.8,"unit":"€ 9.80 / 1 л","default":true}]'::jsonb
-);
+) ON CONFLICT (id) DO UPDATE SET
+  name = EXCLUDED.name,
+  price_eur = EXCLUDED.price_eur,
+  price_bgn = EXCLUDED.price_bgn,
+  updated_at = NOW();
 INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_category_name, price_eur, price_bgn, unit, crops, active_substance, formulation, quarantine, babh_reg, badge, image_url, description, dose, rating, reviews_count, in_stock, rates, pack_sizes) VALUES (
   'stomp-akva',
   'Стомп Аква',
@@ -2197,7 +2516,11 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   TRUE,
   '[{"val":100,"label":"Препоръчителна доза: 250-400 мл/дка"}]'::jsonb,
   '[{"label":"1 л","price":19.5,"unit":"€ 19.50 / 1 л","default":true}]'::jsonb
-);
+) ON CONFLICT (id) DO UPDATE SET
+  name = EXCLUDED.name,
+  price_eur = EXCLUDED.price_eur,
+  price_bgn = EXCLUDED.price_bgn,
+  updated_at = NOW();
 INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_category_name, price_eur, price_bgn, unit, crops, active_substance, formulation, quarantine, babh_reg, badge, image_url, description, dose, rating, reviews_count, in_stock, rates, pack_sizes) VALUES (
   'pantera-40-ek',
   'Пантера 40 ЕК',
@@ -2223,7 +2546,11 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   TRUE,
   '[{"val":100,"label":"Препоръчителна доза: 100-250 мл/дка"}]'::jsonb,
   '[{"label":"1 л","price":18,"unit":"€ 18.00 / 1 л","default":true}]'::jsonb
-);
+) ON CONFLICT (id) DO UPDATE SET
+  name = EXCLUDED.name,
+  price_eur = EXCLUDED.price_eur,
+  price_bgn = EXCLUDED.price_bgn,
+  updated_at = NOW();
 INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_category_name, price_eur, price_bgn, unit, crops, active_substance, formulation, quarantine, babh_reg, badge, image_url, description, dose, rating, reviews_count, in_stock, rates, pack_sizes) VALUES (
   'selekt-super-120-ek',
   'Селект Супер 120 ЕК',
@@ -2249,7 +2576,11 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   TRUE,
   '[{"val":100,"label":"Препоръчителна доза: 80-160 мл/дка"}]'::jsonb,
   '[{"label":"1 л","price":24.5,"unit":"€ 24.50 / 1 л","default":true}]'::jsonb
-);
+) ON CONFLICT (id) DO UPDATE SET
+  name = EXCLUDED.name,
+  price_eur = EXCLUDED.price_eur,
+  price_bgn = EXCLUDED.price_bgn,
+  updated_at = NOW();
 INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_category_name, price_eur, price_bgn, unit, crops, active_substance, formulation, quarantine, babh_reg, badge, image_url, description, dose, rating, reviews_count, in_stock, rates, pack_sizes) VALUES (
   'dual-gold-960-ek',
   'Дуал Голд 960 ЕК',
@@ -2275,7 +2606,11 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   TRUE,
   '[{"val":100,"label":"Препоръчителна доза: 120-150 мл/дка"}]'::jsonb,
   '[{"label":"1 л","price":29.8,"unit":"€ 29.80 / 1 л","default":true}]'::jsonb
-);
+) ON CONFLICT (id) DO UPDATE SET
+  name = EXCLUDED.name,
+  price_eur = EXCLUDED.price_eur,
+  price_bgn = EXCLUDED.price_bgn,
+  updated_at = NOW();
 INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_category_name, price_eur, price_bgn, unit, crops, active_substance, formulation, quarantine, babh_reg, badge, image_url, description, dose, rating, reviews_count, in_stock, rates, pack_sizes) VALUES (
   'zenkor-600-sk',
   'Зенкор 600 СК',
@@ -2301,7 +2636,11 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   TRUE,
   '[{"val":100,"label":"Препоръчителна доза: 40-60 мл/дка"}]'::jsonb,
   '[{"label":"1 л","price":33.5,"unit":"€ 33.50 / 1 л","default":true}]'::jsonb
-);
+) ON CONFLICT (id) DO UPDATE SET
+  name = EXCLUDED.name,
+  price_eur = EXCLUDED.price_eur,
+  price_bgn = EXCLUDED.price_bgn,
+  updated_at = NOW();
 INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_category_name, price_eur, price_bgn, unit, crops, active_substance, formulation, quarantine, babh_reg, badge, image_url, description, dose, rating, reviews_count, in_stock, rates, pack_sizes) VALUES (
   'laudis-od',
   'Лаудис ОД',
@@ -2327,7 +2666,11 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   TRUE,
   '[{"val":100,"label":"Препоръчителна доза: 200-220 мл/дка"}]'::jsonb,
   '[{"label":"1 л","price":44,"unit":"€ 44.00 / 1 л","default":true}]'::jsonb
-);
+) ON CONFLICT (id) DO UPDATE SET
+  name = EXCLUDED.name,
+  price_eur = EXCLUDED.price_eur,
+  price_bgn = EXCLUDED.price_bgn,
+  updated_at = NOW();
 INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_category_name, price_eur, price_bgn, unit, crops, active_substance, formulation, quarantine, babh_reg, badge, image_url, description, dose, rating, reviews_count, in_stock, rates, pack_sizes) VALUES (
   'mustang-sk',
   'Мустанг СК',
@@ -2353,7 +2696,11 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   TRUE,
   '[{"val":100,"label":"Препоръчителна доза: 50-80 мл/дка"}]'::jsonb,
   '[{"label":"1 л","price":19.8,"unit":"€ 19.80 / 1 л","default":true}]'::jsonb
-);
+) ON CONFLICT (id) DO UPDATE SET
+  name = EXCLUDED.name,
+  price_eur = EXCLUDED.price_eur,
+  price_bgn = EXCLUDED.price_bgn,
+  updated_at = NOW();
 INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_category_name, price_eur, price_bgn, unit, crops, active_substance, formulation, quarantine, babh_reg, badge, image_url, description, dose, rating, reviews_count, in_stock, rates, pack_sizes) VALUES (
   'derbi-super-edno-vg',
   'Дерби Супер Едно ВГ',
@@ -2379,7 +2726,11 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   TRUE,
   '[{"val":100,"label":"Препоръчителна доза: 3.3 г/дка"}]'::jsonb,
   '[{"label":"100 г","price":15.2,"unit":"€ 15.20 / 100 г","default":true}]'::jsonb
-);
+) ON CONFLICT (id) DO UPDATE SET
+  name = EXCLUDED.name,
+  price_eur = EXCLUDED.price_eur,
+  price_bgn = EXCLUDED.price_bgn,
+  updated_at = NOW();
 INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_category_name, price_eur, price_bgn, unit, crops, active_substance, formulation, quarantine, babh_reg, badge, image_url, description, dose, rating, reviews_count, in_stock, rates, pack_sizes) VALUES (
   'bazagran-480-sl',
   'Базагран 480 СЛ',
@@ -2405,7 +2756,11 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   TRUE,
   '[{"val":100,"label":"Препоръчителна доза: 200-300 мл/дка"}]'::jsonb,
   '[{"label":"1 л","price":27.5,"unit":"€ 27.50 / 1 л","default":true}]'::jsonb
-);
+) ON CONFLICT (id) DO UPDATE SET
+  name = EXCLUDED.name,
+  price_eur = EXCLUDED.price_eur,
+  price_bgn = EXCLUDED.price_bgn,
+  updated_at = NOW();
 INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_category_name, price_eur, price_bgn, unit, crops, active_substance, formulation, quarantine, babh_reg, badge, image_url, description, dose, rating, reviews_count, in_stock, rates, pack_sizes) VALUES (
   'merlin-fleks-480-sk',
   'Мерлин Флекс 480 СК',
@@ -2431,7 +2786,11 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   TRUE,
   '[{"val":100,"label":"Препоръчителна доза: 40-42 мл/дка"}]'::jsonb,
   '[{"label":"500 мл","price":58,"unit":"€ 58.00 / 500 мл","default":true}]'::jsonb
-);
+) ON CONFLICT (id) DO UPDATE SET
+  name = EXCLUDED.name,
+  price_eur = EXCLUDED.price_eur,
+  price_bgn = EXCLUDED.price_bgn,
+  updated_at = NOW();
 INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_category_name, price_eur, price_bgn, unit, crops, active_substance, formulation, quarantine, babh_reg, badge, image_url, description, dose, rating, reviews_count, in_stock, rates, pack_sizes) VALUES (
   'ekip-od',
   'Екип ОД',
@@ -2457,7 +2816,11 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   TRUE,
   '[{"val":100,"label":"Препоръчителна доза: 200-250 мл/дка"}]'::jsonb,
   '[{"label":"1 л","price":42,"unit":"€ 42.00 / 1 л","default":true}]'::jsonb
-);
+) ON CONFLICT (id) DO UPDATE SET
+  name = EXCLUDED.name,
+  price_eur = EXCLUDED.price_eur,
+  price_bgn = EXCLUDED.price_bgn,
+  updated_at = NOW();
 INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_category_name, price_eur, price_bgn, unit, crops, active_substance, formulation, quarantine, babh_reg, badge, image_url, description, dose, rating, reviews_count, in_stock, rates, pack_sizes) VALUES (
   'kapreno-sk',
   'Капрено СК',
@@ -2483,7 +2846,11 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   TRUE,
   '[{"val":100,"label":"Препоръчителна доза: 25-30 мл/дка"}]'::jsonb,
   '[{"label":"1 л","price":68,"unit":"€ 68.00 / 1 л","default":true}]'::jsonb
-);
+) ON CONFLICT (id) DO UPDATE SET
+  name = EXCLUDED.name,
+  price_eur = EXCLUDED.price_eur,
+  price_bgn = EXCLUDED.price_bgn,
+  updated_at = NOW();
 INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_category_name, price_eur, price_bgn, unit, crops, active_substance, formulation, quarantine, babh_reg, badge, image_url, description, dose, rating, reviews_count, in_stock, rates, pack_sizes) VALUES (
   'chelendzh-600-sk',
   'Челендж 600 СК',
@@ -2509,7 +2876,11 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   TRUE,
   '[{"val":100,"label":"Препоръчителна доза: 400 мл/дка"}]'::jsonb,
   '[{"label":"1 л","price":29.5,"unit":"€ 29.50 / 1 л","default":true}]'::jsonb
-);
+) ON CONFLICT (id) DO UPDATE SET
+  name = EXCLUDED.name,
+  price_eur = EXCLUDED.price_eur,
+  price_bgn = EXCLUDED.price_bgn,
+  updated_at = NOW();
 INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_category_name, price_eur, price_bgn, unit, crops, active_substance, formulation, quarantine, babh_reg, badge, image_url, description, dose, rating, reviews_count, in_stock, rates, pack_sizes) VALUES (
   'puma-super-75-ev',
   'Пума Супер 7.5 ЕВ',
@@ -2535,7 +2906,11 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   TRUE,
   '[{"val":100,"label":"Препоръчителна доза: 100 мл/дка"}]'::jsonb,
   '[{"label":"1 л","price":31,"unit":"€ 31.00 / 1 л","default":true}]'::jsonb
-);
+) ON CONFLICT (id) DO UPDATE SET
+  name = EXCLUDED.name,
+  price_eur = EXCLUDED.price_eur,
+  price_bgn = EXCLUDED.price_bgn,
+  updated_at = NOW();
 INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_category_name, price_eur, price_bgn, unit, crops, active_substance, formulation, quarantine, babh_reg, badge, image_url, description, dose, rating, reviews_count, in_stock, rates, pack_sizes) VALUES (
   'palas-75-vg',
   'Палас 75 ВГ',
@@ -2561,7 +2936,11 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   TRUE,
   '[{"val":100,"label":"Препоръчителна доза: 25 г/дка"}]'::jsonb,
   '[{"label":"500 г","price":46,"unit":"€ 46.00 / 500 г","default":true}]'::jsonb
-);
+) ON CONFLICT (id) DO UPDATE SET
+  name = EXCLUDED.name,
+  price_eur = EXCLUDED.price_eur,
+  price_bgn = EXCLUDED.price_bgn,
+  updated_at = NOW();
 INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_category_name, price_eur, price_bgn, unit, crops, active_substance, formulation, quarantine, babh_reg, badge, image_url, description, dose, rating, reviews_count, in_stock, rates, pack_sizes) VALUES (
   'stratos-ultra',
   'Стратос Ултра',
@@ -2587,7 +2966,11 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   TRUE,
   '[{"val":100,"label":"Препоръчителна доза: 100-200 мл/дка"}]'::jsonb,
   '[{"label":"1 л","price":32,"unit":"€ 32.00 / 1 л","default":true}]'::jsonb
-);
+) ON CONFLICT (id) DO UPDATE SET
+  name = EXCLUDED.name,
+  price_eur = EXCLUDED.price_eur,
+  price_bgn = EXCLUDED.price_bgn,
+  updated_at = NOW();
 INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_category_name, price_eur, price_bgn, unit, crops, active_substance, formulation, quarantine, babh_reg, badge, image_url, description, dose, rating, reviews_count, in_stock, rates, pack_sizes) VALUES (
   'fokus-ultra',
   'Фокус Ултра',
@@ -2613,7 +2996,11 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   TRUE,
   '[{"val":100,"label":"Препоръчителна доза: 150-200 мл/дка"}]'::jsonb,
   '[{"label":"1 л","price":31.5,"unit":"€ 31.50 / 1 л","default":true}]'::jsonb
-);
+) ON CONFLICT (id) DO UPDATE SET
+  name = EXCLUDED.name,
+  price_eur = EXCLUDED.price_eur,
+  price_bgn = EXCLUDED.price_bgn,
+  updated_at = NOW();
 INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_category_name, price_eur, price_bgn, unit, crops, active_substance, formulation, quarantine, babh_reg, badge, image_url, description, dose, rating, reviews_count, in_stock, rates, pack_sizes) VALUES (
   'goltiks-700-sk',
   'Голтикс 700 СК',
@@ -2639,7 +3026,11 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   TRUE,
   '[{"val":100,"label":"Препоръчителна доза: 200-500 мл/дка"}]'::jsonb,
   '[{"label":"1 л","price":36,"unit":"€ 36.00 / 1 л","default":true}]'::jsonb
-);
+) ON CONFLICT (id) DO UPDATE SET
+  name = EXCLUDED.name,
+  price_eur = EXCLUDED.price_eur,
+  price_bgn = EXCLUDED.price_bgn,
+  updated_at = NOW();
 INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_category_name, price_eur, price_bgn, unit, crops, active_substance, formulation, quarantine, babh_reg, badge, image_url, description, dose, rating, reviews_count, in_stock, rates, pack_sizes) VALUES (
   'nabu-ekstra',
   'Набу Екстра',
@@ -2665,7 +3056,11 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   TRUE,
   '[{"val":100,"label":"Препоръчителна доза: 150-200 мл/дка"}]'::jsonb,
   '[{"label":"1 л","price":23,"unit":"€ 23.00 / 1 л","default":true}]'::jsonb
-);
+) ON CONFLICT (id) DO UPDATE SET
+  name = EXCLUDED.name,
+  price_eur = EXCLUDED.price_eur,
+  price_bgn = EXCLUDED.price_bgn,
+  updated_at = NOW();
 INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_category_name, price_eur, price_bgn, unit, crops, active_substance, formulation, quarantine, babh_reg, badge, image_url, description, dose, rating, reviews_count, in_stock, rates, pack_sizes) VALUES (
   'kalisto-480-sk',
   'Калисто 480 СК',
@@ -2691,7 +3086,11 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   TRUE,
   '[{"val":100,"label":"Препоръчителна доза: 25-30 мл/дка"}]'::jsonb,
   '[{"label":"1 л","price":54,"unit":"€ 54.00 / 1 л","default":true}]'::jsonb
-);
+) ON CONFLICT (id) DO UPDATE SET
+  name = EXCLUDED.name,
+  price_eur = EXCLUDED.price_eur,
+  price_bgn = EXCLUDED.price_bgn,
+  updated_at = NOW();
 INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_category_name, price_eur, price_bgn, unit, crops, active_substance, formulation, quarantine, babh_reg, badge, image_url, description, dose, rating, reviews_count, in_stock, rates, pack_sizes) VALUES (
   'grodil-maksi-od',
   'Гродил Макси ОД',
@@ -2717,7 +3116,11 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   TRUE,
   '[{"val":100,"label":"Препоръчителна доза: 10-11 мл/дка"}]'::jsonb,
   '[{"label":"1 л","price":39,"unit":"€ 39.00 / 1 л","default":true}]'::jsonb
-);
+) ON CONFLICT (id) DO UPDATE SET
+  name = EXCLUDED.name,
+  price_eur = EXCLUDED.price_eur,
+  price_bgn = EXCLUDED.price_bgn,
+  updated_at = NOW();
 INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_category_name, price_eur, price_bgn, unit, crops, active_substance, formulation, quarantine, babh_reg, badge, image_url, description, dose, rating, reviews_count, in_stock, rates, pack_sizes) VALUES (
   'harmoni-50-sh',
   'Хармони 50 СХ',
@@ -2743,7 +3146,11 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   TRUE,
   '[{"val":100,"label":"Препоръчителна доза: 2-3 г/дка"}]'::jsonb,
   '[{"label":"100 г","price":16.5,"unit":"€ 16.50 / 100 г","default":true}]'::jsonb
-);
+) ON CONFLICT (id) DO UPDATE SET
+  name = EXCLUDED.name,
+  price_eur = EXCLUDED.price_eur,
+  price_bgn = EXCLUDED.price_bgn,
+  updated_at = NOW();
 INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_category_name, price_eur, price_bgn, unit, crops, active_substance, formulation, quarantine, babh_reg, badge, image_url, description, dose, rating, reviews_count, in_stock, rates, pack_sizes) VALUES (
   'targa-super-5-ek',
   'Тарга Супер 5 ЕК',
@@ -2769,7 +3176,11 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   TRUE,
   '[{"val":100,"label":"Препоръчителна доза: 150-200 мл/дка"}]'::jsonb,
   '[{"label":"1 л","price":19.5,"unit":"€ 19.50 / 1 л","default":true}]'::jsonb
-);
+) ON CONFLICT (id) DO UPDATE SET
+  name = EXCLUDED.name,
+  price_eur = EXCLUDED.price_eur,
+  price_bgn = EXCLUDED.price_bgn,
+  updated_at = NOW();
 INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_category_name, price_eur, price_bgn, unit, crops, active_substance, formulation, quarantine, babh_reg, badge, image_url, description, dose, rating, reviews_count, in_stock, rates, pack_sizes) VALUES (
   'pulsar-40',
   'Пулсар 40',
@@ -2795,7 +3206,11 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   TRUE,
   '[{"val":100,"label":"Препоръчителна доза: 120 мл/дка"}]'::jsonb,
   '[{"label":"1 л","price":41,"unit":"€ 41.00 / 1 л","default":true}]'::jsonb
-);
+) ON CONFLICT (id) DO UPDATE SET
+  name = EXCLUDED.name,
+  price_eur = EXCLUDED.price_eur,
+  price_bgn = EXCLUDED.price_bgn,
+  updated_at = NOW();
 INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_category_name, price_eur, price_bgn, unit, crops, active_substance, formulation, quarantine, babh_reg, badge, image_url, description, dose, rating, reviews_count, in_stock, rates, pack_sizes) VALUES (
   'starane-gold',
   'Старане Голд',
@@ -2821,7 +3236,11 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   TRUE,
   '[{"val":100,"label":"Препоръчителна доза: 100-150 мл/дка"}]'::jsonb,
   '[{"label":"1 л","price":26,"unit":"€ 26.00 / 1 л","default":true}]'::jsonb
-);
+) ON CONFLICT (id) DO UPDATE SET
+  name = EXCLUDED.name,
+  price_eur = EXCLUDED.price_eur,
+  price_bgn = EXCLUDED.price_bgn,
+  updated_at = NOW();
 INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_category_name, price_eur, price_bgn, unit, crops, active_substance, formulation, quarantine, babh_reg, badge, image_url, description, dose, rating, reviews_count, in_stock, rates, pack_sizes) VALUES (
   'betanal-tandem',
   'Бетанал Тандем',
@@ -2847,7 +3266,11 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   TRUE,
   '[{"val":100,"label":"Препоръчителна доза: 100-150 мл/дка"}]'::jsonb,
   '[{"label":"1 л","price":35,"unit":"€ 35.00 / 1 л","default":true}]'::jsonb
-);
+) ON CONFLICT (id) DO UPDATE SET
+  name = EXCLUDED.name,
+  price_eur = EXCLUDED.price_eur,
+  price_bgn = EXCLUDED.price_bgn,
+  updated_at = NOW();
 INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_category_name, price_eur, price_bgn, unit, crops, active_substance, formulation, quarantine, babh_reg, badge, image_url, description, dose, rating, reviews_count, in_stock, rates, pack_sizes) VALUES (
   'agril-pro',
   'Агрил Про',
@@ -2873,7 +3296,11 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   TRUE,
   '[{"val":100,"label":"Препоръчителна доза: 100-120 мл/дка"}]'::jsonb,
   '[{"label":"1 л","price":8.5,"unit":"€ 8.50 / 1 л","default":true}]'::jsonb
-);
+) ON CONFLICT (id) DO UPDATE SET
+  name = EXCLUDED.name,
+  price_eur = EXCLUDED.price_eur,
+  price_bgn = EXCLUDED.price_bgn,
+  updated_at = NOW();
 INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_category_name, price_eur, price_bgn, unit, crops, active_substance, formulation, quarantine, babh_reg, badge, image_url, description, dose, rating, reviews_count, in_stock, rates, pack_sizes) VALUES (
   'kalinko-ek',
   'Калинко ЕК',
@@ -2899,7 +3326,11 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   TRUE,
   '[{"val":100,"label":"Препоръчителна доза: 80-100 мл/дка"}]'::jsonb,
   '[{"label":"1 л","price":28,"unit":"€ 28.00 / 1 л","default":true}]'::jsonb
-);
+) ON CONFLICT (id) DO UPDATE SET
+  name = EXCLUDED.name,
+  price_eur = EXCLUDED.price_eur,
+  price_bgn = EXCLUDED.price_bgn,
+  updated_at = NOW();
 INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_category_name, price_eur, price_bgn, unit, crops, active_substance, formulation, quarantine, babh_reg, badge, image_url, description, dose, rating, reviews_count, in_stock, rates, pack_sizes) VALUES (
   'glifogan-480-sl',
   'Глифоган 480 СЛ',
@@ -2925,7 +3356,11 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   TRUE,
   '[{"val":100,"label":"Препоръчителна доза: 400-600 мл/дка"}]'::jsonb,
   '[{"label":"1 л","price":10.5,"unit":"€ 10.50 / 1 л","default":true}]'::jsonb
-);
+) ON CONFLICT (id) DO UPDATE SET
+  name = EXCLUDED.name,
+  price_eur = EXCLUDED.price_eur,
+  price_bgn = EXCLUDED.price_bgn,
+  updated_at = NOW();
 INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_category_name, price_eur, price_bgn, unit, crops, active_substance, formulation, quarantine, babh_reg, badge, image_url, description, dose, rating, reviews_count, in_stock, rates, pack_sizes) VALUES (
   'aykan-10-ks',
   'Айкън 10 КС',
@@ -2951,7 +3386,11 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   TRUE,
   '[{"val":100,"label":"Препоръчителна доза: 20 мл / 5 л вода"}]'::jsonb,
   '[{"label":"20 мл","price":5.8,"unit":"€ 5.80 / 20 мл","default":true}]'::jsonb
-);
+) ON CONFLICT (id) DO UPDATE SET
+  name = EXCLUDED.name,
+  price_eur = EXCLUDED.price_eur,
+  price_bgn = EXCLUDED.price_bgn,
+  updated_at = NOW();
 INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_category_name, price_eur, price_bgn, unit, crops, active_substance, formulation, quarantine, babh_reg, badge, image_url, description, dose, rating, reviews_count, in_stock, rates, pack_sizes) VALUES (
   'aykan-100-sk',
   'Айкън 100 СК',
@@ -2977,7 +3416,11 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   TRUE,
   '[{"val":100,"label":"Препоръчителна доза: 250 мл / 100 л вода"}]'::jsonb,
   '[{"label":"1 л","price":89,"unit":"€ 89.00 / 1 л","default":true}]'::jsonb
-);
+) ON CONFLICT (id) DO UPDATE SET
+  name = EXCLUDED.name,
+  price_eur = EXCLUDED.price_eur,
+  price_bgn = EXCLUDED.price_bgn,
+  updated_at = NOW();
 INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_category_name, price_eur, price_bgn, unit, crops, active_substance, formulation, quarantine, babh_reg, badge, image_url, description, dose, rating, reviews_count, in_stock, rates, pack_sizes) VALUES (
   'fendona-60-sk',
   'Фендона 60 СК',
@@ -3003,7 +3446,11 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   TRUE,
   '[{"val":100,"label":"Препоръчителна доза: 25 мл / 5 л вода"}]'::jsonb,
   '[{"label":"25 мл","price":6.4,"unit":"€ 6.40 / 25 мл","default":true}]'::jsonb
-);
+) ON CONFLICT (id) DO UPDATE SET
+  name = EXCLUDED.name,
+  price_eur = EXCLUDED.price_eur,
+  price_bgn = EXCLUDED.price_bgn,
+  updated_at = NOW();
 INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_category_name, price_eur, price_bgn, unit, crops, active_substance, formulation, quarantine, babh_reg, badge, image_url, description, dose, rating, reviews_count, in_stock, rates, pack_sizes) VALUES (
   'bandit-10-ev',
   'Бандит 10 ЕВ',
@@ -3029,7 +3476,11 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   TRUE,
   '[{"val":100,"label":"Препоръчителна доза: 50 мл / 5 л вода"}]'::jsonb,
   '[{"label":"50 мл","price":4.9,"unit":"€ 4.90 / 50 мл","default":true}]'::jsonb
-);
+) ON CONFLICT (id) DO UPDATE SET
+  name = EXCLUDED.name,
+  price_eur = EXCLUDED.price_eur,
+  price_bgn = EXCLUDED.price_bgn,
+  updated_at = NOW();
 INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_category_name, price_eur, price_bgn, unit, crops, active_substance, formulation, quarantine, babh_reg, badge, image_url, description, dose, rating, reviews_count, in_stock, rates, pack_sizes) VALUES (
   'tsipertrin-ek',
   'Ципертрин ЕК',
@@ -3055,7 +3506,11 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   TRUE,
   '[{"val":100,"label":"Препоръчителна доза: 50-100 мл / 10 л"}]'::jsonb,
   '[{"label":"100 мл","price":8.5,"unit":"€ 8.50 / 100 мл","default":true}]'::jsonb
-);
+) ON CONFLICT (id) DO UPDATE SET
+  name = EXCLUDED.name,
+  price_eur = EXCLUDED.price_eur,
+  price_bgn = EXCLUDED.price_bgn,
+  updated_at = NOW();
 INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_category_name, price_eur, price_bgn, unit, crops, active_substance, formulation, quarantine, babh_reg, badge, image_url, description, dose, rating, reviews_count, in_stock, rates, pack_sizes) VALUES (
   'limatak--limatsid',
   'Лиматак / Лимацид',
@@ -3081,7 +3536,11 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   TRUE,
   '[{"val":100,"label":"Препоръчителна доза: 300-500 г/дка"}]'::jsonb,
   '[{"label":"200 г","price":4.8,"unit":"€ 4.80 / 200 г","default":true}]'::jsonb
-);
+) ON CONFLICT (id) DO UPDATE SET
+  name = EXCLUDED.name,
+  price_eur = EXCLUDED.price_eur,
+  price_bgn = EXCLUDED.price_bgn,
+  updated_at = NOW();
 INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_category_name, price_eur, price_bgn, unit, crops, active_substance, formulation, quarantine, babh_reg, badge, image_url, description, dose, rating, reviews_count, in_stock, rates, pack_sizes) VALUES (
   'feramol-bio',
   'Ферамол БИО',
@@ -3107,7 +3566,11 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   TRUE,
   '[{"val":100,"label":"Препоръчителна доза: 500 г/дка"}]'::jsonb,
   '[{"label":"500 г","price":8.9,"unit":"€ 8.90 / 500 г","default":true}]'::jsonb
-);
+) ON CONFLICT (id) DO UPDATE SET
+  name = EXCLUDED.name,
+  price_eur = EXCLUDED.price_eur,
+  price_bgn = EXCLUDED.price_bgn,
+  updated_at = NOW();
 INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_category_name, price_eur, price_bgn, unit, crops, active_substance, formulation, quarantine, babh_reg, badge, image_url, description, dose, rating, reviews_count, in_stock, rates, pack_sizes) VALUES (
   'ratimor-vosachni-blokcheta',
   'Ратимор Восъчни Блокчета',
@@ -3133,7 +3596,11 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   TRUE,
   '[{"val":100,"label":"Препоръчителна доза: 20-50 г на точка"}]'::jsonb,
   '[{"label":"300 г","price":4.5,"unit":"€ 4.50 / 300 г","default":true}]'::jsonb
-);
+) ON CONFLICT (id) DO UPDATE SET
+  name = EXCLUDED.name,
+  price_eur = EXCLUDED.price_eur,
+  price_bgn = EXCLUDED.price_bgn,
+  updated_at = NOW();
 INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_category_name, price_eur, price_bgn, unit, crops, active_substance, formulation, quarantine, babh_reg, badge, image_url, description, dose, rating, reviews_count, in_stock, rates, pack_sizes) VALUES (
   'brodifakum-pasta-zashtitena',
   'Бродифакум Паста Защитена',
@@ -3159,7 +3626,11 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   TRUE,
   '[{"val":100,"label":"Препоръчителна доза: 1-2 сашета на точка"}]'::jsonb,
   '[{"label":"150 г","price":3.9,"unit":"€ 3.90 / 150 г","default":true}]'::jsonb
-);
+) ON CONFLICT (id) DO UPDATE SET
+  name = EXCLUDED.name,
+  price_eur = EXCLUDED.price_eur,
+  price_bgn = EXCLUDED.price_bgn,
+  updated_at = NOW();
 INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_category_name, price_eur, price_bgn, unit, crops, active_substance, formulation, quarantine, babh_reg, badge, image_url, description, dose, rating, reviews_count, in_stock, rates, pack_sizes) VALUES (
   'homevo-darvenitsi-bio',
   'Homevo Дървеници БИО',
@@ -3185,7 +3656,11 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   TRUE,
   '[{"val":100,"label":"Препоръчителна доза: Опрашване по шевове"}]'::jsonb,
   '[{"label":"50 г","price":3.32,"unit":"€ 3.32 / 50 г","default":true}]'::jsonb
-);
+) ON CONFLICT (id) DO UPDATE SET
+  name = EXCLUDED.name,
+  price_eur = EXCLUDED.price_eur,
+  price_bgn = EXCLUDED.price_bgn,
+  updated_at = NOW();
 INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_category_name, price_eur, price_bgn, unit, crops, active_substance, formulation, quarantine, babh_reg, badge, image_url, description, dose, rating, reviews_count, in_stock, rates, pack_sizes) VALUES (
   'homevo-kokoshinki-bio',
   'Homevo Кокошинки БИО',
@@ -3211,7 +3686,11 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   TRUE,
   '[{"val":100,"label":"Препоръчителна доза: Опрашване в курника"}]'::jsonb,
   '[{"label":"100 г","price":3.6,"unit":"€ 3.60 / 100 г","default":true}]'::jsonb
-);
+) ON CONFLICT (id) DO UPDATE SET
+  name = EXCLUDED.name,
+  price_eur = EXCLUDED.price_eur,
+  price_bgn = EXCLUDED.price_bgn,
+  updated_at = NOW();
 INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_category_name, price_eur, price_bgn, unit, crops, active_substance, formulation, quarantine, babh_reg, badge, image_url, description, dose, rating, reviews_count, in_stock, rates, pack_sizes) VALUES (
   'homevo-balhi--karlezhi',
   'Homevo Бълхи & Кърлежи',
@@ -3237,7 +3716,11 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   TRUE,
   '[{"val":100,"label":"Препоръчителна доза: Третиране на килими и легла"}]'::jsonb,
   '[{"label":"50 г","price":3.32,"unit":"€ 3.32 / 50 г","default":true}]'::jsonb
-);
+) ON CONFLICT (id) DO UPDATE SET
+  name = EXCLUDED.name,
+  price_eur = EXCLUDED.price_eur,
+  price_bgn = EXCLUDED.price_bgn,
+  updated_at = NOW();
 INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_category_name, price_eur, price_bgn, unit, crops, active_substance, formulation, quarantine, babh_reg, badge, image_url, description, dose, rating, reviews_count, in_stock, rates, pack_sizes) VALUES (
   'homevo-kartofi-bio',
   'Homevo Картофи БИО',
@@ -3263,7 +3746,11 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   TRUE,
   '[{"val":100,"label":"Препоръчителна доза: Опрашване на листата"}]'::jsonb,
   '[{"label":"100 г","price":3.5,"unit":"€ 3.50 / 100 г","default":true}]'::jsonb
-);
+) ON CONFLICT (id) DO UPDATE SET
+  name = EXCLUDED.name,
+  price_eur = EXCLUDED.price_eur,
+  price_bgn = EXCLUDED.price_bgn,
+  updated_at = NOW();
 INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_category_name, price_eur, price_bgn, unit, crops, active_substance, formulation, quarantine, babh_reg, badge, image_url, description, dose, rating, reviews_count, in_stock, rates, pack_sizes) VALUES (
   'naturalis-bio',
   'Натуралис БИО',
@@ -3289,7 +3776,11 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   TRUE,
   '[{"val":100,"label":"Препоръчителна доза: 100-150 мл/дка"}]'::jsonb,
   '[{"label":"250 мл","price":18.5,"unit":"€ 18.50 / 250 мл","default":true}]'::jsonb
-);
+) ON CONFLICT (id) DO UPDATE SET
+  name = EXCLUDED.name,
+  price_eur = EXCLUDED.price_eur,
+  price_bgn = EXCLUDED.price_bgn,
+  updated_at = NOW();
 INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_category_name, price_eur, price_bgn, unit, crops, active_substance, formulation, quarantine, babh_reg, badge, image_url, description, dose, rating, reviews_count, in_stock, rates, pack_sizes) VALUES (
   'nemateks-bio',
   'Нематекс БИО',
@@ -3315,7 +3806,11 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   TRUE,
   '[{"val":100,"label":"Препоръчителна доза: 2-3 кг/дка"}]'::jsonb,
   '[{"label":"500 г","price":9,"unit":"€ 9.00 / 500 г","default":true}]'::jsonb
-);
+) ON CONFLICT (id) DO UPDATE SET
+  name = EXCLUDED.name,
+  price_eur = EXCLUDED.price_eur,
+  price_bgn = EXCLUDED.price_bgn,
+  updated_at = NOW();
 INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_category_name, price_eur, price_bgn, unit, crops, active_substance, formulation, quarantine, babh_reg, badge, image_url, description, dose, rating, reviews_count, in_stock, rates, pack_sizes) VALUES (
   'botribel-bio',
   'Ботрибел БИО',
@@ -3341,7 +3836,11 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   TRUE,
   '[{"val":100,"label":"Препоръчителна доза: 150-200 мл/дка"}]'::jsonb,
   '[{"label":"200 мл","price":12.9,"unit":"€ 12.90 / 200 мл","default":true}]'::jsonb
-);
+) ON CONFLICT (id) DO UPDATE SET
+  name = EXCLUDED.name,
+  price_eur = EXCLUDED.price_eur,
+  price_bgn = EXCLUDED.price_bgn,
+  updated_at = NOW();
 INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_category_name, price_eur, price_bgn, unit, crops, active_substance, formulation, quarantine, babh_reg, badge, image_url, description, dose, rating, reviews_count, in_stock, rates, pack_sizes) VALUES (
   'fitobakt-bio',
   'Фитобакт БИО',
@@ -3367,7 +3866,11 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   TRUE,
   '[{"val":100,"label":"Препоръчителна доза: 200-300 мл/дка"}]'::jsonb,
   '[{"label":"1 л","price":27.9,"unit":"€ 27.90 / 1 л","default":true}]'::jsonb
-);
+) ON CONFLICT (id) DO UPDATE SET
+  name = EXCLUDED.name,
+  price_eur = EXCLUDED.price_eur,
+  price_bgn = EXCLUDED.price_bgn,
+  updated_at = NOW();
 INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_category_name, price_eur, price_bgn, unit, crops, active_substance, formulation, quarantine, babh_reg, badge, image_url, description, dose, rating, reviews_count, in_stock, rates, pack_sizes) VALUES (
   'fitosev-bio',
   'Фитосев БИО',
@@ -3393,7 +3896,11 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   TRUE,
   '[{"val":100,"label":"Препоръчителна доза: 200 мл/дка"}]'::jsonb,
   '[{"label":"500 мл","price":19.8,"unit":"€ 19.80 / 500 мл","default":true}]'::jsonb
-);
+) ON CONFLICT (id) DO UPDATE SET
+  name = EXCLUDED.name,
+  price_eur = EXCLUDED.price_eur,
+  price_bgn = EXCLUDED.price_bgn,
+  updated_at = NOW();
 INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_category_name, price_eur, price_bgn, unit, crops, active_substance, formulation, quarantine, babh_reg, badge, image_url, description, dose, rating, reviews_count, in_stock, rates, pack_sizes) VALUES (
   'komplekt-bio-zashtita-amititsa',
   'Комплект Био Защита Амитица',
@@ -3419,7 +3926,11 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   TRUE,
   '[{"val":100,"label":"Препоръчителна доза: За 100 л разтвор"}]'::jsonb,
   '[{"label":"Комплект 3 бр.","price":29.9,"unit":"€ 29.90 / Комплект 3 бр.","default":true}]'::jsonb
-);
+) ON CONFLICT (id) DO UPDATE SET
+  name = EXCLUDED.name,
+  price_eur = EXCLUDED.price_eur,
+  price_bgn = EXCLUDED.price_bgn,
+  updated_at = NOW();
 INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_category_name, price_eur, price_bgn, unit, crops, active_substance, formulation, quarantine, babh_reg, badge, image_url, description, dose, rating, reviews_count, in_stock, rates, pack_sizes) VALUES (
   'snayper-lepyashti-ulovki-zhalti',
   'Снайпер Лепящи Уловки (Жълти)',
@@ -3445,7 +3956,11 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   TRUE,
   '[{"val":100,"label":"Препоръчителна доза: 1 табела на 10 кв.м"}]'::jsonb,
   '[{"label":"10 бр. табели","price":4.2,"unit":"€ 4.20 / 10 бр. табели","default":true}]'::jsonb
-);
+) ON CONFLICT (id) DO UPDATE SET
+  name = EXCLUDED.name,
+  price_eur = EXCLUDED.price_eur,
+  price_bgn = EXCLUDED.price_bgn,
+  updated_at = NOW();
 INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_category_name, price_eur, price_bgn, unit, crops, active_substance, formulation, quarantine, babh_reg, badge, image_url, description, dose, rating, reviews_count, in_stock, rates, pack_sizes) VALUES (
   'snayper-lepyashti-ulovki-sini',
   'Снайпер Лепящи Уловки (Сини)',
@@ -3471,7 +3986,11 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   TRUE,
   '[{"val":100,"label":"Препоръчителна доза: 1 табела на 10 кв.м"}]'::jsonb,
   '[{"label":"10 бр. табели","price":4.5,"unit":"€ 4.50 / 10 бр. табели","default":true}]'::jsonb
-);
+) ON CONFLICT (id) DO UPDATE SET
+  name = EXCLUDED.name,
+  price_eur = EXCLUDED.price_eur,
+  price_bgn = EXCLUDED.price_bgn,
+  updated_at = NOW();
 INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_category_name, price_eur, price_bgn, unit, crops, active_substance, formulation, quarantine, babh_reg, badge, image_url, description, dose, rating, reviews_count, in_stock, rates, pack_sizes) VALUES (
   'repelent-za-kartitsi-i-sleptsi',
   'Репелент за Къртици и Слепци',
@@ -3497,7 +4016,11 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   TRUE,
   '[{"val":100,"label":"Препоръчителна доза: Поставяне в къртичините"}]'::jsonb,
   '[{"label":"500 мл","price":7.5,"unit":"€ 7.50 / 500 мл","default":true}]'::jsonb
-);
+) ON CONFLICT (id) DO UPDATE SET
+  name = EXCLUDED.name,
+  price_eur = EXCLUDED.price_eur,
+  price_bgn = EXCLUDED.price_bgn,
+  updated_at = NOW();
 INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_category_name, price_eur, price_bgn, unit, crops, active_substance, formulation, quarantine, babh_reg, badge, image_url, description, dose, rating, reviews_count, in_stock, rates, pack_sizes) VALUES (
   'repelent-za-kucheta-i-kotki',
   'Репелент за Кучета и Котки',
@@ -3523,7 +4046,11 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   TRUE,
   '[{"val":100,"label":"Препоръчителна доза: Опръскване на огради и лехи"}]'::jsonb,
   '[{"label":"450 мл","price":6.9,"unit":"€ 6.90 / 450 мл","default":true}]'::jsonb
-);
+) ON CONFLICT (id) DO UPDATE SET
+  name = EXCLUDED.name,
+  price_eur = EXCLUDED.price_eur,
+  price_bgn = EXCLUDED.price_bgn,
+  updated_at = NOW();
 INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_category_name, price_eur, price_bgn, unit, crops, active_substance, formulation, quarantine, babh_reg, badge, image_url, description, dose, rating, reviews_count, in_stock, rates, pack_sizes) VALUES (
   'dimka-protiv-grizachi-v-dupki',
   'Димка против Гризачи в Дупки',
@@ -3549,7 +4076,11 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   TRUE,
   '[{"val":100,"label":"Препоръчителна доза: 1 патрон на активен вход"}]'::jsonb,
   '[{"label":"5 патрона","price":2.8,"unit":"€ 2.80 / 5 патрона","default":true}]'::jsonb
-);
+) ON CONFLICT (id) DO UPDATE SET
+  name = EXCLUDED.name,
+  price_eur = EXCLUDED.price_eur,
+  price_bgn = EXCLUDED.price_bgn,
+  updated_at = NOW();
 INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_category_name, price_eur, price_bgn, unit, crops, active_substance, formulation, quarantine, babh_reg, badge, image_url, description, dose, rating, reviews_count, in_stock, rates, pack_sizes) VALUES (
   'kapan-za-osi-i-starsheli',
   'Капан за Оси и Стършели',
@@ -3575,7 +4106,11 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   TRUE,
   '[{"val":100,"label":"Препоръчителна доза: Окачване близо до гроздето"}]'::jsonb,
   '[{"label":"1 бр. капан + 200 мл","price":5.9,"unit":"€ 5.90 / 1 бр. капан + 200 мл","default":true}]'::jsonb
-);
+) ON CONFLICT (id) DO UPDATE SET
+  name = EXCLUDED.name,
+  price_eur = EXCLUDED.price_eur,
+  price_bgn = EXCLUDED.price_bgn,
+  updated_at = NOW();
 INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_category_name, price_eur, price_bgn, unit, crops, active_substance, formulation, quarantine, babh_reg, badge, image_url, description, dose, rating, reviews_count, in_stock, rates, pack_sizes) VALUES (
   'k-otrin-sc-25',
   'К-Отрин SC 25',
@@ -3601,7 +4136,11 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   TRUE,
   '[{"val":100,"label":"Препоръчителна доза: 50 мл / 5 л вода"}]'::jsonb,
   '[{"label":"50 мл","price":12,"unit":"€ 12.00 / 50 мл","default":true}]'::jsonb
-);
+) ON CONFLICT (id) DO UPDATE SET
+  name = EXCLUDED.name,
+  price_eur = EXCLUDED.price_eur,
+  price_bgn = EXCLUDED.price_bgn,
+  updated_at = NOW();
 INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_category_name, price_eur, price_bgn, unit, crops, active_substance, formulation, quarantine, babh_reg, badge, image_url, description, dose, rating, reviews_count, in_stock, rates, pack_sizes) VALUES (
   'feromonova-ulovka-za-yabalkov-chervey',
   'Феромонова Уловка за Ябълков Червей',
@@ -3627,7 +4166,11 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   TRUE,
   '[{"val":100,"label":"Препоръчителна доза: 1 уловка на 2-3 дървета"}]'::jsonb,
   '[{"label":"1 комплект","price":7.9,"unit":"€ 7.90 / 1 комплект","default":true}]'::jsonb
-);
+) ON CONFLICT (id) DO UPDATE SET
+  name = EXCLUDED.name,
+  price_eur = EXCLUDED.price_eur,
+  price_bgn = EXCLUDED.price_bgn,
+  updated_at = NOW();
 INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_category_name, price_eur, price_bgn, unit, crops, active_substance, formulation, quarantine, babh_reg, badge, image_url, description, dose, rating, reviews_count, in_stock, rates, pack_sizes) VALUES (
   'feromonova-ulovka-za-sharen-molets',
   'Феромонова Уловка за Шарен Молец',
@@ -3653,7 +4196,11 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   TRUE,
   '[{"val":100,"label":"Препоръчителна доза: 1 уловка на декар"}]'::jsonb,
   '[{"label":"1 комплект","price":7.9,"unit":"€ 7.90 / 1 комплект","default":true}]'::jsonb
-);
+) ON CONFLICT (id) DO UPDATE SET
+  name = EXCLUDED.name,
+  price_eur = EXCLUDED.price_eur,
+  price_bgn = EXCLUDED.price_bgn,
+  updated_at = NOW();
 INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_category_name, price_eur, price_bgn, unit, crops, active_substance, formulation, quarantine, babh_reg, badge, image_url, description, dose, rating, reviews_count, in_stock, rates, pack_sizes) VALUES (
   'brodirat-pasta-za-grizachi',
   'Бродират Паста за Гризачи',
@@ -3679,7 +4226,11 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   TRUE,
   '[{"val":100,"label":"Препоръчителна доза: 20-40 г на точка"}]'::jsonb,
   '[{"label":"200 г","price":5.5,"unit":"€ 5.50 / 200 г","default":true}]'::jsonb
-);
+) ON CONFLICT (id) DO UPDATE SET
+  name = EXCLUDED.name,
+  price_eur = EXCLUDED.price_eur,
+  price_bgn = EXCLUDED.price_bgn,
+  updated_at = NOW();
 INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_category_name, price_eur, price_bgn, unit, crops, active_substance, formulation, quarantine, babh_reg, badge, image_url, description, dose, rating, reviews_count, in_stock, rates, pack_sizes) VALUES (
   'madeks-top-bio',
   'Мадекс ТОП БИО',
@@ -3705,7 +4256,11 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   TRUE,
   '[{"val":100,"label":"Препоръчителна доза: 10 мл/дка"}]'::jsonb,
   '[{"label":"100 мл","price":21,"unit":"€ 21.00 / 100 мл","default":true}]'::jsonb
-);
+) ON CONFLICT (id) DO UPDATE SET
+  name = EXCLUDED.name,
+  price_eur = EXCLUDED.price_eur,
+  price_bgn = EXCLUDED.price_bgn,
+  updated_at = NOW();
 INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_category_name, price_eur, price_bgn, unit, crops, active_substance, formulation, quarantine, babh_reg, badge, image_url, description, dose, rating, reviews_count, in_stock, rates, pack_sizes) VALUES (
   'kapan-lepliv-za-hlebarki-kashtichka',
   'Капан Леплив за Хлебарки (Къщичка)',
@@ -3731,7 +4286,11 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   TRUE,
   '[{"val":100,"label":"Препоръчителна доза: Под мивки и хладилници"}]'::jsonb,
   '[{"label":"2 бр.","price":1.9,"unit":"€ 1.90 / 2 бр.","default":true}]'::jsonb
-);
+) ON CONFLICT (id) DO UPDATE SET
+  name = EXCLUDED.name,
+  price_eur = EXCLUDED.price_eur,
+  price_bgn = EXCLUDED.price_bgn,
+  updated_at = NOW();
 INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_category_name, price_eur, price_bgn, unit, crops, active_substance, formulation, quarantine, babh_reg, badge, image_url, description, dose, rating, reviews_count, in_stock, rates, pack_sizes) VALUES (
   'tsipersan-ek',
   'Циперсан ЕК',
@@ -3757,7 +4316,11 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   TRUE,
   '[{"val":100,"label":"Препоръчителна доза: 50 мл / 5 л вода"}]'::jsonb,
   '[{"label":"50 мл","price":4.1,"unit":"€ 4.10 / 50 мл","default":true}]'::jsonb
-);
+) ON CONFLICT (id) DO UPDATE SET
+  name = EXCLUDED.name,
+  price_eur = EXCLUDED.price_eur,
+  price_bgn = EXCLUDED.price_bgn,
+  updated_at = NOW();
 INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_category_name, price_eur, price_bgn, unit, crops, active_substance, formulation, quarantine, babh_reg, badge, image_url, description, dose, rating, reviews_count, in_stock, rates, pack_sizes) VALUES (
   'yaramila-kompleks-npk',
   'ЯраМила Комплекс NPK',
@@ -3783,7 +4346,11 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   TRUE,
   '[{"val":100,"label":"Препоръчителна доза: 30-50 кг/дка"}]'::jsonb,
   '[{"label":"25 кг","price":36.5,"unit":"€ 36.50 / 25 кг","default":true}]'::jsonb
-);
+) ON CONFLICT (id) DO UPDATE SET
+  name = EXCLUDED.name,
+  price_eur = EXCLUDED.price_eur,
+  price_bgn = EXCLUDED.price_bgn,
+  updated_at = NOW();
 INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_category_name, price_eur, price_bgn, unit, crops, active_substance, formulation, quarantine, babh_reg, badge, image_url, description, dose, rating, reviews_count, in_stock, rates, pack_sizes) VALUES (
   'yaraliva-nitrabor',
   'ЯраЛива Нитрабор',
@@ -3809,7 +4376,11 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   TRUE,
   '[{"val":100,"label":"Препоръчителна доза: 15-25 кг/дка"}]'::jsonb,
   '[{"label":"25 кг","price":24.5,"unit":"€ 24.50 / 25 кг","default":true}]'::jsonb
-);
+) ON CONFLICT (id) DO UPDATE SET
+  name = EXCLUDED.name,
+  price_eur = EXCLUDED.price_eur,
+  price_bgn = EXCLUDED.price_bgn,
+  updated_at = NOW();
 INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_category_name, price_eur, price_bgn, unit, crops, active_substance, formulation, quarantine, babh_reg, badge, image_url, description, dose, rating, reviews_count, in_stock, rates, pack_sizes) VALUES (
   'kristalon-spetsialen-18-18-18',
   'Кристалон Специален 18-18-18',
@@ -3835,7 +4406,11 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   TRUE,
   '[{"val":100,"label":"Препоръчителна доза: 200-400 г/дка"}]'::jsonb,
   '[{"label":"1 кг","price":6.8,"unit":"€ 6.80 / 1 кг","default":true}]'::jsonb
-);
+) ON CONFLICT (id) DO UPDATE SET
+  name = EXCLUDED.name,
+  price_eur = EXCLUDED.price_eur,
+  price_bgn = EXCLUDED.price_bgn,
+  updated_at = NOW();
 INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_category_name, price_eur, price_bgn, unit, crops, active_substance, formulation, quarantine, babh_reg, badge, image_url, description, dose, rating, reviews_count, in_stock, rates, pack_sizes) VALUES (
   'kristalon-cherven-12-12-36',
   'Кристалон Червен 12-12-36',
@@ -3861,7 +4436,11 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   TRUE,
   '[{"val":100,"label":"Препоръчителна доза: 300-500 г/дка"}]'::jsonb,
   '[{"label":"1 кг","price":6.9,"unit":"€ 6.90 / 1 кг","default":true}]'::jsonb
-);
+) ON CONFLICT (id) DO UPDATE SET
+  name = EXCLUDED.name,
+  price_eur = EXCLUDED.price_eur,
+  price_bgn = EXCLUDED.price_bgn,
+  updated_at = NOW();
 INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_category_name, price_eur, price_bgn, unit, crops, active_substance, formulation, quarantine, babh_reg, badge, image_url, description, dose, rating, reviews_count, in_stock, rates, pack_sizes) VALUES (
   'kristalon-zhalt-13-40-13',
   'Кристалон Жълт 13-40-13',
@@ -3887,7 +4466,11 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   TRUE,
   '[{"val":100,"label":"Препоръчителна доза: 250-300 г/дка"}]'::jsonb,
   '[{"label":"1 кг","price":7.2,"unit":"€ 7.20 / 1 кг","default":true}]'::jsonb
-);
+) ON CONFLICT (id) DO UPDATE SET
+  name = EXCLUDED.name,
+  price_eur = EXCLUDED.price_eur,
+  price_bgn = EXCLUDED.price_bgn,
+  updated_at = NOW();
 INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_category_name, price_eur, price_bgn, unit, crops, active_substance, formulation, quarantine, babh_reg, badge, image_url, description, dose, rating, reviews_count, in_stock, rates, pack_sizes) VALUES (
   'kristalon-byal-15-5-30',
   'Кристалон Бял 15-5-30',
@@ -3913,7 +4496,11 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   TRUE,
   '[{"val":100,"label":"Препоръчителна доза: 250-400 г/дка"}]'::jsonb,
   '[{"label":"1 кг","price":6.9,"unit":"€ 6.90 / 1 кг","default":true}]'::jsonb
-);
+) ON CONFLICT (id) DO UPDATE SET
+  name = EXCLUDED.name,
+  price_eur = EXCLUDED.price_eur,
+  price_bgn = EXCLUDED.price_bgn,
+  updated_at = NOW();
 INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_category_name, price_eur, price_bgn, unit, crops, active_substance, formulation, quarantine, babh_reg, badge, image_url, description, dose, rating, reviews_count, in_stock, rates, pack_sizes) VALUES (
   'vuksal-kaltsiy',
   'Вуксал Калций',
@@ -3939,7 +4526,11 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   TRUE,
   '[{"val":100,"label":"Препоръчителна доза: 300-500 мл/дка"}]'::jsonb,
   '[{"label":"1 л","price":8.5,"unit":"€ 8.50 / 1 л","default":true}]'::jsonb
-);
+) ON CONFLICT (id) DO UPDATE SET
+  name = EXCLUDED.name,
+  price_eur = EXCLUDED.price_eur,
+  price_bgn = EXCLUDED.price_bgn,
+  updated_at = NOW();
 INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_category_name, price_eur, price_bgn, unit, crops, active_substance, formulation, quarantine, babh_reg, badge, image_url, description, dose, rating, reviews_count, in_stock, rates, pack_sizes) VALUES (
   'vuksal-makromiks',
   'Вуксал Макромикс',
@@ -3965,7 +4556,11 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   TRUE,
   '[{"val":100,"label":"Препоръчителна доза: 200-300 мл/дка"}]'::jsonb,
   '[{"label":"1 л","price":7.9,"unit":"€ 7.90 / 1 л","default":true}]'::jsonb
-);
+) ON CONFLICT (id) DO UPDATE SET
+  name = EXCLUDED.name,
+  price_eur = EXCLUDED.price_eur,
+  price_bgn = EXCLUDED.price_bgn,
+  updated_at = NOW();
 INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_category_name, price_eur, price_bgn, unit, crops, active_substance, formulation, quarantine, babh_reg, badge, image_url, description, dose, rating, reviews_count, in_stock, rates, pack_sizes) VALUES (
   'megafol-antistres',
   'Мегафол Антистрес',
@@ -3991,7 +4586,11 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   TRUE,
   '[{"val":100,"label":"Препоръчителна доза: 150-250 мл/дка"}]'::jsonb,
   '[{"label":"250 мл","price":9.9,"unit":"€ 9.90 / 250 мл","default":true}]'::jsonb
-);
+) ON CONFLICT (id) DO UPDATE SET
+  name = EXCLUDED.name,
+  price_eur = EXCLUDED.price_eur,
+  price_bgn = EXCLUDED.price_bgn,
+  updated_at = NOW();
 INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_category_name, price_eur, price_bgn, unit, crops, active_substance, formulation, quarantine, babh_reg, badge, image_url, description, dose, rating, reviews_count, in_stock, rates, pack_sizes) VALUES (
   'radifarm-vkorenitel',
   'Радифарм Вкоренител',
@@ -4017,7 +4616,11 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   TRUE,
   '[{"val":100,"label":"Препоръчителна доза: 250 мл / 100 л вода"}]'::jsonb,
   '[{"label":"250 мл","price":14.5,"unit":"€ 14.50 / 250 мл","default":true}]'::jsonb
-);
+) ON CONFLICT (id) DO UPDATE SET
+  name = EXCLUDED.name,
+  price_eur = EXCLUDED.price_eur,
+  price_bgn = EXCLUDED.price_bgn,
+  updated_at = NOW();
 INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_category_name, price_eur, price_bgn, unit, crops, active_substance, formulation, quarantine, babh_reg, badge, image_url, description, dose, rating, reviews_count, in_stock, rates, pack_sizes) VALUES (
   'kendal-imunitet',
   'Кендал Имунитет',
@@ -4043,7 +4646,11 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   TRUE,
   '[{"val":100,"label":"Препоръчителна доза: 150-200 мл/дка"}]'::jsonb,
   '[{"label":"250 мл","price":16.8,"unit":"€ 16.80 / 250 мл","default":true}]'::jsonb
-);
+) ON CONFLICT (id) DO UPDATE SET
+  name = EXCLUDED.name,
+  price_eur = EXCLUDED.price_eur,
+  price_bgn = EXCLUDED.price_bgn,
+  updated_at = NOW();
 INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_category_name, price_eur, price_bgn, unit, crops, active_substance, formulation, quarantine, babh_reg, badge, image_url, description, dose, rating, reviews_count, in_stock, rates, pack_sizes) VALUES (
   'zhelezen-helat-fe-eddha-6',
   'Железен Хелат Fe-EDDHA 6%',
@@ -4069,7 +4676,11 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   TRUE,
   '[{"val":100,"label":"Препоръчителна доза: 10-20 г на корен"}]'::jsonb,
   '[{"label":"100 г","price":5.5,"unit":"€ 5.50 / 100 г","default":true}]'::jsonb
-);
+) ON CONFLICT (id) DO UPDATE SET
+  name = EXCLUDED.name,
+  price_eur = EXCLUDED.price_eur,
+  price_bgn = EXCLUDED.price_bgn,
+  updated_at = NOW();
 INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_category_name, price_eur, price_bgn, unit, crops, active_substance, formulation, quarantine, babh_reg, badge, image_url, description, dose, rating, reviews_count, in_stock, rates, pack_sizes) VALUES (
   'humustim-organichen-tor',
   'Хумустим Органичен Тор',
@@ -4095,7 +4706,11 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   TRUE,
   '[{"val":100,"label":"Препоръчителна доза: 80-100 мл/дка"}]'::jsonb,
   '[{"label":"1 л","price":4.8,"unit":"€ 4.80 / 1 л","default":true}]'::jsonb
-);
+) ON CONFLICT (id) DO UPDATE SET
+  name = EXCLUDED.name,
+  price_eur = EXCLUDED.price_eur,
+  price_bgn = EXCLUDED.price_bgn,
+  updated_at = NOW();
 INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_category_name, price_eur, price_bgn, unit, crops, active_substance, formulation, quarantine, babh_reg, badge, image_url, description, dose, rating, reviews_count, in_stock, rates, pack_sizes) VALUES (
   'kaliteh-listen-tor',
   'Калитех Листен Тор',
@@ -4121,7 +4736,11 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   TRUE,
   '[{"val":100,"label":"Препоръчителна доза: 200-300 мл/дка"}]'::jsonb,
   '[{"label":"1 л","price":8.9,"unit":"€ 8.90 / 1 л","default":true}]'::jsonb
-);
+) ON CONFLICT (id) DO UPDATE SET
+  name = EXCLUDED.name,
+  price_eur = EXCLUDED.price_eur,
+  price_bgn = EXCLUDED.price_bgn,
+  updated_at = NOW();
 INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_category_name, price_eur, price_bgn, unit, crops, active_substance, formulation, quarantine, babh_reg, badge, image_url, description, dose, rating, reviews_count, in_stock, rates, pack_sizes) VALUES (
   'faynal-k-final-k',
   'Файнъл К (Final K)',
@@ -4147,7 +4766,11 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   TRUE,
   '[{"val":100,"label":"Препоръчителна доза: 250-350 мл/дка"}]'::jsonb,
   '[{"label":"1 л","price":11.2,"unit":"€ 11.20 / 1 л","default":true}]'::jsonb
-);
+) ON CONFLICT (id) DO UPDATE SET
+  name = EXCLUDED.name,
+  price_eur = EXCLUDED.price_eur,
+  price_bgn = EXCLUDED.price_bgn,
+  updated_at = NOW();
 INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_category_name, price_eur, price_bgn, unit, crops, active_substance, formulation, quarantine, babh_reg, badge, image_url, description, dose, rating, reviews_count, in_stock, rates, pack_sizes) VALUES (
   'bio-plantela-gel',
   'Био Плантела Гел',
@@ -4173,7 +4796,11 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   TRUE,
   '[{"val":100,"label":"Препоръчителна доза: 15 мл в 2 л вода"}]'::jsonb,
   '[{"label":"1 л","price":5.4,"unit":"€ 5.40 / 1 л","default":true}]'::jsonb
-);
+) ON CONFLICT (id) DO UPDATE SET
+  name = EXCLUDED.name,
+  price_eur = EXCLUDED.price_eur,
+  price_bgn = EXCLUDED.price_bgn,
+  updated_at = NOW();
 INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_category_name, price_eur, price_bgn, unit, crops, active_substance, formulation, quarantine, babh_reg, badge, image_url, description, dose, rating, reviews_count, in_stock, rates, pack_sizes) VALUES (
   'yaravita-bortrak-150',
   'ЯраВита Бортрак 150',
@@ -4199,7 +4826,11 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   TRUE,
   '[{"val":100,"label":"Препоръчителна доза: 100-150 мл/дка"}]'::jsonb,
   '[{"label":"1 л","price":9.5,"unit":"€ 9.50 / 1 л","default":true}]'::jsonb
-);
+) ON CONFLICT (id) DO UPDATE SET
+  name = EXCLUDED.name,
+  price_eur = EXCLUDED.price_eur,
+  price_bgn = EXCLUDED.price_bgn,
+  updated_at = NOW();
 INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_category_name, price_eur, price_bgn, unit, crops, active_substance, formulation, quarantine, babh_reg, badge, image_url, description, dose, rating, reviews_count, in_stock, rates, pack_sizes) VALUES (
   'magneziev-sulfat-epsom-sol',
   'Магнезиев Сулфат (Епсом сол)',
@@ -4225,7 +4856,11 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   TRUE,
   '[{"val":100,"label":"Препоръчителна доза: 300-500 г/дка"}]'::jsonb,
   '[{"label":"1 кг","price":2.9,"unit":"€ 2.90 / 1 кг","default":true}]'::jsonb
-);
+) ON CONFLICT (id) DO UPDATE SET
+  name = EXCLUDED.name,
+  price_eur = EXCLUDED.price_eur,
+  price_bgn = EXCLUDED.price_bgn,
+  updated_at = NOW();
 INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_category_name, price_eur, price_bgn, unit, crops, active_substance, formulation, quarantine, babh_reg, badge, image_url, description, dose, rating, reviews_count, in_stock, rates, pack_sizes) VALUES (
   'terafleks-t-15-8-25',
   'Терафлекс Т 15-8-25',
@@ -4251,7 +4886,11 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   TRUE,
   '[{"val":100,"label":"Препоръчителна доза: 2-4 кг/дка капково"}]'::jsonb,
   '[{"label":"25 кг","price":34,"unit":"€ 34.00 / 25 кг","default":true}]'::jsonb
-);
+) ON CONFLICT (id) DO UPDATE SET
+  name = EXCLUDED.name,
+  price_eur = EXCLUDED.price_eur,
+  price_bgn = EXCLUDED.price_bgn,
+  updated_at = NOW();
 INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_category_name, price_eur, price_bgn, unit, crops, active_substance, formulation, quarantine, babh_reg, badge, image_url, description, dose, rating, reviews_count, in_stock, rates, pack_sizes) VALUES (
   'amino-ekspert-balans',
   'Амино Експерт Баланс',
@@ -4277,7 +4916,11 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   TRUE,
   '[{"val":100,"label":"Препоръчителна доза: 150-200 мл/дка"}]'::jsonb,
   '[{"label":"1 л","price":7.5,"unit":"€ 7.50 / 1 л","default":true}]'::jsonb
-);
+) ON CONFLICT (id) DO UPDATE SET
+  name = EXCLUDED.name,
+  price_eur = EXCLUDED.price_eur,
+  price_bgn = EXCLUDED.price_bgn,
+  updated_at = NOW();
 INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_category_name, price_eur, price_bgn, unit, crops, active_substance, formulation, quarantine, babh_reg, badge, image_url, description, dose, rating, reviews_count, in_stock, rates, pack_sizes) VALUES (
   'yaravita-brasitrel-pro',
   'ЯраВита Браситрел Про',
@@ -4303,7 +4946,11 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   TRUE,
   '[{"val":100,"label":"Препоръчителна доза: 200-300 мл/дка"}]'::jsonb,
   '[{"label":"1 л","price":12.5,"unit":"€ 12.50 / 1 л","default":true}]'::jsonb
-);
+) ON CONFLICT (id) DO UPDATE SET
+  name = EXCLUDED.name,
+  price_eur = EXCLUDED.price_eur,
+  price_bgn = EXCLUDED.price_bgn,
+  updated_at = NOW();
 INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_category_name, price_eur, price_bgn, unit, crops, active_substance, formulation, quarantine, babh_reg, badge, image_url, description, dose, rating, reviews_count, in_stock, rates, pack_sizes) VALUES (
   'kabor-listen-tor',
   'Кабор Листен Тор',
@@ -4329,7 +4976,11 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   TRUE,
   '[{"val":100,"label":"Препоръчителна доза: 200-300 мл/дка"}]'::jsonb,
   '[{"label":"1 л","price":6.8,"unit":"€ 6.80 / 1 л","default":true}]'::jsonb
-);
+) ON CONFLICT (id) DO UPDATE SET
+  name = EXCLUDED.name,
+  price_eur = EXCLUDED.price_eur,
+  price_bgn = EXCLUDED.price_bgn,
+  updated_at = NOW();
 INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_category_name, price_eur, price_bgn, unit, crops, active_substance, formulation, quarantine, babh_reg, badge, image_url, description, dose, rating, reviews_count, in_stock, rates, pack_sizes) VALUES (
   'biohumus-ot-kaliforniyski-chervei-suh',
   'Биохумус от Калифорнийски Червеи (Сух)',
@@ -4355,7 +5006,11 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   TRUE,
   '[{"val":100,"label":"Препоръчителна доза: 50-100 г в гнездото"}]'::jsonb,
   '[{"label":"5 л","price":4.5,"unit":"€ 4.50 / 5 л","default":true}]'::jsonb
-);
+) ON CONFLICT (id) DO UPDATE SET
+  name = EXCLUDED.name,
+  price_eur = EXCLUDED.price_eur,
+  price_bgn = EXCLUDED.price_bgn,
+  updated_at = NOW();
 INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_category_name, price_eur, price_bgn, unit, crops, active_substance, formulation, quarantine, babh_reg, badge, image_url, description, dose, rating, reviews_count, in_stock, rates, pack_sizes) VALUES (
   'listopad-obezlistitel-za-ovoshtni',
   'Листопад – Обезлистител за Овощни',
@@ -4381,7 +5036,11 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   TRUE,
   '[{"val":100,"label":"Препоръчителна доза: 500 мл/дка"}]'::jsonb,
   '[{"label":"1 л","price":15,"unit":"€ 15.00 / 1 л","default":true}]'::jsonb
-);
+) ON CONFLICT (id) DO UPDATE SET
+  name = EXCLUDED.name,
+  price_eur = EXCLUDED.price_eur,
+  price_bgn = EXCLUDED.price_bgn,
+  updated_at = NOW();
 INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_category_name, price_eur, price_bgn, unit, crops, active_substance, formulation, quarantine, babh_reg, badge, image_url, description, dose, rating, reviews_count, in_stock, rates, pack_sizes) VALUES (
   'sublifos-techen-fosfor',
   'Сублифос Течен Фосфор',
@@ -4407,7 +5066,11 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   TRUE,
   '[{"val":100,"label":"Препоръчителна доза: 200-300 мл/дка"}]'::jsonb,
   '[{"label":"1 л","price":11.5,"unit":"€ 11.50 / 1 л","default":true}]'::jsonb
-);
+) ON CONFLICT (id) DO UPDATE SET
+  name = EXCLUDED.name,
+  price_eur = EXCLUDED.price_eur,
+  price_bgn = EXCLUDED.price_bgn,
+  updated_at = NOW();
 INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_category_name, price_eur, price_bgn, unit, crops, active_substance, formulation, quarantine, babh_reg, badge, image_url, description, dose, rating, reviews_count, in_stock, rates, pack_sizes) VALUES (
   'torfen-substrat-klasmann-ts3',
   'Торфен Субстрат Klasmann TS3',
@@ -4433,7 +5096,11 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   TRUE,
   '[{"val":100,"label":"Препоръчителна доза: За пикиране и тарелки"}]'::jsonb,
   '[{"label":"70 л","price":18.5,"unit":"€ 18.50 / 70 л","default":true}]'::jsonb
-);
+) ON CONFLICT (id) DO UPDATE SET
+  name = EXCLUDED.name,
+  price_eur = EXCLUDED.price_eur,
+  price_bgn = EXCLUDED.price_bgn,
+  updated_at = NOW();
 INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_category_name, price_eur, price_bgn, unit, crops, active_substance, formulation, quarantine, babh_reg, badge, image_url, description, dose, rating, reviews_count, in_stock, rates, pack_sizes) VALUES (
   'torfeni-tabletki-jiffy-38-mm',
   'Торфени Таблетки Jiffy 38 мм',
@@ -4459,7 +5126,11 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   TRUE,
   '[{"val":100,"label":"Препоръчителна доза: 1 таблетка на семе"}]'::jsonb,
   '[{"label":"20 бр.","price":3.5,"unit":"€ 3.50 / 20 бр.","default":true}]'::jsonb
-);
+) ON CONFLICT (id) DO UPDATE SET
+  name = EXCLUDED.name,
+  price_eur = EXCLUDED.price_eur,
+  price_bgn = EXCLUDED.price_bgn,
+  updated_at = NOW();
 INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_category_name, price_eur, price_bgn, unit, crops, active_substance, formulation, quarantine, babh_reg, badge, image_url, description, dose, rating, reviews_count, in_stock, rates, pack_sizes) VALUES (
   'yaratera-kaltsinit',
   'ЯраТера Калцинит',
@@ -4485,7 +5156,11 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   TRUE,
   '[{"val":100,"label":"Препоръчителна доза: 2-3 кг/дка капково"}]'::jsonb,
   '[{"label":"25 кг","price":23,"unit":"€ 23.00 / 25 кг","default":true}]'::jsonb
-);
+) ON CONFLICT (id) DO UPDATE SET
+  name = EXCLUDED.name,
+  price_eur = EXCLUDED.price_eur,
+  price_bgn = EXCLUDED.price_bgn,
+  updated_at = NOW();
 INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_category_name, price_eur, price_bgn, unit, crops, active_substance, formulation, quarantine, babh_reg, badge, image_url, description, dose, rating, reviews_count, in_stock, rates, pack_sizes) VALUES (
   'vuksal-aminoplant-bio',
   'Вуксал Аминоплант БИО',
@@ -4511,7 +5186,11 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   TRUE,
   '[{"val":100,"label":"Препоръчителна доза: 200-300 мл/дка"}]'::jsonb,
   '[{"label":"1 л","price":10.5,"unit":"€ 10.50 / 1 л","default":true}]'::jsonb
-);
+) ON CONFLICT (id) DO UPDATE SET
+  name = EXCLUDED.name,
+  price_eur = EXCLUDED.price_eur,
+  price_bgn = EXCLUDED.price_bgn,
+  updated_at = NOW();
 INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_category_name, price_eur, price_bgn, unit, crops, active_substance, formulation, quarantine, babh_reg, badge, image_url, description, dose, rating, reviews_count, in_stock, rates, pack_sizes) VALUES (
   'kristalon-oranzhev-6-12-36',
   'Кристалон Оранжев 6-12-36',
@@ -4537,7 +5216,11 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   TRUE,
   '[{"val":100,"label":"Препоръчителна доза: 200-400 г/дка"}]'::jsonb,
   '[{"label":"1 кг","price":7.1,"unit":"€ 7.10 / 1 кг","default":true}]'::jsonb
-);
+) ON CONFLICT (id) DO UPDATE SET
+  name = EXCLUDED.name,
+  price_eur = EXCLUDED.price_eur,
+  price_bgn = EXCLUDED.price_bgn,
+  updated_at = NOW();
 INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_category_name, price_eur, price_bgn, unit, crops, active_substance, formulation, quarantine, babh_reg, badge, image_url, description, dose, rating, reviews_count, in_stock, rates, pack_sizes) VALUES (
   'tsinkov-helat-zn-edta-15',
   'Цинков Хелат Zn-EDTA 15%',
@@ -4563,7 +5246,11 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   TRUE,
   '[{"val":100,"label":"Препоръчителна доза: 50-100 г/дка"}]'::jsonb,
   '[{"label":"100 г","price":4.8,"unit":"€ 4.80 / 100 г","default":true}]'::jsonb
-);
+) ON CONFLICT (id) DO UPDATE SET
+  name = EXCLUDED.name,
+  price_eur = EXCLUDED.price_eur,
+  price_bgn = EXCLUDED.price_bgn,
+  updated_at = NOW();
 INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_category_name, price_eur, price_bgn, unit, crops, active_substance, formulation, quarantine, babh_reg, badge, image_url, description, dose, rating, reviews_count, in_stock, rates, pack_sizes) VALUES (
   'bordo-multi-mikro',
   'Бордо Мулти Микро',
@@ -4589,7 +5276,11 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   TRUE,
   '[{"val":100,"label":"Препоръчителна доза: 100 г/дка"}]'::jsonb,
   '[{"label":"100 г","price":3.2,"unit":"€ 3.20 / 100 г","default":true}]'::jsonb
-);
+) ON CONFLICT (id) DO UPDATE SET
+  name = EXCLUDED.name,
+  price_eur = EXCLUDED.price_eur,
+  price_bgn = EXCLUDED.price_bgn,
+  updated_at = NOW();
 INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_category_name, price_eur, price_bgn, unit, crops, active_substance, formulation, quarantine, babh_reg, badge, image_url, description, dose, rating, reviews_count, in_stock, rates, pack_sizes) VALUES (
   'vuksal-mikroplant',
   'Вуксал Микроплант',
@@ -4615,7 +5306,11 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   TRUE,
   '[{"val":100,"label":"Препоръчителна доза: 100-150 мл/дка"}]'::jsonb,
   '[{"label":"1 л","price":9.8,"unit":"€ 9.80 / 1 л","default":true}]'::jsonb
-);
+) ON CONFLICT (id) DO UPDATE SET
+  name = EXCLUDED.name,
+  price_eur = EXCLUDED.price_eur,
+  price_bgn = EXCLUDED.price_bgn,
+  updated_at = NOW();
 INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_category_name, price_eur, price_bgn, unit, crops, active_substance, formulation, quarantine, babh_reg, badge, image_url, description, dose, rating, reviews_count, in_stock, rates, pack_sizes) VALUES (
   'ekoprop-nem-bio',
   'Екопроп Нем БИО',
@@ -4641,7 +5336,11 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   TRUE,
   '[{"val":100,"label":"Препоръчителна доза: 100-200 г/дка"}]'::jsonb,
   '[{"label":"500 г","price":21,"unit":"€ 21.00 / 500 г","default":true}]'::jsonb
-);
+) ON CONFLICT (id) DO UPDATE SET
+  name = EXCLUDED.name,
+  price_eur = EXCLUDED.price_eur,
+  price_bgn = EXCLUDED.price_bgn,
+  updated_at = NOW();
 INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_category_name, price_eur, price_bgn, unit, crops, active_substance, formulation, quarantine, babh_reg, badge, image_url, description, dose, rating, reviews_count, in_stock, rates, pack_sizes) VALUES (
   'yaravita-mankotsin',
   'ЯраВита Манкоцин',
@@ -4667,7 +5366,11 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   TRUE,
   '[{"val":100,"label":"Препоръчителна доза: 100 мл/дка"}]'::jsonb,
   '[{"label":"1 л","price":14.8,"unit":"€ 14.80 / 1 л","default":true}]'::jsonb
-);
+) ON CONFLICT (id) DO UPDATE SET
+  name = EXCLUDED.name,
+  price_eur = EXCLUDED.price_eur,
+  price_bgn = EXCLUDED.price_bgn,
+  updated_at = NOW();
 INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_category_name, price_eur, price_bgn, unit, crops, active_substance, formulation, quarantine, babh_reg, badge, image_url, description, dose, rating, reviews_count, in_stock, rates, pack_sizes) VALUES (
   'tera-sorb-kompleks',
   'Тера-Сорб Комплекс',
@@ -4693,7 +5396,11 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   TRUE,
   '[{"val":100,"label":"Препоръчителна доза: 200 мл/дка"}]'::jsonb,
   '[{"label":"1 л","price":12.8,"unit":"€ 12.80 / 1 л","default":true}]'::jsonb
-);
+) ON CONFLICT (id) DO UPDATE SET
+  name = EXCLUDED.name,
+  price_eur = EXCLUDED.price_eur,
+  price_bgn = EXCLUDED.price_bgn,
+  updated_at = NOW();
 INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_category_name, price_eur, price_bgn, unit, crops, active_substance, formulation, quarantine, babh_reg, badge, image_url, description, dose, rating, reviews_count, in_stock, rates, pack_sizes) VALUES (
   'semena-domati-rozovo-sartse-bg',
   'Семена Домати Розово сърце БГ',
@@ -4719,7 +5426,11 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   TRUE,
   '[{"val":100,"label":"Препоръчителна доза: 25-30 г за декар разсад"}]'::jsonb,
   '[{"label":"1 г","price":2.2,"unit":"€ 2.20 / 1 г","default":true}]'::jsonb
-);
+) ON CONFLICT (id) DO UPDATE SET
+  name = EXCLUDED.name,
+  price_eur = EXCLUDED.price_eur,
+  price_bgn = EXCLUDED.price_bgn,
+  updated_at = NOW();
 INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_category_name, price_eur, price_bgn, unit, crops, active_substance, formulation, quarantine, babh_reg, badge, image_url, description, dose, rating, reviews_count, in_stock, rates, pack_sizes) VALUES (
   'semena-domati-ragbi-f1',
   'Семена Домати Ръгби F1',
@@ -4745,7 +5456,11 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   TRUE,
   '[{"val":100,"label":"Препоръчителна доза: 20-25 г за декар"}]'::jsonb,
   '[{"label":"50 семена","price":4.8,"unit":"€ 4.80 / 50 семена","default":true}]'::jsonb
-);
+) ON CONFLICT (id) DO UPDATE SET
+  name = EXCLUDED.name,
+  price_eur = EXCLUDED.price_eur,
+  price_bgn = EXCLUDED.price_bgn,
+  updated_at = NOW();
 INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_category_name, price_eur, price_bgn, unit, crops, active_substance, formulation, quarantine, babh_reg, badge, image_url, description, dose, rating, reviews_count, in_stock, rates, pack_sizes) VALUES (
   'semena-domati-ideal',
   'Семена Домати Идеал',
@@ -4771,7 +5486,11 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   TRUE,
   '[{"val":100,"label":"Препоръчителна доза: 30 г за декар"}]'::jsonb,
   '[{"label":"1 г","price":1.8,"unit":"€ 1.80 / 1 г","default":true}]'::jsonb
-);
+) ON CONFLICT (id) DO UPDATE SET
+  name = EXCLUDED.name,
+  price_eur = EXCLUDED.price_eur,
+  price_bgn = EXCLUDED.price_bgn,
+  updated_at = NOW();
 INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_category_name, price_eur, price_bgn, unit, crops, active_substance, formulation, quarantine, babh_reg, badge, image_url, description, dose, rating, reviews_count, in_stock, rates, pack_sizes) VALUES (
   'semena-domati-bivolsko-sartse-rozovo',
   'Семена Домати Биволско сърце розово',
@@ -4797,7 +5516,11 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   TRUE,
   '[{"val":100,"label":"Препоръчителна доза: 25-30 г/дка"}]'::jsonb,
   '[{"label":"1 г","price":2.1,"unit":"€ 2.10 / 1 г","default":true}]'::jsonb
-);
+) ON CONFLICT (id) DO UPDATE SET
+  name = EXCLUDED.name,
+  price_eur = EXCLUDED.price_eur,
+  price_bgn = EXCLUDED.price_bgn,
+  updated_at = NOW();
 INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_category_name, price_eur, price_bgn, unit, crops, active_substance, formulation, quarantine, babh_reg, badge, image_url, description, dose, rating, reviews_count, in_stock, rates, pack_sizes) VALUES (
   'semena-domati-rila-f1',
   'Семена Домати Рила F1',
@@ -4823,7 +5546,11 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   TRUE,
   '[{"val":100,"label":"Препоръчителна доза: 20-25 г/дка"}]'::jsonb,
   '[{"label":"1 г","price":3.9,"unit":"€ 3.90 / 1 г","default":true}]'::jsonb
-);
+) ON CONFLICT (id) DO UPDATE SET
+  name = EXCLUDED.name,
+  price_eur = EXCLUDED.price_eur,
+  price_bgn = EXCLUDED.price_bgn,
+  updated_at = NOW();
 INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_category_name, price_eur, price_bgn, unit, crops, active_substance, formulation, quarantine, babh_reg, badge, image_url, description, dose, rating, reviews_count, in_stock, rates, pack_sizes) VALUES (
   'semena-krastavitsi-gergana',
   'Семена Краставици Гергана',
@@ -4849,7 +5576,11 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   TRUE,
   '[{"val":100,"label":"Препоръчителна доза: 120-150 г/дка"}]'::jsonb,
   '[{"label":"3 г","price":1.6,"unit":"€ 1.60 / 3 г","default":true}]'::jsonb
-);
+) ON CONFLICT (id) DO UPDATE SET
+  name = EXCLUDED.name,
+  price_eur = EXCLUDED.price_eur,
+  price_bgn = EXCLUDED.price_bgn,
+  updated_at = NOW();
 INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_category_name, price_eur, price_bgn, unit, crops, active_substance, formulation, quarantine, babh_reg, badge, image_url, description, dose, rating, reviews_count, in_stock, rates, pack_sizes) VALUES (
   'semena-krastavitsi-sandra-f1',
   'Семена Краставици Сандра F1',
@@ -4875,7 +5606,11 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   TRUE,
   '[{"val":100,"label":"Препоръчителна доза: 100-120 г/дка"}]'::jsonb,
   '[{"label":"1 г","price":3.5,"unit":"€ 3.50 / 1 г","default":true}]'::jsonb
-);
+) ON CONFLICT (id) DO UPDATE SET
+  name = EXCLUDED.name,
+  price_eur = EXCLUDED.price_eur,
+  price_bgn = EXCLUDED.price_bgn,
+  updated_at = NOW();
 INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_category_name, price_eur, price_bgn, unit, crops, active_substance, formulation, quarantine, babh_reg, badge, image_url, description, dose, rating, reviews_count, in_stock, rates, pack_sizes) VALUES (
   'semena-krastavitsi-telegraf-f1',
   'Семена Краставици Телеграф F1',
@@ -4901,7 +5636,11 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   TRUE,
   '[{"val":100,"label":"Препоръчителна доза: 150 г/дка"}]'::jsonb,
   '[{"label":"2 г","price":1.35,"unit":"€ 1.35 / 2 г","default":true}]'::jsonb
-);
+) ON CONFLICT (id) DO UPDATE SET
+  name = EXCLUDED.name,
+  price_eur = EXCLUDED.price_eur,
+  price_bgn = EXCLUDED.price_bgn,
+  updated_at = NOW();
 INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_category_name, price_eur, price_bgn, unit, crops, active_substance, formulation, quarantine, babh_reg, badge, image_url, description, dose, rating, reviews_count, in_stock, rates, pack_sizes) VALUES (
   'kornishoni-megyer-f1',
   'Корнишони Мегйер F1',
@@ -4927,7 +5666,11 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   TRUE,
   '[{"val":100,"label":"Препоръчителна доза: 80-100 г/дка"}]'::jsonb,
   '[{"label":"1 г","price":3.9,"unit":"€ 3.90 / 1 г","default":true}]'::jsonb
-);
+) ON CONFLICT (id) DO UPDATE SET
+  name = EXCLUDED.name,
+  price_eur = EXCLUDED.price_eur,
+  price_bgn = EXCLUDED.price_bgn,
+  updated_at = NOW();
 INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_category_name, price_eur, price_bgn, unit, crops, active_substance, formulation, quarantine, babh_reg, badge, image_url, description, dose, rating, reviews_count, in_stock, rates, pack_sizes) VALUES (
   'kornishoni-altay-f1',
   'Корнишони Алтай F1',
@@ -4953,7 +5696,11 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   TRUE,
   '[{"val":100,"label":"Препоръчителна доза: 120 г/дка"}]'::jsonb,
   '[{"label":"2 г","price":0.87,"unit":"€ 0.87 / 2 г","default":true}]'::jsonb
-);
+) ON CONFLICT (id) DO UPDATE SET
+  name = EXCLUDED.name,
+  price_eur = EXCLUDED.price_eur,
+  price_bgn = EXCLUDED.price_bgn,
+  updated_at = NOW();
 INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_category_name, price_eur, price_bgn, unit, crops, active_substance, formulation, quarantine, babh_reg, badge, image_url, description, dose, rating, reviews_count, in_stock, rates, pack_sizes) VALUES (
   'piper-kurtovska-kapiya-1619',
   'Пипер Куртовска капия 1619',
@@ -4979,7 +5726,11 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   TRUE,
   '[{"val":100,"label":"Препоръчителна доза: 120-150 г/дка"}]'::jsonb,
   '[{"label":"2 г","price":1.9,"unit":"€ 1.90 / 2 г","default":true}]'::jsonb
-);
+) ON CONFLICT (id) DO UPDATE SET
+  name = EXCLUDED.name,
+  price_eur = EXCLUDED.price_eur,
+  price_bgn = EXCLUDED.price_bgn,
+  updated_at = NOW();
 INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_category_name, price_eur, price_bgn, unit, crops, active_substance, formulation, quarantine, babh_reg, badge, image_url, description, dose, rating, reviews_count, in_stock, rates, pack_sizes) VALUES (
   'piper-sivriya-600',
   'Пипер Сиврия 600',
@@ -5005,7 +5756,11 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   TRUE,
   '[{"val":100,"label":"Препоръчителна доза: 150 г/дка"}]'::jsonb,
   '[{"label":"2 г","price":1.7,"unit":"€ 1.70 / 2 г","default":true}]'::jsonb
-);
+) ON CONFLICT (id) DO UPDATE SET
+  name = EXCLUDED.name,
+  price_eur = EXCLUDED.price_eur,
+  price_bgn = EXCLUDED.price_bgn,
+  updated_at = NOW();
 INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_category_name, price_eur, price_bgn, unit, crops, active_substance, formulation, quarantine, babh_reg, badge, image_url, description, dose, rating, reviews_count, in_stock, rates, pack_sizes) VALUES (
   'piper-hisarska-kapiya',
   'Пипер Хисарска капия',
@@ -5031,7 +5786,11 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   TRUE,
   '[{"val":100,"label":"Препоръчителна доза: 130-150 г/дка"}]'::jsonb,
   '[{"label":"2 г","price":2.1,"unit":"€ 2.10 / 2 г","default":true}]'::jsonb
-);
+) ON CONFLICT (id) DO UPDATE SET
+  name = EXCLUDED.name,
+  price_eur = EXCLUDED.price_eur,
+  price_bgn = EXCLUDED.price_bgn,
+  updated_at = NOW();
 INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_category_name, price_eur, price_bgn, unit, crops, active_substance, formulation, quarantine, babh_reg, badge, image_url, description, dose, rating, reviews_count, in_stock, rates, pack_sizes) VALUES (
   'lyuti-chushki-shipka--balgarski-morkov',
   'Люти чушки Шипка / Български морков',
@@ -5057,7 +5816,11 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   TRUE,
   '[{"val":100,"label":"Препоръчителна доза: 100 г/дка"}]'::jsonb,
   '[{"label":"1 г","price":1.5,"unit":"€ 1.50 / 1 г","default":true}]'::jsonb
-);
+) ON CONFLICT (id) DO UPDATE SET
+  name = EXCLUDED.name,
+  price_eur = EXCLUDED.price_eur,
+  price_bgn = EXCLUDED.price_bgn,
+  updated_at = NOW();
 INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_category_name, price_eur, price_bgn, unit, crops, active_substance, formulation, quarantine, babh_reg, badge, image_url, description, dose, rating, reviews_count, in_stock, rates, pack_sizes) VALUES (
   'patladzhan-klasik-f1',
   'Патладжан Класик F1',
@@ -5083,7 +5846,11 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   TRUE,
   '[{"val":100,"label":"Препоръчителна доза: 30-40 г/дка"}]'::jsonb,
   '[{"label":"1 г","price":3.53,"unit":"€ 3.53 / 1 г","default":true}]'::jsonb
-);
+) ON CONFLICT (id) DO UPDATE SET
+  name = EXCLUDED.name,
+  price_eur = EXCLUDED.price_eur,
+  price_bgn = EXCLUDED.price_bgn,
+  updated_at = NOW();
 INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_category_name, price_eur, price_bgn, unit, crops, active_substance, formulation, quarantine, babh_reg, badge, image_url, description, dose, rating, reviews_count, in_stock, rates, pack_sizes) VALUES (
   'patladzhan-blek-byuti',
   'Патладжан Блек Бюти',
@@ -5109,7 +5876,11 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   TRUE,
   '[{"val":100,"label":"Препоръчителна доза: 40 г/дка"}]'::jsonb,
   '[{"label":"2 г","price":1.4,"unit":"€ 1.40 / 2 г","default":true}]'::jsonb
-);
+) ON CONFLICT (id) DO UPDATE SET
+  name = EXCLUDED.name,
+  price_eur = EXCLUDED.price_eur,
+  price_bgn = EXCLUDED.price_bgn,
+  updated_at = NOW();
 INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_category_name, price_eur, price_bgn, unit, crops, active_substance, formulation, quarantine, babh_reg, badge, image_url, description, dose, rating, reviews_count, in_stock, rates, pack_sizes) VALUES (
   'tikvichki-izobilna-f1',
   'Тиквички Изобилна F1',
@@ -5135,7 +5906,11 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   TRUE,
   '[{"val":100,"label":"Препоръчителна доза: 300-400 г/дка"}]'::jsonb,
   '[{"label":"5 г","price":2.1,"unit":"€ 2.10 / 5 г","default":true}]'::jsonb
-);
+) ON CONFLICT (id) DO UPDATE SET
+  name = EXCLUDED.name,
+  price_eur = EXCLUDED.price_eur,
+  price_bgn = EXCLUDED.price_bgn,
+  updated_at = NOW();
 INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_category_name, price_eur, price_bgn, unit, crops, active_substance, formulation, quarantine, babh_reg, badge, image_url, description, dose, rating, reviews_count, in_stock, rates, pack_sizes) VALUES (
   'tikvichki-nefertiti-tamnozeleni',
   'Тиквички Нефертити (Тъмнозелени)',
@@ -5161,7 +5936,11 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   TRUE,
   '[{"val":100,"label":"Препоръчителна доза: 350 г/дка"}]'::jsonb,
   '[{"label":"5 г","price":1.6,"unit":"€ 1.60 / 5 г","default":true}]'::jsonb
-);
+) ON CONFLICT (id) DO UPDATE SET
+  name = EXCLUDED.name,
+  price_eur = EXCLUDED.price_eur,
+  price_bgn = EXCLUDED.price_bgn,
+  updated_at = NOW();
 INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_category_name, price_eur, price_bgn, unit, crops, active_substance, formulation, quarantine, babh_reg, badge, image_url, description, dose, rating, reviews_count, in_stock, rates, pack_sizes) VALUES (
   'zele-kyose-17',
   'Зеле Кьосе 17',
@@ -5187,7 +5966,11 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   TRUE,
   '[{"val":100,"label":"Препоръчителна доза: 40-50 г/дка"}]'::jsonb,
   '[{"label":"3 г","price":1.7,"unit":"€ 1.70 / 3 г","default":true}]'::jsonb
-);
+) ON CONFLICT (id) DO UPDATE SET
+  name = EXCLUDED.name,
+  price_eur = EXCLUDED.price_eur,
+  price_bgn = EXCLUDED.price_bgn,
+  updated_at = NOW();
 INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_category_name, price_eur, price_bgn, unit, crops, active_substance, formulation, quarantine, babh_reg, badge, image_url, description, dose, rating, reviews_count, in_stock, rates, pack_sizes) VALUES (
   'zele-balkan-kasno',
   'Зеле Балкан (Късно)',
@@ -5213,7 +5996,11 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   TRUE,
   '[{"val":100,"label":"Препоръчителна доза: 40-50 г/дка"}]'::jsonb,
   '[{"label":"3 г","price":1.8,"unit":"€ 1.80 / 3 г","default":true}]'::jsonb
-);
+) ON CONFLICT (id) DO UPDATE SET
+  name = EXCLUDED.name,
+  price_eur = EXCLUDED.price_eur,
+  price_bgn = EXCLUDED.price_bgn,
+  updated_at = NOW();
 INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_category_name, price_eur, price_bgn, unit, crops, active_substance, formulation, quarantine, babh_reg, badge, image_url, description, dose, rating, reviews_count, in_stock, rates, pack_sizes) VALUES (
   'karfiol-erfurtsko-dzhudzhe',
   'Карфиол Ерфуртско джудже',
@@ -5239,7 +6026,11 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   TRUE,
   '[{"val":100,"label":"Препоръчителна доза: 30-40 г/дка"}]'::jsonb,
   '[{"label":"2 г","price":1.8,"unit":"€ 1.80 / 2 г","default":true}]'::jsonb
-);
+) ON CONFLICT (id) DO UPDATE SET
+  name = EXCLUDED.name,
+  price_eur = EXCLUDED.price_eur,
+  price_bgn = EXCLUDED.price_bgn,
+  updated_at = NOW();
 INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_category_name, price_eur, price_bgn, unit, crops, active_substance, formulation, quarantine, babh_reg, badge, image_url, description, dose, rating, reviews_count, in_stock, rates, pack_sizes) VALUES (
   'spanak-matador',
   'Спанак Матадор',
@@ -5265,7 +6056,11 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   TRUE,
   '[{"val":100,"label":"Препоръчителна доза: 1.5-2.5 кг/дка"}]'::jsonb,
   '[{"label":"10 г","price":1.4,"unit":"€ 1.40 / 10 г","default":true}]'::jsonb
-);
+) ON CONFLICT (id) DO UPDATE SET
+  name = EXCLUDED.name,
+  price_eur = EXCLUDED.price_eur,
+  price_bgn = EXCLUDED.price_bgn,
+  updated_at = NOW();
 INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_category_name, price_eur, price_bgn, unit, crops, active_substance, formulation, quarantine, babh_reg, badge, image_url, description, dose, rating, reviews_count, in_stock, rates, pack_sizes) VALUES (
   'morkovi-nantski-3',
   'Моркови Нантски 3',
@@ -5291,7 +6086,11 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   TRUE,
   '[{"val":100,"label":"Препоръчителна доза: 450-600 г/дка"}]'::jsonb,
   '[{"label":"5 г","price":1.5,"unit":"€ 1.50 / 5 г","default":true}]'::jsonb
-);
+) ON CONFLICT (id) DO UPDATE SET
+  name = EXCLUDED.name,
+  price_eur = EXCLUDED.price_eur,
+  price_bgn = EXCLUDED.price_bgn,
+  updated_at = NOW();
 INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_category_name, price_eur, price_bgn, unit, crops, active_substance, formulation, quarantine, babh_reg, badge, image_url, description, dose, rating, reviews_count, in_stock, rates, pack_sizes) VALUES (
   'repichki-cherveni-s-beli-opashki',
   'Репички Червени с бели опашки',
@@ -5317,7 +6116,11 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   TRUE,
   '[{"val":100,"label":"Препоръчителна доза: 1-1.5 кг/дка"}]'::jsonb,
   '[{"label":"5 г","price":1.2,"unit":"€ 1.20 / 5 г","default":true}]'::jsonb
-);
+) ON CONFLICT (id) DO UPDATE SET
+  name = EXCLUDED.name,
+  price_eur = EXCLUDED.price_eur,
+  price_bgn = EXCLUDED.price_bgn,
+  updated_at = NOW();
 INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_category_name, price_eur, price_bgn, unit, crops, active_substance, formulation, quarantine, babh_reg, badge, image_url, description, dose, rating, reviews_count, in_stock, rates, pack_sizes) VALUES (
   'luk-asenovgradska-kaba-5',
   'Лук Асеновградска каба 5',
@@ -5343,7 +6146,11 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   TRUE,
   '[{"val":100,"label":"Препоръчителна доза: 400-500 г/дка"}]'::jsonb,
   '[{"label":"5 г","price":1.9,"unit":"€ 1.90 / 5 г","default":true}]'::jsonb
-);
+) ON CONFLICT (id) DO UPDATE SET
+  name = EXCLUDED.name,
+  price_eur = EXCLUDED.price_eur,
+  price_bgn = EXCLUDED.price_bgn,
+  updated_at = NOW();
 INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_category_name, price_eur, price_bgn, unit, crops, active_substance, formulation, quarantine, babh_reg, badge, image_url, description, dose, rating, reviews_count, in_stock, rates, pack_sizes) VALUES (
   'salata-zhalta-krasiva',
   'Салата Жълта красива',
@@ -5369,7 +6176,11 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   TRUE,
   '[{"val":100,"label":"Препоръчителна доза: 30-40 г/дка"}]'::jsonb,
   '[{"label":"3 г","price":1.3,"unit":"€ 1.30 / 3 г","default":true}]'::jsonb
-);
+) ON CONFLICT (id) DO UPDATE SET
+  name = EXCLUDED.name,
+  price_eur = EXCLUDED.price_eur,
+  price_bgn = EXCLUDED.price_bgn,
+  updated_at = NOW();
 INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_category_name, price_eur, price_bgn, unit, crops, active_substance, formulation, quarantine, babh_reg, badge, image_url, description, dose, rating, reviews_count, in_stock, rates, pack_sizes) VALUES (
   'grah-plovdivska-perla',
   'Грах Пловдивска перла',
@@ -5395,7 +6206,11 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   TRUE,
   '[{"val":100,"label":"Препоръчителна доза: 10-12 кг/дка"}]'::jsonb,
   '[{"label":"50 г","price":2.2,"unit":"€ 2.20 / 50 г","default":true}]'::jsonb
-);
+) ON CONFLICT (id) DO UPDATE SET
+  name = EXCLUDED.name,
+  price_eur = EXCLUDED.price_eur,
+  price_bgn = EXCLUDED.price_bgn,
+  updated_at = NOW();
 INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_category_name, price_eur, price_bgn, unit, crops, active_substance, formulation, quarantine, babh_reg, badge, image_url, description, dose, rating, reviews_count, in_stock, rates, pack_sizes) VALUES (
   'zelen-fasul-nikos-bez-liko',
   'Зелен Фасул Никос (Без лико)',
@@ -5421,7 +6236,11 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   TRUE,
   '[{"val":100,"label":"Препоръчителна доза: 8-10 кг/дка"}]'::jsonb,
   '[{"label":"50 г","price":2.5,"unit":"€ 2.50 / 50 г","default":true}]'::jsonb
-);
+) ON CONFLICT (id) DO UPDATE SET
+  name = EXCLUDED.name,
+  price_eur = EXCLUDED.price_eur,
+  price_bgn = EXCLUDED.price_bgn,
+  updated_at = NOW();
 INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_category_name, price_eur, price_bgn, unit, crops, active_substance, formulation, quarantine, babh_reg, badge, image_url, description, dose, rating, reviews_count, in_stock, rates, pack_sizes) VALUES (
   'dinya-mramorna-bg',
   'Диня Мраморна БГ',
@@ -5447,7 +6266,11 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   TRUE,
   '[{"val":100,"label":"Препоръчителна доза: 250-300 г/дка"}]'::jsonb,
   '[{"label":"5 г","price":1.8,"unit":"€ 1.80 / 5 г","default":true}]'::jsonb
-);
+) ON CONFLICT (id) DO UPDATE SET
+  name = EXCLUDED.name,
+  price_eur = EXCLUDED.price_eur,
+  price_bgn = EXCLUDED.price_bgn,
+  updated_at = NOW();
 INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_category_name, price_eur, price_bgn, unit, crops, active_substance, formulation, quarantine, babh_reg, badge, image_url, description, dose, rating, reviews_count, in_stock, rates, pack_sizes) VALUES (
   'papesh-medena-rosa',
   'Пъпеш Медена роса',
@@ -5473,7 +6296,11 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   TRUE,
   '[{"val":100,"label":"Препоръчителна доза: 200 г/дка"}]'::jsonb,
   '[{"label":"3 г","price":1.8,"unit":"€ 1.80 / 3 г","default":true}]'::jsonb
-);
+) ON CONFLICT (id) DO UPDATE SET
+  name = EXCLUDED.name,
+  price_eur = EXCLUDED.price_eur,
+  price_bgn = EXCLUDED.price_bgn,
+  updated_at = NOW();
 INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_category_name, price_eur, price_bgn, unit, crops, active_substance, formulation, quarantine, babh_reg, badge, image_url, description, dose, rating, reviews_count, in_stock, rates, pack_sizes) VALUES (
   'trevna-smeska-sport--igra',
   'Тревна Смеска Спорт & Игра',
@@ -5499,7 +6326,11 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   TRUE,
   '[{"val":100,"label":"Препоръчителна доза: 30-40 г на кв.м"}]'::jsonb,
   '[{"label":"1 кг","price":8.9,"unit":"€ 8.90 / 1 кг","default":true}]'::jsonb
-);
+) ON CONFLICT (id) DO UPDATE SET
+  name = EXCLUDED.name,
+  price_eur = EXCLUDED.price_eur,
+  price_bgn = EXCLUDED.price_bgn,
+  updated_at = NOW();
 INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_category_name, price_eur, price_bgn, unit, crops, active_substance, formulation, quarantine, babh_reg, badge, image_url, description, dose, rating, reviews_count, in_stock, rates, pack_sizes) VALUES (
   'trevna-smeska-senchesta-gradina',
   'Тревна Смеска Сенчеста Градина',
@@ -5525,7 +6356,11 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   TRUE,
   '[{"val":100,"label":"Препоръчителна доза: 35 г на кв.м"}]'::jsonb,
   '[{"label":"1 кг","price":9.2,"unit":"€ 9.20 / 1 кг","default":true}]'::jsonb
-);
+) ON CONFLICT (id) DO UPDATE SET
+  name = EXCLUDED.name,
+  price_eur = EXCLUDED.price_eur,
+  price_bgn = EXCLUDED.price_bgn,
+  updated_at = NOW();
 INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_category_name, price_eur, price_bgn, unit, crops, active_substance, formulation, quarantine, babh_reg, badge, image_url, description, dose, rating, reviews_count, in_stock, rates, pack_sizes) VALUES (
   'drozhdi-lalvin-ec-1118',
   'Дрожди Lalvin EC-1118',
@@ -5551,7 +6386,11 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   TRUE,
   '[{"val":100,"label":"Препоръчителна доза: 20-25 г за 100 л мъст"}]'::jsonb,
   '[{"label":"500 г","price":24.5,"unit":"€ 24.50 / 500 г","default":true}]'::jsonb
-);
+) ON CONFLICT (id) DO UPDATE SET
+  name = EXCLUDED.name,
+  price_eur = EXCLUDED.price_eur,
+  price_bgn = EXCLUDED.price_bgn,
+  updated_at = NOW();
 INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_category_name, price_eur, price_bgn, unit, crops, active_substance, formulation, quarantine, babh_reg, badge, image_url, description, dose, rating, reviews_count, in_stock, rates, pack_sizes) VALUES (
   'drozhdi-lalvin-qa23',
   'Дрожди Lalvin QA23',
@@ -5577,7 +6416,11 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   TRUE,
   '[{"val":100,"label":"Препоръчителна доза: 20 г за 100 л"}]'::jsonb,
   '[{"label":"500 г","price":26,"unit":"€ 26.00 / 500 г","default":true}]'::jsonb
-);
+) ON CONFLICT (id) DO UPDATE SET
+  name = EXCLUDED.name,
+  price_eur = EXCLUDED.price_eur,
+  price_bgn = EXCLUDED.price_bgn,
+  updated_at = NOW();
 INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_category_name, price_eur, price_bgn, unit, crops, active_substance, formulation, quarantine, babh_reg, badge, image_url, description, dose, rating, reviews_count, in_stock, rates, pack_sizes) VALUES (
   'drozhdi-lalvin-bourgovin-rc-212',
   'Дрожди Lalvin Bourgovin RC-212',
@@ -5603,7 +6446,11 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   TRUE,
   '[{"val":100,"label":"Препоръчителна доза: 20-25 г за 100 кг каша"}]'::jsonb,
   '[{"label":"500 г","price":25.5,"unit":"€ 25.50 / 500 г","default":true}]'::jsonb
-);
+) ON CONFLICT (id) DO UPDATE SET
+  name = EXCLUDED.name,
+  price_eur = EXCLUDED.price_eur,
+  price_bgn = EXCLUDED.price_bgn,
+  updated_at = NOW();
 INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_category_name, price_eur, price_bgn, unit, crops, active_substance, formulation, quarantine, babh_reg, badge, image_url, description, dose, rating, reviews_count, in_stock, rates, pack_sizes) VALUES (
   'drozhdi-lalvin-k1-v1116',
   'Дрожди Lalvin K1-V1116',
@@ -5629,7 +6476,11 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   TRUE,
   '[{"val":100,"label":"Препоръчителна доза: 20-25 г за 100 л"}]'::jsonb,
   '[{"label":"500 г","price":24.8,"unit":"€ 24.80 / 500 г","default":true}]'::jsonb
-);
+) ON CONFLICT (id) DO UPDATE SET
+  name = EXCLUDED.name,
+  price_eur = EXCLUDED.price_eur,
+  price_bgn = EXCLUDED.price_bgn,
+  updated_at = NOW();
 INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_category_name, price_eur, price_bgn, unit, crops, active_substance, formulation, quarantine, babh_reg, badge, image_url, description, dose, rating, reviews_count, in_stock, rates, pack_sizes) VALUES (
   'drozhdi-lalvin-d-47',
   'Дрожди Lalvin D-47',
@@ -5655,7 +6506,11 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   TRUE,
   '[{"val":100,"label":"Препоръчителна доза: 20 г за 100 л"}]'::jsonb,
   '[{"label":"500 г","price":25,"unit":"€ 25.00 / 500 г","default":true}]'::jsonb
-);
+) ON CONFLICT (id) DO UPDATE SET
+  name = EXCLUDED.name,
+  price_eur = EXCLUDED.price_eur,
+  price_bgn = EXCLUDED.price_bgn,
+  updated_at = NOW();
 INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_category_name, price_eur, price_bgn, unit, crops, active_substance, formulation, quarantine, babh_reg, badge, image_url, description, dose, rating, reviews_count, in_stock, rates, pack_sizes) VALUES (
   'aktivator-optimalo-fermaid',
   'Активатор Оптимало (Fermaid)',
@@ -5681,7 +6536,11 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   TRUE,
   '[{"val":100,"label":"Препоръчителна доза: 20-30 г за 100 л"}]'::jsonb,
   '[{"label":"100 г","price":6.5,"unit":"€ 6.50 / 100 г","default":true}]'::jsonb
-);
+) ON CONFLICT (id) DO UPDATE SET
+  name = EXCLUDED.name,
+  price_eur = EXCLUDED.price_eur,
+  price_bgn = EXCLUDED.price_bgn,
+  updated_at = NOW();
 INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_category_name, price_eur, price_bgn, unit, crops, active_substance, formulation, quarantine, babh_reg, badge, image_url, description, dose, rating, reviews_count, in_stock, rates, pack_sizes) VALUES (
   'frenski-dabov-chips-medium',
   'Френски Дъбов Чипс Medium',
@@ -5707,7 +6566,11 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   TRUE,
   '[{"val":100,"label":"Препоръчителна доза: 2-4 г на литър"}]'::jsonb,
   '[{"label":"1 кг","price":12.8,"unit":"€ 12.80 / 1 кг","default":true}]'::jsonb
-);
+) ON CONFLICT (id) DO UPDATE SET
+  name = EXCLUDED.name,
+  price_eur = EXCLUDED.price_eur,
+  price_bgn = EXCLUDED.price_bgn,
+  updated_at = NOW();
 INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_category_name, price_eur, price_bgn, unit, crops, active_substance, formulation, quarantine, babh_reg, badge, image_url, description, dose, rating, reviews_count, in_stock, rates, pack_sizes) VALUES (
   'amerikanski-dabov-chips-medium',
   'Американски Дъбов Чипс Medium+',
@@ -5733,7 +6596,11 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   TRUE,
   '[{"val":100,"label":"Препоръчителна доза: 3-5 г на литър ракия"}]'::jsonb,
   '[{"label":"1 кг","price":13.5,"unit":"€ 13.50 / 1 кг","default":true}]'::jsonb
-);
+) ON CONFLICT (id) DO UPDATE SET
+  name = EXCLUDED.name,
+  price_eur = EXCLUDED.price_eur,
+  price_bgn = EXCLUDED.price_bgn,
+  updated_at = NOW();
 INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_category_name, price_eur, price_bgn, unit, crops, active_substance, formulation, quarantine, babh_reg, badge, image_url, description, dose, rating, reviews_count, in_stock, rates, pack_sizes) VALUES (
   'kaliev-metabisulfit-99',
   'Калиев Метабисулфит 99%',
@@ -5759,7 +6626,11 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   TRUE,
   '[{"val":100,"label":"Препоръчителна доза: 5-10 г за 100 л"}]'::jsonb,
   '[{"label":"1 кг","price":3.8,"unit":"€ 3.80 / 1 кг","default":true}]'::jsonb
-);
+) ON CONFLICT (id) DO UPDATE SET
+  name = EXCLUDED.name,
+  price_eur = EXCLUDED.price_eur,
+  price_bgn = EXCLUDED.price_bgn,
+  updated_at = NOW();
 INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_category_name, price_eur, price_bgn, unit, crops, active_substance, formulation, quarantine, babh_reg, badge, image_url, description, dose, rating, reviews_count, in_stock, rates, pack_sizes) VALUES (
   'natriev-bentonit-za-bistrene',
   'Натриев Бентонит за Бистрене',
@@ -5785,7 +6656,11 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   TRUE,
   '[{"val":100,"label":"Препоръчителна доза: 80-120 г за 100 л"}]'::jsonb,
   '[{"label":"1 кг","price":3.5,"unit":"€ 3.50 / 1 кг","default":true}]'::jsonb
-);
+) ON CONFLICT (id) DO UPDATE SET
+  name = EXCLUDED.name,
+  price_eur = EXCLUDED.price_eur,
+  price_bgn = EXCLUDED.price_bgn,
+  updated_at = NOW();
 INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_category_name, price_eur, price_bgn, unit, crops, active_substance, formulation, quarantine, babh_reg, badge, image_url, description, dose, rating, reviews_count, in_stock, rates, pack_sizes) VALUES (
   'enologichen-zhelatin-za-vino',
   'Енологичен Желатин за Вино',
@@ -5811,7 +6686,11 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   TRUE,
   '[{"val":100,"label":"Препоръчителна доза: 5-10 г за 100 л"}]'::jsonb,
   '[{"label":"100 г","price":4.2,"unit":"€ 4.20 / 100 г","default":true}]'::jsonb
-);
+) ON CONFLICT (id) DO UPDATE SET
+  name = EXCLUDED.name,
+  price_eur = EXCLUDED.price_eur,
+  price_bgn = EXCLUDED.price_bgn,
+  updated_at = NOW();
 INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_category_name, price_eur, price_bgn, unit, crops, active_substance, formulation, quarantine, babh_reg, badge, image_url, description, dose, rating, reviews_count, in_stock, rates, pack_sizes) VALUES (
   'tanin-grozdov-enologichen',
   'Танин Гроздов Енологичен',
@@ -5837,7 +6716,11 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   TRUE,
   '[{"val":100,"label":"Препоръчителна доза: 5-15 г за 100 л"}]'::jsonb,
   '[{"label":"100 г","price":8.9,"unit":"€ 8.90 / 100 г","default":true}]'::jsonb
-);
+) ON CONFLICT (id) DO UPDATE SET
+  name = EXCLUDED.name,
+  price_eur = EXCLUDED.price_eur,
+  price_bgn = EXCLUDED.price_bgn,
+  updated_at = NOW();
 INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_category_name, price_eur, price_bgn, unit, crops, active_substance, formulation, quarantine, babh_reg, badge, image_url, description, dose, rating, reviews_count, in_stock, rates, pack_sizes) VALUES (
   'aromat-za-rakiya-muskat',
   'Аромат за Ракия Мускат',
@@ -5863,7 +6746,11 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   TRUE,
   '[{"val":100,"label":"Препоръчителна доза: 20 мл за 50 л ракия"}]'::jsonb,
   '[{"label":"20 мл","price":2.2,"unit":"€ 2.20 / 20 мл","default":true}]'::jsonb
-);
+) ON CONFLICT (id) DO UPDATE SET
+  name = EXCLUDED.name,
+  price_eur = EXCLUDED.price_eur,
+  price_bgn = EXCLUDED.price_bgn,
+  updated_at = NOW();
 INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_category_name, price_eur, price_bgn, unit, crops, active_substance, formulation, quarantine, babh_reg, badge, image_url, description, dose, rating, reviews_count, in_stock, rates, pack_sizes) VALUES (
   'aromat-za-rakiya-grozdova',
   'Аромат за Ракия Гроздова',
@@ -5889,7 +6776,11 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   TRUE,
   '[{"val":100,"label":"Препоръчителна доза: 20 мл за 50 л ракия"}]'::jsonb,
   '[{"label":"20 мл","price":2.2,"unit":"€ 2.20 / 20 мл","default":true}]'::jsonb
-);
+) ON CONFLICT (id) DO UPDATE SET
+  name = EXCLUDED.name,
+  price_eur = EXCLUDED.price_eur,
+  price_bgn = EXCLUDED.price_bgn,
+  updated_at = NOW();
 INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_category_name, price_eur, price_bgn, unit, crops, active_substance, formulation, quarantine, babh_reg, badge, image_url, description, dose, rating, reviews_count, in_stock, rates, pack_sizes) VALUES (
   'aromat-za-rakiya-slivova',
   'Аромат за Ракия Сливова',
@@ -5915,7 +6806,11 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   TRUE,
   '[{"val":100,"label":"Препоръчителна доза: 20 мл за 50 л ракия"}]'::jsonb,
   '[{"label":"20 мл","price":2.2,"unit":"€ 2.20 / 20 мл","default":true}]'::jsonb
-);
+) ON CONFLICT (id) DO UPDATE SET
+  name = EXCLUDED.name,
+  price_eur = EXCLUDED.price_eur,
+  price_bgn = EXCLUDED.price_bgn,
+  updated_at = NOW();
 INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_category_name, price_eur, price_bgn, unit, crops, active_substance, formulation, quarantine, babh_reg, badge, image_url, description, dose, rating, reviews_count, in_stock, rates, pack_sizes) VALUES (
   'aromat-za-rakiya-dyuleva',
   'Аромат за Ракия Дюлева',
@@ -5941,7 +6836,11 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   TRUE,
   '[{"val":100,"label":"Препоръчителна доза: 20 мл за 50 л ракия"}]'::jsonb,
   '[{"label":"20 мл","price":2.4,"unit":"€ 2.40 / 20 мл","default":true}]'::jsonb
-);
+) ON CONFLICT (id) DO UPDATE SET
+  name = EXCLUDED.name,
+  price_eur = EXCLUDED.price_eur,
+  price_bgn = EXCLUDED.price_bgn,
+  updated_at = NOW();
 INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_category_name, price_eur, price_bgn, unit, crops, active_substance, formulation, quarantine, babh_reg, badge, image_url, description, dose, rating, reviews_count, in_stock, rates, pack_sizes) VALUES (
   'otsvetitel-karamel-za-rakiya',
   'Оцветител Карамел за Ракия',
@@ -5967,7 +6866,11 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   TRUE,
   '[{"val":100,"label":"Препоръчителна доза: 50-100 мл за 100 л"}]'::jsonb,
   '[{"label":"100 мл","price":2.9,"unit":"€ 2.90 / 100 мл","default":true}]'::jsonb
-);
+) ON CONFLICT (id) DO UPDATE SET
+  name = EXCLUDED.name,
+  price_eur = EXCLUDED.price_eur,
+  price_bgn = EXCLUDED.price_bgn,
+  updated_at = NOW();
 INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_category_name, price_eur, price_bgn, unit, crops, active_substance, formulation, quarantine, babh_reg, badge, image_url, description, dose, rating, reviews_count, in_stock, rates, pack_sizes) VALUES (
   'penogasitel-za-kazani-za-rakiya',
   'Пеногасител за Казани за Ракия',
@@ -5993,7 +6896,11 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   TRUE,
   '[{"val":100,"label":"Препоръчителна доза: 10-20 мл на казан"}]'::jsonb,
   '[{"label":"100 мл","price":3.6,"unit":"€ 3.60 / 100 мл","default":true}]'::jsonb
-);
+) ON CONFLICT (id) DO UPDATE SET
+  name = EXCLUDED.name,
+  price_eur = EXCLUDED.price_eur,
+  price_bgn = EXCLUDED.price_bgn,
+  updated_at = NOW();
 INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_category_name, price_eur, price_bgn, unit, crops, active_substance, formulation, quarantine, babh_reg, badge, image_url, description, dose, rating, reviews_count, in_stock, rates, pack_sizes) VALUES (
   'spirtomer-za-rakiya-s-termometar',
   'Спиртомер за Ракия с Термометър',
@@ -6019,7 +6926,11 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   TRUE,
   '[{"val":100,"label":"Препоръчителна доза: Измерване в мензура"}]'::jsonb,
   '[{"label":"1 бр.","price":7.9,"unit":"€ 7.90 / 1 бр.","default":true}]'::jsonb
-);
+) ON CONFLICT (id) DO UPDATE SET
+  name = EXCLUDED.name,
+  price_eur = EXCLUDED.price_eur,
+  price_bgn = EXCLUDED.price_bgn,
+  updated_at = NOW();
 INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_category_name, price_eur, price_bgn, unit, crops, active_substance, formulation, quarantine, babh_reg, badge, image_url, description, dose, rating, reviews_count, in_stock, rates, pack_sizes) VALUES (
   'zaharomer-za-grozdova-mast',
   'Захаромер за Гроздова Мъст',
@@ -6045,7 +6956,11 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   TRUE,
   '[{"val":100,"label":"Препоръчителна доза: Потапяне в мъстта"}]'::jsonb,
   '[{"label":"1 бр.","price":6.8,"unit":"€ 6.80 / 1 бр.","default":true}]'::jsonb
-);
+) ON CONFLICT (id) DO UPDATE SET
+  name = EXCLUDED.name,
+  price_eur = EXCLUDED.price_eur,
+  price_bgn = EXCLUDED.price_bgn,
+  updated_at = NOW();
 INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_category_name, price_eur, price_bgn, unit, crops, active_substance, formulation, quarantine, babh_reg, badge, image_url, description, dose, rating, reviews_count, in_stock, rates, pack_sizes) VALUES (
   'konservant-za-vino-sorbiks',
   'Консервант за Вино Сорбикс',
@@ -6071,7 +6986,11 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   TRUE,
   '[{"val":100,"label":"Препоръчителна доза: 15-20 г за 100 л"}]'::jsonb,
   '[{"label":"100 г","price":2.8,"unit":"€ 2.80 / 100 г","default":true}]'::jsonb
-);
+) ON CONFLICT (id) DO UPDATE SET
+  name = EXCLUDED.name,
+  price_eur = EXCLUDED.price_eur,
+  price_bgn = EXCLUDED.price_bgn,
+  updated_at = NOW();
 INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_category_name, price_eur, price_bgn, unit, crops, active_substance, formulation, quarantine, babh_reg, badge, image_url, description, dose, rating, reviews_count, in_stock, rates, pack_sizes) VALUES (
   'limonena-kiselina-hranitelna',
   'Лимонена Киселина Хранителна',
@@ -6097,4 +7016,8 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   TRUE,
   '[{"val":100,"label":"Препоръчителна доза: 50-100 г за 100 л"}]'::jsonb,
   '[{"label":"500 г","price":2.9,"unit":"€ 2.90 / 500 г","default":true}]'::jsonb
-);
+) ON CONFLICT (id) DO UPDATE SET
+  name = EXCLUDED.name,
+  price_eur = EXCLUDED.price_eur,
+  price_bgn = EXCLUDED.price_bgn,
+  updated_at = NOW();

@@ -3,6 +3,44 @@ const path = require('path');
 
 const products = JSON.parse(fs.readFileSync(path.join(__dirname, '../products.json'), 'utf8'));
 
+// Extract all unique categories
+const categoriesMap = {
+  'fungicides': { name: 'Фунгициди', icon: 'shield', display_order: 1 },
+  'insecticides': { name: 'Инсектициди & Акарициди', icon: 'bug', display_order: 2 },
+  'herbicides': { name: 'Хербициди', icon: 'scissors', display_order: 3 },
+  'biocides': { name: 'Биоциди & ДДД Препарати', icon: 'shield-alert', display_order: 4 },
+  'fertilizers': { name: 'Торове & Биостимулатори', icon: 'sprout', display_order: 5 },
+  'seeds': { name: 'Зеленчукови & Цветни Семена', icon: 'flower', display_order: 6 },
+  'wine': { name: 'Вино & Ракия (Енология)', icon: 'wine', display_order: 7 }
+};
+
+// Brand dictionary with pretty names and countries
+const brandInfo = {
+  'bayer': { name: 'Bayer Crop Science AG', country: 'Германия' },
+  'syngenta': { name: 'Syngenta AG', country: 'Швейцария' },
+  'basf': { name: 'BASF SE', country: 'Германия' },
+  'corteva': { name: 'Corteva Agriscience', country: 'САЩ' },
+  'nippon': { name: 'Nippon Soda / Nissan', country: 'Япония' },
+  'manica': { name: 'Manica SpA / Агрия / Enartis', country: 'Италия / България' },
+  'adama': { name: 'ADAMA Solutions', country: 'Израел' },
+  'yara': { name: 'Yara International', country: 'Норвегия' },
+  'aglukon': { name: 'Aglukon Spezialdünger (Wuxal)', country: 'Германия' },
+  'valagro': { name: 'Valagro / Bioiberica', country: 'Италия / Испания' },
+  'amitica': { name: 'Амитица / Био', country: 'България' },
+  'sortovi': { name: 'Сортови Семена', country: 'България' },
+  'lalvin': { name: 'Lallemand (Lalvin)', country: 'Канада / Франция' }
+};
+
+// Also detect any extra brand from products
+products.forEach(p => {
+  if (p.brand && !brandInfo[p.brand]) {
+    brandInfo[p.brand] = { name: p.brandName || p.brand, country: 'България / Внос' };
+  }
+  if (p.category && !categoriesMap[p.category]) {
+    categoriesMap[p.category] = { name: p.categoryName || p.category, icon: 'package', display_order: 99 };
+  }
+});
+
 let sql = `-- =====================================================================
 -- AGRO DEMETRA — Supabase (PostgreSQL) Master Database Schema & 230 Seed Products
 -- Ready to run directly in Supabase SQL Editor: https://app.supabase.com
@@ -96,32 +134,7 @@ CREATE POLICY "Public read products" ON products FOR SELECT USING (true);
 CREATE POLICY "Public create orders" ON orders FOR INSERT WITH CHECK (true);
 
 -- =====================================================================
--- 8. SEED DATA: CATEGORIES & BRANDS
--- =====================================================================
-INSERT INTO categories (id, name, icon, display_order) VALUES
-('fungicides', 'Фунгициди', 'shield', 1),
-('insecticides', 'Инсектициди & Акарициди', 'bug', 2),
-('herbicides', 'Хербициди', 'scissors', 3),
-('biocides', 'Биоциди & ДДД Препарати', 'shield-alert', 4),
-('fertilizers', 'Торове & Биостимулатори', 'sprout', 5),
-('seeds', 'Зеленчукови & Цветни Семена', 'flower', 6),
-('wine', 'Вино & Ракия (Енология)', 'wine', 7);
-
-INSERT INTO brands (id, name, country) VALUES
-('bayer', 'Bayer Crop Science AG', 'Германия'),
-('syngenta', 'Syngenta AG', 'Швейцария'),
-('basf', 'BASF SE', 'Германия'),
-('corteva', 'Corteva Agriscience', 'САЩ'),
-('nippon', 'Nippon Soda', 'Япония'),
-('manica', 'Manica SpA / Агрия', 'Италия / България'),
-('adama', 'ADAMA Solutions', 'Израел'),
-('yara', 'Yara International', 'Норвегия'),
-('amitica', 'Амитица / Био', 'България'),
-('sortovi', 'Сортови Семена', 'България'),
-('lalvin', 'Lallemand (Lalvin)', 'Канада / Франция');
-
--- =====================================================================
--- 9. SEED DATA: 230 REAL REGISTERED PRODUCTS
+-- 8. SEED DATA: CATEGORIES
 -- =====================================================================
 `;
 
@@ -141,6 +154,22 @@ function escJson(obj) {
   if (!obj) return "'[]'::jsonb";
   return esc(JSON.stringify(obj)) + '::jsonb';
 }
+
+// Categories insert
+Object.keys(categoriesMap).forEach(catId => {
+  const cat = categoriesMap[catId];
+  sql += `INSERT INTO categories (id, name, icon, display_order) VALUES (${esc(catId)}, ${esc(cat.name)}, ${esc(cat.icon)}, ${cat.display_order}) ON CONFLICT (id) DO NOTHING;\n`;
+});
+
+sql += `\n-- =====================================================================\n-- 9. SEED DATA: BRANDS (ALL 13 BRANDS INCLUDED)\n-- =====================================================================\n`;
+
+// Brands insert
+Object.keys(brandInfo).forEach(brandId => {
+  const b = brandInfo[brandId];
+  sql += `INSERT INTO brands (id, name, country) VALUES (${esc(brandId)}, ${esc(b.name)}, ${esc(b.country)}) ON CONFLICT (id) DO NOTHING;\n`;
+});
+
+sql += `\n-- =====================================================================\n-- 10. SEED DATA: 230 REAL REGISTERED PRODUCTS\n-- =====================================================================\n`;
 
 const productInserts = products.map(p => {
   return `INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_category_name, price_eur, price_bgn, unit, crops, active_substance, formulation, quarantine, babh_reg, badge, image_url, description, dose, rating, reviews_count, in_stock, rates, pack_sizes) VALUES (
@@ -168,11 +197,15 @@ const productInserts = products.map(p => {
   ${p.inStock !== false ? 'TRUE' : 'FALSE'},
   ${escJson(p.rates)},
   ${escJson(p.packSizes)}
-);`;
+) ON CONFLICT (id) DO UPDATE SET
+  name = EXCLUDED.name,
+  price_eur = EXCLUDED.price_eur,
+  price_bgn = EXCLUDED.price_bgn,
+  updated_at = NOW();`;
 }).join('\n');
 
 sql += productInserts + '\n';
 
 const outPath = path.join(__dirname, '../supabase-schema-and-data.sql');
 fs.writeFileSync(outPath, sql, 'utf8');
-console.log(`Successfully generated ${outPath} (${(sql.length / 1024).toFixed(1)} KB)`);
+console.log(`Successfully generated ${outPath} (${(sql.length / 1024).toFixed(1)} KB) with all brands!`);
