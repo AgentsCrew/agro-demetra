@@ -11,8 +11,7 @@ window.AGRO_PRODUCTS = [
     "title": "Луна Кеър ВГ – Флуопирам",
     "category": "fungicides",
     "categoryName": "Фунгициди",
-    "price": 69.9,
-    "bgnPrice": 136.71,
+    "price": 66.41,
     "unit": "1 кг",
     "brand": "bayer",
     "brandName": "Bayer Crop Science AG",
@@ -27,7 +26,7 @@ window.AGRO_PRODUCTS = [
     "formulation": "ВГ",
     "quarantine": "14 дни",
     "reg": "БАБХ: № 01100-ПРЗ",
-    "badge": "Промо -10%",
+    "badge": "Промо -5%",
     "image": "/images/products/sachet-wg.jpg",
     "desc": "Системен фунгицид за контрол на брашнеста мана (оидиум) и струпясване.",
     "dose": "200-250 г/дка",
@@ -40,8 +39,8 @@ window.AGRO_PRODUCTS = [
     "packSizes": [
       {
         "label": "1 кг",
-        "price": 69.9,
-        "unit": "€ 69.90 / 1 кг",
+        "price": 66.41,
+        "unit": "€ 66.41 / 1 кг",
         "default": true
       }
     ],
@@ -55,8 +54,7 @@ window.AGRO_PRODUCTS = [
     "title": "Луна Експириънс СК – Флуопирам",
     "category": "fungicides",
     "categoryName": "Фунгициди",
-    "price": 74.5,
-    "bgnPrice": 145.71,
+    "price": 70.77,
     "unit": "1 л",
     "brand": "bayer",
     "brandName": "Bayer Crop Science AG",
@@ -85,8 +83,8 @@ window.AGRO_PRODUCTS = [
     "packSizes": [
       {
         "label": "1 л",
-        "price": 74.5,
-        "unit": "€ 74.50 / 1 л",
+        "price": 70.77,
+        "unit": "€ 70.77 / 1 л",
         "default": true
       }
     ],
@@ -100,8 +98,7 @@ window.AGRO_PRODUCTS = [
     "title": "Скор 250 ЕК – Дифеноконазол",
     "category": "fungicides",
     "categoryName": "Фунгициди",
-    "price": 5.6,
-    "bgnPrice": 10.95,
+    "price": 5.32,
     "unit": "20 мл",
     "brand": "syngenta",
     "brandName": "Syngenta AG",
@@ -130,8 +127,8 @@ window.AGRO_PRODUCTS = [
     "packSizes": [
       {
         "label": "20 мл",
-        "price": 5.6,
-        "unit": "€ 5.60 / 20 мл",
+        "price": 5.32,
+        "unit": "€ 5.32 / 20 мл",
         "default": true
       }
     ],
@@ -145,8 +142,7 @@ window.AGRO_PRODUCTS = [
     "title": "Топаз 100 ЕК – Пенконазол",
     "category": "fungicides",
     "categoryName": "Фунгициди",
-    "price": 3.8,
-    "bgnPrice": 7.43,
+    "price": 3.61,
     "unit": "10 мл",
     "brand": "syngenta",
     "brandName": "Syngenta AG",
@@ -175,8 +171,8 @@ window.AGRO_PRODUCTS = [
     "packSizes": [
       {
         "label": "10 мл",
-        "price": 3.8,
-        "unit": "€ 3.80 / 10 мл",
+        "price": 3.61,
+        "unit": "€ 3.61 / 10 мл",
         "default": true
       }
     ],
@@ -190,8 +186,7 @@ window.AGRO_PRODUCTS = [
     "title": "Шавит Ф 72 ВДГ – Фолпет",
     "category": "fungicides",
     "categoryName": "Фунгициди",
-    "price": 18.4,
-    "bgnPrice": 35.99,
+    "price": 17.48,
     "unit": "1 кг",
     "brand": "adama",
     "brandName": "ADAMA Agricultural Solutions",
@@ -219,8 +214,8 @@ window.AGRO_PRODUCTS = [
     "packSizes": [
       {
         "label": "1 кг",
-        "price": 18.4,
-        "unit": "€ 18.40 / 1 кг",
+        "price": 17.48,
+        "unit": "€ 17.48 / 1 кг",
         "default": true
       }
     ],
@@ -234,8 +229,7 @@ window.AGRO_PRODUCTS = [
     "title": "Ридомил Голд Р ВГ – Мефеноксам",
     "category": "fungicides",
     "categoryName": "Фунгициди",
-    "price": 38.5,
-    "bgnPrice": 75.3,
+    "price": 36.57,
     "unit": "1 кг",
     "brand": "syngenta",
     "brandName": "Syngenta AG",
@@ -264,8 +258,8 @@ window.AGRO_PRODUCTS = [
     "packSizes": [
       {
         "label": "1 кг",
-        "price": 38.5,
-        "unit": "€ 38.50 / 1 кг",
+        "price": 36.57,
+        "unit": "€ 36.57 / 1 кг",
         "default": true
       }
     ],
@@ -279,8 +273,7 @@ window.AGRO_PRODUCTS = [
     "title": "Куадрис 25 СК – Азоксистробин",
     "category": "fungicides",
     "categoryName": "Фунгициди",
-    "price": 48,
-    "bgnPrice": 93.88,
+    "price": 45.6,
     "unit": "1 л",
     "brand": "syngenta",
     "brandName": "Syngenta AG",
@@ -309,8 +302,8 @@ window.AGRO_PRODUCTS = [
     "packSizes": [
       {
         "label": "1 л",
-        "price": 48,
-        "unit": "€ 48.00 / 1 л",
+        "price": 45.6,
+        "unit": "€ 45.60 / 1 л",
         "default": true
       }
     ],
@@ -324,8 +317,7 @@ window.AGRO_PRODUCTS = [
     "title": "Бордолезов разтвор 20 ВП – Меден сулфат неутрализиран",
     "category": "fungicides",
     "categoryName": "Фунгициди",
-    "price": 8.2,
-    "bgnPrice": 16.04,
+    "price": 7.79,
     "unit": "1 кг",
     "brand": "manica",
     "brandName": "Manica SpA (Италия)",
@@ -354,8 +346,8 @@ window.AGRO_PRODUCTS = [
     "packSizes": [
       {
         "label": "1 кг",
-        "price": 8.2,
-        "unit": "€ 8.20 / 1 кг",
+        "price": 7.79,
+        "unit": "€ 7.79 / 1 кг",
         "default": true
       }
     ],
@@ -369,8 +361,7 @@ window.AGRO_PRODUCTS = [
     "title": "Дитан М-45 ВП – Манкозеб",
     "category": "fungicides",
     "categoryName": "Фунгициди",
-    "price": 13.5,
-    "bgnPrice": 26.4,
+    "price": 12.82,
     "unit": "1 кг",
     "brand": "corteva",
     "brandName": "Corteva Agriscience",
@@ -399,8 +390,8 @@ window.AGRO_PRODUCTS = [
     "packSizes": [
       {
         "label": "1 кг",
-        "price": 13.5,
-        "unit": "€ 13.50 / 1 кг",
+        "price": 12.82,
+        "unit": "€ 12.82 / 1 кг",
         "default": true
       }
     ],
@@ -414,8 +405,7 @@ window.AGRO_PRODUCTS = [
     "title": "Кабрио Топ ВГ – Метирам",
     "category": "fungicides",
     "categoryName": "Фунгициди",
-    "price": 49.9,
-    "bgnPrice": 97.6,
+    "price": 47.4,
     "unit": "1 кг",
     "brand": "basf",
     "brandName": "BASF SE",
@@ -443,8 +433,8 @@ window.AGRO_PRODUCTS = [
     "packSizes": [
       {
         "label": "1 кг",
-        "price": 49.9,
-        "unit": "€ 49.90 / 1 кг",
+        "price": 47.4,
+        "unit": "€ 47.40 / 1 кг",
         "default": true
       }
     ],
@@ -458,8 +448,7 @@ window.AGRO_PRODUCTS = [
     "title": "Флинт Макс 75 ВГ – Трифлоксистробин",
     "category": "fungicides",
     "categoryName": "Фунгициди",
-    "price": 36.5,
-    "bgnPrice": 71.39,
+    "price": 34.67,
     "unit": "500 г",
     "brand": "bayer",
     "brandName": "Bayer Crop Science AG",
@@ -487,8 +476,8 @@ window.AGRO_PRODUCTS = [
     "packSizes": [
       {
         "label": "500 г",
-        "price": 36.5,
-        "unit": "€ 36.50 / 500 г",
+        "price": 34.67,
+        "unit": "€ 34.67 / 500 г",
         "default": true
       }
     ],
@@ -502,8 +491,7 @@ window.AGRO_PRODUCTS = [
     "title": "Серкадис СК – Флуксапироксад",
     "category": "fungicides",
     "categoryName": "Фунгициди",
-    "price": 88,
-    "bgnPrice": 172.11,
+    "price": 83.6,
     "unit": "1 л",
     "brand": "basf",
     "brandName": "BASF SE",
@@ -518,7 +506,7 @@ window.AGRO_PRODUCTS = [
     "formulation": "СК",
     "quarantine": "35 дни",
     "reg": "БАБХ: № 01177-ПРЗ",
-    "badge": "Промо -10%",
+    "badge": "Промо -5%",
     "image": "/images/products/bottle-1l.jpg",
     "desc": "SDHI иновация с пълна мобилност в тъканите срещу струпясване.",
     "dose": "25-30 мл/дка",
@@ -531,8 +519,8 @@ window.AGRO_PRODUCTS = [
     "packSizes": [
       {
         "label": "1 л",
-        "price": 88,
-        "unit": "€ 88.00 / 1 л",
+        "price": 83.6,
+        "unit": "€ 83.60 / 1 л",
         "default": true
       }
     ],
@@ -546,8 +534,7 @@ window.AGRO_PRODUCTS = [
     "title": "Белис ВГ – Боскалид",
     "category": "fungicides",
     "categoryName": "Фунгициди",
-    "price": 64,
-    "bgnPrice": 125.17,
+    "price": 60.8,
     "unit": "1 кг",
     "brand": "basf",
     "brandName": "BASF SE",
@@ -574,8 +561,8 @@ window.AGRO_PRODUCTS = [
     "packSizes": [
       {
         "label": "1 кг",
-        "price": 64,
-        "unit": "€ 64.00 / 1 кг",
+        "price": 60.8,
+        "unit": "€ 60.80 / 1 кг",
         "default": true
       }
     ],
@@ -589,8 +576,7 @@ window.AGRO_PRODUCTS = [
     "title": "Инфинито СК – Флуопиколид",
     "category": "fungicides",
     "categoryName": "Фунгициди",
-    "price": 43.5,
-    "bgnPrice": 85.08,
+    "price": 41.32,
     "unit": "1 л",
     "brand": "bayer",
     "brandName": "Bayer Crop Science AG",
@@ -618,8 +604,8 @@ window.AGRO_PRODUCTS = [
     "packSizes": [
       {
         "label": "1 л",
-        "price": 43.5,
-        "unit": "€ 43.50 / 1 л",
+        "price": 41.32,
+        "unit": "€ 41.32 / 1 л",
         "default": true
       }
     ],
@@ -633,8 +619,7 @@ window.AGRO_PRODUCTS = [
     "title": "Ревус 250 СК – Мандипропамид",
     "category": "fungicides",
     "categoryName": "Фунгициди",
-    "price": 52,
-    "bgnPrice": 101.7,
+    "price": 49.4,
     "unit": "1 л",
     "brand": "syngenta",
     "brandName": "Syngenta AG",
@@ -663,8 +648,8 @@ window.AGRO_PRODUCTS = [
     "packSizes": [
       {
         "label": "1 л",
-        "price": 52,
-        "unit": "€ 52.00 / 1 л",
+        "price": 49.4,
+        "unit": "€ 49.40 / 1 л",
         "default": true
       }
     ],
@@ -678,8 +663,7 @@ window.AGRO_PRODUCTS = [
     "title": "Косайд 2000 ВГ – Меден хидроксид",
     "category": "fungicides",
     "categoryName": "Фунгициди",
-    "price": 24.8,
-    "bgnPrice": 48.5,
+    "price": 23.56,
     "unit": "1 кг",
     "brand": "corteva",
     "brandName": "Corteva Agriscience",
@@ -708,8 +692,8 @@ window.AGRO_PRODUCTS = [
     "packSizes": [
       {
         "label": "1 кг",
-        "price": 24.8,
-        "unit": "€ 24.80 / 1 кг",
+        "price": 23.56,
+        "unit": "€ 23.56 / 1 кг",
         "default": true
       }
     ],
@@ -723,8 +707,7 @@ window.AGRO_PRODUCTS = [
     "title": "Фунгуран ОН 50 ВП – Меден хидроксид",
     "category": "fungicides",
     "categoryName": "Фунгициди",
-    "price": 19.9,
-    "bgnPrice": 38.92,
+    "price": 18.9,
     "unit": "1 кг",
     "brand": "manica",
     "brandName": "Spiess Urania",
@@ -753,8 +736,8 @@ window.AGRO_PRODUCTS = [
     "packSizes": [
       {
         "label": "1 кг",
-        "price": 19.9,
-        "unit": "€ 19.90 / 1 кг",
+        "price": 18.9,
+        "unit": "€ 18.90 / 1 кг",
         "default": true
       }
     ],
@@ -768,8 +751,7 @@ window.AGRO_PRODUCTS = [
     "title": "Шампион 50 ВП – Меден хидроксид",
     "category": "fungicides",
     "categoryName": "Фунгициди",
-    "price": 18.2,
-    "bgnPrice": 35.6,
+    "price": 17.29,
     "unit": "1 кг",
     "brand": "manica",
     "brandName": "Nufarm",
@@ -798,8 +780,8 @@ window.AGRO_PRODUCTS = [
     "packSizes": [
       {
         "label": "1 кг",
-        "price": 18.2,
-        "unit": "€ 18.20 / 1 кг",
+        "price": 17.29,
+        "unit": "€ 17.29 / 1 кг",
         "default": true
       }
     ],
@@ -813,8 +795,7 @@ window.AGRO_PRODUCTS = [
     "title": "Витисан БИО – Калиев хидроген карбонат",
     "category": "fungicides",
     "categoryName": "Фунгициди",
-    "price": 11.9,
-    "bgnPrice": 23.27,
+    "price": 11.3,
     "unit": "1 кг",
     "brand": "amitica",
     "brandName": "Andermatt Biocontrol",
@@ -843,8 +824,8 @@ window.AGRO_PRODUCTS = [
     "packSizes": [
       {
         "label": "1 кг",
-        "price": 11.9,
-        "unit": "€ 11.90 / 1 кг",
+        "price": 11.3,
+        "unit": "€ 11.30 / 1 кг",
         "default": true
       }
     ],
@@ -858,8 +839,7 @@ window.AGRO_PRODUCTS = [
     "title": "Мелоди Компакт 49 ВГ – Ипроваликарб",
     "category": "fungicides",
     "categoryName": "Фунгициди",
-    "price": 28.5,
-    "bgnPrice": 55.74,
+    "price": 27.07,
     "unit": "1 кг",
     "brand": "bayer",
     "brandName": "Bayer Crop Science AG",
@@ -887,8 +867,8 @@ window.AGRO_PRODUCTS = [
     "packSizes": [
       {
         "label": "1 кг",
-        "price": 28.5,
-        "unit": "€ 28.50 / 1 кг",
+        "price": 27.07,
+        "unit": "€ 27.07 / 1 кг",
         "default": true
       }
     ],
@@ -902,8 +882,7 @@ window.AGRO_PRODUCTS = [
     "title": "Кантус ВГ – Боскалид",
     "category": "fungicides",
     "categoryName": "Фунгициди",
-    "price": 72,
-    "bgnPrice": 140.82,
+    "price": 68.4,
     "unit": "1 кг",
     "brand": "basf",
     "brandName": "BASF SE",
@@ -930,8 +909,8 @@ window.AGRO_PRODUCTS = [
     "packSizes": [
       {
         "label": "1 кг",
-        "price": 72,
-        "unit": "€ 72.00 / 1 кг",
+        "price": 68.4,
+        "unit": "€ 68.40 / 1 кг",
         "default": true
       }
     ],
@@ -945,8 +924,7 @@ window.AGRO_PRODUCTS = [
     "title": "Скала СК – Пириметанил",
     "category": "fungicides",
     "categoryName": "Фунгициди",
-    "price": 54,
-    "bgnPrice": 105.61,
+    "price": 51.3,
     "unit": "1 л",
     "brand": "basf",
     "brandName": "BASF SE",
@@ -974,8 +952,8 @@ window.AGRO_PRODUCTS = [
     "packSizes": [
       {
         "label": "1 л",
-        "price": 54,
-        "unit": "€ 54.00 / 1 л",
+        "price": 51.3,
+        "unit": "€ 51.30 / 1 л",
         "default": true
       }
     ],
@@ -989,8 +967,7 @@ window.AGRO_PRODUCTS = [
     "title": "Пролектус 50 ВГ – Фенпиразамин",
     "category": "fungicides",
     "categoryName": "Фунгициди",
-    "price": 39,
-    "bgnPrice": 76.28,
+    "price": 37.05,
     "unit": "500 г",
     "brand": "syngenta",
     "brandName": "Kenogard",
@@ -1006,7 +983,7 @@ window.AGRO_PRODUCTS = [
     "formulation": "ВГ",
     "quarantine": "1 ден",
     "reg": "БАБХ: № 01254-ПРЗ",
-    "badge": "Промо -10%",
+    "badge": "Промо -5%",
     "image": "/images/products/sachet-wg.jpg",
     "desc": "Ултра кратка карантина от 1 ден при праскови и домати срещу монилиоза.",
     "dose": "80-120 г/дка",
@@ -1019,8 +996,8 @@ window.AGRO_PRODUCTS = [
     "packSizes": [
       {
         "label": "500 г",
-        "price": 39,
-        "unit": "€ 39.00 / 500 г",
+        "price": 37.05,
+        "unit": "€ 37.05 / 500 г",
         "default": true
       }
     ],
@@ -1034,8 +1011,7 @@ window.AGRO_PRODUCTS = [
     "title": "Систан Екозом ЕВ – Миклобутанил",
     "category": "fungicides",
     "categoryName": "Фунгициди",
-    "price": 8.5,
-    "bgnPrice": 16.62,
+    "price": 8.07,
     "unit": "50 мл",
     "brand": "corteva",
     "brandName": "Corteva Agriscience",
@@ -1064,8 +1040,8 @@ window.AGRO_PRODUCTS = [
     "packSizes": [
       {
         "label": "50 мл",
-        "price": 8.5,
-        "unit": "€ 8.50 / 50 мл",
+        "price": 8.07,
+        "unit": "€ 8.07 / 50 мл",
         "default": true
       }
     ],
@@ -1079,8 +1055,7 @@ window.AGRO_PRODUCTS = [
     "title": "Суич 62.5 ВГ – Ципродинил",
     "category": "fungicides",
     "categoryName": "Фунгициди",
-    "price": 16.9,
-    "bgnPrice": 33.05,
+    "price": 16.05,
     "unit": "100 г",
     "brand": "syngenta",
     "brandName": "Syngenta AG",
@@ -1109,8 +1084,8 @@ window.AGRO_PRODUCTS = [
     "packSizes": [
       {
         "label": "100 г",
-        "price": 16.9,
-        "unit": "€ 16.90 / 100 г",
+        "price": 16.05,
+        "unit": "€ 16.05 / 100 г",
         "default": true
       }
     ],
@@ -1124,8 +1099,7 @@ window.AGRO_PRODUCTS = [
     "title": "Пропулс 250 СЕ – Флуопирам",
     "category": "fungicides",
     "categoryName": "Фунгициди",
-    "price": 58,
-    "bgnPrice": 113.44,
+    "price": 55.1,
     "unit": "1 л",
     "brand": "bayer",
     "brandName": "Bayer Crop Science AG",
@@ -1152,8 +1126,8 @@ window.AGRO_PRODUCTS = [
     "packSizes": [
       {
         "label": "1 л",
-        "price": 58,
-        "unit": "€ 58.00 / 1 л",
+        "price": 55.1,
+        "unit": "€ 55.10 / 1 л",
         "default": true
       }
     ],
@@ -1167,8 +1141,7 @@ window.AGRO_PRODUCTS = [
     "title": "Тебумакс 250 ЕВ – Тебуконазол",
     "category": "fungicides",
     "categoryName": "Фунгициди",
-    "price": 24.5,
-    "bgnPrice": 47.92,
+    "price": 23.27,
     "unit": "1 л",
     "brand": "manica",
     "brandName": "Агрия АД",
@@ -1197,8 +1170,8 @@ window.AGRO_PRODUCTS = [
     "packSizes": [
       {
         "label": "1 л",
-        "price": 24.5,
-        "unit": "€ 24.50 / 1 л",
+        "price": 23.27,
+        "unit": "€ 23.27 / 1 л",
         "default": true
       }
     ],
@@ -1212,8 +1185,7 @@ window.AGRO_PRODUCTS = [
     "title": "Фоликур 250 ЕВ – Тебуконазол",
     "category": "fungicides",
     "categoryName": "Фунгициди",
-    "price": 32,
-    "bgnPrice": 62.59,
+    "price": 30.4,
     "unit": "1 л",
     "brand": "bayer",
     "brandName": "Bayer Crop Science AG",
@@ -1241,8 +1213,8 @@ window.AGRO_PRODUCTS = [
     "packSizes": [
       {
         "label": "1 л",
-        "price": 32,
-        "unit": "€ 32.00 / 1 л",
+        "price": 30.4,
+        "unit": "€ 30.40 / 1 л",
         "default": true
       }
     ],
@@ -1256,8 +1228,7 @@ window.AGRO_PRODUCTS = [
     "title": "Полирам ДФ – Метирам",
     "category": "fungicides",
     "categoryName": "Фунгициди",
-    "price": 15.6,
-    "bgnPrice": 30.51,
+    "price": 14.82,
     "unit": "1 кг",
     "brand": "basf",
     "brandName": "BASF SE",
@@ -1286,8 +1257,8 @@ window.AGRO_PRODUCTS = [
     "packSizes": [
       {
         "label": "1 кг",
-        "price": 15.6,
-        "unit": "€ 15.60 / 1 кг",
+        "price": 14.82,
+        "unit": "€ 14.82 / 1 кг",
         "default": true
       }
     ],
@@ -1301,8 +1272,7 @@ window.AGRO_PRODUCTS = [
     "title": "Тиовит Джет 80 ВГ – Микронизирана сяра",
     "category": "fungicides",
     "categoryName": "Фунгициди",
-    "price": 4.5,
-    "bgnPrice": 8.8,
+    "price": 4.27,
     "unit": "1 кг",
     "brand": "syngenta",
     "brandName": "Syngenta AG",
@@ -1331,8 +1301,8 @@ window.AGRO_PRODUCTS = [
     "packSizes": [
       {
         "label": "1 кг",
-        "price": 4.5,
-        "unit": "€ 4.50 / 1 кг",
+        "price": 4.27,
+        "unit": "€ 4.27 / 1 кг",
         "default": true
       }
     ],
@@ -1346,8 +1316,7 @@ window.AGRO_PRODUCTS = [
     "title": "Кумулус ДФ – Колоидна сяра",
     "category": "fungicides",
     "categoryName": "Фунгициди",
-    "price": 4.6,
-    "bgnPrice": 9,
+    "price": 4.37,
     "unit": "1 кг",
     "brand": "basf",
     "brandName": "BASF SE",
@@ -1375,8 +1344,8 @@ window.AGRO_PRODUCTS = [
     "packSizes": [
       {
         "label": "1 кг",
-        "price": 4.6,
-        "unit": "€ 4.60 / 1 кг",
+        "price": 4.37,
+        "unit": "€ 4.37 / 1 кг",
         "default": true
       }
     ],
@@ -1390,8 +1359,7 @@ window.AGRO_PRODUCTS = [
     "title": "Купроцин МЗ – Меден оксихлорид",
     "category": "fungicides",
     "categoryName": "Фунгициди",
-    "price": 14.2,
-    "bgnPrice": 27.77,
+    "price": 13.49,
     "unit": "1 кг",
     "brand": "manica",
     "brandName": "Агрия АД",
@@ -1420,8 +1388,8 @@ window.AGRO_PRODUCTS = [
     "packSizes": [
       {
         "label": "1 кг",
-        "price": 14.2,
-        "unit": "€ 14.20 / 1 кг",
+        "price": 13.49,
+        "unit": "€ 13.49 / 1 кг",
         "default": true
       }
     ],
@@ -1435,8 +1403,7 @@ window.AGRO_PRODUCTS = [
     "title": "Телдор 500 СК – Фенхексамид",
     "category": "fungicides",
     "categoryName": "Фунгициди",
-    "price": 14.8,
-    "bgnPrice": 28.95,
+    "price": 14.06,
     "unit": "100 мл",
     "brand": "bayer",
     "brandName": "Bayer Crop Science AG",
@@ -1465,8 +1432,8 @@ window.AGRO_PRODUCTS = [
     "packSizes": [
       {
         "label": "100 мл",
-        "price": 14.8,
-        "unit": "€ 14.80 / 100 мл",
+        "price": 14.06,
+        "unit": "€ 14.06 / 100 мл",
         "default": true
       }
     ],
@@ -1480,8 +1447,7 @@ window.AGRO_PRODUCTS = [
     "title": "Фолпан 80 ВДГ – Фолпет",
     "category": "fungicides",
     "categoryName": "Фунгициди",
-    "price": 19.5,
-    "bgnPrice": 38.14,
+    "price": 18.52,
     "unit": "1 кг",
     "brand": "adama",
     "brandName": "ADAMA Agricultural Solutions",
@@ -1496,7 +1462,7 @@ window.AGRO_PRODUCTS = [
     "formulation": "ВДГ",
     "quarantine": "20 дни",
     "reg": "БАБХ: № 01331-ПРЗ",
-    "badge": "Промо -10%",
+    "badge": "Промо -5%",
     "image": "/images/products/sachet-wg.jpg",
     "desc": "Мултисайт контактен фунгицид, към който патогените нямат резистентност.",
     "dose": "150 г/дка",
@@ -1509,8 +1475,8 @@ window.AGRO_PRODUCTS = [
     "packSizes": [
       {
         "label": "1 кг",
-        "price": 19.5,
-        "unit": "€ 19.50 / 1 кг",
+        "price": 18.52,
+        "unit": "€ 18.52 / 1 кг",
         "default": true
       }
     ],
@@ -1524,8 +1490,7 @@ window.AGRO_PRODUCTS = [
     "title": "Курзат М ВГ – Цимоксанил",
     "category": "fungicides",
     "categoryName": "Фунгициди",
-    "price": 21,
-    "bgnPrice": 41.07,
+    "price": 19.95,
     "unit": "1 кг",
     "brand": "corteva",
     "brandName": "Corteva Agriscience",
@@ -1554,8 +1519,8 @@ window.AGRO_PRODUCTS = [
     "packSizes": [
       {
         "label": "1 кг",
-        "price": 21,
-        "unit": "€ 21.00 / 1 кг",
+        "price": 19.95,
+        "unit": "€ 19.95 / 1 кг",
         "default": true
       }
     ],
@@ -1569,8 +1534,7 @@ window.AGRO_PRODUCTS = [
     "title": "Ортива Топ СК – Азоксистробин",
     "category": "fungicides",
     "categoryName": "Фунгициди",
-    "price": 59,
-    "bgnPrice": 115.39,
+    "price": 56.05,
     "unit": "1 л",
     "brand": "syngenta",
     "brandName": "Syngenta AG",
@@ -1599,8 +1563,8 @@ window.AGRO_PRODUCTS = [
     "packSizes": [
       {
         "label": "1 л",
-        "price": 59,
-        "unit": "€ 59.00 / 1 л",
+        "price": 56.05,
+        "unit": "€ 56.05 / 1 л",
         "default": true
       }
     ],
@@ -1614,8 +1578,7 @@ window.AGRO_PRODUCTS = [
     "title": "Делан Про СК – Дитианон",
     "category": "fungicides",
     "categoryName": "Фунгициди",
-    "price": 34,
-    "bgnPrice": 66.5,
+    "price": 32.3,
     "unit": "1 л",
     "brand": "basf",
     "brandName": "BASF SE",
@@ -1642,8 +1605,8 @@ window.AGRO_PRODUCTS = [
     "packSizes": [
       {
         "label": "1 л",
-        "price": 34,
-        "unit": "€ 34.00 / 1 л",
+        "price": 32.3,
+        "unit": "€ 32.30 / 1 л",
         "default": true
       }
     ],
@@ -1657,8 +1620,7 @@ window.AGRO_PRODUCTS = [
     "title": "Фосифит ЕКО – Калиев фосфит",
     "category": "fungicides",
     "categoryName": "Фунгициди",
-    "price": 12.8,
-    "bgnPrice": 25.03,
+    "price": 12.16,
     "unit": "1 л",
     "brand": "amitica",
     "brandName": "Амитица",
@@ -1686,8 +1648,8 @@ window.AGRO_PRODUCTS = [
     "packSizes": [
       {
         "label": "1 л",
-        "price": 12.8,
-        "unit": "€ 12.80 / 1 л",
+        "price": 12.16,
+        "unit": "€ 12.16 / 1 л",
         "default": true
       }
     ],
@@ -1701,8 +1663,7 @@ window.AGRO_PRODUCTS = [
     "title": "Моспилан 20 СП – Ацетамиприд",
     "category": "insecticides",
     "categoryName": "Инсектициди",
-    "price": 3.2,
-    "bgnPrice": 6.26,
+    "price": 3.04,
     "unit": "50 г",
     "brand": "nippon",
     "brandName": "Nippon Soda / Sumi Agro",
@@ -1732,8 +1693,8 @@ window.AGRO_PRODUCTS = [
     "packSizes": [
       {
         "label": "50 г",
-        "price": 3.2,
-        "unit": "€ 3.20 / 50 г",
+        "price": 3.04,
+        "unit": "€ 3.04 / 50 г",
         "default": true
       }
     ],
@@ -1747,8 +1708,7 @@ window.AGRO_PRODUCTS = [
     "title": "Децис 100 ЕК – Делтаметрин",
     "category": "insecticides",
     "categoryName": "Инсектициди",
-    "price": 4.2,
-    "bgnPrice": 8.21,
+    "price": 3.99,
     "unit": "50 мл",
     "brand": "bayer",
     "brandName": "Bayer Crop Science AG",
@@ -1778,8 +1738,8 @@ window.AGRO_PRODUCTS = [
     "packSizes": [
       {
         "label": "50 мл",
-        "price": 4.2,
-        "unit": "€ 4.20 / 50 мл",
+        "price": 3.99,
+        "unit": "€ 3.99 / 50 мл",
         "default": true
       }
     ],
@@ -1793,8 +1753,7 @@ window.AGRO_PRODUCTS = [
     "title": "Кораген 20 СК – Хлорантранилипрол",
     "category": "insecticides",
     "categoryName": "Инсектициди",
-    "price": 9.9,
-    "bgnPrice": 19.36,
+    "price": 9.4,
     "unit": "50 мл",
     "brand": "corteva",
     "brandName": "FMC OpenAg",
@@ -1824,8 +1783,8 @@ window.AGRO_PRODUCTS = [
     "packSizes": [
       {
         "label": "50 мл",
-        "price": 9.9,
-        "unit": "€ 9.90 / 50 мл",
+        "price": 9.4,
+        "unit": "€ 9.40 / 50 мл",
         "default": true
       }
     ],
@@ -1839,8 +1798,7 @@ window.AGRO_PRODUCTS = [
     "title": "Карате Зеон 5 КС – Ламбда-цихалотрин",
     "category": "insecticides",
     "categoryName": "Инсектициди",
-    "price": 3.5,
-    "bgnPrice": 6.85,
+    "price": 3.32,
     "unit": "50 мл",
     "brand": "syngenta",
     "brandName": "Syngenta AG",
@@ -1870,8 +1828,8 @@ window.AGRO_PRODUCTS = [
     "packSizes": [
       {
         "label": "50 мл",
-        "price": 3.5,
-        "unit": "€ 3.50 / 50 мл",
+        "price": 3.32,
+        "unit": "€ 3.32 / 50 мл",
         "default": true
       }
     ],
@@ -1885,8 +1843,7 @@ window.AGRO_PRODUCTS = [
     "title": "Сиванто Прайм СЛ – Флупирадифурон",
     "category": "insecticides",
     "categoryName": "Инсектициди",
-    "price": 7.8,
-    "bgnPrice": 15.26,
+    "price": 7.41,
     "unit": "50 мл",
     "brand": "bayer",
     "brandName": "Bayer Crop Science AG",
@@ -1915,8 +1872,8 @@ window.AGRO_PRODUCTS = [
     "packSizes": [
       {
         "label": "50 мл",
-        "price": 7.8,
-        "unit": "€ 7.80 / 50 мл",
+        "price": 7.41,
+        "unit": "€ 7.41 / 50 мл",
         "default": true
       }
     ],
@@ -1930,8 +1887,7 @@ window.AGRO_PRODUCTS = [
     "title": "Тепеки ВГ – Флоникамид",
     "category": "insecticides",
     "categoryName": "Инсектициди",
-    "price": 9.2,
-    "bgnPrice": 17.99,
+    "price": 8.74,
     "unit": "15 г",
     "brand": "syngenta",
     "brandName": "Belchim / ISK",
@@ -1960,8 +1916,8 @@ window.AGRO_PRODUCTS = [
     "packSizes": [
       {
         "label": "15 г",
-        "price": 9.2,
-        "unit": "€ 9.20 / 15 г",
+        "price": 8.74,
+        "unit": "€ 8.74 / 15 г",
         "default": true
       }
     ],
@@ -1975,8 +1931,7 @@ window.AGRO_PRODUCTS = [
     "title": "Авант 150 ЕК – Индоксакарб",
     "category": "insecticides",
     "categoryName": "Инсектициди",
-    "price": 38,
-    "bgnPrice": 74.32,
+    "price": 36.1,
     "unit": "250 мл",
     "brand": "corteva",
     "brandName": "FMC OpenAg",
@@ -1992,7 +1947,7 @@ window.AGRO_PRODUCTS = [
     "formulation": "ЕК",
     "quarantine": "10 дни",
     "reg": "БАБХ: № 01408-ПРЗ",
-    "badge": "Промо -10%",
+    "badge": "Промо -5%",
     "image": "/images/products/bottle-250ml.jpg",
     "desc": "Ови-ларвицид срещу гроздови молци и нощенки, устойчив на летни жеги.",
     "dose": "25-33 мл/дка",
@@ -2005,8 +1960,8 @@ window.AGRO_PRODUCTS = [
     "packSizes": [
       {
         "label": "250 мл",
-        "price": 38,
-        "unit": "€ 38.00 / 250 мл",
+        "price": 36.1,
+        "unit": "€ 36.10 / 250 мл",
         "default": true
       }
     ],
@@ -2020,8 +1975,7 @@ window.AGRO_PRODUCTS = [
     "title": "Вертимек 018 ЕК – Абамектин",
     "category": "insecticides",
     "categoryName": "Инсектициди",
-    "price": 8.9,
-    "bgnPrice": 17.41,
+    "price": 8.46,
     "unit": "100 мл",
     "brand": "syngenta",
     "brandName": "Syngenta AG",
@@ -2050,8 +2004,8 @@ window.AGRO_PRODUCTS = [
     "packSizes": [
       {
         "label": "100 мл",
-        "price": 8.9,
-        "unit": "€ 8.90 / 100 мл",
+        "price": 8.46,
+        "unit": "€ 8.46 / 100 мл",
         "default": true
       }
     ],
@@ -2065,8 +2019,7 @@ window.AGRO_PRODUCTS = [
     "title": "Нисоран 10 ВП – Хекситиазокс",
     "category": "insecticides",
     "categoryName": "Инсектициди",
-    "price": 6.5,
-    "bgnPrice": 12.71,
+    "price": 6.17,
     "unit": "50 г",
     "brand": "nippon",
     "brandName": "Nippon Soda",
@@ -2095,8 +2048,8 @@ window.AGRO_PRODUCTS = [
     "packSizes": [
       {
         "label": "50 г",
-        "price": 6.5,
-        "unit": "€ 6.50 / 50 г",
+        "price": 6.17,
+        "unit": "€ 6.17 / 50 г",
         "default": true
       }
     ],
@@ -2110,8 +2063,7 @@ window.AGRO_PRODUCTS = [
     "title": "Ортус 5 СК – Фенпироксимат",
     "category": "insecticides",
     "categoryName": "Инсектициди",
-    "price": 7.2,
-    "bgnPrice": 14.08,
+    "price": 6.84,
     "unit": "50 мл",
     "brand": "nippon",
     "brandName": "Nihon Nohyaku",
@@ -2139,8 +2091,8 @@ window.AGRO_PRODUCTS = [
     "packSizes": [
       {
         "label": "50 мл",
-        "price": 7.2,
-        "unit": "€ 7.20 / 50 мл",
+        "price": 6.84,
+        "unit": "€ 6.84 / 50 мл",
         "default": true
       }
     ],
@@ -2154,8 +2106,7 @@ window.AGRO_PRODUCTS = [
     "title": "Масай ВП – Тебуфенпирад",
     "category": "insecticides",
     "categoryName": "Инсектициди",
-    "price": 12.5,
-    "bgnPrice": 24.45,
+    "price": 11.88,
     "unit": "100 г",
     "brand": "basf",
     "brandName": "BASF SE",
@@ -2183,8 +2134,8 @@ window.AGRO_PRODUCTS = [
     "packSizes": [
       {
         "label": "100 г",
-        "price": 12.5,
-        "unit": "€ 12.50 / 100 г",
+        "price": 11.88,
+        "unit": "€ 11.88 / 100 г",
         "default": true
       }
     ],
@@ -2198,8 +2149,7 @@ window.AGRO_PRODUCTS = [
     "title": "Клоузър 120 СК – Сулфоксафлор Isoclast",
     "category": "insecticides",
     "categoryName": "Инсектициди",
-    "price": 8.1,
-    "bgnPrice": 15.84,
+    "price": 7.69,
     "unit": "50 мл",
     "brand": "corteva",
     "brandName": "Corteva Agriscience",
@@ -2228,8 +2178,8 @@ window.AGRO_PRODUCTS = [
     "packSizes": [
       {
         "label": "50 мл",
-        "price": 8.1,
-        "unit": "€ 8.10 / 50 мл",
+        "price": 7.69,
+        "unit": "€ 7.69 / 50 мл",
         "default": true
       }
     ],
@@ -2243,8 +2193,7 @@ window.AGRO_PRODUCTS = [
     "title": "Волиам Тарго 063 СК – Хлорантранилипрол",
     "category": "insecticides",
     "categoryName": "Инсектициди",
-    "price": 49,
-    "bgnPrice": 95.84,
+    "price": 46.55,
     "unit": "250 мл",
     "brand": "syngenta",
     "brandName": "Syngenta AG",
@@ -2272,8 +2221,8 @@ window.AGRO_PRODUCTS = [
     "packSizes": [
       {
         "label": "250 мл",
-        "price": 49,
-        "unit": "€ 49.00 / 250 мл",
+        "price": 46.55,
+        "unit": "€ 46.55 / 250 мл",
         "default": true
       }
     ],
@@ -2287,8 +2236,7 @@ window.AGRO_PRODUCTS = [
     "title": "Делегат 250 ВГ – Спинеторам",
     "category": "insecticides",
     "categoryName": "Инсектициди",
-    "price": 29.5,
-    "bgnPrice": 57.7,
+    "price": 28.02,
     "unit": "100 г",
     "brand": "corteva",
     "brandName": "Corteva Agriscience",
@@ -2316,8 +2264,8 @@ window.AGRO_PRODUCTS = [
     "packSizes": [
       {
         "label": "100 г",
-        "price": 29.5,
-        "unit": "€ 29.50 / 100 г",
+        "price": 28.02,
+        "unit": "€ 28.02 / 100 г",
         "default": true
       }
     ],
@@ -2331,8 +2279,7 @@ window.AGRO_PRODUCTS = [
     "title": "Лазер 240 СК БИО – Спинозад",
     "category": "insecticides",
     "categoryName": "Инсектициди",
-    "price": 11.5,
-    "bgnPrice": 22.49,
+    "price": 10.92,
     "unit": "50 мл",
     "brand": "corteva",
     "brandName": "Corteva Agriscience",
@@ -2361,8 +2308,8 @@ window.AGRO_PRODUCTS = [
     "packSizes": [
       {
         "label": "50 мл",
-        "price": 11.5,
-        "unit": "€ 11.50 / 50 мл",
+        "price": 10.92,
+        "unit": "€ 10.92 / 50 мл",
         "default": true
       }
     ],
@@ -2376,8 +2323,7 @@ window.AGRO_PRODUCTS = [
     "title": "Ним Азал Т/С БИО – Азадирахтин А",
     "category": "insecticides",
     "categoryName": "Инсектициди",
-    "price": 9.8,
-    "bgnPrice": 19.17,
+    "price": 9.31,
     "unit": "100 мл",
     "brand": "amitica",
     "brandName": "Trifolio-M",
@@ -2406,8 +2352,8 @@ window.AGRO_PRODUCTS = [
     "packSizes": [
       {
         "label": "100 мл",
-        "price": 9.8,
-        "unit": "€ 9.80 / 100 мл",
+        "price": 9.31,
+        "unit": "€ 9.31 / 100 мл",
         "default": true
       }
     ],
@@ -2421,8 +2367,7 @@ window.AGRO_PRODUCTS = [
     "title": "Лепинокс Плюс БИО – Bacillus thuringiensis kurstaki",
     "category": "insecticides",
     "categoryName": "Инсектициди",
-    "price": 6.9,
-    "bgnPrice": 13.5,
+    "price": 6.55,
     "unit": "100 г",
     "brand": "amitica",
     "brandName": "CBC Europe",
@@ -2451,8 +2396,8 @@ window.AGRO_PRODUCTS = [
     "packSizes": [
       {
         "label": "100 г",
-        "price": 6.9,
-        "unit": "€ 6.90 / 100 г",
+        "price": 6.55,
+        "unit": "€ 6.55 / 100 г",
         "default": true
       }
     ],
@@ -2466,8 +2411,7 @@ window.AGRO_PRODUCTS = [
     "title": "Лимоцид БИО – Портокалово масло",
     "category": "insecticides",
     "categoryName": "Инсектициди",
-    "price": 13.9,
-    "bgnPrice": 27.19,
+    "price": 13.21,
     "unit": "200 мл",
     "brand": "amitica",
     "brandName": "Vivagro",
@@ -2483,7 +2427,7 @@ window.AGRO_PRODUCTS = [
     "formulation": "МЕ",
     "quarantine": "1 ден",
     "reg": "БАБХ: № 01485-ПРЗ",
-    "badge": "Промо -10%",
+    "badge": "Промо -5%",
     "image": "/images/products/bottle-250ml.jpg",
     "desc": "3-в-1 биопрепарат: изсушава въшки, белокрилки и спори на брашнеста мана.",
     "dose": "200-400 мл/дка",
@@ -2496,8 +2440,8 @@ window.AGRO_PRODUCTS = [
     "packSizes": [
       {
         "label": "200 мл",
-        "price": 13.9,
-        "unit": "€ 13.90 / 200 мл",
+        "price": 13.21,
+        "unit": "€ 13.21 / 200 мл",
         "default": true
       }
     ],
@@ -2511,8 +2455,7 @@ window.AGRO_PRODUCTS = [
     "title": "Мадекс Твин БИО – Cydia pomonella грануловирус",
     "category": "insecticides",
     "categoryName": "Инсектициди",
-    "price": 19.5,
-    "bgnPrice": 38.14,
+    "price": 18.52,
     "unit": "100 мл",
     "brand": "amitica",
     "brandName": "Andermatt",
@@ -2539,8 +2482,8 @@ window.AGRO_PRODUCTS = [
     "packSizes": [
       {
         "label": "100 мл",
-        "price": 19.5,
-        "unit": "€ 19.50 / 100 мл",
+        "price": 18.52,
+        "unit": "€ 18.52 / 100 мл",
         "default": true
       }
     ],
@@ -2554,8 +2497,7 @@ window.AGRO_PRODUCTS = [
     "title": "Афирм 095 СГ – Емамектин бензоат",
     "category": "insecticides",
     "categoryName": "Инсектициди",
-    "price": 14.2,
-    "bgnPrice": 27.77,
+    "price": 13.49,
     "unit": "100 г",
     "brand": "syngenta",
     "brandName": "Syngenta AG",
@@ -2584,8 +2526,8 @@ window.AGRO_PRODUCTS = [
     "packSizes": [
       {
         "label": "100 г",
-        "price": 14.2,
-        "unit": "€ 14.20 / 100 г",
+        "price": 13.49,
+        "unit": "€ 13.49 / 100 г",
         "default": true
       }
     ],
@@ -2599,8 +2541,7 @@ window.AGRO_PRODUCTS = [
     "title": "Валмек ЕК – Абамектин",
     "category": "insecticides",
     "categoryName": "Инсектициди",
-    "price": 7.9,
-    "bgnPrice": 15.45,
+    "price": 7.5,
     "unit": "100 мл",
     "brand": "manica",
     "brandName": "Manica SpA",
@@ -2628,8 +2569,8 @@ window.AGRO_PRODUCTS = [
     "packSizes": [
       {
         "label": "100 мл",
-        "price": 7.9,
-        "unit": "€ 7.90 / 100 мл",
+        "price": 7.5,
+        "unit": "€ 7.50 / 100 мл",
         "default": true
       }
     ],
@@ -2643,8 +2584,7 @@ window.AGRO_PRODUCTS = [
     "title": "Ламдекс Екстра ВГ – Ламбда-цихалотрин",
     "category": "insecticides",
     "categoryName": "Инсектициди",
-    "price": 5.5,
-    "bgnPrice": 10.76,
+    "price": 5.22,
     "unit": "100 г",
     "brand": "adama",
     "brandName": "ADAMA Agricultural Solutions",
@@ -2672,8 +2612,8 @@ window.AGRO_PRODUCTS = [
     "packSizes": [
       {
         "label": "100 г",
-        "price": 5.5,
-        "unit": "€ 5.50 / 100 г",
+        "price": 5.22,
+        "unit": "€ 5.22 / 100 г",
         "default": true
       }
     ],
@@ -2687,8 +2627,7 @@ window.AGRO_PRODUCTS = [
     "title": "Афикар 100 ЕВ – Делтаметрин",
     "category": "insecticides",
     "categoryName": "Инсектициди",
-    "price": 3.9,
-    "bgnPrice": 7.63,
+    "price": 3.7,
     "unit": "50 мл",
     "brand": "manica",
     "brandName": "Агрия АД",
@@ -2716,8 +2655,8 @@ window.AGRO_PRODUCTS = [
     "packSizes": [
       {
         "label": "50 мл",
-        "price": 3.9,
-        "unit": "€ 3.90 / 50 мл",
+        "price": 3.7,
+        "unit": "€ 3.70 / 50 мл",
         "default": true
       }
     ],
@@ -2731,8 +2670,7 @@ window.AGRO_PRODUCTS = [
     "title": "Маврик 2 Ф – Тау-флувалинат",
     "category": "insecticides",
     "categoryName": "Инсектициди",
-    "price": 16.5,
-    "bgnPrice": 32.27,
+    "price": 15.67,
     "unit": "100 мл",
     "brand": "adama",
     "brandName": "ADAMA Agricultural Solutions",
@@ -2760,8 +2698,8 @@ window.AGRO_PRODUCTS = [
     "packSizes": [
       {
         "label": "100 мл",
-        "price": 16.5,
-        "unit": "€ 16.50 / 100 мл",
+        "price": 15.67,
+        "unit": "€ 15.67 / 100 мл",
         "default": true
       }
     ],
@@ -2775,8 +2713,7 @@ window.AGRO_PRODUCTS = [
     "title": "Харпун ЕК – Пирипроксифен",
     "category": "insecticides",
     "categoryName": "Инсектициди",
-    "price": 21,
-    "bgnPrice": 41.07,
+    "price": 19.95,
     "unit": "250 мл",
     "brand": "nippon",
     "brandName": "Sumi Agro",
@@ -2804,8 +2741,8 @@ window.AGRO_PRODUCTS = [
     "packSizes": [
       {
         "label": "250 мл",
-        "price": 21,
-        "unit": "€ 21.00 / 250 мл",
+        "price": 19.95,
+        "unit": "€ 19.95 / 250 мл",
         "default": true
       }
     ],
@@ -2819,8 +2756,7 @@ window.AGRO_PRODUCTS = [
     "title": "Сумицидин 5 ЕК – Есфенвалерат",
     "category": "insecticides",
     "categoryName": "Инсектициди",
-    "price": 2.5,
-    "bgnPrice": 4.89,
+    "price": 2.38,
     "unit": "30 мл",
     "brand": "nippon",
     "brandName": "Sumitomo Chemical",
@@ -2848,8 +2784,8 @@ window.AGRO_PRODUCTS = [
     "packSizes": [
       {
         "label": "30 мл",
-        "price": 2.5,
-        "unit": "€ 2.50 / 30 мл",
+        "price": 2.38,
+        "unit": "€ 2.38 / 30 мл",
         "default": true
       }
     ],
@@ -2863,8 +2799,7 @@ window.AGRO_PRODUCTS = [
     "title": "Шерпа 100 ЕК – Циперметрин",
     "category": "insecticides",
     "categoryName": "Инсектициди",
-    "price": 5.2,
-    "bgnPrice": 10.17,
+    "price": 4.94,
     "unit": "100 мл",
     "brand": "manica",
     "brandName": "SBM Life Science",
@@ -2892,8 +2827,8 @@ window.AGRO_PRODUCTS = [
     "packSizes": [
       {
         "label": "100 мл",
-        "price": 5.2,
-        "unit": "€ 5.20 / 100 мл",
+        "price": 4.94,
+        "unit": "€ 4.94 / 100 мл",
         "default": true
       }
     ],
@@ -2907,8 +2842,7 @@ window.AGRO_PRODUCTS = [
     "title": "Мулиган СК – Пирипроксифен",
     "category": "insecticides",
     "categoryName": "Инсектициди",
-    "price": 18.9,
-    "bgnPrice": 36.97,
+    "price": 17.95,
     "unit": "250 мл",
     "brand": "adama",
     "brandName": "ADAMA Agricultural Solutions",
@@ -2935,8 +2869,8 @@ window.AGRO_PRODUCTS = [
     "packSizes": [
       {
         "label": "250 мл",
-        "price": 18.9,
-        "unit": "€ 18.90 / 250 мл",
+        "price": 17.95,
+        "unit": "€ 17.95 / 250 мл",
         "default": true
       }
     ],
@@ -2950,8 +2884,7 @@ window.AGRO_PRODUCTS = [
     "title": "Дека ЕК – Делтаметрин",
     "category": "insecticides",
     "categoryName": "Инсектициди",
-    "price": 2.8,
-    "bgnPrice": 5.48,
+    "price": 2.66,
     "unit": "50 мл",
     "brand": "manica",
     "brandName": "Агрия АД",
@@ -2966,7 +2899,7 @@ window.AGRO_PRODUCTS = [
     "formulation": "ЕК",
     "quarantine": "3 дни",
     "reg": "БАБХ: № 01562-ПРЗ",
-    "badge": "Промо -10%",
+    "badge": "Промо -5%",
     "image": "/images/products/bottle-250ml.jpg",
     "desc": "Икономичен пиретроид за градинари срещу листни бълхи и гъсеници.",
     "dose": "30-50 мл/дка",
@@ -2979,8 +2912,8 @@ window.AGRO_PRODUCTS = [
     "packSizes": [
       {
         "label": "50 мл",
-        "price": 2.8,
-        "unit": "€ 2.80 / 50 мл",
+        "price": 2.66,
+        "unit": "€ 2.66 / 50 мл",
         "default": true
       }
     ],
@@ -2994,8 +2927,7 @@ window.AGRO_PRODUCTS = [
     "title": "Санмайт 20 ВП – Пиридабен",
     "category": "insecticides",
     "categoryName": "Инсектициди",
-    "price": 8.8,
-    "bgnPrice": 17.21,
+    "price": 8.36,
     "unit": "50 г",
     "brand": "nippon",
     "brandName": "Nissan Chemical",
@@ -3023,8 +2955,8 @@ window.AGRO_PRODUCTS = [
     "packSizes": [
       {
         "label": "50 г",
-        "price": 8.8,
-        "unit": "€ 8.80 / 50 г",
+        "price": 8.36,
+        "unit": "€ 8.36 / 50 г",
         "default": true
       }
     ],
@@ -3038,8 +2970,7 @@ window.AGRO_PRODUCTS = [
     "title": "Енвидор 240 СК – Спиродиклофен",
     "category": "insecticides",
     "categoryName": "Инсектициди",
-    "price": 34,
-    "bgnPrice": 66.5,
+    "price": 32.3,
     "unit": "250 мл",
     "brand": "bayer",
     "brandName": "Bayer Crop Science AG",
@@ -3067,8 +2998,8 @@ window.AGRO_PRODUCTS = [
     "packSizes": [
       {
         "label": "250 мл",
-        "price": 34,
-        "unit": "€ 34.00 / 250 мл",
+        "price": 32.3,
+        "unit": "€ 32.30 / 250 мл",
         "default": true
       }
     ],
@@ -3082,8 +3013,7 @@ window.AGRO_PRODUCTS = [
     "title": "Минекто Алфа СК – Циантранилипрол + Ацибензолар-S-метил",
     "category": "insecticides",
     "categoryName": "Инсектициди",
-    "price": 68,
-    "bgnPrice": 133,
+    "price": 64.6,
     "unit": "250 мл",
     "brand": "syngenta",
     "brandName": "Syngenta AG",
@@ -3111,8 +3041,8 @@ window.AGRO_PRODUCTS = [
     "packSizes": [
       {
         "label": "250 мл",
-        "price": 68,
-        "unit": "€ 68.00 / 250 мл",
+        "price": 64.6,
+        "unit": "€ 64.60 / 250 мл",
         "default": true
       }
     ],
@@ -3126,8 +3056,7 @@ window.AGRO_PRODUCTS = [
     "title": "Хелиовекс БИО – Helicoverpa armigera вирус",
     "category": "insecticides",
     "categoryName": "Инсектициди",
-    "price": 22,
-    "bgnPrice": 43.03,
+    "price": 20.9,
     "unit": "100 мл",
     "brand": "amitica",
     "brandName": "Andermatt",
@@ -3155,8 +3084,8 @@ window.AGRO_PRODUCTS = [
     "packSizes": [
       {
         "label": "100 мл",
-        "price": 22,
-        "unit": "€ 22.00 / 100 мл",
+        "price": 20.9,
+        "unit": "€ 20.90 / 100 мл",
         "default": true
       }
     ],
@@ -3170,8 +3099,7 @@ window.AGRO_PRODUCTS = [
     "title": "Рапакс БИО – Bacillus thuringiensis kurstaki",
     "category": "insecticides",
     "categoryName": "Инсектициди",
-    "price": 14.5,
-    "bgnPrice": 28.36,
+    "price": 13.77,
     "unit": "250 мл",
     "brand": "amitica",
     "brandName": "Biogard",
@@ -3199,8 +3127,8 @@ window.AGRO_PRODUCTS = [
     "packSizes": [
       {
         "label": "250 мл",
-        "price": 14.5,
-        "unit": "€ 14.50 / 250 мл",
+        "price": 13.77,
+        "unit": "€ 13.77 / 250 мл",
         "default": true
       }
     ],
@@ -3214,8 +3142,7 @@ window.AGRO_PRODUCTS = [
     "title": "Сумитион 50 ЕК – Фенитротион",
     "category": "insecticides",
     "categoryName": "Инсектициди",
-    "price": 17.5,
-    "bgnPrice": 34.23,
+    "price": 16.63,
     "unit": "200 мл",
     "brand": "nippon",
     "brandName": "Sumitomo Chemical",
@@ -3243,8 +3170,8 @@ window.AGRO_PRODUCTS = [
     "packSizes": [
       {
         "label": "200 мл",
-        "price": 17.5,
-        "unit": "€ 17.50 / 200 мл",
+        "price": 16.63,
+        "unit": "€ 16.63 / 200 мл",
         "default": true
       }
     ],
@@ -3258,8 +3185,7 @@ window.AGRO_PRODUCTS = [
     "title": "Курацио БИО – Калциев полисулфид 380 г/л",
     "category": "insecticides",
     "categoryName": "Инсектициди",
-    "price": 16,
-    "bgnPrice": 31.29,
+    "price": 15.2,
     "unit": "1 л",
     "brand": "amitica",
     "brandName": "Biofa (Германия)",
@@ -3287,8 +3213,8 @@ window.AGRO_PRODUCTS = [
     "packSizes": [
       {
         "label": "1 л",
-        "price": 16,
-        "unit": "€ 16.00 / 1 л",
+        "price": 15.2,
+        "unit": "€ 15.20 / 1 л",
         "default": true
       }
     ],
@@ -3302,8 +3228,7 @@ window.AGRO_PRODUCTS = [
     "title": "Пиретро Натура БИО – Естествен пиретрум",
     "category": "insecticides",
     "categoryName": "Инсектициди",
-    "price": 14.5,
-    "bgnPrice": 28.36,
+    "price": 13.77,
     "unit": "100 мл",
     "brand": "amitica",
     "brandName": "Biogard",
@@ -3331,8 +3256,8 @@ window.AGRO_PRODUCTS = [
     "packSizes": [
       {
         "label": "100 мл",
-        "price": 14.5,
-        "unit": "€ 14.50 / 100 мл",
+        "price": 13.77,
+        "unit": "€ 13.77 / 100 мл",
         "default": true
       }
     ],
@@ -3346,8 +3271,7 @@ window.AGRO_PRODUCTS = [
     "title": "Омит 57 ЕВ – Пропаргит",
     "category": "insecticides",
     "categoryName": "Инсектициди",
-    "price": 19.8,
-    "bgnPrice": 38.73,
+    "price": 18.81,
     "unit": "200 мл",
     "brand": "corteva",
     "brandName": "UPL OpenAg",
@@ -3375,8 +3299,8 @@ window.AGRO_PRODUCTS = [
     "packSizes": [
       {
         "label": "200 мл",
-        "price": 19.8,
-        "unit": "€ 19.80 / 200 мл",
+        "price": 18.81,
+        "unit": "€ 18.81 / 200 мл",
         "default": true
       }
     ],
@@ -3390,8 +3314,7 @@ window.AGRO_PRODUCTS = [
     "title": "Раундъп Класик Про – Глифозат",
     "category": "herbicides",
     "categoryName": "Хербициди",
-    "price": 11.9,
-    "bgnPrice": 23.27,
+    "price": 11.3,
     "unit": "1 л",
     "brand": "bayer",
     "brandName": "Bayer Crop Science AG",
@@ -3420,8 +3343,8 @@ window.AGRO_PRODUCTS = [
     "packSizes": [
       {
         "label": "1 л",
-        "price": 11.9,
-        "unit": "€ 11.90 / 1 л",
+        "price": 11.3,
+        "unit": "€ 11.30 / 1 л",
         "default": true
       }
     ],
@@ -3435,8 +3358,7 @@ window.AGRO_PRODUCTS = [
     "title": "Раундъп Екстра – Глифозат калиева сол",
     "category": "herbicides",
     "categoryName": "Хербициди",
-    "price": 16.5,
-    "bgnPrice": 32.27,
+    "price": 15.67,
     "unit": "1 л",
     "brand": "bayer",
     "brandName": "Bayer Crop Science AG",
@@ -3451,7 +3373,7 @@ window.AGRO_PRODUCTS = [
     "formulation": "РЗ",
     "quarantine": "Преди засяване",
     "reg": "БАБХ: № 01639-ПРЗ",
-    "badge": "Промо -10%",
+    "badge": "Промо -5%",
     "image": "/images/products/canister-5l.jpg",
     "desc": "Концентриран глифозат с калиева сол: поглъща се за 1 час, действа при хладно време.",
     "dose": "200-500 мл/дка",
@@ -3464,8 +3386,8 @@ window.AGRO_PRODUCTS = [
     "packSizes": [
       {
         "label": "1 л",
-        "price": 16.5,
-        "unit": "€ 16.50 / 1 л",
+        "price": 15.67,
+        "unit": "€ 15.67 / 1 л",
         "default": true
       }
     ],
@@ -3479,8 +3401,7 @@ window.AGRO_PRODUCTS = [
     "title": "Наса ТАФ – Глифозат",
     "category": "herbicides",
     "categoryName": "Хербициди",
-    "price": 9.8,
-    "bgnPrice": 19.17,
+    "price": 9.31,
     "unit": "1 л",
     "brand": "manica",
     "brandName": "Manica SpA",
@@ -3508,8 +3429,8 @@ window.AGRO_PRODUCTS = [
     "packSizes": [
       {
         "label": "1 л",
-        "price": 9.8,
-        "unit": "€ 9.80 / 1 л",
+        "price": 9.31,
+        "unit": "€ 9.31 / 1 л",
         "default": true
       }
     ],
@@ -3523,8 +3444,7 @@ window.AGRO_PRODUCTS = [
     "title": "Стомп Аква – Пендиметалин",
     "category": "herbicides",
     "categoryName": "Хербициди",
-    "price": 19.5,
-    "bgnPrice": 38.14,
+    "price": 18.52,
     "unit": "1 л",
     "brand": "basf",
     "brandName": "BASF SE",
@@ -3554,8 +3474,8 @@ window.AGRO_PRODUCTS = [
     "packSizes": [
       {
         "label": "1 л",
-        "price": 19.5,
-        "unit": "€ 19.50 / 1 л",
+        "price": 18.52,
+        "unit": "€ 18.52 / 1 л",
         "default": true
       }
     ],
@@ -3569,8 +3489,7 @@ window.AGRO_PRODUCTS = [
     "title": "Пантера 40 ЕК – Квизалофоп-П-тефурил",
     "category": "herbicides",
     "categoryName": "Хербициди",
-    "price": 18,
-    "bgnPrice": 35.2,
+    "price": 17.1,
     "unit": "1 л",
     "brand": "corteva",
     "brandName": "UPL OpenAg",
@@ -3599,8 +3518,8 @@ window.AGRO_PRODUCTS = [
     "packSizes": [
       {
         "label": "1 л",
-        "price": 18,
-        "unit": "€ 18.00 / 1 л",
+        "price": 17.1,
+        "unit": "€ 17.10 / 1 л",
         "default": true
       }
     ],
@@ -3614,8 +3533,7 @@ window.AGRO_PRODUCTS = [
     "title": "Селект Супер 120 ЕК – Клетодим",
     "category": "herbicides",
     "categoryName": "Хербициди",
-    "price": 24.5,
-    "bgnPrice": 47.92,
+    "price": 23.27,
     "unit": "1 л",
     "brand": "corteva",
     "brandName": "UPL OpenAg",
@@ -3644,8 +3562,8 @@ window.AGRO_PRODUCTS = [
     "packSizes": [
       {
         "label": "1 л",
-        "price": 24.5,
-        "unit": "€ 24.50 / 1 л",
+        "price": 23.27,
+        "unit": "€ 23.27 / 1 л",
         "default": true
       }
     ],
@@ -3659,8 +3577,7 @@ window.AGRO_PRODUCTS = [
     "title": "Дуал Голд 960 ЕК – С-метолахлор",
     "category": "herbicides",
     "categoryName": "Хербициди",
-    "price": 29.8,
-    "bgnPrice": 58.28,
+    "price": 28.31,
     "unit": "1 л",
     "brand": "syngenta",
     "brandName": "Syngenta AG",
@@ -3689,8 +3606,8 @@ window.AGRO_PRODUCTS = [
     "packSizes": [
       {
         "label": "1 л",
-        "price": 29.8,
-        "unit": "€ 29.80 / 1 л",
+        "price": 28.31,
+        "unit": "€ 28.31 / 1 л",
         "default": true
       }
     ],
@@ -3704,8 +3621,7 @@ window.AGRO_PRODUCTS = [
     "title": "Зенкор 600 СК – Метрибузин",
     "category": "herbicides",
     "categoryName": "Хербициди",
-    "price": 33.5,
-    "bgnPrice": 65.52,
+    "price": 31.82,
     "unit": "1 л",
     "brand": "bayer",
     "brandName": "Bayer Crop Science AG",
@@ -3733,8 +3649,8 @@ window.AGRO_PRODUCTS = [
     "packSizes": [
       {
         "label": "1 л",
-        "price": 33.5,
-        "unit": "€ 33.50 / 1 л",
+        "price": 31.82,
+        "unit": "€ 31.82 / 1 л",
         "default": true
       }
     ],
@@ -3748,8 +3664,7 @@ window.AGRO_PRODUCTS = [
     "title": "Лаудис ОД – Темботрион",
     "category": "herbicides",
     "categoryName": "Хербициди",
-    "price": 44,
-    "bgnPrice": 86.06,
+    "price": 41.8,
     "unit": "1 л",
     "brand": "bayer",
     "brandName": "Bayer Crop Science AG",
@@ -3776,8 +3691,8 @@ window.AGRO_PRODUCTS = [
     "packSizes": [
       {
         "label": "1 л",
-        "price": 44,
-        "unit": "€ 44.00 / 1 л",
+        "price": 41.8,
+        "unit": "€ 41.80 / 1 л",
         "default": true
       }
     ],
@@ -3791,8 +3706,7 @@ window.AGRO_PRODUCTS = [
     "title": "Мустанг СК – Флорасулам + 2.4-Д 2-етилхексил естер",
     "category": "herbicides",
     "categoryName": "Хербициди",
-    "price": 19.8,
-    "bgnPrice": 38.73,
+    "price": 18.81,
     "unit": "1 л",
     "brand": "corteva",
     "brandName": "Corteva Agriscience",
@@ -3819,8 +3733,8 @@ window.AGRO_PRODUCTS = [
     "packSizes": [
       {
         "label": "1 л",
-        "price": 19.8,
-        "unit": "€ 19.80 / 1 л",
+        "price": 18.81,
+        "unit": "€ 18.81 / 1 л",
         "default": true
       }
     ],
@@ -3834,8 +3748,7 @@ window.AGRO_PRODUCTS = [
     "title": "Дерби Супер Едно ВГ – Флуметсулам",
     "category": "herbicides",
     "categoryName": "Хербициди",
-    "price": 15.2,
-    "bgnPrice": 29.73,
+    "price": 14.44,
     "unit": "100 г",
     "brand": "corteva",
     "brandName": "Corteva Agriscience",
@@ -3862,8 +3775,8 @@ window.AGRO_PRODUCTS = [
     "packSizes": [
       {
         "label": "100 г",
-        "price": 15.2,
-        "unit": "€ 15.20 / 100 г",
+        "price": 14.44,
+        "unit": "€ 14.44 / 100 г",
         "default": true
       }
     ],
@@ -3877,8 +3790,7 @@ window.AGRO_PRODUCTS = [
     "title": "Базагран 480 СЛ – Бентазон",
     "category": "herbicides",
     "categoryName": "Хербициди",
-    "price": 27.5,
-    "bgnPrice": 53.79,
+    "price": 26.13,
     "unit": "1 л",
     "brand": "basf",
     "brandName": "BASF SE",
@@ -3906,8 +3818,8 @@ window.AGRO_PRODUCTS = [
     "packSizes": [
       {
         "label": "1 л",
-        "price": 27.5,
-        "unit": "€ 27.50 / 1 л",
+        "price": 26.13,
+        "unit": "€ 26.13 / 1 л",
         "default": true
       }
     ],
@@ -3921,8 +3833,7 @@ window.AGRO_PRODUCTS = [
     "title": "Мерлин Флекс 480 СК – Изоксафлутол",
     "category": "herbicides",
     "categoryName": "Хербициди",
-    "price": 58,
-    "bgnPrice": 113.44,
+    "price": 55.1,
     "unit": "500 мл",
     "brand": "bayer",
     "brandName": "Bayer Crop Science AG",
@@ -3936,7 +3847,7 @@ window.AGRO_PRODUCTS = [
     "formulation": "СК",
     "quarantine": "Почвено",
     "reg": "БАБХ: № 01716-ПРЗ",
-    "badge": "Промо -10%",
+    "badge": "Промо -5%",
     "image": "/images/products/canister-5l.jpg",
     "desc": "Хербицид с презареждащ ефект при дъжд за пълна чистота на царевицата.",
     "dose": "40-42 мл/дка",
@@ -3949,8 +3860,8 @@ window.AGRO_PRODUCTS = [
     "packSizes": [
       {
         "label": "500 мл",
-        "price": 58,
-        "unit": "€ 58.00 / 500 мл",
+        "price": 55.1,
+        "unit": "€ 55.10 / 500 мл",
         "default": true
       }
     ],
@@ -3964,8 +3875,7 @@ window.AGRO_PRODUCTS = [
     "title": "Екип ОД – Форамсулфурон",
     "category": "herbicides",
     "categoryName": "Хербициди",
-    "price": 42,
-    "bgnPrice": 82.14,
+    "price": 39.9,
     "unit": "1 л",
     "brand": "bayer",
     "brandName": "Bayer Crop Science AG",
@@ -3992,8 +3902,8 @@ window.AGRO_PRODUCTS = [
     "packSizes": [
       {
         "label": "1 л",
-        "price": 42,
-        "unit": "€ 42.00 / 1 л",
+        "price": 39.9,
+        "unit": "€ 39.90 / 1 л",
         "default": true
       }
     ],
@@ -4007,8 +3917,7 @@ window.AGRO_PRODUCTS = [
     "title": "Капрено СК – Темботрион",
     "category": "herbicides",
     "categoryName": "Хербициди",
-    "price": 68,
-    "bgnPrice": 133,
+    "price": 64.6,
     "unit": "1 л",
     "brand": "bayer",
     "brandName": "Bayer Crop Science AG",
@@ -4035,8 +3944,8 @@ window.AGRO_PRODUCTS = [
     "packSizes": [
       {
         "label": "1 л",
-        "price": 68,
-        "unit": "€ 68.00 / 1 л",
+        "price": 64.6,
+        "unit": "€ 64.60 / 1 л",
         "default": true
       }
     ],
@@ -4050,8 +3959,7 @@ window.AGRO_PRODUCTS = [
     "title": "Челендж 600 СК – Аклонифен",
     "category": "herbicides",
     "categoryName": "Хербициди",
-    "price": 29.5,
-    "bgnPrice": 57.7,
+    "price": 28.02,
     "unit": "1 л",
     "brand": "bayer",
     "brandName": "Bayer Crop Science AG",
@@ -4079,8 +3987,8 @@ window.AGRO_PRODUCTS = [
     "packSizes": [
       {
         "label": "1 л",
-        "price": 29.5,
-        "unit": "€ 29.50 / 1 л",
+        "price": 28.02,
+        "unit": "€ 28.02 / 1 л",
         "default": true
       }
     ],
@@ -4094,8 +4002,7 @@ window.AGRO_PRODUCTS = [
     "title": "Пума Супер 7.5 ЕВ – Феноксапроп-П-етил",
     "category": "herbicides",
     "categoryName": "Хербициди",
-    "price": 31,
-    "bgnPrice": 60.63,
+    "price": 29.45,
     "unit": "1 л",
     "brand": "bayer",
     "brandName": "Bayer Crop Science AG",
@@ -4122,8 +4029,8 @@ window.AGRO_PRODUCTS = [
     "packSizes": [
       {
         "label": "1 л",
-        "price": 31,
-        "unit": "€ 31.00 / 1 л",
+        "price": 29.45,
+        "unit": "€ 29.45 / 1 л",
         "default": true
       }
     ],
@@ -4137,8 +4044,7 @@ window.AGRO_PRODUCTS = [
     "title": "Палас 75 ВГ – Пироксулам",
     "category": "herbicides",
     "categoryName": "Хербициди",
-    "price": 46,
-    "bgnPrice": 89.97,
+    "price": 43.7,
     "unit": "500 г",
     "brand": "corteva",
     "brandName": "Corteva Agriscience",
@@ -4165,8 +4071,8 @@ window.AGRO_PRODUCTS = [
     "packSizes": [
       {
         "label": "500 г",
-        "price": 46,
-        "unit": "€ 46.00 / 500 г",
+        "price": 43.7,
+        "unit": "€ 43.70 / 500 г",
         "default": true
       }
     ],
@@ -4180,8 +4086,7 @@ window.AGRO_PRODUCTS = [
     "title": "Стратос Ултра – Циклоксидим",
     "category": "herbicides",
     "categoryName": "Хербициди",
-    "price": 32,
-    "bgnPrice": 62.59,
+    "price": 30.4,
     "unit": "1 л",
     "brand": "basf",
     "brandName": "BASF SE",
@@ -4210,8 +4115,8 @@ window.AGRO_PRODUCTS = [
     "packSizes": [
       {
         "label": "1 л",
-        "price": 32,
-        "unit": "€ 32.00 / 1 л",
+        "price": 30.4,
+        "unit": "€ 30.40 / 1 л",
         "default": true
       }
     ],
@@ -4225,8 +4130,7 @@ window.AGRO_PRODUCTS = [
     "title": "Фокус Ултра – Циклоксидим",
     "category": "herbicides",
     "categoryName": "Хербициди",
-    "price": 31.5,
-    "bgnPrice": 61.61,
+    "price": 29.92,
     "unit": "1 л",
     "brand": "basf",
     "brandName": "BASF SE",
@@ -4254,8 +4158,8 @@ window.AGRO_PRODUCTS = [
     "packSizes": [
       {
         "label": "1 л",
-        "price": 31.5,
-        "unit": "€ 31.50 / 1 л",
+        "price": 29.92,
+        "unit": "€ 29.92 / 1 л",
         "default": true
       }
     ],
@@ -4269,8 +4173,7 @@ window.AGRO_PRODUCTS = [
     "title": "Голтикс 700 СК – Метамитрон",
     "category": "herbicides",
     "categoryName": "Хербициди",
-    "price": 36,
-    "bgnPrice": 70.41,
+    "price": 34.2,
     "unit": "1 л",
     "brand": "adama",
     "brandName": "ADAMA Agricultural Solutions",
@@ -4297,8 +4200,8 @@ window.AGRO_PRODUCTS = [
     "packSizes": [
       {
         "label": "1 л",
-        "price": 36,
-        "unit": "€ 36.00 / 1 л",
+        "price": 34.2,
+        "unit": "€ 34.20 / 1 л",
         "default": true
       }
     ],
@@ -4312,8 +4215,7 @@ window.AGRO_PRODUCTS = [
     "title": "Набу Екстра – Сетоксидим",
     "category": "herbicides",
     "categoryName": "Хербициди",
-    "price": 23,
-    "bgnPrice": 44.98,
+    "price": 21.85,
     "unit": "1 л",
     "brand": "nippon",
     "brandName": "Nippon Soda",
@@ -4341,8 +4243,8 @@ window.AGRO_PRODUCTS = [
     "packSizes": [
       {
         "label": "1 л",
-        "price": 23,
-        "unit": "€ 23.00 / 1 л",
+        "price": 21.85,
+        "unit": "€ 21.85 / 1 л",
         "default": true
       }
     ],
@@ -4356,8 +4258,7 @@ window.AGRO_PRODUCTS = [
     "title": "Калисто 480 СК – Мезотрион",
     "category": "herbicides",
     "categoryName": "Хербициди",
-    "price": 54,
-    "bgnPrice": 105.61,
+    "price": 51.3,
     "unit": "1 л",
     "brand": "syngenta",
     "brandName": "Syngenta AG",
@@ -4384,8 +4285,8 @@ window.AGRO_PRODUCTS = [
     "packSizes": [
       {
         "label": "1 л",
-        "price": 54,
-        "unit": "€ 54.00 / 1 л",
+        "price": 51.3,
+        "unit": "€ 51.30 / 1 л",
         "default": true
       }
     ],
@@ -4399,8 +4300,7 @@ window.AGRO_PRODUCTS = [
     "title": "Гродил Макси ОД – Йодосулфурон",
     "category": "herbicides",
     "categoryName": "Хербициди",
-    "price": 39,
-    "bgnPrice": 76.28,
+    "price": 37.05,
     "unit": "1 л",
     "brand": "bayer",
     "brandName": "Bayer Crop Science AG",
@@ -4414,7 +4314,7 @@ window.AGRO_PRODUCTS = [
     "formulation": "ОД",
     "quarantine": "60 дни",
     "reg": "БАБХ: № 01793-ПРЗ",
-    "badge": "Промо -10%",
+    "badge": "Промо -5%",
     "image": "/images/products/canister-5l.jpg",
     "desc": "Маслена O-TEQ дисперсия за контрол на широколистни в пшеница и ечемик.",
     "dose": "10-11 мл/дка",
@@ -4427,8 +4327,8 @@ window.AGRO_PRODUCTS = [
     "packSizes": [
       {
         "label": "1 л",
-        "price": 39,
-        "unit": "€ 39.00 / 1 л",
+        "price": 37.05,
+        "unit": "€ 37.05 / 1 л",
         "default": true
       }
     ],
@@ -4442,8 +4342,7 @@ window.AGRO_PRODUCTS = [
     "title": "Хармони 50 СХ – Тифенсулфурон-метил",
     "category": "herbicides",
     "categoryName": "Хербициди",
-    "price": 16.5,
-    "bgnPrice": 32.27,
+    "price": 15.67,
     "unit": "100 г",
     "brand": "corteva",
     "brandName": "FMC OpenAg",
@@ -4470,8 +4369,8 @@ window.AGRO_PRODUCTS = [
     "packSizes": [
       {
         "label": "100 г",
-        "price": 16.5,
-        "unit": "€ 16.50 / 100 г",
+        "price": 15.67,
+        "unit": "€ 15.67 / 100 г",
         "default": true
       }
     ],
@@ -4485,8 +4384,7 @@ window.AGRO_PRODUCTS = [
     "title": "Тарга Супер 5 ЕК – Квизалофоп-П-етил",
     "category": "herbicides",
     "categoryName": "Хербициди",
-    "price": 19.5,
-    "bgnPrice": 38.14,
+    "price": 18.52,
     "unit": "1 л",
     "brand": "nippon",
     "brandName": "Nissan Chemical",
@@ -4515,8 +4413,8 @@ window.AGRO_PRODUCTS = [
     "packSizes": [
       {
         "label": "1 л",
-        "price": 19.5,
-        "unit": "€ 19.50 / 1 л",
+        "price": 18.52,
+        "unit": "€ 18.52 / 1 л",
         "default": true
       }
     ],
@@ -4530,8 +4428,7 @@ window.AGRO_PRODUCTS = [
     "title": "Пулсар 40 – Имазамокс",
     "category": "herbicides",
     "categoryName": "Хербициди",
-    "price": 41,
-    "bgnPrice": 80.19,
+    "price": 38.95,
     "unit": "1 л",
     "brand": "basf",
     "brandName": "BASF SE",
@@ -4558,8 +4455,8 @@ window.AGRO_PRODUCTS = [
     "packSizes": [
       {
         "label": "1 л",
-        "price": 41,
-        "unit": "€ 41.00 / 1 л",
+        "price": 38.95,
+        "unit": "€ 38.95 / 1 л",
         "default": true
       }
     ],
@@ -4573,8 +4470,7 @@ window.AGRO_PRODUCTS = [
     "title": "Старане Голд – Флуроксипир",
     "category": "herbicides",
     "categoryName": "Хербициди",
-    "price": 26,
-    "bgnPrice": 50.85,
+    "price": 24.7,
     "unit": "1 л",
     "brand": "corteva",
     "brandName": "Corteva Agriscience",
@@ -4602,8 +4498,8 @@ window.AGRO_PRODUCTS = [
     "packSizes": [
       {
         "label": "1 л",
-        "price": 26,
-        "unit": "€ 26.00 / 1 л",
+        "price": 24.7,
+        "unit": "€ 24.70 / 1 л",
         "default": true
       }
     ],
@@ -4617,8 +4513,7 @@ window.AGRO_PRODUCTS = [
     "title": "Бетанал Тандем – Фенмедифам + Етофумезат",
     "category": "herbicides",
     "categoryName": "Хербициди",
-    "price": 35,
-    "bgnPrice": 68.45,
+    "price": 33.25,
     "unit": "1 л",
     "brand": "bayer",
     "brandName": "Bayer Crop Science AG",
@@ -4645,8 +4540,8 @@ window.AGRO_PRODUCTS = [
     "packSizes": [
       {
         "label": "1 л",
-        "price": 35,
-        "unit": "€ 35.00 / 1 л",
+        "price": 33.25,
+        "unit": "€ 33.25 / 1 л",
         "default": true
       }
     ],
@@ -4660,8 +4555,7 @@ window.AGRO_PRODUCTS = [
     "title": "Агрил Про – 2.4-Д аминна сол",
     "category": "herbicides",
     "categoryName": "Хербициди",
-    "price": 8.5,
-    "bgnPrice": 16.62,
+    "price": 8.07,
     "unit": "1 л",
     "brand": "manica",
     "brandName": "Агрия АД",
@@ -4688,8 +4582,8 @@ window.AGRO_PRODUCTS = [
     "packSizes": [
       {
         "label": "1 л",
-        "price": 8.5,
-        "unit": "€ 8.50 / 1 л",
+        "price": 8.07,
+        "unit": "€ 8.07 / 1 л",
         "default": true
       }
     ],
@@ -4703,8 +4597,7 @@ window.AGRO_PRODUCTS = [
     "title": "Калинко ЕК – Оксифлуорфен",
     "category": "herbicides",
     "categoryName": "Хербициди",
-    "price": 28,
-    "bgnPrice": 54.76,
+    "price": 26.6,
     "unit": "1 л",
     "brand": "corteva",
     "brandName": "Corteva Agriscience",
@@ -4733,8 +4626,8 @@ window.AGRO_PRODUCTS = [
     "packSizes": [
       {
         "label": "1 л",
-        "price": 28,
-        "unit": "€ 28.00 / 1 л",
+        "price": 26.6,
+        "unit": "€ 26.60 / 1 л",
         "default": true
       }
     ],
@@ -4748,8 +4641,7 @@ window.AGRO_PRODUCTS = [
     "title": "Глифоган 480 СЛ – Глифозат",
     "category": "herbicides",
     "categoryName": "Хербициди",
-    "price": 10.5,
-    "bgnPrice": 20.54,
+    "price": 9.97,
     "unit": "1 л",
     "brand": "adama",
     "brandName": "ADAMA Agricultural Solutions",
@@ -4777,8 +4669,8 @@ window.AGRO_PRODUCTS = [
     "packSizes": [
       {
         "label": "1 л",
-        "price": 10.5,
-        "unit": "€ 10.50 / 1 л",
+        "price": 9.97,
+        "unit": "€ 9.97 / 1 л",
         "default": true
       }
     ],
@@ -4792,8 +4684,7 @@ window.AGRO_PRODUCTS = [
     "title": "Айкън 10 КС – Ламбда-цихалотрин",
     "category": "biocides",
     "categoryName": "Биоциди & ДДД",
-    "price": 5.8,
-    "bgnPrice": 11.34,
+    "price": 5.51,
     "unit": "20 мл",
     "brand": "syngenta",
     "brandName": "Syngenta Professional",
@@ -4820,8 +4711,8 @@ window.AGRO_PRODUCTS = [
     "packSizes": [
       {
         "label": "20 мл",
-        "price": 5.8,
-        "unit": "€ 5.80 / 20 мл",
+        "price": 5.51,
+        "unit": "€ 5.51 / 20 мл",
         "default": true
       }
     ],
@@ -4835,8 +4726,7 @@ window.AGRO_PRODUCTS = [
     "title": "Айкън 100 СК – Ламбда-цихалотрин",
     "category": "biocides",
     "categoryName": "Биоциди & ДДД",
-    "price": 89,
-    "bgnPrice": 174.07,
+    "price": 84.55,
     "unit": "1 л",
     "brand": "syngenta",
     "brandName": "Syngenta Professional",
@@ -4863,8 +4753,8 @@ window.AGRO_PRODUCTS = [
     "packSizes": [
       {
         "label": "1 л",
-        "price": 89,
-        "unit": "€ 89.00 / 1 л",
+        "price": 84.55,
+        "unit": "€ 84.55 / 1 л",
         "default": true
       }
     ],
@@ -4878,8 +4768,7 @@ window.AGRO_PRODUCTS = [
     "title": "Фендона 60 СК – Алфа-циперметрин",
     "category": "biocides",
     "categoryName": "Биоциди & ДДД",
-    "price": 6.4,
-    "bgnPrice": 12.52,
+    "price": 6.08,
     "unit": "25 мл",
     "brand": "basf",
     "brandName": "BASF SE",
@@ -4893,7 +4782,7 @@ window.AGRO_PRODUCTS = [
     "formulation": "СК",
     "quarantine": "2 часа",
     "reg": "БАБХ: № 01870-ПРЗ",
-    "badge": "Промо -10%",
+    "badge": "Промо -5%",
     "image": "/images/products/spray-biocide.jpg",
     "desc": "Кристална технология за трайно полепване по стени и подове до 3 месеца.",
     "dose": "25 мл / 5 л вода",
@@ -4906,8 +4795,8 @@ window.AGRO_PRODUCTS = [
     "packSizes": [
       {
         "label": "25 мл",
-        "price": 6.4,
-        "unit": "€ 6.40 / 25 мл",
+        "price": 6.08,
+        "unit": "€ 6.08 / 25 мл",
         "default": true
       }
     ],
@@ -4921,8 +4810,7 @@ window.AGRO_PRODUCTS = [
     "title": "Бандит 10 ЕВ – Циперметрин",
     "category": "biocides",
     "categoryName": "Биоциди & ДДД",
-    "price": 4.9,
-    "bgnPrice": 9.58,
+    "price": 4.66,
     "unit": "50 мл",
     "brand": "manica",
     "brandName": "Агрия АД",
@@ -4949,8 +4837,8 @@ window.AGRO_PRODUCTS = [
     "packSizes": [
       {
         "label": "50 мл",
-        "price": 4.9,
-        "unit": "€ 4.90 / 50 мл",
+        "price": 4.66,
+        "unit": "€ 4.66 / 50 мл",
         "default": true
       }
     ],
@@ -4964,8 +4852,7 @@ window.AGRO_PRODUCTS = [
     "title": "Ципертрин ЕК – Циперметрин + Тетраметрин + ПБО",
     "category": "biocides",
     "categoryName": "Биоциди & ДДД",
-    "price": 8.5,
-    "bgnPrice": 16.62,
+    "price": 8.07,
     "unit": "100 мл",
     "brand": "manica",
     "brandName": "Vebi Istituto (Италия)",
@@ -4992,8 +4879,8 @@ window.AGRO_PRODUCTS = [
     "packSizes": [
       {
         "label": "100 мл",
-        "price": 8.5,
-        "unit": "€ 8.50 / 100 мл",
+        "price": 8.07,
+        "unit": "€ 8.07 / 100 мл",
         "default": true
       }
     ],
@@ -5007,8 +4894,7 @@ window.AGRO_PRODUCTS = [
     "title": "Лиматак / Лимацид – Металдехид",
     "category": "biocides",
     "categoryName": "Биоциди & ДДД",
-    "price": 4.8,
-    "bgnPrice": 9.39,
+    "price": 4.56,
     "unit": "200 г",
     "brand": "corteva",
     "brandName": "De Sangosse",
@@ -5037,8 +4923,8 @@ window.AGRO_PRODUCTS = [
     "packSizes": [
       {
         "label": "200 г",
-        "price": 4.8,
-        "unit": "€ 4.80 / 200 г",
+        "price": 4.56,
+        "unit": "€ 4.56 / 200 г",
         "default": true
       }
     ],
@@ -5052,8 +4938,7 @@ window.AGRO_PRODUCTS = [
     "title": "Ферамол БИО – Железен фосфат",
     "category": "biocides",
     "categoryName": "Биоциди & ДДД",
-    "price": 8.9,
-    "bgnPrice": 17.41,
+    "price": 8.46,
     "unit": "500 г",
     "brand": "amitica",
     "brandName": "Neudorff",
@@ -5082,8 +4967,8 @@ window.AGRO_PRODUCTS = [
     "packSizes": [
       {
         "label": "500 г",
-        "price": 8.9,
-        "unit": "€ 8.90 / 500 г",
+        "price": 8.46,
+        "unit": "€ 8.46 / 500 г",
         "default": true
       }
     ],
@@ -5097,8 +4982,7 @@ window.AGRO_PRODUCTS = [
     "title": "Ратимор Восъчни Блокчета – Бромадиолон",
     "category": "biocides",
     "categoryName": "Биоциди & ДДД",
-    "price": 4.5,
-    "bgnPrice": 8.8,
+    "price": 4.27,
     "unit": "300 г",
     "brand": "manica",
     "brandName": "Unichem",
@@ -5125,8 +5009,8 @@ window.AGRO_PRODUCTS = [
     "packSizes": [
       {
         "label": "300 г",
-        "price": 4.5,
-        "unit": "€ 4.50 / 300 г",
+        "price": 4.27,
+        "unit": "€ 4.27 / 300 г",
         "default": true
       }
     ],
@@ -5140,8 +5024,7 @@ window.AGRO_PRODUCTS = [
     "title": "Бродифакум Паста Защитена – Бродифакум",
     "category": "biocides",
     "categoryName": "Биоциди & ДДД",
-    "price": 3.9,
-    "bgnPrice": 7.63,
+    "price": 3.7,
     "unit": "150 г",
     "brand": "manica",
     "brandName": "Unichem",
@@ -5168,8 +5051,8 @@ window.AGRO_PRODUCTS = [
     "packSizes": [
       {
         "label": "150 г",
-        "price": 3.9,
-        "unit": "€ 3.90 / 150 г",
+        "price": 3.7,
+        "unit": "€ 3.70 / 150 г",
         "default": true
       }
     ],
@@ -5183,8 +5066,7 @@ window.AGRO_PRODUCTS = [
     "title": "Homevo Дървеници БИО – Диатомит 100%",
     "category": "biocides",
     "categoryName": "Биоциди & ДДД",
-    "price": 3.32,
-    "bgnPrice": 6.49,
+    "price": 3.15,
     "unit": "50 г",
     "brand": "amitica",
     "brandName": "Homevo",
@@ -5211,8 +5093,8 @@ window.AGRO_PRODUCTS = [
     "packSizes": [
       {
         "label": "50 г",
-        "price": 3.32,
-        "unit": "€ 3.32 / 50 г",
+        "price": 3.15,
+        "unit": "€ 3.15 / 50 г",
         "default": true
       }
     ],
@@ -5226,8 +5108,7 @@ window.AGRO_PRODUCTS = [
     "title": "Homevo Кокошинки БИО – Аморфен силициев диоксид 100%",
     "category": "biocides",
     "categoryName": "Биоциди & ДДД",
-    "price": 3.6,
-    "bgnPrice": 7.04,
+    "price": 3.42,
     "unit": "100 г",
     "brand": "amitica",
     "brandName": "Homevo",
@@ -5254,8 +5135,8 @@ window.AGRO_PRODUCTS = [
     "packSizes": [
       {
         "label": "100 г",
-        "price": 3.6,
-        "unit": "€ 3.60 / 100 г",
+        "price": 3.42,
+        "unit": "€ 3.42 / 100 г",
         "default": true
       }
     ],
@@ -5269,8 +5150,7 @@ window.AGRO_PRODUCTS = [
     "title": "Homevo Бълхи & Кърлежи – Натурален диатомит",
     "category": "biocides",
     "categoryName": "Биоциди & ДДД",
-    "price": 3.32,
-    "bgnPrice": 6.49,
+    "price": 3.15,
     "unit": "50 г",
     "brand": "amitica",
     "brandName": "Homevo",
@@ -5297,8 +5177,8 @@ window.AGRO_PRODUCTS = [
     "packSizes": [
       {
         "label": "50 г",
-        "price": 3.32,
-        "unit": "€ 3.32 / 50 г",
+        "price": 3.15,
+        "unit": "€ 3.15 / 50 г",
         "default": true
       }
     ],
@@ -5312,8 +5192,7 @@ window.AGRO_PRODUCTS = [
     "title": "Homevo Картофи БИО – Натурален инсектициден прах",
     "category": "biocides",
     "categoryName": "Биоциди & ДДД",
-    "price": 3.5,
-    "bgnPrice": 6.85,
+    "price": 3.32,
     "unit": "100 г",
     "brand": "amitica",
     "brandName": "Homevo",
@@ -5340,8 +5219,8 @@ window.AGRO_PRODUCTS = [
     "packSizes": [
       {
         "label": "100 г",
-        "price": 3.5,
-        "unit": "€ 3.50 / 100 г",
+        "price": 3.32,
+        "unit": "€ 3.32 / 100 г",
         "default": true
       }
     ],
@@ -5355,8 +5234,7 @@ window.AGRO_PRODUCTS = [
     "title": "Натуралис БИО – Beauveria bassiana",
     "category": "biocides",
     "categoryName": "Биоциди & ДДД",
-    "price": 18.5,
-    "bgnPrice": 36.18,
+    "price": 17.57,
     "unit": "250 мл",
     "brand": "amitica",
     "brandName": "Biogard",
@@ -5371,7 +5249,7 @@ window.AGRO_PRODUCTS = [
     "formulation": "ОД",
     "quarantine": "0 дни",
     "reg": "БАБХ: № 01947-ПРЗ",
-    "badge": "Промо -10%",
+    "badge": "Промо -5%",
     "image": "/images/products/spray-biocide.jpg",
     "desc": "Ентомопатогенна гъба срещу белокрилки, трипси и акари.",
     "dose": "100-150 мл/дка",
@@ -5384,8 +5262,8 @@ window.AGRO_PRODUCTS = [
     "packSizes": [
       {
         "label": "250 мл",
-        "price": 18.5,
-        "unit": "€ 18.50 / 250 мл",
+        "price": 17.57,
+        "unit": "€ 17.57 / 250 мл",
         "default": true
       }
     ],
@@ -5399,8 +5277,7 @@ window.AGRO_PRODUCTS = [
     "title": "Нематекс БИО – Почвени микроорганизми",
     "category": "biocides",
     "categoryName": "Биоциди & ДДД",
-    "price": 9,
-    "bgnPrice": 17.6,
+    "price": 8.55,
     "unit": "500 г",
     "brand": "amitica",
     "brandName": "Bulagro",
@@ -5428,8 +5305,8 @@ window.AGRO_PRODUCTS = [
     "packSizes": [
       {
         "label": "500 г",
-        "price": 9,
-        "unit": "€ 9.00 / 500 г",
+        "price": 8.55,
+        "unit": "€ 8.55 / 500 г",
         "default": true
       }
     ],
@@ -5443,8 +5320,7 @@ window.AGRO_PRODUCTS = [
     "title": "Ботрибел БИО – Bacillus amyloliquefaciens",
     "category": "biocides",
     "categoryName": "Биоциди & ДДД",
-    "price": 12.9,
-    "bgnPrice": 25.23,
+    "price": 12.25,
     "unit": "200 мл",
     "brand": "amitica",
     "brandName": "Амитица",
@@ -5472,8 +5348,8 @@ window.AGRO_PRODUCTS = [
     "packSizes": [
       {
         "label": "200 мл",
-        "price": 12.9,
-        "unit": "€ 12.90 / 200 мл",
+        "price": 12.25,
+        "unit": "€ 12.25 / 200 мл",
         "default": true
       }
     ],
@@ -5487,8 +5363,7 @@ window.AGRO_PRODUCTS = [
     "title": "Фитобакт БИО – Bacillus subtilis",
     "category": "biocides",
     "categoryName": "Биоциди & ДДД",
-    "price": 27.9,
-    "bgnPrice": 54.57,
+    "price": 26.5,
     "unit": "1 л",
     "brand": "amitica",
     "brandName": "Амитица",
@@ -5516,8 +5391,8 @@ window.AGRO_PRODUCTS = [
     "packSizes": [
       {
         "label": "1 л",
-        "price": 27.9,
-        "unit": "€ 27.90 / 1 л",
+        "price": 26.5,
+        "unit": "€ 26.50 / 1 л",
         "default": true
       }
     ],
@@ -5531,8 +5406,7 @@ window.AGRO_PRODUCTS = [
     "title": "Фитосев БИО – COS-OGA имуностимулатор",
     "category": "biocides",
     "categoryName": "Биоциди & ДДД",
-    "price": 19.8,
-    "bgnPrice": 38.73,
+    "price": 18.81,
     "unit": "500 мл",
     "brand": "amitica",
     "brandName": "FytoFend",
@@ -5560,8 +5434,8 @@ window.AGRO_PRODUCTS = [
     "packSizes": [
       {
         "label": "500 мл",
-        "price": 19.8,
-        "unit": "€ 19.80 / 500 мл",
+        "price": 18.81,
+        "unit": "€ 18.81 / 500 мл",
         "default": true
       }
     ],
@@ -5575,8 +5449,7 @@ window.AGRO_PRODUCTS = [
     "title": "Комплект Био Защита Амитица – Ним Азал + Лимоцид + Витисан",
     "category": "biocides",
     "categoryName": "Биоциди & ДДД",
-    "price": 29.9,
-    "bgnPrice": 58.48,
+    "price": 28.4,
     "unit": "Комплект 3 бр.",
     "brand": "amitica",
     "brandName": "Амитица",
@@ -5605,8 +5478,8 @@ window.AGRO_PRODUCTS = [
     "packSizes": [
       {
         "label": "Комплект 3 бр.",
-        "price": 29.9,
-        "unit": "€ 29.90 / Комплект 3 бр.",
+        "price": 28.4,
+        "unit": "€ 28.40 / Комплект 3 бр.",
         "default": true
       }
     ],
@@ -5620,8 +5493,7 @@ window.AGRO_PRODUCTS = [
     "title": "Снайпер Лепящи Уловки (Жълти) – Ентомологично лепило",
     "category": "biocides",
     "categoryName": "Биоциди & ДДД",
-    "price": 4.2,
-    "bgnPrice": 8.21,
+    "price": 3.99,
     "unit": "10 бр. табели",
     "brand": "sortovi",
     "brandName": "Сортови Семена",
@@ -5649,8 +5521,8 @@ window.AGRO_PRODUCTS = [
     "packSizes": [
       {
         "label": "10 бр. табели",
-        "price": 4.2,
-        "unit": "€ 4.20 / 10 бр. табели",
+        "price": 3.99,
+        "unit": "€ 3.99 / 10 бр. табели",
         "default": true
       }
     ],
@@ -5664,8 +5536,7 @@ window.AGRO_PRODUCTS = [
     "title": "Снайпер Лепящи Уловки (Сини) – Ентомологично лепило за трипс",
     "category": "biocides",
     "categoryName": "Биоциди & ДДД",
-    "price": 4.5,
-    "bgnPrice": 8.8,
+    "price": 4.27,
     "unit": "10 бр. табели",
     "brand": "sortovi",
     "brandName": "Сортови Семена",
@@ -5693,8 +5564,8 @@ window.AGRO_PRODUCTS = [
     "packSizes": [
       {
         "label": "10 бр. табели",
-        "price": 4.5,
-        "unit": "€ 4.50 / 10 бр. табели",
+        "price": 4.27,
+        "unit": "€ 4.27 / 10 бр. табели",
         "default": true
       }
     ],
@@ -5708,8 +5579,7 @@ window.AGRO_PRODUCTS = [
     "title": "Репелент за Къртици и Слепци – Лавандулово и рициново масло",
     "category": "biocides",
     "categoryName": "Биоциди & ДДД",
-    "price": 7.5,
-    "bgnPrice": 14.67,
+    "price": 7.13,
     "unit": "500 мл",
     "brand": "sortovi",
     "brandName": "Target Eko",
@@ -5736,8 +5606,8 @@ window.AGRO_PRODUCTS = [
     "packSizes": [
       {
         "label": "500 мл",
-        "price": 7.5,
-        "unit": "€ 7.50 / 500 мл",
+        "price": 7.13,
+        "unit": "€ 7.13 / 500 мл",
         "default": true
       }
     ],
@@ -5751,8 +5621,7 @@ window.AGRO_PRODUCTS = [
     "title": "Репелент за Кучета и Котки – Натурални ароматни екстракти",
     "category": "biocides",
     "categoryName": "Биоциди & ДДД",
-    "price": 6.9,
-    "bgnPrice": 13.5,
+    "price": 6.55,
     "unit": "450 мл",
     "brand": "sortovi",
     "brandName": "Bros (Полша)",
@@ -5779,8 +5648,8 @@ window.AGRO_PRODUCTS = [
     "packSizes": [
       {
         "label": "450 мл",
-        "price": 6.9,
-        "unit": "€ 6.90 / 450 мл",
+        "price": 6.55,
+        "unit": "€ 6.55 / 450 мл",
         "default": true
       }
     ],
@@ -5794,8 +5663,7 @@ window.AGRO_PRODUCTS = [
     "title": "Димка против Гризачи в Дупки – Сяра и калиев нитрат",
     "category": "biocides",
     "categoryName": "Биоциди & ДДД",
-    "price": 2.8,
-    "bgnPrice": 5.48,
+    "price": 2.66,
     "unit": "5 патрона",
     "brand": "sortovi",
     "brandName": "Сортови Семена",
@@ -5822,8 +5690,8 @@ window.AGRO_PRODUCTS = [
     "packSizes": [
       {
         "label": "5 патрона",
-        "price": 2.8,
-        "unit": "€ 2.80 / 5 патрона",
+        "price": 2.66,
+        "unit": "€ 2.66 / 5 патрона",
         "default": true
       }
     ],
@@ -5837,8 +5705,7 @@ window.AGRO_PRODUCTS = [
     "title": "Капан за Оси и Стършели – Натурален атрактантен флуид",
     "category": "biocides",
     "categoryName": "Биоциди & ДДД",
-    "price": 5.9,
-    "bgnPrice": 11.54,
+    "price": 5.61,
     "unit": "1 бр. капан + 200 мл",
     "brand": "sortovi",
     "brandName": "Bros",
@@ -5853,7 +5720,7 @@ window.AGRO_PRODUCTS = [
     "formulation": "Капан за окачване",
     "quarantine": "0 дни",
     "reg": "БАБХ: № 011024-ПРЗ",
-    "badge": "Промо -10%",
+    "badge": "Промо -5%",
     "image": "/images/products/spray-biocide.jpg",
     "desc": "Улавя осите и стършелите преди да надупчат зреещото десертно грозде.",
     "dose": "Окачване близо до гроздето",
@@ -5866,8 +5733,8 @@ window.AGRO_PRODUCTS = [
     "packSizes": [
       {
         "label": "1 бр. капан + 200 мл",
-        "price": 5.9,
-        "unit": "€ 5.90 / 1 бр. капан + 200 мл",
+        "price": 5.61,
+        "unit": "€ 5.61 / 1 бр. капан + 200 мл",
         "default": true
       }
     ],
@@ -5881,8 +5748,7 @@ window.AGRO_PRODUCTS = [
     "title": "К-Отрин SC 25 – Делтаметрин",
     "category": "biocides",
     "categoryName": "Биоциди & ДДД",
-    "price": 12,
-    "bgnPrice": 23.47,
+    "price": 11.4,
     "unit": "50 мл",
     "brand": "bayer",
     "brandName": "Bayer Environmental",
@@ -5909,8 +5775,8 @@ window.AGRO_PRODUCTS = [
     "packSizes": [
       {
         "label": "50 мл",
-        "price": 12,
-        "unit": "€ 12.00 / 50 мл",
+        "price": 11.4,
+        "unit": "€ 11.40 / 50 мл",
         "default": true
       }
     ],
@@ -5924,8 +5790,7 @@ window.AGRO_PRODUCTS = [
     "title": "Феромонова Уловка за Ябълков Червей – Специфичен полов феромон",
     "category": "biocides",
     "categoryName": "Биоциди & ДДД",
-    "price": 7.9,
-    "bgnPrice": 15.45,
+    "price": 7.5,
     "unit": "1 комплект",
     "brand": "amitica",
     "brandName": "Амитица",
@@ -5952,8 +5817,8 @@ window.AGRO_PRODUCTS = [
     "packSizes": [
       {
         "label": "1 комплект",
-        "price": 7.9,
-        "unit": "€ 7.90 / 1 комплект",
+        "price": 7.5,
+        "unit": "€ 7.50 / 1 комплект",
         "default": true
       }
     ],
@@ -5967,8 +5832,7 @@ window.AGRO_PRODUCTS = [
     "title": "Феромонова Уловка за Шарен Молец – Феродис за Lobesia botrana",
     "category": "biocides",
     "categoryName": "Биоциди & ДДД",
-    "price": 7.9,
-    "bgnPrice": 15.45,
+    "price": 7.5,
     "unit": "1 комплект",
     "brand": "amitica",
     "brandName": "Амитица",
@@ -5995,8 +5859,8 @@ window.AGRO_PRODUCTS = [
     "packSizes": [
       {
         "label": "1 комплект",
-        "price": 7.9,
-        "unit": "€ 7.90 / 1 комплект",
+        "price": 7.5,
+        "unit": "€ 7.50 / 1 комплект",
         "default": true
       }
     ],
@@ -6010,8 +5874,7 @@ window.AGRO_PRODUCTS = [
     "title": "Бродират Паста за Гризачи – Бродифакум 0.005%",
     "category": "biocides",
     "categoryName": "Биоциди & ДДД",
-    "price": 5.5,
-    "bgnPrice": 10.76,
+    "price": 5.22,
     "unit": "200 г",
     "brand": "manica",
     "brandName": "Агрия АД",
@@ -6038,8 +5901,8 @@ window.AGRO_PRODUCTS = [
     "packSizes": [
       {
         "label": "200 г",
-        "price": 5.5,
-        "unit": "€ 5.50 / 200 г",
+        "price": 5.22,
+        "unit": "€ 5.22 / 200 г",
         "default": true
       }
     ],
@@ -6053,8 +5916,7 @@ window.AGRO_PRODUCTS = [
     "title": "Мадекс ТОП БИО – Селективен щам CpGV",
     "category": "biocides",
     "categoryName": "Биоциди & ДДД",
-    "price": 21,
-    "bgnPrice": 41.07,
+    "price": 19.95,
     "unit": "100 мл",
     "brand": "amitica",
     "brandName": "Andermatt",
@@ -6081,8 +5943,8 @@ window.AGRO_PRODUCTS = [
     "packSizes": [
       {
         "label": "100 мл",
-        "price": 21,
-        "unit": "€ 21.00 / 100 мл",
+        "price": 19.95,
+        "unit": "€ 19.95 / 100 мл",
         "default": true
       }
     ],
@@ -6096,8 +5958,7 @@ window.AGRO_PRODUCTS = [
     "title": "Капан Леплив за Хлебарки (Къщичка) – Хранителен атрактант таблетка",
     "category": "biocides",
     "categoryName": "Биоциди & ДДД",
-    "price": 1.9,
-    "bgnPrice": 3.72,
+    "price": 1.8,
     "unit": "2 бр.",
     "brand": "sortovi",
     "brandName": "Bros",
@@ -6124,8 +5985,8 @@ window.AGRO_PRODUCTS = [
     "packSizes": [
       {
         "label": "2 бр.",
-        "price": 1.9,
-        "unit": "€ 1.90 / 2 бр.",
+        "price": 1.8,
+        "unit": "€ 1.80 / 2 бр.",
         "default": true
       }
     ],
@@ -6139,8 +6000,7 @@ window.AGRO_PRODUCTS = [
     "title": "Циперсан ЕК – Циперметрин 10%",
     "category": "biocides",
     "categoryName": "Биоциди & ДДД",
-    "price": 4.1,
-    "bgnPrice": 8.02,
+    "price": 3.89,
     "unit": "50 мл",
     "brand": "manica",
     "brandName": "Агрия АД",
@@ -6167,8 +6027,8 @@ window.AGRO_PRODUCTS = [
     "packSizes": [
       {
         "label": "50 мл",
-        "price": 4.1,
-        "unit": "€ 4.10 / 50 мл",
+        "price": 3.89,
+        "unit": "€ 3.89 / 50 мл",
         "default": true
       }
     ],
@@ -6182,8 +6042,7 @@ window.AGRO_PRODUCTS = [
     "title": "ЯраМила Комплекс NPK – NPK 12-11-18 + Mg + S + микро",
     "category": "fertilizers",
     "categoryName": "Торове & Почви",
-    "price": 36.5,
-    "bgnPrice": 71.39,
+    "price": 34.67,
     "unit": "25 кг",
     "brand": "yara",
     "brandName": "Yara International",
@@ -6213,8 +6072,8 @@ window.AGRO_PRODUCTS = [
     "packSizes": [
       {
         "label": "25 кг",
-        "price": 36.5,
-        "unit": "€ 36.50 / 25 кг",
+        "price": 34.67,
+        "unit": "€ 34.67 / 25 кг",
         "default": true
       }
     ],
@@ -6228,8 +6087,7 @@ window.AGRO_PRODUCTS = [
     "title": "ЯраЛива Нитрабор – Азот 15.4% + Калций 25.6% + Бор",
     "category": "fertilizers",
     "categoryName": "Торове & Почви",
-    "price": 24.5,
-    "bgnPrice": 47.92,
+    "price": 23.27,
     "unit": "25 кг",
     "brand": "yara",
     "brandName": "Yara International",
@@ -6258,8 +6116,8 @@ window.AGRO_PRODUCTS = [
     "packSizes": [
       {
         "label": "25 кг",
-        "price": 24.5,
-        "unit": "€ 24.50 / 25 кг",
+        "price": 23.27,
+        "unit": "€ 23.27 / 25 кг",
         "default": true
       }
     ],
@@ -6273,8 +6131,7 @@ window.AGRO_PRODUCTS = [
     "title": "Кристалон Специален 18-18-18 – NPK 18-18-18 + 3% MgO + микро",
     "category": "fertilizers",
     "categoryName": "Торове & Почви",
-    "price": 6.8,
-    "bgnPrice": 13.3,
+    "price": 6.46,
     "unit": "1 кг",
     "brand": "yara",
     "brandName": "Yara Kristalon",
@@ -6304,8 +6161,8 @@ window.AGRO_PRODUCTS = [
     "packSizes": [
       {
         "label": "1 кг",
-        "price": 6.8,
-        "unit": "€ 6.80 / 1 кг",
+        "price": 6.46,
+        "unit": "€ 6.46 / 1 кг",
         "default": true
       }
     ],
@@ -6319,8 +6176,7 @@ window.AGRO_PRODUCTS = [
     "title": "Кристалон Червен 12-12-36 – NPK 12-12-36 + микро",
     "category": "fertilizers",
     "categoryName": "Торове & Почви",
-    "price": 6.9,
-    "bgnPrice": 13.5,
+    "price": 6.55,
     "unit": "1 кг",
     "brand": "yara",
     "brandName": "Yara Kristalon",
@@ -6336,7 +6192,7 @@ window.AGRO_PRODUCTS = [
     "formulation": "Кристали",
     "quarantine": "0 дни",
     "reg": "БАБХ: № 011101-ПРЗ",
-    "badge": "Промо -10%",
+    "badge": "Промо -5%",
     "image": "/images/products/fertilizer-sack.jpg",
     "desc": "Богат на калий за наедряване на плодовете, цвят и захарност.",
     "dose": "300-500 г/дка",
@@ -6349,8 +6205,8 @@ window.AGRO_PRODUCTS = [
     "packSizes": [
       {
         "label": "1 кг",
-        "price": 6.9,
-        "unit": "€ 6.90 / 1 кг",
+        "price": 6.55,
+        "unit": "€ 6.55 / 1 кг",
         "default": true
       }
     ],
@@ -6364,8 +6220,7 @@ window.AGRO_PRODUCTS = [
     "title": "Кристалон Жълт 13-40-13 – NPK 13-40-13 + микро",
     "category": "fertilizers",
     "categoryName": "Торове & Почви",
-    "price": 7.2,
-    "bgnPrice": 14.08,
+    "price": 6.84,
     "unit": "1 кг",
     "brand": "yara",
     "brandName": "Yara Kristalon",
@@ -6394,8 +6249,8 @@ window.AGRO_PRODUCTS = [
     "packSizes": [
       {
         "label": "1 кг",
-        "price": 7.2,
-        "unit": "€ 7.20 / 1 кг",
+        "price": 6.84,
+        "unit": "€ 6.84 / 1 кг",
         "default": true
       }
     ],
@@ -6409,8 +6264,7 @@ window.AGRO_PRODUCTS = [
     "title": "Кристалон Бял 15-5-30 – NPK 15-5-30 + 3% MgO",
     "category": "fertilizers",
     "categoryName": "Торове & Почви",
-    "price": 6.9,
-    "bgnPrice": 13.5,
+    "price": 6.55,
     "unit": "1 кг",
     "brand": "yara",
     "brandName": "Yara Kristalon",
@@ -6438,8 +6292,8 @@ window.AGRO_PRODUCTS = [
     "packSizes": [
       {
         "label": "1 кг",
-        "price": 6.9,
-        "unit": "€ 6.90 / 1 кг",
+        "price": 6.55,
+        "unit": "€ 6.55 / 1 кг",
         "default": true
       }
     ],
@@ -6453,8 +6307,7 @@ window.AGRO_PRODUCTS = [
     "title": "Вуксал Калций – CaO 240 г/л + Азот 160 г/л + микро",
     "category": "fertilizers",
     "categoryName": "Торове & Почви",
-    "price": 8.5,
-    "bgnPrice": 16.62,
+    "price": 8.07,
     "unit": "1 л",
     "brand": "aglukon",
     "brandName": "Aglukon (Германия)",
@@ -6483,8 +6336,8 @@ window.AGRO_PRODUCTS = [
     "packSizes": [
       {
         "label": "1 л",
-        "price": 8.5,
-        "unit": "€ 8.50 / 1 л",
+        "price": 8.07,
+        "unit": "€ 8.07 / 1 л",
         "default": true
       }
     ],
@@ -6498,8 +6351,7 @@ window.AGRO_PRODUCTS = [
     "title": "Вуксал Макромикс – NPK 16-16-12 + микроелементи",
     "category": "fertilizers",
     "categoryName": "Торове & Почви",
-    "price": 7.9,
-    "bgnPrice": 15.45,
+    "price": 7.5,
     "unit": "1 л",
     "brand": "aglukon",
     "brandName": "Aglukon (Германия)",
@@ -6528,8 +6380,8 @@ window.AGRO_PRODUCTS = [
     "packSizes": [
       {
         "label": "1 л",
-        "price": 7.9,
-        "unit": "€ 7.90 / 1 л",
+        "price": 7.5,
+        "unit": "€ 7.50 / 1 л",
         "default": true
       }
     ],
@@ -6543,8 +6395,7 @@ window.AGRO_PRODUCTS = [
     "title": "Мегафол Антистрес – Аминокиселини 28% + бетаини",
     "category": "fertilizers",
     "categoryName": "Торове & Почви",
-    "price": 9.9,
-    "bgnPrice": 19.36,
+    "price": 9.4,
     "unit": "250 мл",
     "brand": "valagro",
     "brandName": "Valagro (Италия)",
@@ -6574,8 +6425,8 @@ window.AGRO_PRODUCTS = [
     "packSizes": [
       {
         "label": "250 мл",
-        "price": 9.9,
-        "unit": "€ 9.90 / 250 мл",
+        "price": 9.4,
+        "unit": "€ 9.40 / 250 мл",
         "default": true
       }
     ],
@@ -6589,8 +6440,7 @@ window.AGRO_PRODUCTS = [
     "title": "Радифарм Вкоренител – Водорасли + стероли + цинк",
     "category": "fertilizers",
     "categoryName": "Торове & Почви",
-    "price": 14.5,
-    "bgnPrice": 28.36,
+    "price": 13.77,
     "unit": "250 мл",
     "brand": "valagro",
     "brandName": "Valagro (Италия)",
@@ -6619,8 +6469,8 @@ window.AGRO_PRODUCTS = [
     "packSizes": [
       {
         "label": "250 мл",
-        "price": 14.5,
-        "unit": "€ 14.50 / 250 мл",
+        "price": 13.77,
+        "unit": "€ 13.77 / 250 мл",
         "default": true
       }
     ],
@@ -6634,8 +6484,7 @@ window.AGRO_PRODUCTS = [
     "title": "Кендал Имунитет – Олигозахариди + глутатион + калий",
     "category": "fertilizers",
     "categoryName": "Торове & Почви",
-    "price": 16.8,
-    "bgnPrice": 32.86,
+    "price": 15.96,
     "unit": "250 мл",
     "brand": "valagro",
     "brandName": "Valagro (Италия)",
@@ -6664,8 +6513,8 @@ window.AGRO_PRODUCTS = [
     "packSizes": [
       {
         "label": "250 мл",
-        "price": 16.8,
-        "unit": "€ 16.80 / 250 мл",
+        "price": 15.96,
+        "unit": "€ 15.96 / 250 мл",
         "default": true
       }
     ],
@@ -6679,8 +6528,7 @@ window.AGRO_PRODUCTS = [
     "title": "Железен Хелат Fe-EDDHA 6% – Fe-EDDHA 6%",
     "category": "fertilizers",
     "categoryName": "Торове & Почви",
-    "price": 5.5,
-    "bgnPrice": 10.76,
+    "price": 5.22,
     "unit": "100 г",
     "brand": "manica",
     "brandName": "Tradecorp",
@@ -6709,8 +6557,8 @@ window.AGRO_PRODUCTS = [
     "packSizes": [
       {
         "label": "100 г",
-        "price": 5.5,
-        "unit": "€ 5.50 / 100 г",
+        "price": 5.22,
+        "unit": "€ 5.22 / 100 г",
         "default": true
       }
     ],
@@ -6724,8 +6572,7 @@ window.AGRO_PRODUCTS = [
     "title": "Хумустим Органичен Тор – Хуминови киселини от калифорнийски червеи",
     "category": "fertilizers",
     "categoryName": "Торове & Почви",
-    "price": 4.8,
-    "bgnPrice": 9.39,
+    "price": 4.56,
     "unit": "1 л",
     "brand": "amitica",
     "brandName": "Български Биопродукт",
@@ -6754,8 +6601,8 @@ window.AGRO_PRODUCTS = [
     "packSizes": [
       {
         "label": "1 л",
-        "price": 4.8,
-        "unit": "€ 4.80 / 1 л",
+        "price": 4.56,
+        "unit": "€ 4.56 / 1 л",
         "default": true
       }
     ],
@@ -6769,8 +6616,7 @@ window.AGRO_PRODUCTS = [
     "title": "Калитех Листен Тор – Калций",
     "category": "fertilizers",
     "categoryName": "Торове & Почви",
-    "price": 8.9,
-    "bgnPrice": 17.41,
+    "price": 8.46,
     "unit": "1 л",
     "brand": "corteva",
     "brandName": "Ecoculture",
@@ -6798,8 +6644,8 @@ window.AGRO_PRODUCTS = [
     "packSizes": [
       {
         "label": "1 л",
-        "price": 8.9,
-        "unit": "€ 8.90 / 1 л",
+        "price": 8.46,
+        "unit": "€ 8.46 / 1 л",
         "default": true
       }
     ],
@@ -6813,8 +6659,7 @@ window.AGRO_PRODUCTS = [
     "title": "Файнъл К (Final K) – Калиев оксид",
     "category": "fertilizers",
     "categoryName": "Торове & Почви",
-    "price": 11.2,
-    "bgnPrice": 21.91,
+    "price": 10.64,
     "unit": "1 л",
     "brand": "corteva",
     "brandName": "Ecoculture",
@@ -6830,7 +6675,7 @@ window.AGRO_PRODUCTS = [
     "formulation": "Течен",
     "quarantine": "0 дни",
     "reg": "БАБХ: № 011178-ПРЗ",
-    "badge": "Промо -10%",
+    "badge": "Промо -5%",
     "image": "/images/products/bottle-1l.jpg",
     "desc": "Висококонцентриран калий за наедряване, интензивен цвят и сладост.",
     "dose": "250-350 мл/дка",
@@ -6843,8 +6688,8 @@ window.AGRO_PRODUCTS = [
     "packSizes": [
       {
         "label": "1 л",
-        "price": 11.2,
-        "unit": "€ 11.20 / 1 л",
+        "price": 10.64,
+        "unit": "€ 10.64 / 1 л",
         "default": true
       }
     ],
@@ -6858,8 +6703,7 @@ window.AGRO_PRODUCTS = [
     "title": "Био Плантела Гел – Екстракт от северноатлантически водорасли",
     "category": "fertilizers",
     "categoryName": "Торове & Почви",
-    "price": 5.4,
-    "bgnPrice": 10.56,
+    "price": 5.13,
     "unit": "1 л",
     "brand": "sortovi",
     "brandName": "Unichem Plantela",
@@ -6887,8 +6731,8 @@ window.AGRO_PRODUCTS = [
     "packSizes": [
       {
         "label": "1 л",
-        "price": 5.4,
-        "unit": "€ 5.40 / 1 л",
+        "price": 5.13,
+        "unit": "€ 5.13 / 1 л",
         "default": true
       }
     ],
@@ -6902,8 +6746,7 @@ window.AGRO_PRODUCTS = [
     "title": "ЯраВита Бортрак 150 – Бор",
     "category": "fertilizers",
     "categoryName": "Торове & Почви",
-    "price": 9.5,
-    "bgnPrice": 18.58,
+    "price": 9.03,
     "unit": "1 л",
     "brand": "yara",
     "brandName": "Yara Vita",
@@ -6932,8 +6775,8 @@ window.AGRO_PRODUCTS = [
     "packSizes": [
       {
         "label": "1 л",
-        "price": 9.5,
-        "unit": "€ 9.50 / 1 л",
+        "price": 9.03,
+        "unit": "€ 9.03 / 1 л",
         "default": true
       }
     ],
@@ -6947,8 +6790,7 @@ window.AGRO_PRODUCTS = [
     "title": "Магнезиев Сулфат (Епсом сол) – 16% MgO + 32% SO3",
     "category": "fertilizers",
     "categoryName": "Торове & Почви",
-    "price": 2.9,
-    "bgnPrice": 5.67,
+    "price": 2.75,
     "unit": "1 кг",
     "brand": "manica",
     "brandName": "K+S Minerals",
@@ -6977,8 +6819,8 @@ window.AGRO_PRODUCTS = [
     "packSizes": [
       {
         "label": "1 кг",
-        "price": 2.9,
-        "unit": "€ 2.90 / 1 кг",
+        "price": 2.75,
+        "unit": "€ 2.75 / 1 кг",
         "default": true
       }
     ],
@@ -6992,8 +6834,7 @@ window.AGRO_PRODUCTS = [
     "title": "Терафлекс Т 15-8-25 – NPK 15-8-25 + 3.5% MgO + микро",
     "category": "fertilizers",
     "categoryName": "Торове & Почви",
-    "price": 34,
-    "bgnPrice": 66.5,
+    "price": 32.3,
     "unit": "25 кг",
     "brand": "manica",
     "brandName": "Haifa Chemicals",
@@ -7021,8 +6862,8 @@ window.AGRO_PRODUCTS = [
     "packSizes": [
       {
         "label": "25 кг",
-        "price": 34,
-        "unit": "€ 34.00 / 25 кг",
+        "price": 32.3,
+        "unit": "€ 32.30 / 25 кг",
         "default": true
       }
     ],
@@ -7036,8 +6877,7 @@ window.AGRO_PRODUCTS = [
     "title": "Амино Експерт Баланс – L-аминокиселини + пептиди",
     "category": "fertilizers",
     "categoryName": "Торове & Почви",
-    "price": 7.5,
-    "bgnPrice": 14.67,
+    "price": 7.13,
     "unit": "1 л",
     "brand": "amitica",
     "brandName": "Екофол",
@@ -7065,8 +6905,8 @@ window.AGRO_PRODUCTS = [
     "packSizes": [
       {
         "label": "1 л",
-        "price": 7.5,
-        "unit": "€ 7.50 / 1 л",
+        "price": 7.13,
+        "unit": "€ 7.13 / 1 л",
         "default": true
       }
     ],
@@ -7080,8 +6920,7 @@ window.AGRO_PRODUCTS = [
     "title": "ЯраВита Браситрел Про – N, Mg, B, Mn, Mo",
     "category": "fertilizers",
     "categoryName": "Торове & Почви",
-    "price": 12.5,
-    "bgnPrice": 24.45,
+    "price": 11.88,
     "unit": "1 л",
     "brand": "yara",
     "brandName": "Yara Vita",
@@ -7109,8 +6948,8 @@ window.AGRO_PRODUCTS = [
     "packSizes": [
       {
         "label": "1 л",
-        "price": 12.5,
-        "unit": "€ 12.50 / 1 л",
+        "price": 11.88,
+        "unit": "€ 11.88 / 1 л",
         "default": true
       }
     ],
@@ -7124,8 +6963,7 @@ window.AGRO_PRODUCTS = [
     "title": "Кабор Листен Тор – Калций + Бор в органичен комплекс",
     "category": "fertilizers",
     "categoryName": "Торове & Почви",
-    "price": 6.8,
-    "bgnPrice": 13.3,
+    "price": 6.46,
     "unit": "1 л",
     "brand": "manica",
     "brandName": "Агрия АД",
@@ -7153,8 +6991,8 @@ window.AGRO_PRODUCTS = [
     "packSizes": [
       {
         "label": "1 л",
-        "price": 6.8,
-        "unit": "€ 6.80 / 1 л",
+        "price": 6.46,
+        "unit": "€ 6.46 / 1 л",
         "default": true
       }
     ],
@@ -7168,8 +7006,7 @@ window.AGRO_PRODUCTS = [
     "title": "Биохумус от Калифорнийски Червеи (Сух) – Чист органичен вермикомпост",
     "category": "fertilizers",
     "categoryName": "Торове & Почви",
-    "price": 4.5,
-    "bgnPrice": 8.8,
+    "price": 4.27,
     "unit": "5 л",
     "brand": "amitica",
     "brandName": "Био Агро",
@@ -7197,8 +7034,8 @@ window.AGRO_PRODUCTS = [
     "packSizes": [
       {
         "label": "5 л",
-        "price": 4.5,
-        "unit": "€ 4.50 / 5 л",
+        "price": 4.27,
+        "unit": "€ 4.27 / 5 л",
         "default": true
       }
     ],
@@ -7212,8 +7049,7 @@ window.AGRO_PRODUCTS = [
     "title": "Листопад – Обезлистител за Овощни – Меден глюконат + микроелементи",
     "category": "fertilizers",
     "categoryName": "Торове & Почви",
-    "price": 15,
-    "bgnPrice": 29.34,
+    "price": 14.25,
     "unit": "1 л",
     "brand": "manica",
     "brandName": "Агрия АД",
@@ -7240,8 +7076,8 @@ window.AGRO_PRODUCTS = [
     "packSizes": [
       {
         "label": "1 л",
-        "price": 15,
-        "unit": "€ 15.00 / 1 л",
+        "price": 14.25,
+        "unit": "€ 14.25 / 1 л",
         "default": true
       }
     ],
@@ -7255,8 +7091,7 @@ window.AGRO_PRODUCTS = [
     "title": "Сублифос Течен Фосфор – P2O5 30% + K2O 20%",
     "category": "fertilizers",
     "categoryName": "Торове & Почви",
-    "price": 11.5,
-    "bgnPrice": 22.49,
+    "price": 10.92,
     "unit": "1 л",
     "brand": "corteva",
     "brandName": "Ecoculture",
@@ -7284,8 +7119,8 @@ window.AGRO_PRODUCTS = [
     "packSizes": [
       {
         "label": "1 л",
-        "price": 11.5,
-        "unit": "€ 11.50 / 1 л",
+        "price": 10.92,
+        "unit": "€ 10.92 / 1 л",
         "default": true
       }
     ],
@@ -7299,8 +7134,7 @@ window.AGRO_PRODUCTS = [
     "title": "Торфен Субстрат Klasmann TS3 – Бял торф фракция 0-5 мм + омокрител",
     "category": "fertilizers",
     "categoryName": "Торове & Почви",
-    "price": 18.5,
-    "bgnPrice": 36.18,
+    "price": 17.57,
     "unit": "70 л",
     "brand": "sortovi",
     "brandName": "Klasmann-Deilmann",
@@ -7315,7 +7149,7 @@ window.AGRO_PRODUCTS = [
     "formulation": "Торф",
     "quarantine": "0 дни",
     "reg": "БАБХ: № 011255-ПРЗ",
-    "badge": "Промо -10%",
+    "badge": "Промо -5%",
     "image": "/images/products/bottle-1l.jpg",
     "desc": "Професионален немски торфен субстрат за сеитба и разсад.",
     "dose": "За пикиране и тарелки",
@@ -7328,8 +7162,8 @@ window.AGRO_PRODUCTS = [
     "packSizes": [
       {
         "label": "70 л",
-        "price": 18.5,
-        "unit": "€ 18.50 / 70 л",
+        "price": 17.57,
+        "unit": "€ 17.57 / 70 л",
         "default": true
       }
     ],
@@ -7343,8 +7177,7 @@ window.AGRO_PRODUCTS = [
     "title": "Торфени Таблетки Jiffy 38 мм – Спресован сфагнум торф",
     "category": "fertilizers",
     "categoryName": "Торове & Почви",
-    "price": 3.5,
-    "bgnPrice": 6.85,
+    "price": 3.32,
     "unit": "20 бр.",
     "brand": "sortovi",
     "brandName": "Jiffy (Норвегия)",
@@ -7371,8 +7204,8 @@ window.AGRO_PRODUCTS = [
     "packSizes": [
       {
         "label": "20 бр.",
-        "price": 3.5,
-        "unit": "€ 3.50 / 20 бр.",
+        "price": 3.32,
+        "unit": "€ 3.32 / 20 бр.",
         "default": true
       }
     ],
@@ -7386,8 +7219,7 @@ window.AGRO_PRODUCTS = [
     "title": "ЯраТера Калцинит – Водоразтворим калциев нитрат",
     "category": "fertilizers",
     "categoryName": "Торове & Почви",
-    "price": 23,
-    "bgnPrice": 44.98,
+    "price": 21.85,
     "unit": "25 кг",
     "brand": "yara",
     "brandName": "Yara International",
@@ -7415,8 +7247,8 @@ window.AGRO_PRODUCTS = [
     "packSizes": [
       {
         "label": "25 кг",
-        "price": 23,
-        "unit": "€ 23.00 / 25 кг",
+        "price": 21.85,
+        "unit": "€ 21.85 / 25 кг",
         "default": true
       }
     ],
@@ -7430,8 +7262,7 @@ window.AGRO_PRODUCTS = [
     "title": "Вуксал Аминоплант БИО – Чисти растителни аминокиселини",
     "category": "fertilizers",
     "categoryName": "Торове & Почви",
-    "price": 10.5,
-    "bgnPrice": 20.54,
+    "price": 9.97,
     "unit": "1 л",
     "brand": "aglukon",
     "brandName": "Aglukon (Германия)",
@@ -7459,8 +7290,8 @@ window.AGRO_PRODUCTS = [
     "packSizes": [
       {
         "label": "1 л",
-        "price": 10.5,
-        "unit": "€ 10.50 / 1 л",
+        "price": 9.97,
+        "unit": "€ 9.97 / 1 л",
         "default": true
       }
     ],
@@ -7474,8 +7305,7 @@ window.AGRO_PRODUCTS = [
     "title": "Кристалон Оранжев 6-12-36 – NPK 6-12-36 + 3% MgO + микро",
     "category": "fertilizers",
     "categoryName": "Торове & Почви",
-    "price": 7.1,
-    "bgnPrice": 13.89,
+    "price": 6.74,
     "unit": "1 кг",
     "brand": "yara",
     "brandName": "Yara Kristalon",
@@ -7503,8 +7333,8 @@ window.AGRO_PRODUCTS = [
     "packSizes": [
       {
         "label": "1 кг",
-        "price": 7.1,
-        "unit": "€ 7.10 / 1 кг",
+        "price": 6.74,
+        "unit": "€ 6.74 / 1 кг",
         "default": true
       }
     ],
@@ -7518,8 +7348,7 @@ window.AGRO_PRODUCTS = [
     "title": "Цинков Хелат Zn-EDTA 15% – Хелатиран цинк",
     "category": "fertilizers",
     "categoryName": "Торове & Почви",
-    "price": 4.8,
-    "bgnPrice": 9.39,
+    "price": 4.56,
     "unit": "100 г",
     "brand": "manica",
     "brandName": "Tradecorp",
@@ -7547,8 +7376,8 @@ window.AGRO_PRODUCTS = [
     "packSizes": [
       {
         "label": "100 г",
-        "price": 4.8,
-        "unit": "€ 4.80 / 100 г",
+        "price": 4.56,
+        "unit": "€ 4.56 / 100 г",
         "default": true
       }
     ],
@@ -7562,8 +7391,7 @@ window.AGRO_PRODUCTS = [
     "title": "Бордо Мулти Микро – B, Cu, Fe, Mn, Mo, Zn",
     "category": "fertilizers",
     "categoryName": "Торове & Почви",
-    "price": 3.2,
-    "bgnPrice": 6.26,
+    "price": 3.04,
     "unit": "100 г",
     "brand": "manica",
     "brandName": "Агрия АД",
@@ -7591,8 +7419,8 @@ window.AGRO_PRODUCTS = [
     "packSizes": [
       {
         "label": "100 г",
-        "price": 3.2,
-        "unit": "€ 3.20 / 100 г",
+        "price": 3.04,
+        "unit": "€ 3.04 / 100 г",
         "default": true
       }
     ],
@@ -7606,8 +7434,7 @@ window.AGRO_PRODUCTS = [
     "title": "Вуксал Микроплант – Висококонцентрирани микроелементи",
     "category": "fertilizers",
     "categoryName": "Торове & Почви",
-    "price": 9.8,
-    "bgnPrice": 19.17,
+    "price": 9.31,
     "unit": "1 л",
     "brand": "aglukon",
     "brandName": "Aglukon (Германия)",
@@ -7635,8 +7462,8 @@ window.AGRO_PRODUCTS = [
     "packSizes": [
       {
         "label": "1 л",
-        "price": 9.8,
-        "unit": "€ 9.80 / 1 л",
+        "price": 9.31,
+        "unit": "€ 9.31 / 1 л",
         "default": true
       }
     ],
@@ -7650,8 +7477,7 @@ window.AGRO_PRODUCTS = [
     "title": "Екопроп Нем БИО – Микоризни гъби Glomus и Bacillus",
     "category": "fertilizers",
     "categoryName": "Торове & Почви",
-    "price": 21,
-    "bgnPrice": 41.07,
+    "price": 19.95,
     "unit": "500 г",
     "brand": "amitica",
     "brandName": "Амитица",
@@ -7679,8 +7505,8 @@ window.AGRO_PRODUCTS = [
     "packSizes": [
       {
         "label": "500 г",
-        "price": 21,
-        "unit": "€ 21.00 / 500 г",
+        "price": 19.95,
+        "unit": "€ 19.95 / 500 г",
         "default": true
       }
     ],
@@ -7694,8 +7520,7 @@ window.AGRO_PRODUCTS = [
     "title": "ЯраВита Манкоцин – Zn 180 г/л + Mn 330 г/л + Cu 110 г/л",
     "category": "fertilizers",
     "categoryName": "Торове & Почви",
-    "price": 14.8,
-    "bgnPrice": 28.95,
+    "price": 14.06,
     "unit": "1 л",
     "brand": "yara",
     "brandName": "Yara Vita",
@@ -7723,8 +7548,8 @@ window.AGRO_PRODUCTS = [
     "packSizes": [
       {
         "label": "1 л",
-        "price": 14.8,
-        "unit": "€ 14.80 / 1 л",
+        "price": 14.06,
+        "unit": "€ 14.06 / 1 л",
         "default": true
       }
     ],
@@ -7738,8 +7563,7 @@ window.AGRO_PRODUCTS = [
     "title": "Тера-Сорб Комплекс – Свободни аминокиселини 20%",
     "category": "fertilizers",
     "categoryName": "Торове & Почви",
-    "price": 12.8,
-    "bgnPrice": 25.03,
+    "price": 12.16,
     "unit": "1 л",
     "brand": "valagro",
     "brandName": "Bioiberica",
@@ -7767,8 +7591,8 @@ window.AGRO_PRODUCTS = [
     "packSizes": [
       {
         "label": "1 л",
-        "price": 12.8,
-        "unit": "€ 12.80 / 1 л",
+        "price": 12.16,
+        "unit": "€ 12.16 / 1 л",
         "default": true
       }
     ],
@@ -7782,8 +7606,7 @@ window.AGRO_PRODUCTS = [
     "title": "Семена Домати Розово сърце БГ – Чистота: 99% / Кълняемост: 92%",
     "category": "seeds",
     "categoryName": "Семена & Картофи",
-    "price": 2.2,
-    "bgnPrice": 4.3,
+    "price": 2.09,
     "unit": "1 г",
     "brand": "sortovi",
     "brandName": "Сортови Семена БГ",
@@ -7797,7 +7620,7 @@ window.AGRO_PRODUCTS = [
     "formulation": "Семена",
     "quarantine": "0 дни",
     "reg": "БАБХ: № 011332-ПРЗ",
-    "badge": "Промо -10%",
+    "badge": "Промо -5%",
     "image": "/images/products/seed-packet.jpg",
     "desc": "Традиционният български розов гигант с форма на сърце. 400-800 грама.",
     "dose": "25-30 г за декар разсад",
@@ -7810,8 +7633,8 @@ window.AGRO_PRODUCTS = [
     "packSizes": [
       {
         "label": "1 г",
-        "price": 2.2,
-        "unit": "€ 2.20 / 1 г",
+        "price": 2.09,
+        "unit": "€ 2.09 / 1 г",
         "default": true
       }
     ],
@@ -7825,8 +7648,7 @@ window.AGRO_PRODUCTS = [
     "title": "Семена Домати Ръгби F1 – Чистота: 99.5% / Кълняемост: 96%",
     "category": "seeds",
     "categoryName": "Семена & Картофи",
-    "price": 4.8,
-    "bgnPrice": 9.39,
+    "price": 4.56,
     "unit": "50 семена",
     "brand": "sortovi",
     "brandName": "Геосемселект БГ",
@@ -7853,8 +7675,8 @@ window.AGRO_PRODUCTS = [
     "packSizes": [
       {
         "label": "50 семена",
-        "price": 4.8,
-        "unit": "€ 4.80 / 50 семена",
+        "price": 4.56,
+        "unit": "€ 4.56 / 50 семена",
         "default": true
       }
     ],
@@ -7868,8 +7690,7 @@ window.AGRO_PRODUCTS = [
     "title": "Семена Домати Идеал – Чистота: 99% / Кълняемост: 90%",
     "category": "seeds",
     "categoryName": "Семена & Картофи",
-    "price": 1.8,
-    "bgnPrice": 3.52,
+    "price": 1.71,
     "unit": "1 г",
     "brand": "sortovi",
     "brandName": "Сортови Семена БГ",
@@ -7896,8 +7717,8 @@ window.AGRO_PRODUCTS = [
     "packSizes": [
       {
         "label": "1 г",
-        "price": 1.8,
-        "unit": "€ 1.80 / 1 г",
+        "price": 1.71,
+        "unit": "€ 1.71 / 1 г",
         "default": true
       }
     ],
@@ -7911,8 +7732,7 @@ window.AGRO_PRODUCTS = [
     "title": "Семена Домати Биволско сърце розово – Чистота: 99% / Кълняемост: 91%",
     "category": "seeds",
     "categoryName": "Семена & Картофи",
-    "price": 2.1,
-    "bgnPrice": 4.11,
+    "price": 1.99,
     "unit": "1 г",
     "brand": "sortovi",
     "brandName": "Флориан ООД",
@@ -7939,8 +7759,8 @@ window.AGRO_PRODUCTS = [
     "packSizes": [
       {
         "label": "1 г",
-        "price": 2.1,
-        "unit": "€ 2.10 / 1 г",
+        "price": 1.99,
+        "unit": "€ 1.99 / 1 г",
         "default": true
       }
     ],
@@ -7954,8 +7774,7 @@ window.AGRO_PRODUCTS = [
     "title": "Семена Домати Рила F1 – Чистота: 99% / Кълняемост: 94%",
     "category": "seeds",
     "categoryName": "Семена & Картофи",
-    "price": 3.9,
-    "bgnPrice": 7.63,
+    "price": 3.7,
     "unit": "1 г",
     "brand": "sortovi",
     "brandName": "Геосемселект БГ",
@@ -7982,8 +7801,8 @@ window.AGRO_PRODUCTS = [
     "packSizes": [
       {
         "label": "1 г",
-        "price": 3.9,
-        "unit": "€ 3.90 / 1 г",
+        "price": 3.7,
+        "unit": "€ 3.70 / 1 г",
         "default": true
       }
     ],
@@ -7997,8 +7816,7 @@ window.AGRO_PRODUCTS = [
     "title": "Семена Краставици Гергана – Чистота: 99% / Кълняемост: 94%",
     "category": "seeds",
     "categoryName": "Семена & Картофи",
-    "price": 1.6,
-    "bgnPrice": 3.13,
+    "price": 1.52,
     "unit": "3 г",
     "brand": "sortovi",
     "brandName": "Сортови Семена БГ",
@@ -8025,8 +7843,8 @@ window.AGRO_PRODUCTS = [
     "packSizes": [
       {
         "label": "3 г",
-        "price": 1.6,
-        "unit": "€ 1.60 / 3 г",
+        "price": 1.52,
+        "unit": "€ 1.52 / 3 г",
         "default": true
       }
     ],
@@ -8040,8 +7858,7 @@ window.AGRO_PRODUCTS = [
     "title": "Семена Краставици Сандра F1 – Чистота: 99% / Кълняемост: 95%",
     "category": "seeds",
     "categoryName": "Семена & Картофи",
-    "price": 3.5,
-    "bgnPrice": 6.85,
+    "price": 3.32,
     "unit": "1 г",
     "brand": "sortovi",
     "brandName": "Сортови Семена БГ",
@@ -8068,8 +7885,8 @@ window.AGRO_PRODUCTS = [
     "packSizes": [
       {
         "label": "1 г",
-        "price": 3.5,
-        "unit": "€ 3.50 / 1 г",
+        "price": 3.32,
+        "unit": "€ 3.32 / 1 г",
         "default": true
       }
     ],
@@ -8083,8 +7900,7 @@ window.AGRO_PRODUCTS = [
     "title": "Семена Краставици Телеграф F1 – Чистота: 99% / Кълняемост: 93%",
     "category": "seeds",
     "categoryName": "Семена & Картофи",
-    "price": 1.35,
-    "bgnPrice": 2.64,
+    "price": 1.28,
     "unit": "2 г",
     "brand": "sortovi",
     "brandName": "Български Семена",
@@ -8111,8 +7927,8 @@ window.AGRO_PRODUCTS = [
     "packSizes": [
       {
         "label": "2 г",
-        "price": 1.35,
-        "unit": "€ 1.35 / 2 г",
+        "price": 1.28,
+        "unit": "€ 1.28 / 2 г",
         "default": true
       }
     ],
@@ -8126,8 +7942,7 @@ window.AGRO_PRODUCTS = [
     "title": "Корнишони Мегйер F1 – Партенокарпен хибрид",
     "category": "seeds",
     "categoryName": "Семена & Картофи",
-    "price": 3.9,
-    "bgnPrice": 7.63,
+    "price": 3.7,
     "unit": "1 г",
     "brand": "sortovi",
     "brandName": "ZKI Унгария",
@@ -8154,8 +7969,8 @@ window.AGRO_PRODUCTS = [
     "packSizes": [
       {
         "label": "1 г",
-        "price": 3.9,
-        "unit": "€ 3.90 / 1 г",
+        "price": 3.7,
+        "unit": "€ 3.70 / 1 г",
         "default": true
       }
     ],
@@ -8169,8 +7984,7 @@ window.AGRO_PRODUCTS = [
     "title": "Корнишони Алтай F1 – Чистота: 99% / Кълняемост: 95%",
     "category": "seeds",
     "categoryName": "Семена & Картофи",
-    "price": 0.87,
-    "bgnPrice": 1.7,
+    "price": 0.83,
     "unit": "2 г",
     "brand": "sortovi",
     "brandName": "Флориан ООД",
@@ -8197,8 +8011,8 @@ window.AGRO_PRODUCTS = [
     "packSizes": [
       {
         "label": "2 г",
-        "price": 0.87,
-        "unit": "€ 0.87 / 2 г",
+        "price": 0.83,
+        "unit": "€ 0.83 / 2 г",
         "default": true
       }
     ],
@@ -8212,8 +8026,7 @@ window.AGRO_PRODUCTS = [
     "title": "Пипер Куртовска капия 1619 – Чистота: 99% / Кълняемост: 91%",
     "category": "seeds",
     "categoryName": "Семена & Картофи",
-    "price": 1.9,
-    "bgnPrice": 3.72,
+    "price": 1.8,
     "unit": "2 г",
     "brand": "sortovi",
     "brandName": "ИЗК Марица",
@@ -8240,8 +8053,8 @@ window.AGRO_PRODUCTS = [
     "packSizes": [
       {
         "label": "2 г",
-        "price": 1.9,
-        "unit": "€ 1.90 / 2 г",
+        "price": 1.8,
+        "unit": "€ 1.80 / 2 г",
         "default": true
       }
     ],
@@ -8255,8 +8068,7 @@ window.AGRO_PRODUCTS = [
     "title": "Пипер Сиврия 600 – Чистота: 99% / Кълняемост: 90%",
     "category": "seeds",
     "categoryName": "Семена & Картофи",
-    "price": 1.7,
-    "bgnPrice": 3.32,
+    "price": 1.61,
     "unit": "2 г",
     "brand": "sortovi",
     "brandName": "Сортови Семена",
@@ -8270,7 +8082,7 @@ window.AGRO_PRODUCTS = [
     "formulation": "Семена",
     "quarantine": "0 дни",
     "reg": "БАБХ: № 011409-ПРЗ",
-    "badge": "Промо -10%",
+    "badge": "Промо -5%",
     "image": "/images/products/seed-packet.jpg",
     "desc": "Светлозелена тънка и дълга чушка за пресни салати, пълнене и пържене.",
     "dose": "150 г/дка",
@@ -8283,8 +8095,8 @@ window.AGRO_PRODUCTS = [
     "packSizes": [
       {
         "label": "2 г",
-        "price": 1.7,
-        "unit": "€ 1.70 / 2 г",
+        "price": 1.61,
+        "unit": "€ 1.61 / 2 г",
         "default": true
       }
     ],
@@ -8298,8 +8110,7 @@ window.AGRO_PRODUCTS = [
     "title": "Пипер Хисарска капия – Чистота: 99% / Кълняемост: 92%",
     "category": "seeds",
     "categoryName": "Семена & Картофи",
-    "price": 2.1,
-    "bgnPrice": 4.11,
+    "price": 1.99,
     "unit": "2 г",
     "brand": "sortovi",
     "brandName": "ИЗК Марица",
@@ -8326,8 +8137,8 @@ window.AGRO_PRODUCTS = [
     "packSizes": [
       {
         "label": "2 г",
-        "price": 2.1,
-        "unit": "€ 2.10 / 2 г",
+        "price": 1.99,
+        "unit": "€ 1.99 / 2 г",
         "default": true
       }
     ],
@@ -8341,8 +8152,7 @@ window.AGRO_PRODUCTS = [
     "title": "Люти чушки Шипка / Български морков – Чистота: 99% / Кълняемост: 93%",
     "category": "seeds",
     "categoryName": "Семена & Картофи",
-    "price": 1.5,
-    "bgnPrice": 2.93,
+    "price": 1.42,
     "unit": "1 г",
     "brand": "sortovi",
     "brandName": "Сортови Семена",
@@ -8369,8 +8179,8 @@ window.AGRO_PRODUCTS = [
     "packSizes": [
       {
         "label": "1 г",
-        "price": 1.5,
-        "unit": "€ 1.50 / 1 г",
+        "price": 1.42,
+        "unit": "€ 1.42 / 1 г",
         "default": true
       }
     ],
@@ -8384,8 +8194,7 @@ window.AGRO_PRODUCTS = [
     "title": "Патладжан Класик F1 – Чистота: 99% / Кълняемост: 94%",
     "category": "seeds",
     "categoryName": "Семена & Картофи",
-    "price": 3.53,
-    "bgnPrice": 6.9,
+    "price": 3.35,
     "unit": "1 г",
     "brand": "sortovi",
     "brandName": "Seminis",
@@ -8412,8 +8221,8 @@ window.AGRO_PRODUCTS = [
     "packSizes": [
       {
         "label": "1 г",
-        "price": 3.53,
-        "unit": "€ 3.53 / 1 г",
+        "price": 3.35,
+        "unit": "€ 3.35 / 1 г",
         "default": true
       }
     ],
@@ -8427,8 +8236,7 @@ window.AGRO_PRODUCTS = [
     "title": "Патладжан Блек Бюти – Чистота: 99% / Кълняемост: 90%",
     "category": "seeds",
     "categoryName": "Семена & Картофи",
-    "price": 1.4,
-    "bgnPrice": 2.74,
+    "price": 1.33,
     "unit": "2 г",
     "brand": "sortovi",
     "brandName": "Сортови Семена",
@@ -8455,8 +8263,8 @@ window.AGRO_PRODUCTS = [
     "packSizes": [
       {
         "label": "2 г",
-        "price": 1.4,
-        "unit": "€ 1.40 / 2 г",
+        "price": 1.33,
+        "unit": "€ 1.33 / 2 г",
         "default": true
       }
     ],
@@ -8470,8 +8278,7 @@ window.AGRO_PRODUCTS = [
     "title": "Тиквички Изобилна F1 – Чистота: 99% / Кълняемост: 95%",
     "category": "seeds",
     "categoryName": "Семена & Картофи",
-    "price": 2.1,
-    "bgnPrice": 4.11,
+    "price": 1.99,
     "unit": "5 г",
     "brand": "sortovi",
     "brandName": "Флориан ООД",
@@ -8498,8 +8305,8 @@ window.AGRO_PRODUCTS = [
     "packSizes": [
       {
         "label": "5 г",
-        "price": 2.1,
-        "unit": "€ 2.10 / 5 г",
+        "price": 1.99,
+        "unit": "€ 1.99 / 5 г",
         "default": true
       }
     ],
@@ -8513,8 +8320,7 @@ window.AGRO_PRODUCTS = [
     "title": "Тиквички Нефертити (Тъмнозелени) – Чистота: 99% / Кълняемост: 93%",
     "category": "seeds",
     "categoryName": "Семена & Картофи",
-    "price": 1.6,
-    "bgnPrice": 3.13,
+    "price": 1.52,
     "unit": "5 г",
     "brand": "sortovi",
     "brandName": "Сортови Семена",
@@ -8541,8 +8347,8 @@ window.AGRO_PRODUCTS = [
     "packSizes": [
       {
         "label": "5 г",
-        "price": 1.6,
-        "unit": "€ 1.60 / 5 г",
+        "price": 1.52,
+        "unit": "€ 1.52 / 5 г",
         "default": true
       }
     ],
@@ -8556,8 +8362,7 @@ window.AGRO_PRODUCTS = [
     "title": "Зеле Кьосе 17 – Чистота: 99% / Кълняемост: 93%",
     "category": "seeds",
     "categoryName": "Семена & Картофи",
-    "price": 1.7,
-    "bgnPrice": 3.32,
+    "price": 1.61,
     "unit": "3 г",
     "brand": "sortovi",
     "brandName": "Сортови Семена",
@@ -8584,8 +8389,8 @@ window.AGRO_PRODUCTS = [
     "packSizes": [
       {
         "label": "3 г",
-        "price": 1.7,
-        "unit": "€ 1.70 / 3 г",
+        "price": 1.61,
+        "unit": "€ 1.61 / 3 г",
         "default": true
       }
     ],
@@ -8599,8 +8404,7 @@ window.AGRO_PRODUCTS = [
     "title": "Зеле Балкан (Късно) – Чистота: 99% / Кълняемост: 92%",
     "category": "seeds",
     "categoryName": "Семена & Картофи",
-    "price": 1.8,
-    "bgnPrice": 3.52,
+    "price": 1.71,
     "unit": "3 г",
     "brand": "sortovi",
     "brandName": "ИЗК Марица",
@@ -8627,8 +8431,8 @@ window.AGRO_PRODUCTS = [
     "packSizes": [
       {
         "label": "3 г",
-        "price": 1.8,
-        "unit": "€ 1.80 / 3 г",
+        "price": 1.71,
+        "unit": "€ 1.71 / 3 г",
         "default": true
       }
     ],
@@ -8642,8 +8446,7 @@ window.AGRO_PRODUCTS = [
     "title": "Карфиол Ерфуртско джудже – Чистота: 99% / Кълняемост: 90%",
     "category": "seeds",
     "categoryName": "Семена & Картофи",
-    "price": 1.8,
-    "bgnPrice": 3.52,
+    "price": 1.71,
     "unit": "2 г",
     "brand": "sortovi",
     "brandName": "Сортови Семена",
@@ -8670,8 +8473,8 @@ window.AGRO_PRODUCTS = [
     "packSizes": [
       {
         "label": "2 г",
-        "price": 1.8,
-        "unit": "€ 1.80 / 2 г",
+        "price": 1.71,
+        "unit": "€ 1.71 / 2 г",
         "default": true
       }
     ],
@@ -8685,8 +8488,7 @@ window.AGRO_PRODUCTS = [
     "title": "Спанак Матадор – Чистота: 99% / Кълняемост: 88%",
     "category": "seeds",
     "categoryName": "Семена & Картофи",
-    "price": 1.4,
-    "bgnPrice": 2.74,
+    "price": 1.33,
     "unit": "10 г",
     "brand": "sortovi",
     "brandName": "Сортови Семена",
@@ -8713,8 +8515,8 @@ window.AGRO_PRODUCTS = [
     "packSizes": [
       {
         "label": "10 г",
-        "price": 1.4,
-        "unit": "€ 1.40 / 10 г",
+        "price": 1.33,
+        "unit": "€ 1.33 / 10 г",
         "default": true
       }
     ],
@@ -8728,8 +8530,7 @@ window.AGRO_PRODUCTS = [
     "title": "Моркови Нантски 3 – Чистота: 98% / Кълняемост: 87%",
     "category": "seeds",
     "categoryName": "Семена & Картофи",
-    "price": 1.5,
-    "bgnPrice": 2.93,
+    "price": 1.42,
     "unit": "5 г",
     "brand": "sortovi",
     "brandName": "Сортови Семена",
@@ -8743,7 +8544,7 @@ window.AGRO_PRODUCTS = [
     "formulation": "Семена",
     "quarantine": "0 дни",
     "reg": "БАБХ: № 011486-ПРЗ",
-    "badge": "Промо -10%",
+    "badge": "Промо -5%",
     "image": "/images/products/seed-packet.jpg",
     "desc": "Сочни моркови без жилаво сърце за бебешки пюрета и пресни сокове.",
     "dose": "450-600 г/дка",
@@ -8756,8 +8557,8 @@ window.AGRO_PRODUCTS = [
     "packSizes": [
       {
         "label": "5 г",
-        "price": 1.5,
-        "unit": "€ 1.50 / 5 г",
+        "price": 1.42,
+        "unit": "€ 1.42 / 5 г",
         "default": true
       }
     ],
@@ -8771,8 +8572,7 @@ window.AGRO_PRODUCTS = [
     "title": "Репички Червени с бели опашки – Чистота: 99% / Кълняемост: 94%",
     "category": "seeds",
     "categoryName": "Семена & Картофи",
-    "price": 1.2,
-    "bgnPrice": 2.35,
+    "price": 1.14,
     "unit": "5 г",
     "brand": "sortovi",
     "brandName": "Сортови Семена",
@@ -8799,8 +8599,8 @@ window.AGRO_PRODUCTS = [
     "packSizes": [
       {
         "label": "5 г",
-        "price": 1.2,
-        "unit": "€ 1.20 / 5 г",
+        "price": 1.14,
+        "unit": "€ 1.14 / 5 г",
         "default": true
       }
     ],
@@ -8814,8 +8614,7 @@ window.AGRO_PRODUCTS = [
     "title": "Лук Асеновградска каба 5 – Чистота: 98% / Кълняемост: 86%",
     "category": "seeds",
     "categoryName": "Семена & Картофи",
-    "price": 1.9,
-    "bgnPrice": 3.72,
+    "price": 1.8,
     "unit": "5 г",
     "brand": "sortovi",
     "brandName": "ИЗК Марица",
@@ -8842,8 +8641,8 @@ window.AGRO_PRODUCTS = [
     "packSizes": [
       {
         "label": "5 г",
-        "price": 1.9,
-        "unit": "€ 1.90 / 5 г",
+        "price": 1.8,
+        "unit": "€ 1.80 / 5 г",
         "default": true
       }
     ],
@@ -8857,8 +8656,7 @@ window.AGRO_PRODUCTS = [
     "title": "Салата Жълта красива – Чистота: 99% / Кълняемост: 92%",
     "category": "seeds",
     "categoryName": "Семена & Картофи",
-    "price": 1.3,
-    "bgnPrice": 2.54,
+    "price": 1.23,
     "unit": "3 г",
     "brand": "sortovi",
     "brandName": "Сортови Семена",
@@ -8885,8 +8683,8 @@ window.AGRO_PRODUCTS = [
     "packSizes": [
       {
         "label": "3 г",
-        "price": 1.3,
-        "unit": "€ 1.30 / 3 г",
+        "price": 1.23,
+        "unit": "€ 1.23 / 3 г",
         "default": true
       }
     ],
@@ -8900,8 +8698,7 @@ window.AGRO_PRODUCTS = [
     "title": "Грах Пловдивска перла – Чистота: 99% / Кълняемост: 95%",
     "category": "seeds",
     "categoryName": "Семена & Картофи",
-    "price": 2.2,
-    "bgnPrice": 4.3,
+    "price": 2.09,
     "unit": "50 г",
     "brand": "sortovi",
     "brandName": "ИЗК Марица",
@@ -8928,8 +8725,8 @@ window.AGRO_PRODUCTS = [
     "packSizes": [
       {
         "label": "50 г",
-        "price": 2.2,
-        "unit": "€ 2.20 / 50 г",
+        "price": 2.09,
+        "unit": "€ 2.09 / 50 г",
         "default": true
       }
     ],
@@ -8943,8 +8740,7 @@ window.AGRO_PRODUCTS = [
     "title": "Зелен Фасул Никос (Без лико) – Чистота: 99% / Кълняемост: 94%",
     "category": "seeds",
     "categoryName": "Семена & Картофи",
-    "price": 2.5,
-    "bgnPrice": 4.89,
+    "price": 2.38,
     "unit": "50 г",
     "brand": "sortovi",
     "brandName": "Сортови Семена",
@@ -8971,8 +8767,8 @@ window.AGRO_PRODUCTS = [
     "packSizes": [
       {
         "label": "50 г",
-        "price": 2.5,
-        "unit": "€ 2.50 / 50 г",
+        "price": 2.38,
+        "unit": "€ 2.38 / 50 г",
         "default": true
       }
     ],
@@ -8986,8 +8782,7 @@ window.AGRO_PRODUCTS = [
     "title": "Диня Мраморна БГ – Чистота: 99% / Кълняемост: 90%",
     "category": "seeds",
     "categoryName": "Семена & Картофи",
-    "price": 1.8,
-    "bgnPrice": 3.52,
+    "price": 1.71,
     "unit": "5 г",
     "brand": "sortovi",
     "brandName": "Сортови Семена",
@@ -9014,8 +8809,8 @@ window.AGRO_PRODUCTS = [
     "packSizes": [
       {
         "label": "5 г",
-        "price": 1.8,
-        "unit": "€ 1.80 / 5 г",
+        "price": 1.71,
+        "unit": "€ 1.71 / 5 г",
         "default": true
       }
     ],
@@ -9029,8 +8824,7 @@ window.AGRO_PRODUCTS = [
     "title": "Пъпеш Медена роса – Чистота: 99% / Кълняемост: 89%",
     "category": "seeds",
     "categoryName": "Семена & Картофи",
-    "price": 1.8,
-    "bgnPrice": 3.52,
+    "price": 1.71,
     "unit": "3 г",
     "brand": "sortovi",
     "brandName": "Сортови Семена",
@@ -9057,8 +8851,8 @@ window.AGRO_PRODUCTS = [
     "packSizes": [
       {
         "label": "3 г",
-        "price": 1.8,
-        "unit": "€ 1.80 / 3 г",
+        "price": 1.71,
+        "unit": "€ 1.71 / 3 г",
         "default": true
       }
     ],
@@ -9072,8 +8866,7 @@ window.AGRO_PRODUCTS = [
     "title": "Тревна Смеска Спорт & Игра – Lolium perenne 50% + Poa pratensis",
     "category": "seeds",
     "categoryName": "Семена & Картофи",
-    "price": 8.9,
-    "bgnPrice": 17.41,
+    "price": 8.46,
     "unit": "1 кг",
     "brand": "sortovi",
     "brandName": "DLF Trifolium",
@@ -9100,8 +8893,8 @@ window.AGRO_PRODUCTS = [
     "packSizes": [
       {
         "label": "1 кг",
-        "price": 8.9,
-        "unit": "€ 8.90 / 1 кг",
+        "price": 8.46,
+        "unit": "€ 8.46 / 1 кг",
         "default": true
       }
     ],
@@ -9115,8 +8908,7 @@ window.AGRO_PRODUCTS = [
     "title": "Тревна Смеска Сенчеста Градина – Festuca rubra + Festuca ovina",
     "category": "seeds",
     "categoryName": "Семена & Картофи",
-    "price": 9.2,
-    "bgnPrice": 17.99,
+    "price": 8.74,
     "unit": "1 кг",
     "brand": "sortovi",
     "brandName": "DLF Trifolium",
@@ -9143,8 +8935,8 @@ window.AGRO_PRODUCTS = [
     "packSizes": [
       {
         "label": "1 кг",
-        "price": 9.2,
-        "unit": "€ 9.20 / 1 кг",
+        "price": 8.74,
+        "unit": "€ 8.74 / 1 кг",
         "default": true
       }
     ],
@@ -9158,8 +8950,7 @@ window.AGRO_PRODUCTS = [
     "title": "Дрожди Lalvin EC-1118 – Saccharomyces bayanus",
     "category": "wine",
     "categoryName": "Вино & Ракия",
-    "price": 24.5,
-    "bgnPrice": 47.92,
+    "price": 23.27,
     "unit": "500 г",
     "brand": "lalvin",
     "brandName": "Lallemand (Канада)",
@@ -9186,8 +8977,8 @@ window.AGRO_PRODUCTS = [
     "packSizes": [
       {
         "label": "500 г",
-        "price": 24.5,
-        "unit": "€ 24.50 / 500 г",
+        "price": 23.27,
+        "unit": "€ 23.27 / 500 г",
         "default": true
       }
     ],
@@ -9201,8 +8992,7 @@ window.AGRO_PRODUCTS = [
     "title": "Дрожди Lalvin QA23 – Saccharomyces cerevisiae",
     "category": "wine",
     "categoryName": "Вино & Ракия",
-    "price": 26,
-    "bgnPrice": 50.85,
+    "price": 24.7,
     "unit": "500 г",
     "brand": "lalvin",
     "brandName": "Lallemand (Канада)",
@@ -9216,7 +9006,7 @@ window.AGRO_PRODUCTS = [
     "formulation": "Сухи дрожди",
     "quarantine": "0 дни",
     "reg": "БАБХ: № 011563-ПРЗ",
-    "badge": "Промо -10%",
+    "badge": "Промо -5%",
     "image": "/images/products/wine-bottle.jpg",
     "desc": "Отключва тропически и цитрусови аромати за Совиньон Блан и Мускат.",
     "dose": "20 г за 100 л",
@@ -9229,8 +9019,8 @@ window.AGRO_PRODUCTS = [
     "packSizes": [
       {
         "label": "500 г",
-        "price": 26,
-        "unit": "€ 26.00 / 500 г",
+        "price": 24.7,
+        "unit": "€ 24.70 / 500 г",
         "default": true
       }
     ],
@@ -9244,8 +9034,7 @@ window.AGRO_PRODUCTS = [
     "title": "Дрожди Lalvin Bourgovin RC-212 – Saccharomyces cerevisiae",
     "category": "wine",
     "categoryName": "Вино & Ракия",
-    "price": 25.5,
-    "bgnPrice": 49.87,
+    "price": 24.22,
     "unit": "500 г",
     "brand": "lalvin",
     "brandName": "Lallemand (Канада)",
@@ -9272,8 +9061,8 @@ window.AGRO_PRODUCTS = [
     "packSizes": [
       {
         "label": "500 г",
-        "price": 25.5,
-        "unit": "€ 25.50 / 500 г",
+        "price": 24.22,
+        "unit": "€ 24.22 / 500 г",
         "default": true
       }
     ],
@@ -9287,8 +9076,7 @@ window.AGRO_PRODUCTS = [
     "title": "Дрожди Lalvin K1-V1116 – Saccharomyces cerevisiae",
     "category": "wine",
     "categoryName": "Вино & Ракия",
-    "price": 24.8,
-    "bgnPrice": 48.5,
+    "price": 23.56,
     "unit": "500 г",
     "brand": "lalvin",
     "brandName": "Lallemand (Канада)",
@@ -9315,8 +9103,8 @@ window.AGRO_PRODUCTS = [
     "packSizes": [
       {
         "label": "500 г",
-        "price": 24.8,
-        "unit": "€ 24.80 / 500 г",
+        "price": 23.56,
+        "unit": "€ 23.56 / 500 г",
         "default": true
       }
     ],
@@ -9330,8 +9118,7 @@ window.AGRO_PRODUCTS = [
     "title": "Дрожди Lalvin D-47 – Селекция за бели вина от Рона",
     "category": "wine",
     "categoryName": "Вино & Ракия",
-    "price": 25,
-    "bgnPrice": 48.9,
+    "price": 23.75,
     "unit": "500 г",
     "brand": "lalvin",
     "brandName": "Lallemand (Канада)",
@@ -9358,8 +9145,8 @@ window.AGRO_PRODUCTS = [
     "packSizes": [
       {
         "label": "500 г",
-        "price": 25,
-        "unit": "€ 25.00 / 500 г",
+        "price": 23.75,
+        "unit": "€ 23.75 / 500 г",
         "default": true
       }
     ],
@@ -9373,8 +9160,7 @@ window.AGRO_PRODUCTS = [
     "title": "Активатор Оптимало (Fermaid) – Инактивирани дрожди + витамини + диамониев фосфат",
     "category": "wine",
     "categoryName": "Вино & Ракия",
-    "price": 6.5,
-    "bgnPrice": 12.71,
+    "price": 6.17,
     "unit": "100 г",
     "brand": "lalvin",
     "brandName": "Lallemand (Канада)",
@@ -9401,8 +9187,8 @@ window.AGRO_PRODUCTS = [
     "packSizes": [
       {
         "label": "100 г",
-        "price": 6.5,
-        "unit": "€ 6.50 / 100 г",
+        "price": 6.17,
+        "unit": "€ 6.17 / 100 г",
         "default": true
       }
     ],
@@ -9416,8 +9202,7 @@ window.AGRO_PRODUCTS = [
     "title": "Френски Дъбов Чипс Medium – 100% Френски дъб Quercus petraea",
     "category": "wine",
     "categoryName": "Вино & Ракия",
-    "price": 12.8,
-    "bgnPrice": 25.03,
+    "price": 12.16,
     "unit": "1 кг",
     "brand": "lalvin",
     "brandName": "Pronektar (Франция)",
@@ -9444,8 +9229,8 @@ window.AGRO_PRODUCTS = [
     "packSizes": [
       {
         "label": "1 кг",
-        "price": 12.8,
-        "unit": "€ 12.80 / 1 кг",
+        "price": 12.16,
+        "unit": "€ 12.16 / 1 кг",
         "default": true
       }
     ],
@@ -9459,8 +9244,7 @@ window.AGRO_PRODUCTS = [
     "title": "Американски Дъбов Чипс Medium+ – 100% Американски бял дъб",
     "category": "wine",
     "categoryName": "Вино & Ракия",
-    "price": 13.5,
-    "bgnPrice": 26.4,
+    "price": 12.82,
     "unit": "1 кг",
     "brand": "lalvin",
     "brandName": "Pronektar (САЩ)",
@@ -9487,8 +9271,8 @@ window.AGRO_PRODUCTS = [
     "packSizes": [
       {
         "label": "1 кг",
-        "price": 13.5,
-        "unit": "€ 13.50 / 1 кг",
+        "price": 12.82,
+        "unit": "€ 12.82 / 1 кг",
         "default": true
       }
     ],
@@ -9502,8 +9286,7 @@ window.AGRO_PRODUCTS = [
     "title": "Калиев Метабисулфит 99% – Калиев пиросулфит K2S2O5",
     "category": "wine",
     "categoryName": "Вино & Ракия",
-    "price": 3.8,
-    "bgnPrice": 7.43,
+    "price": 3.61,
     "unit": "1 кг",
     "brand": "manica",
     "brandName": "Enartis (Италия)",
@@ -9530,8 +9313,8 @@ window.AGRO_PRODUCTS = [
     "packSizes": [
       {
         "label": "1 кг",
-        "price": 3.8,
-        "unit": "€ 3.80 / 1 кг",
+        "price": 3.61,
+        "unit": "€ 3.61 / 1 кг",
         "default": true
       }
     ],
@@ -9545,8 +9328,7 @@ window.AGRO_PRODUCTS = [
     "title": "Натриев Бентонит за Бистрене – Колоиден активиран монтморилонит",
     "category": "wine",
     "categoryName": "Вино & Ракия",
-    "price": 3.5,
-    "bgnPrice": 6.85,
+    "price": 3.32,
     "unit": "1 кг",
     "brand": "manica",
     "brandName": "Erbslöh (Германия)",
@@ -9573,8 +9355,8 @@ window.AGRO_PRODUCTS = [
     "packSizes": [
       {
         "label": "1 кг",
-        "price": 3.5,
-        "unit": "€ 3.50 / 1 кг",
+        "price": 3.32,
+        "unit": "€ 3.32 / 1 кг",
         "default": true
       }
     ],
@@ -9588,8 +9370,7 @@ window.AGRO_PRODUCTS = [
     "title": "Енологичен Желатин за Вино – Хранителен желатин за избистряне",
     "category": "wine",
     "categoryName": "Вино & Ракия",
-    "price": 4.2,
-    "bgnPrice": 8.21,
+    "price": 3.99,
     "unit": "100 г",
     "brand": "manica",
     "brandName": "Enartis",
@@ -9616,8 +9397,8 @@ window.AGRO_PRODUCTS = [
     "packSizes": [
       {
         "label": "100 г",
-        "price": 4.2,
-        "unit": "€ 4.20 / 100 г",
+        "price": 3.99,
+        "unit": "€ 3.99 / 100 г",
         "default": true
       }
     ],
@@ -9631,8 +9412,7 @@ window.AGRO_PRODUCTS = [
     "title": "Танин Гроздов Енологичен – Концентриран танин от гроздови семки",
     "category": "wine",
     "categoryName": "Вино & Ракия",
-    "price": 8.9,
-    "bgnPrice": 17.41,
+    "price": 8.46,
     "unit": "100 г",
     "brand": "lalvin",
     "brandName": "Lallemand",
@@ -9659,8 +9439,8 @@ window.AGRO_PRODUCTS = [
     "packSizes": [
       {
         "label": "100 г",
-        "price": 8.9,
-        "unit": "€ 8.90 / 100 г",
+        "price": 8.46,
+        "unit": "€ 8.46 / 100 г",
         "default": true
       }
     ],
@@ -9674,8 +9454,7 @@ window.AGRO_PRODUCTS = [
     "title": "Аромат за Ракия Мускат – Етеричен концентрат Мускат Отонел",
     "category": "wine",
     "categoryName": "Вино & Ракия",
-    "price": 2.2,
-    "bgnPrice": 4.3,
+    "price": 2.09,
     "unit": "20 мл",
     "brand": "sortovi",
     "brandName": "Bulagro Енология",
@@ -9689,7 +9468,7 @@ window.AGRO_PRODUCTS = [
     "formulation": "Флакон",
     "quarantine": "0 дни",
     "reg": "БАБХ: № 011640-ПРЗ",
-    "badge": "Промо -10%",
+    "badge": "Промо -5%",
     "image": "/images/products/wine-bottle.jpg",
     "desc": "Придава благороден мускатов букет на обикновена домашна гроздова ракия.",
     "dose": "20 мл за 50 л ракия",
@@ -9702,8 +9481,8 @@ window.AGRO_PRODUCTS = [
     "packSizes": [
       {
         "label": "20 мл",
-        "price": 2.2,
-        "unit": "€ 2.20 / 20 мл",
+        "price": 2.09,
+        "unit": "€ 2.09 / 20 мл",
         "default": true
       }
     ],
@@ -9717,8 +9496,7 @@ window.AGRO_PRODUCTS = [
     "title": "Аромат за Ракия Гроздова – Натурален винен дестилатен аромат",
     "category": "wine",
     "categoryName": "Вино & Ракия",
-    "price": 2.2,
-    "bgnPrice": 4.3,
+    "price": 2.09,
     "unit": "20 мл",
     "brand": "sortovi",
     "brandName": "Bulagro Енология",
@@ -9745,8 +9523,8 @@ window.AGRO_PRODUCTS = [
     "packSizes": [
       {
         "label": "20 мл",
-        "price": 2.2,
-        "unit": "€ 2.20 / 20 мл",
+        "price": 2.09,
+        "unit": "€ 2.09 / 20 мл",
         "default": true
       }
     ],
@@ -9760,8 +9538,7 @@ window.AGRO_PRODUCTS = [
     "title": "Аромат за Ракия Сливова – Екстракт от зрели сливи Кюстендилска",
     "category": "wine",
     "categoryName": "Вино & Ракия",
-    "price": 2.2,
-    "bgnPrice": 4.3,
+    "price": 2.09,
     "unit": "20 мл",
     "brand": "sortovi",
     "brandName": "Bulagro Енология",
@@ -9788,8 +9565,8 @@ window.AGRO_PRODUCTS = [
     "packSizes": [
       {
         "label": "20 мл",
-        "price": 2.2,
-        "unit": "€ 2.20 / 20 мл",
+        "price": 2.09,
+        "unit": "€ 2.09 / 20 мл",
         "default": true
       }
     ],
@@ -9803,8 +9580,7 @@ window.AGRO_PRODUCTS = [
     "title": "Аромат за Ракия Дюлева – Ароматен екстракт от дюли",
     "category": "wine",
     "categoryName": "Вино & Ракия",
-    "price": 2.4,
-    "bgnPrice": 4.69,
+    "price": 2.28,
     "unit": "20 мл",
     "brand": "sortovi",
     "brandName": "Bulagro Енология",
@@ -9831,8 +9607,8 @@ window.AGRO_PRODUCTS = [
     "packSizes": [
       {
         "label": "20 мл",
-        "price": 2.4,
-        "unit": "€ 2.40 / 20 мл",
+        "price": 2.28,
+        "unit": "€ 2.28 / 20 мл",
         "default": true
       }
     ],
@@ -9846,8 +9622,7 @@ window.AGRO_PRODUCTS = [
     "title": "Оцветител Карамел за Ракия – Захарен колер E150d",
     "category": "wine",
     "categoryName": "Вино & Ракия",
-    "price": 2.9,
-    "bgnPrice": 5.67,
+    "price": 2.75,
     "unit": "100 мл",
     "brand": "sortovi",
     "brandName": "Bulagro Енология",
@@ -9874,8 +9649,8 @@ window.AGRO_PRODUCTS = [
     "packSizes": [
       {
         "label": "100 мл",
-        "price": 2.9,
-        "unit": "€ 2.90 / 100 мл",
+        "price": 2.75,
+        "unit": "€ 2.75 / 100 мл",
         "default": true
       }
     ],
@@ -9889,8 +9664,7 @@ window.AGRO_PRODUCTS = [
     "title": "Пеногасител за Казани за Ракия – Хранителна симетрионова емулсия",
     "category": "wine",
     "categoryName": "Вино & Ракия",
-    "price": 3.6,
-    "bgnPrice": 7.04,
+    "price": 3.42,
     "unit": "100 мл",
     "brand": "sortovi",
     "brandName": "Enartis",
@@ -9917,8 +9691,8 @@ window.AGRO_PRODUCTS = [
     "packSizes": [
       {
         "label": "100 мл",
-        "price": 3.6,
-        "unit": "€ 3.60 / 100 мл",
+        "price": 3.42,
+        "unit": "€ 3.42 / 100 мл",
         "default": true
       }
     ],
@@ -9932,8 +9706,7 @@ window.AGRO_PRODUCTS = [
     "title": "Спиртомер за Ракия с Термометър – Стъклен калибриран уред 0-100 об.%",
     "category": "wine",
     "categoryName": "Вино & Ракия",
-    "price": 7.9,
-    "bgnPrice": 15.45,
+    "price": 7.5,
     "unit": "1 бр.",
     "brand": "sortovi",
     "brandName": "Enart Instruments",
@@ -9960,8 +9733,8 @@ window.AGRO_PRODUCTS = [
     "packSizes": [
       {
         "label": "1 бр.",
-        "price": 7.9,
-        "unit": "€ 7.90 / 1 бр.",
+        "price": 7.5,
+        "unit": "€ 7.50 / 1 бр.",
         "default": true
       }
     ],
@@ -9975,8 +9748,7 @@ window.AGRO_PRODUCTS = [
     "title": "Захаромер за Гроздова Мъст – Ареометър по скалата на Brix 0-30%",
     "category": "wine",
     "categoryName": "Вино & Ракия",
-    "price": 6.8,
-    "bgnPrice": 13.3,
+    "price": 6.46,
     "unit": "1 бр.",
     "brand": "sortovi",
     "brandName": "Enart Instruments",
@@ -10003,8 +9775,8 @@ window.AGRO_PRODUCTS = [
     "packSizes": [
       {
         "label": "1 бр.",
-        "price": 6.8,
-        "unit": "€ 6.80 / 1 бр.",
+        "price": 6.46,
+        "unit": "€ 6.46 / 1 бр.",
         "default": true
       }
     ],
@@ -10018,8 +9790,7 @@ window.AGRO_PRODUCTS = [
     "title": "Консервант за Вино Сорбикс – Калиев сорбат",
     "category": "wine",
     "categoryName": "Вино & Ракия",
-    "price": 2.8,
-    "bgnPrice": 5.48,
+    "price": 2.66,
     "unit": "100 г",
     "brand": "manica",
     "brandName": "Enartis",
@@ -10046,8 +9817,8 @@ window.AGRO_PRODUCTS = [
     "packSizes": [
       {
         "label": "100 г",
-        "price": 2.8,
-        "unit": "€ 2.80 / 100 г",
+        "price": 2.66,
+        "unit": "€ 2.66 / 100 г",
         "default": true
       }
     ],
@@ -10061,8 +9832,7 @@ window.AGRO_PRODUCTS = [
     "title": "Лимонена Киселина Хранителна – Чиста монохидратна лимонена киселина",
     "category": "wine",
     "categoryName": "Вино & Ракия",
-    "price": 2.9,
-    "bgnPrice": 5.67,
+    "price": 2.75,
     "unit": "500 г",
     "brand": "manica",
     "brandName": "Enartis",
@@ -10089,8 +9859,8 @@ window.AGRO_PRODUCTS = [
     "packSizes": [
       {
         "label": "500 г",
-        "price": 2.9,
-        "unit": "€ 2.90 / 500 г",
+        "price": 2.75,
+        "unit": "€ 2.75 / 500 г",
         "default": true
       }
     ],

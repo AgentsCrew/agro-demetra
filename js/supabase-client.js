@@ -71,7 +71,7 @@ window.AGRO_SUPABASE = {
           delivery_address: orderData.delivery_address || 'Доставка до офис',
           payment_method: orderData.payment_method || 'cod',
           total_eur: parseFloat(orderData.total_eur) || 0,
-          total_bgn: parseFloat(orderData.total_bgn) || (parseFloat(orderData.total_eur) * 1.95583),
+          total_bgn: parseFloat(orderData.total_eur) || 0,
           status: 'pending',
           items: orderData.items || [],
           notes: orderData.notes || ''

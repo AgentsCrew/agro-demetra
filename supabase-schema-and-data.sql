@@ -129,15 +129,15 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   'bayer',
   'nonprof',
   'Непрофесионална категория',
-  69.9,
-  136.71,
+  66.41,
+  66.41,
   '1 кг',
   '{"лозя","овощни"}',
   'Флуопирам (50 г/кг) + Фозетил-Al (666 г/кг)',
   'ВГ',
   '14 дни',
   'БАБХ: № 01100-ПРЗ',
-  'Промо -10%',
+  'Промо -5%',
   '/images/products/sachet-wg.jpg',
   'Системен фунгицид за контрол на брашнеста мана (оидиум) и струпясване.',
   '200-250 г/дка',
@@ -145,7 +145,7 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   15,
   TRUE,
   '[{"val":100,"label":"Препоръчителна доза: 200-250 г/дка"}]'::jsonb,
-  '[{"label":"1 кг","price":69.9,"unit":"€ 69.90 / 1 кг","default":true}]'::jsonb
+  '[{"label":"1 кг","price":66.41,"unit":"€ 66.41 / 1 кг","default":true}]'::jsonb
 ) ON CONFLICT (id) DO UPDATE SET
   name = EXCLUDED.name,
   price_eur = EXCLUDED.price_eur,
@@ -159,8 +159,8 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   'bayer',
   'prof',
   'II Професионална категория',
-  74.5,
-  145.71,
+  70.77,
+  70.77,
   '1 л',
   '{"лозя","овощни","зеленчуци"}',
   'Флуопирам (200 г/л) + Тебуконазол (200 г/л)',
@@ -175,7 +175,7 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   32,
   TRUE,
   '[{"val":100,"label":"Препоръчителна доза: 40-60 мл/дка"}]'::jsonb,
-  '[{"label":"1 л","price":74.5,"unit":"€ 74.50 / 1 л","default":true}]'::jsonb
+  '[{"label":"1 л","price":70.77,"unit":"€ 70.77 / 1 л","default":true}]'::jsonb
 ) ON CONFLICT (id) DO UPDATE SET
   name = EXCLUDED.name,
   price_eur = EXCLUDED.price_eur,
@@ -189,8 +189,8 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   'syngenta',
   'nonprof',
   'Непрофесионална категория',
-  5.6,
-  10.95,
+  5.32,
+  5.32,
   '20 мл',
   '{"овощни","домати","лозя"}',
   'Дифеноконазол (250 г/л)',
@@ -205,7 +205,7 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   49,
   TRUE,
   '[{"val":100,"label":"Препоръчителна доза: 20-30 мл/дка"}]'::jsonb,
-  '[{"label":"20 мл","price":5.6,"unit":"€ 5.60 / 20 мл","default":true}]'::jsonb
+  '[{"label":"20 мл","price":5.32,"unit":"€ 5.32 / 20 мл","default":true}]'::jsonb
 ) ON CONFLICT (id) DO UPDATE SET
   name = EXCLUDED.name,
   price_eur = EXCLUDED.price_eur,
@@ -219,8 +219,8 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   'syngenta',
   'nonprof',
   'Непрофесионална категория',
-  3.8,
-  7.43,
+  3.61,
+  3.61,
   '10 мл',
   '{"лозя","овощни","зеленчуци"}',
   'Пенконазол (100 г/л)',
@@ -235,7 +235,7 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   66,
   TRUE,
   '[{"val":100,"label":"Препоръчителна доза: 25-30 мл/дка"}]'::jsonb,
-  '[{"label":"10 мл","price":3.8,"unit":"€ 3.80 / 10 мл","default":true}]'::jsonb
+  '[{"label":"10 мл","price":3.61,"unit":"€ 3.61 / 10 мл","default":true}]'::jsonb
 ) ON CONFLICT (id) DO UPDATE SET
   name = EXCLUDED.name,
   price_eur = EXCLUDED.price_eur,
@@ -249,8 +249,8 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   'adama',
   'nonprof',
   'Непрофесионална категория',
-  18.4,
-  35.99,
+  17.48,
+  17.48,
   '1 кг',
   '{"лозя","овощни"}',
   'Фолпет (700 г/кг) + Триадименол (20 г/кг)',
@@ -265,7 +265,7 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   83,
   TRUE,
   '[{"val":100,"label":"Препоръчителна доза: 200 г/дка"}]'::jsonb,
-  '[{"label":"1 кг","price":18.4,"unit":"€ 18.40 / 1 кг","default":true}]'::jsonb
+  '[{"label":"1 кг","price":17.48,"unit":"€ 17.48 / 1 кг","default":true}]'::jsonb
 ) ON CONFLICT (id) DO UPDATE SET
   name = EXCLUDED.name,
   price_eur = EXCLUDED.price_eur,
@@ -279,8 +279,8 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   'syngenta',
   'nonprof',
   'Непрофесионална категория',
-  38.5,
-  75.3,
+  36.57,
+  36.57,
   '1 кг',
   '{"лозя","картофи","домати"}',
   'Мефеноксам (20 г/кг) + Меден оксихлорид (141.9 г/кг)',
@@ -295,7 +295,7 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   15,
   TRUE,
   '[{"val":100,"label":"Препоръчителна доза: 500 г/дка"}]'::jsonb,
-  '[{"label":"1 кг","price":38.5,"unit":"€ 38.50 / 1 кг","default":true}]'::jsonb
+  '[{"label":"1 кг","price":36.57,"unit":"€ 36.57 / 1 кг","default":true}]'::jsonb
 ) ON CONFLICT (id) DO UPDATE SET
   name = EXCLUDED.name,
   price_eur = EXCLUDED.price_eur,
@@ -309,8 +309,8 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   'syngenta',
   'nonprof',
   'Непрофесионална категория',
-  48,
-  93.88,
+  45.6,
+  45.6,
   '1 л',
   '{"лозя","домати","картофи"}',
   'Азоксистробин (250 г/л)',
@@ -325,7 +325,7 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   32,
   TRUE,
   '[{"val":100,"label":"Препоръчителна доза: 80-100 мл/дка"}]'::jsonb,
-  '[{"label":"1 л","price":48,"unit":"€ 48.00 / 1 л","default":true}]'::jsonb
+  '[{"label":"1 л","price":45.6,"unit":"€ 45.60 / 1 л","default":true}]'::jsonb
 ) ON CONFLICT (id) DO UPDATE SET
   name = EXCLUDED.name,
   price_eur = EXCLUDED.price_eur,
@@ -339,8 +339,8 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   'manica',
   'nonprof',
   'Непрофесионална категория',
-  8.2,
-  16.04,
+  7.79,
+  7.79,
   '1 кг',
   '{"лозя","овощни","домати"}',
   'Меден сулфат неутрализиран (20% Cu)',
@@ -355,7 +355,7 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   49,
   TRUE,
   '[{"val":100,"label":"Препоръчителна доза: 1.5% (1.5 кг/100 л)"}]'::jsonb,
-  '[{"label":"1 кг","price":8.2,"unit":"€ 8.20 / 1 кг","default":true}]'::jsonb
+  '[{"label":"1 кг","price":7.79,"unit":"€ 7.79 / 1 кг","default":true}]'::jsonb
 ) ON CONFLICT (id) DO UPDATE SET
   name = EXCLUDED.name,
   price_eur = EXCLUDED.price_eur,
@@ -369,8 +369,8 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   'corteva',
   'prof',
   'II Професионална категория',
-  13.5,
-  26.4,
+  12.82,
+  12.82,
   '1 кг',
   '{"лозя","картофи","домати"}',
   'Манкозеб (800 г/кг)',
@@ -385,7 +385,7 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   66,
   TRUE,
   '[{"val":100,"label":"Препоръчителна доза: 200 г/дка"}]'::jsonb,
-  '[{"label":"1 кг","price":13.5,"unit":"€ 13.50 / 1 кг","default":true}]'::jsonb
+  '[{"label":"1 кг","price":12.82,"unit":"€ 12.82 / 1 кг","default":true}]'::jsonb
 ) ON CONFLICT (id) DO UPDATE SET
   name = EXCLUDED.name,
   price_eur = EXCLUDED.price_eur,
@@ -399,8 +399,8 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   'basf',
   'prof',
   'II Професионална категория',
-  49.9,
-  97.6,
+  47.4,
+  47.4,
   '1 кг',
   '{"лозя","домати"}',
   'Метирам (550 г/кг) + Пираклостробин (50 г/кг)',
@@ -415,7 +415,7 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   83,
   TRUE,
   '[{"val":100,"label":"Препоръчителна доза: 150-200 г/дка"}]'::jsonb,
-  '[{"label":"1 кг","price":49.9,"unit":"€ 49.90 / 1 кг","default":true}]'::jsonb
+  '[{"label":"1 кг","price":47.4,"unit":"€ 47.40 / 1 кг","default":true}]'::jsonb
 ) ON CONFLICT (id) DO UPDATE SET
   name = EXCLUDED.name,
   price_eur = EXCLUDED.price_eur,
@@ -429,8 +429,8 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   'bayer',
   'nonprof',
   'Непрофесионална категория',
-  36.5,
-  71.39,
+  34.67,
+  34.67,
   '500 г',
   '{"лозя","овощни"}',
   'Трифлоксистробин (500 г/кг) + Тебуконазол (250 г/кг)',
@@ -445,7 +445,7 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   15,
   TRUE,
   '[{"val":100,"label":"Препоръчителна доза: 16-20 г/дка"}]'::jsonb,
-  '[{"label":"500 г","price":36.5,"unit":"€ 36.50 / 500 г","default":true}]'::jsonb
+  '[{"label":"500 г","price":34.67,"unit":"€ 34.67 / 500 г","default":true}]'::jsonb
 ) ON CONFLICT (id) DO UPDATE SET
   name = EXCLUDED.name,
   price_eur = EXCLUDED.price_eur,
@@ -459,15 +459,15 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   'basf',
   'prof',
   'II Професионална категория',
-  88,
-  172.11,
+  83.6,
+  83.6,
   '1 л',
   '{"овощни","лозя"}',
   'Флуксапироксад (Ксемиум 300 г/л)',
   'СК',
   '35 дни',
   'БАБХ: № 01177-ПРЗ',
-  'Промо -10%',
+  'Промо -5%',
   '/images/products/bottle-1l.jpg',
   'SDHI иновация с пълна мобилност в тъканите срещу струпясване.',
   '25-30 мл/дка',
@@ -475,7 +475,7 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   32,
   TRUE,
   '[{"val":100,"label":"Препоръчителна доза: 25-30 мл/дка"}]'::jsonb,
-  '[{"label":"1 л","price":88,"unit":"€ 88.00 / 1 л","default":true}]'::jsonb
+  '[{"label":"1 л","price":83.6,"unit":"€ 83.60 / 1 л","default":true}]'::jsonb
 ) ON CONFLICT (id) DO UPDATE SET
   name = EXCLUDED.name,
   price_eur = EXCLUDED.price_eur,
@@ -489,8 +489,8 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   'basf',
   'prof',
   'II Професионална категория',
-  64,
-  125.17,
+  60.8,
+  60.8,
   '1 кг',
   '{"овощни"}',
   'Боскалид (252 г/кг) + Пираклостробин (128 г/кг)',
@@ -505,7 +505,7 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   49,
   TRUE,
   '[{"val":100,"label":"Препоръчителна доза: 80 г/дка"}]'::jsonb,
-  '[{"label":"1 кг","price":64,"unit":"€ 64.00 / 1 кг","default":true}]'::jsonb
+  '[{"label":"1 кг","price":60.8,"unit":"€ 60.80 / 1 кг","default":true}]'::jsonb
 ) ON CONFLICT (id) DO UPDATE SET
   name = EXCLUDED.name,
   price_eur = EXCLUDED.price_eur,
@@ -519,8 +519,8 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   'bayer',
   'nonprof',
   'Непрофесионална категория',
-  43.5,
-  85.08,
+  41.32,
+  41.32,
   '1 л',
   '{"картофи","зеленчуци"}',
   'Флуопиколид (62.5 г/л) + Пропамокарб (625 г/л)',
@@ -535,7 +535,7 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   66,
   TRUE,
   '[{"val":100,"label":"Препоръчителна доза: 120-160 мл/дка"}]'::jsonb,
-  '[{"label":"1 л","price":43.5,"unit":"€ 43.50 / 1 л","default":true}]'::jsonb
+  '[{"label":"1 л","price":41.32,"unit":"€ 41.32 / 1 л","default":true}]'::jsonb
 ) ON CONFLICT (id) DO UPDATE SET
   name = EXCLUDED.name,
   price_eur = EXCLUDED.price_eur,
@@ -549,8 +549,8 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   'syngenta',
   'prof',
   'II Професионална категория',
-  52,
-  101.7,
+  49.4,
+  49.4,
   '1 л',
   '{"картофи","домати","лозя"}',
   'Мандипропамид (250 г/л)',
@@ -565,7 +565,7 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   83,
   TRUE,
   '[{"val":100,"label":"Препоръчителна доза: 50-60 мл/дка"}]'::jsonb,
-  '[{"label":"1 л","price":52,"unit":"€ 52.00 / 1 л","default":true}]'::jsonb
+  '[{"label":"1 л","price":49.4,"unit":"€ 49.40 / 1 л","default":true}]'::jsonb
 ) ON CONFLICT (id) DO UPDATE SET
   name = EXCLUDED.name,
   price_eur = EXCLUDED.price_eur,
@@ -579,8 +579,8 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   'corteva',
   'nonprof',
   'Непрофесионална категория',
-  24.8,
-  48.5,
+  23.56,
+  23.56,
   '1 кг',
   '{"лозя","овощни","домати"}',
   'Меден хидроксид (53.8% Cu)',
@@ -595,7 +595,7 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   15,
   TRUE,
   '[{"val":100,"label":"Препоръчителна доза: 155-200 г/дка"}]'::jsonb,
-  '[{"label":"1 кг","price":24.8,"unit":"€ 24.80 / 1 кг","default":true}]'::jsonb
+  '[{"label":"1 кг","price":23.56,"unit":"€ 23.56 / 1 кг","default":true}]'::jsonb
 ) ON CONFLICT (id) DO UPDATE SET
   name = EXCLUDED.name,
   price_eur = EXCLUDED.price_eur,
@@ -609,8 +609,8 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   'manica',
   'nonprof',
   'Непрофесионална категория',
-  19.9,
-  38.92,
+  18.9,
+  18.9,
   '1 кг',
   '{"лозя","овощни","зеленчуци"}',
   'Меден хидроксид (50% Cu)',
@@ -625,7 +625,7 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   32,
   TRUE,
   '[{"val":100,"label":"Препоръчителна доза: 150-200 г/дка"}]'::jsonb,
-  '[{"label":"1 кг","price":19.9,"unit":"€ 19.90 / 1 кг","default":true}]'::jsonb
+  '[{"label":"1 кг","price":18.9,"unit":"€ 18.90 / 1 кг","default":true}]'::jsonb
 ) ON CONFLICT (id) DO UPDATE SET
   name = EXCLUDED.name,
   price_eur = EXCLUDED.price_eur,
@@ -639,8 +639,8 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   'manica',
   'nonprof',
   'Непрофесионална категория',
-  18.2,
-  35.6,
+  17.29,
+  17.29,
   '1 кг',
   '{"лозя","овощни","зеленчуци"}',
   'Меден хидроксид (77%)',
@@ -655,7 +655,7 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   49,
   TRUE,
   '[{"val":100,"label":"Препоръчителна доза: 150-300 г/дка"}]'::jsonb,
-  '[{"label":"1 кг","price":18.2,"unit":"€ 18.20 / 1 кг","default":true}]'::jsonb
+  '[{"label":"1 кг","price":17.29,"unit":"€ 17.29 / 1 кг","default":true}]'::jsonb
 ) ON CONFLICT (id) DO UPDATE SET
   name = EXCLUDED.name,
   price_eur = EXCLUDED.price_eur,
@@ -669,8 +669,8 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   'amitica',
   'nonprof',
   'Непрофесионална категория',
-  11.9,
-  23.27,
+  11.3,
+  11.3,
   '1 кг',
   '{"лозя","овощни","зеленчуци"}',
   'Калиев хидроген карбонат (995 г/кг)',
@@ -685,7 +685,7 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   66,
   TRUE,
   '[{"val":100,"label":"Препоръчителна доза: 500-1000 г/дка"}]'::jsonb,
-  '[{"label":"1 кг","price":11.9,"unit":"€ 11.90 / 1 кг","default":true}]'::jsonb
+  '[{"label":"1 кг","price":11.3,"unit":"€ 11.30 / 1 кг","default":true}]'::jsonb
 ) ON CONFLICT (id) DO UPDATE SET
   name = EXCLUDED.name,
   price_eur = EXCLUDED.price_eur,
@@ -699,8 +699,8 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   'bayer',
   'nonprof',
   'Непрофесионална категория',
-  28.5,
-  55.74,
+  27.07,
+  27.07,
   '1 кг',
   '{"лозя","домати"}',
   'Ипроваликарб (84 г/кг) + Меден оксихлорид (406 г/кг)',
@@ -715,7 +715,7 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   83,
   TRUE,
   '[{"val":100,"label":"Препоръчителна доза: 150-175 г/дка"}]'::jsonb,
-  '[{"label":"1 кг","price":28.5,"unit":"€ 28.50 / 1 кг","default":true}]'::jsonb
+  '[{"label":"1 кг","price":27.07,"unit":"€ 27.07 / 1 кг","default":true}]'::jsonb
 ) ON CONFLICT (id) DO UPDATE SET
   name = EXCLUDED.name,
   price_eur = EXCLUDED.price_eur,
@@ -729,8 +729,8 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   'basf',
   'prof',
   'II Професионална категория',
-  72,
-  140.82,
+  68.4,
+  68.4,
   '1 кг',
   '{"лозя"}',
   'Боскалид (500 г/кг)',
@@ -745,7 +745,7 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   15,
   TRUE,
   '[{"val":100,"label":"Препоръчителна доза: 100-120 г/дка"}]'::jsonb,
-  '[{"label":"1 кг","price":72,"unit":"€ 72.00 / 1 кг","default":true}]'::jsonb
+  '[{"label":"1 кг","price":68.4,"unit":"€ 68.40 / 1 кг","default":true}]'::jsonb
 ) ON CONFLICT (id) DO UPDATE SET
   name = EXCLUDED.name,
   price_eur = EXCLUDED.price_eur,
@@ -759,8 +759,8 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   'basf',
   'prof',
   'II Професионална категория',
-  54,
-  105.61,
+  51.3,
+  51.3,
   '1 л',
   '{"лозя","овощни"}',
   'Пириметанил (400 г/л)',
@@ -775,7 +775,7 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   32,
   TRUE,
   '[{"val":100,"label":"Препоръчителна доза: 150-200 мл/дка"}]'::jsonb,
-  '[{"label":"1 л","price":54,"unit":"€ 54.00 / 1 л","default":true}]'::jsonb
+  '[{"label":"1 л","price":51.3,"unit":"€ 51.30 / 1 л","default":true}]'::jsonb
 ) ON CONFLICT (id) DO UPDATE SET
   name = EXCLUDED.name,
   price_eur = EXCLUDED.price_eur,
@@ -789,15 +789,15 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   'syngenta',
   'prof',
   'II Професионална категория',
-  39,
-  76.28,
+  37.05,
+  37.05,
   '500 г',
   '{"овощни","лозя","зеленчуци"}',
   'Фенпиразамин (500 г/кг)',
   'ВГ',
   '1 ден',
   'БАБХ: № 01254-ПРЗ',
-  'Промо -10%',
+  'Промо -5%',
   '/images/products/sachet-wg.jpg',
   'Ултра кратка карантина от 1 ден при праскови и домати срещу монилиоза.',
   '80-120 г/дка',
@@ -805,7 +805,7 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   49,
   TRUE,
   '[{"val":100,"label":"Препоръчителна доза: 80-120 г/дка"}]'::jsonb,
-  '[{"label":"500 г","price":39,"unit":"€ 39.00 / 500 г","default":true}]'::jsonb
+  '[{"label":"500 г","price":37.05,"unit":"€ 37.05 / 500 г","default":true}]'::jsonb
 ) ON CONFLICT (id) DO UPDATE SET
   name = EXCLUDED.name,
   price_eur = EXCLUDED.price_eur,
@@ -819,8 +819,8 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   'corteva',
   'nonprof',
   'Непрофесионална категория',
-  8.5,
-  16.62,
+  8.07,
+  8.07,
   '50 мл',
   '{"лозя","овощни","зеленчуци"}',
   'Миклобутанил (200 г/л)',
@@ -835,7 +835,7 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   66,
   TRUE,
   '[{"val":100,"label":"Препоръчителна доза: 20-25 мл/дка"}]'::jsonb,
-  '[{"label":"50 мл","price":8.5,"unit":"€ 8.50 / 50 мл","default":true}]'::jsonb
+  '[{"label":"50 мл","price":8.07,"unit":"€ 8.07 / 50 мл","default":true}]'::jsonb
 ) ON CONFLICT (id) DO UPDATE SET
   name = EXCLUDED.name,
   price_eur = EXCLUDED.price_eur,
@@ -849,8 +849,8 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   'syngenta',
   'nonprof',
   'Непрофесионална категория',
-  16.9,
-  33.05,
+  16.05,
+  16.05,
   '100 г',
   '{"лозя","зеленчуци","ягоди"}',
   'Ципродинил (375 г/кг) + Флудиоксонил (250 г/кг)',
@@ -865,7 +865,7 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   83,
   TRUE,
   '[{"val":100,"label":"Препоръчителна доза: 80-100 г/дка"}]'::jsonb,
-  '[{"label":"100 г","price":16.9,"unit":"€ 16.90 / 100 г","default":true}]'::jsonb
+  '[{"label":"100 г","price":16.05,"unit":"€ 16.05 / 100 г","default":true}]'::jsonb
 ) ON CONFLICT (id) DO UPDATE SET
   name = EXCLUDED.name,
   price_eur = EXCLUDED.price_eur,
@@ -879,8 +879,8 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   'bayer',
   'prof',
   'II Професионална категория',
-  58,
-  113.44,
+  55.1,
+  55.1,
   '1 л',
   '{"житни"}',
   'Флуопирам (125 г/л) + Протиоконазол (125 г/л)',
@@ -895,7 +895,7 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   15,
   TRUE,
   '[{"val":100,"label":"Препоръчителна доза: 80-100 мл/дка"}]'::jsonb,
-  '[{"label":"1 л","price":58,"unit":"€ 58.00 / 1 л","default":true}]'::jsonb
+  '[{"label":"1 л","price":55.1,"unit":"€ 55.10 / 1 л","default":true}]'::jsonb
 ) ON CONFLICT (id) DO UPDATE SET
   name = EXCLUDED.name,
   price_eur = EXCLUDED.price_eur,
@@ -909,8 +909,8 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   'manica',
   'nonprof',
   'Непрофесионална категория',
-  24.5,
-  47.92,
+  23.27,
+  23.27,
   '1 л',
   '{"житни","лозя","овощни"}',
   'Тебуконазол (250 г/л)',
@@ -925,7 +925,7 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   32,
   TRUE,
   '[{"val":100,"label":"Препоръчителна доза: 100 мл/дка"}]'::jsonb,
-  '[{"label":"1 л","price":24.5,"unit":"€ 24.50 / 1 л","default":true}]'::jsonb
+  '[{"label":"1 л","price":23.27,"unit":"€ 23.27 / 1 л","default":true}]'::jsonb
 ) ON CONFLICT (id) DO UPDATE SET
   name = EXCLUDED.name,
   price_eur = EXCLUDED.price_eur,
@@ -939,8 +939,8 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   'bayer',
   'prof',
   'II Професионална категория',
-  32,
-  62.59,
+  30.4,
+  30.4,
   '1 л',
   '{"житни","овощни"}',
   'Тебуконазол (250 г/л)',
@@ -955,7 +955,7 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   49,
   TRUE,
   '[{"val":100,"label":"Препоръчителна доза: 100 мл/дка"}]'::jsonb,
-  '[{"label":"1 л","price":32,"unit":"€ 32.00 / 1 л","default":true}]'::jsonb
+  '[{"label":"1 л","price":30.4,"unit":"€ 30.40 / 1 л","default":true}]'::jsonb
 ) ON CONFLICT (id) DO UPDATE SET
   name = EXCLUDED.name,
   price_eur = EXCLUDED.price_eur,
@@ -969,8 +969,8 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   'basf',
   'nonprof',
   'Непрофесионална категория',
-  15.6,
-  30.51,
+  14.82,
+  14.82,
   '1 кг',
   '{"лозя","картофи","овощни"}',
   'Метирам (700 г/кг)',
@@ -985,7 +985,7 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   66,
   TRUE,
   '[{"val":100,"label":"Препоръчителна доза: 200 г/дка"}]'::jsonb,
-  '[{"label":"1 кг","price":15.6,"unit":"€ 15.60 / 1 кг","default":true}]'::jsonb
+  '[{"label":"1 кг","price":14.82,"unit":"€ 14.82 / 1 кг","default":true}]'::jsonb
 ) ON CONFLICT (id) DO UPDATE SET
   name = EXCLUDED.name,
   price_eur = EXCLUDED.price_eur,
@@ -999,8 +999,8 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   'syngenta',
   'nonprof',
   'Непрофесионална категория',
-  4.5,
-  8.8,
+  4.27,
+  4.27,
   '1 кг',
   '{"лозя","овощни","зеленчуци"}',
   'Микронизирана сяра (800 г/кг)',
@@ -1015,7 +1015,7 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   83,
   TRUE,
   '[{"val":100,"label":"Препоръчителна доза: 300 г/дка"}]'::jsonb,
-  '[{"label":"1 кг","price":4.5,"unit":"€ 4.50 / 1 кг","default":true}]'::jsonb
+  '[{"label":"1 кг","price":4.27,"unit":"€ 4.27 / 1 кг","default":true}]'::jsonb
 ) ON CONFLICT (id) DO UPDATE SET
   name = EXCLUDED.name,
   price_eur = EXCLUDED.price_eur,
@@ -1029,8 +1029,8 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   'basf',
   'nonprof',
   'Непрофесионална категория',
-  4.6,
-  9,
+  4.37,
+  4.37,
   '1 кг',
   '{"лозя","овощни"}',
   'Колоидна сяра (800 г/кг)',
@@ -1045,7 +1045,7 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   15,
   TRUE,
   '[{"val":100,"label":"Препоръчителна доза: 300-500 г/дка"}]'::jsonb,
-  '[{"label":"1 кг","price":4.6,"unit":"€ 4.60 / 1 кг","default":true}]'::jsonb
+  '[{"label":"1 кг","price":4.37,"unit":"€ 4.37 / 1 кг","default":true}]'::jsonb
 ) ON CONFLICT (id) DO UPDATE SET
   name = EXCLUDED.name,
   price_eur = EXCLUDED.price_eur,
@@ -1059,8 +1059,8 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   'manica',
   'nonprof',
   'Непрофесионална категория',
-  14.2,
-  27.77,
+  13.49,
+  13.49,
   '1 кг',
   '{"лозя","домати","картофи"}',
   'Меден оксихлорид (15%) + Манкозеб (15%)',
@@ -1075,7 +1075,7 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   32,
   TRUE,
   '[{"val":100,"label":"Препоръчителна доза: 250 г/дка"}]'::jsonb,
-  '[{"label":"1 кг","price":14.2,"unit":"€ 14.20 / 1 кг","default":true}]'::jsonb
+  '[{"label":"1 кг","price":13.49,"unit":"€ 13.49 / 1 кг","default":true}]'::jsonb
 ) ON CONFLICT (id) DO UPDATE SET
   name = EXCLUDED.name,
   price_eur = EXCLUDED.price_eur,
@@ -1089,8 +1089,8 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   'bayer',
   'nonprof',
   'Непрофесионална категория',
-  14.8,
-  28.95,
+  14.06,
+  14.06,
   '100 мл',
   '{"лозя","зеленчуци","ягоди"}',
   'Фенхексамид (500 г/л)',
@@ -1105,7 +1105,7 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   49,
   TRUE,
   '[{"val":100,"label":"Препоръчителна доза: 100 мл/дка"}]'::jsonb,
-  '[{"label":"100 мл","price":14.8,"unit":"€ 14.80 / 100 мл","default":true}]'::jsonb
+  '[{"label":"100 мл","price":14.06,"unit":"€ 14.06 / 100 мл","default":true}]'::jsonb
 ) ON CONFLICT (id) DO UPDATE SET
   name = EXCLUDED.name,
   price_eur = EXCLUDED.price_eur,
@@ -1119,15 +1119,15 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   'adama',
   'nonprof',
   'Непрофесионална категория',
-  19.5,
-  38.14,
+  18.52,
+  18.52,
   '1 кг',
   '{"лозя","овощни"}',
   'Фолпет (800 г/кг)',
   'ВДГ',
   '20 дни',
   'БАБХ: № 01331-ПРЗ',
-  'Промо -10%',
+  'Промо -5%',
   '/images/products/sachet-wg.jpg',
   'Мултисайт контактен фунгицид, към който патогените нямат резистентност.',
   '150 г/дка',
@@ -1135,7 +1135,7 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   66,
   TRUE,
   '[{"val":100,"label":"Препоръчителна доза: 150 г/дка"}]'::jsonb,
-  '[{"label":"1 кг","price":19.5,"unit":"€ 19.50 / 1 кг","default":true}]'::jsonb
+  '[{"label":"1 кг","price":18.52,"unit":"€ 18.52 / 1 кг","default":true}]'::jsonb
 ) ON CONFLICT (id) DO UPDATE SET
   name = EXCLUDED.name,
   price_eur = EXCLUDED.price_eur,
@@ -1149,8 +1149,8 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   'corteva',
   'prof',
   'II Професионална категория',
-  21,
-  41.07,
+  19.95,
+  19.95,
   '1 кг',
   '{"лозя","картофи","домати"}',
   'Цимоксанил (4.5%) + Манкозеб (68%)',
@@ -1165,7 +1165,7 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   83,
   TRUE,
   '[{"val":100,"label":"Препоръчителна доза: 200-250 г/дка"}]'::jsonb,
-  '[{"label":"1 кг","price":21,"unit":"€ 21.00 / 1 кг","default":true}]'::jsonb
+  '[{"label":"1 кг","price":19.95,"unit":"€ 19.95 / 1 кг","default":true}]'::jsonb
 ) ON CONFLICT (id) DO UPDATE SET
   name = EXCLUDED.name,
   price_eur = EXCLUDED.price_eur,
@@ -1179,8 +1179,8 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   'syngenta',
   'nonprof',
   'Непрофесионална категория',
-  59,
-  115.39,
+  56.05,
+  56.05,
   '1 л',
   '{"домати","зеленчуци","картофи"}',
   'Азоксистробин (200 г/л) + Дифеноконазол (125 г/л)',
@@ -1195,7 +1195,7 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   15,
   TRUE,
   '[{"val":100,"label":"Препоръчителна доза: 100 мл/дка"}]'::jsonb,
-  '[{"label":"1 л","price":59,"unit":"€ 59.00 / 1 л","default":true}]'::jsonb
+  '[{"label":"1 л","price":56.05,"unit":"€ 56.05 / 1 л","default":true}]'::jsonb
 ) ON CONFLICT (id) DO UPDATE SET
   name = EXCLUDED.name,
   price_eur = EXCLUDED.price_eur,
@@ -1209,8 +1209,8 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   'basf',
   'prof',
   'II Професионална категория',
-  34,
-  66.5,
+  32.3,
+  32.3,
   '1 л',
   '{"овощни"}',
   'Дитианон (125 г/л) + Фосфониста киселина (561 г/л)',
@@ -1225,7 +1225,7 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   32,
   TRUE,
   '[{"val":100,"label":"Препоръчителна доза: 250 мл/дка"}]'::jsonb,
-  '[{"label":"1 л","price":34,"unit":"€ 34.00 / 1 л","default":true}]'::jsonb
+  '[{"label":"1 л","price":32.3,"unit":"€ 32.30 / 1 л","default":true}]'::jsonb
 ) ON CONFLICT (id) DO UPDATE SET
   name = EXCLUDED.name,
   price_eur = EXCLUDED.price_eur,
@@ -1239,8 +1239,8 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   'amitica',
   'nonprof',
   'Непрофесионална категория',
-  12.8,
-  25.03,
+  12.16,
+  12.16,
   '1 л',
   '{"лозя","зеленчуци"}',
   'Калиев фосфит (50% P2O5 + 35% K2O)',
@@ -1255,7 +1255,7 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   49,
   TRUE,
   '[{"val":100,"label":"Препоръчителна доза: 200-300 мл/дка"}]'::jsonb,
-  '[{"label":"1 л","price":12.8,"unit":"€ 12.80 / 1 л","default":true}]'::jsonb
+  '[{"label":"1 л","price":12.16,"unit":"€ 12.16 / 1 л","default":true}]'::jsonb
 ) ON CONFLICT (id) DO UPDATE SET
   name = EXCLUDED.name,
   price_eur = EXCLUDED.price_eur,
@@ -1269,8 +1269,8 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   'nippon',
   'nonprof',
   'Непрофесионална категория',
-  3.2,
-  6.26,
+  3.04,
+  3.04,
   '50 г',
   '{"домати","картофи","овощни","житни"}',
   'Ацетамиприд (200 г/кг)',
@@ -1285,7 +1285,7 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   66,
   TRUE,
   '[{"val":100,"label":"Препоръчителна доза: 12.5-25 г/дка"}]'::jsonb,
-  '[{"label":"50 г","price":3.2,"unit":"€ 3.20 / 50 г","default":true}]'::jsonb
+  '[{"label":"50 г","price":3.04,"unit":"€ 3.04 / 50 г","default":true}]'::jsonb
 ) ON CONFLICT (id) DO UPDATE SET
   name = EXCLUDED.name,
   price_eur = EXCLUDED.price_eur,
@@ -1299,8 +1299,8 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   'bayer',
   'nonprof',
   'Непрофесионална категория',
-  4.2,
-  8.21,
+  3.99,
+  3.99,
   '50 мл',
   '{"лозя","овощни","зеленчуци","житни"}',
   'Делтаметрин (100 г/л)',
@@ -1315,7 +1315,7 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   83,
   TRUE,
   '[{"val":100,"label":"Препоръчителна доза: 12.5-17.5 мл/дка"}]'::jsonb,
-  '[{"label":"50 мл","price":4.2,"unit":"€ 4.20 / 50 мл","default":true}]'::jsonb
+  '[{"label":"50 мл","price":3.99,"unit":"€ 3.99 / 50 мл","default":true}]'::jsonb
 ) ON CONFLICT (id) DO UPDATE SET
   name = EXCLUDED.name,
   price_eur = EXCLUDED.price_eur,
@@ -1329,8 +1329,8 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   'corteva',
   'nonprof',
   'Непрофесионална категория',
-  9.9,
-  19.36,
+  9.4,
+  9.4,
   '50 мл',
   '{"домати","картофи","овощни","лозя"}',
   'Хлорантранилипрол (200 г/л)',
@@ -1345,7 +1345,7 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   15,
   TRUE,
   '[{"val":100,"label":"Препоръчителна доза: 16-20 мл/дка"}]'::jsonb,
-  '[{"label":"50 мл","price":9.9,"unit":"€ 9.90 / 50 мл","default":true}]'::jsonb
+  '[{"label":"50 мл","price":9.4,"unit":"€ 9.40 / 50 мл","default":true}]'::jsonb
 ) ON CONFLICT (id) DO UPDATE SET
   name = EXCLUDED.name,
   price_eur = EXCLUDED.price_eur,
@@ -1359,8 +1359,8 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   'syngenta',
   'nonprof',
   'Непрофесионална категория',
-  3.5,
-  6.85,
+  3.32,
+  3.32,
   '50 мл',
   '{"лозя","зеленчуци","житни","овощни"}',
   'Ламбда-цихалотрин (50 г/л)',
@@ -1375,7 +1375,7 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   32,
   TRUE,
   '[{"val":100,"label":"Препоръчителна доза: 15-20 мл/дка"}]'::jsonb,
-  '[{"label":"50 мл","price":3.5,"unit":"€ 3.50 / 50 мл","default":true}]'::jsonb
+  '[{"label":"50 мл","price":3.32,"unit":"€ 3.32 / 50 мл","default":true}]'::jsonb
 ) ON CONFLICT (id) DO UPDATE SET
   name = EXCLUDED.name,
   price_eur = EXCLUDED.price_eur,
@@ -1389,8 +1389,8 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   'bayer',
   'nonprof',
   'Непрофесионална категория',
-  7.8,
-  15.26,
+  7.41,
+  7.41,
   '50 мл',
   '{"домати","зеленчуци","овощни"}',
   'Флупирадифурон (200 г/л)',
@@ -1405,7 +1405,7 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   49,
   TRUE,
   '[{"val":100,"label":"Препоръчителна доза: 50-90 мл/дка"}]'::jsonb,
-  '[{"label":"50 мл","price":7.8,"unit":"€ 7.80 / 50 мл","default":true}]'::jsonb
+  '[{"label":"50 мл","price":7.41,"unit":"€ 7.41 / 50 мл","default":true}]'::jsonb
 ) ON CONFLICT (id) DO UPDATE SET
   name = EXCLUDED.name,
   price_eur = EXCLUDED.price_eur,
@@ -1419,8 +1419,8 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   'syngenta',
   'nonprof',
   'Непрофесионална категория',
-  9.2,
-  17.99,
+  8.74,
+  8.74,
   '15 г',
   '{"домати","овощни","зеленчуци"}',
   'Флоникамид (500 г/кг)',
@@ -1435,7 +1435,7 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   66,
   TRUE,
   '[{"val":100,"label":"Препоръчителна доза: 10-14 г/дка"}]'::jsonb,
-  '[{"label":"15 г","price":9.2,"unit":"€ 9.20 / 15 г","default":true}]'::jsonb
+  '[{"label":"15 г","price":8.74,"unit":"€ 8.74 / 15 г","default":true}]'::jsonb
 ) ON CONFLICT (id) DO UPDATE SET
   name = EXCLUDED.name,
   price_eur = EXCLUDED.price_eur,
@@ -1449,15 +1449,15 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   'corteva',
   'prof',
   'II Професионална категория',
-  38,
-  74.32,
+  36.1,
+  36.1,
   '250 мл',
   '{"лозя","овощни","домати"}',
   'Индоксакарб (150 г/л)',
   'ЕК',
   '10 дни',
   'БАБХ: № 01408-ПРЗ',
-  'Промо -10%',
+  'Промо -5%',
   '/images/products/bottle-250ml.jpg',
   'Ови-ларвицид срещу гроздови молци и нощенки, устойчив на летни жеги.',
   '25-33 мл/дка',
@@ -1465,7 +1465,7 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   83,
   TRUE,
   '[{"val":100,"label":"Препоръчителна доза: 25-33 мл/дка"}]'::jsonb,
-  '[{"label":"250 мл","price":38,"unit":"€ 38.00 / 250 мл","default":true}]'::jsonb
+  '[{"label":"250 мл","price":36.1,"unit":"€ 36.10 / 250 мл","default":true}]'::jsonb
 ) ON CONFLICT (id) DO UPDATE SET
   name = EXCLUDED.name,
   price_eur = EXCLUDED.price_eur,
@@ -1479,8 +1479,8 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   'syngenta',
   'nonprof',
   'Непрофесионална категория',
-  8.9,
-  17.41,
+  8.46,
+  8.46,
   '100 мл',
   '{"лозя","овощни","зеленчуци"}',
   'Абамектин (18 г/л)',
@@ -1495,7 +1495,7 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   15,
   TRUE,
   '[{"val":100,"label":"Препоръчителна доза: 80-120 мл/дка"}]'::jsonb,
-  '[{"label":"100 мл","price":8.9,"unit":"€ 8.90 / 100 мл","default":true}]'::jsonb
+  '[{"label":"100 мл","price":8.46,"unit":"€ 8.46 / 100 мл","default":true}]'::jsonb
 ) ON CONFLICT (id) DO UPDATE SET
   name = EXCLUDED.name,
   price_eur = EXCLUDED.price_eur,
@@ -1509,8 +1509,8 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   'nippon',
   'nonprof',
   'Непрофесионална категория',
-  6.5,
-  12.71,
+  6.17,
+  6.17,
   '50 г',
   '{"лозя","овощни","зеленчуци"}',
   'Хекситиазокс (100 г/кг)',
@@ -1525,7 +1525,7 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   32,
   TRUE,
   '[{"val":100,"label":"Препоръчителна доза: 50 г/дка"}]'::jsonb,
-  '[{"label":"50 г","price":6.5,"unit":"€ 6.50 / 50 г","default":true}]'::jsonb
+  '[{"label":"50 г","price":6.17,"unit":"€ 6.17 / 50 г","default":true}]'::jsonb
 ) ON CONFLICT (id) DO UPDATE SET
   name = EXCLUDED.name,
   price_eur = EXCLUDED.price_eur,
@@ -1539,8 +1539,8 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   'nippon',
   'nonprof',
   'Непрофесионална категория',
-  7.2,
-  14.08,
+  6.84,
+  6.84,
   '50 мл',
   '{"лозя","овощни"}',
   'Фенпироксимат (50 г/л)',
@@ -1555,7 +1555,7 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   49,
   TRUE,
   '[{"val":100,"label":"Препоръчителна доза: 100 мл/дка"}]'::jsonb,
-  '[{"label":"50 мл","price":7.2,"unit":"€ 7.20 / 50 мл","default":true}]'::jsonb
+  '[{"label":"50 мл","price":6.84,"unit":"€ 6.84 / 50 мл","default":true}]'::jsonb
 ) ON CONFLICT (id) DO UPDATE SET
   name = EXCLUDED.name,
   price_eur = EXCLUDED.price_eur,
@@ -1569,8 +1569,8 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   'basf',
   'prof',
   'II Професионална категория',
-  12.5,
-  24.45,
+  11.88,
+  11.88,
   '100 г',
   '{"лозя","овощни"}',
   'Тебуфенпирад (200 г/кг)',
@@ -1585,7 +1585,7 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   66,
   TRUE,
   '[{"val":100,"label":"Препоръчителна доза: 25-30 г/дка"}]'::jsonb,
-  '[{"label":"100 г","price":12.5,"unit":"€ 12.50 / 100 г","default":true}]'::jsonb
+  '[{"label":"100 г","price":11.88,"unit":"€ 11.88 / 100 г","default":true}]'::jsonb
 ) ON CONFLICT (id) DO UPDATE SET
   name = EXCLUDED.name,
   price_eur = EXCLUDED.price_eur,
@@ -1599,8 +1599,8 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   'corteva',
   'nonprof',
   'Непрофесионална категория',
-  8.1,
-  15.84,
+  7.69,
+  7.69,
   '50 мл',
   '{"зеленчуци","картофи","овощни"}',
   'Сулфоксафлор Isoclast (120 г/л)',
@@ -1615,7 +1615,7 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   83,
   TRUE,
   '[{"val":100,"label":"Препоръчителна доза: 20-40 мл/дка"}]'::jsonb,
-  '[{"label":"50 мл","price":8.1,"unit":"€ 8.10 / 50 мл","default":true}]'::jsonb
+  '[{"label":"50 мл","price":7.69,"unit":"€ 7.69 / 50 мл","default":true}]'::jsonb
 ) ON CONFLICT (id) DO UPDATE SET
   name = EXCLUDED.name,
   price_eur = EXCLUDED.price_eur,
@@ -1629,8 +1629,8 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   'syngenta',
   'prof',
   'II Професионална категория',
-  49,
-  95.84,
+  46.55,
+  46.55,
   '250 мл',
   '{"домати","овощни"}',
   'Хлорантранилипрол (45 г/л) + Абамектин (18 г/л)',
@@ -1645,7 +1645,7 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   15,
   TRUE,
   '[{"val":100,"label":"Препоръчителна доза: 80 мл/дка"}]'::jsonb,
-  '[{"label":"250 мл","price":49,"unit":"€ 49.00 / 250 мл","default":true}]'::jsonb
+  '[{"label":"250 мл","price":46.55,"unit":"€ 46.55 / 250 мл","default":true}]'::jsonb
 ) ON CONFLICT (id) DO UPDATE SET
   name = EXCLUDED.name,
   price_eur = EXCLUDED.price_eur,
@@ -1659,8 +1659,8 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   'corteva',
   'prof',
   'II Професионална категория',
-  29.5,
-  57.7,
+  28.02,
+  28.02,
   '100 г',
   '{"овощни","лозя"}',
   'Спинеторам (250 г/кг)',
@@ -1675,7 +1675,7 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   32,
   TRUE,
   '[{"val":100,"label":"Препоръчителна доза: 30 г/дка"}]'::jsonb,
-  '[{"label":"100 г","price":29.5,"unit":"€ 29.50 / 100 г","default":true}]'::jsonb
+  '[{"label":"100 г","price":28.02,"unit":"€ 28.02 / 100 г","default":true}]'::jsonb
 ) ON CONFLICT (id) DO UPDATE SET
   name = EXCLUDED.name,
   price_eur = EXCLUDED.price_eur,
@@ -1689,8 +1689,8 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   'corteva',
   'nonprof',
   'Непрофесионална категория',
-  11.5,
-  22.49,
+  10.92,
+  10.92,
   '50 мл',
   '{"домати","картофи","лозя"}',
   'Спинозад (240 г/л)',
@@ -1705,7 +1705,7 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   49,
   TRUE,
   '[{"val":100,"label":"Препоръчителна доза: 20-40 мл/дка"}]'::jsonb,
-  '[{"label":"50 мл","price":11.5,"unit":"€ 11.50 / 50 мл","default":true}]'::jsonb
+  '[{"label":"50 мл","price":10.92,"unit":"€ 10.92 / 50 мл","default":true}]'::jsonb
 ) ON CONFLICT (id) DO UPDATE SET
   name = EXCLUDED.name,
   price_eur = EXCLUDED.price_eur,
@@ -1719,8 +1719,8 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   'amitica',
   'nonprof',
   'Непрофесионална категория',
-  9.8,
-  19.17,
+  9.31,
+  9.31,
   '100 мл',
   '{"зеленчуци","картофи","овощни"}',
   'Азадирахтин А (10 г/л)',
@@ -1735,7 +1735,7 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   66,
   TRUE,
   '[{"val":100,"label":"Препоръчителна доза: 250-300 мл/дка"}]'::jsonb,
-  '[{"label":"100 мл","price":9.8,"unit":"€ 9.80 / 100 мл","default":true}]'::jsonb
+  '[{"label":"100 мл","price":9.31,"unit":"€ 9.31 / 100 мл","default":true}]'::jsonb
 ) ON CONFLICT (id) DO UPDATE SET
   name = EXCLUDED.name,
   price_eur = EXCLUDED.price_eur,
@@ -1749,8 +1749,8 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   'amitica',
   'nonprof',
   'Непрофесионална категория',
-  6.9,
-  13.5,
+  6.55,
+  6.55,
   '100 г',
   '{"зеленчуци","овощни","лозя"}',
   'Bacillus thuringiensis kurstaki',
@@ -1765,7 +1765,7 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   83,
   TRUE,
   '[{"val":100,"label":"Препоръчителна доза: 100 г/дка"}]'::jsonb,
-  '[{"label":"100 г","price":6.9,"unit":"€ 6.90 / 100 г","default":true}]'::jsonb
+  '[{"label":"100 г","price":6.55,"unit":"€ 6.55 / 100 г","default":true}]'::jsonb
 ) ON CONFLICT (id) DO UPDATE SET
   name = EXCLUDED.name,
   price_eur = EXCLUDED.price_eur,
@@ -1779,15 +1779,15 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   'amitica',
   'nonprof',
   'Непрофесионална категория',
-  13.9,
-  27.19,
+  13.21,
+  13.21,
   '200 мл',
   '{"лозя","зеленчуци","овощни"}',
   'Портокалово масло (60 г/л)',
   'МЕ',
   '1 ден',
   'БАБХ: № 01485-ПРЗ',
-  'Промо -10%',
+  'Промо -5%',
   '/images/products/bottle-250ml.jpg',
   '3-в-1 биопрепарат: изсушава въшки, белокрилки и спори на брашнеста мана.',
   '200-400 мл/дка',
@@ -1795,7 +1795,7 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   15,
   TRUE,
   '[{"val":100,"label":"Препоръчителна доза: 200-400 мл/дка"}]'::jsonb,
-  '[{"label":"200 мл","price":13.9,"unit":"€ 13.90 / 200 мл","default":true}]'::jsonb
+  '[{"label":"200 мл","price":13.21,"unit":"€ 13.21 / 200 мл","default":true}]'::jsonb
 ) ON CONFLICT (id) DO UPDATE SET
   name = EXCLUDED.name,
   price_eur = EXCLUDED.price_eur,
@@ -1809,8 +1809,8 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   'amitica',
   'nonprof',
   'Непрофесионална категория',
-  19.5,
-  38.14,
+  18.52,
+  18.52,
   '100 мл',
   '{"овощни"}',
   'Cydia pomonella грануловирус',
@@ -1825,7 +1825,7 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   32,
   TRUE,
   '[{"val":100,"label":"Препоръчителна доза: 10 мл/дка"}]'::jsonb,
-  '[{"label":"100 мл","price":19.5,"unit":"€ 19.50 / 100 мл","default":true}]'::jsonb
+  '[{"label":"100 мл","price":18.52,"unit":"€ 18.52 / 100 мл","default":true}]'::jsonb
 ) ON CONFLICT (id) DO UPDATE SET
   name = EXCLUDED.name,
   price_eur = EXCLUDED.price_eur,
@@ -1839,8 +1839,8 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   'syngenta',
   'prof',
   'II Професионална категория',
-  14.2,
-  27.77,
+  13.49,
+  13.49,
   '100 г',
   '{"лозя","домати","овощни"}',
   'Емамектин бензоат (9.5 г/кг)',
@@ -1855,7 +1855,7 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   49,
   TRUE,
   '[{"val":100,"label":"Препоръчителна доза: 150 г/дка"}]'::jsonb,
-  '[{"label":"100 г","price":14.2,"unit":"€ 14.20 / 100 г","default":true}]'::jsonb
+  '[{"label":"100 г","price":13.49,"unit":"€ 13.49 / 100 г","default":true}]'::jsonb
 ) ON CONFLICT (id) DO UPDATE SET
   name = EXCLUDED.name,
   price_eur = EXCLUDED.price_eur,
@@ -1869,8 +1869,8 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   'manica',
   'nonprof',
   'Непрофесионална категория',
-  7.9,
-  15.45,
+  7.5,
+  7.5,
   '100 мл',
   '{"лозя","зеленчуци"}',
   'Абамектин (18 г/л)',
@@ -1885,7 +1885,7 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   66,
   TRUE,
   '[{"val":100,"label":"Препоръчителна доза: 100 мл/дка"}]'::jsonb,
-  '[{"label":"100 мл","price":7.9,"unit":"€ 7.90 / 100 мл","default":true}]'::jsonb
+  '[{"label":"100 мл","price":7.5,"unit":"€ 7.50 / 100 мл","default":true}]'::jsonb
 ) ON CONFLICT (id) DO UPDATE SET
   name = EXCLUDED.name,
   price_eur = EXCLUDED.price_eur,
@@ -1899,8 +1899,8 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   'adama',
   'nonprof',
   'Непрофесионална категория',
-  5.5,
-  10.76,
+  5.22,
+  5.22,
   '100 г',
   '{"житни","овощни"}',
   'Ламбда-цихалотрин (25 г/кг)',
@@ -1915,7 +1915,7 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   83,
   TRUE,
   '[{"val":100,"label":"Препоръчителна доза: 30-50 г/дка"}]'::jsonb,
-  '[{"label":"100 г","price":5.5,"unit":"€ 5.50 / 100 г","default":true}]'::jsonb
+  '[{"label":"100 г","price":5.22,"unit":"€ 5.22 / 100 г","default":true}]'::jsonb
 ) ON CONFLICT (id) DO UPDATE SET
   name = EXCLUDED.name,
   price_eur = EXCLUDED.price_eur,
@@ -1929,8 +1929,8 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   'manica',
   'nonprof',
   'Непрофесионална категория',
-  3.9,
-  7.63,
+  3.7,
+  3.7,
   '50 мл',
   '{"лозя","овощни"}',
   'Делтаметрин (100 г/л)',
@@ -1945,7 +1945,7 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   15,
   TRUE,
   '[{"val":100,"label":"Препоръчителна доза: 12.5-15 мл/дка"}]'::jsonb,
-  '[{"label":"50 мл","price":3.9,"unit":"€ 3.90 / 50 мл","default":true}]'::jsonb
+  '[{"label":"50 мл","price":3.7,"unit":"€ 3.70 / 50 мл","default":true}]'::jsonb
 ) ON CONFLICT (id) DO UPDATE SET
   name = EXCLUDED.name,
   price_eur = EXCLUDED.price_eur,
@@ -1959,8 +1959,8 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   'adama',
   'nonprof',
   'Непрофесионална категория',
-  16.5,
-  32.27,
+  15.67,
+  15.67,
   '100 мл',
   '{"рапица","овощни"}',
   'Тау-флувалинат (240 г/л)',
@@ -1975,7 +1975,7 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   32,
   TRUE,
   '[{"val":100,"label":"Препоръчителна доза: 20-30 мл/дка"}]'::jsonb,
-  '[{"label":"100 мл","price":16.5,"unit":"€ 16.50 / 100 мл","default":true}]'::jsonb
+  '[{"label":"100 мл","price":15.67,"unit":"€ 15.67 / 100 мл","default":true}]'::jsonb
 ) ON CONFLICT (id) DO UPDATE SET
   name = EXCLUDED.name,
   price_eur = EXCLUDED.price_eur,
@@ -1989,8 +1989,8 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   'nippon',
   'prof',
   'II Професионална категория',
-  21,
-  41.07,
+  19.95,
+  19.95,
   '250 мл',
   '{"овощни","домати"}',
   'Пирипроксифен (100 г/л)',
@@ -2005,7 +2005,7 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   49,
   TRUE,
   '[{"val":100,"label":"Препоръчителна доза: 30-40 мл/дка"}]'::jsonb,
-  '[{"label":"250 мл","price":21,"unit":"€ 21.00 / 250 мл","default":true}]'::jsonb
+  '[{"label":"250 мл","price":19.95,"unit":"€ 19.95 / 250 мл","default":true}]'::jsonb
 ) ON CONFLICT (id) DO UPDATE SET
   name = EXCLUDED.name,
   price_eur = EXCLUDED.price_eur,
@@ -2019,8 +2019,8 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   'nippon',
   'nonprof',
   'Непрофесионална категория',
-  2.5,
-  4.89,
+  2.38,
+  2.38,
   '30 мл',
   '{"овощни","зеленчуци"}',
   'Есфенвалерат (50 г/л)',
@@ -2035,7 +2035,7 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   66,
   TRUE,
   '[{"val":100,"label":"Препоръчителна доза: 20-30 мл/дка"}]'::jsonb,
-  '[{"label":"30 мл","price":2.5,"unit":"€ 2.50 / 30 мл","default":true}]'::jsonb
+  '[{"label":"30 мл","price":2.38,"unit":"€ 2.38 / 30 мл","default":true}]'::jsonb
 ) ON CONFLICT (id) DO UPDATE SET
   name = EXCLUDED.name,
   price_eur = EXCLUDED.price_eur,
@@ -2049,8 +2049,8 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   'manica',
   'nonprof',
   'Непрофесионална категория',
-  5.2,
-  10.17,
+  4.94,
+  4.94,
   '100 мл',
   '{"житни","картофи"}',
   'Циперметрин (100 г/л)',
@@ -2065,7 +2065,7 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   83,
   TRUE,
   '[{"val":100,"label":"Препоръчителна доза: 30-40 мл/дка"}]'::jsonb,
-  '[{"label":"100 мл","price":5.2,"unit":"€ 5.20 / 100 мл","default":true}]'::jsonb
+  '[{"label":"100 мл","price":4.94,"unit":"€ 4.94 / 100 мл","default":true}]'::jsonb
 ) ON CONFLICT (id) DO UPDATE SET
   name = EXCLUDED.name,
   price_eur = EXCLUDED.price_eur,
@@ -2079,8 +2079,8 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   'adama',
   'prof',
   'II Професионална категория',
-  18.9,
-  36.97,
+  17.95,
+  17.95,
   '250 мл',
   '{"овощни"}',
   'Пирипроксифен (100 г/л)',
@@ -2095,7 +2095,7 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   15,
   TRUE,
   '[{"val":100,"label":"Препоръчителна доза: 40 мл/дка"}]'::jsonb,
-  '[{"label":"250 мл","price":18.9,"unit":"€ 18.90 / 250 мл","default":true}]'::jsonb
+  '[{"label":"250 мл","price":17.95,"unit":"€ 17.95 / 250 мл","default":true}]'::jsonb
 ) ON CONFLICT (id) DO UPDATE SET
   name = EXCLUDED.name,
   price_eur = EXCLUDED.price_eur,
@@ -2109,15 +2109,15 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   'manica',
   'nonprof',
   'Непрофесионална категория',
-  2.8,
-  5.48,
+  2.66,
+  2.66,
   '50 мл',
   '{"зеленчуци","житни"}',
   'Делтаметрин (25 г/л)',
   'ЕК',
   '3 дни',
   'БАБХ: № 01562-ПРЗ',
-  'Промо -10%',
+  'Промо -5%',
   '/images/products/bottle-250ml.jpg',
   'Икономичен пиретроид за градинари срещу листни бълхи и гъсеници.',
   '30-50 мл/дка',
@@ -2125,7 +2125,7 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   32,
   TRUE,
   '[{"val":100,"label":"Препоръчителна доза: 30-50 мл/дка"}]'::jsonb,
-  '[{"label":"50 мл","price":2.8,"unit":"€ 2.80 / 50 мл","default":true}]'::jsonb
+  '[{"label":"50 мл","price":2.66,"unit":"€ 2.66 / 50 мл","default":true}]'::jsonb
 ) ON CONFLICT (id) DO UPDATE SET
   name = EXCLUDED.name,
   price_eur = EXCLUDED.price_eur,
@@ -2139,8 +2139,8 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   'nippon',
   'nonprof',
   'Непрофесионална категория',
-  8.8,
-  17.21,
+  8.36,
+  8.36,
   '50 г',
   '{"лозя","овощни"}',
   'Пиридабен (200 г/кг)',
@@ -2155,7 +2155,7 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   49,
   TRUE,
   '[{"val":100,"label":"Препоръчителна доза: 50-75 г/дка"}]'::jsonb,
-  '[{"label":"50 г","price":8.8,"unit":"€ 8.80 / 50 г","default":true}]'::jsonb
+  '[{"label":"50 г","price":8.36,"unit":"€ 8.36 / 50 г","default":true}]'::jsonb
 ) ON CONFLICT (id) DO UPDATE SET
   name = EXCLUDED.name,
   price_eur = EXCLUDED.price_eur,
@@ -2169,8 +2169,8 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   'bayer',
   'prof',
   'II Професионална категория',
-  34,
-  66.5,
+  32.3,
+  32.3,
   '250 мл',
   '{"лозя","овощни"}',
   'Спиродиклофен (240 г/л)',
@@ -2185,7 +2185,7 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   66,
   TRUE,
   '[{"val":100,"label":"Препоръчителна доза: 40-60 мл/дка"}]'::jsonb,
-  '[{"label":"250 мл","price":34,"unit":"€ 34.00 / 250 мл","default":true}]'::jsonb
+  '[{"label":"250 мл","price":32.3,"unit":"€ 32.30 / 250 мл","default":true}]'::jsonb
 ) ON CONFLICT (id) DO UPDATE SET
   name = EXCLUDED.name,
   price_eur = EXCLUDED.price_eur,
@@ -2199,8 +2199,8 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   'syngenta',
   'prof',
   'II Професионална категория',
-  68,
-  133,
+  64.6,
+  64.6,
   '250 мл',
   '{"домати","зеленчуци"}',
   'Циантранилипрол + Ацибензолар-S-метил',
@@ -2215,7 +2215,7 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   83,
   TRUE,
   '[{"val":100,"label":"Препоръчителна доза: 100-125 мл/дка"}]'::jsonb,
-  '[{"label":"250 мл","price":68,"unit":"€ 68.00 / 250 мл","default":true}]'::jsonb
+  '[{"label":"250 мл","price":64.6,"unit":"€ 64.60 / 250 мл","default":true}]'::jsonb
 ) ON CONFLICT (id) DO UPDATE SET
   name = EXCLUDED.name,
   price_eur = EXCLUDED.price_eur,
@@ -2229,8 +2229,8 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   'amitica',
   'nonprof',
   'Непрофесионална категория',
-  22,
-  43.03,
+  20.9,
+  20.9,
   '100 мл',
   '{"домати","царевица"}',
   'Helicoverpa armigera вирус',
@@ -2245,7 +2245,7 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   15,
   TRUE,
   '[{"val":100,"label":"Препоръчителна доза: 10-20 мл/дка"}]'::jsonb,
-  '[{"label":"100 мл","price":22,"unit":"€ 22.00 / 100 мл","default":true}]'::jsonb
+  '[{"label":"100 мл","price":20.9,"unit":"€ 20.90 / 100 мл","default":true}]'::jsonb
 ) ON CONFLICT (id) DO UPDATE SET
   name = EXCLUDED.name,
   price_eur = EXCLUDED.price_eur,
@@ -2259,8 +2259,8 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   'amitica',
   'nonprof',
   'Непрофесионална категория',
-  14.5,
-  28.36,
+  13.77,
+  13.77,
   '250 мл',
   '{"лозя","овощни"}',
   'Bacillus thuringiensis kurstaki',
@@ -2275,7 +2275,7 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   32,
   TRUE,
   '[{"val":100,"label":"Препоръчителна доза: 100-150 мл/дка"}]'::jsonb,
-  '[{"label":"250 мл","price":14.5,"unit":"€ 14.50 / 250 мл","default":true}]'::jsonb
+  '[{"label":"250 мл","price":13.77,"unit":"€ 13.77 / 250 мл","default":true}]'::jsonb
 ) ON CONFLICT (id) DO UPDATE SET
   name = EXCLUDED.name,
   price_eur = EXCLUDED.price_eur,
@@ -2289,8 +2289,8 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   'nippon',
   'prof',
   'II Професионална категория',
-  17.5,
-  34.23,
+  16.63,
+  16.63,
   '200 мл',
   '{"овощни","житни"}',
   'Фенитротион (500 г/л)',
@@ -2305,7 +2305,7 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   49,
   TRUE,
   '[{"val":100,"label":"Препоръчителна доза: 100 мл/дка"}]'::jsonb,
-  '[{"label":"200 мл","price":17.5,"unit":"€ 17.50 / 200 мл","default":true}]'::jsonb
+  '[{"label":"200 мл","price":16.63,"unit":"€ 16.63 / 200 мл","default":true}]'::jsonb
 ) ON CONFLICT (id) DO UPDATE SET
   name = EXCLUDED.name,
   price_eur = EXCLUDED.price_eur,
@@ -2319,8 +2319,8 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   'amitica',
   'nonprof',
   'Непрофесионална категория',
-  16,
-  31.29,
+  15.2,
+  15.2,
   '1 л',
   '{"овощни","лозя"}',
   'Калциев полисулфид 380 г/л',
@@ -2335,7 +2335,7 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   66,
   TRUE,
   '[{"val":100,"label":"Препоръчителна доза: 1.5-2 л/дка"}]'::jsonb,
-  '[{"label":"1 л","price":16,"unit":"€ 16.00 / 1 л","default":true}]'::jsonb
+  '[{"label":"1 л","price":15.2,"unit":"€ 15.20 / 1 л","default":true}]'::jsonb
 ) ON CONFLICT (id) DO UPDATE SET
   name = EXCLUDED.name,
   price_eur = EXCLUDED.price_eur,
@@ -2349,8 +2349,8 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   'amitica',
   'nonprof',
   'Непрофесионална категория',
-  14.5,
-  28.36,
+  13.77,
+  13.77,
   '100 мл',
   '{"зеленчуци","цветя"}',
   'Естествен пиретрум (40 г/л)',
@@ -2365,7 +2365,7 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   83,
   TRUE,
   '[{"val":100,"label":"Препоръчителна доза: 75-100 мл/дка"}]'::jsonb,
-  '[{"label":"100 мл","price":14.5,"unit":"€ 14.50 / 100 мл","default":true}]'::jsonb
+  '[{"label":"100 мл","price":13.77,"unit":"€ 13.77 / 100 мл","default":true}]'::jsonb
 ) ON CONFLICT (id) DO UPDATE SET
   name = EXCLUDED.name,
   price_eur = EXCLUDED.price_eur,
@@ -2379,8 +2379,8 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   'corteva',
   'prof',
   'II Професионална категория',
-  19.8,
-  38.73,
+  18.81,
+  18.81,
   '200 мл',
   '{"лозя","овощни"}',
   'Пропаргит (570 г/л)',
@@ -2395,7 +2395,7 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   15,
   TRUE,
   '[{"val":100,"label":"Препоръчителна доза: 100 мл/дка"}]'::jsonb,
-  '[{"label":"200 мл","price":19.8,"unit":"€ 19.80 / 200 мл","default":true}]'::jsonb
+  '[{"label":"200 мл","price":18.81,"unit":"€ 18.81 / 200 мл","default":true}]'::jsonb
 ) ON CONFLICT (id) DO UPDATE SET
   name = EXCLUDED.name,
   price_eur = EXCLUDED.price_eur,
@@ -2409,8 +2409,8 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   'bayer',
   'prof',
   'II Професионална категория',
-  11.9,
-  23.27,
+  11.3,
+  11.3,
   '1 л',
   '{"лозя","овощни","житни"}',
   'Глифозат (360 г/л)',
@@ -2425,7 +2425,7 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   32,
   TRUE,
   '[{"val":100,"label":"Препоръчителна доза: 300-800 мл/дка"}]'::jsonb,
-  '[{"label":"1 л","price":11.9,"unit":"€ 11.90 / 1 л","default":true}]'::jsonb
+  '[{"label":"1 л","price":11.3,"unit":"€ 11.30 / 1 л","default":true}]'::jsonb
 ) ON CONFLICT (id) DO UPDATE SET
   name = EXCLUDED.name,
   price_eur = EXCLUDED.price_eur,
@@ -2439,15 +2439,15 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   'bayer',
   'prof',
   'II Професионална категория',
-  16.5,
-  32.27,
+  15.67,
+  15.67,
   '1 л',
   '{"лозя","овощни"}',
   'Глифозат калиева сол (540 г/л)',
   'РЗ',
   'Преди засяване',
   'БАБХ: № 01639-ПРЗ',
-  'Промо -10%',
+  'Промо -5%',
   '/images/products/canister-5l.jpg',
   'Концентриран глифозат с калиева сол: поглъща се за 1 час, действа при хладно време.',
   '200-500 мл/дка',
@@ -2455,7 +2455,7 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   49,
   TRUE,
   '[{"val":100,"label":"Препоръчителна доза: 200-500 мл/дка"}]'::jsonb,
-  '[{"label":"1 л","price":16.5,"unit":"€ 16.50 / 1 л","default":true}]'::jsonb
+  '[{"label":"1 л","price":15.67,"unit":"€ 15.67 / 1 л","default":true}]'::jsonb
 ) ON CONFLICT (id) DO UPDATE SET
   name = EXCLUDED.name,
   price_eur = EXCLUDED.price_eur,
@@ -2469,8 +2469,8 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   'manica',
   'prof',
   'II Професионална категория',
-  9.8,
-  19.17,
+  9.31,
+  9.31,
   '1 л',
   '{"лозя","овощни"}',
   'Глифозат (360 г/л)',
@@ -2485,7 +2485,7 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   66,
   TRUE,
   '[{"val":100,"label":"Препоръчителна доза: 400-800 мл/дка"}]'::jsonb,
-  '[{"label":"1 л","price":9.8,"unit":"€ 9.80 / 1 л","default":true}]'::jsonb
+  '[{"label":"1 л","price":9.31,"unit":"€ 9.31 / 1 л","default":true}]'::jsonb
 ) ON CONFLICT (id) DO UPDATE SET
   name = EXCLUDED.name,
   price_eur = EXCLUDED.price_eur,
@@ -2499,8 +2499,8 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   'basf',
   'nonprof',
   'Непрофесионална категория',
-  19.5,
-  38.14,
+  18.52,
+  18.52,
   '1 л',
   '{"домати","картофи","овощни","лозя"}',
   'Пендиметалин (455 г/л)',
@@ -2515,7 +2515,7 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   83,
   TRUE,
   '[{"val":100,"label":"Препоръчителна доза: 250-400 мл/дка"}]'::jsonb,
-  '[{"label":"1 л","price":19.5,"unit":"€ 19.50 / 1 л","default":true}]'::jsonb
+  '[{"label":"1 л","price":18.52,"unit":"€ 18.52 / 1 л","default":true}]'::jsonb
 ) ON CONFLICT (id) DO UPDATE SET
   name = EXCLUDED.name,
   price_eur = EXCLUDED.price_eur,
@@ -2529,8 +2529,8 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   'corteva',
   'nonprof',
   'Непрофесионална категория',
-  18,
-  35.2,
+  17.1,
+  17.1,
   '1 л',
   '{"домати","картофи","лозя"}',
   'Квизалофоп-П-тефурил (40 г/л)',
@@ -2545,7 +2545,7 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   15,
   TRUE,
   '[{"val":100,"label":"Препоръчителна доза: 100-250 мл/дка"}]'::jsonb,
-  '[{"label":"1 л","price":18,"unit":"€ 18.00 / 1 л","default":true}]'::jsonb
+  '[{"label":"1 л","price":17.1,"unit":"€ 17.10 / 1 л","default":true}]'::jsonb
 ) ON CONFLICT (id) DO UPDATE SET
   name = EXCLUDED.name,
   price_eur = EXCLUDED.price_eur,
@@ -2559,8 +2559,8 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   'corteva',
   'nonprof',
   'Непрофесионална категория',
-  24.5,
-  47.92,
+  23.27,
+  23.27,
   '1 л',
   '{"домати","картофи","лозя"}',
   'Клетодим (120 г/л)',
@@ -2575,7 +2575,7 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   32,
   TRUE,
   '[{"val":100,"label":"Препоръчителна доза: 80-160 мл/дка"}]'::jsonb,
-  '[{"label":"1 л","price":24.5,"unit":"€ 24.50 / 1 л","default":true}]'::jsonb
+  '[{"label":"1 л","price":23.27,"unit":"€ 23.27 / 1 л","default":true}]'::jsonb
 ) ON CONFLICT (id) DO UPDATE SET
   name = EXCLUDED.name,
   price_eur = EXCLUDED.price_eur,
@@ -2589,8 +2589,8 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   'syngenta',
   'prof',
   'II Професионална категория',
-  29.8,
-  58.28,
+  28.31,
+  28.31,
   '1 л',
   '{"домати","картофи","житни"}',
   'С-метолахлор (960 г/л)',
@@ -2605,7 +2605,7 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   49,
   TRUE,
   '[{"val":100,"label":"Препоръчителна доза: 120-150 мл/дка"}]'::jsonb,
-  '[{"label":"1 л","price":29.8,"unit":"€ 29.80 / 1 л","default":true}]'::jsonb
+  '[{"label":"1 л","price":28.31,"unit":"€ 28.31 / 1 л","default":true}]'::jsonb
 ) ON CONFLICT (id) DO UPDATE SET
   name = EXCLUDED.name,
   price_eur = EXCLUDED.price_eur,
@@ -2619,8 +2619,8 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   'bayer',
   'nonprof',
   'Непрофесионална категория',
-  33.5,
-  65.52,
+  31.82,
+  31.82,
   '1 л',
   '{"картофи","домати"}',
   'Метрибузин (600 г/л)',
@@ -2635,7 +2635,7 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   66,
   TRUE,
   '[{"val":100,"label":"Препоръчителна доза: 40-60 мл/дка"}]'::jsonb,
-  '[{"label":"1 л","price":33.5,"unit":"€ 33.50 / 1 л","default":true}]'::jsonb
+  '[{"label":"1 л","price":31.82,"unit":"€ 31.82 / 1 л","default":true}]'::jsonb
 ) ON CONFLICT (id) DO UPDATE SET
   name = EXCLUDED.name,
   price_eur = EXCLUDED.price_eur,
@@ -2649,8 +2649,8 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   'bayer',
   'prof',
   'II Професионална категория',
-  44,
-  86.06,
+  41.8,
+  41.8,
   '1 л',
   '{"житни"}',
   'Темботрион (44 г/л)',
@@ -2665,7 +2665,7 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   83,
   TRUE,
   '[{"val":100,"label":"Препоръчителна доза: 200-220 мл/дка"}]'::jsonb,
-  '[{"label":"1 л","price":44,"unit":"€ 44.00 / 1 л","default":true}]'::jsonb
+  '[{"label":"1 л","price":41.8,"unit":"€ 41.80 / 1 л","default":true}]'::jsonb
 ) ON CONFLICT (id) DO UPDATE SET
   name = EXCLUDED.name,
   price_eur = EXCLUDED.price_eur,
@@ -2679,8 +2679,8 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   'corteva',
   'prof',
   'II Професионална категория',
-  19.8,
-  38.73,
+  18.81,
+  18.81,
   '1 л',
   '{"житни"}',
   'Флорасулам + 2.4-Д 2-етилхексил естер',
@@ -2695,7 +2695,7 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   15,
   TRUE,
   '[{"val":100,"label":"Препоръчителна доза: 50-80 мл/дка"}]'::jsonb,
-  '[{"label":"1 л","price":19.8,"unit":"€ 19.80 / 1 л","default":true}]'::jsonb
+  '[{"label":"1 л","price":18.81,"unit":"€ 18.81 / 1 л","default":true}]'::jsonb
 ) ON CONFLICT (id) DO UPDATE SET
   name = EXCLUDED.name,
   price_eur = EXCLUDED.price_eur,
@@ -2709,8 +2709,8 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   'corteva',
   'prof',
   'II Професионална категория',
-  15.2,
-  29.73,
+  14.44,
+  14.44,
   '100 г',
   '{"житни"}',
   'Флуметсулам (75 г/кг) + Флорасулам (50 г/кг)',
@@ -2725,7 +2725,7 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   32,
   TRUE,
   '[{"val":100,"label":"Препоръчителна доза: 3.3 г/дка"}]'::jsonb,
-  '[{"label":"100 г","price":15.2,"unit":"€ 15.20 / 100 г","default":true}]'::jsonb
+  '[{"label":"100 г","price":14.44,"unit":"€ 14.44 / 100 г","default":true}]'::jsonb
 ) ON CONFLICT (id) DO UPDATE SET
   name = EXCLUDED.name,
   price_eur = EXCLUDED.price_eur,
@@ -2739,8 +2739,8 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   'basf',
   'prof',
   'II Професионална категория',
-  27.5,
-  53.79,
+  26.13,
+  26.13,
   '1 л',
   '{"зеленчуци","житни"}',
   'Бентазон (480 г/л)',
@@ -2755,7 +2755,7 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   49,
   TRUE,
   '[{"val":100,"label":"Препоръчителна доза: 200-300 мл/дка"}]'::jsonb,
-  '[{"label":"1 л","price":27.5,"unit":"€ 27.50 / 1 л","default":true}]'::jsonb
+  '[{"label":"1 л","price":26.13,"unit":"€ 26.13 / 1 л","default":true}]'::jsonb
 ) ON CONFLICT (id) DO UPDATE SET
   name = EXCLUDED.name,
   price_eur = EXCLUDED.price_eur,
@@ -2769,15 +2769,15 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   'bayer',
   'prof',
   'II Професионална категория',
-  58,
-  113.44,
+  55.1,
+  55.1,
   '500 мл',
   '{"житни"}',
   'Изоксафлутол (240 г/л) + антидот',
   'СК',
   'Почвено',
   'БАБХ: № 01716-ПРЗ',
-  'Промо -10%',
+  'Промо -5%',
   '/images/products/canister-5l.jpg',
   'Хербицид с презареждащ ефект при дъжд за пълна чистота на царевицата.',
   '40-42 мл/дка',
@@ -2785,7 +2785,7 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   66,
   TRUE,
   '[{"val":100,"label":"Препоръчителна доза: 40-42 мл/дка"}]'::jsonb,
-  '[{"label":"500 мл","price":58,"unit":"€ 58.00 / 500 мл","default":true}]'::jsonb
+  '[{"label":"500 мл","price":55.1,"unit":"€ 55.10 / 500 мл","default":true}]'::jsonb
 ) ON CONFLICT (id) DO UPDATE SET
   name = EXCLUDED.name,
   price_eur = EXCLUDED.price_eur,
@@ -2799,8 +2799,8 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   'bayer',
   'prof',
   'II Професионална категория',
-  42,
-  82.14,
+  39.9,
+  39.9,
   '1 л',
   '{"житни"}',
   'Форамсулфурон (22.5 г/л) + Йодосулфурон',
@@ -2815,7 +2815,7 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   83,
   TRUE,
   '[{"val":100,"label":"Препоръчителна доза: 200-250 мл/дка"}]'::jsonb,
-  '[{"label":"1 л","price":42,"unit":"€ 42.00 / 1 л","default":true}]'::jsonb
+  '[{"label":"1 л","price":39.9,"unit":"€ 39.90 / 1 л","default":true}]'::jsonb
 ) ON CONFLICT (id) DO UPDATE SET
   name = EXCLUDED.name,
   price_eur = EXCLUDED.price_eur,
@@ -2829,8 +2829,8 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   'bayer',
   'prof',
   'II Професионална категория',
-  68,
-  133,
+  64.6,
+  64.6,
   '1 л',
   '{"житни"}',
   'Темботрион (345 г/л) + Тиенкарбазон-метил',
@@ -2845,7 +2845,7 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   15,
   TRUE,
   '[{"val":100,"label":"Препоръчителна доза: 25-30 мл/дка"}]'::jsonb,
-  '[{"label":"1 л","price":68,"unit":"€ 68.00 / 1 л","default":true}]'::jsonb
+  '[{"label":"1 л","price":64.6,"unit":"€ 64.60 / 1 л","default":true}]'::jsonb
 ) ON CONFLICT (id) DO UPDATE SET
   name = EXCLUDED.name,
   price_eur = EXCLUDED.price_eur,
@@ -2859,8 +2859,8 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   'bayer',
   'prof',
   'II Професионална категория',
-  29.5,
-  57.7,
+  28.02,
+  28.02,
   '1 л',
   '{"картофи","зеленчуци"}',
   'Аклонифен (600 г/л)',
@@ -2875,7 +2875,7 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   32,
   TRUE,
   '[{"val":100,"label":"Препоръчителна доза: 400 мл/дка"}]'::jsonb,
-  '[{"label":"1 л","price":29.5,"unit":"€ 29.50 / 1 л","default":true}]'::jsonb
+  '[{"label":"1 л","price":28.02,"unit":"€ 28.02 / 1 л","default":true}]'::jsonb
 ) ON CONFLICT (id) DO UPDATE SET
   name = EXCLUDED.name,
   price_eur = EXCLUDED.price_eur,
@@ -2889,8 +2889,8 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   'bayer',
   'prof',
   'II Професионална категория',
-  31,
-  60.63,
+  29.45,
+  29.45,
   '1 л',
   '{"житни"}',
   'Феноксапроп-П-етил (69 г/л) + мефенпир',
@@ -2905,7 +2905,7 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   49,
   TRUE,
   '[{"val":100,"label":"Препоръчителна доза: 100 мл/дка"}]'::jsonb,
-  '[{"label":"1 л","price":31,"unit":"€ 31.00 / 1 л","default":true}]'::jsonb
+  '[{"label":"1 л","price":29.45,"unit":"€ 29.45 / 1 л","default":true}]'::jsonb
 ) ON CONFLICT (id) DO UPDATE SET
   name = EXCLUDED.name,
   price_eur = EXCLUDED.price_eur,
@@ -2919,8 +2919,8 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   'corteva',
   'prof',
   'II Професионална категория',
-  46,
-  89.97,
+  43.7,
+  43.7,
   '500 г',
   '{"житни"}',
   'Пироксулам (75 г/кг) + клохинтоцет',
@@ -2935,7 +2935,7 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   66,
   TRUE,
   '[{"val":100,"label":"Препоръчителна доза: 25 г/дка"}]'::jsonb,
-  '[{"label":"500 г","price":46,"unit":"€ 46.00 / 500 г","default":true}]'::jsonb
+  '[{"label":"500 г","price":43.7,"unit":"€ 43.70 / 500 г","default":true}]'::jsonb
 ) ON CONFLICT (id) DO UPDATE SET
   name = EXCLUDED.name,
   price_eur = EXCLUDED.price_eur,
@@ -2949,8 +2949,8 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   'basf',
   'prof',
   'II Професионална категория',
-  32,
-  62.59,
+  30.4,
+  30.4,
   '1 л',
   '{"домати","картофи","лозя"}',
   'Циклоксидим (100 г/л)',
@@ -2965,7 +2965,7 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   83,
   TRUE,
   '[{"val":100,"label":"Препоръчителна доза: 100-200 мл/дка"}]'::jsonb,
-  '[{"label":"1 л","price":32,"unit":"€ 32.00 / 1 л","default":true}]'::jsonb
+  '[{"label":"1 л","price":30.4,"unit":"€ 30.40 / 1 л","default":true}]'::jsonb
 ) ON CONFLICT (id) DO UPDATE SET
   name = EXCLUDED.name,
   price_eur = EXCLUDED.price_eur,
@@ -2979,8 +2979,8 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   'basf',
   'prof',
   'II Професионална категория',
-  31.5,
-  61.61,
+  29.92,
+  29.92,
   '1 л',
   '{"лозя","овощни"}',
   'Циклоксидим (100 г/л)',
@@ -2995,7 +2995,7 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   15,
   TRUE,
   '[{"val":100,"label":"Препоръчителна доза: 150-200 мл/дка"}]'::jsonb,
-  '[{"label":"1 л","price":31.5,"unit":"€ 31.50 / 1 л","default":true}]'::jsonb
+  '[{"label":"1 л","price":29.92,"unit":"€ 29.92 / 1 л","default":true}]'::jsonb
 ) ON CONFLICT (id) DO UPDATE SET
   name = EXCLUDED.name,
   price_eur = EXCLUDED.price_eur,
@@ -3009,8 +3009,8 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   'adama',
   'prof',
   'II Професионална категория',
-  36,
-  70.41,
+  34.2,
+  34.2,
   '1 л',
   '{"зеленчуци"}',
   'Метамитрон (700 г/л)',
@@ -3025,7 +3025,7 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   32,
   TRUE,
   '[{"val":100,"label":"Препоръчителна доза: 200-500 мл/дка"}]'::jsonb,
-  '[{"label":"1 л","price":36,"unit":"€ 36.00 / 1 л","default":true}]'::jsonb
+  '[{"label":"1 л","price":34.2,"unit":"€ 34.20 / 1 л","default":true}]'::jsonb
 ) ON CONFLICT (id) DO UPDATE SET
   name = EXCLUDED.name,
   price_eur = EXCLUDED.price_eur,
@@ -3039,8 +3039,8 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   'nippon',
   'nonprof',
   'Непрофесионална категория',
-  23,
-  44.98,
+  21.85,
+  21.85,
   '1 л',
   '{"картофи","домати"}',
   'Сетоксидим (125 г/л)',
@@ -3055,7 +3055,7 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   49,
   TRUE,
   '[{"val":100,"label":"Препоръчителна доза: 150-200 мл/дка"}]'::jsonb,
-  '[{"label":"1 л","price":23,"unit":"€ 23.00 / 1 л","default":true}]'::jsonb
+  '[{"label":"1 л","price":21.85,"unit":"€ 21.85 / 1 л","default":true}]'::jsonb
 ) ON CONFLICT (id) DO UPDATE SET
   name = EXCLUDED.name,
   price_eur = EXCLUDED.price_eur,
@@ -3069,8 +3069,8 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   'syngenta',
   'prof',
   'II Професионална категория',
-  54,
-  105.61,
+  51.3,
+  51.3,
   '1 л',
   '{"житни"}',
   'Мезотрион (480 г/л)',
@@ -3085,7 +3085,7 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   66,
   TRUE,
   '[{"val":100,"label":"Препоръчителна доза: 25-30 мл/дка"}]'::jsonb,
-  '[{"label":"1 л","price":54,"unit":"€ 54.00 / 1 л","default":true}]'::jsonb
+  '[{"label":"1 л","price":51.3,"unit":"€ 51.30 / 1 л","default":true}]'::jsonb
 ) ON CONFLICT (id) DO UPDATE SET
   name = EXCLUDED.name,
   price_eur = EXCLUDED.price_eur,
@@ -3099,15 +3099,15 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   'bayer',
   'prof',
   'II Професионална категория',
-  39,
-  76.28,
+  37.05,
+  37.05,
   '1 л',
   '{"житни"}',
   'Йодосулфурон (25 г/л) + Амидосулфурон',
   'ОД',
   '60 дни',
   'БАБХ: № 01793-ПРЗ',
-  'Промо -10%',
+  'Промо -5%',
   '/images/products/canister-5l.jpg',
   'Маслена O-TEQ дисперсия за контрол на широколистни в пшеница и ечемик.',
   '10-11 мл/дка',
@@ -3115,7 +3115,7 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   83,
   TRUE,
   '[{"val":100,"label":"Препоръчителна доза: 10-11 мл/дка"}]'::jsonb,
-  '[{"label":"1 л","price":39,"unit":"€ 39.00 / 1 л","default":true}]'::jsonb
+  '[{"label":"1 л","price":37.05,"unit":"€ 37.05 / 1 л","default":true}]'::jsonb
 ) ON CONFLICT (id) DO UPDATE SET
   name = EXCLUDED.name,
   price_eur = EXCLUDED.price_eur,
@@ -3129,8 +3129,8 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   'corteva',
   'prof',
   'II Професионална категория',
-  16.5,
-  32.27,
+  15.67,
+  15.67,
   '100 г',
   '{"житни"}',
   'Тифенсулфурон-метил (500 г/кг)',
@@ -3145,7 +3145,7 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   15,
   TRUE,
   '[{"val":100,"label":"Препоръчителна доза: 2-3 г/дка"}]'::jsonb,
-  '[{"label":"100 г","price":16.5,"unit":"€ 16.50 / 100 г","default":true}]'::jsonb
+  '[{"label":"100 г","price":15.67,"unit":"€ 15.67 / 100 г","default":true}]'::jsonb
 ) ON CONFLICT (id) DO UPDATE SET
   name = EXCLUDED.name,
   price_eur = EXCLUDED.price_eur,
@@ -3159,8 +3159,8 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   'nippon',
   'nonprof',
   'Непрофесионална категория',
-  19.5,
-  38.14,
+  18.52,
+  18.52,
   '1 л',
   '{"домати","картофи","лозя"}',
   'Квизалофоп-П-етил (50 г/л)',
@@ -3175,7 +3175,7 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   32,
   TRUE,
   '[{"val":100,"label":"Препоръчителна доза: 150-200 мл/дка"}]'::jsonb,
-  '[{"label":"1 л","price":19.5,"unit":"€ 19.50 / 1 л","default":true}]'::jsonb
+  '[{"label":"1 л","price":18.52,"unit":"€ 18.52 / 1 л","default":true}]'::jsonb
 ) ON CONFLICT (id) DO UPDATE SET
   name = EXCLUDED.name,
   price_eur = EXCLUDED.price_eur,
@@ -3189,8 +3189,8 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   'basf',
   'prof',
   'II Професионална категория',
-  41,
-  80.19,
+  38.95,
+  38.95,
   '1 л',
   '{"житни"}',
   'Имазамокс (40 г/л)',
@@ -3205,7 +3205,7 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   49,
   TRUE,
   '[{"val":100,"label":"Препоръчителна доза: 120 мл/дка"}]'::jsonb,
-  '[{"label":"1 л","price":41,"unit":"€ 41.00 / 1 л","default":true}]'::jsonb
+  '[{"label":"1 л","price":38.95,"unit":"€ 38.95 / 1 л","default":true}]'::jsonb
 ) ON CONFLICT (id) DO UPDATE SET
   name = EXCLUDED.name,
   price_eur = EXCLUDED.price_eur,
@@ -3219,8 +3219,8 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   'corteva',
   'prof',
   'II Професионална категория',
-  26,
-  50.85,
+  24.7,
+  24.7,
   '1 л',
   '{"житни","овощни"}',
   'Флуроксипир (100 г/л) + Флорасулам (1 г/л)',
@@ -3235,7 +3235,7 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   66,
   TRUE,
   '[{"val":100,"label":"Препоръчителна доза: 100-150 мл/дка"}]'::jsonb,
-  '[{"label":"1 л","price":26,"unit":"€ 26.00 / 1 л","default":true}]'::jsonb
+  '[{"label":"1 л","price":24.7,"unit":"€ 24.70 / 1 л","default":true}]'::jsonb
 ) ON CONFLICT (id) DO UPDATE SET
   name = EXCLUDED.name,
   price_eur = EXCLUDED.price_eur,
@@ -3249,8 +3249,8 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   'bayer',
   'prof',
   'II Професионална категория',
-  35,
-  68.45,
+  33.25,
+  33.25,
   '1 л',
   '{"зеленчуци"}',
   'Фенмедифам + Етофумезат',
@@ -3265,7 +3265,7 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   83,
   TRUE,
   '[{"val":100,"label":"Препоръчителна доза: 100-150 мл/дка"}]'::jsonb,
-  '[{"label":"1 л","price":35,"unit":"€ 35.00 / 1 л","default":true}]'::jsonb
+  '[{"label":"1 л","price":33.25,"unit":"€ 33.25 / 1 л","default":true}]'::jsonb
 ) ON CONFLICT (id) DO UPDATE SET
   name = EXCLUDED.name,
   price_eur = EXCLUDED.price_eur,
@@ -3279,8 +3279,8 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   'manica',
   'nonprof',
   'Непрофесионална категория',
-  8.5,
-  16.62,
+  8.07,
+  8.07,
   '1 л',
   '{"житни"}',
   '2.4-Д аминна сол (600 г/л)',
@@ -3295,7 +3295,7 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   15,
   TRUE,
   '[{"val":100,"label":"Препоръчителна доза: 100-120 мл/дка"}]'::jsonb,
-  '[{"label":"1 л","price":8.5,"unit":"€ 8.50 / 1 л","default":true}]'::jsonb
+  '[{"label":"1 л","price":8.07,"unit":"€ 8.07 / 1 л","default":true}]'::jsonb
 ) ON CONFLICT (id) DO UPDATE SET
   name = EXCLUDED.name,
   price_eur = EXCLUDED.price_eur,
@@ -3309,8 +3309,8 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   'corteva',
   'prof',
   'II Професионална категория',
-  28,
-  54.76,
+  26.6,
+  26.6,
   '1 л',
   '{"овощни","лозя","лук"}',
   'Оксифлуорфен (240 г/л)',
@@ -3325,7 +3325,7 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   32,
   TRUE,
   '[{"val":100,"label":"Препоръчителна доза: 80-100 мл/дка"}]'::jsonb,
-  '[{"label":"1 л","price":28,"unit":"€ 28.00 / 1 л","default":true}]'::jsonb
+  '[{"label":"1 л","price":26.6,"unit":"€ 26.60 / 1 л","default":true}]'::jsonb
 ) ON CONFLICT (id) DO UPDATE SET
   name = EXCLUDED.name,
   price_eur = EXCLUDED.price_eur,
@@ -3339,8 +3339,8 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   'adama',
   'prof',
   'II Професионална категория',
-  10.5,
-  20.54,
+  9.97,
+  9.97,
   '1 л',
   '{"лозя","овощни"}',
   'Глифозат (360 г/л)',
@@ -3355,7 +3355,7 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   49,
   TRUE,
   '[{"val":100,"label":"Препоръчителна доза: 400-600 мл/дка"}]'::jsonb,
-  '[{"label":"1 л","price":10.5,"unit":"€ 10.50 / 1 л","default":true}]'::jsonb
+  '[{"label":"1 л","price":9.97,"unit":"€ 9.97 / 1 л","default":true}]'::jsonb
 ) ON CONFLICT (id) DO UPDATE SET
   name = EXCLUDED.name,
   price_eur = EXCLUDED.price_eur,
@@ -3369,8 +3369,8 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   'syngenta',
   'nonprof',
   'Непрофесионална категория',
-  5.8,
-  11.34,
+  5.51,
+  5.51,
   '20 мл',
   '{"битови"}',
   'Ламбда-цихалотрин (100 г/л)',
@@ -3385,7 +3385,7 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   66,
   TRUE,
   '[{"val":100,"label":"Препоръчителна доза: 20 мл / 5 л вода"}]'::jsonb,
-  '[{"label":"20 мл","price":5.8,"unit":"€ 5.80 / 20 мл","default":true}]'::jsonb
+  '[{"label":"20 мл","price":5.51,"unit":"€ 5.51 / 20 мл","default":true}]'::jsonb
 ) ON CONFLICT (id) DO UPDATE SET
   name = EXCLUDED.name,
   price_eur = EXCLUDED.price_eur,
@@ -3399,8 +3399,8 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   'syngenta',
   'prof',
   'II Професионална категория',
-  89,
-  174.07,
+  84.55,
+  84.55,
   '1 л',
   '{"битови"}',
   'Ламбда-цихалотрин (100 г/л)',
@@ -3415,7 +3415,7 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   83,
   TRUE,
   '[{"val":100,"label":"Препоръчителна доза: 250 мл / 100 л вода"}]'::jsonb,
-  '[{"label":"1 л","price":89,"unit":"€ 89.00 / 1 л","default":true}]'::jsonb
+  '[{"label":"1 л","price":84.55,"unit":"€ 84.55 / 1 л","default":true}]'::jsonb
 ) ON CONFLICT (id) DO UPDATE SET
   name = EXCLUDED.name,
   price_eur = EXCLUDED.price_eur,
@@ -3429,15 +3429,15 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   'basf',
   'nonprof',
   'Непрофесионална категория',
-  6.4,
-  12.52,
+  6.08,
+  6.08,
   '25 мл',
   '{"битови"}',
   'Алфа-циперметрин (60 г/л)',
   'СК',
   '2 часа',
   'БАБХ: № 01870-ПРЗ',
-  'Промо -10%',
+  'Промо -5%',
   '/images/products/spray-biocide.jpg',
   'Кристална технология за трайно полепване по стени и подове до 3 месеца.',
   '25 мл / 5 л вода',
@@ -3445,7 +3445,7 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   15,
   TRUE,
   '[{"val":100,"label":"Препоръчителна доза: 25 мл / 5 л вода"}]'::jsonb,
-  '[{"label":"25 мл","price":6.4,"unit":"€ 6.40 / 25 мл","default":true}]'::jsonb
+  '[{"label":"25 мл","price":6.08,"unit":"€ 6.08 / 25 мл","default":true}]'::jsonb
 ) ON CONFLICT (id) DO UPDATE SET
   name = EXCLUDED.name,
   price_eur = EXCLUDED.price_eur,
@@ -3459,8 +3459,8 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   'manica',
   'nonprof',
   'Непрофесионална категория',
-  4.9,
-  9.58,
+  4.66,
+  4.66,
   '50 мл',
   '{"битови"}',
   'Циперметрин (100 г/л)',
@@ -3475,7 +3475,7 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   32,
   TRUE,
   '[{"val":100,"label":"Препоръчителна доза: 50 мл / 5 л вода"}]'::jsonb,
-  '[{"label":"50 мл","price":4.9,"unit":"€ 4.90 / 50 мл","default":true}]'::jsonb
+  '[{"label":"50 мл","price":4.66,"unit":"€ 4.66 / 50 мл","default":true}]'::jsonb
 ) ON CONFLICT (id) DO UPDATE SET
   name = EXCLUDED.name,
   price_eur = EXCLUDED.price_eur,
@@ -3489,8 +3489,8 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   'manica',
   'nonprof',
   'Непрофесионална категория',
-  8.5,
-  16.62,
+  8.07,
+  8.07,
   '100 мл',
   '{"битови"}',
   'Циперметрин + Тетраметрин + ПБО',
@@ -3505,7 +3505,7 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   49,
   TRUE,
   '[{"val":100,"label":"Препоръчителна доза: 50-100 мл / 10 л"}]'::jsonb,
-  '[{"label":"100 мл","price":8.5,"unit":"€ 8.50 / 100 мл","default":true}]'::jsonb
+  '[{"label":"100 мл","price":8.07,"unit":"€ 8.07 / 100 мл","default":true}]'::jsonb
 ) ON CONFLICT (id) DO UPDATE SET
   name = EXCLUDED.name,
   price_eur = EXCLUDED.price_eur,
@@ -3519,8 +3519,8 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   'corteva',
   'nonprof',
   'Непрофесионална категория',
-  4.8,
-  9.39,
+  4.56,
+  4.56,
   '200 г',
   '{"домати","зеленчуци","ягоди"}',
   'Металдехид (50 г/кг)',
@@ -3535,7 +3535,7 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   66,
   TRUE,
   '[{"val":100,"label":"Препоръчителна доза: 300-500 г/дка"}]'::jsonb,
-  '[{"label":"200 г","price":4.8,"unit":"€ 4.80 / 200 г","default":true}]'::jsonb
+  '[{"label":"200 г","price":4.56,"unit":"€ 4.56 / 200 г","default":true}]'::jsonb
 ) ON CONFLICT (id) DO UPDATE SET
   name = EXCLUDED.name,
   price_eur = EXCLUDED.price_eur,
@@ -3549,8 +3549,8 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   'amitica',
   'nonprof',
   'Непрофесионална категория',
-  8.9,
-  17.41,
+  8.46,
+  8.46,
   '500 г',
   '{"зеленчуци","домати","ягоди"}',
   'Железен фосфат (9.9 г/кг)',
@@ -3565,7 +3565,7 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   83,
   TRUE,
   '[{"val":100,"label":"Препоръчителна доза: 500 г/дка"}]'::jsonb,
-  '[{"label":"500 г","price":8.9,"unit":"€ 8.90 / 500 г","default":true}]'::jsonb
+  '[{"label":"500 г","price":8.46,"unit":"€ 8.46 / 500 г","default":true}]'::jsonb
 ) ON CONFLICT (id) DO UPDATE SET
   name = EXCLUDED.name,
   price_eur = EXCLUDED.price_eur,
@@ -3579,8 +3579,8 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   'manica',
   'nonprof',
   'Непрофесионална категория',
-  4.5,
-  8.8,
+  4.27,
+  4.27,
   '300 г',
   '{"битови"}',
   'Бромадиолон (0.005%)',
@@ -3595,7 +3595,7 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   15,
   TRUE,
   '[{"val":100,"label":"Препоръчителна доза: 20-50 г на точка"}]'::jsonb,
-  '[{"label":"300 г","price":4.5,"unit":"€ 4.50 / 300 г","default":true}]'::jsonb
+  '[{"label":"300 г","price":4.27,"unit":"€ 4.27 / 300 г","default":true}]'::jsonb
 ) ON CONFLICT (id) DO UPDATE SET
   name = EXCLUDED.name,
   price_eur = EXCLUDED.price_eur,
@@ -3609,8 +3609,8 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   'manica',
   'nonprof',
   'Непрофесионална категория',
-  3.9,
-  7.63,
+  3.7,
+  3.7,
   '150 г',
   '{"битови"}',
   'Бродифакум (0.005%)',
@@ -3625,7 +3625,7 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   32,
   TRUE,
   '[{"val":100,"label":"Препоръчителна доза: 1-2 сашета на точка"}]'::jsonb,
-  '[{"label":"150 г","price":3.9,"unit":"€ 3.90 / 150 г","default":true}]'::jsonb
+  '[{"label":"150 г","price":3.7,"unit":"€ 3.70 / 150 г","default":true}]'::jsonb
 ) ON CONFLICT (id) DO UPDATE SET
   name = EXCLUDED.name,
   price_eur = EXCLUDED.price_eur,
@@ -3639,8 +3639,8 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   'amitica',
   'nonprof',
   'Непрофесионална категория',
-  3.32,
-  6.49,
+  3.15,
+  3.15,
   '50 г',
   '{"битови"}',
   'Диатомит 100%',
@@ -3655,7 +3655,7 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   49,
   TRUE,
   '[{"val":100,"label":"Препоръчителна доза: Опрашване по шевове"}]'::jsonb,
-  '[{"label":"50 г","price":3.32,"unit":"€ 3.32 / 50 г","default":true}]'::jsonb
+  '[{"label":"50 г","price":3.15,"unit":"€ 3.15 / 50 г","default":true}]'::jsonb
 ) ON CONFLICT (id) DO UPDATE SET
   name = EXCLUDED.name,
   price_eur = EXCLUDED.price_eur,
@@ -3669,8 +3669,8 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   'amitica',
   'nonprof',
   'Непрофесионална категория',
-  3.6,
-  7.04,
+  3.42,
+  3.42,
   '100 г',
   '{"битови"}',
   'Аморфен силициев диоксид 100%',
@@ -3685,7 +3685,7 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   66,
   TRUE,
   '[{"val":100,"label":"Препоръчителна доза: Опрашване в курника"}]'::jsonb,
-  '[{"label":"100 г","price":3.6,"unit":"€ 3.60 / 100 г","default":true}]'::jsonb
+  '[{"label":"100 г","price":3.42,"unit":"€ 3.42 / 100 г","default":true}]'::jsonb
 ) ON CONFLICT (id) DO UPDATE SET
   name = EXCLUDED.name,
   price_eur = EXCLUDED.price_eur,
@@ -3699,8 +3699,8 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   'amitica',
   'nonprof',
   'Непрофесионална категория',
-  3.32,
-  6.49,
+  3.15,
+  3.15,
   '50 г',
   '{"битови"}',
   'Натурален диатомит',
@@ -3715,7 +3715,7 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   83,
   TRUE,
   '[{"val":100,"label":"Препоръчителна доза: Третиране на килими и легла"}]'::jsonb,
-  '[{"label":"50 г","price":3.32,"unit":"€ 3.32 / 50 г","default":true}]'::jsonb
+  '[{"label":"50 г","price":3.15,"unit":"€ 3.15 / 50 г","default":true}]'::jsonb
 ) ON CONFLICT (id) DO UPDATE SET
   name = EXCLUDED.name,
   price_eur = EXCLUDED.price_eur,
@@ -3729,8 +3729,8 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   'amitica',
   'nonprof',
   'Непрофесионална категория',
-  3.5,
-  6.85,
+  3.32,
+  3.32,
   '100 г',
   '{"картофи"}',
   'Натурален инсектициден прах',
@@ -3745,7 +3745,7 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   15,
   TRUE,
   '[{"val":100,"label":"Препоръчителна доза: Опрашване на листата"}]'::jsonb,
-  '[{"label":"100 г","price":3.5,"unit":"€ 3.50 / 100 г","default":true}]'::jsonb
+  '[{"label":"100 г","price":3.32,"unit":"€ 3.32 / 100 г","default":true}]'::jsonb
 ) ON CONFLICT (id) DO UPDATE SET
   name = EXCLUDED.name,
   price_eur = EXCLUDED.price_eur,
@@ -3759,15 +3759,15 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   'amitica',
   'nonprof',
   'Непрофесионална категория',
-  18.5,
-  36.18,
+  17.57,
+  17.57,
   '250 мл',
   '{"домати","зеленчуци"}',
   'Beauveria bassiana',
   'ОД',
   '0 дни',
   'БАБХ: № 01947-ПРЗ',
-  'Промо -10%',
+  'Промо -5%',
   '/images/products/spray-biocide.jpg',
   'Ентомопатогенна гъба срещу белокрилки, трипси и акари.',
   '100-150 мл/дка',
@@ -3775,7 +3775,7 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   32,
   TRUE,
   '[{"val":100,"label":"Препоръчителна доза: 100-150 мл/дка"}]'::jsonb,
-  '[{"label":"250 мл","price":18.5,"unit":"€ 18.50 / 250 мл","default":true}]'::jsonb
+  '[{"label":"250 мл","price":17.57,"unit":"€ 17.57 / 250 мл","default":true}]'::jsonb
 ) ON CONFLICT (id) DO UPDATE SET
   name = EXCLUDED.name,
   price_eur = EXCLUDED.price_eur,
@@ -3789,8 +3789,8 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   'amitica',
   'nonprof',
   'Непрофесионална категория',
-  9,
-  17.6,
+  8.55,
+  8.55,
   '500 г',
   '{"домати","картофи"}',
   'Почвени микроорганизми',
@@ -3805,7 +3805,7 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   49,
   TRUE,
   '[{"val":100,"label":"Препоръчителна доза: 2-3 кг/дка"}]'::jsonb,
-  '[{"label":"500 г","price":9,"unit":"€ 9.00 / 500 г","default":true}]'::jsonb
+  '[{"label":"500 г","price":8.55,"unit":"€ 8.55 / 500 г","default":true}]'::jsonb
 ) ON CONFLICT (id) DO UPDATE SET
   name = EXCLUDED.name,
   price_eur = EXCLUDED.price_eur,
@@ -3819,8 +3819,8 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   'amitica',
   'nonprof',
   'Непрофесионална категория',
-  12.9,
-  25.23,
+  12.25,
+  12.25,
   '200 мл',
   '{"лозя","ягоди"}',
   'Bacillus amyloliquefaciens',
@@ -3835,7 +3835,7 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   66,
   TRUE,
   '[{"val":100,"label":"Препоръчителна доза: 150-200 мл/дка"}]'::jsonb,
-  '[{"label":"200 мл","price":12.9,"unit":"€ 12.90 / 200 мл","default":true}]'::jsonb
+  '[{"label":"200 мл","price":12.25,"unit":"€ 12.25 / 200 мл","default":true}]'::jsonb
 ) ON CONFLICT (id) DO UPDATE SET
   name = EXCLUDED.name,
   price_eur = EXCLUDED.price_eur,
@@ -3849,8 +3849,8 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   'amitica',
   'nonprof',
   'Непрофесионална категория',
-  27.9,
-  54.57,
+  26.5,
+  26.5,
   '1 л',
   '{"домати","овощни"}',
   'Bacillus subtilis',
@@ -3865,7 +3865,7 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   83,
   TRUE,
   '[{"val":100,"label":"Препоръчителна доза: 200-300 мл/дка"}]'::jsonb,
-  '[{"label":"1 л","price":27.9,"unit":"€ 27.90 / 1 л","default":true}]'::jsonb
+  '[{"label":"1 л","price":26.5,"unit":"€ 26.50 / 1 л","default":true}]'::jsonb
 ) ON CONFLICT (id) DO UPDATE SET
   name = EXCLUDED.name,
   price_eur = EXCLUDED.price_eur,
@@ -3879,8 +3879,8 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   'amitica',
   'nonprof',
   'Непрофесионална категория',
-  19.8,
-  38.73,
+  18.81,
+  18.81,
   '500 мл',
   '{"лозя","домати"}',
   'COS-OGA имуностимулатор',
@@ -3895,7 +3895,7 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   15,
   TRUE,
   '[{"val":100,"label":"Препоръчителна доза: 200 мл/дка"}]'::jsonb,
-  '[{"label":"500 мл","price":19.8,"unit":"€ 19.80 / 500 мл","default":true}]'::jsonb
+  '[{"label":"500 мл","price":18.81,"unit":"€ 18.81 / 500 мл","default":true}]'::jsonb
 ) ON CONFLICT (id) DO UPDATE SET
   name = EXCLUDED.name,
   price_eur = EXCLUDED.price_eur,
@@ -3909,8 +3909,8 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   'amitica',
   'nonprof',
   'Непрофесионална категория',
-  29.9,
-  58.48,
+  28.4,
+  28.4,
   'Комплект 3 бр.',
   '{"домати","лозя","овощни"}',
   'Ним Азал + Лимоцид + Витисан',
@@ -3925,7 +3925,7 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   32,
   TRUE,
   '[{"val":100,"label":"Препоръчителна доза: За 100 л разтвор"}]'::jsonb,
-  '[{"label":"Комплект 3 бр.","price":29.9,"unit":"€ 29.90 / Комплект 3 бр.","default":true}]'::jsonb
+  '[{"label":"Комплект 3 бр.","price":28.4,"unit":"€ 28.40 / Комплект 3 бр.","default":true}]'::jsonb
 ) ON CONFLICT (id) DO UPDATE SET
   name = EXCLUDED.name,
   price_eur = EXCLUDED.price_eur,
@@ -3939,8 +3939,8 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   'sortovi',
   'nonprof',
   'Непрофесионална категория',
-  4.2,
-  8.21,
+  3.99,
+  3.99,
   '10 бр. табели',
   '{"домати","зеленчуци"}',
   'Ентомологично лепило',
@@ -3955,7 +3955,7 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   49,
   TRUE,
   '[{"val":100,"label":"Препоръчителна доза: 1 табела на 10 кв.м"}]'::jsonb,
-  '[{"label":"10 бр. табели","price":4.2,"unit":"€ 4.20 / 10 бр. табели","default":true}]'::jsonb
+  '[{"label":"10 бр. табели","price":3.99,"unit":"€ 3.99 / 10 бр. табели","default":true}]'::jsonb
 ) ON CONFLICT (id) DO UPDATE SET
   name = EXCLUDED.name,
   price_eur = EXCLUDED.price_eur,
@@ -3969,8 +3969,8 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   'sortovi',
   'nonprof',
   'Непрофесионална категория',
-  4.5,
-  8.8,
+  4.27,
+  4.27,
   '10 бр. табели',
   '{"зеленчуци","цветя"}',
   'Ентомологично лепило за трипс',
@@ -3985,7 +3985,7 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   66,
   TRUE,
   '[{"val":100,"label":"Препоръчителна доза: 1 табела на 10 кв.м"}]'::jsonb,
-  '[{"label":"10 бр. табели","price":4.5,"unit":"€ 4.50 / 10 бр. табели","default":true}]'::jsonb
+  '[{"label":"10 бр. табели","price":4.27,"unit":"€ 4.27 / 10 бр. табели","default":true}]'::jsonb
 ) ON CONFLICT (id) DO UPDATE SET
   name = EXCLUDED.name,
   price_eur = EXCLUDED.price_eur,
@@ -3999,8 +3999,8 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   'sortovi',
   'nonprof',
   'Непрофесионална категория',
-  7.5,
-  14.67,
+  7.13,
+  7.13,
   '500 мл',
   '{"битови"}',
   'Лавандулово и рициново масло',
@@ -4015,7 +4015,7 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   83,
   TRUE,
   '[{"val":100,"label":"Препоръчителна доза: Поставяне в къртичините"}]'::jsonb,
-  '[{"label":"500 мл","price":7.5,"unit":"€ 7.50 / 500 мл","default":true}]'::jsonb
+  '[{"label":"500 мл","price":7.13,"unit":"€ 7.13 / 500 мл","default":true}]'::jsonb
 ) ON CONFLICT (id) DO UPDATE SET
   name = EXCLUDED.name,
   price_eur = EXCLUDED.price_eur,
@@ -4029,8 +4029,8 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   'sortovi',
   'nonprof',
   'Непрофесионална категория',
-  6.9,
-  13.5,
+  6.55,
+  6.55,
   '450 мл',
   '{"битови"}',
   'Натурални ароматни екстракти',
@@ -4045,7 +4045,7 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   15,
   TRUE,
   '[{"val":100,"label":"Препоръчителна доза: Опръскване на огради и лехи"}]'::jsonb,
-  '[{"label":"450 мл","price":6.9,"unit":"€ 6.90 / 450 мл","default":true}]'::jsonb
+  '[{"label":"450 мл","price":6.55,"unit":"€ 6.55 / 450 мл","default":true}]'::jsonb
 ) ON CONFLICT (id) DO UPDATE SET
   name = EXCLUDED.name,
   price_eur = EXCLUDED.price_eur,
@@ -4059,8 +4059,8 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   'sortovi',
   'nonprof',
   'Непрофесионална категория',
-  2.8,
-  5.48,
+  2.66,
+  2.66,
   '5 патрона',
   '{"битови"}',
   'Сяра и калиев нитрат',
@@ -4075,7 +4075,7 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   32,
   TRUE,
   '[{"val":100,"label":"Препоръчителна доза: 1 патрон на активен вход"}]'::jsonb,
-  '[{"label":"5 патрона","price":2.8,"unit":"€ 2.80 / 5 патрона","default":true}]'::jsonb
+  '[{"label":"5 патрона","price":2.66,"unit":"€ 2.66 / 5 патрона","default":true}]'::jsonb
 ) ON CONFLICT (id) DO UPDATE SET
   name = EXCLUDED.name,
   price_eur = EXCLUDED.price_eur,
@@ -4089,15 +4089,15 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   'sortovi',
   'nonprof',
   'Непрофесионална категория',
-  5.9,
-  11.54,
+  5.61,
+  5.61,
   '1 бр. капан + 200 мл',
   '{"лозя","овощни"}',
   'Натурален атрактантен флуид',
   'Капан за окачване',
   '0 дни',
   'БАБХ: № 011024-ПРЗ',
-  'Промо -10%',
+  'Промо -5%',
   '/images/products/spray-biocide.jpg',
   'Улавя осите и стършелите преди да надупчат зреещото десертно грозде.',
   'Окачване близо до гроздето',
@@ -4105,7 +4105,7 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   49,
   TRUE,
   '[{"val":100,"label":"Препоръчителна доза: Окачване близо до гроздето"}]'::jsonb,
-  '[{"label":"1 бр. капан + 200 мл","price":5.9,"unit":"€ 5.90 / 1 бр. капан + 200 мл","default":true}]'::jsonb
+  '[{"label":"1 бр. капан + 200 мл","price":5.61,"unit":"€ 5.61 / 1 бр. капан + 200 мл","default":true}]'::jsonb
 ) ON CONFLICT (id) DO UPDATE SET
   name = EXCLUDED.name,
   price_eur = EXCLUDED.price_eur,
@@ -4119,8 +4119,8 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   'bayer',
   'nonprof',
   'Непрофесионална категория',
-  12,
-  23.47,
+  11.4,
+  11.4,
   '50 мл',
   '{"битови"}',
   'Делтаметрин (25 г/л)',
@@ -4135,7 +4135,7 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   66,
   TRUE,
   '[{"val":100,"label":"Препоръчителна доза: 50 мл / 5 л вода"}]'::jsonb,
-  '[{"label":"50 мл","price":12,"unit":"€ 12.00 / 50 мл","default":true}]'::jsonb
+  '[{"label":"50 мл","price":11.4,"unit":"€ 11.40 / 50 мл","default":true}]'::jsonb
 ) ON CONFLICT (id) DO UPDATE SET
   name = EXCLUDED.name,
   price_eur = EXCLUDED.price_eur,
@@ -4149,8 +4149,8 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   'amitica',
   'nonprof',
   'Непрофесионална категория',
-  7.9,
-  15.45,
+  7.5,
+  7.5,
   '1 комплект',
   '{"овощни"}',
   'Специфичен полов феромон',
@@ -4165,7 +4165,7 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   83,
   TRUE,
   '[{"val":100,"label":"Препоръчителна доза: 1 уловка на 2-3 дървета"}]'::jsonb,
-  '[{"label":"1 комплект","price":7.9,"unit":"€ 7.90 / 1 комплект","default":true}]'::jsonb
+  '[{"label":"1 комплект","price":7.5,"unit":"€ 7.50 / 1 комплект","default":true}]'::jsonb
 ) ON CONFLICT (id) DO UPDATE SET
   name = EXCLUDED.name,
   price_eur = EXCLUDED.price_eur,
@@ -4179,8 +4179,8 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   'amitica',
   'nonprof',
   'Непрофесионална категория',
-  7.9,
-  15.45,
+  7.5,
+  7.5,
   '1 комплект',
   '{"лозя"}',
   'Феродис за Lobesia botrana',
@@ -4195,7 +4195,7 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   15,
   TRUE,
   '[{"val":100,"label":"Препоръчителна доза: 1 уловка на декар"}]'::jsonb,
-  '[{"label":"1 комплект","price":7.9,"unit":"€ 7.90 / 1 комплект","default":true}]'::jsonb
+  '[{"label":"1 комплект","price":7.5,"unit":"€ 7.50 / 1 комплект","default":true}]'::jsonb
 ) ON CONFLICT (id) DO UPDATE SET
   name = EXCLUDED.name,
   price_eur = EXCLUDED.price_eur,
@@ -4209,8 +4209,8 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   'manica',
   'nonprof',
   'Непрофесионална категория',
-  5.5,
-  10.76,
+  5.22,
+  5.22,
   '200 г',
   '{"битови"}',
   'Бродифакум 0.005%',
@@ -4225,7 +4225,7 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   32,
   TRUE,
   '[{"val":100,"label":"Препоръчителна доза: 20-40 г на точка"}]'::jsonb,
-  '[{"label":"200 г","price":5.5,"unit":"€ 5.50 / 200 г","default":true}]'::jsonb
+  '[{"label":"200 г","price":5.22,"unit":"€ 5.22 / 200 г","default":true}]'::jsonb
 ) ON CONFLICT (id) DO UPDATE SET
   name = EXCLUDED.name,
   price_eur = EXCLUDED.price_eur,
@@ -4239,8 +4239,8 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   'amitica',
   'nonprof',
   'Непрофесионална категория',
-  21,
-  41.07,
+  19.95,
+  19.95,
   '100 мл',
   '{"овощни"}',
   'Селективен щам CpGV',
@@ -4255,7 +4255,7 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   49,
   TRUE,
   '[{"val":100,"label":"Препоръчителна доза: 10 мл/дка"}]'::jsonb,
-  '[{"label":"100 мл","price":21,"unit":"€ 21.00 / 100 мл","default":true}]'::jsonb
+  '[{"label":"100 мл","price":19.95,"unit":"€ 19.95 / 100 мл","default":true}]'::jsonb
 ) ON CONFLICT (id) DO UPDATE SET
   name = EXCLUDED.name,
   price_eur = EXCLUDED.price_eur,
@@ -4269,8 +4269,8 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   'sortovi',
   'nonprof',
   'Непрофесионална категория',
-  1.9,
-  3.72,
+  1.8,
+  1.8,
   '2 бр.',
   '{"битови"}',
   'Хранителен атрактант таблетка',
@@ -4285,7 +4285,7 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   66,
   TRUE,
   '[{"val":100,"label":"Препоръчителна доза: Под мивки и хладилници"}]'::jsonb,
-  '[{"label":"2 бр.","price":1.9,"unit":"€ 1.90 / 2 бр.","default":true}]'::jsonb
+  '[{"label":"2 бр.","price":1.8,"unit":"€ 1.80 / 2 бр.","default":true}]'::jsonb
 ) ON CONFLICT (id) DO UPDATE SET
   name = EXCLUDED.name,
   price_eur = EXCLUDED.price_eur,
@@ -4299,8 +4299,8 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   'manica',
   'nonprof',
   'Непрофесионална категория',
-  4.1,
-  8.02,
+  3.89,
+  3.89,
   '50 мл',
   '{"битови"}',
   'Циперметрин 10%',
@@ -4315,7 +4315,7 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   83,
   TRUE,
   '[{"val":100,"label":"Препоръчителна доза: 50 мл / 5 л вода"}]'::jsonb,
-  '[{"label":"50 мл","price":4.1,"unit":"€ 4.10 / 50 мл","default":true}]'::jsonb
+  '[{"label":"50 мл","price":3.89,"unit":"€ 3.89 / 50 мл","default":true}]'::jsonb
 ) ON CONFLICT (id) DO UPDATE SET
   name = EXCLUDED.name,
   price_eur = EXCLUDED.price_eur,
@@ -4329,8 +4329,8 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   'yara',
   'nonprof',
   'Непрофесионална категория',
-  36.5,
-  71.39,
+  34.67,
+  34.67,
   '25 кг',
   '{"зеленчуци","овощни","лозя","картофи"}',
   'NPK 12-11-18 + Mg + S + микро',
@@ -4345,7 +4345,7 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   15,
   TRUE,
   '[{"val":100,"label":"Препоръчителна доза: 30-50 кг/дка"}]'::jsonb,
-  '[{"label":"25 кг","price":36.5,"unit":"€ 36.50 / 25 кг","default":true}]'::jsonb
+  '[{"label":"25 кг","price":34.67,"unit":"€ 34.67 / 25 кг","default":true}]'::jsonb
 ) ON CONFLICT (id) DO UPDATE SET
   name = EXCLUDED.name,
   price_eur = EXCLUDED.price_eur,
@@ -4359,8 +4359,8 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   'yara',
   'nonprof',
   'Непрофесионална категория',
-  24.5,
-  47.92,
+  23.27,
+  23.27,
   '25 кг',
   '{"домати","зеленчуци","овощни"}',
   'Азот 15.4% + Калций 25.6% + Бор',
@@ -4375,7 +4375,7 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   32,
   TRUE,
   '[{"val":100,"label":"Препоръчителна доза: 15-25 кг/дка"}]'::jsonb,
-  '[{"label":"25 кг","price":24.5,"unit":"€ 24.50 / 25 кг","default":true}]'::jsonb
+  '[{"label":"25 кг","price":23.27,"unit":"€ 23.27 / 25 кг","default":true}]'::jsonb
 ) ON CONFLICT (id) DO UPDATE SET
   name = EXCLUDED.name,
   price_eur = EXCLUDED.price_eur,
@@ -4389,8 +4389,8 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   'yara',
   'nonprof',
   'Непрофесионална категория',
-  6.8,
-  13.3,
+  6.46,
+  6.46,
   '1 кг',
   '{"домати","зеленчуци","овощни","лозя"}',
   'NPK 18-18-18 + 3% MgO + микро',
@@ -4405,7 +4405,7 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   49,
   TRUE,
   '[{"val":100,"label":"Препоръчителна доза: 200-400 г/дка"}]'::jsonb,
-  '[{"label":"1 кг","price":6.8,"unit":"€ 6.80 / 1 кг","default":true}]'::jsonb
+  '[{"label":"1 кг","price":6.46,"unit":"€ 6.46 / 1 кг","default":true}]'::jsonb
 ) ON CONFLICT (id) DO UPDATE SET
   name = EXCLUDED.name,
   price_eur = EXCLUDED.price_eur,
@@ -4419,15 +4419,15 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   'yara',
   'nonprof',
   'Непрофесионална категория',
-  6.9,
-  13.5,
+  6.55,
+  6.55,
   '1 кг',
   '{"домати","лозя","овощни"}',
   'NPK 12-12-36 + микро',
   'Кристали',
   '0 дни',
   'БАБХ: № 011101-ПРЗ',
-  'Промо -10%',
+  'Промо -5%',
   '/images/products/fertilizer-sack.jpg',
   'Богат на калий за наедряване на плодовете, цвят и захарност.',
   '300-500 г/дка',
@@ -4435,7 +4435,7 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   66,
   TRUE,
   '[{"val":100,"label":"Препоръчителна доза: 300-500 г/дка"}]'::jsonb,
-  '[{"label":"1 кг","price":6.9,"unit":"€ 6.90 / 1 кг","default":true}]'::jsonb
+  '[{"label":"1 кг","price":6.55,"unit":"€ 6.55 / 1 кг","default":true}]'::jsonb
 ) ON CONFLICT (id) DO UPDATE SET
   name = EXCLUDED.name,
   price_eur = EXCLUDED.price_eur,
@@ -4449,8 +4449,8 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   'yara',
   'nonprof',
   'Непрофесионална категория',
-  7.2,
-  14.08,
+  6.84,
+  6.84,
   '1 кг',
   '{"домати","зеленчуци","картофи"}',
   'NPK 13-40-13 + микро',
@@ -4465,7 +4465,7 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   83,
   TRUE,
   '[{"val":100,"label":"Препоръчителна доза: 250-300 г/дка"}]'::jsonb,
-  '[{"label":"1 кг","price":7.2,"unit":"€ 7.20 / 1 кг","default":true}]'::jsonb
+  '[{"label":"1 кг","price":6.84,"unit":"€ 6.84 / 1 кг","default":true}]'::jsonb
 ) ON CONFLICT (id) DO UPDATE SET
   name = EXCLUDED.name,
   price_eur = EXCLUDED.price_eur,
@@ -4479,8 +4479,8 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   'yara',
   'nonprof',
   'Непрофесионална категория',
-  6.9,
-  13.5,
+  6.55,
+  6.55,
   '1 кг',
   '{"домати","лозя"}',
   'NPK 15-5-30 + 3% MgO',
@@ -4495,7 +4495,7 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   15,
   TRUE,
   '[{"val":100,"label":"Препоръчителна доза: 250-400 г/дка"}]'::jsonb,
-  '[{"label":"1 кг","price":6.9,"unit":"€ 6.90 / 1 кг","default":true}]'::jsonb
+  '[{"label":"1 кг","price":6.55,"unit":"€ 6.55 / 1 кг","default":true}]'::jsonb
 ) ON CONFLICT (id) DO UPDATE SET
   name = EXCLUDED.name,
   price_eur = EXCLUDED.price_eur,
@@ -4509,8 +4509,8 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   'aglukon',
   'nonprof',
   'Непрофесионална категория',
-  8.5,
-  16.62,
+  8.07,
+  8.07,
   '1 л',
   '{"домати","овощни","зеленчуци"}',
   'CaO 240 г/л + Азот 160 г/л + микро',
@@ -4525,7 +4525,7 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   32,
   TRUE,
   '[{"val":100,"label":"Препоръчителна доза: 300-500 мл/дка"}]'::jsonb,
-  '[{"label":"1 л","price":8.5,"unit":"€ 8.50 / 1 л","default":true}]'::jsonb
+  '[{"label":"1 л","price":8.07,"unit":"€ 8.07 / 1 л","default":true}]'::jsonb
 ) ON CONFLICT (id) DO UPDATE SET
   name = EXCLUDED.name,
   price_eur = EXCLUDED.price_eur,
@@ -4539,8 +4539,8 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   'aglukon',
   'nonprof',
   'Непрофесионална категория',
-  7.9,
-  15.45,
+  7.5,
+  7.5,
   '1 л',
   '{"зеленчуци","лозя","овощни"}',
   'NPK 16-16-12 + микроелементи',
@@ -4555,7 +4555,7 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   49,
   TRUE,
   '[{"val":100,"label":"Препоръчителна доза: 200-300 мл/дка"}]'::jsonb,
-  '[{"label":"1 л","price":7.9,"unit":"€ 7.90 / 1 л","default":true}]'::jsonb
+  '[{"label":"1 л","price":7.5,"unit":"€ 7.50 / 1 л","default":true}]'::jsonb
 ) ON CONFLICT (id) DO UPDATE SET
   name = EXCLUDED.name,
   price_eur = EXCLUDED.price_eur,
@@ -4569,8 +4569,8 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   'valagro',
   'nonprof',
   'Непрофесионална категория',
-  9.9,
-  19.36,
+  9.4,
+  9.4,
   '250 мл',
   '{"домати","зеленчуци","овощни","лозя"}',
   'Аминокиселини 28% + бетаини',
@@ -4585,7 +4585,7 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   66,
   TRUE,
   '[{"val":100,"label":"Препоръчителна доза: 150-250 мл/дка"}]'::jsonb,
-  '[{"label":"250 мл","price":9.9,"unit":"€ 9.90 / 250 мл","default":true}]'::jsonb
+  '[{"label":"250 мл","price":9.4,"unit":"€ 9.40 / 250 мл","default":true}]'::jsonb
 ) ON CONFLICT (id) DO UPDATE SET
   name = EXCLUDED.name,
   price_eur = EXCLUDED.price_eur,
@@ -4599,8 +4599,8 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   'valagro',
   'nonprof',
   'Непрофесионална категория',
-  14.5,
-  28.36,
+  13.77,
+  13.77,
   '250 мл',
   '{"домати","зеленчуци","овощни"}',
   'Водорасли + стероли + цинк',
@@ -4615,7 +4615,7 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   83,
   TRUE,
   '[{"val":100,"label":"Препоръчителна доза: 250 мл / 100 л вода"}]'::jsonb,
-  '[{"label":"250 мл","price":14.5,"unit":"€ 14.50 / 250 мл","default":true}]'::jsonb
+  '[{"label":"250 мл","price":13.77,"unit":"€ 13.77 / 250 мл","default":true}]'::jsonb
 ) ON CONFLICT (id) DO UPDATE SET
   name = EXCLUDED.name,
   price_eur = EXCLUDED.price_eur,
@@ -4629,8 +4629,8 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   'valagro',
   'nonprof',
   'Непрофесионална категория',
-  16.8,
-  32.86,
+  15.96,
+  15.96,
   '250 мл',
   '{"домати","лозя","овощни"}',
   'Олигозахариди + глутатион + калий',
@@ -4645,7 +4645,7 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   15,
   TRUE,
   '[{"val":100,"label":"Препоръчителна доза: 150-200 мл/дка"}]'::jsonb,
-  '[{"label":"250 мл","price":16.8,"unit":"€ 16.80 / 250 мл","default":true}]'::jsonb
+  '[{"label":"250 мл","price":15.96,"unit":"€ 15.96 / 250 мл","default":true}]'::jsonb
 ) ON CONFLICT (id) DO UPDATE SET
   name = EXCLUDED.name,
   price_eur = EXCLUDED.price_eur,
@@ -4659,8 +4659,8 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   'manica',
   'nonprof',
   'Непрофесионална категория',
-  5.5,
-  10.76,
+  5.22,
+  5.22,
   '100 г',
   '{"лозя","овощни","домати"}',
   'Fe-EDDHA 6% (орто-орто 4.8%)',
@@ -4675,7 +4675,7 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   32,
   TRUE,
   '[{"val":100,"label":"Препоръчителна доза: 10-20 г на корен"}]'::jsonb,
-  '[{"label":"100 г","price":5.5,"unit":"€ 5.50 / 100 г","default":true}]'::jsonb
+  '[{"label":"100 г","price":5.22,"unit":"€ 5.22 / 100 г","default":true}]'::jsonb
 ) ON CONFLICT (id) DO UPDATE SET
   name = EXCLUDED.name,
   price_eur = EXCLUDED.price_eur,
@@ -4689,8 +4689,8 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   'amitica',
   'nonprof',
   'Непрофесионална категория',
-  4.8,
-  9.39,
+  4.56,
+  4.56,
   '1 л',
   '{"зеленчуци","домати","лозя"}',
   'Хуминови киселини от калифорнийски червеи',
@@ -4705,7 +4705,7 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   49,
   TRUE,
   '[{"val":100,"label":"Препоръчителна доза: 80-100 мл/дка"}]'::jsonb,
-  '[{"label":"1 л","price":4.8,"unit":"€ 4.80 / 1 л","default":true}]'::jsonb
+  '[{"label":"1 л","price":4.56,"unit":"€ 4.56 / 1 л","default":true}]'::jsonb
 ) ON CONFLICT (id) DO UPDATE SET
   name = EXCLUDED.name,
   price_eur = EXCLUDED.price_eur,
@@ -4719,8 +4719,8 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   'corteva',
   'nonprof',
   'Непрофесионална категория',
-  8.9,
-  17.41,
+  8.46,
+  8.46,
   '1 л',
   '{"домати","ябълки"}',
   'Калций (15% CaO) + Бор + Азот',
@@ -4735,7 +4735,7 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   66,
   TRUE,
   '[{"val":100,"label":"Препоръчителна доза: 200-300 мл/дка"}]'::jsonb,
-  '[{"label":"1 л","price":8.9,"unit":"€ 8.90 / 1 л","default":true}]'::jsonb
+  '[{"label":"1 л","price":8.46,"unit":"€ 8.46 / 1 л","default":true}]'::jsonb
 ) ON CONFLICT (id) DO UPDATE SET
   name = EXCLUDED.name,
   price_eur = EXCLUDED.price_eur,
@@ -4749,15 +4749,15 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   'corteva',
   'nonprof',
   'Непрофесионална категория',
-  11.2,
-  21.91,
+  10.64,
+  10.64,
   '1 л',
   '{"домати","лозя","диня"}',
   'Калиев оксид (K2O 31%) + азот',
   'Течен',
   '0 дни',
   'БАБХ: № 011178-ПРЗ',
-  'Промо -10%',
+  'Промо -5%',
   '/images/products/bottle-1l.jpg',
   'Висококонцентриран калий за наедряване, интензивен цвят и сладост.',
   '250-350 мл/дка',
@@ -4765,7 +4765,7 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   83,
   TRUE,
   '[{"val":100,"label":"Препоръчителна доза: 250-350 мл/дка"}]'::jsonb,
-  '[{"label":"1 л","price":11.2,"unit":"€ 11.20 / 1 л","default":true}]'::jsonb
+  '[{"label":"1 л","price":10.64,"unit":"€ 10.64 / 1 л","default":true}]'::jsonb
 ) ON CONFLICT (id) DO UPDATE SET
   name = EXCLUDED.name,
   price_eur = EXCLUDED.price_eur,
@@ -4779,8 +4779,8 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   'sortovi',
   'nonprof',
   'Непрофесионална категория',
-  5.4,
-  10.56,
+  5.13,
+  5.13,
   '1 л',
   '{"зеленчуци","цветя"}',
   'Екстракт от северноатлантически водорасли',
@@ -4795,7 +4795,7 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   15,
   TRUE,
   '[{"val":100,"label":"Препоръчителна доза: 15 мл в 2 л вода"}]'::jsonb,
-  '[{"label":"1 л","price":5.4,"unit":"€ 5.40 / 1 л","default":true}]'::jsonb
+  '[{"label":"1 л","price":5.13,"unit":"€ 5.13 / 1 л","default":true}]'::jsonb
 ) ON CONFLICT (id) DO UPDATE SET
   name = EXCLUDED.name,
   price_eur = EXCLUDED.price_eur,
@@ -4809,8 +4809,8 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   'yara',
   'nonprof',
   'Непрофесионална категория',
-  9.5,
-  18.58,
+  9.03,
+  9.03,
   '1 л',
   '{"лозя","овощни","слънчоглед"}',
   'Бор (150 г/л течен бор)',
@@ -4825,7 +4825,7 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   32,
   TRUE,
   '[{"val":100,"label":"Препоръчителна доза: 100-150 мл/дка"}]'::jsonb,
-  '[{"label":"1 л","price":9.5,"unit":"€ 9.50 / 1 л","default":true}]'::jsonb
+  '[{"label":"1 л","price":9.03,"unit":"€ 9.03 / 1 л","default":true}]'::jsonb
 ) ON CONFLICT (id) DO UPDATE SET
   name = EXCLUDED.name,
   price_eur = EXCLUDED.price_eur,
@@ -4839,8 +4839,8 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   'manica',
   'nonprof',
   'Непрофесионална категория',
-  2.9,
-  5.67,
+  2.75,
+  2.75,
   '1 кг',
   '{"домати","лозя","иглолистни"}',
   '16% MgO + 32% SO3',
@@ -4855,7 +4855,7 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   49,
   TRUE,
   '[{"val":100,"label":"Препоръчителна доза: 300-500 г/дка"}]'::jsonb,
-  '[{"label":"1 кг","price":2.9,"unit":"€ 2.90 / 1 кг","default":true}]'::jsonb
+  '[{"label":"1 кг","price":2.75,"unit":"€ 2.75 / 1 кг","default":true}]'::jsonb
 ) ON CONFLICT (id) DO UPDATE SET
   name = EXCLUDED.name,
   price_eur = EXCLUDED.price_eur,
@@ -4869,8 +4869,8 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   'manica',
   'nonprof',
   'Непрофесионална категория',
-  34,
-  66.5,
+  32.3,
+  32.3,
   '25 кг',
   '{"домати","картофи"}',
   'NPK 15-8-25 + 3.5% MgO + микро',
@@ -4885,7 +4885,7 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   66,
   TRUE,
   '[{"val":100,"label":"Препоръчителна доза: 2-4 кг/дка капково"}]'::jsonb,
-  '[{"label":"25 кг","price":34,"unit":"€ 34.00 / 25 кг","default":true}]'::jsonb
+  '[{"label":"25 кг","price":32.3,"unit":"€ 32.30 / 25 кг","default":true}]'::jsonb
 ) ON CONFLICT (id) DO UPDATE SET
   name = EXCLUDED.name,
   price_eur = EXCLUDED.price_eur,
@@ -4899,8 +4899,8 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   'amitica',
   'nonprof',
   'Непрофесионална категория',
-  7.5,
-  14.67,
+  7.13,
+  7.13,
   '1 л',
   '{"зеленчуци","житни"}',
   'L-аминокиселини + пептиди',
@@ -4915,7 +4915,7 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   83,
   TRUE,
   '[{"val":100,"label":"Препоръчителна доза: 150-200 мл/дка"}]'::jsonb,
-  '[{"label":"1 л","price":7.5,"unit":"€ 7.50 / 1 л","default":true}]'::jsonb
+  '[{"label":"1 л","price":7.13,"unit":"€ 7.13 / 1 л","default":true}]'::jsonb
 ) ON CONFLICT (id) DO UPDATE SET
   name = EXCLUDED.name,
   price_eur = EXCLUDED.price_eur,
@@ -4929,8 +4929,8 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   'yara',
   'nonprof',
   'Непрофесионална категория',
-  12.5,
-  24.45,
+  11.88,
+  11.88,
   '1 л',
   '{"зеленчуци","рапица"}',
   'N, Mg, B, Mn, Mo',
@@ -4945,7 +4945,7 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   15,
   TRUE,
   '[{"val":100,"label":"Препоръчителна доза: 200-300 мл/дка"}]'::jsonb,
-  '[{"label":"1 л","price":12.5,"unit":"€ 12.50 / 1 л","default":true}]'::jsonb
+  '[{"label":"1 л","price":11.88,"unit":"€ 11.88 / 1 л","default":true}]'::jsonb
 ) ON CONFLICT (id) DO UPDATE SET
   name = EXCLUDED.name,
   price_eur = EXCLUDED.price_eur,
@@ -4959,8 +4959,8 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   'manica',
   'nonprof',
   'Непрофесионална категория',
-  6.8,
-  13.3,
+  6.46,
+  6.46,
   '1 л',
   '{"овощни","домати"}',
   'Калций + Бор в органичен комплекс',
@@ -4975,7 +4975,7 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   32,
   TRUE,
   '[{"val":100,"label":"Препоръчителна доза: 200-300 мл/дка"}]'::jsonb,
-  '[{"label":"1 л","price":6.8,"unit":"€ 6.80 / 1 л","default":true}]'::jsonb
+  '[{"label":"1 л","price":6.46,"unit":"€ 6.46 / 1 л","default":true}]'::jsonb
 ) ON CONFLICT (id) DO UPDATE SET
   name = EXCLUDED.name,
   price_eur = EXCLUDED.price_eur,
@@ -4989,8 +4989,8 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   'amitica',
   'nonprof',
   'Непрофесионална категория',
-  4.5,
-  8.8,
+  4.27,
+  4.27,
   '5 л',
   '{"зеленчуци","разсад"}',
   'Чист органичен вермикомпост',
@@ -5005,7 +5005,7 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   49,
   TRUE,
   '[{"val":100,"label":"Препоръчителна доза: 50-100 г в гнездото"}]'::jsonb,
-  '[{"label":"5 л","price":4.5,"unit":"€ 4.50 / 5 л","default":true}]'::jsonb
+  '[{"label":"5 л","price":4.27,"unit":"€ 4.27 / 5 л","default":true}]'::jsonb
 ) ON CONFLICT (id) DO UPDATE SET
   name = EXCLUDED.name,
   price_eur = EXCLUDED.price_eur,
@@ -5019,8 +5019,8 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   'manica',
   'nonprof',
   'Непрофесионална категория',
-  15,
-  29.34,
+  14.25,
+  14.25,
   '1 л',
   '{"овощни"}',
   'Меден глюконат + микроелементи',
@@ -5035,7 +5035,7 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   66,
   TRUE,
   '[{"val":100,"label":"Препоръчителна доза: 500 мл/дка"}]'::jsonb,
-  '[{"label":"1 л","price":15,"unit":"€ 15.00 / 1 л","default":true}]'::jsonb
+  '[{"label":"1 л","price":14.25,"unit":"€ 14.25 / 1 л","default":true}]'::jsonb
 ) ON CONFLICT (id) DO UPDATE SET
   name = EXCLUDED.name,
   price_eur = EXCLUDED.price_eur,
@@ -5049,8 +5049,8 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   'corteva',
   'nonprof',
   'Непрофесионална категория',
-  11.5,
-  22.49,
+  10.92,
+  10.92,
   '1 л',
   '{"лозя","домати"}',
   'P2O5 30% + K2O 20%',
@@ -5065,7 +5065,7 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   83,
   TRUE,
   '[{"val":100,"label":"Препоръчителна доза: 200-300 мл/дка"}]'::jsonb,
-  '[{"label":"1 л","price":11.5,"unit":"€ 11.50 / 1 л","default":true}]'::jsonb
+  '[{"label":"1 л","price":10.92,"unit":"€ 10.92 / 1 л","default":true}]'::jsonb
 ) ON CONFLICT (id) DO UPDATE SET
   name = EXCLUDED.name,
   price_eur = EXCLUDED.price_eur,
@@ -5079,15 +5079,15 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   'sortovi',
   'nonprof',
   'Непрофесионална категория',
-  18.5,
-  36.18,
+  17.57,
+  17.57,
   '70 л',
   '{"разсад","домати"}',
   'Бял торф фракция 0-5 мм + омокрител',
   'Торф',
   '0 дни',
   'БАБХ: № 011255-ПРЗ',
-  'Промо -10%',
+  'Промо -5%',
   '/images/products/bottle-1l.jpg',
   'Професионален немски торфен субстрат за сеитба и разсад.',
   'За пикиране и тарелки',
@@ -5095,7 +5095,7 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   15,
   TRUE,
   '[{"val":100,"label":"Препоръчителна доза: За пикиране и тарелки"}]'::jsonb,
-  '[{"label":"70 л","price":18.5,"unit":"€ 18.50 / 70 л","default":true}]'::jsonb
+  '[{"label":"70 л","price":17.57,"unit":"€ 17.57 / 70 л","default":true}]'::jsonb
 ) ON CONFLICT (id) DO UPDATE SET
   name = EXCLUDED.name,
   price_eur = EXCLUDED.price_eur,
@@ -5109,8 +5109,8 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   'sortovi',
   'nonprof',
   'Непрофесионална категория',
-  3.5,
-  6.85,
+  3.32,
+  3.32,
   '20 бр.',
   '{"разсад"}',
   'Спресован сфагнум торф',
@@ -5125,7 +5125,7 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   32,
   TRUE,
   '[{"val":100,"label":"Препоръчителна доза: 1 таблетка на семе"}]'::jsonb,
-  '[{"label":"20 бр.","price":3.5,"unit":"€ 3.50 / 20 бр.","default":true}]'::jsonb
+  '[{"label":"20 бр.","price":3.32,"unit":"€ 3.32 / 20 бр.","default":true}]'::jsonb
 ) ON CONFLICT (id) DO UPDATE SET
   name = EXCLUDED.name,
   price_eur = EXCLUDED.price_eur,
@@ -5139,8 +5139,8 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   'yara',
   'nonprof',
   'Непрофесионална категория',
-  23,
-  44.98,
+  21.85,
+  21.85,
   '25 кг',
   '{"домати","зеленчуци"}',
   'Водоразтворим калциев нитрат',
@@ -5155,7 +5155,7 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   49,
   TRUE,
   '[{"val":100,"label":"Препоръчителна доза: 2-3 кг/дка капково"}]'::jsonb,
-  '[{"label":"25 кг","price":23,"unit":"€ 23.00 / 25 кг","default":true}]'::jsonb
+  '[{"label":"25 кг","price":21.85,"unit":"€ 21.85 / 25 кг","default":true}]'::jsonb
 ) ON CONFLICT (id) DO UPDATE SET
   name = EXCLUDED.name,
   price_eur = EXCLUDED.price_eur,
@@ -5169,8 +5169,8 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   'aglukon',
   'nonprof',
   'Непрофесионална категория',
-  10.5,
-  20.54,
+  9.97,
+  9.97,
   '1 л',
   '{"зеленчуци","овощни"}',
   'Чисти растителни аминокиселини',
@@ -5185,7 +5185,7 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   66,
   TRUE,
   '[{"val":100,"label":"Препоръчителна доза: 200-300 мл/дка"}]'::jsonb,
-  '[{"label":"1 л","price":10.5,"unit":"€ 10.50 / 1 л","default":true}]'::jsonb
+  '[{"label":"1 л","price":9.97,"unit":"€ 9.97 / 1 л","default":true}]'::jsonb
 ) ON CONFLICT (id) DO UPDATE SET
   name = EXCLUDED.name,
   price_eur = EXCLUDED.price_eur,
@@ -5199,8 +5199,8 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   'yara',
   'nonprof',
   'Непрофесионална категория',
-  7.1,
-  13.89,
+  6.74,
+  6.74,
   '1 кг',
   '{"домати","картофи"}',
   'NPK 6-12-36 + 3% MgO + микро',
@@ -5215,7 +5215,7 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   83,
   TRUE,
   '[{"val":100,"label":"Препоръчителна доза: 200-400 г/дка"}]'::jsonb,
-  '[{"label":"1 кг","price":7.1,"unit":"€ 7.10 / 1 кг","default":true}]'::jsonb
+  '[{"label":"1 кг","price":6.74,"unit":"€ 6.74 / 1 кг","default":true}]'::jsonb
 ) ON CONFLICT (id) DO UPDATE SET
   name = EXCLUDED.name,
   price_eur = EXCLUDED.price_eur,
@@ -5229,8 +5229,8 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   'manica',
   'nonprof',
   'Непрофесионална категория',
-  4.8,
-  9.39,
+  4.56,
+  4.56,
   '100 г',
   '{"царевица","овощни"}',
   'Хелатиран цинк (Zn 15%)',
@@ -5245,7 +5245,7 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   15,
   TRUE,
   '[{"val":100,"label":"Препоръчителна доза: 50-100 г/дка"}]'::jsonb,
-  '[{"label":"100 г","price":4.8,"unit":"€ 4.80 / 100 г","default":true}]'::jsonb
+  '[{"label":"100 г","price":4.56,"unit":"€ 4.56 / 100 г","default":true}]'::jsonb
 ) ON CONFLICT (id) DO UPDATE SET
   name = EXCLUDED.name,
   price_eur = EXCLUDED.price_eur,
@@ -5259,8 +5259,8 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   'manica',
   'nonprof',
   'Непрофесионална категория',
-  3.2,
-  6.26,
+  3.04,
+  3.04,
   '100 г',
   '{"зеленчуци","лозя"}',
   'B, Cu, Fe, Mn, Mo, Zn',
@@ -5275,7 +5275,7 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   32,
   TRUE,
   '[{"val":100,"label":"Препоръчителна доза: 100 г/дка"}]'::jsonb,
-  '[{"label":"100 г","price":3.2,"unit":"€ 3.20 / 100 г","default":true}]'::jsonb
+  '[{"label":"100 г","price":3.04,"unit":"€ 3.04 / 100 г","default":true}]'::jsonb
 ) ON CONFLICT (id) DO UPDATE SET
   name = EXCLUDED.name,
   price_eur = EXCLUDED.price_eur,
@@ -5289,8 +5289,8 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   'aglukon',
   'nonprof',
   'Непрофесионална категория',
-  9.8,
-  19.17,
+  9.31,
+  9.31,
   '1 л',
   '{"овощни","лозя"}',
   'Висококонцентрирани микроелементи',
@@ -5305,7 +5305,7 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   49,
   TRUE,
   '[{"val":100,"label":"Препоръчителна доза: 100-150 мл/дка"}]'::jsonb,
-  '[{"label":"1 л","price":9.8,"unit":"€ 9.80 / 1 л","default":true}]'::jsonb
+  '[{"label":"1 л","price":9.31,"unit":"€ 9.31 / 1 л","default":true}]'::jsonb
 ) ON CONFLICT (id) DO UPDATE SET
   name = EXCLUDED.name,
   price_eur = EXCLUDED.price_eur,
@@ -5319,8 +5319,8 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   'amitica',
   'nonprof',
   'Непрофесионална категория',
-  21,
-  41.07,
+  19.95,
+  19.95,
   '500 г',
   '{"домати","зеленчуци"}',
   'Микоризни гъби Glomus и Bacillus',
@@ -5335,7 +5335,7 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   66,
   TRUE,
   '[{"val":100,"label":"Препоръчителна доза: 100-200 г/дка"}]'::jsonb,
-  '[{"label":"500 г","price":21,"unit":"€ 21.00 / 500 г","default":true}]'::jsonb
+  '[{"label":"500 г","price":19.95,"unit":"€ 19.95 / 500 г","default":true}]'::jsonb
 ) ON CONFLICT (id) DO UPDATE SET
   name = EXCLUDED.name,
   price_eur = EXCLUDED.price_eur,
@@ -5349,8 +5349,8 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   'yara',
   'nonprof',
   'Непрофесионална категория',
-  14.8,
-  28.95,
+  14.06,
+  14.06,
   '1 л',
   '{"житни","овощни"}',
   'Zn 180 г/л + Mn 330 г/л + Cu 110 г/л',
@@ -5365,7 +5365,7 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   83,
   TRUE,
   '[{"val":100,"label":"Препоръчителна доза: 100 мл/дка"}]'::jsonb,
-  '[{"label":"1 л","price":14.8,"unit":"€ 14.80 / 1 л","default":true}]'::jsonb
+  '[{"label":"1 л","price":14.06,"unit":"€ 14.06 / 1 л","default":true}]'::jsonb
 ) ON CONFLICT (id) DO UPDATE SET
   name = EXCLUDED.name,
   price_eur = EXCLUDED.price_eur,
@@ -5379,8 +5379,8 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   'valagro',
   'nonprof',
   'Непрофесионална категория',
-  12.8,
-  25.03,
+  12.16,
+  12.16,
   '1 л',
   '{"зеленчуци","овощни"}',
   'Свободни аминокиселини 20%',
@@ -5395,7 +5395,7 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   15,
   TRUE,
   '[{"val":100,"label":"Препоръчителна доза: 200 мл/дка"}]'::jsonb,
-  '[{"label":"1 л","price":12.8,"unit":"€ 12.80 / 1 л","default":true}]'::jsonb
+  '[{"label":"1 л","price":12.16,"unit":"€ 12.16 / 1 л","default":true}]'::jsonb
 ) ON CONFLICT (id) DO UPDATE SET
   name = EXCLUDED.name,
   price_eur = EXCLUDED.price_eur,
@@ -5409,15 +5409,15 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   'sortovi',
   'nonprof',
   'Непрофесионална категория',
-  2.2,
-  4.3,
+  2.09,
+  2.09,
   '1 г',
   '{"домати"}',
   'Чистота: 99% / Кълняемост: 92%',
   'Семена',
   '0 дни',
   'БАБХ: № 011332-ПРЗ',
-  'Промо -10%',
+  'Промо -5%',
   '/images/products/seed-packet.jpg',
   'Традиционният български розов гигант с форма на сърце. 400-800 грама.',
   '25-30 г за декар разсад',
@@ -5425,7 +5425,7 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   32,
   TRUE,
   '[{"val":100,"label":"Препоръчителна доза: 25-30 г за декар разсад"}]'::jsonb,
-  '[{"label":"1 г","price":2.2,"unit":"€ 2.20 / 1 г","default":true}]'::jsonb
+  '[{"label":"1 г","price":2.09,"unit":"€ 2.09 / 1 г","default":true}]'::jsonb
 ) ON CONFLICT (id) DO UPDATE SET
   name = EXCLUDED.name,
   price_eur = EXCLUDED.price_eur,
@@ -5439,8 +5439,8 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   'sortovi',
   'nonprof',
   'Непрофесионална категория',
-  4.8,
-  9.39,
+  4.56,
+  4.56,
   '50 семена',
   '{"домати"}',
   'Чистота: 99.5% / Кълняемост: 96%',
@@ -5455,7 +5455,7 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   49,
   TRUE,
   '[{"val":100,"label":"Препоръчителна доза: 20-25 г за декар"}]'::jsonb,
-  '[{"label":"50 семена","price":4.8,"unit":"€ 4.80 / 50 семена","default":true}]'::jsonb
+  '[{"label":"50 семена","price":4.56,"unit":"€ 4.56 / 50 семена","default":true}]'::jsonb
 ) ON CONFLICT (id) DO UPDATE SET
   name = EXCLUDED.name,
   price_eur = EXCLUDED.price_eur,
@@ -5469,8 +5469,8 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   'sortovi',
   'nonprof',
   'Непрофесионална категория',
-  1.8,
-  3.52,
+  1.71,
+  1.71,
   '1 г',
   '{"домати"}',
   'Чистота: 99% / Кълняемост: 90%',
@@ -5485,7 +5485,7 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   66,
   TRUE,
   '[{"val":100,"label":"Препоръчителна доза: 30 г за декар"}]'::jsonb,
-  '[{"label":"1 г","price":1.8,"unit":"€ 1.80 / 1 г","default":true}]'::jsonb
+  '[{"label":"1 г","price":1.71,"unit":"€ 1.71 / 1 г","default":true}]'::jsonb
 ) ON CONFLICT (id) DO UPDATE SET
   name = EXCLUDED.name,
   price_eur = EXCLUDED.price_eur,
@@ -5499,8 +5499,8 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   'sortovi',
   'nonprof',
   'Непрофесионална категория',
-  2.1,
-  4.11,
+  1.99,
+  1.99,
   '1 г',
   '{"домати"}',
   'Чистота: 99% / Кълняемост: 91%',
@@ -5515,7 +5515,7 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   83,
   TRUE,
   '[{"val":100,"label":"Препоръчителна доза: 25-30 г/дка"}]'::jsonb,
-  '[{"label":"1 г","price":2.1,"unit":"€ 2.10 / 1 г","default":true}]'::jsonb
+  '[{"label":"1 г","price":1.99,"unit":"€ 1.99 / 1 г","default":true}]'::jsonb
 ) ON CONFLICT (id) DO UPDATE SET
   name = EXCLUDED.name,
   price_eur = EXCLUDED.price_eur,
@@ -5529,8 +5529,8 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   'sortovi',
   'nonprof',
   'Непрофесионална категория',
-  3.9,
-  7.63,
+  3.7,
+  3.7,
   '1 г',
   '{"домати"}',
   'Чистота: 99% / Кълняемост: 94%',
@@ -5545,7 +5545,7 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   15,
   TRUE,
   '[{"val":100,"label":"Препоръчителна доза: 20-25 г/дка"}]'::jsonb,
-  '[{"label":"1 г","price":3.9,"unit":"€ 3.90 / 1 г","default":true}]'::jsonb
+  '[{"label":"1 г","price":3.7,"unit":"€ 3.70 / 1 г","default":true}]'::jsonb
 ) ON CONFLICT (id) DO UPDATE SET
   name = EXCLUDED.name,
   price_eur = EXCLUDED.price_eur,
@@ -5559,8 +5559,8 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   'sortovi',
   'nonprof',
   'Непрофесионална категория',
-  1.6,
-  3.13,
+  1.52,
+  1.52,
   '3 г',
   '{"домати"}',
   'Чистота: 99% / Кълняемост: 94%',
@@ -5575,7 +5575,7 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   32,
   TRUE,
   '[{"val":100,"label":"Препоръчителна доза: 120-150 г/дка"}]'::jsonb,
-  '[{"label":"3 г","price":1.6,"unit":"€ 1.60 / 3 г","default":true}]'::jsonb
+  '[{"label":"3 г","price":1.52,"unit":"€ 1.52 / 3 г","default":true}]'::jsonb
 ) ON CONFLICT (id) DO UPDATE SET
   name = EXCLUDED.name,
   price_eur = EXCLUDED.price_eur,
@@ -5589,8 +5589,8 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   'sortovi',
   'nonprof',
   'Непрофесионална категория',
-  3.5,
-  6.85,
+  3.32,
+  3.32,
   '1 г',
   '{"домати"}',
   'Чистота: 99% / Кълняемост: 95%',
@@ -5605,7 +5605,7 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   49,
   TRUE,
   '[{"val":100,"label":"Препоръчителна доза: 100-120 г/дка"}]'::jsonb,
-  '[{"label":"1 г","price":3.5,"unit":"€ 3.50 / 1 г","default":true}]'::jsonb
+  '[{"label":"1 г","price":3.32,"unit":"€ 3.32 / 1 г","default":true}]'::jsonb
 ) ON CONFLICT (id) DO UPDATE SET
   name = EXCLUDED.name,
   price_eur = EXCLUDED.price_eur,
@@ -5619,8 +5619,8 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   'sortovi',
   'nonprof',
   'Непрофесионална категория',
-  1.35,
-  2.64,
+  1.28,
+  1.28,
   '2 г',
   '{"домати"}',
   'Чистота: 99% / Кълняемост: 93%',
@@ -5635,7 +5635,7 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   66,
   TRUE,
   '[{"val":100,"label":"Препоръчителна доза: 150 г/дка"}]'::jsonb,
-  '[{"label":"2 г","price":1.35,"unit":"€ 1.35 / 2 г","default":true}]'::jsonb
+  '[{"label":"2 г","price":1.28,"unit":"€ 1.28 / 2 г","default":true}]'::jsonb
 ) ON CONFLICT (id) DO UPDATE SET
   name = EXCLUDED.name,
   price_eur = EXCLUDED.price_eur,
@@ -5649,8 +5649,8 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   'sortovi',
   'nonprof',
   'Непрофесионална категория',
-  3.9,
-  7.63,
+  3.7,
+  3.7,
   '1 г',
   '{"домати"}',
   'Партенокарпен хибрид',
@@ -5665,7 +5665,7 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   83,
   TRUE,
   '[{"val":100,"label":"Препоръчителна доза: 80-100 г/дка"}]'::jsonb,
-  '[{"label":"1 г","price":3.9,"unit":"€ 3.90 / 1 г","default":true}]'::jsonb
+  '[{"label":"1 г","price":3.7,"unit":"€ 3.70 / 1 г","default":true}]'::jsonb
 ) ON CONFLICT (id) DO UPDATE SET
   name = EXCLUDED.name,
   price_eur = EXCLUDED.price_eur,
@@ -5679,8 +5679,8 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   'sortovi',
   'nonprof',
   'Непрофесионална категория',
-  0.87,
-  1.7,
+  0.83,
+  0.83,
   '2 г',
   '{"домати"}',
   'Чистота: 99% / Кълняемост: 95%',
@@ -5695,7 +5695,7 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   15,
   TRUE,
   '[{"val":100,"label":"Препоръчителна доза: 120 г/дка"}]'::jsonb,
-  '[{"label":"2 г","price":0.87,"unit":"€ 0.87 / 2 г","default":true}]'::jsonb
+  '[{"label":"2 г","price":0.83,"unit":"€ 0.83 / 2 г","default":true}]'::jsonb
 ) ON CONFLICT (id) DO UPDATE SET
   name = EXCLUDED.name,
   price_eur = EXCLUDED.price_eur,
@@ -5709,8 +5709,8 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   'sortovi',
   'nonprof',
   'Непрофесионална категория',
-  1.9,
-  3.72,
+  1.8,
+  1.8,
   '2 г',
   '{"домати"}',
   'Чистота: 99% / Кълняемост: 91%',
@@ -5725,7 +5725,7 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   32,
   TRUE,
   '[{"val":100,"label":"Препоръчителна доза: 120-150 г/дка"}]'::jsonb,
-  '[{"label":"2 г","price":1.9,"unit":"€ 1.90 / 2 г","default":true}]'::jsonb
+  '[{"label":"2 г","price":1.8,"unit":"€ 1.80 / 2 г","default":true}]'::jsonb
 ) ON CONFLICT (id) DO UPDATE SET
   name = EXCLUDED.name,
   price_eur = EXCLUDED.price_eur,
@@ -5739,15 +5739,15 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   'sortovi',
   'nonprof',
   'Непрофесионална категория',
-  1.7,
-  3.32,
+  1.61,
+  1.61,
   '2 г',
   '{"домати"}',
   'Чистота: 99% / Кълняемост: 90%',
   'Семена',
   '0 дни',
   'БАБХ: № 011409-ПРЗ',
-  'Промо -10%',
+  'Промо -5%',
   '/images/products/seed-packet.jpg',
   'Светлозелена тънка и дълга чушка за пресни салати, пълнене и пържене.',
   '150 г/дка',
@@ -5755,7 +5755,7 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   49,
   TRUE,
   '[{"val":100,"label":"Препоръчителна доза: 150 г/дка"}]'::jsonb,
-  '[{"label":"2 г","price":1.7,"unit":"€ 1.70 / 2 г","default":true}]'::jsonb
+  '[{"label":"2 г","price":1.61,"unit":"€ 1.61 / 2 г","default":true}]'::jsonb
 ) ON CONFLICT (id) DO UPDATE SET
   name = EXCLUDED.name,
   price_eur = EXCLUDED.price_eur,
@@ -5769,8 +5769,8 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   'sortovi',
   'nonprof',
   'Непрофесионална категория',
-  2.1,
-  4.11,
+  1.99,
+  1.99,
   '2 г',
   '{"домати"}',
   'Чистота: 99% / Кълняемост: 92%',
@@ -5785,7 +5785,7 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   66,
   TRUE,
   '[{"val":100,"label":"Препоръчителна доза: 130-150 г/дка"}]'::jsonb,
-  '[{"label":"2 г","price":2.1,"unit":"€ 2.10 / 2 г","default":true}]'::jsonb
+  '[{"label":"2 г","price":1.99,"unit":"€ 1.99 / 2 г","default":true}]'::jsonb
 ) ON CONFLICT (id) DO UPDATE SET
   name = EXCLUDED.name,
   price_eur = EXCLUDED.price_eur,
@@ -5799,8 +5799,8 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   'sortovi',
   'nonprof',
   'Непрофесионална категория',
-  1.5,
-  2.93,
+  1.42,
+  1.42,
   '1 г',
   '{"домати"}',
   'Чистота: 99% / Кълняемост: 93%',
@@ -5815,7 +5815,7 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   83,
   TRUE,
   '[{"val":100,"label":"Препоръчителна доза: 100 г/дка"}]'::jsonb,
-  '[{"label":"1 г","price":1.5,"unit":"€ 1.50 / 1 г","default":true}]'::jsonb
+  '[{"label":"1 г","price":1.42,"unit":"€ 1.42 / 1 г","default":true}]'::jsonb
 ) ON CONFLICT (id) DO UPDATE SET
   name = EXCLUDED.name,
   price_eur = EXCLUDED.price_eur,
@@ -5829,8 +5829,8 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   'sortovi',
   'nonprof',
   'Непрофесионална категория',
-  3.53,
-  6.9,
+  3.35,
+  3.35,
   '1 г',
   '{"домати"}',
   'Чистота: 99% / Кълняемост: 94%',
@@ -5845,7 +5845,7 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   15,
   TRUE,
   '[{"val":100,"label":"Препоръчителна доза: 30-40 г/дка"}]'::jsonb,
-  '[{"label":"1 г","price":3.53,"unit":"€ 3.53 / 1 г","default":true}]'::jsonb
+  '[{"label":"1 г","price":3.35,"unit":"€ 3.35 / 1 г","default":true}]'::jsonb
 ) ON CONFLICT (id) DO UPDATE SET
   name = EXCLUDED.name,
   price_eur = EXCLUDED.price_eur,
@@ -5859,8 +5859,8 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   'sortovi',
   'nonprof',
   'Непрофесионална категория',
-  1.4,
-  2.74,
+  1.33,
+  1.33,
   '2 г',
   '{"домати"}',
   'Чистота: 99% / Кълняемост: 90%',
@@ -5875,7 +5875,7 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   32,
   TRUE,
   '[{"val":100,"label":"Препоръчителна доза: 40 г/дка"}]'::jsonb,
-  '[{"label":"2 г","price":1.4,"unit":"€ 1.40 / 2 г","default":true}]'::jsonb
+  '[{"label":"2 г","price":1.33,"unit":"€ 1.33 / 2 г","default":true}]'::jsonb
 ) ON CONFLICT (id) DO UPDATE SET
   name = EXCLUDED.name,
   price_eur = EXCLUDED.price_eur,
@@ -5889,8 +5889,8 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   'sortovi',
   'nonprof',
   'Непрофесионална категория',
-  2.1,
-  4.11,
+  1.99,
+  1.99,
   '5 г',
   '{"домати"}',
   'Чистота: 99% / Кълняемост: 95%',
@@ -5905,7 +5905,7 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   49,
   TRUE,
   '[{"val":100,"label":"Препоръчителна доза: 300-400 г/дка"}]'::jsonb,
-  '[{"label":"5 г","price":2.1,"unit":"€ 2.10 / 5 г","default":true}]'::jsonb
+  '[{"label":"5 г","price":1.99,"unit":"€ 1.99 / 5 г","default":true}]'::jsonb
 ) ON CONFLICT (id) DO UPDATE SET
   name = EXCLUDED.name,
   price_eur = EXCLUDED.price_eur,
@@ -5919,8 +5919,8 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   'sortovi',
   'nonprof',
   'Непрофесионална категория',
-  1.6,
-  3.13,
+  1.52,
+  1.52,
   '5 г',
   '{"домати"}',
   'Чистота: 99% / Кълняемост: 93%',
@@ -5935,7 +5935,7 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   66,
   TRUE,
   '[{"val":100,"label":"Препоръчителна доза: 350 г/дка"}]'::jsonb,
-  '[{"label":"5 г","price":1.6,"unit":"€ 1.60 / 5 г","default":true}]'::jsonb
+  '[{"label":"5 г","price":1.52,"unit":"€ 1.52 / 5 г","default":true}]'::jsonb
 ) ON CONFLICT (id) DO UPDATE SET
   name = EXCLUDED.name,
   price_eur = EXCLUDED.price_eur,
@@ -5949,8 +5949,8 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   'sortovi',
   'nonprof',
   'Непрофесионална категория',
-  1.7,
-  3.32,
+  1.61,
+  1.61,
   '3 г',
   '{"зеленчуци"}',
   'Чистота: 99% / Кълняемост: 93%',
@@ -5965,7 +5965,7 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   83,
   TRUE,
   '[{"val":100,"label":"Препоръчителна доза: 40-50 г/дка"}]'::jsonb,
-  '[{"label":"3 г","price":1.7,"unit":"€ 1.70 / 3 г","default":true}]'::jsonb
+  '[{"label":"3 г","price":1.61,"unit":"€ 1.61 / 3 г","default":true}]'::jsonb
 ) ON CONFLICT (id) DO UPDATE SET
   name = EXCLUDED.name,
   price_eur = EXCLUDED.price_eur,
@@ -5979,8 +5979,8 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   'sortovi',
   'nonprof',
   'Непрофесионална категория',
-  1.8,
-  3.52,
+  1.71,
+  1.71,
   '3 г',
   '{"зеленчуци"}',
   'Чистота: 99% / Кълняемост: 92%',
@@ -5995,7 +5995,7 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   15,
   TRUE,
   '[{"val":100,"label":"Препоръчителна доза: 40-50 г/дка"}]'::jsonb,
-  '[{"label":"3 г","price":1.8,"unit":"€ 1.80 / 3 г","default":true}]'::jsonb
+  '[{"label":"3 г","price":1.71,"unit":"€ 1.71 / 3 г","default":true}]'::jsonb
 ) ON CONFLICT (id) DO UPDATE SET
   name = EXCLUDED.name,
   price_eur = EXCLUDED.price_eur,
@@ -6009,8 +6009,8 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   'sortovi',
   'nonprof',
   'Непрофесионална категория',
-  1.8,
-  3.52,
+  1.71,
+  1.71,
   '2 г',
   '{"зеленчуци"}',
   'Чистота: 99% / Кълняемост: 90%',
@@ -6025,7 +6025,7 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   32,
   TRUE,
   '[{"val":100,"label":"Препоръчителна доза: 30-40 г/дка"}]'::jsonb,
-  '[{"label":"2 г","price":1.8,"unit":"€ 1.80 / 2 г","default":true}]'::jsonb
+  '[{"label":"2 г","price":1.71,"unit":"€ 1.71 / 2 г","default":true}]'::jsonb
 ) ON CONFLICT (id) DO UPDATE SET
   name = EXCLUDED.name,
   price_eur = EXCLUDED.price_eur,
@@ -6039,8 +6039,8 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   'sortovi',
   'nonprof',
   'Непрофесионална категория',
-  1.4,
-  2.74,
+  1.33,
+  1.33,
   '10 г',
   '{"зеленчуци"}',
   'Чистота: 99% / Кълняемост: 88%',
@@ -6055,7 +6055,7 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   49,
   TRUE,
   '[{"val":100,"label":"Препоръчителна доза: 1.5-2.5 кг/дка"}]'::jsonb,
-  '[{"label":"10 г","price":1.4,"unit":"€ 1.40 / 10 г","default":true}]'::jsonb
+  '[{"label":"10 г","price":1.33,"unit":"€ 1.33 / 10 г","default":true}]'::jsonb
 ) ON CONFLICT (id) DO UPDATE SET
   name = EXCLUDED.name,
   price_eur = EXCLUDED.price_eur,
@@ -6069,15 +6069,15 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   'sortovi',
   'nonprof',
   'Непрофесионална категория',
-  1.5,
-  2.93,
+  1.42,
+  1.42,
   '5 г',
   '{"зеленчуци"}',
   'Чистота: 98% / Кълняемост: 87%',
   'Семена',
   '0 дни',
   'БАБХ: № 011486-ПРЗ',
-  'Промо -10%',
+  'Промо -5%',
   '/images/products/seed-packet.jpg',
   'Сочни моркови без жилаво сърце за бебешки пюрета и пресни сокове.',
   '450-600 г/дка',
@@ -6085,7 +6085,7 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   66,
   TRUE,
   '[{"val":100,"label":"Препоръчителна доза: 450-600 г/дка"}]'::jsonb,
-  '[{"label":"5 г","price":1.5,"unit":"€ 1.50 / 5 г","default":true}]'::jsonb
+  '[{"label":"5 г","price":1.42,"unit":"€ 1.42 / 5 г","default":true}]'::jsonb
 ) ON CONFLICT (id) DO UPDATE SET
   name = EXCLUDED.name,
   price_eur = EXCLUDED.price_eur,
@@ -6099,8 +6099,8 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   'sortovi',
   'nonprof',
   'Непрофесионална категория',
-  1.2,
-  2.35,
+  1.14,
+  1.14,
   '5 г',
   '{"зеленчуци"}',
   'Чистота: 99% / Кълняемост: 94%',
@@ -6115,7 +6115,7 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   83,
   TRUE,
   '[{"val":100,"label":"Препоръчителна доза: 1-1.5 кг/дка"}]'::jsonb,
-  '[{"label":"5 г","price":1.2,"unit":"€ 1.20 / 5 г","default":true}]'::jsonb
+  '[{"label":"5 г","price":1.14,"unit":"€ 1.14 / 5 г","default":true}]'::jsonb
 ) ON CONFLICT (id) DO UPDATE SET
   name = EXCLUDED.name,
   price_eur = EXCLUDED.price_eur,
@@ -6129,8 +6129,8 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   'sortovi',
   'nonprof',
   'Непрофесионална категория',
-  1.9,
-  3.72,
+  1.8,
+  1.8,
   '5 г',
   '{"зеленчуци"}',
   'Чистота: 98% / Кълняемост: 86%',
@@ -6145,7 +6145,7 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   15,
   TRUE,
   '[{"val":100,"label":"Препоръчителна доза: 400-500 г/дка"}]'::jsonb,
-  '[{"label":"5 г","price":1.9,"unit":"€ 1.90 / 5 г","default":true}]'::jsonb
+  '[{"label":"5 г","price":1.8,"unit":"€ 1.80 / 5 г","default":true}]'::jsonb
 ) ON CONFLICT (id) DO UPDATE SET
   name = EXCLUDED.name,
   price_eur = EXCLUDED.price_eur,
@@ -6159,8 +6159,8 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   'sortovi',
   'nonprof',
   'Непрофесионална категория',
-  1.3,
-  2.54,
+  1.23,
+  1.23,
   '3 г',
   '{"зеленчуци"}',
   'Чистота: 99% / Кълняемост: 92%',
@@ -6175,7 +6175,7 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   32,
   TRUE,
   '[{"val":100,"label":"Препоръчителна доза: 30-40 г/дка"}]'::jsonb,
-  '[{"label":"3 г","price":1.3,"unit":"€ 1.30 / 3 г","default":true}]'::jsonb
+  '[{"label":"3 г","price":1.23,"unit":"€ 1.23 / 3 г","default":true}]'::jsonb
 ) ON CONFLICT (id) DO UPDATE SET
   name = EXCLUDED.name,
   price_eur = EXCLUDED.price_eur,
@@ -6189,8 +6189,8 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   'sortovi',
   'nonprof',
   'Непрофесионална категория',
-  2.2,
-  4.3,
+  2.09,
+  2.09,
   '50 г',
   '{"зеленчуци"}',
   'Чистота: 99% / Кълняемост: 95%',
@@ -6205,7 +6205,7 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   49,
   TRUE,
   '[{"val":100,"label":"Препоръчителна доза: 10-12 кг/дка"}]'::jsonb,
-  '[{"label":"50 г","price":2.2,"unit":"€ 2.20 / 50 г","default":true}]'::jsonb
+  '[{"label":"50 г","price":2.09,"unit":"€ 2.09 / 50 г","default":true}]'::jsonb
 ) ON CONFLICT (id) DO UPDATE SET
   name = EXCLUDED.name,
   price_eur = EXCLUDED.price_eur,
@@ -6219,8 +6219,8 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   'sortovi',
   'nonprof',
   'Непрофесионална категория',
-  2.5,
-  4.89,
+  2.38,
+  2.38,
   '50 г',
   '{"зеленчуци"}',
   'Чистота: 99% / Кълняемост: 94%',
@@ -6235,7 +6235,7 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   66,
   TRUE,
   '[{"val":100,"label":"Препоръчителна доза: 8-10 кг/дка"}]'::jsonb,
-  '[{"label":"50 г","price":2.5,"unit":"€ 2.50 / 50 г","default":true}]'::jsonb
+  '[{"label":"50 г","price":2.38,"unit":"€ 2.38 / 50 г","default":true}]'::jsonb
 ) ON CONFLICT (id) DO UPDATE SET
   name = EXCLUDED.name,
   price_eur = EXCLUDED.price_eur,
@@ -6249,8 +6249,8 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   'sortovi',
   'nonprof',
   'Непрофесионална категория',
-  1.8,
-  3.52,
+  1.71,
+  1.71,
   '5 г',
   '{"зеленчуци"}',
   'Чистота: 99% / Кълняемост: 90%',
@@ -6265,7 +6265,7 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   83,
   TRUE,
   '[{"val":100,"label":"Препоръчителна доза: 250-300 г/дка"}]'::jsonb,
-  '[{"label":"5 г","price":1.8,"unit":"€ 1.80 / 5 г","default":true}]'::jsonb
+  '[{"label":"5 г","price":1.71,"unit":"€ 1.71 / 5 г","default":true}]'::jsonb
 ) ON CONFLICT (id) DO UPDATE SET
   name = EXCLUDED.name,
   price_eur = EXCLUDED.price_eur,
@@ -6279,8 +6279,8 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   'sortovi',
   'nonprof',
   'Непрофесионална категория',
-  1.8,
-  3.52,
+  1.71,
+  1.71,
   '3 г',
   '{"зеленчуци"}',
   'Чистота: 99% / Кълняемост: 89%',
@@ -6295,7 +6295,7 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   15,
   TRUE,
   '[{"val":100,"label":"Препоръчителна доза: 200 г/дка"}]'::jsonb,
-  '[{"label":"3 г","price":1.8,"unit":"€ 1.80 / 3 г","default":true}]'::jsonb
+  '[{"label":"3 г","price":1.71,"unit":"€ 1.71 / 3 г","default":true}]'::jsonb
 ) ON CONFLICT (id) DO UPDATE SET
   name = EXCLUDED.name,
   price_eur = EXCLUDED.price_eur,
@@ -6309,8 +6309,8 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   'sortovi',
   'nonprof',
   'Непрофесионална категория',
-  8.9,
-  17.41,
+  8.46,
+  8.46,
   '1 кг',
   '{"трева"}',
   'Lolium perenne 50% + Poa pratensis',
@@ -6325,7 +6325,7 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   32,
   TRUE,
   '[{"val":100,"label":"Препоръчителна доза: 30-40 г на кв.м"}]'::jsonb,
-  '[{"label":"1 кг","price":8.9,"unit":"€ 8.90 / 1 кг","default":true}]'::jsonb
+  '[{"label":"1 кг","price":8.46,"unit":"€ 8.46 / 1 кг","default":true}]'::jsonb
 ) ON CONFLICT (id) DO UPDATE SET
   name = EXCLUDED.name,
   price_eur = EXCLUDED.price_eur,
@@ -6339,8 +6339,8 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   'sortovi',
   'nonprof',
   'Непрофесионална категория',
-  9.2,
-  17.99,
+  8.74,
+  8.74,
   '1 кг',
   '{"трева"}',
   'Festuca rubra + Festuca ovina',
@@ -6355,7 +6355,7 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   49,
   TRUE,
   '[{"val":100,"label":"Препоръчителна доза: 35 г на кв.м"}]'::jsonb,
-  '[{"label":"1 кг","price":9.2,"unit":"€ 9.20 / 1 кг","default":true}]'::jsonb
+  '[{"label":"1 кг","price":8.74,"unit":"€ 8.74 / 1 кг","default":true}]'::jsonb
 ) ON CONFLICT (id) DO UPDATE SET
   name = EXCLUDED.name,
   price_eur = EXCLUDED.price_eur,
@@ -6369,8 +6369,8 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   'lalvin',
   'nonprof',
   'Непрофесионална категория',
-  24.5,
-  47.92,
+  23.27,
+  23.27,
   '500 г',
   '{"лозя"}',
   'Saccharomyces bayanus (шампански щам)',
@@ -6385,7 +6385,7 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   66,
   TRUE,
   '[{"val":100,"label":"Препоръчителна доза: 20-25 г за 100 л мъст"}]'::jsonb,
-  '[{"label":"500 г","price":24.5,"unit":"€ 24.50 / 500 г","default":true}]'::jsonb
+  '[{"label":"500 г","price":23.27,"unit":"€ 23.27 / 500 г","default":true}]'::jsonb
 ) ON CONFLICT (id) DO UPDATE SET
   name = EXCLUDED.name,
   price_eur = EXCLUDED.price_eur,
@@ -6399,15 +6399,15 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   'lalvin',
   'nonprof',
   'Непрофесионална категория',
-  26,
-  50.85,
+  24.7,
+  24.7,
   '500 г',
   '{"лозя"}',
   'Saccharomyces cerevisiae (селекция Португалия)',
   'Сухи дрожди',
   '0 дни',
   'БАБХ: № 011563-ПРЗ',
-  'Промо -10%',
+  'Промо -5%',
   '/images/products/wine-bottle.jpg',
   'Отключва тропически и цитрусови аромати за Совиньон Блан и Мускат.',
   '20 г за 100 л',
@@ -6415,7 +6415,7 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   83,
   TRUE,
   '[{"val":100,"label":"Препоръчителна доза: 20 г за 100 л"}]'::jsonb,
-  '[{"label":"500 г","price":26,"unit":"€ 26.00 / 500 г","default":true}]'::jsonb
+  '[{"label":"500 г","price":24.7,"unit":"€ 24.70 / 500 г","default":true}]'::jsonb
 ) ON CONFLICT (id) DO UPDATE SET
   name = EXCLUDED.name,
   price_eur = EXCLUDED.price_eur,
@@ -6429,8 +6429,8 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   'lalvin',
   'nonprof',
   'Непрофесионална категория',
-  25.5,
-  49.87,
+  24.22,
+  24.22,
   '500 г',
   '{"лозя"}',
   'Saccharomyces cerevisiae (Бургундия)',
@@ -6445,7 +6445,7 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   15,
   TRUE,
   '[{"val":100,"label":"Препоръчителна доза: 20-25 г за 100 кг каша"}]'::jsonb,
-  '[{"label":"500 г","price":25.5,"unit":"€ 25.50 / 500 г","default":true}]'::jsonb
+  '[{"label":"500 г","price":24.22,"unit":"€ 24.22 / 500 г","default":true}]'::jsonb
 ) ON CONFLICT (id) DO UPDATE SET
   name = EXCLUDED.name,
   price_eur = EXCLUDED.price_eur,
@@ -6459,8 +6459,8 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   'lalvin',
   'nonprof',
   'Непрофесионална категория',
-  24.8,
-  48.5,
+  23.56,
+  23.56,
   '500 г',
   '{"лозя"}',
   'Saccharomyces cerevisiae (Монпелие)',
@@ -6475,7 +6475,7 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   32,
   TRUE,
   '[{"val":100,"label":"Препоръчителна доза: 20-25 г за 100 л"}]'::jsonb,
-  '[{"label":"500 г","price":24.8,"unit":"€ 24.80 / 500 г","default":true}]'::jsonb
+  '[{"label":"500 г","price":23.56,"unit":"€ 23.56 / 500 г","default":true}]'::jsonb
 ) ON CONFLICT (id) DO UPDATE SET
   name = EXCLUDED.name,
   price_eur = EXCLUDED.price_eur,
@@ -6489,8 +6489,8 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   'lalvin',
   'nonprof',
   'Непрофесионална категория',
-  25,
-  48.9,
+  23.75,
+  23.75,
   '500 г',
   '{"лозя"}',
   'Селекция за бели вина от Рона',
@@ -6505,7 +6505,7 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   49,
   TRUE,
   '[{"val":100,"label":"Препоръчителна доза: 20 г за 100 л"}]'::jsonb,
-  '[{"label":"500 г","price":25,"unit":"€ 25.00 / 500 г","default":true}]'::jsonb
+  '[{"label":"500 г","price":23.75,"unit":"€ 23.75 / 500 г","default":true}]'::jsonb
 ) ON CONFLICT (id) DO UPDATE SET
   name = EXCLUDED.name,
   price_eur = EXCLUDED.price_eur,
@@ -6519,8 +6519,8 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   'lalvin',
   'nonprof',
   'Непрофесионална категория',
-  6.5,
-  12.71,
+  6.17,
+  6.17,
   '100 г',
   '{"лозя"}',
   'Инактивирани дрожди + витамини + диамониев фосфат',
@@ -6535,7 +6535,7 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   66,
   TRUE,
   '[{"val":100,"label":"Препоръчителна доза: 20-30 г за 100 л"}]'::jsonb,
-  '[{"label":"100 г","price":6.5,"unit":"€ 6.50 / 100 г","default":true}]'::jsonb
+  '[{"label":"100 г","price":6.17,"unit":"€ 6.17 / 100 г","default":true}]'::jsonb
 ) ON CONFLICT (id) DO UPDATE SET
   name = EXCLUDED.name,
   price_eur = EXCLUDED.price_eur,
@@ -6549,8 +6549,8 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   'lalvin',
   'nonprof',
   'Непрофесионална категория',
-  12.8,
-  25.03,
+  12.16,
+  12.16,
   '1 кг',
   '{"лозя"}',
   '100% Френски дъб Quercus petraea',
@@ -6565,7 +6565,7 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   83,
   TRUE,
   '[{"val":100,"label":"Препоръчителна доза: 2-4 г на литър"}]'::jsonb,
-  '[{"label":"1 кг","price":12.8,"unit":"€ 12.80 / 1 кг","default":true}]'::jsonb
+  '[{"label":"1 кг","price":12.16,"unit":"€ 12.16 / 1 кг","default":true}]'::jsonb
 ) ON CONFLICT (id) DO UPDATE SET
   name = EXCLUDED.name,
   price_eur = EXCLUDED.price_eur,
@@ -6579,8 +6579,8 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   'lalvin',
   'nonprof',
   'Непрофесионална категория',
-  13.5,
-  26.4,
+  12.82,
+  12.82,
   '1 кг',
   '{"лозя"}',
   '100% Американски бял дъб',
@@ -6595,7 +6595,7 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   15,
   TRUE,
   '[{"val":100,"label":"Препоръчителна доза: 3-5 г на литър ракия"}]'::jsonb,
-  '[{"label":"1 кг","price":13.5,"unit":"€ 13.50 / 1 кг","default":true}]'::jsonb
+  '[{"label":"1 кг","price":12.82,"unit":"€ 12.82 / 1 кг","default":true}]'::jsonb
 ) ON CONFLICT (id) DO UPDATE SET
   name = EXCLUDED.name,
   price_eur = EXCLUDED.price_eur,
@@ -6609,8 +6609,8 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   'manica',
   'nonprof',
   'Непрофесионална категория',
-  3.8,
-  7.43,
+  3.61,
+  3.61,
   '1 кг',
   '{"лозя"}',
   'Калиев пиросулфит K2S2O5 (E224)',
@@ -6625,7 +6625,7 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   32,
   TRUE,
   '[{"val":100,"label":"Препоръчителна доза: 5-10 г за 100 л"}]'::jsonb,
-  '[{"label":"1 кг","price":3.8,"unit":"€ 3.80 / 1 кг","default":true}]'::jsonb
+  '[{"label":"1 кг","price":3.61,"unit":"€ 3.61 / 1 кг","default":true}]'::jsonb
 ) ON CONFLICT (id) DO UPDATE SET
   name = EXCLUDED.name,
   price_eur = EXCLUDED.price_eur,
@@ -6639,8 +6639,8 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   'manica',
   'nonprof',
   'Непрофесионална категория',
-  3.5,
-  6.85,
+  3.32,
+  3.32,
   '1 кг',
   '{"лозя"}',
   'Колоиден активиран монтморилонит',
@@ -6655,7 +6655,7 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   49,
   TRUE,
   '[{"val":100,"label":"Препоръчителна доза: 80-120 г за 100 л"}]'::jsonb,
-  '[{"label":"1 кг","price":3.5,"unit":"€ 3.50 / 1 кг","default":true}]'::jsonb
+  '[{"label":"1 кг","price":3.32,"unit":"€ 3.32 / 1 кг","default":true}]'::jsonb
 ) ON CONFLICT (id) DO UPDATE SET
   name = EXCLUDED.name,
   price_eur = EXCLUDED.price_eur,
@@ -6669,8 +6669,8 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   'manica',
   'nonprof',
   'Непрофесионална категория',
-  4.2,
-  8.21,
+  3.99,
+  3.99,
   '100 г',
   '{"лозя"}',
   'Хранителен желатин за избистряне',
@@ -6685,7 +6685,7 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   66,
   TRUE,
   '[{"val":100,"label":"Препоръчителна доза: 5-10 г за 100 л"}]'::jsonb,
-  '[{"label":"100 г","price":4.2,"unit":"€ 4.20 / 100 г","default":true}]'::jsonb
+  '[{"label":"100 г","price":3.99,"unit":"€ 3.99 / 100 г","default":true}]'::jsonb
 ) ON CONFLICT (id) DO UPDATE SET
   name = EXCLUDED.name,
   price_eur = EXCLUDED.price_eur,
@@ -6699,8 +6699,8 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   'lalvin',
   'nonprof',
   'Непрофесионална категория',
-  8.9,
-  17.41,
+  8.46,
+  8.46,
   '100 г',
   '{"лозя"}',
   'Концентриран танин от гроздови семки',
@@ -6715,7 +6715,7 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   83,
   TRUE,
   '[{"val":100,"label":"Препоръчителна доза: 5-15 г за 100 л"}]'::jsonb,
-  '[{"label":"100 г","price":8.9,"unit":"€ 8.90 / 100 г","default":true}]'::jsonb
+  '[{"label":"100 г","price":8.46,"unit":"€ 8.46 / 100 г","default":true}]'::jsonb
 ) ON CONFLICT (id) DO UPDATE SET
   name = EXCLUDED.name,
   price_eur = EXCLUDED.price_eur,
@@ -6729,15 +6729,15 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   'sortovi',
   'nonprof',
   'Непрофесионална категория',
-  2.2,
-  4.3,
+  2.09,
+  2.09,
   '20 мл',
   '{"лозя"}',
   'Етеричен концентрат Мускат Отонел',
   'Флакон',
   '0 дни',
   'БАБХ: № 011640-ПРЗ',
-  'Промо -10%',
+  'Промо -5%',
   '/images/products/wine-bottle.jpg',
   'Придава благороден мускатов букет на обикновена домашна гроздова ракия.',
   '20 мл за 50 л ракия',
@@ -6745,7 +6745,7 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   15,
   TRUE,
   '[{"val":100,"label":"Препоръчителна доза: 20 мл за 50 л ракия"}]'::jsonb,
-  '[{"label":"20 мл","price":2.2,"unit":"€ 2.20 / 20 мл","default":true}]'::jsonb
+  '[{"label":"20 мл","price":2.09,"unit":"€ 2.09 / 20 мл","default":true}]'::jsonb
 ) ON CONFLICT (id) DO UPDATE SET
   name = EXCLUDED.name,
   price_eur = EXCLUDED.price_eur,
@@ -6759,8 +6759,8 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   'sortovi',
   'nonprof',
   'Непрофесионална категория',
-  2.2,
-  4.3,
+  2.09,
+  2.09,
   '20 мл',
   '{"лозя"}',
   'Натурален винен дестилатен аромат',
@@ -6775,7 +6775,7 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   32,
   TRUE,
   '[{"val":100,"label":"Препоръчителна доза: 20 мл за 50 л ракия"}]'::jsonb,
-  '[{"label":"20 мл","price":2.2,"unit":"€ 2.20 / 20 мл","default":true}]'::jsonb
+  '[{"label":"20 мл","price":2.09,"unit":"€ 2.09 / 20 мл","default":true}]'::jsonb
 ) ON CONFLICT (id) DO UPDATE SET
   name = EXCLUDED.name,
   price_eur = EXCLUDED.price_eur,
@@ -6789,8 +6789,8 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   'sortovi',
   'nonprof',
   'Непрофесионална категория',
-  2.2,
-  4.3,
+  2.09,
+  2.09,
   '20 мл',
   '{"лозя"}',
   'Екстракт от зрели сливи Кюстендилска',
@@ -6805,7 +6805,7 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   49,
   TRUE,
   '[{"val":100,"label":"Препоръчителна доза: 20 мл за 50 л ракия"}]'::jsonb,
-  '[{"label":"20 мл","price":2.2,"unit":"€ 2.20 / 20 мл","default":true}]'::jsonb
+  '[{"label":"20 мл","price":2.09,"unit":"€ 2.09 / 20 мл","default":true}]'::jsonb
 ) ON CONFLICT (id) DO UPDATE SET
   name = EXCLUDED.name,
   price_eur = EXCLUDED.price_eur,
@@ -6819,8 +6819,8 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   'sortovi',
   'nonprof',
   'Непрофесионална категория',
-  2.4,
-  4.69,
+  2.28,
+  2.28,
   '20 мл',
   '{"лозя"}',
   'Ароматен екстракт от дюли',
@@ -6835,7 +6835,7 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   66,
   TRUE,
   '[{"val":100,"label":"Препоръчителна доза: 20 мл за 50 л ракия"}]'::jsonb,
-  '[{"label":"20 мл","price":2.4,"unit":"€ 2.40 / 20 мл","default":true}]'::jsonb
+  '[{"label":"20 мл","price":2.28,"unit":"€ 2.28 / 20 мл","default":true}]'::jsonb
 ) ON CONFLICT (id) DO UPDATE SET
   name = EXCLUDED.name,
   price_eur = EXCLUDED.price_eur,
@@ -6849,8 +6849,8 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   'sortovi',
   'nonprof',
   'Непрофесионална категория',
-  2.9,
-  5.67,
+  2.75,
+  2.75,
   '100 мл',
   '{"лозя"}',
   'Захарен колер E150d',
@@ -6865,7 +6865,7 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   83,
   TRUE,
   '[{"val":100,"label":"Препоръчителна доза: 50-100 мл за 100 л"}]'::jsonb,
-  '[{"label":"100 мл","price":2.9,"unit":"€ 2.90 / 100 мл","default":true}]'::jsonb
+  '[{"label":"100 мл","price":2.75,"unit":"€ 2.75 / 100 мл","default":true}]'::jsonb
 ) ON CONFLICT (id) DO UPDATE SET
   name = EXCLUDED.name,
   price_eur = EXCLUDED.price_eur,
@@ -6879,8 +6879,8 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   'sortovi',
   'nonprof',
   'Непрофесионална категория',
-  3.6,
-  7.04,
+  3.42,
+  3.42,
   '100 мл',
   '{"лозя"}',
   'Хранителна симетрионова емулсия',
@@ -6895,7 +6895,7 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   15,
   TRUE,
   '[{"val":100,"label":"Препоръчителна доза: 10-20 мл на казан"}]'::jsonb,
-  '[{"label":"100 мл","price":3.6,"unit":"€ 3.60 / 100 мл","default":true}]'::jsonb
+  '[{"label":"100 мл","price":3.42,"unit":"€ 3.42 / 100 мл","default":true}]'::jsonb
 ) ON CONFLICT (id) DO UPDATE SET
   name = EXCLUDED.name,
   price_eur = EXCLUDED.price_eur,
@@ -6909,8 +6909,8 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   'sortovi',
   'nonprof',
   'Непрофесионална категория',
-  7.9,
-  15.45,
+  7.5,
+  7.5,
   '1 бр.',
   '{"лозя"}',
   'Стъклен калибриран уред 0-100 об.%',
@@ -6925,7 +6925,7 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   32,
   TRUE,
   '[{"val":100,"label":"Препоръчителна доза: Измерване в мензура"}]'::jsonb,
-  '[{"label":"1 бр.","price":7.9,"unit":"€ 7.90 / 1 бр.","default":true}]'::jsonb
+  '[{"label":"1 бр.","price":7.5,"unit":"€ 7.50 / 1 бр.","default":true}]'::jsonb
 ) ON CONFLICT (id) DO UPDATE SET
   name = EXCLUDED.name,
   price_eur = EXCLUDED.price_eur,
@@ -6939,8 +6939,8 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   'sortovi',
   'nonprof',
   'Непрофесионална категория',
-  6.8,
-  13.3,
+  6.46,
+  6.46,
   '1 бр.',
   '{"лозя"}',
   'Ареометър по скалата на Brix 0-30%',
@@ -6955,7 +6955,7 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   49,
   TRUE,
   '[{"val":100,"label":"Препоръчителна доза: Потапяне в мъстта"}]'::jsonb,
-  '[{"label":"1 бр.","price":6.8,"unit":"€ 6.80 / 1 бр.","default":true}]'::jsonb
+  '[{"label":"1 бр.","price":6.46,"unit":"€ 6.46 / 1 бр.","default":true}]'::jsonb
 ) ON CONFLICT (id) DO UPDATE SET
   name = EXCLUDED.name,
   price_eur = EXCLUDED.price_eur,
@@ -6969,8 +6969,8 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   'manica',
   'nonprof',
   'Непрофесионална категория',
-  2.8,
-  5.48,
+  2.66,
+  2.66,
   '100 г',
   '{"лозя"}',
   'Калиев сорбат (E202)',
@@ -6985,7 +6985,7 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   66,
   TRUE,
   '[{"val":100,"label":"Препоръчителна доза: 15-20 г за 100 л"}]'::jsonb,
-  '[{"label":"100 г","price":2.8,"unit":"€ 2.80 / 100 г","default":true}]'::jsonb
+  '[{"label":"100 г","price":2.66,"unit":"€ 2.66 / 100 г","default":true}]'::jsonb
 ) ON CONFLICT (id) DO UPDATE SET
   name = EXCLUDED.name,
   price_eur = EXCLUDED.price_eur,
@@ -6999,8 +6999,8 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   'manica',
   'nonprof',
   'Непрофесионална категория',
-  2.9,
-  5.67,
+  2.75,
+  2.75,
   '500 г',
   '{"лозя"}',
   'Чиста монохидратна лимонена киселина',
@@ -7015,7 +7015,7 @@ INSERT INTO products (id, name, title, category_id, brand_id, use_category, use_
   83,
   TRUE,
   '[{"val":100,"label":"Препоръчителна доза: 50-100 г за 100 л"}]'::jsonb,
-  '[{"label":"500 г","price":2.9,"unit":"€ 2.90 / 500 г","default":true}]'::jsonb
+  '[{"label":"500 г","price":2.75,"unit":"€ 2.75 / 500 г","default":true}]'::jsonb
 ) ON CONFLICT (id) DO UPDATE SET
   name = EXCLUDED.name,
   price_eur = EXCLUDED.price_eur,

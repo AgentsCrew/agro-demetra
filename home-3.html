@@ -174,8 +174,8 @@
           <div class="text-xs text-slate-400 font-medium mt-1">Доставка в България</div>
         </div>
         <div class="bg-slate-900/60 border border-emerald-900/40 p-4 rounded-2xl text-center">
-          <div class="text-2xl font-black text-amber-400 font-mono-code">0 лв.</div>
-          <div class="text-xs text-slate-400 font-medium mt-1">Агрономическа Консултация</div>
+          <div class="text-2xl font-black text-amber-400 font-mono-code">0 €</div>
+          <div class="text-xs text-slate-400 font-medium mt-1">Безплатна Консултация</div>
         </div>
       </div>
 
@@ -305,11 +305,11 @@
           <div>
             <label class="block text-xs font-bold text-slate-300 mb-1.5">Изберете препарат:</label>
             <select id="calcProductSelect" onchange="runTechCalculator()" class="w-full bg-slate-950 border border-emerald-900/60 rounded-xl p-2.5 text-xs text-slate-200 focus:outline-none focus:border-emerald-500">
-              <option value="luna" data-dose="200" data-unit="г" data-price="69.90" data-pack="1000">Луна Кеър ВГ (Флуопирам) — Доза: 200 г/дка</option>
-              <option value="mospilan" data-dose="20" data-unit="г" data-price="3.20" data-pack="50">Моспилан 20 СП (Ацетамиприд) — Доза: 20 г/дка</option>
-              <option value="scor" data-dose="25" data-unit="мл" data-price="5.60" data-pack="20">Скор 250 ЕК (Дифеноконазол) — Доза: 25 мл/дка</option>
-              <option value="coragen" data-dose="18" data-unit="мл" data-price="9.90" data-pack="50">Кораген 20 СК (Хлорантранилипрол) — Доза: 18 мл/дка</option>
-              <option value="ridomil" data-dose="500" data-unit="г" data-price="38.50" data-pack="1000">Ридомил Голд Р ВГ — Доза: 500 г/дка</option>
+              <option value="luna" data-dose="200" data-unit="г" data-price="66.40" data-pack="1000">Луна Кеър ВГ (Флуопирам) — Доза: 200 г/дка</option>
+              <option value="mospilan" data-dose="20" data-unit="г" data-price="3.04" data-pack="50">Моспилан 20 СП (Ацетамиприд) — Доза: 20 г/дка</option>
+              <option value="scor" data-dose="25" data-unit="мл" data-price="5.32" data-pack="20">Скор 250 ЕК (Дифеноконазол) — Доза: 25 мл/дка</option>
+              <option value="coragen" data-dose="18" data-unit="мл" data-price="9.40" data-pack="50">Кораген 20 СК (Хлорантранилипрол) — Доза: 18 мл/дка</option>
+              <option value="ridomil" data-dose="500" data-unit="г" data-price="36.58" data-pack="1000">Ридомил Голд Р ВГ — Доза: 500 г/дка</option>
             </select>
           </div>
 
@@ -323,8 +323,8 @@
 
             <div class="text-center sm:text-right">
               <span class="text-[11px] uppercase font-bold text-slate-400">Ориентировъчна стойност:</span>
-              <div id="calcEstimatedCost" class="text-2xl font-black text-white font-mono-code">€ 69.90</div>
-              <span id="calcBgnCost" class="text-xs text-emerald-400 font-bold block">136.71 лв. с ДДС</span>
+              <div id="calcEstimatedCost" class="text-2xl font-black text-white font-mono-code">€ 66.40</div>
+              <span id="calcVatCost" class="text-xs text-emerald-400 font-bold block">вкл. 20% ДДС</span>
             </div>
           </div>
 
@@ -459,7 +459,7 @@
           recProd: 'Луна Кеър ВГ', 
           active: 'Флуопирам + Фозетил-Al', 
           dose: '200-250 г/дка', 
-          price: 69.90, 
+          price: 66.40, 
           image: '/images/products/sachet-wg.jpg',
           prodId: 'luna-kear-vg'
         },
@@ -469,7 +469,7 @@
           recProd: 'Ридомил Голд Р ВГ', 
           active: 'Мефеноксам + Меден оксихлорид', 
           dose: '500 г/дка', 
-          price: 38.50, 
+          price: 36.58, 
           image: '/images/products/sachet-wg.jpg',
           prodId: 'ridomil-gold-r-vg'
         },
@@ -479,7 +479,7 @@
           recProd: 'Суич 62.5 ВГ', 
           active: 'Ципродинил + Флудиоксонил', 
           dose: '80-100 г/дка', 
-          price: 16.90, 
+          price: 16.05, 
           image: '/images/products/sachet-wg.jpg',
           prodId: 'suich-625-vg'
         }
@@ -491,7 +491,7 @@
           recProd: 'Скор 250 ЕК', 
           active: 'Дифеноконазол (250 г/л)', 
           dose: '20-30 мл/дка', 
-          price: 5.60, 
+          price: 5.32, 
           image: '/images/products/bottle-250ml.jpg',
           prodId: 'skor-250-ek'
         },
@@ -501,7 +501,7 @@
           recProd: 'Кораген 20 СК', 
           active: 'Хлорантранилипрол', 
           dose: '16-20 мл/дка', 
-          price: 9.90, 
+          price: 9.40, 
           image: '/images/products/bottle-250ml.jpg',
           prodId: 'koragen-20-sk'
         }
@@ -513,7 +513,7 @@
           recProd: 'Куадрис 25 СК', 
           active: 'Азоксистробин', 
           dose: '80-100 мл/дка', 
-          price: 48.00, 
+          price: 45.60, 
           image: '/images/products/bottle-1l.jpg',
           prodId: 'kuadris-25-sk'
         },
@@ -523,7 +523,7 @@
           recProd: 'Моспилан 20 СП', 
           active: 'Ацетамиприд', 
           dose: '15-25 г/дка', 
-          price: 3.20, 
+          price: 3.04, 
           image: '/images/products/bottle-250ml.jpg',
           prodId: 'mospilan-20-sp'
         }
@@ -535,7 +535,7 @@
           recProd: 'Кораген 20 СК', 
           active: 'Хлорантранилипрол', 
           dose: '16-20 мл/дка', 
-          price: 9.90, 
+          price: 9.40, 
           image: '/images/products/bottle-250ml.jpg',
           prodId: 'koragen-20-sk'
         },
@@ -545,7 +545,7 @@
           recProd: 'Инфинито СК', 
           active: 'Флуопиколид + Пропамокарб', 
           dose: '120-160 мл/дка', 
-          price: 43.50, 
+          price: 41.32, 
           image: '/images/products/bottle-1l.jpg',
           prodId: 'infinito-sk'
         }
@@ -557,7 +557,7 @@
           recProd: 'Фоликур 250 ЕВ', 
           active: 'Тебуконазол', 
           dose: '100 мл/дка', 
-          price: 32.00, 
+          price: 30.40, 
           image: '/images/products/bottle-1l.jpg',
           prodId: 'folikur-250-ev'
         }
@@ -623,9 +623,9 @@
 
           <div class="flex items-center justify-between w-full md:w-auto md:flex-col md:items-end gap-3 pt-4 md:pt-0 border-t md:border-t-0 border-emerald-900/50">
             <div class="text-left md:text-right">
-              <span class="text-xs text-slate-500 block">Цена с ДДС:</span>
+              <span class="text-xs text-slate-500 block">Крайна цена:</span>
               <span class="text-xl font-black text-white font-mono-code">€ ${item.price.toFixed(2)}</span>
-              <span class="text-[10px] text-emerald-400 font-bold block">${(item.price * 1.95583).toFixed(2)} лв.</span>
+              <span class="text-[10px] text-emerald-400 font-bold block">вкл. 20% ДДС</span>
             </div>
             <a href="product.html?prod=${item.prodId}" class="bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-black px-5 py-2.5 rounded-xl text-xs uppercase tracking-wider transition shadow-md shadow-emerald-500/20">
               Поръчай веднага
@@ -673,7 +673,7 @@
       const packs = Math.max(1, Math.ceil(totalProduct / packSize));
       const cost = packs * price;
       document.getElementById('calcEstimatedCost').innerText = `€ ${cost.toFixed(2)}`;
-      document.getElementById('calcBgnCost').innerText = `${(cost * 1.95583).toFixed(2)} лв. с ДДС`;
+      document.getElementById('calcVatCost').innerText = `вкл. 20% ДДС`;
     }
 
     // Render 4 Showcase Products
@@ -707,7 +707,7 @@
           <div class="pt-4 mt-4 border-t border-emerald-950 flex items-center justify-between">
             <div>
               <div class="text-base font-black text-white font-mono-code">€ ${p.price.toFixed(2)}</div>
-              <div class="text-[10px] text-emerald-400 font-bold">${(p.price * 1.95583).toFixed(2)} лв.</div>
+              <div class="text-[10px] text-emerald-400 font-bold">вкл. 20% ДДС</div>
             </div>
             <a href="product.html?prod=${p.id}" class="bg-emerald-500/20 hover:bg-emerald-500 text-emerald-300 hover:text-slate-950 font-bold px-3 py-1.5 rounded-lg text-xs transition border border-emerald-500/30">
               Детайли

@@ -11,8 +11,7 @@ const INSECTICIDES = [
     title: "Моспилан 20 СП – системен инсектицид с ацетамиприд",
     category: "insecticides",
     categoryName: "Инсектициди",
-    price: 3.20,
-    bgnPrice: 6.26,
+    price: 3.04,
     unit: "50 г",
     brand: "nippon",
     brandName: "Nippon Soda / Sumi Agro",
@@ -32,10 +31,10 @@ const INSECTICIDES = [
       { val: 25, label: "25 г/дка (Оранжерийна белокрилка, трипс)" }
     ],
     packSizes: [
-      { label: "1.5 г", price: 0.80, unit: "€ 0.80 / 1.5 г" },
-      { label: "50 г", price: 3.20, unit: "€ 3.20 / 50 г", default: true },
-      { label: "100 г", price: 5.90, unit: "€ 5.90 / 100 г" },
-      { label: "1 кг", price: 46.00, unit: "€ 46.00 / 1 кг" }
+      { label: "1.5 г", price: 0.76, unit: "€ 0.80 / 1.5 г" },
+      { label: "50 г", price: 3.04, unit: "€ 3.20 / 50 г", default: true },
+      { label: "100 г", price: 5.61, unit: "€ 5.90 / 100 г" },
+      { label: "1 кг", price: 43.70, unit: "€ 46.00 / 1 кг" }
     ],
     rating: 5.0,
     reviewsCount: 94,
@@ -47,8 +46,7 @@ const INSECTICIDES = [
     title: "Децис 100 ЕК – бързодействащ пиретроид с делтаметрин 100 г/л",
     category: "insecticides",
     categoryName: "Инсектициди",
-    price: 4.20,
-    bgnPrice: 8.21,
+    price: 3.99,
     unit: "50 мл",
     brand: "bayer",
     brandName: "Bayer Crop Science AG",
@@ -68,9 +66,9 @@ const INSECTICIDES = [
       { val: 17.5, label: "17.5 мл/дка (Нощенки и тютюнев трипс)" }
     ],
     packSizes: [
-      { label: "50 мл", price: 4.20, unit: "€ 4.20 / 50 мл", default: true },
-      { label: "250 мл", price: 16.50, unit: "€ 16.50 / 250 мл" },
-      { label: "1 л", price: 54.00, unit: "€ 54.00 / 1 л" }
+      { label: "50 мл", price: 3.99, unit: "€ 4.20 / 50 мл", default: true },
+      { label: "250 мл", price: 15.67, unit: "€ 16.50 / 250 мл" },
+      { label: "1 л", price: 51.30, unit: "€ 54.00 / 1 л" }
     ],
     rating: 4.9,
     reviewsCount: 65,
@@ -82,8 +80,7 @@ const INSECTICIDES = [
     title: "Кораген 20 СК – ови-ларвицид с хлорантранилипрол (Rynaxypyr)",
     category: "insecticides",
     categoryName: "Инсектициди",
-    price: 9.90,
-    bgnPrice: 19.36,
+    price: 9.40,
     unit: "50 мл",
     brand: "corteva",
     brandName: "FMC Agricultural Solutions",
@@ -103,9 +100,9 @@ const INSECTICIDES = [
       { val: 6, label: "6 мл/дка (Колорадски бръмбар по картофи)" }
     ],
     packSizes: [
-      { label: "50 мл", price: 9.90, unit: "€ 9.90 / 50 мл", default: true },
-      { label: "100 мл", price: 18.20, unit: "€ 18.20 / 100 мл" },
-      { label: "1 л", price: 155.00, unit: "€ 155.00 / 1 л" }
+      { label: "50 мл", price: 9.40, unit: "€ 9.90 / 50 мл", default: true },
+      { label: "100 мл", price: 17.29, unit: "€ 18.20 / 100 мл" },
+      { label: "1 л", price: 147.25, unit: "€ 155.00 / 1 л" }
     ],
     rating: 5.0,
     reviewsCount: 82,
@@ -117,8 +114,7 @@ const INSECTICIDES = [
     title: "Карате Зеон 5 КС – микрокапсулован инсектицид с ламбда-цихалотрин",
     category: "insecticides",
     categoryName: "Инсектициди",
-    price: 3.50,
-    bgnPrice: 6.85,
+    price: 3.32,
     unit: "50 мл",
     brand: "syngenta",
     brandName: "Syngenta Crop Protection AG",
@@ -138,9 +134,9 @@ const INSECTICIDES = [
       { val: 20, label: "20 мл/дка (Гъсеници, плодови червеи)" }
     ],
     packSizes: [
-      { label: "50 мл", price: 3.50, unit: "€ 3.50 / 50 мл", default: true },
-      { label: "250 мл", price: 14.20, unit: "€ 14.20 / 250 мл" },
-      { label: "1 л", price: 44.00, unit: "€ 44.00 / 1 л" }
+      { label: "50 мл", price: 3.32, unit: "€ 3.50 / 50 мл", default: true },
+      { label: "250 мл", price: 13.49, unit: "€ 14.20 / 250 мл" },
+      { label: "1 л", price: 41.80, unit: "€ 44.00 / 1 л" }
     ],
     rating: 4.8,
     reviewsCount: 57,
@@ -152,8 +148,7 @@ const INSECTICIDES = [
     title: "Сиванто Прайм СЛ – бутенолиден инсектицид с флупирадифурон",
     category: "insecticides",
     categoryName: "Инсектициди",
-    price: 7.80,
-    bgnPrice: 15.26,
+    price: 7.41,
     unit: "50 мл",
     brand: "bayer",
     brandName: "Bayer Crop Science AG",
@@ -173,8 +168,8 @@ const INSECTICIDES = [
       { val: 90, label: "90 мл/дка (Ябълкова листна бълха и цикади)" }
     ],
     packSizes: [
-      { label: "50 мл", price: 7.80, unit: "€ 7.80 / 50 мл", default: true },
-      { label: "1 л", price: 115.00, unit: "€ 115.00 / 1 л" }
+      { label: "50 мл", price: 7.41, unit: "€ 7.80 / 50 мл", default: true },
+      { label: "1 л", price: 109.25, unit: "€ 115.00 / 1 л" }
     ],
     rating: 4.9,
     reviewsCount: 33,
@@ -186,8 +181,7 @@ const INSECTICIDES = [
     title: "Тепеки ВГ – селективен системен инсектицид с флоникамид 50%",
     category: "insecticides",
     categoryName: "Инсектициди",
-    price: 9.20,
-    bgnPrice: 17.99,
+    price: 8.74,
     unit: "15 г",
     brand: "syngenta",
     brandName: "Belchim Crop Protection / ISK",
@@ -207,9 +201,9 @@ const INSECTICIDES = [
       { val: 10, label: "10 г/дка (Оранжерийна белокрилка)" }
     ],
     packSizes: [
-      { label: "15 г", price: 9.20, unit: "€ 9.20 / 15 г", default: true },
-      { label: "140 г", price: 48.00, unit: "€ 48.00 / 140 г" },
-      { label: "500 г", price: 145.00, unit: "€ 145.00 / 500 г" }
+      { label: "15 г", price: 8.74, unit: "€ 9.20 / 15 г", default: true },
+      { label: "140 г", price: 45.60, unit: "€ 48.00 / 140 г" },
+      { label: "500 г", price: 137.75, unit: "€ 145.00 / 500 г" }
     ],
     rating: 5.0,
     reviewsCount: 41,
@@ -221,8 +215,7 @@ const INSECTICIDES = [
     title: "Авант 150 ЕК – ови-ларвицид с индоксакарб за лозя и овощни",
     category: "insecticides",
     categoryName: "Инсектициди",
-    price: 38.00,
-    bgnPrice: 74.32,
+    price: 36.10,
     unit: "250 мл",
     brand: "corteva",
     brandName: "FMC Agricultural Solutions",
@@ -242,8 +235,8 @@ const INSECTICIDES = [
       { val: 33, label: "33 мл/дка (Ябълков плодов червей)" }
     ],
     packSizes: [
-      { label: "250 мл", price: 38.00, unit: "€ 38.00 / 250 мл", default: true },
-      { label: "1 л", price: 135.00, unit: "€ 135.00 / 1 л" }
+      { label: "250 мл", price: 36.10, unit: "€ 38.00 / 250 мл", default: true },
+      { label: "1 л", price: 128.25, unit: "€ 135.00 / 1 л" }
     ],
     rating: 4.8,
     reviewsCount: 22,
@@ -255,8 +248,7 @@ const INSECTICIDES = [
     title: "Вертимек 018 ЕК – акарицид и инсектицид с абамектин",
     category: "insecticides",
     categoryName: "Инсектициди",
-    price: 8.90,
-    bgnPrice: 17.41,
+    price: 8.46,
     unit: "100 мл",
     brand: "syngenta",
     brandName: "Syngenta Crop Protection AG",
@@ -276,8 +268,8 @@ const INSECTICIDES = [
       { val: 80, label: "80 мл/дка (Миниращи мухи и трипси)" }
     ],
     packSizes: [
-      { label: "100 мл", price: 8.90, unit: "€ 8.90 / 100 мл", default: true },
-      { label: "1 л", price: 62.00, unit: "€ 62.00 / 1 л" }
+      { label: "100 мл", price: 8.46, unit: "€ 8.90 / 100 мл", default: true },
+      { label: "1 л", price: 58.90, unit: "€ 62.00 / 1 л" }
     ],
     rating: 4.9,
     reviewsCount: 54,
@@ -289,8 +281,7 @@ const INSECTICIDES = [
     title: "Нисоран 10 ВП – специфичен акарицид с хормонално действие",
     category: "insecticides",
     categoryName: "Инсектициди",
-    price: 6.50,
-    bgnPrice: 12.71,
+    price: 6.17,
     unit: "50 г",
     brand: "nippon",
     brandName: "Nippon Soda (Япония)",
@@ -310,9 +301,9 @@ const INSECTICIDES = [
       { val: 80, label: "80 г/дка (При силно нападение)" }
     ],
     packSizes: [
-      { label: "50 г", price: 6.50, unit: "€ 6.50 / 50 г", default: true },
-      { label: "100 г", price: 11.80, unit: "€ 11.80 / 100 г" },
-      { label: "500 г", price: 44.00, unit: "€ 44.00 / 500 г" }
+      { label: "50 г", price: 6.17, unit: "€ 6.50 / 50 г", default: true },
+      { label: "100 г", price: 11.21, unit: "€ 11.80 / 100 г" },
+      { label: "500 г", price: 41.80, unit: "€ 44.00 / 500 г" }
     ],
     rating: 4.8,
     reviewsCount: 38,
@@ -324,8 +315,7 @@ const INSECTICIDES = [
     title: "Ортус 5 СК – нокдаун акарицид с фенпироксимат",
     category: "insecticides",
     categoryName: "Инсектициди",
-    price: 7.20,
-    bgnPrice: 14.08,
+    price: 6.84,
     unit: "50 мл",
     brand: "nippon",
     brandName: "Nihon Nohyaku / Sumi Agro",
@@ -344,8 +334,8 @@ const INSECTICIDES = [
       { val: 100, label: "100 мл/дка (Паяжинообразуващ и ръждив акар)" }
     ],
     packSizes: [
-      { label: "50 мл", price: 7.20, unit: "€ 7.20 / 50 мл", default: true },
-      { label: "1 л", price: 69.00, unit: "€ 69.00 / 1 л" }
+      { label: "50 мл", price: 6.84, unit: "€ 7.20 / 50 мл", default: true },
+      { label: "1 л", price: 65.55, unit: "€ 69.00 / 1 л" }
     ],
     rating: 4.8,
     reviewsCount: 27,
@@ -357,8 +347,7 @@ const INSECTICIDES = [
     title: "Масай ВП – тебуфенпирад срещу всички стадии на акарите",
     category: "insecticides",
     categoryName: "Инсектициди",
-    price: 12.50,
-    bgnPrice: 24.45,
+    price: 11.88,
     unit: "100 г",
     brand: "basf",
     brandName: "BASF SE (Германия)",
@@ -378,8 +367,8 @@ const INSECTICIDES = [
       { val: 30, label: "30 г/дка (Червен овощен акар)" }
     ],
     packSizes: [
-      { label: "100 г", price: 12.50, unit: "€ 12.50 / 100 г", default: true },
-      { label: "500 г", price: 54.00, unit: "€ 54.00 / 500 г" }
+      { label: "100 г", price: 11.88, unit: "€ 12.50 / 100 г", default: true },
+      { label: "500 г", price: 51.30, unit: "€ 54.00 / 500 г" }
     ],
     rating: 4.9,
     reviewsCount: 30,
@@ -391,8 +380,7 @@ const INSECTICIDES = [
     title: "Клоузър 120 СК – иновация Isoclast Active срещу листни въшки",
     category: "insecticides",
     categoryName: "Инсектициди",
-    price: 8.10,
-    bgnPrice: 15.84,
+    price: 7.69,
     unit: "50 мл",
     brand: "corteva",
     brandName: "Corteva Agriscience",
@@ -412,8 +400,8 @@ const INSECTICIDES = [
       { val: 40, label: "40 мл/дка (Белокрилка и щитоносни въшки)" }
     ],
     packSizes: [
-      { label: "50 мл", price: 8.10, unit: "€ 8.10 / 50 мл", default: true },
-      { label: "250 мл", price: 34.00, unit: "€ 34.00 / 250 мл" }
+      { label: "50 мл", price: 7.69, unit: "€ 8.10 / 50 мл", default: true },
+      { label: "250 мл", price: 32.30, unit: "€ 34.00 / 250 мл" }
     ],
     rating: 4.9,
     reviewsCount: 48,
@@ -425,8 +413,7 @@ const INSECTICIDES = [
     title: "Волиам Тарго 063 СК – хлорантранилипрол и абамектин",
     category: "insecticides",
     categoryName: "Инсектициди",
-    price: 49.00,
-    bgnPrice: 95.84,
+    price: 46.55,
     unit: "250 мл",
     brand: "syngenta",
     brandName: "Syngenta Crop Protection AG",
@@ -445,8 +432,8 @@ const INSECTICIDES = [
       { val: 80, label: "80 мл/дка (Tuta absoluta и червен паяк по домати)" }
     ],
     packSizes: [
-      { label: "250 мл", price: 49.00, unit: "€ 49.00 / 250 мл", default: true },
-      { label: "1 л", price: 178.00, unit: "€ 178.00 / 1 л" }
+      { label: "250 мл", price: 46.55, unit: "€ 49.00 / 250 мл", default: true },
+      { label: "1 л", price: 169.10, unit: "€ 178.00 / 1 л" }
     ],
     rating: 5.0,
     reviewsCount: 23,
@@ -458,8 +445,7 @@ const INSECTICIDES = [
     title: "Делегат 250 ВГ – спинетозис инсектицид с биопроизход Jemvelva",
     category: "insecticides",
     categoryName: "Инсектициди",
-    price: 29.50,
-    bgnPrice: 57.70,
+    price: 28.02,
     unit: "100 г",
     brand: "corteva",
     brandName: "Corteva Agriscience",
@@ -478,8 +464,8 @@ const INSECTICIDES = [
       { val: 30, label: "30 г/дка (Ябълков плодов червей и крушова листна бълха)" }
     ],
     packSizes: [
-      { label: "100 г", price: 29.50, unit: "€ 29.50 / 100 г", default: true },
-      { label: "1 кг", price: 260.00, unit: "€ 260.00 / 1 кг" }
+      { label: "100 г", price: 28.02, unit: "€ 29.50 / 100 г", default: true },
+      { label: "1 кг", price: 247.00, unit: "€ 260.00 / 1 кг" }
     ],
     rating: 4.9,
     reviewsCount: 16,
@@ -491,8 +477,7 @@ const INSECTICIDES = [
     title: "Лазер 240 СК – биоинсектицид със спинозад за органично земеделие",
     category: "insecticides",
     categoryName: "Инсектициди",
-    price: 11.50,
-    bgnPrice: 22.49,
+    price: 10.92,
     unit: "50 мл",
     brand: "corteva",
     brandName: "Corteva Agriscience",
@@ -512,8 +497,8 @@ const INSECTICIDES = [
       { val: 40, label: "40 мл/дка (Западен цветен трипс)" }
     ],
     packSizes: [
-      { label: "50 мл", price: 11.50, unit: "€ 11.50 / 50 мл", default: true },
-      { label: "250 мл", price: 46.00, unit: "€ 46.00 / 250 мл" }
+      { label: "50 мл", price: 10.92, unit: "€ 11.50 / 50 мл", default: true },
+      { label: "250 мл", price: 43.70, unit: "€ 46.00 / 250 мл" }
     ],
     rating: 4.9,
     reviewsCount: 39,
@@ -525,8 +510,7 @@ const INSECTICIDES = [
     title: "Ним Азал Т/С – системен органичен инсектицид от дървото Нийм",
     category: "insecticides",
     categoryName: "Инсектициди",
-    price: 9.80,
-    bgnPrice: 19.17,
+    price: 9.31,
     unit: "100 мл",
     brand: "amitica",
     brandName: "Trifolio-M / Амитица",
@@ -545,8 +529,8 @@ const INSECTICIDES = [
       { val: 250, label: "250-300 мл/дка (Листни въшки, белокрилка, трипси)" }
     ],
     packSizes: [
-      { label: "100 мл", price: 9.80, unit: "€ 9.80 / 100 мл", default: true },
-      { label: "1 л", price: 78.00, unit: "€ 78.00 / 1 л" }
+      { label: "100 мл", price: 9.31, unit: "€ 9.80 / 100 мл", default: true },
+      { label: "1 л", price: 74.10, unit: "€ 78.00 / 1 л" }
     ],
     rating: 4.9,
     reviewsCount: 51,
@@ -558,8 +542,7 @@ const INSECTICIDES = [
     title: "Лепинокс Плюс – биологичен инсектицид срещу гъсеници",
     category: "insecticides",
     categoryName: "Инсектициди",
-    price: 6.90,
-    bgnPrice: 13.50,
+    price: 6.55,
     unit: "100 г",
     brand: "amitica",
     brandName: "CBC Europe / Амитица",
@@ -578,8 +561,8 @@ const INSECTICIDES = [
       { val: 100, label: "100 г/дка (Нощенки, листозавивачки, пеперуди)" }
     ],
     packSizes: [
-      { label: "100 г", price: 6.90, unit: "€ 6.90 / 100 г", default: true },
-      { label: "1 кг", price: 56.00, unit: "€ 56.00 / 1 кг" }
+      { label: "100 г", price: 6.55, unit: "€ 6.90 / 100 г", default: true },
+      { label: "1 кг", price: 53.20, unit: "€ 56.00 / 1 кг" }
     ],
     rating: 5.0,
     reviewsCount: 67,
@@ -591,8 +574,7 @@ const INSECTICIDES = [
     title: "Лимоцид – биофунгицид, инсектицид и акарицид с портокалово масло",
     category: "insecticides",
     categoryName: "Инсектициди",
-    price: 13.90,
-    bgnPrice: 27.19,
+    price: 13.21,
     unit: "200 мл",
     brand: "amitica",
     brandName: "Vivagro / Амитица",
@@ -611,8 +593,8 @@ const INSECTICIDES = [
       { val: 200, label: "200-400 мл/дка (Белокрилки, трипси, оидиум)" }
     ],
     packSizes: [
-      { label: "200 мл", price: 13.90, unit: "€ 13.90 / 200 мл", default: true },
-      { label: "1 л", price: 59.00, unit: "€ 59.00 / 1 л" }
+      { label: "200 мл", price: 13.21, unit: "€ 13.90 / 200 мл", default: true },
+      { label: "1 л", price: 56.05, unit: "€ 59.00 / 1 л" }
     ],
     rating: 4.9,
     reviewsCount: 43,
@@ -624,8 +606,7 @@ const INSECTICIDES = [
     title: "Мадекс Твин – специфичен грануловирус за плодови червеи",
     category: "insecticides",
     categoryName: "Инсектициди",
-    price: 19.50,
-    bgnPrice: 38.14,
+    price: 18.52,
     unit: "100 мл",
     brand: "amitica",
     brandName: "Andermatt Biocontrol",
@@ -644,7 +625,7 @@ const INSECTICIDES = [
       { val: 10, label: "10 мл/дка (При излюпване на всяко поколение червеи)" }
     ],
     packSizes: [
-      { label: "100 мл", price: 19.50, unit: "€ 19.50 / 100 мл", default: true }
+      { label: "100 мл", price: 18.52, unit: "€ 19.50 / 100 мл", default: true }
     ],
     rating: 5.0,
     reviewsCount: 26,
@@ -656,8 +637,7 @@ const INSECTICIDES = [
     title: "Афирм 095 СГ – емамектин бензоат срещу листозавивачки и молци",
     category: "insecticides",
     categoryName: "Инсектициди",
-    price: 14.20,
-    bgnPrice: 27.77,
+    price: 13.49,
     unit: "100 г",
     brand: "syngenta",
     brandName: "Syngenta Crop Protection AG",
@@ -676,8 +656,8 @@ const INSECTICIDES = [
       { val: 150, label: "150 г/дка (Шарен гроздов молец, доматен молец)" }
     ],
     packSizes: [
-      { label: "100 г", price: 14.20, unit: "€ 14.20 / 100 г", default: true },
-      { label: "1 кг", price: 118.00, unit: "€ 118.00 / 1 кг" }
+      { label: "100 г", price: 13.49, unit: "€ 14.20 / 100 г", default: true },
+      { label: "1 кг", price: 112.10, unit: "€ 118.00 / 1 кг" }
     ],
     rating: 4.9,
     reviewsCount: 31,

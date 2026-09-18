@@ -11,8 +11,7 @@ const WINE_PRODUCTS = [
     title: "Селектирани винени дрожди Lalvin EC-1118 (500 г) – шампанска раса Saccharomyces bayanus",
     category: "wine",
     categoryName: "Вино & Ракия",
-    price: 24.50,
-    bgnPrice: 47.92,
+    price: 23.27,
     unit: "500 г",
     brand: "lalvin",
     brandName: "Lallemand (Канада / Франция)",
@@ -32,9 +31,9 @@ const WINE_PRODUCTS = [
       { val: 40, label: "30-50 г за 100 литра (при рестартиране на спряла ферментация)" }
     ],
     packSizes: [
-      { label: "20 г (за 100 л)", price: 2.20, unit: "€ 2.20 / саше" },
-      { label: "100 г", price: 6.90, unit: "€ 6.90 / 100 г" },
-      { label: "500 г", price: 24.50, unit: "€ 24.50 / 500 г", default: true }
+      { label: "20 г (за 100 л)", price: 2.09, unit: "€ 2.20 / саше" },
+      { label: "100 г", price: 6.55, unit: "€ 6.90 / 100 г" },
+      { label: "500 г", price: 23.27, unit: "€ 24.50 / 500 г", default: true }
     ],
     rating: 5.0,
     reviewsCount: 164,
@@ -46,8 +45,7 @@ const WINE_PRODUCTS = [
     title: "Селектирани дрожди Lalvin QA23 – за ароматни бели вина (Совиньон, Мускат)",
     category: "wine",
     categoryName: "Вино & Ракия",
-    price: 26.00,
-    bgnPrice: 50.85,
+    price: 24.70,
     unit: "500 г",
     brand: "lalvin",
     brandName: "Lallemand (Канада)",
@@ -66,8 +64,8 @@ const WINE_PRODUCTS = [
       { val: 20, label: "20 г за 100 литра избистрена бяла мъст" }
     ],
     packSizes: [
-      { label: "20 г", price: 2.40, unit: "€ 2.40 / 20 г" },
-      { label: "500 г", price: 26.00, unit: "€ 26.00 / 500 г", default: true }
+      { label: "20 г", price: 2.28, unit: "€ 2.40 / 20 г" },
+      { label: "500 г", price: 24.70, unit: "€ 26.00 / 500 г", default: true }
     ],
     rating: 4.9,
     reviewsCount: 78,
@@ -79,8 +77,7 @@ const WINE_PRODUCTS = [
     title: "Селектирани дрожди Lalvin Bourgovin RC-212 – за плътни червени вина (Каберне, Мерло, Мавруд)",
     category: "wine",
     categoryName: "Вино & Ракия",
-    price: 25.50,
-    bgnPrice: 49.87,
+    price: 24.22,
     unit: "500 г",
     brand: "lalvin",
     brandName: "Lallemand (Бургундия)",
@@ -99,8 +96,8 @@ const WINE_PRODUCTS = [
       { val: 25, label: "20-25 г за 100 кг червена гроздова каша" }
     ],
     packSizes: [
-      { label: "20 г", price: 2.30, unit: "€ 2.30 / 20 г" },
-      { label: "500 г", price: 25.50, unit: "€ 25.50 / 500 г", default: true }
+      { label: "20 г", price: 2.18, unit: "€ 2.30 / 20 г" },
+      { label: "500 г", price: 24.22, unit: "€ 25.50 / 500 г", default: true }
     ],
     rating: 5.0,
     reviewsCount: 91,
@@ -112,8 +109,7 @@ const WINE_PRODUCTS = [
     title: "Френски дъбов чипс Medium Toast (1 кг) – за стареене и облагородяване на вино и ракия",
     category: "wine",
     categoryName: "Вино & Ракия",
-    price: 12.80,
-    bgnPrice: 25.03,
+    price: 12.16,
     unit: "1 кг",
     brand: "lalvin",
     brandName: "Pronektar (Франция)",
@@ -133,8 +129,8 @@ const WINE_PRODUCTS = [
       { val: 5, label: "4-6 г на литър ракия (контакт 2-4 седмици)" }
     ],
     packSizes: [
-      { label: "250 г", price: 3.90, unit: "€ 3.90 / 250 г" },
-      { label: "1 кг", price: 12.80, unit: "€ 12.80 / 1 кг", default: true }
+      { label: "250 г", price: 3.70, unit: "€ 3.90 / 250 г" },
+      { label: "1 кг", price: 12.16, unit: "€ 12.80 / 1 кг", default: true }
     ],
     rating: 4.9,
     reviewsCount: 84,
@@ -146,8 +142,7 @@ const WINE_PRODUCTS = [
     title: "Американски дъбов чипс Medium+ Toast – наситен ванилов и кокосов аромат",
     category: "wine",
     categoryName: "Вино & Ракия",
-    price: 13.50,
-    bgnPrice: 26.40,
+    price: 12.82,
     unit: "1 кг",
     brand: "lalvin",
     brandName: "Pronektar (САЩ)",
@@ -166,8 +161,8 @@ const WINE_PRODUCTS = [
       { val: 4, label: "3-5 г на литър ракия за мекота и златист цвят" }
     ],
     packSizes: [
-      { label: "250 г", price: 4.20, unit: "€ 4.20 / 250 г" },
-      { label: "1 кг", price: 13.50, unit: "€ 13.50 / 1 кг", default: true }
+      { label: "250 г", price: 3.99, unit: "€ 4.20 / 250 г" },
+      { label: "1 кг", price: 12.82, unit: "€ 13.50 / 1 кг", default: true }
     ],
     rating: 5.0,
     reviewsCount: 73,
@@ -179,8 +174,7 @@ const WINE_PRODUCTS = [
     title: "Калиев метабисулфит (серниста киселина на прах) – антиоксидант и дезинфектант (1 кг)",
     category: "wine",
     categoryName: "Вино & Ракия",
-    price: 3.80,
-    bgnPrice: 7.43,
+    price: 3.61,
     unit: "1 кг",
     brand: "manica",
     brandName: "Enartis (Италия)",
@@ -200,9 +194,9 @@ const WINE_PRODUCTS = [
       { val: 5, label: "5-10 г за 100 л вино (при претакане и бутилиране)" }
     ],
     packSizes: [
-      { label: "100 г", price: 0.90, unit: "€ 0.90 / 100 г" },
-      { label: "1 кг", price: 3.80, unit: "€ 3.80 / 1 кг", default: true },
-      { label: "25 кг", price: 65.00, unit: "€ 2.60 / кг" }
+      { label: "100 г", price: 0.85, unit: "€ 0.90 / 100 г" },
+      { label: "1 кг", price: 3.61, unit: "€ 3.80 / 1 кг", default: true },
+      { label: "25 кг", price: 61.75, unit: "€ 2.60 / кг" }
     ],
     rating: 5.0,
     reviewsCount: 152,
@@ -214,8 +208,7 @@ const WINE_PRODUCTS = [
     title: "Натриев бентонит за вино (1 кг) – колоидна глина за бързо избистряне и протеинова стабилност",
     category: "wine",
     categoryName: "Вино & Ракия",
-    price: 3.50,
-    bgnPrice: 6.85,
+    price: 3.32,
     unit: "1 кг",
     brand: "manica",
     brandName: "Erbslöh (Германия)",
@@ -234,8 +227,8 @@ const WINE_PRODUCTS = [
       { val: 100, label: "80-120 г за 100 литра вино (набъбва се предварително във вода 1:10)" }
     ],
     packSizes: [
-      { label: "1 кг", price: 3.50, unit: "€ 3.50 / 1 кг", default: true },
-      { label: "5 кг", price: 14.00, unit: "€ 2.80 / кг" }
+      { label: "1 кг", price: 3.32, unit: "€ 3.50 / 1 кг", default: true },
+      { label: "5 кг", price: 13.30, unit: "€ 2.80 / кг" }
     ],
     rating: 4.9,
     reviewsCount: 96,
@@ -247,8 +240,7 @@ const WINE_PRODUCTS = [
     title: "Натурален аромат за ракия Мускат (20 мл) – за 50 литра гроздова ракия",
     category: "wine",
     categoryName: "Вино & Ракия",
-    price: 2.20,
-    bgnPrice: 4.30,
+    price: 2.09,
     unit: "20 мл",
     brand: "sortovi",
     brandName: "Bulagro Енология",
@@ -267,7 +259,7 @@ const WINE_PRODUCTS = [
       { val: 20, label: "1 флакон (20 мл) за 50 литра готова ракия" }
     ],
     packSizes: [
-      { label: "20 мл (за 50 л)", price: 2.20, unit: "€ 2.20 / флакон", default: true }
+      { label: "20 мл (за 50 л)", price: 2.09, unit: "€ 2.20 / флакон", default: true }
     ],
     rating: 4.8,
     reviewsCount: 115,
@@ -279,8 +271,7 @@ const WINE_PRODUCTS = [
     title: "Карамел за оцветяване на ракия (100 мл) – естествен кехлибарен цвят за 100 литра",
     category: "wine",
     categoryName: "Вино & Ракия",
-    price: 2.90,
-    bgnPrice: 5.67,
+    price: 2.75,
     unit: "100 мл",
     brand: "sortovi",
     brandName: "Bulagro Енология",
@@ -299,7 +290,7 @@ const WINE_PRODUCTS = [
       { val: 50, label: "50-100 мл за 100 литра ракия според желания нюанс" }
     ],
     packSizes: [
-      { label: "100 мл (за 100 л)", price: 2.90, unit: "€ 2.90 / 100 мл", default: true }
+      { label: "100 мл (за 100 л)", price: 2.75, unit: "€ 2.90 / 100 мл", default: true }
     ],
     rating: 4.9,
     reviewsCount: 88,
@@ -311,8 +302,7 @@ const WINE_PRODUCTS = [
     title: "Професионален стъклен спиртомер с термометър (0-100 об.%) за измерване на ракия",
     category: "wine",
     categoryName: "Вино & Ракия",
-    price: 7.90,
-    bgnPrice: 15.45,
+    price: 7.50,
     unit: "1 бр.",
     brand: "sortovi",
     brandName: "Enart Instruments",
@@ -331,7 +321,7 @@ const WINE_PRODUCTS = [
       { val: 1, label: "Директно потапяне в стъклена мензура с дестилат" }
     ],
     packSizes: [
-      { label: "1 бр. в тубус", price: 7.90, unit: "€ 7.90 / бр.", default: true }
+      { label: "1 бр. в тубус", price: 7.50, unit: "€ 7.90 / бр.", default: true }
     ],
     rating: 5.0,
     reviewsCount: 130,

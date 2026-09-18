@@ -43,9 +43,7 @@ const IMAGES = {
   ]
 };
 
-const BGN_RATE = 1.95583;
-
-// Raw seed dataset definition for 230 real products
+// Raw seed dataset definition for 230 real products (prices in EUR)
 const PRODUCTS_DEFINITION = [
   // ================= 1. FUNGICIDES (38) =================
   { name: "Луна Кеър ВГ", active: "Флуопирам (50 г/кг) + Фозетил-Al (666 г/кг)", brand: "bayer", brandName: "Bayer Crop Science AG", cat: "fungicides", price: 69.90, unit: "1 кг", crops: ["лозя", "овощни"], form: "ВГ", use: "nonprof", quar: "14 дни", dose: "200-250 г/дка", desc: "Системен фунгицид за контрол на брашнеста мана (оидиум) и струпясване." },
@@ -351,14 +349,15 @@ const ALL_PRODUCTS = PRODUCTS_DEFINITION.map((p, idx) => {
     .replace(/ш/g, 'sh').replace(/щ/g, 'sht').replace(/ъ/g, 'a').replace(/ь/g, 'y')
     .replace(/ю/g, 'yu').replace(/я/g, 'ya');
 
-  const bgnPrice = parseFloat((p.price * BGN_RATE).toFixed(2));
+  // 5% discount on all prices (competitive EUR market pricing)
+  const priceEur = parseFloat((p.price * 0.95).toFixed(2));
 
   // Determine badge
   let badge = "Оригинален";
-  if (p.price > 50) badge = "Премиум Защита";
+  if (priceEur > 50) badge = "Премиум Защита";
   if (p.desc.includes("био") || p.name.includes("БИО")) badge = "100% БИО";
   if (idx % 7 === 0) badge = "Топ Продукт";
-  if (idx % 11 === 0) badge = "Промо -10%";
+  if (idx % 11 === 0) badge = "Промо -5%";
 
   const catNames = {
     fungicides: "Фунгициди",
@@ -378,8 +377,7 @@ const ALL_PRODUCTS = PRODUCTS_DEFINITION.map((p, idx) => {
     title: `${p.name} – ${p.active.split('(')[0].trim()}`,
     category: p.cat,
     categoryName: catNames[p.cat] || "Агроаптека",
-    price: p.price,
-    bgnPrice: bgnPrice,
+    price: priceEur,
     unit: p.unit,
     brand: p.brand,
     brandName: p.brandName,
@@ -399,7 +397,7 @@ const ALL_PRODUCTS = PRODUCTS_DEFINITION.map((p, idx) => {
       { val: 100, label: `Препоръчителна доза: ${p.dose}` }
     ],
     packSizes: [
-      { label: p.unit, price: p.price, unit: `€ ${p.price.toFixed(2)} / ${p.unit}`, default: true }
+      { label: p.unit, price: priceEur, unit: `€ ${priceEur.toFixed(2)} / ${p.unit}`, default: true }
     ],
     rating: parseFloat((4.7 + ((idx * 3) % 4) * 0.1).toFixed(1)),
     reviewsCount: 15 + ((idx * 17) % 85),

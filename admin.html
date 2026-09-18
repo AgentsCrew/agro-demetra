@@ -210,7 +210,7 @@
               </div>
               <div class="flex items-center justify-between">
                 <span class="text-slate-600">Ценова валута:</span>
-                <span class="font-semibold text-slate-900">Двойна: EUR (€) & BGN (лв.) с фиксиран курс 1.95583</span>
+                <span class="font-semibold text-slate-900">Единна валута: EUR (€)</span>
               </div>
             </div>
             <div class="flex items-center gap-2">
@@ -307,7 +307,7 @@
                   <th class="py-3 px-4">Име & Активно вещество</th>
                   <th class="py-3 px-4">Категория</th>
                   <th class="py-3 px-4">Производител</th>
-                  <th class="py-3 px-4">Цена (€ / лв.)</th>
+                  <th class="py-3 px-4">Цена (€)</th>
                   <th class="py-3 px-4">БАБХ Статус</th>
                   <th class="py-3 px-4">Наличност</th>
                   <th class="py-3 px-4 text-right">Действия</th>
@@ -499,12 +499,12 @@
 
           <div>
             <label class="block font-bold text-slate-700 mb-1">Цена в EUR (€):</label>
-            <input type="number" id="editProductPrice" step="0.10" required oninput="syncBgnPrice()" class="w-full px-3 py-2 border rounded-lg font-bold text-slate-900">
+            <input type="number" id="editProductPrice" step="0.10" required class="w-full px-3 py-2 border rounded-lg font-bold text-slate-900">
           </div>
 
           <div>
-            <label class="block font-bold text-slate-700 mb-1">Цена в BGN (лв.):</label>
-            <input type="number" id="editProductBgnPrice" step="0.10" readonly class="w-full bg-slate-100 px-3 py-2 border rounded-lg font-bold text-slate-600">
+            <label class="block font-bold text-slate-700 mb-1">ДДС статус:</label>
+            <input type="text" value="Включен 20% ДДС" readonly class="w-full bg-slate-100 px-3 py-2 border rounded-lg font-semibold text-slate-600">
           </div>
 
           <div>
@@ -581,7 +581,6 @@
               brand: p.brand_id || p.brand,
               brandName: p.brand_name || p.brandName || p.brand,
               price: parseFloat(p.price_eur || p.price || 0),
-              bgnPrice: parseFloat(p.price_bgn || p.bgnPrice || 0),
               unit: p.unit || '1 бр',
               active: p.active_substance || p.active || '',
               quarantine: p.quarantine || '',
@@ -685,7 +684,7 @@
           <td class="py-2.5 px-4 text-slate-600 font-semibold">${p.brandName || p.brand}</td>
           <td class="py-2.5 px-4">
             <div class="font-black text-brand-900">€ ${p.price.toFixed(2)}</div>
-            <div class="text-[10px] text-slate-400">${p.bgnPrice ? p.bgnPrice.toFixed(2) : (p.price * 1.95583).toFixed(2)} лв.</div>
+            <div class="text-[10px] text-slate-400 font-medium">вкл. ДДС</div>
           </td>
           <td class="py-2.5 px-4 font-mono text-[10px] text-slate-600">${p.reg || 'БАБХ'}</td>
           <td class="py-2.5 px-4">
@@ -740,7 +739,6 @@
       document.getElementById('editProductId').value = '';
       document.getElementById('editProductName').value = '';
       document.getElementById('editProductPrice').value = '10.00';
-      document.getElementById('editProductBgnPrice').value = '19.56';
       document.getElementById('editProductUnit').value = '1 кг';
       document.getElementById('editProductReg').value = 'БАБХ: № ';
       document.getElementById('editProductActive').value = '';
@@ -761,7 +759,6 @@
       document.getElementById('editProductCat').value = p.category;
       document.getElementById('editProductBrand').value = p.brand;
       document.getElementById('editProductPrice').value = p.price;
-      document.getElementById('editProductBgnPrice').value = (p.price * 1.95583).toFixed(2);
       document.getElementById('editProductUnit').value = p.unit;
       document.getElementById('editProductReg').value = p.reg || '';
       document.getElementById('editProductActive').value = p.active || '';
@@ -776,11 +773,6 @@
       document.getElementById('productEditModal').classList.add('hidden');
     }
 
-    function syncBgnPrice() {
-      const eur = parseFloat(document.getElementById('editProductPrice').value) || 0;
-      document.getElementById('editProductBgnPrice').value = (eur * 1.95583).toFixed(2);
-    }
-
     async function saveProductModal(e) {
       e.preventDefault();
       const id = document.getElementById('editProductId').value || ('prod-' + Date.now());
@@ -788,7 +780,6 @@
       const cat = document.getElementById('editProductCat').value;
       const brand = document.getElementById('editProductBrand').value;
       const price = parseFloat(document.getElementById('editProductPrice').value) || 0;
-      const bgnPrice = parseFloat(document.getElementById('editProductBgnPrice').value) || (price * 1.95583);
       const unit = document.getElementById('editProductUnit').value;
       const reg = document.getElementById('editProductReg').value;
       const active = document.getElementById('editProductActive').value;
@@ -800,7 +791,7 @@
       const existingIdx = allProducts.findIndex(x => x.id === id);
       const productObj = {
         id, name, title: name, category: cat, categoryName: cat,
-        brand, brandName: brand, price, bgnPrice, unit, reg,
+        brand, brandName: brand, price, unit, reg,
         active, quarantine, image, desc, inStock: true
       };
 
@@ -820,7 +811,7 @@
             'Content-Type': 'application/json'
           },
           body: JSON.stringify({
-            name, price_eur: price, price_bgn: bgnPrice,
+            name, price_eur: price,
             unit, babh_reg: reg, active_substance: active,
             quarantine, image_url: image, description: desc
           })
@@ -919,7 +910,7 @@
                   <div class="font-semibold uppercase text-[10px] text-brand-700">${o.delivery_method}</div>
                   <div class="text-[11px] text-slate-600">${o.delivery_address}</div>
                 </td>
-                <td class="py-3 px-4 font-black text-slate-900">€ ${parseFloat(o.total_eur).toFixed(2)} (${parseFloat(o.total_bgn).toFixed(2)} лв.)</td>
+                <td class="py-3 px-4 font-black text-slate-900">€ ${parseFloat(o.total_eur).toFixed(2)}</td>
                 <td class="py-3 px-4 text-[11px] text-slate-400">${new Date(o.created_at).toLocaleDateString('bg-BG')}</td>
                 <td class="py-3 px-4">
                   <span class="bg-amber-100 text-amber-900 text-[10px] font-bold px-2 py-0.5 rounded-full">${o.status}</span>

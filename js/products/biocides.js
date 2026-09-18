@@ -11,8 +11,7 @@ const BIOCIDES = [
     title: "Айкън 10 КС – микрокапсулован инсектицид срещу хлебарки, бълхи и дървеници",
     category: "biocides",
     categoryName: "Биоциди & ДДД",
-    price: 5.80,
-    bgnPrice: 11.34,
+    price: 5.51,
     unit: "20 мл",
     brand: "syngenta",
     brandName: "Syngenta Professional Solutions",
@@ -32,9 +31,9 @@ const BIOCIDES = [
       { val: 10, label: "10 мл в 5 л вода (Комари и кърлежи по тревни площи)" }
     ],
     packSizes: [
-      { label: "20 мл", price: 5.80, unit: "€ 5.80 / 20 мл", default: true },
-      { label: "100 мл", price: 19.50, unit: "€ 19.50 / 100 мл" },
-      { label: "1 л", price: 92.00, unit: "€ 92.00 / 1 л" }
+      { label: "20 мл", price: 5.51, unit: "€ 5.80 / 20 мл", default: true },
+      { label: "100 мл", price: 18.52, unit: "€ 19.50 / 100 мл" },
+      { label: "1 л", price: 87.40, unit: "€ 92.00 / 1 л" }
     ],
     rating: 5.0,
     reviewsCount: 112,
@@ -46,8 +45,7 @@ const BIOCIDES = [
     title: "Фендона 60 СК – високоефективен препарат срещу насекоми с алфа-циперметрин",
     category: "biocides",
     categoryName: "Биоциди & ДДД",
-    price: 6.40,
-    bgnPrice: 12.52,
+    price: 6.08,
     unit: "25 мл",
     brand: "basf",
     brandName: "BASF SE (Германия)",
@@ -66,9 +64,9 @@ const BIOCIDES = [
       { val: 25, label: "25 мл в 5 л вода (За площ от 100 кв.м)" }
     ],
     packSizes: [
-      { label: "25 мл", price: 6.40, unit: "€ 6.40 / 25 мл", default: true },
-      { label: "100 мл", price: 16.90, unit: "€ 16.90 / 100 мл" },
-      { label: "1 л", price: 79.00, unit: "€ 79.00 / 1 л" }
+      { label: "25 мл", price: 6.08, unit: "€ 6.40 / 25 мл", default: true },
+      { label: "100 мл", price: 16.05, unit: "€ 16.90 / 100 мл" },
+      { label: "1 л", price: 75.05, unit: "€ 79.00 / 1 л" }
     ],
     rating: 4.9,
     reviewsCount: 74,
@@ -80,8 +78,7 @@ const BIOCIDES = [
     title: "Лиматак гранули – срещу голи охлюви и слюнчени червеи в градината",
     category: "biocides",
     categoryName: "Биоциди & ДДД",
-    price: 4.80,
-    bgnPrice: 9.39,
+    price: 4.56,
     unit: "200 г",
     brand: "corteva",
     brandName: "De Sangosse / Агрия",
@@ -100,9 +97,9 @@ const BIOCIDES = [
       { val: 300, label: "300-500 г/дка (Поръсване между редовете и лехите)" }
     ],
     packSizes: [
-      { label: "200 г", price: 4.80, unit: "€ 4.80 / 200 г", default: true },
-      { label: "1 кг", price: 16.50, unit: "€ 16.50 / 1 кг" },
-      { label: "5 кг", price: 68.00, unit: "€ 13.60 / кг" }
+      { label: "200 г", price: 4.56, unit: "€ 4.80 / 200 г", default: true },
+      { label: "1 кг", price: 15.67, unit: "€ 16.50 / 1 кг" },
+      { label: "5 кг", price: 64.60, unit: "€ 13.60 / кг" }
     ],
     rating: 4.9,
     reviewsCount: 83,
@@ -114,8 +111,7 @@ const BIOCIDES = [
     title: "Ферамол – биопрепарат срещу голи охлюви с железен фосфат",
     category: "biocides",
     categoryName: "Биоциди & ДДД",
-    price: 8.90,
-    bgnPrice: 17.41,
+    price: 8.46,
     unit: "500 г",
     brand: "amitica",
     brandName: "Neudorff (Германия) / Амитица",
@@ -134,8 +130,8 @@ const BIOCIDES = [
       { val: 500, label: "500 г/дка (Разпръскване около растенията)" }
     ],
     packSizes: [
-      { label: "500 г", price: 8.90, unit: "€ 8.90 / 500 г", default: true },
-      { label: "1 кг", price: 15.90, unit: "€ 15.90 / 1 кг" }
+      { label: "500 г", price: 8.46, unit: "€ 8.90 / 500 г", default: true },
+      { label: "1 кг", price: 15.11, unit: "€ 15.90 / 1 кг" }
     ],
     rating: 5.0,
     reviewsCount: 49,
@@ -147,8 +143,7 @@ const BIOCIDES = [
     title: "Ратимор – водоустойчива примамка срещу плъхове и мишки с бромадиолон",
     category: "biocides",
     categoryName: "Биоциди & ДДД",
-    price: 4.50,
-    bgnPrice: 8.80,
+    price: 4.27,
     unit: "300 г",
     brand: "manica",
     brandName: "Unichem (Словения)",
@@ -168,9 +163,9 @@ const BIOCIDES = [
       { val: 60, label: "60-100 г на точка за плъхове" }
     ],
     packSizes: [
-      { label: "300 г", price: 4.50, unit: "€ 4.50 / 300 г", default: true },
-      { label: "1 кг", price: 12.80, unit: "€ 12.80 / 1 кг" },
-      { label: "5 кг", price: 45.00, unit: "€ 9.00 / кг" }
+      { label: "300 г", price: 4.27, unit: "€ 4.50 / 300 г", default: true },
+      { label: "1 кг", price: 12.16, unit: "€ 12.80 / 1 кг" },
+      { label: "5 кг", price: 42.75, unit: "€ 9.00 / кг" }
     ],
     rating: 4.9,
     reviewsCount: 61,
@@ -182,8 +177,7 @@ const BIOCIDES = [
     title: "Homevo срещу дървеници – 100% натурален прах от диатомитна пръст",
     category: "biocides",
     categoryName: "Биоциди & ДДД",
-    price: 3.32,
-    bgnPrice: 6.49,
+    price: 3.15,
     unit: "50 г",
     brand: "amitica",
     brandName: "Homevo Natural Solutions",
@@ -202,8 +196,8 @@ const BIOCIDES = [
       { val: 1, label: "Напудряне по шевовете на матрака и под леглата" }
     ],
     packSizes: [
-      { label: "50 г", price: 3.32, unit: "€ 3.32 / 50 г", default: true },
-      { label: "100 г", price: 5.50, unit: "€ 5.50 / 100 г" }
+      { label: "50 г", price: 3.15, unit: "€ 3.32 / 50 г", default: true },
+      { label: "100 г", price: 5.22, unit: "€ 5.50 / 100 г" }
     ],
     rating: 4.8,
     reviewsCount: 37,
@@ -215,8 +209,7 @@ const BIOCIDES = [
     title: "Homevo срещу кокошинки – биологична пудра за птици и курници",
     category: "biocides",
     categoryName: "Биоциди & ДДД",
-    price: 3.60,
-    bgnPrice: 7.04,
+    price: 3.42,
     unit: "100 г",
     brand: "amitica",
     brandName: "Homevo Natural Solutions",
@@ -235,8 +228,8 @@ const BIOCIDES = [
       { val: 1, label: "Опрашване на пода, гнездата и перата на птиците" }
     ],
     packSizes: [
-      { label: "100 г", price: 3.60, unit: "€ 3.60 / 100 г", default: true },
-      { label: "1 кг", price: 18.00, unit: "€ 18.00 / 1 кг" }
+      { label: "100 г", price: 3.42, unit: "€ 3.60 / 100 г", default: true },
+      { label: "1 кг", price: 17.10, unit: "€ 18.00 / 1 кг" }
     ],
     rating: 4.9,
     reviewsCount: 42,
@@ -248,8 +241,7 @@ const BIOCIDES = [
     title: "Натуралис – биоинсектицид с гъбата Beauveria bassiana",
     category: "biocides",
     categoryName: "Биоциди & ДДД",
-    price: 18.50,
-    bgnPrice: 36.18,
+    price: 17.57,
     unit: "250 мл",
     brand: "amitica",
     brandName: "Biogard / Амитица",
@@ -268,8 +260,8 @@ const BIOCIDES = [
       { val: 100, label: "100-150 мл/дка (Белокрилка, трипс, червен паяк)" }
     ],
     packSizes: [
-      { label: "250 мл", price: 18.50, unit: "€ 18.50 / 250 мл", default: true },
-      { label: "1 л", price: 58.00, unit: "€ 58.00 / 1 л" }
+      { label: "250 мл", price: 17.57, unit: "€ 18.50 / 250 мл", default: true },
+      { label: "1 л", price: 55.10, unit: "€ 58.00 / 1 л" }
     ],
     rating: 4.9,
     reviewsCount: 29,
@@ -281,8 +273,7 @@ const BIOCIDES = [
     title: "Нематекс – натурален микробиален препарат срещу почвени нематоди",
     category: "biocides",
     categoryName: "Биоциди & ДДД",
-    price: 9.00,
-    bgnPrice: 17.60,
+    price: 8.55,
     unit: "500 г",
     brand: "amitica",
     brandName: "Bulagro / Амитица",
@@ -301,8 +292,8 @@ const BIOCIDES = [
       { val: 2000, label: "2-3 кг/дка (Внасяне при фрезоване на почвата)" }
     ],
     packSizes: [
-      { label: "500 г", price: 9.00, unit: "€ 9.00 / 500 г", default: true },
-      { label: "5 кг", price: 65.00, unit: "€ 13.00 / кг" }
+      { label: "500 г", price: 8.55, unit: "€ 9.00 / 500 г", default: true },
+      { label: "5 кг", price: 61.75, unit: "€ 13.00 / кг" }
     ],
     rating: 4.8,
     reviewsCount: 23,
@@ -314,8 +305,7 @@ const BIOCIDES = [
     title: "Пиретро Натура – натурален пиретрин от далматинска хризантема",
     category: "biocides",
     categoryName: "Биоциди & ДДД",
-    price: 14.50,
-    bgnPrice: 28.36,
+    price: 13.77,
     unit: "100 мл",
     brand: "amitica",
     brandName: "Biogard / Амитица",
@@ -334,8 +324,8 @@ const BIOCIDES = [
       { val: 75, label: "75-100 мл/дка (Листни въшки, цикади, трипси)" }
     ],
     packSizes: [
-      { label: "100 мл", price: 14.50, unit: "€ 14.50 / 100 мл", default: true },
-      { label: "1 л", price: 89.00, unit: "€ 89.00 / 1 л" }
+      { label: "100 мл", price: 13.77, unit: "€ 14.50 / 100 мл", default: true },
+      { label: "1 л", price: 84.55, unit: "€ 89.00 / 1 л" }
     ],
     rating: 4.9,
     reviewsCount: 31,

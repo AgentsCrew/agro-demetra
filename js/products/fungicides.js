@@ -11,8 +11,7 @@ const FUNGICIDES = [
     title: "Луна Кеър ВГ – системен фунгицид с флуопирам и фозетил-Al",
     category: "fungicides",
     categoryName: "Фунгициди",
-    price: 69.90,
-    bgnPrice: 136.71,
+    price: 66.41,
     unit: "1 кг",
     brand: "bayer",
     brandName: "Bayer Crop Science AG",
@@ -32,8 +31,8 @@ const FUNGICIDES = [
       { val: 250, label: "250 г/дка (Струпясване и бактериален пригор при семкови)" }
     ],
     packSizes: [
-      { label: "100 г", price: 9.80, unit: "€ 9.80 / 100 г" },
-      { label: "1 кг", price: 69.90, unit: "€ 69.90 / 1 кг", default: true }
+      { label: "100 г", price: 9.31, unit: "€ 9.80 / 100 г" },
+      { label: "1 кг", price: 66.41, unit: "€ 69.90 / 1 кг", default: true }
     ],
     rating: 4.9,
     reviewsCount: 42,
@@ -45,8 +44,7 @@ const FUNGICIDES = [
     title: "Луна Експириънс СК – системен фунгицид с флуопирам и тебуконазол",
     category: "fungicides",
     categoryName: "Фунгициди",
-    price: 74.50,
-    bgnPrice: 145.71,
+    price: 70.77,
     unit: "1 л",
     brand: "bayer",
     brandName: "Bayer Crop Science AG",
@@ -66,8 +64,8 @@ const FUNGICIDES = [
       { val: 60, label: "60 мл/дка (Кафяво гниене по костилкови)" }
     ],
     packSizes: [
-      { label: "100 мл", price: 11.20, unit: "€ 11.20 / 100 мл" },
-      { label: "1 л", price: 74.50, unit: "€ 74.50 / 1 л", default: true }
+      { label: "100 мл", price: 10.64, unit: "€ 11.20 / 100 мл" },
+      { label: "1 л", price: 70.77, unit: "€ 74.50 / 1 л", default: true }
     ],
     rating: 4.9,
     reviewsCount: 38,
@@ -79,8 +77,7 @@ const FUNGICIDES = [
     title: "Скор 250 ЕК – системен триазолов фунгицид с дифеноконазол",
     category: "fungicides",
     categoryName: "Фунгициди",
-    price: 5.60,
-    bgnPrice: 10.95,
+    price: 5.32,
     unit: "20 мл",
     brand: "syngenta",
     brandName: "Syngenta Crop Protection AG",
@@ -100,9 +97,9 @@ const FUNGICIDES = [
       { val: 30, label: "30 мл/дка (Брашнеста мана)" }
     ],
     packSizes: [
-      { label: "20 мл", price: 5.60, unit: "€ 5.60 / 20 мл", default: true },
-      { label: "250 мл", price: 42.00, unit: "€ 42.00 / 250 мл" },
-      { label: "1 л", price: 148.00, unit: "€ 148.00 / 1 л" }
+      { label: "20 мл", price: 5.32, unit: "€ 5.60 / 20 мл", default: true },
+      { label: "250 мл", price: 39.90, unit: "€ 42.00 / 250 мл" },
+      { label: "1 л", price: 140.60, unit: "€ 148.00 / 1 л" }
     ],
     rating: 4.9,
     reviewsCount: 56,
@@ -114,8 +111,7 @@ const FUNGICIDES = [
     title: "Топаз 100 ЕК – фунгицид с газово действие с пенконазол",
     category: "fungicides",
     categoryName: "Фунгициди",
-    price: 3.80,
-    bgnPrice: 7.43,
+    price: 3.61,
     unit: "10 мл",
     brand: "syngenta",
     brandName: "Syngenta Crop Protection AG",
@@ -135,9 +131,9 @@ const FUNGICIDES = [
       { val: 40, label: "40 мл/дка (Брашнеста мана по праскови)" }
     ],
     packSizes: [
-      { label: "10 мл", price: 3.80, unit: "€ 3.80 / 10 мл", default: true },
-      { label: "100 мл", price: 18.50, unit: "€ 18.50 / 100 мл" },
-      { label: "1 л", price: 82.00, unit: "€ 82.00 / 1 л" }
+      { label: "10 мл", price: 3.61, unit: "€ 3.80 / 10 мл", default: true },
+      { label: "100 мл", price: 17.57, unit: "€ 18.50 / 100 мл" },
+      { label: "1 л", price: 77.90, unit: "€ 82.00 / 1 л" }
     ],
     rating: 4.8,
     reviewsCount: 31,
@@ -149,8 +145,7 @@ const FUNGICIDES = [
     title: "Шавит Ф 72 ВДГ – контактно-системен фунгицид с фолпет и триадименол",
     category: "fungicides",
     categoryName: "Фунгициди",
-    price: 18.40,
-    bgnPrice: 35.99,
+    price: 17.48,
     unit: "1 кг",
     brand: "adama",
     brandName: "ADAMA Agricultural Solutions",
@@ -170,8 +165,8 @@ const FUNGICIDES = [
       { val: 200, label: "200 г/дка (Струпясване и брашнеста мана по ябълка)" }
     ],
     packSizes: [
-      { label: "100 г", price: 2.90, unit: "€ 2.90 / 100 г" },
-      { label: "1 кг", price: 18.40, unit: "€ 18.40 / 1 кг", default: true }
+      { label: "100 г", price: 2.75, unit: "€ 2.90 / 100 г" },
+      { label: "1 кг", price: 17.48, unit: "€ 18.40 / 1 кг", default: true }
     ],
     rating: 4.9,
     reviewsCount: 64,
@@ -183,8 +178,7 @@ const FUNGICIDES = [
     title: "Ридомил Голд Р ВГ – системен фунгицид с мефеноксам и меден оксихлорид",
     category: "fungicides",
     categoryName: "Фунгициди",
-    price: 38.50,
-    bgnPrice: 75.30,
+    price: 36.57,
     unit: "1 кг",
     brand: "syngenta",
     brandName: "Syngenta Crop Protection AG",
@@ -204,9 +198,9 @@ const FUNGICIDES = [
       { val: 500, label: "500 г/дка (Картофена мана по картофи и домати)" }
     ],
     packSizes: [
-      { label: "250 г", price: 11.50, unit: "€ 11.50 / 250 г" },
-      { label: "1 кг", price: 38.50, unit: "€ 38.50 / 1 кг", default: true },
-      { label: "5 кг", price: 175.00, unit: "€ 35.00 / кг" }
+      { label: "250 г", price: 10.92, unit: "€ 11.50 / 250 г" },
+      { label: "1 кг", price: 36.57, unit: "€ 38.50 / 1 кг", default: true },
+      { label: "5 кг", price: 166.25, unit: "€ 35.00 / кг" }
     ],
     rating: 5.0,
     reviewsCount: 78,
@@ -218,8 +212,7 @@ const FUNGICIDES = [
     title: "Куадрис 25 СК – стробилуринов фунгицид с азоксистробин",
     category: "fungicides",
     categoryName: "Фунгициди",
-    price: 48.00,
-    bgnPrice: 93.88,
+    price: 45.60,
     unit: "1 л",
     brand: "syngenta",
     brandName: "Syngenta Crop Protection AG",
@@ -239,9 +232,9 @@ const FUNGICIDES = [
       { val: 80, label: "80-100 мл/дка (Алтернария и фитофтора по домати)" }
     ],
     packSizes: [
-      { label: "20 мл", price: 2.80, unit: "€ 2.80 / 20 мл" },
-      { label: "100 мл", price: 8.90, unit: "€ 8.90 / 100 мл" },
-      { label: "1 л", price: 48.00, unit: "€ 48.00 / 1 л", default: true }
+      { label: "20 мл", price: 2.66, unit: "€ 2.80 / 20 мл" },
+      { label: "100 мл", price: 8.46, unit: "€ 8.90 / 100 мл" },
+      { label: "1 л", price: 45.60, unit: "€ 48.00 / 1 л", default: true }
     ],
     rating: 4.8,
     reviewsCount: 45,
@@ -253,8 +246,7 @@ const FUNGICIDES = [
     title: "Бордолезов разтвор 20 ВП – неутрализиран меден сулфат",
     category: "fungicides",
     categoryName: "Фунгициди",
-    price: 8.20,
-    bgnPrice: 16.04,
+    price: 7.79,
     unit: "1 кг",
     brand: "manica",
     brandName: "Manica SpA (Италия)",
@@ -274,9 +266,9 @@ const FUNGICIDES = [
       { val: 750, label: "0.75% (750 г / 100 л вода през вегетацията)" }
     ],
     packSizes: [
-      { label: "1 кг", price: 8.20, unit: "€ 8.20 / 1 кг", default: true },
-      { label: "5 кг", price: 36.00, unit: "€ 7.20 / кг" },
-      { label: "25 кг", price: 165.00, unit: "€ 6.60 / кг" }
+      { label: "1 кг", price: 7.79, unit: "€ 8.20 / 1 кг", default: true },
+      { label: "5 кг", price: 34.20, unit: "€ 7.20 / кг" },
+      { label: "25 кг", price: 156.75, unit: "€ 6.60 / кг" }
     ],
     rating: 4.9,
     reviewsCount: 89,
@@ -288,8 +280,7 @@ const FUNGICIDES = [
     title: "Дитан М-45 ВП – контактен фунгицид с манкозеб 80%",
     category: "fungicides",
     categoryName: "Фунгициди",
-    price: 13.50,
-    bgnPrice: 26.40,
+    price: 12.82,
     unit: "1 кг",
     brand: "corteva",
     brandName: "Corteva Agriscience",
@@ -309,8 +300,8 @@ const FUNGICIDES = [
       { val: 200, label: "200 г/дка (Картофена мана)" }
     ],
     packSizes: [
-      { label: "250 г", price: 4.20, unit: "€ 4.20 / 250 г" },
-      { label: "1 кг", price: 13.50, unit: "€ 13.50 / 1 кг", default: true }
+      { label: "250 г", price: 3.99, unit: "€ 4.20 / 250 г" },
+      { label: "1 кг", price: 12.82, unit: "€ 13.50 / 1 кг", default: true }
     ],
     rating: 4.8,
     reviewsCount: 39,
@@ -322,8 +313,7 @@ const FUNGICIDES = [
     title: "Кабрио Топ ВГ – комбиниран фунгицид с метирам и пираклостробин",
     category: "fungicides",
     categoryName: "Фунгициди",
-    price: 49.90,
-    bgnPrice: 97.60,
+    price: 47.40,
     unit: "1 кг",
     brand: "basf",
     brandName: "BASF SE (Германия)",
@@ -342,8 +332,8 @@ const FUNGICIDES = [
       { val: 200, label: "150-200 г/дка (Мана, оидиум и сиво гниене)" }
     ],
     packSizes: [
-      { label: "200 г", price: 12.50, unit: "€ 12.50 / 200 г" },
-      { label: "1 кг", price: 49.90, unit: "€ 49.90 / 1 кг", default: true }
+      { label: "200 г", price: 11.88, unit: "€ 12.50 / 200 г" },
+      { label: "1 кг", price: 47.40, unit: "€ 49.90 / 1 кг", default: true }
     ],
     rating: 4.9,
     reviewsCount: 52,
@@ -355,8 +345,7 @@ const FUNGICIDES = [
     title: "Флинт Макс 75 ВГ – трифлоксистробин и тебуконазол за лозя и овощни",
     category: "fungicides",
     categoryName: "Фунгициди",
-    price: 36.50,
-    bgnPrice: 71.39,
+    price: 34.67,
     unit: "500 г",
     brand: "bayer",
     brandName: "Bayer Crop Science AG",
@@ -376,8 +365,8 @@ const FUNGICIDES = [
       { val: 20, label: "20 г/дка (Струпясване и брашнеста мана)" }
     ],
     packSizes: [
-      { label: "50 г", price: 5.40, unit: "€ 5.40 / 50 г" },
-      { label: "500 г", price: 36.50, unit: "€ 36.50 / 500 г", default: true }
+      { label: "50 г", price: 5.13, unit: "€ 5.40 / 50 г" },
+      { label: "500 г", price: 34.67, unit: "€ 36.50 / 500 г", default: true }
     ],
     rating: 4.8,
     reviewsCount: 27,
@@ -389,8 +378,7 @@ const FUNGICIDES = [
     title: "Суич 62.5 ВГ – специализиран фунгицид срещу сиво гниене",
     category: "fungicides",
     categoryName: "Фунгициди",
-    price: 16.90,
-    bgnPrice: 33.05,
+    price: 16.05,
     unit: "100 г",
     brand: "syngenta",
     brandName: "Syngenta Crop Protection AG",
@@ -410,9 +398,9 @@ const FUNGICIDES = [
       { val: 80, label: "80 г/дка (Бяло гниене Sclerotinia)" }
     ],
     packSizes: [
-      { label: "10 г", price: 2.70, unit: "€ 2.70 / 10 г" },
-      { label: "100 г", price: 16.90, unit: "€ 16.90 / 100 г", default: true },
-      { label: "1 кг", price: 142.00, unit: "€ 142.00 / 1 кг" }
+      { label: "10 г", price: 2.56, unit: "€ 2.70 / 10 г" },
+      { label: "100 г", price: 16.05, unit: "€ 16.90 / 100 г", default: true },
+      { label: "1 кг", price: 134.90, unit: "€ 142.00 / 1 кг" }
     ],
     rating: 5.0,
     reviewsCount: 71,
@@ -424,8 +412,7 @@ const FUNGICIDES = [
     title: "Серкадис СК – иновативен фунгицид с активно вещество Xemium",
     category: "fungicides",
     categoryName: "Фунгициди",
-    price: 88.00,
-    bgnPrice: 172.11,
+    price: 83.60,
     unit: "1 л",
     brand: "basf",
     brandName: "BASF SE (Германия)",
@@ -444,7 +431,7 @@ const FUNGICIDES = [
       { val: 25, label: "25-30 мл/дка (Струпясване и оидиум)" }
     ],
     packSizes: [
-      { label: "1 л", price: 88.00, unit: "€ 88.00 / 1 л", default: true }
+      { label: "1 л", price: 83.60, unit: "€ 88.00 / 1 л", default: true }
     ],
     rating: 4.9,
     reviewsCount: 19,
@@ -456,8 +443,7 @@ const FUNGICIDES = [
     title: "Белис ВГ – боскалид и пираклостробин за съхранение на ябълки",
     category: "fungicides",
     categoryName: "Фунгициди",
-    price: 64.00,
-    bgnPrice: 125.17,
+    price: 60.80,
     unit: "1 кг",
     brand: "basf",
     brandName: "BASF SE (Германия)",
@@ -476,7 +462,7 @@ const FUNGICIDES = [
       { val: 80, label: "80 г/дка (Струпясване, брашнеста мана и гниене при съхранение)" }
     ],
     packSizes: [
-      { label: "1 кг", price: 64.00, unit: "€ 64.00 / 1 кг", default: true }
+      { label: "1 кг", price: 60.80, unit: "€ 64.00 / 1 кг", default: true }
     ],
     rating: 4.8,
     reviewsCount: 22,
@@ -488,8 +474,7 @@ const FUNGICIDES = [
     title: "Инфинито СК – системен фунгицид с флуопиколид и пропамокарб",
     category: "fungicides",
     categoryName: "Фунгициди",
-    price: 43.50,
-    bgnPrice: 85.08,
+    price: 41.32,
     unit: "1 л",
     brand: "bayer",
     brandName: "Bayer Crop Science AG",
@@ -509,8 +494,8 @@ const FUNGICIDES = [
       { val: 140, label: "140 мл/дка (Кубинска мана по краставици)" }
     ],
     packSizes: [
-      { label: "100 мл", price: 6.90, unit: "€ 6.90 / 100 мл" },
-      { label: "1 л", price: 43.50, unit: "€ 43.50 / 1 л", default: true }
+      { label: "100 мл", price: 6.55, unit: "€ 6.90 / 100 мл" },
+      { label: "1 л", price: 41.32, unit: "€ 43.50 / 1 л", default: true }
     ],
     rating: 4.9,
     reviewsCount: 35,
@@ -522,8 +507,7 @@ const FUNGICIDES = [
     title: "Ревус 250 СК – локал-системен фунгицид с мандипропамид",
     category: "fungicides",
     categoryName: "Фунгициди",
-    price: 52.00,
-    bgnPrice: 101.70,
+    price: 49.40,
     unit: "1 л",
     brand: "syngenta",
     brandName: "Syngenta Crop Protection AG",
@@ -542,8 +526,8 @@ const FUNGICIDES = [
       { val: 50, label: "50-60 мл/дка (Мана по картофи и домати)" }
     ],
     packSizes: [
-      { label: "250 мл", price: 16.50, unit: "€ 16.50 / 250 мл" },
-      { label: "1 л", price: 52.00, unit: "€ 52.00 / 1 л", default: true }
+      { label: "250 мл", price: 15.67, unit: "€ 16.50 / 250 мл" },
+      { label: "1 л", price: 49.40, unit: "€ 52.00 / 1 л", default: true }
     ],
     rating: 4.8,
     reviewsCount: 29,
@@ -555,8 +539,7 @@ const FUNGICIDES = [
     title: "Косайд 2000 ВГ – биосъвместим меден хидроксид 53.8%",
     category: "fungicides",
     categoryName: "Фунгициди",
-    price: 24.80,
-    bgnPrice: 48.50,
+    price: 23.56,
     unit: "1 кг",
     brand: "corteva",
     brandName: "Corteva Agriscience",
@@ -576,8 +559,8 @@ const FUNGICIDES = [
       { val: 200, label: "200-250 г/дка (Овощни дървета при набъбване на пъпките)" }
     ],
     packSizes: [
-      { label: "1 кг", price: 24.80, unit: "€ 24.80 / 1 кг", default: true },
-      { label: "5 кг", price: 112.00, unit: "€ 22.40 / кг" }
+      { label: "1 кг", price: 23.56, unit: "€ 24.80 / 1 кг", default: true },
+      { label: "5 кг", price: 106.40, unit: "€ 22.40 / кг" }
     ],
     rating: 4.9,
     reviewsCount: 47,
@@ -589,8 +572,7 @@ const FUNGICIDES = [
     title: "Фунгуран ОН 50 ВП – контактен меден фунгицид с меден хидроксид",
     category: "fungicides",
     categoryName: "Фунгициди",
-    price: 19.90,
-    bgnPrice: 38.92,
+    price: 18.90,
     unit: "1 кг",
     brand: "manica",
     brandName: "Spiess Urania / Manica",
@@ -610,8 +592,8 @@ const FUNGICIDES = [
       { val: 250, label: "250 г/дка (Зимно пръскане на овощни)" }
     ],
     packSizes: [
-      { label: "150 г", price: 3.90, unit: "€ 3.90 / 150 г" },
-      { label: "1 кг", price: 19.90, unit: "€ 19.90 / 1 кг", default: true }
+      { label: "150 г", price: 3.70, unit: "€ 3.90 / 150 г" },
+      { label: "1 кг", price: 18.90, unit: "€ 19.90 / 1 кг", default: true }
     ],
     rating: 4.8,
     reviewsCount: 33,
@@ -623,8 +605,7 @@ const FUNGICIDES = [
     title: "Шампион 50 ВП – контактен меден фунгицид (Меден хидроксид 77%)",
     category: "fungicides",
     categoryName: "Фунгициди",
-    price: 18.20,
-    bgnPrice: 35.60,
+    price: 17.29,
     unit: "1 кг",
     brand: "manica",
     brandName: "Nufarm / Manica",
@@ -644,8 +625,8 @@ const FUNGICIDES = [
       { val: 300, label: "300 г/дка (Къдравост по прасковата)" }
     ],
     packSizes: [
-      { label: "150 г", price: 3.50, unit: "€ 3.50 / 150 г" },
-      { label: "1 кг", price: 18.20, unit: "€ 18.20 / 1 кг", default: true }
+      { label: "150 г", price: 3.32, unit: "€ 3.50 / 150 г" },
+      { label: "1 кг", price: 17.29, unit: "€ 18.20 / 1 кг", default: true }
     ],
     rating: 4.9,
     reviewsCount: 40,
@@ -657,8 +638,7 @@ const FUNGICIDES = [
     title: "Витисан – контактен биофунгицид с калиев хидроген карбонат",
     category: "fungicides",
     categoryName: "Фунгициди",
-    price: 11.90,
-    bgnPrice: 23.27,
+    price: 11.30,
     unit: "1 кг",
     brand: "amitica",
     brandName: "Andermatt Biocontrol / Амитица",
@@ -677,8 +657,8 @@ const FUNGICIDES = [
       { val: 500, label: "500-1000 г/дка (Оидиум и сиво гниене)" }
     ],
     packSizes: [
-      { label: "1 кг", price: 11.90, unit: "€ 11.90 / 1 кг", default: true },
-      { label: "5 кг", price: 52.00, unit: "€ 10.40 / кг" }
+      { label: "1 кг", price: 11.30, unit: "€ 11.90 / 1 кг", default: true },
+      { label: "5 кг", price: 49.40, unit: "€ 10.40 / кг" }
     ],
     rating: 4.9,
     reviewsCount: 36,
@@ -690,8 +670,7 @@ const FUNGICIDES = [
     title: "Мелоди Компакт 49 ВГ – ипроваликарб с меден оксихлорид",
     category: "fungicides",
     categoryName: "Фунгициди",
-    price: 28.50,
-    bgnPrice: 55.74,
+    price: 27.07,
     unit: "1 кг",
     brand: "bayer",
     brandName: "Bayer Crop Science AG",
@@ -710,8 +689,8 @@ const FUNGICIDES = [
       { val: 150, label: "150-175 г/дка (Мана по лозя и домати)" }
     ],
     packSizes: [
-      { label: "150 г", price: 5.80, unit: "€ 5.80 / 150 г" },
-      { label: "1 кг", price: 28.50, unit: "€ 28.50 / 1 кг", default: true }
+      { label: "150 г", price: 5.51, unit: "€ 5.80 / 150 г" },
+      { label: "1 кг", price: 27.07, unit: "€ 28.50 / 1 кг", default: true }
     ],
     rating: 4.8,
     reviewsCount: 25,
@@ -723,8 +702,7 @@ const FUNGICIDES = [
     title: "Кантус ВГ – боскалид срещу сиво гниене по гроздето",
     category: "fungicides",
     categoryName: "Фунгициди",
-    price: 72.00,
-    bgnPrice: 140.82,
+    price: 68.40,
     unit: "1 кг",
     brand: "basf",
     brandName: "BASF SE (Германия)",
@@ -743,8 +721,8 @@ const FUNGICIDES = [
       { val: 100, label: "100-120 г/дка (Сиво гниене при оформяне и узряване на грозда)" }
     ],
     packSizes: [
-      { label: "100 г", price: 9.90, unit: "€ 9.90 / 100 г" },
-      { label: "1 кг", price: 72.00, unit: "€ 72.00 / 1 кг", default: true }
+      { label: "100 г", price: 9.40, unit: "€ 9.90 / 100 г" },
+      { label: "1 кг", price: 68.40, unit: "€ 72.00 / 1 кг", default: true }
     ],
     rating: 4.9,
     reviewsCount: 18,
@@ -756,8 +734,7 @@ const FUNGICIDES = [
     title: "Скала СК – фунгицид с пириметанил за лозя и овощни",
     category: "fungicides",
     categoryName: "Фунгициди",
-    price: 54.00,
-    bgnPrice: 105.61,
+    price: 51.30,
     unit: "1 л",
     brand: "basf",
     brandName: "BASF SE (Германия)",
@@ -776,7 +753,7 @@ const FUNGICIDES = [
       { val: 150, label: "150-200 мл/дка (Сиво гниене и струпясване)" }
     ],
     packSizes: [
-      { label: "1 л", price: 54.00, unit: "€ 54.00 / 1 л", default: true }
+      { label: "1 л", price: 51.30, unit: "€ 54.00 / 1 л", default: true }
     ],
     rating: 4.8,
     reviewsCount: 20,
@@ -788,8 +765,7 @@ const FUNGICIDES = [
     title: "Систан Екозом ЕВ – системен фунгицид с миклобутанил 20%",
     category: "fungicides",
     categoryName: "Фунгициди",
-    price: 8.50,
-    bgnPrice: 16.62,
+    price: 8.07,
     unit: "50 мл",
     brand: "corteva",
     brandName: "Corteva Agriscience",
@@ -809,8 +785,8 @@ const FUNGICIDES = [
       { val: 30, label: "30 мл/дка (Брашнеста мана по рози и зеленчуци)" }
     ],
     packSizes: [
-      { label: "50 мл", price: 8.50, unit: "€ 8.50 / 50 мл", default: true },
-      { label: "1 л", price: 89.00, unit: "€ 89.00 / 1 л" }
+      { label: "50 мл", price: 8.07, unit: "€ 8.50 / 50 мл", default: true },
+      { label: "1 л", price: 84.55, unit: "€ 89.00 / 1 л" }
     ],
     rating: 4.9,
     reviewsCount: 34,
@@ -822,8 +798,7 @@ const FUNGICIDES = [
     title: "Тиовит Джет 80 ВГ – микронизирана сяра с акарицидно действие",
     category: "fungicides",
     categoryName: "Фунгициди",
-    price: 4.50,
-    bgnPrice: 8.80,
+    price: 4.27,
     unit: "1 кг",
     brand: "syngenta",
     brandName: "Syngenta Crop Protection AG",
@@ -843,9 +818,9 @@ const FUNGICIDES = [
       { val: 600, label: "600 г/дка (При силно нападение и акари)" }
     ],
     packSizes: [
-      { label: "1 кг", price: 4.50, unit: "€ 4.50 / 1 кг", default: true },
-      { label: "5 кг", price: 19.50, unit: "€ 3.90 / кг" },
-      { label: "25 кг", price: 79.00, unit: "€ 3.16 / кг" }
+      { label: "1 кг", price: 4.27, unit: "€ 4.50 / 1 кг", default: true },
+      { label: "5 кг", price: 18.52, unit: "€ 3.90 / кг" },
+      { label: "25 кг", price: 75.05, unit: "€ 3.16 / кг" }
     ],
     rating: 4.9,
     reviewsCount: 63,
@@ -857,8 +832,7 @@ const FUNGICIDES = [
     title: "Кумулус ДФ – чиста колоидна сяра 80% от BASF",
     category: "fungicides",
     categoryName: "Фунгициди",
-    price: 4.60,
-    bgnPrice: 9.00,
+    price: 4.37,
     unit: "1 кг",
     brand: "basf",
     brandName: "BASF SE (Германия)",
@@ -877,8 +851,8 @@ const FUNGICIDES = [
       { val: 300, label: "300-500 г/дка (Оидиум по лозя)" }
     ],
     packSizes: [
-      { label: "1 кг", price: 4.60, unit: "€ 4.60 / 1 кг", default: true },
-      { label: "25 кг", price: 82.00, unit: "€ 3.28 / кг" }
+      { label: "1 кг", price: 4.37, unit: "€ 4.60 / 1 кг", default: true },
+      { label: "25 кг", price: 77.90, unit: "€ 3.28 / кг" }
     ],
     rating: 4.8,
     reviewsCount: 30,
@@ -890,8 +864,7 @@ const FUNGICIDES = [
     title: "Пролектус 50 ВГ – фенпиразамин срещу кафяво и сиво гниене",
     category: "fungicides",
     categoryName: "Фунгициди",
-    price: 39.00,
-    bgnPrice: 76.28,
+    price: 37.05,
     unit: "500 г",
     brand: "syngenta",
     brandName: "Kenogard / Syngenta",
@@ -910,8 +883,8 @@ const FUNGICIDES = [
       { val: 80, label: "80-120 г/дка (Монилиоза и сиво гниене)" }
     ],
     packSizes: [
-      { label: "100 г", price: 9.50, unit: "€ 9.50 / 100 г" },
-      { label: "500 г", price: 39.00, unit: "€ 39.00 / 500 г", default: true }
+      { label: "100 г", price: 9.03, unit: "€ 9.50 / 100 г" },
+      { label: "500 г", price: 37.05, unit: "€ 39.00 / 500 г", default: true }
     ],
     rating: 4.9,
     reviewsCount: 21,
@@ -923,8 +896,7 @@ const FUNGICIDES = [
     title: "Купроцин МЗ ВП – мед и манкозеб срещу всички видове мани",
     category: "fungicides",
     categoryName: "Фунгициди",
-    price: 14.20,
-    bgnPrice: 27.77,
+    price: 13.49,
     unit: "1 кг",
     brand: "manica",
     brandName: "Агрия АД / Manica",
@@ -943,8 +915,8 @@ const FUNGICIDES = [
       { val: 250, label: "250-300 г/дка (Мана и черни листни петна)" }
     ],
     packSizes: [
-      { label: "250 г", price: 4.50, unit: "€ 4.50 / 250 г" },
-      { label: "1 кг", price: 14.20, unit: "€ 14.20 / 1 кг", default: true }
+      { label: "250 г", price: 4.27, unit: "€ 4.50 / 250 г" },
+      { label: "1 кг", price: 13.49, unit: "€ 14.20 / 1 кг", default: true }
     ],
     rating: 4.8,
     reviewsCount: 50,
@@ -956,8 +928,7 @@ const FUNGICIDES = [
     title: "Пропулс 250 СЕ – фунгицид с флуопирам и протиоконазол",
     category: "fungicides",
     categoryName: "Фунгициди",
-    price: 58.00,
-    bgnPrice: 113.44,
+    price: 55.10,
     unit: "1 л",
     brand: "bayer",
     brandName: "Bayer Crop Science AG",
@@ -976,8 +947,8 @@ const FUNGICIDES = [
       { val: 100, label: "80-100 мл/дка (Склеротиния и фома)" }
     ],
     packSizes: [
-      { label: "1 л", price: 58.00, unit: "€ 58.00 / 1 л", default: true },
-      { label: "5 л", price: 275.00, unit: "€ 55.00 / л" }
+      { label: "1 л", price: 55.10, unit: "€ 58.00 / 1 л", default: true },
+      { label: "5 л", price: 261.25, unit: "€ 55.00 / л" }
     ],
     rating: 4.9,
     reviewsCount: 15,
@@ -989,8 +960,7 @@ const FUNGICIDES = [
     title: "Тебумакс 250 ЕВ – тебуконазол за защита на житни и лозя",
     category: "fungicides",
     categoryName: "Фунгициди",
-    price: 24.50,
-    bgnPrice: 47.92,
+    price: 23.27,
     unit: "1 л",
     brand: "manica",
     brandName: "Агрия АД / Manica",
@@ -1010,8 +980,8 @@ const FUNGICIDES = [
       { val: 40, label: "40 мл/дка (Оидиум по лозя)" }
     ],
     packSizes: [
-      { label: "1 л", price: 24.50, unit: "€ 24.50 / 1 л", default: true },
-      { label: "5 л", price: 110.00, unit: "€ 22.00 / л" }
+      { label: "1 л", price: 23.27, unit: "€ 24.50 / 1 л", default: true },
+      { label: "5 л", price: 104.50, unit: "€ 22.00 / л" }
     ],
     rating: 4.8,
     reviewsCount: 44,
@@ -1023,8 +993,7 @@ const FUNGICIDES = [
     title: "Фоликур 250 ЕВ – оригиналният тебуконазол от Bayer",
     category: "fungicides",
     categoryName: "Фунгициди",
-    price: 32.00,
-    bgnPrice: 62.59,
+    price: 30.40,
     unit: "1 л",
     brand: "bayer",
     brandName: "Bayer Crop Science AG",
@@ -1043,7 +1012,7 @@ const FUNGICIDES = [
       { val: 100, label: "100 мл/дка (Фузариоза по класа, ръжди)" }
     ],
     packSizes: [
-      { label: "1 л", price: 32.00, unit: "€ 32.00 / 1 л", default: true }
+      { label: "1 л", price: 30.40, unit: "€ 32.00 / 1 л", default: true }
     ],
     rating: 4.9,
     reviewsCount: 37,
@@ -1055,8 +1024,7 @@ const FUNGICIDES = [
     title: "Полирам ДФ – контактен фунгицид с метирам 70%",
     category: "fungicides",
     categoryName: "Фунгициди",
-    price: 15.60,
-    bgnPrice: 30.51,
+    price: 14.82,
     unit: "1 кг",
     brand: "basf",
     brandName: "BASF SE (Германия)",
@@ -1075,7 +1043,7 @@ const FUNGICIDES = [
       { val: 200, label: "200 г/дка (Мана по лозя и картофи)" }
     ],
     packSizes: [
-      { label: "1 кг", price: 15.60, unit: "€ 15.60 / 1 кг", default: true }
+      { label: "1 кг", price: 14.82, unit: "€ 15.60 / 1 кг", default: true }
     ],
     rating: 4.8,
     reviewsCount: 28,
@@ -1087,8 +1055,7 @@ const FUNGICIDES = [
     title: "Телдор 500 СК – специализиран фунгицид с фенхексамид",
     category: "fungicides",
     categoryName: "Фунгициди",
-    price: 14.80,
-    bgnPrice: 28.95,
+    price: 14.06,
     unit: "100 мл",
     brand: "bayer",
     brandName: "Bayer Crop Science AG",
@@ -1107,8 +1074,8 @@ const FUNGICIDES = [
       { val: 100, label: "100 мл/дка (Сиво гниене при омекване на зърното)" }
     ],
     packSizes: [
-      { label: "100 мл", price: 14.80, unit: "€ 14.80 / 100 мл", default: true },
-      { label: "1 л", price: 96.00, unit: "€ 96.00 / 1 л" }
+      { label: "100 мл", price: 14.06, unit: "€ 14.80 / 100 мл", default: true },
+      { label: "1 л", price: 91.20, unit: "€ 96.00 / 1 л" }
     ],
     rating: 4.9,
     reviewsCount: 31,
@@ -1120,8 +1087,7 @@ const FUNGICIDES = [
     title: "Фолпан 80 ВДГ – контактен фунгицид с фолпет 80%",
     category: "fungicides",
     categoryName: "Фунгициди",
-    price: 19.50,
-    bgnPrice: 38.14,
+    price: 18.52,
     unit: "1 кг",
     brand: "adama",
     brandName: "ADAMA Agricultural Solutions",
@@ -1140,7 +1106,7 @@ const FUNGICIDES = [
       { val: 150, label: "150 г/дка (Мана и черно гниене по лозя)" }
     ],
     packSizes: [
-      { label: "1 кг", price: 19.50, unit: "€ 19.50 / 1 кг", default: true }
+      { label: "1 кг", price: 18.52, unit: "€ 19.50 / 1 кг", default: true }
     ],
     rating: 4.8,
     reviewsCount: 26,
@@ -1152,8 +1118,7 @@ const FUNGICIDES = [
     title: "Курзат М ВГ – цимоксанил и манкозеб за локално системна защита",
     category: "fungicides",
     categoryName: "Фунгициди",
-    price: 21.00,
-    bgnPrice: 41.07,
+    price: 19.95,
     unit: "1 кг",
     brand: "corteva",
     brandName: "Corteva Agriscience",
@@ -1172,7 +1137,7 @@ const FUNGICIDES = [
       { val: 250, label: "200-250 г/дка (Обикновена мана по лозя и картофи)" }
     ],
     packSizes: [
-      { label: "1 кг", price: 21.00, unit: "€ 21.00 / 1 кг", default: true }
+      { label: "1 кг", price: 19.95, unit: "€ 21.00 / 1 кг", default: true }
     ],
     rating: 4.8,
     reviewsCount: 35,
@@ -1184,8 +1149,7 @@ const FUNGICIDES = [
     title: "Ортива Топ СК – азоксистробин и дифеноконазол за зеленчуци",
     category: "fungicides",
     categoryName: "Фунгициди",
-    price: 59.00,
-    bgnPrice: 115.39,
+    price: 56.05,
     unit: "1 л",
     brand: "syngenta",
     brandName: "Syngenta Crop Protection AG",
@@ -1204,8 +1168,8 @@ const FUNGICIDES = [
       { val: 100, label: "100 мл/дка (Брашнеста мана, алтернария и струпясване)" }
     ],
     packSizes: [
-      { label: "100 мл", price: 9.80, unit: "€ 9.80 / 100 мл" },
-      { label: "1 л", price: 59.00, unit: "€ 59.00 / 1 л", default: true }
+      { label: "100 мл", price: 9.31, unit: "€ 9.80 / 100 мл" },
+      { label: "1 л", price: 56.05, unit: "€ 59.00 / 1 л", default: true }
     ],
     rating: 5.0,
     reviewsCount: 46,

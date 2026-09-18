@@ -11,9 +11,8 @@ const HERBICIDES = [
     title: "Раундъп Класик Про – тотален системен хербицид с глифозат 360 г/л",
     category: "herbicides",
     categoryName: "Хербициди",
-    price: 11.90,
+    price: 11.30,
     oldPrice: 14.00,
-    bgnPrice: 23.27,
     unit: "1 л",
     brand: "bayer",
     brandName: "Bayer Crop Science AG",
@@ -33,9 +32,9 @@ const HERBICIDES = [
       { val: 500, label: "500-800 мл/дка (Дълбококоренищни: балур, троскот, паламида)" }
     ],
     packSizes: [
-      { label: "1 л", price: 11.90, unit: "€ 11.90 / 1 л", default: true },
-      { label: "5 л", price: 54.00, unit: "€ 10.80 / л" },
-      { label: "20 л", price: 198.00, unit: "€ 9.90 / л" }
+      { label: "1 л", price: 11.30, unit: "€ 11.90 / 1 л", default: true },
+      { label: "5 л", price: 51.30, unit: "€ 10.80 / л" },
+      { label: "20 л", price: 188.10, unit: "€ 9.90 / л" }
     ],
     rating: 4.9,
     reviewsCount: 88,
@@ -47,8 +46,7 @@ const HERBICIDES = [
     title: "Наса ТАФ – тотален листен хербицид с глифозат 360 г/л",
     category: "herbicides",
     categoryName: "Хербициди",
-    price: 9.80,
-    bgnPrice: 19.17,
+    price: 9.31,
     unit: "1 л",
     brand: "manica",
     brandName: "Manica SpA (Италия)",
@@ -68,8 +66,8 @@ const HERBICIDES = [
       { val: 600, label: "600-800 мл/дка (Многогодишни плевели)" }
     ],
     packSizes: [
-      { label: "1 л", price: 9.80, unit: "€ 9.80 / 1 л", default: true },
-      { label: "20 л", price: 168.00, unit: "€ 8.40 / л" }
+      { label: "1 л", price: 9.31, unit: "€ 9.80 / 1 л", default: true },
+      { label: "20 л", price: 159.60, unit: "€ 8.40 / л" }
     ],
     rating: 4.8,
     reviewsCount: 52,
@@ -81,8 +79,7 @@ const HERBICIDES = [
     title: "Стомп Аква – почвен капсулован хербицид с пендиметалин 455 г/л",
     category: "herbicides",
     categoryName: "Хербициди",
-    price: 19.50,
-    bgnPrice: 38.14,
+    price: 18.52,
     unit: "1 л",
     brand: "basf",
     brandName: "BASF SE (Германия)",
@@ -102,9 +99,9 @@ const HERBICIDES = [
       { val: 350, label: "350-400 мл/дка (Преди разсаждане на зеленчуци)" }
     ],
     packSizes: [
-      { label: "100 мл", price: 3.50, unit: "€ 3.50 / 100 мл" },
-      { label: "1 л", price: 19.50, unit: "€ 19.50 / 1 л", default: true },
-      { label: "10 л", price: 175.00, unit: "€ 17.50 / л" }
+      { label: "100 мл", price: 3.32, unit: "€ 3.50 / 100 мл" },
+      { label: "1 л", price: 18.52, unit: "€ 19.50 / 1 л", default: true },
+      { label: "10 л", price: 166.25, unit: "€ 17.50 / л" }
     ],
     rating: 4.9,
     reviewsCount: 64,
@@ -116,8 +113,7 @@ const HERBICIDES = [
     title: "Пантера 40 ЕК – селективен вегетационен противожитен хербицид",
     category: "herbicides",
     categoryName: "Хербициди",
-    price: 18.00,
-    bgnPrice: 35.21,
+    price: 17.10,
     unit: "1 л",
     brand: "corteva",
     brandName: "UPL OpenAg",
@@ -137,8 +133,8 @@ const HERBICIDES = [
       { val: 200, label: "200-250 мл/дка (Балур от коренища)" }
     ],
     packSizes: [
-      { label: "100 мл", price: 3.40, unit: "€ 3.40 / 100 мл" },
-      { label: "1 л", price: 18.00, unit: "€ 18.00 / 1 л", default: true }
+      { label: "100 мл", price: 3.23, unit: "€ 3.40 / 100 мл" },
+      { label: "1 л", price: 17.10, unit: "€ 18.00 / 1 л", default: true }
     ],
     rating: 4.9,
     reviewsCount: 47,
@@ -150,8 +146,7 @@ const HERBICIDES = [
     title: "Дуал Голд 960 ЕК – селективен почвен хербицид с С-метолахлор",
     category: "herbicides",
     categoryName: "Хербициди",
-    price: 29.80,
-    bgnPrice: 58.28,
+    price: 28.31,
     unit: "1 л",
     brand: "syngenta",
     brandName: "Syngenta Crop Protection AG",
@@ -170,8 +165,8 @@ const HERBICIDES = [
       { val: 120, label: "120-150 мл/дка (Почвено третиране след сеитба)" }
     ],
     packSizes: [
-      { label: "1 л", price: 29.80, unit: "€ 29.80 / 1 л", default: true },
-      { label: "5 л", price: 139.00, unit: "€ 27.80 / л" }
+      { label: "1 л", price: 28.31, unit: "€ 29.80 / 1 л", default: true },
+      { label: "5 л", price: 132.05, unit: "€ 27.80 / л" }
     ],
     rating: 4.9,
     reviewsCount: 55,
@@ -183,8 +178,7 @@ const HERBICIDES = [
     title: "Зенкор 600 СК – селективен хербицид за картофи и домати с метрибузин",
     category: "herbicides",
     categoryName: "Хербициди",
-    price: 33.50,
-    bgnPrice: 65.52,
+    price: 31.82,
     unit: "1 л",
     brand: "bayer",
     brandName: "Bayer Crop Science AG",
@@ -204,8 +198,8 @@ const HERBICIDES = [
       { val: 40, label: "40-50 мл/дка (Вегетационно при височина 10 см)" }
     ],
     packSizes: [
-      { label: "100 мл", price: 4.80, unit: "€ 4.80 / 100 мл" },
-      { label: "1 л", price: 33.50, unit: "€ 33.50 / 1 л", default: true }
+      { label: "100 мл", price: 4.56, unit: "€ 4.80 / 100 мл" },
+      { label: "1 л", price: 31.82, unit: "€ 33.50 / 1 л", default: true }
     ],
     rating: 4.8,
     reviewsCount: 41,
@@ -217,8 +211,7 @@ const HERBICIDES = [
     title: "Лаудис ОД – темботрион за вегетационна защита на царевица",
     category: "herbicides",
     categoryName: "Хербициди",
-    price: 44.00,
-    bgnPrice: 86.06,
+    price: 41.80,
     unit: "1 л",
     brand: "bayer",
     brandName: "Bayer Crop Science AG",
@@ -237,8 +230,8 @@ const HERBICIDES = [
       { val: 200, label: "200-220 мл/дка (Едногодишни широколистни и житни плевели)" }
     ],
     packSizes: [
-      { label: "1 л", price: 44.00, unit: "€ 44.00 / 1 л", default: true },
-      { label: "5 л", price: 205.00, unit: "€ 41.00 / л" }
+      { label: "1 л", price: 41.80, unit: "€ 44.00 / 1 л", default: true },
+      { label: "5 л", price: 194.75, unit: "€ 41.00 / л" }
     ],
     rating: 5.0,
     reviewsCount: 36,
@@ -250,8 +243,7 @@ const HERBICIDES = [
     title: "Мустанг СК – флорасулам и 2.4-Д за житни култури и царевица",
     category: "herbicides",
     categoryName: "Хербициди",
-    price: 19.80,
-    bgnPrice: 38.73,
+    price: 18.81,
     unit: "1 л",
     brand: "corteva",
     brandName: "Corteva Agriscience",
@@ -270,8 +262,8 @@ const HERBICIDES = [
       { val: 60, label: "50-80 мл/дка (Всички едногодишни и многогодишни широколистни плевели)" }
     ],
     packSizes: [
-      { label: "1 л", price: 19.80, unit: "€ 19.80 / 1 л", default: true },
-      { label: "5 л", price: 92.00, unit: "€ 18.40 / л" }
+      { label: "1 л", price: 18.81, unit: "€ 19.80 / 1 л", default: true },
+      { label: "5 л", price: 87.40, unit: "€ 18.40 / л" }
     ],
     rating: 4.9,
     reviewsCount: 49,
@@ -283,8 +275,7 @@ const HERBICIDES = [
     title: "Селект Супер 120 ЕК – системен противожитен хербицид с клетодим",
     category: "herbicides",
     categoryName: "Хербициди",
-    price: 24.50,
-    bgnPrice: 47.92,
+    price: 23.27,
     unit: "1 л",
     brand: "corteva",
     brandName: "UPL OpenAg",
@@ -304,8 +295,8 @@ const HERBICIDES = [
       { val: 160, label: "160 мл/дка (Балур от коренища)" }
     ],
     packSizes: [
-      { label: "100 мл", price: 3.90, unit: "€ 3.90 / 100 мл" },
-      { label: "1 л", price: 24.50, unit: "€ 24.50 / 1 л", default: true }
+      { label: "100 мл", price: 3.70, unit: "€ 3.90 / 100 мл" },
+      { label: "1 л", price: 23.27, unit: "€ 24.50 / 1 л", default: true }
     ],
     rating: 4.8,
     reviewsCount: 32,
@@ -317,8 +308,7 @@ const HERBICIDES = [
     title: "Дерби Супер Едно ВГ – флуметсулам и флорасулам за житни",
     category: "herbicides",
     categoryName: "Хербициди",
-    price: 15.20,
-    bgnPrice: 29.73,
+    price: 14.44,
     unit: "100 г",
     brand: "corteva",
     brandName: "Corteva Agriscience",
@@ -337,8 +327,8 @@ const HERBICIDES = [
       { val: 3.3, label: "3.3 г/дка (От 3-ти лист до вретенене на пшеницата)" }
     ],
     packSizes: [
-      { label: "100 г", price: 15.20, unit: "€ 15.20 / 100 г", default: true },
-      { label: "500 г", price: 68.00, unit: "€ 68.00 / 500 г" }
+      { label: "100 г", price: 14.44, unit: "€ 15.20 / 100 г", default: true },
+      { label: "500 г", price: 64.60, unit: "€ 68.00 / 500 г" }
     ],
     rating: 5.0,
     reviewsCount: 42,

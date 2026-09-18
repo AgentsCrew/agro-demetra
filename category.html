@@ -577,7 +577,7 @@
                   € ${p.price.toFixed(2)}
                 </div>
                 <div class="text-[10px] font-semibold text-slate-400 mt-0.5">
-                  ${(p.price * 1.95583).toFixed(2)} лв. с ДДС
+                  вкл. 20% ДДС
                 </div>
               </div>
 
@@ -722,7 +722,7 @@
     }
 
     function addToCartLive(name, price) {
-      alert(`Добавено в количката:\n${name}\nЦена: € ${price.toFixed(2)} (${(price * 1.95583).toFixed(2)} лв.)`);
+      alert(`Добавено в количката:\n${name}\nЦена: € ${price.toFixed(2)} (вкл. ДДС)`);
     }
   </script>
 </body>

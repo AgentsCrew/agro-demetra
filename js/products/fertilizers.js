@@ -11,8 +11,7 @@ const FERTILIZERS = [
     title: "YaraMila Complex NPK 12-11-18 – хлоридо-чист комбиниран гранулиран тор",
     category: "fertilizers",
     categoryName: "Торове & Почви",
-    price: 36.50,
-    bgnPrice: 71.39,
+    price: 34.67,
     unit: "25 кг",
     brand: "yara",
     brandName: "Yara International (Норвегия)",
@@ -32,9 +31,9 @@ const FERTILIZERS = [
       { val: 20000, label: "20-30 кг/дка (Пролетно подхранване на овощни и лозя)" }
     ],
     packSizes: [
-      { label: "2 кг", price: 4.90, unit: "€ 4.90 / 2 кг" },
-      { label: "5 кг", price: 9.80, unit: "€ 9.80 / 5 кг" },
-      { label: "25 кг", price: 36.50, unit: "€ 36.50 / 25 кг", default: true }
+      { label: "2 кг", price: 4.66, unit: "€ 4.90 / 2 кг" },
+      { label: "5 кг", price: 9.31, unit: "€ 9.80 / 5 кг" },
+      { label: "25 кг", price: 34.67, unit: "€ 36.50 / 25 кг", default: true }
     ],
     rating: 5.0,
     reviewsCount: 120,
@@ -46,8 +45,7 @@ const FERTILIZERS = [
     title: "YaraLiva Nitrabor – гранулиран калциев нитрат с бор",
     category: "fertilizers",
     categoryName: "Торове & Почви",
-    price: 24.50,
-    bgnPrice: 47.92,
+    price: 23.27,
     unit: "25 кг",
     brand: "yara",
     brandName: "Yara International (Норвегия)",
@@ -66,8 +64,8 @@ const FERTILIZERS = [
       { val: 20000, label: "15-25 кг/дка (Почвено при цъфтеж и наедряване)" }
     ],
     packSizes: [
-      { label: "5 кг", price: 6.90, unit: "€ 6.90 / 5 кг" },
-      { label: "25 кг", price: 24.50, unit: "€ 24.50 / 25 кг", default: true }
+      { label: "5 кг", price: 6.55, unit: "€ 6.90 / 5 кг" },
+      { label: "25 кг", price: 23.27, unit: "€ 24.50 / 25 кг", default: true }
     ],
     rating: 4.9,
     reviewsCount: 68,
@@ -79,8 +77,7 @@ const FERTILIZERS = [
     title: "Кристалон Специален (Син) NPK 18-18-18 + микроелементи",
     category: "fertilizers",
     categoryName: "Торове & Почви",
-    price: 6.80,
-    bgnPrice: 13.30,
+    price: 6.46,
     unit: "1 кг",
     brand: "yara",
     brandName: "Yara Kristalon (Холандия)",
@@ -100,8 +97,8 @@ const FERTILIZERS = [
       { val: 1500, label: "1-2 кг/дка (С капковата система през 7-10 дни)" }
     ],
     packSizes: [
-      { label: "1 кг", price: 6.80, unit: "€ 6.80 / 1 кг", default: true },
-      { label: "25 кг", price: 68.00, unit: "€ 2.72 / кг" }
+      { label: "1 кг", price: 6.46, unit: "€ 6.80 / 1 кг", default: true },
+      { label: "25 кг", price: 64.60, unit: "€ 2.72 / кг" }
     ],
     rating: 5.0,
     reviewsCount: 95,
@@ -113,8 +110,7 @@ const FERTILIZERS = [
     title: "Кристалон Червен NPK 12-12-36 – богат на калий за наедряване и узряване",
     category: "fertilizers",
     categoryName: "Торове & Почви",
-    price: 6.90,
-    bgnPrice: 13.50,
+    price: 6.55,
     unit: "1 кг",
     brand: "yara",
     brandName: "Yara Kristalon (Холандия)",
@@ -134,8 +130,8 @@ const FERTILIZERS = [
       { val: 2000, label: "2-3 кг/дка (Капково напояване)" }
     ],
     packSizes: [
-      { label: "1 кг", price: 6.90, unit: "€ 6.90 / 1 кг", default: true },
-      { label: "25 кг", price: 69.50, unit: "€ 2.78 / кг" }
+      { label: "1 кг", price: 6.55, unit: "€ 6.90 / 1 кг", default: true },
+      { label: "25 кг", price: 66.02, unit: "€ 2.78 / кг" }
     ],
     rating: 4.9,
     reviewsCount: 81,
@@ -147,8 +143,7 @@ const FERTILIZERS = [
     title: "Кристалон Жълт NPK 13-40-13 – с 40% фосфор за мощна коренова система",
     category: "fertilizers",
     categoryName: "Торове & Почви",
-    price: 7.20,
-    bgnPrice: 14.08,
+    price: 6.84,
     unit: "1 кг",
     brand: "yara",
     brandName: "Yara Kristalon (Холандия)",
@@ -168,8 +163,8 @@ const FERTILIZERS = [
       { val: 250, label: "250-300 г/дка (Листно третиране)" }
     ],
     packSizes: [
-      { label: "1 кг", price: 7.20, unit: "€ 7.20 / 1 кг", default: true },
-      { label: "25 кг", price: 72.00, unit: "€ 2.88 / кг" }
+      { label: "1 кг", price: 6.84, unit: "€ 7.20 / 1 кг", default: true },
+      { label: "25 кг", price: 68.40, unit: "€ 2.88 / кг" }
     ],
     rating: 4.9,
     reviewsCount: 54,
@@ -181,8 +176,7 @@ const FERTILIZERS = [
     title: "Вуксал Калций – суспензионен листен тор с 24% CaO и азот",
     category: "fertilizers",
     categoryName: "Торове & Почви",
-    price: 8.50,
-    bgnPrice: 16.62,
+    price: 8.07,
     unit: "1 л",
     brand: "aglukon",
     brandName: "Aglukon (Германия)",
@@ -201,9 +195,9 @@ const FERTILIZERS = [
       { val: 300, label: "300-500 мл/дка (През 10-14 дни от образуване на завръзите)" }
     ],
     packSizes: [
-      { label: "250 мл", price: 3.20, unit: "€ 3.20 / 250 мл" },
-      { label: "1 л", price: 8.50, unit: "€ 8.50 / 1 л", default: true },
-      { label: "5 л", price: 38.00, unit: "€ 7.60 / л" }
+      { label: "250 мл", price: 3.04, unit: "€ 3.20 / 250 мл" },
+      { label: "1 л", price: 8.07, unit: "€ 8.50 / 1 л", default: true },
+      { label: "5 л", price: 36.10, unit: "€ 7.60 / л" }
     ],
     rating: 5.0,
     reviewsCount: 76,
@@ -215,8 +209,7 @@ const FERTILIZERS = [
     title: "Мегафол – биостимулатор с аминокиселини срещу измръзване, градушка и суша",
     category: "fertilizers",
     categoryName: "Торове & Почви",
-    price: 9.90,
-    bgnPrice: 19.36,
+    price: 9.40,
     unit: "250 мл",
     brand: "valagro",
     brandName: "Valagro (Италия) / Syngenta",
@@ -235,8 +228,8 @@ const FERTILIZERS = [
       { val: 200, label: "150-250 мл/дка (При стресови условия и веднага след градушка)" }
     ],
     packSizes: [
-      { label: "250 мл", price: 9.90, unit: "€ 9.90 / 250 мл", default: true },
-      { label: "1 л", price: 27.50, unit: "€ 27.50 / 1 л" }
+      { label: "250 мл", price: 9.40, unit: "€ 9.90 / 250 мл", default: true },
+      { label: "1 л", price: 26.13, unit: "€ 27.50 / 1 л" }
     ],
     rating: 5.0,
     reviewsCount: 88,
@@ -248,8 +241,7 @@ const FERTILIZERS = [
     title: "Радифарм – растителен биостимулатор за максимална коренова маса",
     category: "fertilizers",
     categoryName: "Торове & Почви",
-    price: 14.50,
-    bgnPrice: 28.36,
+    price: 13.77,
     unit: "250 мл",
     brand: "valagro",
     brandName: "Valagro (Италия) / Syngenta",
@@ -268,8 +260,8 @@ const FERTILIZERS = [
       { val: 250, label: "250-300 мл в 100 л вода (Поливане при разсаждане)" }
     ],
     packSizes: [
-      { label: "250 мл", price: 14.50, unit: "€ 14.50 / 250 мл", default: true },
-      { label: "1 л", price: 46.00, unit: "€ 46.00 / 1 л" }
+      { label: "250 мл", price: 13.77, unit: "€ 14.50 / 250 мл", default: true },
+      { label: "1 л", price: 43.70, unit: "€ 46.00 / 1 л" }
     ],
     rating: 4.9,
     reviewsCount: 53,
@@ -281,8 +273,7 @@ const FERTILIZERS = [
     title: "Хелатно Желязо 6% (Червен прах) – мигновено лечение на хлороза",
     category: "fertilizers",
     categoryName: "Торове & Почви",
-    price: 5.50,
-    bgnPrice: 10.76,
+    price: 5.22,
     unit: "100 г",
     brand: "manica",
     brandName: "Manica SpA / Tradecorp",
@@ -301,8 +292,8 @@ const FERTILIZERS = [
       { val: 20, label: "10-20 г на корен (Поливане в кореновата зона при лози и овошки)" }
     ],
     packSizes: [
-      { label: "100 г", price: 5.50, unit: "€ 5.50 / 100 г", default: true },
-      { label: "1 кг", price: 29.00, unit: "€ 29.00 / 1 кг" }
+      { label: "100 г", price: 5.22, unit: "€ 5.50 / 100 г", default: true },
+      { label: "1 кг", price: 27.55, unit: "€ 29.00 / 1 кг" }
     ],
     rating: 5.0,
     reviewsCount: 67,
@@ -314,8 +305,7 @@ const FERTILIZERS = [
     title: "Хумустим – натурален хуминов екстракт от червен калифорнийски червей",
     category: "fertilizers",
     categoryName: "Торове & Почви",
-    price: 4.80,
-    bgnPrice: 9.39,
+    price: 4.56,
     unit: "1 л",
     brand: "amitica",
     brandName: "Български Биопродукт",
@@ -335,9 +325,9 @@ const FERTILIZERS = [
       { val: 500, label: "500 мл/дка (Почвено поливане)" }
     ],
     packSizes: [
-      { label: "1 л", price: 4.80, unit: "€ 4.80 / 1 л", default: true },
-      { label: "5 л", price: 19.80, unit: "€ 3.96 / л" },
-      { label: "10 л", price: 34.00, unit: "€ 3.40 / л" }
+      { label: "1 л", price: 4.56, unit: "€ 4.80 / 1 л", default: true },
+      { label: "5 л", price: 18.81, unit: "€ 3.96 / л" },
+      { label: "10 л", price: 32.30, unit: "€ 3.40 / л" }
     ],
     rating: 4.9,
     reviewsCount: 92,

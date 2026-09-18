@@ -225,10 +225,10 @@
           <div class="flex items-baseline justify-between">
             <div>
               <div class="flex items-baseline gap-2">
-                <span id="displayPrice" class="text-3xl font-black text-slate-900">€ 69.90</span>
-                <span id="displayUnitPrice" class="text-xs text-slate-500 font-medium">(€ 69.90 / кг)</span>
+                <span id="displayPrice" class="text-3xl font-black text-slate-900">€ 66.40</span>
+                <span id="displayUnitPrice" class="text-xs text-slate-500 font-medium">(€ 66.40 / кг)</span>
               </div>
-              <span id="displayBgnPrice" class="text-xs text-slate-400 font-semibold block mt-0.5">136.71 лв. с вкл. 20% ДДС</span>
+              <span id="displayVatText" class="text-xs text-slate-400 font-semibold block mt-0.5">крайна цена с вкл. 20% ДДС</span>
             </div>
             
             <div class="text-right">
@@ -468,8 +468,8 @@
         const displayUnitPriceEl = document.getElementById('displayUnitPrice');
         if (displayUnitPriceEl) displayUnitPriceEl.innerText = `(${unitText || currentProd.unit})`;
 
-        const displayBgnEl = document.getElementById('displayBgnPrice');
-        if (displayBgnEl) displayBgnEl.innerText = `${(price * 1.95583).toFixed(2)} лв. с вкл. 20% ДДС`;
+        const displayVatEl = document.getElementById('displayVatText');
+        if (displayVatEl) displayVatEl.innerText = `крайна цена с вкл. 20% ДДС`;
       }
 
       updatePriceDisplays(selectedPrice, currentProd.packSizes?.[0]?.unit);
@@ -524,10 +524,9 @@
       window.addToCartLiveProduct = async function() {
         const orderNum = `AD-${Date.now().toString().slice(-6)}`;
         const totalEur = (selectedPrice * qty).toFixed(2);
-        const totalBgn = ((selectedPrice * qty) * 1.95583).toFixed(2);
 
         // Quick order phone prompt
-        const phone = prompt(`🛒 Бърза поръчка за:\n${currentProd.name} (${selectedUnit}) — ${qty} бр.\nОбща сума: € ${totalEur} (${totalBgn} лв.)\n\nМоля, въведете Вашия телефон за доставка:`, '');
+        const phone = prompt(`🛒 Бърза поръчка за:\n${currentProd.name} (${selectedUnit}) — ${qty} бр.\nОбща сума: € ${totalEur} с ДДС\n\nМоля, въведете Вашия телефон за доставка:`, '');
         
         if (phone && phone.trim()) {
           if (window.AGRO_SUPABASE) {
@@ -538,13 +537,13 @@
               delivery_method: 'econt',
               delivery_address: 'Уточняване по телефон',
               total_eur: parseFloat(totalEur),
-              total_bgn: parseFloat(totalBgn),
+              total_bgn: parseFloat(totalEur),
               items: [{ id: currentProd.id, name: currentProd.name, unit: selectedUnit, qty: qty, price: selectedPrice }]
             });
           }
           alert(`✅ Благодарим! Поръчка № ${orderNum} е приета и записана в базата данни.\nНаш агроном ще се свърже с Вас на тел. ${phone} за потвърждение.`);
         } else if (phone !== null) {
-          alert(`Добавено в количката:\n${currentProd.name} (${selectedUnit})\nКоличество: ${qty} бр.\nОбща сума: € ${totalEur} (${totalBgn} лв.)`);
+          alert(`Добавено в количката:\n${currentProd.name} (${selectedUnit})\nКоличество: ${qty} бр.\nОбща сума: € ${totalEur} с ДДС`);
         }
       };
 
@@ -575,7 +574,7 @@
             <div class="mt-4 pt-3 border-t border-slate-200 flex items-center justify-between">
               <div>
                 <div class="text-sm font-black text-brand-900 leading-none">€ ${rp.price.toFixed(2)}</div>
-                <div class="text-[9px] text-slate-400 mt-0.5">${(rp.price * 1.95583).toFixed(2)} лв.</div>
+                <div class="text-[9px] text-slate-400 mt-0.5">вкл. ДДС</div>
               </div>
               <a href="product.html?prod=${rp.id}" class="text-[11px] font-bold bg-brand-700 hover:bg-brand-800 text-white px-3 py-1.5 rounded-lg transition">
                 Виж

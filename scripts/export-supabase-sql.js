@@ -181,7 +181,7 @@ const productInserts = products.map(p => {
   ${esc(p.useCategory)},
   ${esc(p.useCategoryName)},
   ${p.price},
-  ${p.bgnPrice},
+  ${p.price},
   ${esc(p.unit)},
   ${escArr(p.crops)},
   ${esc(p.active)},
