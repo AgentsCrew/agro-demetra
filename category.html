@@ -53,8 +53,8 @@
 <body class="bg-slate-50 text-slate-800 antialiased selection:bg-brand-500 selection:text-white">
 
 
-  <!-- MAIN HEADER -->
-  <header class="bg-white border-b border-slate-200 sticky top-0 z-40 shadow-sm">
+  <!-- MAIN HEADER (Scrolls naturally) -->
+  <header class="bg-white border-b border-slate-200">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3.5">
       <div class="flex items-center justify-between gap-4">
         
@@ -103,47 +103,59 @@
 
       </div>
     </div>
-
-    <!-- Nav Bar -->
-    <nav class="bg-brand-900 text-white border-t border-brand-800 hidden lg:block">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between text-xs font-semibold py-2.5">
-        <div class="flex items-center space-x-4">
-          <a href="index.html" class="text-slate-300 hover:text-white flex items-center gap-1">
-            <i data-lucide="home" class="w-3.5 h-3.5"></i> Начало
-          </a>
-          <span class="text-brand-800">/</span>
-          <button onclick="filterCategory('all', this)" class="cat-pill text-white bg-brand-700 px-3 py-1 rounded-lg font-bold">
-            Всички продукти
-          </button>
-          <button onclick="filterCategory('fungicides', this)" class="cat-pill text-slate-300 hover:text-white px-3 py-1 rounded-lg">
-            Фунгициди
-          </button>
-          <button onclick="filterCategory('insecticides', this)" class="cat-pill text-slate-300 hover:text-white px-3 py-1 rounded-lg">
-            Инсектициди
-          </button>
-          <button onclick="filterCategory('herbicides', this)" class="cat-pill text-slate-300 hover:text-white px-3 py-1 rounded-lg">
-            Хербициди
-          </button>
-          <button onclick="filterCategory('biocides', this)" class="cat-pill text-slate-300 hover:text-white px-3 py-1 rounded-lg">
-            Биоциди & ДДД
-          </button>
-          <button onclick="filterCategory('fertilizers', this)" class="cat-pill text-slate-300 hover:text-white px-3 py-1 rounded-lg">
-            Торове
-          </button>
-          <button onclick="filterCategory('seeds', this)" class="cat-pill text-slate-300 hover:text-white px-3 py-1 rounded-lg">
-            Семена & Картофи
-          </button>
-          <button onclick="filterCategory('wine', this)" class="cat-pill text-purple-300 hover:text-white px-3 py-1 rounded-lg flex items-center gap-1">
-            <i data-lucide="wine" class="w-3.5 h-3.5"></i> Вино & Ракия
-          </button>
-        </div>
-
-        <a href="news.html" class="text-amber-300 hover:text-white flex items-center gap-1">
-          <i data-lucide="calendar" class="w-3.5 h-3.5"></i> Пръскачен Календар
-        </a>
-      </div>
-    </nav>
   </header>
+
+  <!-- Nav Bar (Compact Sticky Category Navigation) -->
+  <nav class="bg-brand-900 text-white border-t border-brand-800 sticky top-0 z-40 shadow-md">
+    <!-- Desktop bar -->
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 hidden lg:flex items-center justify-between text-xs font-semibold py-2.5">
+      <div class="flex items-center space-x-4">
+        <a href="index.html" class="text-slate-300 hover:text-white flex items-center gap-1">
+          <i data-lucide="home" class="w-3.5 h-3.5"></i> Начало
+        </a>
+        <span class="text-brand-800">/</span>
+        <button onclick="filterCategory('all', this)" class="cat-pill text-white bg-brand-700 px-3 py-1 rounded-lg font-bold">
+          Всички продукти
+        </button>
+        <button onclick="filterCategory('fungicides', this)" class="cat-pill text-slate-300 hover:text-white px-3 py-1 rounded-lg">
+          Фунгициди
+        </button>
+        <button onclick="filterCategory('insecticides', this)" class="cat-pill text-slate-300 hover:text-white px-3 py-1 rounded-lg">
+          Инсектициди
+        </button>
+        <button onclick="filterCategory('herbicides', this)" class="cat-pill text-slate-300 hover:text-white px-3 py-1 rounded-lg">
+          Хербициди
+        </button>
+        <button onclick="filterCategory('biocides', this)" class="cat-pill text-slate-300 hover:text-white px-3 py-1 rounded-lg">
+          Биоциди & ДДД
+        </button>
+        <button onclick="filterCategory('fertilizers', this)" class="cat-pill text-slate-300 hover:text-white px-3 py-1 rounded-lg">
+          Торове
+        </button>
+        <button onclick="filterCategory('seeds', this)" class="cat-pill text-slate-300 hover:text-white px-3 py-1 rounded-lg">
+          Семена & Картофи
+        </button>
+        <button onclick="filterCategory('wine', this)" class="cat-pill text-purple-300 hover:text-white px-3 py-1 rounded-lg flex items-center gap-1">
+          <i data-lucide="wine" class="w-3.5 h-3.5"></i> Вино & Ракия
+        </button>
+      </div>
+
+      <a href="news.html" class="text-amber-300 hover:text-white flex items-center gap-1">
+        <i data-lucide="calendar" class="w-3.5 h-3.5"></i> Пръскачен Календар
+      </a>
+    </div>
+
+    <!-- Mobile horizontal swipe bar -->
+    <div class="lg:hidden px-3 py-2 flex items-center gap-2 overflow-x-auto whitespace-nowrap text-xs border-t border-brand-800">
+      <button onclick="filterCategory('all', this)" class="cat-pill text-white bg-brand-700 px-3 py-1.5 rounded-lg font-bold shrink-0">Всички</button>
+      <button onclick="filterCategory('fungicides', this)" class="cat-pill text-slate-300 hover:text-white px-3 py-1.5 rounded-lg shrink-0">Фунгициди</button>
+      <button onclick="filterCategory('insecticides', this)" class="cat-pill text-slate-300 hover:text-white px-3 py-1.5 rounded-lg shrink-0">Инсектициди</button>
+      <button onclick="filterCategory('herbicides', this)" class="cat-pill text-slate-300 hover:text-white px-3 py-1.5 rounded-lg shrink-0">Хербициди</button>
+      <button onclick="filterCategory('fertilizers', this)" class="cat-pill text-slate-300 hover:text-white px-3 py-1.5 rounded-lg shrink-0">Торове</button>
+      <button onclick="filterCategory('seeds', this)" class="cat-pill text-slate-300 hover:text-white px-3 py-1.5 rounded-lg shrink-0">Семена</button>
+      <button onclick="filterCategory('wine', this)" class="cat-pill text-purple-300 hover:text-white px-3 py-1.5 rounded-lg shrink-0">Вино</button>
+    </div>
+  </nav>
 
   <!-- BREADCRUMBS & HEADING -->
   <div class="bg-white border-b border-slate-200 py-6">
@@ -290,12 +302,22 @@
 
   <!-- FOOTER -->
   <footer class="bg-slate-900 text-slate-400 py-10 border-t border-slate-800 text-xs">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-4">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between gap-4">
       <div class="flex items-center gap-2 text-white font-bold">
         <i data-lucide="sprout" class="w-5 h-5 text-amber-300"></i>
         <span>AGRO DEMETRA — Онлайн Агроаптека</span>
       </div>
-      <p>© 2026 AGRO DEMETRA. Всички права запазени. Лиценз БАБХ № 1042-ПРЗ.</p>
+      
+      <div class="flex items-center gap-3 text-slate-300">
+        <span class="text-slate-500 font-semibold">Концепции:</span>
+        <a href="index.html" class="hover:text-white transition">Home 1</a>
+        <span>·</span>
+        <a href="home-2.html" class="text-amber-300 font-bold hover:underline">Home 2 (JYSK Стил)</a>
+        <span>·</span>
+        <a href="home-3.html" class="text-emerald-400 font-bold hover:underline">Home 3 (Модерен АгроТех)</a>
+      </div>
+
+      <p>© 2026 AGRO DEMETRA. Лиценз БАБХ № 1042-ПРЗ.</p>
     </div>
   </footer>
 

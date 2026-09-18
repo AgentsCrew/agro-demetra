@@ -1,0 +1,729 @@
+<!DOCTYPE html>
+<html lang="bg" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Agro Demetra — Модерен АгроТех Стил (Home 3) | Дигитална Агроаптека & Диагностика</title>
+  <meta name="description" content="Модерна AgroTech агроаптека: интерактивен диагностик на болести и вредители, калкулатор за пръскане, интелигентно земеделие и оригинални препарати. Лиценз БАБХ № 1042-ПРЗ.">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            tech: {
+              dark: '#051b11',
+              card: '#0c271b',
+              border: '#153e2c',
+              accent: '#10b981',
+              lime: '#84cc16',
+              glow: 'rgba(16, 185, 129, 0.15)'
+            }
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Google Fonts & Lucide Icons -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;600;700&display=swap" rel="stylesheet">
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <style>
+    body { font-family: 'Plus Jakarta Sans', sans-serif; }
+    .font-mono-code { font-family: 'JetBrains Mono', monospace; }
+    .tech-glow { box-shadow: 0 0 30px rgba(16, 185, 129, 0.12); }
+  </style>
+</head>
+<body class="bg-slate-950 text-slate-100 antialiased selection:bg-emerald-500 selection:text-slate-950">
+
+  <!-- ==========================================
+       1. TOP TECH STATUS BAR
+       ========================================== -->
+  <div class="bg-black/60 border-b border-emerald-950 text-xs py-2 px-4 hidden md:block backdrop-blur-md">
+    <div class="max-w-7xl mx-auto flex items-center justify-between text-slate-400">
+      <div class="flex items-center space-x-5">
+        <span class="inline-flex items-center gap-1.5 text-emerald-400 font-mono-code text-[11px]">
+          <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+          AGRO-SYS 2.4 LIVE
+        </span>
+        <span class="text-slate-700">|</span>
+        <span class="text-slate-300">Официален Лиценз БАБХ: № 1042-ПРЗ</span>
+        <span class="text-slate-700">|</span>
+        <span>Дигитална диагностика на растителни патогени</span>
+      </div>
+      <div class="flex items-center space-x-6 text-xs">
+        <a href="tel:0888123456" class="text-emerald-400 hover:text-emerald-300 font-mono-code font-bold flex items-center gap-1.5">
+          <i data-lucide="phone-call" class="w-3.5 h-3.5"></i> 0888 123 456 (Агроном)
+        </a>
+        <a href="admin.html" class="hover:text-white transition flex items-center gap-1 text-slate-400">
+          <i data-lucide="shield" class="w-3.5 h-3.5 text-amber-400"></i> Портал
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==========================================
+       2. MODERN AGROTECH HEADER
+       ========================================== -->
+  <header class="bg-slate-950/90 border-b border-emerald-900/40 backdrop-blur-md sticky top-0 z-40">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3.5 flex items-center justify-between gap-4">
+      
+      <!-- Brand Logo -->
+      <a href="home-3.html" class="flex items-center gap-3 shrink-0 group">
+        <div class="w-10 h-10 sm:w-11 sm:h-11 rounded-xl bg-gradient-to-br from-emerald-500 via-emerald-600 to-teal-800 flex items-center justify-center text-slate-950 shadow-lg shadow-emerald-500/20 group-hover:scale-105 transition">
+          <i data-lucide="cpu" class="w-6 h-6 text-white"></i>
+        </div>
+        <div>
+          <div class="flex items-center gap-1.5">
+            <span class="text-xl sm:text-2xl font-black tracking-tight text-white font-sans">AGRO<span class="text-emerald-400">DEMETRA</span></span>
+            <span class="bg-emerald-500/20 border border-emerald-500/30 text-emerald-400 text-[9px] font-mono-code px-1.5 py-0.2 rounded uppercase">AgroTech</span>
+          </div>
+          <p class="text-[10px] font-medium text-slate-400">Интелигентни Решения за Растителна Защита</p>
+        </div>
+      </a>
+
+      <!-- Quick Nav Links -->
+      <div class="hidden lg:flex items-center space-x-6 text-xs font-bold text-slate-300">
+        <a href="#diagnostics" class="hover:text-emerald-400 transition flex items-center gap-1.5">
+          <i data-lucide="activity" class="w-4 h-4 text-emerald-400"></i> Агро Диагностик
+        </a>
+        <a href="#calculator" class="hover:text-emerald-400 transition flex items-center gap-1.5">
+          <i data-lucide="calculator" class="w-4 h-4 text-lime-400"></i> Калкулатор Дози
+        </a>
+        <a href="category.html" class="hover:text-emerald-400 transition flex items-center gap-1.5">
+          <i data-lucide="layout-grid" class="w-4 h-4 text-teal-400"></i> Каталог 230+ ПРЗ
+        </a>
+        <a href="news.html" class="hover:text-emerald-400 transition flex items-center gap-1.5">
+          <i data-lucide="calendar" class="w-4 h-4 text-amber-400"></i> Пръскачен Календар
+        </a>
+      </div>
+
+      <!-- Search & Cart -->
+      <div class="flex items-center gap-3">
+        <form action="category.html" method="GET" class="hidden sm:flex relative w-56 lg:w-64">
+          <input 
+            type="text" 
+            name="q" 
+            placeholder="Търси активно вещество..." 
+            class="w-full bg-slate-900 border border-emerald-900/60 rounded-xl py-1.5 pl-8 pr-3 text-xs text-slate-200 placeholder-slate-500 focus:outline-none focus:border-emerald-500 focus:ring-1 focus:ring-emerald-500"
+          >
+          <i data-lucide="search" class="w-3.5 h-3.5 text-slate-400 absolute left-2.5 top-2.5"></i>
+        </form>
+
+        <a href="category.html" class="flex items-center gap-2 bg-emerald-500 hover:bg-emerald-400 text-slate-950 px-3.5 py-2 rounded-xl text-xs font-black transition shadow-lg shadow-emerald-500/20">
+          <i data-lucide="shopping-bag" class="w-4 h-4"></i>
+          <span class="hidden sm:inline">Количка</span>
+          <span class="bg-slate-950 text-emerald-300 px-1.5 py-0.2 rounded-full text-[10px]">2</span>
+        </a>
+      </div>
+
+    </div>
+  </header>
+
+  <!-- ==========================================
+       3. HERO SECTION WITH STATS
+       ========================================== -->
+  <section class="relative py-14 sm:py-20 overflow-hidden border-b border-emerald-950">
+    <div class="absolute inset-0 bg-gradient-to-b from-emerald-950/20 via-slate-950 to-slate-950 pointer-events-none"></div>
+    <div class="absolute -top-40 left-1/2 -translate-x-1/2 w-[600px] h-[300px] bg-emerald-500/10 blur-[120px] rounded-full pointer-events-none"></div>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      
+      <div class="text-center max-w-3xl mx-auto space-y-5">
+        <div class="inline-flex items-center gap-2 bg-emerald-950/80 border border-emerald-500/30 text-emerald-400 px-3 py-1 rounded-full text-xs font-mono-code">
+          <i data-lucide="sparkles" class="w-3.5 h-3.5"></i> Платформа за Прецизна Растителна Защита
+        </div>
+
+        <h1 class="text-3xl sm:text-5xl lg:text-6xl font-black tracking-tight text-white leading-tight">
+          Интелигентни Решения за <span class="bg-gradient-to-r from-emerald-400 via-teal-300 to-lime-400 bg-clip-text text-transparent">Здрави Култури</span>
+        </h1>
+
+        <p class="text-slate-400 text-sm sm:text-base leading-relaxed max-w-2xl mx-auto">
+          Автоматизиран избор на фунгициди, инсектициди и биостимулатори. Изчислете прецизната доза на декар и поръчайте с лицензирана доставка до Вашето стопанство.
+        </p>
+
+        <div class="pt-2 flex flex-wrap justify-center gap-4">
+          <a href="#diagnostics" class="bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-black px-6 py-3 rounded-xl text-xs sm:text-sm uppercase tracking-wider transition shadow-lg shadow-emerald-500/25 flex items-center gap-2">
+            <i data-lucide="activity" class="w-4 h-4"></i>
+            <span>Стартирай Диагностика</span>
+          </a>
+          <a href="#calculator" class="bg-slate-900 hover:bg-slate-800 border border-emerald-800/60 text-white font-bold px-6 py-3 rounded-xl text-xs sm:text-sm transition flex items-center gap-2">
+            <i data-lucide="calculator" class="w-4 h-4 text-emerald-400"></i>
+            <span>Калкулатор за Пръскане</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- Quick Metrics Grid -->
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mt-12 max-w-4xl mx-auto">
+        <div class="bg-slate-900/60 border border-emerald-900/40 p-4 rounded-2xl text-center">
+          <div class="text-2xl font-black text-emerald-400 font-mono-code">230+</div>
+          <div class="text-xs text-slate-400 font-medium mt-1">Оригинални Препарата</div>
+        </div>
+        <div class="bg-slate-900/60 border border-emerald-900/40 p-4 rounded-2xl text-center">
+          <div class="text-2xl font-black text-lime-400 font-mono-code">100%</div>
+          <div class="text-xs text-slate-400 font-medium mt-1">БАБХ Сертификация</div>
+        </div>
+        <div class="bg-slate-900/60 border border-emerald-900/40 p-4 rounded-2xl text-center">
+          <div class="text-2xl font-black text-teal-400 font-mono-code">24ч</div>
+          <div class="text-xs text-slate-400 font-medium mt-1">Доставка в България</div>
+        </div>
+        <div class="bg-slate-900/60 border border-emerald-900/40 p-4 rounded-2xl text-center">
+          <div class="text-2xl font-black text-amber-400 font-mono-code">0 лв.</div>
+          <div class="text-xs text-slate-400 font-medium mt-1">Агрономическа Консултация</div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==========================================
+       4. INTERACTIVE CROP & PEST DIAGNOSTICS SOLVER
+       ========================================== -->
+  <section id="diagnostics" class="py-14 bg-slate-950 border-b border-emerald-950">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-2xl mx-auto mb-10">
+        <span class="text-emerald-400 font-mono-code text-xs uppercase font-bold tracking-widest block mb-2">
+          • ЕКСПЕРТЕН АЛГОРИТЪМ •
+        </span>
+        <h2 class="text-2xl sm:text-3xl font-black text-white uppercase tracking-tight">
+          Интелигентен Агро Диагностик
+        </h2>
+        <p class="text-xs sm:text-sm text-slate-400 mt-2">
+          Изберете Вашата култура и симптома, за да получите препоръчана схема за третиране от дипломиран агроном
+        </p>
+      </div>
+
+      <div class="bg-tech-card border border-tech-border rounded-3xl p-6 sm:p-10 max-w-4xl mx-auto tech-glow">
+        
+        <!-- Step 1: Crop Selection -->
+        <div class="mb-6">
+          <label class="block text-xs font-bold uppercase text-slate-300 tracking-wider mb-3">
+            1. Изберете земеделска култура:
+          </label>
+          <div class="grid grid-cols-2 sm:grid-cols-5 gap-3" id="cropSelector">
+            <button onclick="selectCrop('лозя', this)" class="crop-btn active bg-emerald-500 text-slate-950 font-black p-3 rounded-xl text-xs transition flex flex-col items-center gap-1.5 border border-emerald-400">
+              <i data-lucide="grape" class="w-5 h-5"></i> Лозя
+            </button>
+            <button onclick="selectCrop('овощни', this)" class="crop-btn bg-slate-900/80 hover:bg-slate-800 text-slate-300 font-bold p-3 rounded-xl text-xs transition flex flex-col items-center gap-1.5 border border-emerald-900/40">
+              <i data-lucide="apple" class="w-5 h-5"></i> Овощни
+            </button>
+            <button onclick="selectCrop('домати', this)" class="crop-btn bg-slate-900/80 hover:bg-slate-800 text-slate-300 font-bold p-3 rounded-xl text-xs transition flex flex-col items-center gap-1.5 border border-emerald-900/40">
+              <i data-lucide="cherry" class="w-5 h-5"></i> Домати
+            </button>
+            <button onclick="selectCrop('картофи', this)" class="crop-btn bg-slate-900/80 hover:bg-slate-800 text-slate-300 font-bold p-3 rounded-xl text-xs transition flex flex-col items-center gap-1.5 border border-emerald-900/40">
+              <i data-lucide="circle-dot" class="w-5 h-5"></i> Картофи
+            </button>
+            <button onclick="selectCrop('житни', this)" class="crop-btn bg-slate-900/80 hover:bg-slate-800 text-slate-300 font-bold p-3 rounded-xl text-xs transition flex flex-col items-center gap-1.5 border border-emerald-900/40">
+              <i data-lucide="wheat" class="w-5 h-5"></i> Житни
+            </button>
+          </div>
+        </div>
+
+        <!-- Step 2: Symptom / Target Pest -->
+        <div class="mb-8">
+          <label class="block text-xs font-bold uppercase text-slate-300 tracking-wider mb-3">
+            2. Установено заболяване или вредител:
+          </label>
+          <div class="grid grid-cols-2 sm:grid-cols-3 gap-2.5" id="symptomSelector">
+            <!-- Dynamic symptom pills -->
+          </div>
+        </div>
+
+        <!-- Step 3: Recommended Solution Card -->
+        <div id="solutionBox" class="bg-slate-950/80 border border-emerald-500/40 rounded-2xl p-6 transition-all">
+          <!-- Dynamic Solution Card Injected Here -->
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==========================================
+       5. SPRAY TANK DOSAGE CALCULATOR WIDGET
+       ========================================== -->
+  <section id="calculator" class="py-14 bg-slate-900/40 border-b border-emerald-950">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center max-w-5xl mx-auto">
+        
+        <div class="lg:col-span-5 space-y-4">
+          <span class="text-lime-400 font-mono-code text-xs uppercase font-bold tracking-widest block">
+            • ПРЕЦИЗНА ДОЗИРОВКА •
+          </span>
+          <h2 class="text-2xl sm:text-3xl font-black text-white uppercase tracking-tight">
+            Калкулатор за Разход на Разтвор
+          </h2>
+          <p class="text-xs sm:text-sm text-slate-400 leading-relaxed">
+            Изчислете точното количество препарат за Вашия обем пръскачка или обработваема площ, за да избегнете предозиране или фитотоксичност.
+          </p>
+
+          <div class="p-4 rounded-xl bg-slate-950 border border-emerald-900/50 space-y-2 text-xs">
+            <div class="flex items-center gap-2 text-emerald-400 font-bold">
+              <i data-lucide="check-circle" class="w-4 h-4"></i>
+              <span>Съобразено с официалните етикети на БАБХ</span>
+            </div>
+            <div class="flex items-center gap-2 text-slate-400">
+              <i data-lucide="info" class="w-4 h-4 text-slate-500"></i>
+              <span>Стандартен работен разтвор: 40-100 л/дка за лозя и овощни</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="lg:col-span-7 bg-tech-card border border-tech-border rounded-3xl p-6 sm:p-8 space-y-6">
+          
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div>
+              <label class="block text-xs font-bold text-slate-300 mb-1.5">Тип обработка:</label>
+              <select id="calcSprayerType" onchange="runTechCalculator()" class="w-full bg-slate-950 border border-emerald-900/60 rounded-xl p-2.5 text-xs text-slate-200 focus:outline-none focus:border-emerald-500">
+                <option value="tractor">Тракторна пръскачка (площ в дка)</option>
+                <option value="backpack">Гръбна пръскачка (обем вода в л)</option>
+              </select>
+            </div>
+
+            <div>
+              <label id="calcInputLabel" class="block text-xs font-bold text-slate-300 mb-1.5">Обработваема площ (дка):</label>
+              <input 
+                id="calcInputValue" 
+                type="number" 
+                value="5" 
+                min="0.5" 
+                step="0.5" 
+                oninput="runTechCalculator()"
+                class="w-full bg-slate-950 border border-emerald-900/60 rounded-xl p-2.5 text-xs text-slate-200 font-mono-code focus:outline-none focus:border-emerald-500"
+              >
+            </div>
+          </div>
+
+          <div>
+            <label class="block text-xs font-bold text-slate-300 mb-1.5">Изберете препарат:</label>
+            <select id="calcProductSelect" onchange="runTechCalculator()" class="w-full bg-slate-950 border border-emerald-900/60 rounded-xl p-2.5 text-xs text-slate-200 focus:outline-none focus:border-emerald-500">
+              <option value="luna" data-dose="200" data-unit="г" data-price="69.90" data-pack="1000">Луна Кеър ВГ (Флуопирам) — Доза: 200 г/дка</option>
+              <option value="mospilan" data-dose="20" data-unit="г" data-price="3.20" data-pack="50">Моспилан 20 СП (Ацетамиприд) — Доза: 20 г/дка</option>
+              <option value="scor" data-dose="25" data-unit="мл" data-price="5.60" data-pack="20">Скор 250 ЕК (Дифеноконазол) — Доза: 25 мл/дка</option>
+              <option value="coragen" data-dose="18" data-unit="мл" data-price="9.90" data-pack="50">Кораген 20 СК (Хлорантранилипрол) — Доза: 18 мл/дка</option>
+              <option value="ridomil" data-dose="500" data-unit="г" data-price="38.50" data-pack="1000">Ридомил Голд Р ВГ — Доза: 500 г/дка</option>
+            </select>
+          </div>
+
+          <!-- Live Result Card -->
+          <div class="bg-slate-950 border border-emerald-500/30 rounded-2xl p-4 sm:p-5 flex flex-col sm:flex-row items-center justify-between gap-4">
+            <div class="space-y-1 text-center sm:text-left">
+              <span class="text-[11px] uppercase font-bold text-slate-400">Необходимо количество:</span>
+              <div id="calcTotalProduct" class="text-2xl font-black text-emerald-400 font-mono-code">1.00 кг</div>
+              <span id="calcTotalWater" class="text-xs text-slate-400 block">Работен разтвор: ~250 л вода</span>
+            </div>
+
+            <div class="text-center sm:text-right">
+              <span class="text-[11px] uppercase font-bold text-slate-400">Ориентировъчна стойност:</span>
+              <div id="calcEstimatedCost" class="text-2xl font-black text-white font-mono-code">€ 69.90</div>
+              <span id="calcBgnCost" class="text-xs text-emerald-400 font-bold block">136.71 лв. с ДДС</span>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==========================================
+       6. MODERN HIGH-TECH PRODUCTS SHOWCASE
+       ========================================== -->
+  <section class="py-14 bg-slate-950 border-b border-emerald-950">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="flex items-center justify-between mb-8">
+        <div>
+          <span class="text-emerald-400 font-mono-code text-xs uppercase font-bold tracking-widest block">
+            • ОРИГИНАЛНИ ПРЕПАРАТИ •
+          </span>
+          <h2 class="text-2xl font-black text-white uppercase tracking-tight">
+            Препоръчани за Сезона
+          </h2>
+        </div>
+        <a href="category.html" class="text-xs font-bold text-emerald-400 hover:text-emerald-300 flex items-center gap-1">
+          Всички 230 продукта <i data-lucide="arrow-right" class="w-4 h-4"></i>
+        </a>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6" id="techProductsGrid">
+        <!-- Injected via JavaScript from window.AGRO_PRODUCTS -->
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==========================================
+       7. FOOTER WITH CONCEPT SWITCHER
+       ========================================== -->
+  <footer class="bg-black text-slate-400 py-12 border-t border-emerald-950 text-xs">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
+      
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+        
+        <div class="space-y-3">
+          <div class="flex items-center gap-2 text-white font-black text-base uppercase">
+            <i data-lucide="sprout" class="w-5 h-5 text-emerald-400"></i>
+            <span>AGRO DEMETRA TECH</span>
+          </div>
+          <p class="text-slate-400 text-xs leading-relaxed">
+            Интелигентна дигитална агроаптека с лиценз БАБХ № 1042-ПРЗ. Точни рецепти, прецизни дозировки и експресна доставка до всяко стопанство.
+          </p>
+          <div class="text-xs font-mono-code text-emerald-400">
+            Гореща линия: 0888 123 456
+          </div>
+        </div>
+
+        <div class="space-y-2">
+          <h4 class="text-white font-bold uppercase text-xs tracking-wider">Каталог</h4>
+          <ul class="space-y-1.5">
+            <li><a href="category.html?cat=fungicides" class="hover:text-emerald-400 transition">Фунгициди (38)</a></li>
+            <li><a href="category.html?cat=insecticides" class="hover:text-emerald-400 transition">Инсектициди (38)</a></li>
+            <li><a href="category.html?cat=herbicides" class="hover:text-emerald-400 transition">Хербициди (32)</a></li>
+            <li><a href="category.html?cat=fertilizers" class="hover:text-emerald-400 transition">Торове & Биостимулатори (42)</a></li>
+            <li><a href="category.html?cat=seeds" class="hover:text-emerald-400 transition">Семена & Разсади (35)</a></li>
+            <li><a href="category.html?cat=wine" class="hover:text-emerald-400 transition">Енология & Вино (25)</a></li>
+          </ul>
+        </div>
+
+        <div class="space-y-2">
+          <h4 class="text-white font-bold uppercase text-xs tracking-wider">Инструменти</h4>
+          <ul class="space-y-1.5">
+            <li><a href="#diagnostics" class="hover:text-emerald-400 transition">Агро Диагностик</a></li>
+            <li><a href="#calculator" class="hover:text-emerald-400 transition">Калкулатор за разтвор</a></li>
+            <li><a href="news.html" class="hover:text-emerald-400 transition">Пръскачен календар</a></li>
+            <li><a href="admin.html" class="hover:text-emerald-400 transition">Админ система</a></li>
+          </ul>
+        </div>
+
+        <!-- HOMEPAGE CONCEPT SWITCHER -->
+        <div class="bg-slate-900/60 p-4 rounded-xl border border-emerald-900/40 space-y-3">
+          <h4 class="text-emerald-400 font-bold uppercase text-xs tracking-wider flex items-center gap-1.5">
+            <i data-lucide="layout" class="w-4 h-4"></i> Дизайн Концепции
+          </h4>
+          <p class="text-[11px] text-slate-400">
+            Изберете предпочитания изглед на сайта:
+          </p>
+          <div class="space-y-2">
+            <a href="index.html" class="flex items-center justify-between p-2 rounded bg-slate-950 hover:bg-slate-800 text-slate-300 font-bold transition text-xs border border-emerald-950">
+              <span>1. Класически Агро Стил</span>
+              <i data-lucide="chevron-right" class="w-3.5 h-3.5 text-slate-500"></i>
+            </a>
+            <a href="home-2.html" class="flex items-center justify-between p-2 rounded bg-slate-950 hover:bg-slate-800 text-slate-300 font-bold transition text-xs border border-emerald-950">
+              <span>2. JYSK Стил</span>
+              <i data-lucide="chevron-right" class="w-3.5 h-3.5 text-slate-500"></i>
+            </a>
+            <a href="home-3.html" class="flex items-center justify-between p-2 rounded bg-emerald-500 text-slate-950 font-black transition text-xs">
+              <span>3. Модерен АгроТех (Текущ)</span>
+              <i data-lucide="check" class="w-3.5 h-3.5"></i>
+            </a>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="pt-6 border-t border-emerald-950 flex flex-col sm:flex-row items-center justify-between gap-3 text-[11px] text-slate-500">
+        <p>© 2026 AGRO DEMETRA TECH. Всички права запазени. Лиценз БАБХ № 1042-ПРЗ.</p>
+        <div class="flex items-center gap-4">
+          <a href="index.html" class="hover:underline">Home 1</a>
+          <span>·</span>
+          <a href="home-2.html" class="hover:underline">Home 2 (JYSK)</a>
+          <span>·</span>
+          <a href="home-3.html" class="text-emerald-400 font-bold hover:underline">Home 3 (AgroTech)</a>
+        </div>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/products-data.js"></script>
+  <script>
+    lucide.createIcons();
+
+    // Diagnostics Knowledgebase
+    const DIAGNOSTICS_DATA = {
+      'лозя': [
+        { 
+          symptom: 'Брашнеста мана (Оидиум)', 
+          desc: 'Бял брашнест налеп по листата и зърната, напукване на зърната.', 
+          recProd: 'Луна Кеър ВГ', 
+          active: 'Флуопирам + Фозетил-Al', 
+          dose: '200-250 г/дка', 
+          price: 69.90, 
+          image: '/images/products/sachet-wg.jpg',
+          prodId: 'luna-kear-vg'
+        },
+        { 
+          symptom: 'Обикновена мана (Мазни петна)', 
+          desc: 'Жълти мазни петна по горната страна на листата с бял спорообразуващ налеп отдолу.', 
+          recProd: 'Ридомил Голд Р ВГ', 
+          active: 'Мефеноксам + Меден оксихлорид', 
+          dose: '500 г/дка', 
+          price: 38.50, 
+          image: '/images/products/sachet-wg.jpg',
+          prodId: 'ridomil-gold-r-vg'
+        },
+        { 
+          symptom: 'Сиво гниене (Ботритис)', 
+          desc: 'Кафяво загниване и сив прашещ налеп по гроздовете при узряване.', 
+          recProd: 'Суич 62.5 ВГ', 
+          active: 'Ципродинил + Флудиоксонил', 
+          dose: '80-100 г/дка', 
+          price: 16.90, 
+          image: '/images/products/sachet-wg.jpg',
+          prodId: 'suich-625-vg'
+        }
+      ],
+      'овощни': [
+        { 
+          symptom: 'Струпясване по ябълка и круша', 
+          desc: 'Маслиненозелени до черни кадифени петна по листата и плодовете.', 
+          recProd: 'Скор 250 ЕК', 
+          active: 'Дифеноконазол (250 г/л)', 
+          dose: '20-30 мл/дка', 
+          price: 5.60, 
+          image: '/images/products/bottle-250ml.jpg',
+          prodId: 'skor-250-ek'
+        },
+        { 
+          symptom: 'Ябълков плодов червей', 
+          desc: 'Вгризване на гъсеници в плодовете и червясване.', 
+          recProd: 'Кораген 20 СК', 
+          active: 'Хлорантранилипрол', 
+          dose: '16-20 мл/дка', 
+          price: 9.90, 
+          image: '/images/products/bottle-250ml.jpg',
+          prodId: 'koragen-20-sk'
+        }
+      ],
+      'домати': [
+        { 
+          symptom: 'Картофена мана (Фитофтора)', 
+          desc: 'Воднисти тъмнокафяви петна по листата и плодовете с бял ореол.', 
+          recProd: 'Куадрис 25 СК', 
+          active: 'Азоксистробин', 
+          dose: '80-100 мл/дка', 
+          price: 48.00, 
+          image: '/images/products/bottle-1l.jpg',
+          prodId: 'kuadris-25-sk'
+        },
+        { 
+          symptom: 'Листни въшки & Оранжерийна белокрилка', 
+          desc: 'Завиване на листата, лепкава медена роса и деформация.', 
+          recProd: 'Моспилан 20 СП', 
+          active: 'Ацетамиприд', 
+          dose: '15-25 г/дка', 
+          price: 3.20, 
+          image: '/images/products/bottle-250ml.jpg',
+          prodId: 'mospilan-20-sp'
+        }
+      ],
+      'картофи': [
+        { 
+          symptom: 'Колорадски бръмбар', 
+          desc: 'Нагризване на листата от възрастни и червени ларви.', 
+          recProd: 'Кораген 20 СК', 
+          active: 'Хлорантранилипрол', 
+          dose: '16-20 мл/дка', 
+          price: 9.90, 
+          image: '/images/products/bottle-250ml.jpg',
+          prodId: 'koragen-20-sk'
+        },
+        { 
+          symptom: 'Мана по картофите', 
+          desc: 'Тъмни прегарящи петна по листната маса и клубените.', 
+          recProd: 'Инфинито СК', 
+          active: 'Флуопиколид + Пропамокарб', 
+          dose: '120-160 мл/дка', 
+          price: 43.50, 
+          image: '/images/products/bottle-1l.jpg',
+          prodId: 'infinito-sk'
+        }
+      ],
+      'житни': [
+        { 
+          symptom: 'Ръжда & Септориоза', 
+          desc: 'Жълти до оранжеви пустули по флаговия лист.', 
+          recProd: 'Фоликур 250 ЕВ', 
+          active: 'Тебуконазол', 
+          dose: '100 мл/дка', 
+          price: 32.00, 
+          image: '/images/products/bottle-1l.jpg',
+          prodId: 'folikur-250-ev'
+        }
+      ]
+    };
+
+    let activeCrop = 'лозя';
+    let activeSymptomIndex = 0;
+
+    function selectCrop(crop, btn) {
+      activeCrop = crop;
+      activeSymptomIndex = 0;
+
+      document.querySelectorAll('.crop-btn').forEach(b => {
+        b.classList.remove('bg-emerald-500', 'text-slate-950', 'font-black', 'border-emerald-400');
+        b.classList.add('bg-slate-900/80', 'text-slate-300', 'font-bold', 'border-emerald-900/40');
+      });
+      btn.classList.add('bg-emerald-500', 'text-slate-950', 'font-black', 'border-emerald-400');
+      btn.classList.remove('bg-slate-900/80', 'text-slate-300');
+
+      renderSymptoms();
+    }
+
+    function renderSymptoms() {
+      const container = document.getElementById('symptomSelector');
+      const list = DIAGNOSTICS_DATA[activeCrop] || [];
+      if (!container) return;
+
+      container.innerHTML = list.map((item, idx) => `
+        <button onclick="selectSymptom(${idx})" class="symptom-btn ${idx === activeSymptomIndex ? 'bg-emerald-500/20 border-emerald-400 text-emerald-300' : 'bg-slate-900 border-emerald-900/40 text-slate-400 hover:text-slate-200'} p-3 rounded-xl text-left border text-xs font-semibold transition">
+          ${item.symptom}
+        </button>
+      `).join('');
+
+      renderSolution();
+    }
+
+    function selectSymptom(idx) {
+      activeSymptomIndex = idx;
+      renderSymptoms();
+    }
+
+    function renderSolution() {
+      const container = document.getElementById('solutionBox');
+      const item = (DIAGNOSTICS_DATA[activeCrop] || [])[activeSymptomIndex];
+      if (!container || !item) return;
+
+      container.innerHTML = `
+        <div class="flex flex-col md:flex-row items-center justify-between gap-6">
+          <div class="flex items-center gap-5 w-full md:w-auto">
+            <div class="w-24 h-24 bg-slate-900 rounded-xl p-2 border border-emerald-900/60 flex items-center justify-center shrink-0">
+              <img src="${item.image}" alt="${item.recProd}" class="max-h-full max-w-full object-contain">
+            </div>
+            <div>
+              <span class="text-[10px] font-mono-code text-emerald-400 uppercase font-bold tracking-wider">Препоръчан препарат</span>
+              <h3 class="text-lg font-black text-white">${item.recProd}</h3>
+              <p class="text-xs text-slate-400 mt-0.5">${item.active}</p>
+              <div class="mt-2 flex items-center gap-2 text-xs">
+                <span class="bg-emerald-950 border border-emerald-500/40 text-emerald-400 px-2 py-0.5 rounded font-mono-code">Доза: ${item.dose}</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="flex items-center justify-between w-full md:w-auto md:flex-col md:items-end gap-3 pt-4 md:pt-0 border-t md:border-t-0 border-emerald-900/50">
+            <div class="text-left md:text-right">
+              <span class="text-xs text-slate-500 block">Цена с ДДС:</span>
+              <span class="text-xl font-black text-white font-mono-code">€ ${item.price.toFixed(2)}</span>
+              <span class="text-[10px] text-emerald-400 font-bold block">${(item.price * 1.95583).toFixed(2)} лв.</span>
+            </div>
+            <a href="product.html?prod=${item.prodId}" class="bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-black px-5 py-2.5 rounded-xl text-xs uppercase tracking-wider transition shadow-md shadow-emerald-500/20">
+              Поръчай веднага
+            </a>
+          </div>
+        </div>
+      `;
+    }
+
+    // Live Tank Calculator
+    function runTechCalculator() {
+      const type = document.getElementById('calcSprayerType').value;
+      const inputVal = parseFloat(document.getElementById('calcInputValue').value) || 1;
+      const label = document.getElementById('calcInputLabel');
+      const prodSelect = document.getElementById('calcProductSelect');
+      const opt = prodSelect.options[prodSelect.selectedIndex];
+
+      const dose = parseFloat(opt.getAttribute('data-dose'));
+      const unit = opt.getAttribute('data-unit');
+      const price = parseFloat(opt.getAttribute('data-price'));
+      const packSize = parseFloat(opt.getAttribute('data-pack'));
+
+      let totalProduct = 0;
+      let totalWater = 0;
+
+      if (type === 'tractor') {
+        label.innerText = 'Обработваема площ (дка):';
+        totalProduct = dose * inputVal;
+        totalWater = inputVal * 50; // 50 L per dka
+      } else {
+        label.innerText = 'Обем на пръскачката (литри вода):';
+        totalProduct = (dose / 100) * inputVal; // assuming dose is per 100L
+        totalWater = inputVal;
+      }
+
+      // Format product
+      let prodText = `${totalProduct.toFixed(1)} ${unit}`;
+      if (totalProduct >= 1000) {
+        prodText = `${(totalProduct / 1000).toFixed(2)} ${unit === 'г' ? 'кг' : 'л'}`;
+      }
+      document.getElementById('calcTotalProduct').innerText = prodText;
+      document.getElementById('calcTotalWater').innerText = `Работен разтвор: ~${totalWater.toFixed(0)} л вода`;
+
+      // Packs needed & cost
+      const packs = Math.max(1, Math.ceil(totalProduct / packSize));
+      const cost = packs * price;
+      document.getElementById('calcEstimatedCost').innerText = `€ ${cost.toFixed(2)}`;
+      document.getElementById('calcBgnCost').innerText = `${(cost * 1.95583).toFixed(2)} лв. с ДДС`;
+    }
+
+    // Render 4 Showcase Products
+    function renderTechProducts() {
+      const container = document.getElementById('techProductsGrid');
+      if (!container || !window.AGRO_PRODUCTS) return;
+
+      const items = window.AGRO_PRODUCTS.slice(0, 4);
+
+      container.innerHTML = items.map(p => `
+        <div class="bg-tech-card border border-tech-border hover:border-emerald-500 rounded-2xl p-5 transition flex flex-col justify-between group">
+          <div>
+            <div class="relative bg-slate-950 rounded-xl p-4 flex items-center justify-center h-44 mb-4 border border-emerald-950">
+              <span class="absolute top-2 left-2 bg-emerald-950 text-emerald-400 border border-emerald-500/30 text-[9px] font-mono-code px-1.5 py-0.2 rounded uppercase">
+                ${p.brandName.split(' ')[0]}
+              </span>
+              <a href="product.html?prod=${p.id}" class="h-full w-full flex items-center justify-center group-hover:scale-105 transition">
+                <img src="${p.image}" alt="${p.name}" class="max-h-full max-w-full object-contain">
+              </a>
+            </div>
+
+            <div class="text-[10px] font-mono-code text-slate-500 uppercase">${p.categoryName}</div>
+            <a href="product.html?prod=${p.id}" class="text-sm font-bold text-white hover:text-emerald-400 transition line-clamp-2 mt-1">
+              ${p.name}
+            </a>
+            <p class="text-xs text-slate-400 line-clamp-2 mt-1">
+              ${p.desc}
+            </p>
+          </div>
+
+          <div class="pt-4 mt-4 border-t border-emerald-950 flex items-center justify-between">
+            <div>
+              <div class="text-base font-black text-white font-mono-code">€ ${p.price.toFixed(2)}</div>
+              <div class="text-[10px] text-emerald-400 font-bold">${(p.price * 1.95583).toFixed(2)} лв.</div>
+            </div>
+            <a href="product.html?prod=${p.id}" class="bg-emerald-500/20 hover:bg-emerald-500 text-emerald-300 hover:text-slate-950 font-bold px-3 py-1.5 rounded-lg text-xs transition border border-emerald-500/30">
+              Детайли
+            </a>
+          </div>
+        </div>
+      `).join('');
+
+      lucide.createIcons();
+    }
+
+    window.addEventListener('DOMContentLoaded', () => {
+      renderSymptoms();
+      runTechCalculator();
+      renderTechProducts();
+    });
+  </script>
+</body>
+</html>

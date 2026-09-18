@@ -292,10 +292,49 @@ const PRODUCTS_DEFINITION = [
   { name: "Лимонена Киселина Хранителна", active: "Чиста монохидратна лимонена киселина", brand: "manica", brandName: "Enartis", cat: "wine", price: 2.90, unit: "500 г", crops: ["лозя"], form: "Кристали", use: "nonprof", quar: "0 дни", dose: "50-100 г за 100 л", desc: "Коригира свежестта и киселинността на нискокиселинни южни гроздови мъсти." }
 ];
 
+function getProductImage(p) {
+  // 1. Seeds
+  if (p.cat === 'seeds') {
+    return '/images/products/seed-packet.jpg';
+  }
+  // 2. Wine & enology
+  if (p.cat === 'wine') {
+    return '/images/products/wine-bottle.jpg';
+  }
+  // 3. Biocides & DDD
+  if (p.cat === 'biocides') {
+    return '/images/products/spray-biocide.jpg';
+  }
+  // 4. Fertilizers
+  if (p.cat === 'fertilizers') {
+    if (p.unit.includes('кг') || (p.form && (p.form.includes('Гранули') || p.form.includes('Кристали')))) {
+      return '/images/products/fertilizer-sack.jpg';
+    } else if (p.unit.includes('5') || p.unit.includes('10') || p.unit.includes('20')) {
+      return '/images/products/canister-5l.jpg';
+    } else {
+      return '/images/products/bottle-1l.jpg';
+    }
+  }
+  // 5. Powders and granules (ВГ, ВДГ, ВП, СП)
+  const isPowderOrGranule = ['ВГ', 'ВДГ', 'ВП', 'СП', 'Прах', 'Гранули', 'Водоразтворим прах'].includes(p.form) || p.unit.includes('г') || p.unit.includes('кг');
+  if (isPowderOrGranule && !p.unit.includes('5 кг') && !p.unit.includes('10 кг')) {
+    return '/images/products/sachet-wg.jpg';
+  }
+  // 6. Bulk canisters (5л, 10л, 20л, or herbicides)
+  if (p.unit.includes('5 л') || p.unit.includes('10 л') || p.unit.includes('20 л') || p.cat === 'herbicides') {
+    return '/images/products/canister-5l.jpg';
+  }
+  // 7. Small bottles (20 мл, 50 мл, 100 мл, 250 мл, 500 мл)
+  if (p.unit.includes('мл') || p.unit.includes('100') || p.unit.includes('250') || p.unit.includes('500') || p.cat === 'insecticides') {
+    return '/images/products/bottle-250ml.jpg';
+  }
+  // 8. Standard 1L bottle
+  return '/images/products/bottle-1l.jpg';
+}
+
 // Generate slugs and complete JSON object
 const ALL_PRODUCTS = PRODUCTS_DEFINITION.map((p, idx) => {
-  const categoryImages = IMAGES[p.cat] || IMAGES.fungicides;
-  const image = categoryImages[idx % categoryImages.length];
+  const image = getProductImage(p);
   
   // Create unique clean slug
   const slug = p.name

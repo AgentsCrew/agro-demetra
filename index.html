@@ -5,6 +5,74 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>АГРО ДЕМЕТРА | Онлайн Агроаптека – Препарати, Семена, Торове и Агроном на Линия</title>
   <meta name="description" content="Лицензирана онлайн агроаптека Агро Деметра. Оригинални препарати за растителна защита (ПРЗ), сертифицирани семена, листни торове, капково напояване и консултации с агроном. Експресна доставка с Еконт и Спиди.">
+  <link rel="canonical" href="https://agrodemetra.bg/">
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+
+  <!-- Schema.org JSON-LD Structured Data for Google & AI Engines -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Organization",
+        "@id": "https://agrodemetra.bg/#organization",
+        "name": "AGRO DEMETRA (Агро Деметра)",
+        "url": "https://agrodemetra.bg",
+        "logo": "https://agrodemetra.bg/images/products/bottle-1l.jpg",
+        "telephone": "+359888123456",
+        "email": "orders@agrodemetra.bg",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "бул. Марица 142",
+          "addressLocality": "Пловдив",
+          "postalCode": "4000",
+          "addressCountry": "BG"
+        }
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://agrodemetra.bg/#website",
+        "url": "https://agrodemetra.bg",
+        "name": "Agro Demetra Онлайн Агроаптека",
+        "publisher": { "@id": "https://agrodemetra.bg/#organization" },
+        "potentialAction": {
+          "@type": "SearchAction",
+          "target": "https://agrodemetra.bg/category.html?q={search_term_string}",
+          "query-input": "required name=search_term_string"
+        }
+      },
+      {
+        "@type": "Pharmacy",
+        "@id": "https://agrodemetra.bg/#store",
+        "name": "Агро Деметра — Професионална Агроаптека",
+        "image": "https://agrodemetra.bg/images/products/canister-5l.jpg",
+        "telephone": "+359888123456",
+        "priceRange": "€",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "бул. Марица 142",
+          "addressLocality": "Пловдив",
+          "postalCode": "4000",
+          "addressCountry": "BG"
+        },
+        "openingHoursSpecification": [
+          {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+            "opens": "08:00",
+            "closes": "18:30"
+          },
+          {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": ["Saturday"],
+            "opens": "08:30",
+            "closes": "14:00"
+          }
+        ]
+      }
+    ]
+  }
+  </script>
   
   <!-- Tailwind CSS CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
@@ -86,9 +154,9 @@
   </div>
 
   <!-- ==========================================
-       3. MAIN HEADER
+       3. MAIN HEADER (Scrolls naturally)
        ========================================== -->
-  <header class="bg-white border-b border-slate-200 sticky top-0 z-40 shadow-sm transition-all">
+  <header class="bg-white border-b border-slate-200 transition-all">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3.5">
       <div class="flex items-center justify-between gap-4 lg:gap-8">
         
@@ -188,13 +256,15 @@
         </form>
       </div>
     </div>
+  </header>
 
-    <!-- ==========================================
-         4. REAL E-COMMERCE NAVIGATION & MEGA MENU
-         ========================================== -->
-    <nav class="bg-brand-900 text-white border-t border-brand-800 hidden lg:block relative">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="flex items-center justify-between">
+  <!-- ==========================================
+       4. COMPACT STICKY CATEGORY NAVIGATION (ONLY THIS STICKS!)
+       ========================================== -->
+  <nav class="bg-brand-900 text-white sticky top-0 z-40 shadow-md">
+    <!-- Desktop Navigation Bar -->
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 hidden lg:block">
+      <div class="flex items-center justify-between">
           
           <!-- Mega Menu Trigger Button -->
           <div class="relative group">
@@ -335,8 +405,19 @@
 
         </div>
       </div>
+
+      <!-- Mobile Horizontal Category Scroll Bar (Fast Swipe on Mobile) -->
+      <div class="lg:hidden px-3 py-2 flex items-center gap-2 overflow-x-auto whitespace-nowrap text-xs border-t border-brand-800">
+        <a href="category.html?cat=all" class="bg-brand-800 text-white font-bold px-3 py-1.5 rounded-lg shrink-0">Всички</a>
+        <a href="category.html?cat=fungicides" class="bg-brand-950/60 hover:bg-brand-800 text-slate-200 px-3 py-1.5 rounded-lg shrink-0">Фунгициди</a>
+        <a href="category.html?cat=insecticides" class="bg-brand-950/60 hover:bg-brand-800 text-slate-200 px-3 py-1.5 rounded-lg shrink-0">Инсектициди</a>
+        <a href="category.html?cat=herbicides" class="bg-brand-950/60 hover:bg-brand-800 text-slate-200 px-3 py-1.5 rounded-lg shrink-0">Хербициди</a>
+        <a href="category.html?cat=fertilizers" class="bg-brand-950/60 hover:bg-brand-800 text-slate-200 px-3 py-1.5 rounded-lg shrink-0">Торове</a>
+        <a href="category.html?cat=seeds" class="bg-brand-950/60 hover:bg-brand-800 text-slate-200 px-3 py-1.5 rounded-lg shrink-0">Семена</a>
+        <a href="category.html?cat=wine" class="bg-purple-950/80 hover:bg-purple-900 text-purple-200 px-3 py-1.5 rounded-lg shrink-0">Вино</a>
+        <a href="category.html?filter=promo" class="bg-red-600 text-white font-bold px-3 py-1.5 rounded-lg shrink-0">Промо %</a>
+      </div>
     </nav>
-  </header>
 
   <!-- ==========================================
        5. HERO SECTION (With Real Crop Solver)
@@ -1446,7 +1527,7 @@
           </ul>
         </div>
 
-        <!-- Col 4: Агрономически център -->
+        <!-- Col 4: Агрономически център & Концепции -->
         <div class="space-y-2.5">
           <h4 class="text-xs font-bold text-white uppercase tracking-wider">Агро Сервиз</h4>
           <ul class="space-y-1.5 text-slate-400">
@@ -1454,7 +1535,8 @@
             <li><a href="product.html" class="hover:text-white transition">Калкулатор за разходна норма</a></li>
             <li><a href="news.html" class="hover:text-white transition">Диагностика на болести</a></li>
             <li><a href="tel:0888123456" class="hover:text-white transition">Консултация с агроном</a></li>
-            <li><a href="category.html" class="hover:text-white transition">Цени на едро за производители</a></li>
+            <li class="pt-1.5"><a href="home-2.html" class="text-amber-300 font-bold hover:text-white transition flex items-center gap-1"><i data-lucide="layout" class="w-3 h-3"></i> Home 2 (JYSK Стил)</a></li>
+            <li><a href="home-3.html" class="text-emerald-300 font-bold hover:text-white transition flex items-center gap-1"><i data-lucide="layout" class="w-3 h-3"></i> Home 3 (Модерен АгроТех)</a></li>
           </ul>
         </div>
 
@@ -1492,15 +1574,22 @@
 
       </div>
 
-      <!-- Bottom Bar: Payment Logos & Copyright -->
-      <div class="pt-6 flex flex-col sm:flex-row items-center justify-between gap-4 text-[11px] text-slate-500">
-        <p>© 2026 АГРО ДЕМЕТРА ООД. Всички права запазени. Изработено за модерни агро-бизнеси.</p>
+      <!-- Bottom Bar: Concepts, Payment Logos & Copyright -->
+      <div class="pt-6 flex flex-col md:flex-row items-center justify-between gap-4 text-[11px] text-slate-500 border-t border-slate-800">
+        <p>© 2026 АГРО ДЕМЕТРА ООД. Всички права запазени. Лиценз БАБХ № 1042-ПРЗ.</p>
         
+        <div class="flex items-center gap-2 text-slate-400">
+          <span class="text-slate-500 font-bold">Изглед:</span>
+          <a href="index.html" class="text-white font-bold hover:underline">Home 1 (Класик)</a>
+          <span>·</span>
+          <a href="home-2.html" class="text-amber-300 font-bold hover:underline">Home 2 (JYSK)</a>
+          <span>·</span>
+          <a href="home-3.html" class="text-emerald-400 font-bold hover:underline">Home 3 (AgroTech)</a>
+        </div>
+
         <div class="flex items-center gap-4 text-slate-400">
-          <span class="flex items-center gap-1"><i data-lucide="truck" class="w-3.5 h-3.5 text-amber-400"></i> Еконт Експрес</span>
-          <span class="flex items-center gap-1"><i data-lucide="truck" class="w-3.5 h-3.5 text-amber-400"></i> Спиди</span>
-          <span class="flex items-center gap-1"><i data-lucide="credit-card" class="w-3.5 h-3.5 text-blue-400"></i> Visa / Mastercard</span>
-          <span class="flex items-center gap-1"><i data-lucide="banknote" class="w-3.5 h-3.5 text-emerald-400"></i> Наложен платеж</span>
+          <span class="flex items-center gap-1"><i data-lucide="truck" class="w-3.5 h-3.5 text-amber-400"></i> Еконт / Спиди</span>
+          <span class="flex items-center gap-1"><i data-lucide="credit-card" class="w-3.5 h-3.5 text-blue-400"></i> Карта / Наложен платеж</span>
         </div>
       </div>
 

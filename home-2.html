@@ -1,0 +1,612 @@
+<!DOCTYPE html>
+<html lang="bg" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Agro Demetra — Скандинавски Стил (Home 2) | Седмични Оферти за Растителна Защита</title>
+  <meta name="description" content="Agro Demetra - Седмични промоции за препарати за растителна защита, торове и семена в изчистен скандинавски стил (JYSK дизайн). Лиценз БАБХ № 1042-ПРЗ.">
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            jysk: {
+              blue: '#003c71',
+              darkblue: '#00284d',
+              lightblue: '#e6f0fa',
+              yellow: '#ffcc00',
+              red: '#e0001b',
+              gray: '#f4f6f8'
+            }
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Google Fonts & Lucide Icons -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <style>
+    body { font-family: 'Plus Jakarta Sans', sans-serif; }
+  </style>
+</head>
+<body class="bg-white text-slate-900 antialiased selection:bg-jysk-blue selection:text-white">
+
+  <!-- ==========================================
+       1. TOP UTILITY BAR (JYSK Style)
+       ========================================== -->
+  <div class="bg-jysk-darkblue text-slate-200 text-xs py-2 px-4 hidden md:block border-b border-white/10">
+    <div class="max-w-7xl mx-auto flex items-center justify-between font-medium">
+      <div class="flex items-center space-x-6">
+        <a href="#brochure" class="text-jysk-yellow hover:underline flex items-center gap-1.5 font-bold">
+          <i data-lucide="book-open" class="w-3.5 h-3.5"></i> Разгледайте новата агро брошура
+        </a>
+        <span class="text-white/20">|</span>
+        <span class="flex items-center gap-1.5 text-slate-300">
+          <i data-lucide="clock" class="w-3.5 h-3.5 text-jysk-yellow"></i> Пон - Пет: 08:00 - 18:30 | Съб: 08:30 - 14:00
+        </span>
+        <span class="text-white/20">|</span>
+        <span class="text-slate-300">Лиценз БАБХ № 1042-ПРЗ</span>
+      </div>
+      <div class="flex items-center space-x-5 text-slate-300">
+        <a href="category.html" class="hover:text-white transition flex items-center gap-1">
+          <i data-lucide="map-pin" class="w-3.5 h-3.5 text-jysk-yellow"></i> Складове: Пловдив · Ст. Загора · София
+        </a>
+        <span class="text-white/20">|</span>
+        <a href="tel:0888123456" class="hover:text-white font-bold text-white flex items-center gap-1">
+          <i data-lucide="phone" class="w-3.5 h-3.5 text-emerald-400"></i> 0888 123 456
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==========================================
+       2. MAIN HEADER (JYSK Deep Blue)
+       ========================================== -->
+  <header class="bg-jysk-blue text-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
+      <div class="flex items-center justify-between gap-4 lg:gap-8">
+        
+        <!-- Mobile Menu Button -->
+        <button id="mobileMenuBtn" class="lg:hidden p-2 text-white hover:bg-white/10 rounded-lg" aria-label="Меню">
+          <i data-lucide="menu" class="w-6 h-6"></i>
+        </button>
+
+        <!-- Brand Logo -->
+        <a href="home-2.html" class="flex items-center gap-3 shrink-0">
+          <div class="w-10 h-10 sm:w-11 sm:h-11 rounded-lg bg-white flex items-center justify-center text-jysk-blue font-black shadow-md">
+            <i data-lucide="sprout" class="w-6 h-6 text-emerald-600"></i>
+          </div>
+          <div>
+            <span class="text-xl sm:text-2xl font-black tracking-tight text-white font-sans uppercase">AGRO<span class="text-jysk-yellow">DEMETRA</span></span>
+            <p class="text-[10px] uppercase font-bold tracking-wider text-slate-200">Скандинавски Стандарт в Земеделието</p>
+          </div>
+        </a>
+
+        <!-- JYSK Style Search Bar -->
+        <div class="hidden md:flex flex-1 max-w-2xl">
+          <form action="category.html" method="GET" class="w-full flex rounded-lg overflow-hidden shadow-sm bg-white">
+            <input 
+              type="text" 
+              name="q"
+              placeholder="Търсете в седмичните оферти (напр. Луна, Моспилан, Скор, Карбамид)..." 
+              class="w-full px-4 py-2.5 text-xs sm:text-sm text-slate-800 placeholder-slate-400 focus:outline-none"
+            >
+            <button type="submit" class="bg-jysk-yellow hover:bg-amber-400 text-slate-950 px-6 font-black text-xs uppercase tracking-wider flex items-center gap-1.5 transition">
+              <i data-lucide="search" class="w-4 h-4"></i> Търси
+            </button>
+          </form>
+        </div>
+
+        <!-- Right Utilities: Brochure & Cart -->
+        <div class="flex items-center gap-3 sm:gap-4">
+          <a href="#brochure" class="hidden sm:flex items-center gap-2 bg-white/10 hover:bg-white/20 border border-white/20 px-3.5 py-2 rounded-lg text-xs font-bold transition">
+            <i data-lucide="file-text" class="w-4 h-4 text-jysk-yellow"></i>
+            <span>Брошура</span>
+          </a>
+
+          <a href="category.html" class="flex items-center gap-2.5 bg-jysk-yellow hover:bg-amber-400 text-slate-950 px-4 py-2 rounded-lg text-xs font-black transition shadow-sm">
+            <i data-lucide="shopping-cart" class="w-4 h-4"></i>
+            <span class="hidden sm:inline">Количка</span>
+            <span class="bg-slate-900 text-white px-2 py-0.5 rounded-full text-[10px] font-bold">2</span>
+          </a>
+        </div>
+
+      </div>
+
+      <!-- Mobile Search Bar -->
+      <div class="mt-3 md:hidden">
+        <form action="category.html" method="GET" class="flex rounded-lg overflow-hidden bg-white">
+          <input 
+            type="text" 
+            name="q" 
+            placeholder="Търсете препарат, вредител..." 
+            class="w-full px-3 py-2 text-xs text-slate-800 focus:outline-none"
+          >
+          <button type="submit" class="bg-jysk-yellow px-4 text-slate-950 font-bold">
+            <i data-lucide="search" class="w-4 h-4"></i>
+          </button>
+        </form>
+      </div>
+    </div>
+  </header>
+
+  <!-- ==========================================
+       3. STICKY CATEGORY NAV BAR (JYSK White / Navy Border)
+       ========================================== -->
+  <nav class="bg-white border-b-2 border-jysk-blue shadow-sm sticky top-0 z-40">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between text-xs font-bold py-2.5 overflow-x-auto whitespace-nowrap">
+      <div class="flex items-center space-x-1 sm:space-x-3">
+        <a href="category.html?cat=all" class="px-3 py-1.5 rounded text-jysk-blue bg-jysk-lightblue font-black flex items-center gap-1.5">
+          <i data-lucide="layout-grid" class="w-4 h-4"></i> Всички Категории
+        </a>
+        <a href="category.html?cat=fungicides" class="px-3 py-1.5 rounded hover:bg-slate-100 text-slate-700 hover:text-jysk-blue transition">
+          Фунгициди
+        </a>
+        <a href="category.html?cat=insecticides" class="px-3 py-1.5 rounded hover:bg-slate-100 text-slate-700 hover:text-jysk-blue transition">
+          Инсектициди
+        </a>
+        <a href="category.html?cat=herbicides" class="px-3 py-1.5 rounded hover:bg-slate-100 text-slate-700 hover:text-jysk-blue transition">
+          Хербициди
+        </a>
+        <a href="category.html?cat=fertilizers" class="px-3 py-1.5 rounded hover:bg-slate-100 text-slate-700 hover:text-jysk-blue transition">
+          Торове
+        </a>
+        <a href="category.html?cat=seeds" class="px-3 py-1.5 rounded hover:bg-slate-100 text-slate-700 hover:text-jysk-blue transition">
+          Семена
+        </a>
+        <a href="category.html?cat=wine" class="px-3 py-1.5 rounded hover:bg-slate-100 text-purple-700 transition">
+          Вино & Ракия
+        </a>
+      </div>
+
+      <div class="hidden lg:flex items-center space-x-3">
+        <a href="#campaign-deals" class="bg-jysk-red text-white px-3 py-1 rounded font-black text-[11px] uppercase tracking-wider flex items-center gap-1">
+          <i data-lucide="tag" class="w-3.5 h-3.5"></i> ТОП ОФЕРТИ %
+        </a>
+        <a href="news.html" class="text-slate-600 hover:text-jysk-blue text-xs flex items-center gap-1">
+          <i data-lucide="calendar" class="w-3.5 h-3.5 text-amber-500"></i> Пръскачен календар
+        </a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ==========================================
+       4. JYSK-STYLE HERO CAMPAIGN BANNER
+       ========================================== -->
+  <section class="bg-jysk-gray py-6 sm:py-8 border-b border-slate-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 items-stretch">
+        
+        <!-- Big Main Promotional Banner -->
+        <div class="lg:col-span-8 bg-jysk-blue rounded-2xl p-6 sm:p-10 text-white relative overflow-hidden flex flex-col justify-between shadow-sm">
+          <div class="relative z-10 max-w-xl space-y-4">
+            <div class="inline-flex items-center gap-2 bg-jysk-yellow text-slate-950 text-xs font-black uppercase px-3 py-1 rounded">
+              <i data-lucide="sparkles" class="w-3.5 h-3.5"></i> Седмична Агро Кампания
+            </div>
+            
+            <h1 class="text-2xl sm:text-4xl lg:text-5xl font-black uppercase tracking-tight leading-none text-white">
+              СПЕСТЕТЕ ДО <span class="text-jysk-yellow">40%</span> ПРИ ПРОЛЕТНОТО ПРЪСКАНЕ!
+            </h1>
+            
+            <p class="text-sm sm:text-base text-slate-200 leading-relaxed font-medium">
+              Оригинални фунгициди, инсектициди и водоразтворими NPK торове на гарантирано най-добри цени. Лицензиран произход от Bayer, Syngenta и BASF с безплатна консултация от наш агроном.
+            </p>
+
+            <div class="pt-2 flex flex-wrap gap-3">
+              <a href="category.html?cat=prz" class="bg-jysk-yellow hover:bg-amber-400 text-slate-950 font-black px-6 py-3 rounded-lg text-xs sm:text-sm uppercase tracking-wider transition shadow-md flex items-center gap-2">
+                <span>Вижте всички промоции</span>
+                <i data-lucide="arrow-right" class="w-4 h-4"></i>
+              </a>
+              <a href="#brochure" class="bg-white/10 hover:bg-white/20 border border-white/30 text-white font-bold px-5 py-3 rounded-lg text-xs sm:text-sm transition flex items-center gap-2">
+                <i data-lucide="book-open" class="w-4 h-4"></i>
+                <span>Разгледай онлайн брошурата</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- Bottom Trust Badges -->
+          <div class="relative z-10 mt-8 pt-6 border-t border-white/15 grid grid-cols-3 gap-2 text-center sm:text-left text-[11px] font-semibold text-slate-300">
+            <div class="flex items-center gap-2">
+              <i data-lucide="truck" class="w-4 h-4 text-jysk-yellow shrink-0"></i>
+              <span>Експресна доставка до 24ч</span>
+            </div>
+            <div class="flex items-center gap-2">
+              <i data-lucide="shield-check" class="w-4 h-4 text-jysk-yellow shrink-0"></i>
+              <span>100% Оригинален произход</span>
+            </div>
+            <div class="flex items-center gap-2">
+              <i data-lucide="phone-call" class="w-4 h-4 text-jysk-yellow shrink-0"></i>
+              <span>Безплатен агро съвет</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Secondary Campaign Tile: Weekly Highlight -->
+        <div class="lg:col-span-4 bg-white rounded-2xl border-2 border-jysk-red p-6 flex flex-col justify-between shadow-sm relative overflow-hidden">
+          <div class="absolute -right-8 -top-8 w-28 h-28 bg-jysk-red rounded-full flex items-end justify-center pb-3 pr-3 text-white font-black text-xs uppercase transform rotate-12 shadow-sm">
+            <span>ХИТ!</span>
+          </div>
+
+          <div>
+            <span class="bg-red-100 text-jysk-red text-[11px] font-black uppercase px-2.5 py-1 rounded">
+              Оферта на седмицата
+            </span>
+
+            <div class="mt-4 flex items-center justify-center p-4 bg-slate-50 rounded-xl">
+              <img src="/images/products/sachet-wg.jpg" alt="Луна Кеър ВГ" class="h-44 object-contain drop-shadow-md">
+            </div>
+
+            <h3 class="mt-4 text-base font-black text-slate-900 leading-snug">
+              Луна Кеър ВГ – 1 кг
+            </h3>
+            <p class="text-xs text-slate-500 mt-1">Системен фунгицид Bayer срещу оидиум и струпясване по овощни и лозя.</p>
+          </div>
+
+          <div class="mt-6 pt-4 border-t border-slate-100 flex items-center justify-between">
+            <div>
+              <span class="text-xs text-slate-400 line-through">€ 78.00</span>
+              <div class="text-2xl font-black text-jysk-red">€ 69.90</div>
+              <span class="text-[10px] font-bold text-slate-500">136.71 лв. с ДДС</span>
+            </div>
+
+            <a href="product.html?prod=luna-kear-vg" class="bg-jysk-blue hover:bg-jysk-darkblue text-white font-bold px-4 py-2.5 rounded-lg text-xs transition">
+              Купи сега
+            </a>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==========================================
+       5. JYSK-STYLE CATEGORIES GRID
+       ========================================== -->
+  <section class="py-12 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="flex items-center justify-between mb-8 border-b-2 border-slate-100 pb-4">
+        <div>
+          <h2 class="text-2xl font-black uppercase tracking-tight text-slate-900">
+            Пазарувайте по категория
+          </h2>
+          <p class="text-xs text-slate-500 mt-0.5">Всичко необходимо за Вашите насаждения, овошки и градина</p>
+        </div>
+        <a href="category.html" class="text-xs font-bold text-jysk-blue hover:underline flex items-center gap-1">
+          Вижте целия каталог <i data-lucide="chevron-right" class="w-4 h-4"></i>
+        </a>
+      </div>
+
+      <!-- Categories Tiles -->
+      <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-4">
+        
+        <a href="category.html?cat=fungicides" class="group border border-slate-200 hover:border-jysk-blue rounded-xl p-4 text-center transition hover:shadow-md bg-white">
+          <div class="w-16 h-16 mx-auto rounded-full bg-blue-50 flex items-center justify-center text-jysk-blue group-hover:scale-110 transition duration-200 mb-3">
+            <i data-lucide="shield" class="w-8 h-8"></i>
+          </div>
+          <h3 class="text-xs font-black uppercase text-slate-900 group-hover:text-jysk-blue">Фунгициди</h3>
+          <p class="text-[10px] text-slate-400 mt-1">38 продукта</p>
+        </a>
+
+        <a href="category.html?cat=insecticides" class="group border border-slate-200 hover:border-jysk-blue rounded-xl p-4 text-center transition hover:shadow-md bg-white">
+          <div class="w-16 h-16 mx-auto rounded-full bg-amber-50 flex items-center justify-center text-amber-600 group-hover:scale-110 transition duration-200 mb-3">
+            <i data-lucide="bug" class="w-8 h-8"></i>
+          </div>
+          <h3 class="text-xs font-black uppercase text-slate-900 group-hover:text-jysk-blue">Инсектициди</h3>
+          <p class="text-[10px] text-slate-400 mt-1">38 продукта</p>
+        </a>
+
+        <a href="category.html?cat=herbicides" class="group border border-slate-200 hover:border-jysk-blue rounded-xl p-4 text-center transition hover:shadow-md bg-white">
+          <div class="w-16 h-16 mx-auto rounded-full bg-emerald-50 flex items-center justify-center text-emerald-600 group-hover:scale-110 transition duration-200 mb-3">
+            <i data-lucide="scissors" class="w-8 h-8"></i>
+          </div>
+          <h3 class="text-xs font-black uppercase text-slate-900 group-hover:text-jysk-blue">Хербициди</h3>
+          <p class="text-[10px] text-slate-400 mt-1">32 продукта</p>
+        </a>
+
+        <a href="category.html?cat=fertilizers" class="group border border-slate-200 hover:border-jysk-blue rounded-xl p-4 text-center transition hover:shadow-md bg-white">
+          <div class="w-16 h-16 mx-auto rounded-full bg-green-50 flex items-center justify-center text-green-700 group-hover:scale-110 transition duration-200 mb-3">
+            <i data-lucide="sprout" class="w-8 h-8"></i>
+          </div>
+          <h3 class="text-xs font-black uppercase text-slate-900 group-hover:text-jysk-blue">Торове & Почви</h3>
+          <p class="text-[10px] text-slate-400 mt-1">42 продукта</p>
+        </a>
+
+        <a href="category.html?cat=seeds" class="group border border-slate-200 hover:border-jysk-blue rounded-xl p-4 text-center transition hover:shadow-md bg-white">
+          <div class="w-16 h-16 mx-auto rounded-full bg-orange-50 flex items-center justify-center text-orange-600 group-hover:scale-110 transition duration-200 mb-3">
+            <i data-lucide="flower" class="w-8 h-8"></i>
+          </div>
+          <h3 class="text-xs font-black uppercase text-slate-900 group-hover:text-jysk-blue">Семена</h3>
+          <p class="text-[10px] text-slate-400 mt-1">35 продукта</p>
+        </a>
+
+        <a href="category.html?cat=wine" class="group border border-slate-200 hover:border-jysk-blue rounded-xl p-4 text-center transition hover:shadow-md bg-white">
+          <div class="w-16 h-16 mx-auto rounded-full bg-purple-50 flex items-center justify-center text-purple-700 group-hover:scale-110 transition duration-200 mb-3">
+            <i data-lucide="wine" class="w-8 h-8"></i>
+          </div>
+          <h3 class="text-xs font-black uppercase text-slate-900 group-hover:text-jysk-blue">Вино & Ракия</h3>
+          <p class="text-[10px] text-slate-400 mt-1">25 продукта</p>
+        </a>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==========================================
+       6. WEEKLY CAMPAIGN PRODUCT GRID
+       ========================================== -->
+  <section id="campaign-deals" class="py-12 bg-jysk-gray border-y border-slate-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-8">
+        <div>
+          <div class="inline-block bg-jysk-red text-white text-[10px] font-black uppercase tracking-wider px-2.5 py-0.5 rounded mb-1">
+            АКЦИЯ
+          </div>
+          <h2 class="text-2xl sm:text-3xl font-black uppercase tracking-tight text-slate-900">
+            Страхотни Седмични Оферти
+          </h2>
+          <p class="text-xs text-slate-500">Валидни до изчерпване на промоционалните количества в складовете ни</p>
+        </div>
+
+        <div class="flex items-center gap-2 text-xs font-bold">
+          <button onclick="filterJyskDeals('all')" class="jysk-tab-btn active bg-jysk-blue text-white px-3.5 py-1.5 rounded-lg transition">
+            Всички оферти
+          </button>
+          <button onclick="filterJyskDeals('fungicides')" class="jysk-tab-btn bg-white hover:bg-slate-100 text-slate-700 px-3.5 py-1.5 rounded-lg border border-slate-200 transition">
+            Фунгициди
+          </button>
+          <button onclick="filterJyskDeals('insecticides')" class="jysk-tab-btn bg-white hover:bg-slate-100 text-slate-700 px-3.5 py-1.5 rounded-lg border border-slate-200 transition">
+            Инсектициди
+          </button>
+          <button onclick="filterJyskDeals('fertilizers')" class="jysk-tab-btn bg-white hover:bg-slate-100 text-slate-700 px-3.5 py-1.5 rounded-lg border border-slate-200 transition">
+            Торове
+          </button>
+        </div>
+      </div>
+
+      <div id="jyskProductGrid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <!-- Injected via JavaScript from window.AGRO_PRODUCTS -->
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==========================================
+       7. INTERACTIVE BROCHURE SECTION
+       ========================================== -->
+  <section id="brochure" class="py-14 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="bg-jysk-lightblue border border-blue-200 rounded-3xl p-8 sm:p-12 flex flex-col lg:flex-row items-center justify-between gap-8">
+        
+        <div class="max-w-xl space-y-4 text-center lg:text-left">
+          <span class="bg-jysk-blue text-white text-[11px] font-black uppercase px-3 py-1 rounded">
+            Сезон Пролет 2026
+          </span>
+          <h2 class="text-2xl sm:text-3xl font-black uppercase text-jysk-darkblue leading-tight">
+            Разгледайте новата ни дигитална брошура за растителна защита
+          </h2>
+          <p class="text-xs sm:text-sm text-slate-600 leading-relaxed">
+            Всички актуални схеми за третиране на овощни, лозя и зеленчуци, препоръчителни дози и специални ценови отстъпки за палети и кашони.
+          </p>
+          
+          <div class="pt-2 flex flex-wrap justify-center lg:justify-start gap-3">
+            <a href="category.html" class="bg-jysk-blue hover:bg-jysk-darkblue text-white font-black px-6 py-3 rounded-lg text-xs uppercase tracking-wider transition flex items-center gap-2">
+              <i data-lucide="eye" class="w-4 h-4"></i> Разгледай брошурата
+            </a>
+            <a href="tel:0888123456" class="bg-white hover:bg-slate-50 border border-slate-300 text-slate-900 font-bold px-5 py-3 rounded-lg text-xs transition flex items-center gap-2">
+              <i data-lucide="phone" class="w-4 h-4 text-emerald-600"></i> Консултация: 0888 123 456
+            </a>
+          </div>
+        </div>
+
+        <div class="relative w-full max-w-sm flex items-center justify-center">
+          <div class="w-72 bg-white rounded-2xl shadow-xl border-4 border-white p-4 transform rotate-2 hover:rotate-0 transition duration-300">
+            <div class="bg-jysk-blue text-white text-center py-4 px-3 rounded-xl">
+              <span class="text-[10px] font-black tracking-widest uppercase text-jysk-yellow block">AGRO DEMETRA КАТАЛОГ</span>
+              <h4 class="text-lg font-black uppercase mt-1">ПРОЛЕТНО ПРЪСКАНЕ</h4>
+              <p class="text-[11px] text-slate-200 mt-1">Овощни градини · Лозя · Зеленчуци</p>
+            </div>
+            <div class="py-4 text-center">
+              <span class="inline-block bg-jysk-red text-white text-xs font-black uppercase px-3 py-1 rounded-full shadow-sm">
+                СПЕСТЕТЕ ДО 40%
+              </span>
+              <p class="text-[11px] text-slate-500 mt-2">Валидност: 15 Март - 30 Април 2026</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==========================================
+       8. JYSK-STYLE FOOTER WITH HOMEPAGE CONCEPT SWITCHER
+       ========================================== -->
+  <footer class="bg-jysk-darkblue text-slate-300 pt-12 pb-8 border-t border-white/10 text-xs">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
+      
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+        
+        <div class="space-y-3">
+          <div class="flex items-center gap-2 text-white font-black text-base uppercase">
+            <i data-lucide="sprout" class="w-5 h-5 text-jysk-yellow"></i>
+            <span>AGRO DEMETRA</span>
+          </div>
+          <p class="text-slate-400 text-xs leading-relaxed">
+            Професионална онлайн агроаптека с лиценз БАБХ № 1042-ПРЗ. Доставка на оригинални препарати, семена и торове до всяка точка на България.
+          </p>
+          <div class="text-xs font-bold text-slate-200">
+            Национална линия: <a href="tel:0888123456" class="text-jysk-yellow hover:underline">0888 123 456</a>
+          </div>
+        </div>
+
+        <div class="space-y-2">
+          <h4 class="text-white font-black uppercase text-xs tracking-wider">Категории</h4>
+          <ul class="space-y-1.5 text-slate-400">
+            <li><a href="category.html?cat=fungicides" class="hover:text-white transition">Фунгициди</a></li>
+            <li><a href="category.html?cat=insecticides" class="hover:text-white transition">Инсектициди</a></li>
+            <li><a href="category.html?cat=herbicides" class="hover:text-white transition">Хербициди</a></li>
+            <li><a href="category.html?cat=fertilizers" class="hover:text-white transition">Торове & Биостимулатори</a></li>
+            <li><a href="category.html?cat=seeds" class="hover:text-white transition">Семена & Картофи</a></li>
+            <li><a href="category.html?cat=wine" class="hover:text-white transition">Вино & Ракия</a></li>
+          </ul>
+        </div>
+
+        <div class="space-y-2">
+          <h4 class="text-white font-black uppercase text-xs tracking-wider">Клиентско Обслужване</h4>
+          <ul class="space-y-1.5 text-slate-400">
+            <li><a href="news.html" class="hover:text-white transition">Пръскачен календар</a></li>
+            <li><a href="category.html" class="hover:text-white transition">Продуктов каталог</a></li>
+            <li><a href="admin.html" class="hover:text-white transition">Административен панел</a></li>
+            <li><span class="text-slate-500">Доставка: Еконт / Спиди</span></li>
+            <li><span class="text-slate-500">Плащане: Наложен платеж / Карта</span></li>
+          </ul>
+        </div>
+
+        <div class="bg-white/5 p-4 rounded-xl border border-white/10 space-y-3">
+          <h4 class="text-jysk-yellow font-black uppercase text-xs tracking-wider flex items-center gap-1.5">
+            <i data-lucide="layout" class="w-4 h-4"></i> Дизайн Концепции
+          </h4>
+          <p class="text-[11px] text-slate-300">
+            Изберете предпочитания изглед на началната страница:
+          </p>
+          <div class="space-y-2">
+            <a href="index.html" class="flex items-center justify-between p-2 rounded bg-white/5 hover:bg-white/10 text-white font-bold transition text-xs">
+              <span>1. Класически Агро Стил</span>
+              <i data-lucide="chevron-right" class="w-3.5 h-3.5 text-slate-400"></i>
+            </a>
+            <a href="home-2.html" class="flex items-center justify-between p-2 rounded bg-jysk-yellow text-slate-950 font-black transition text-xs">
+              <span>2. JYSK Стил (Текущ)</span>
+              <i data-lucide="check" class="w-3.5 h-3.5"></i>
+            </a>
+            <a href="home-3.html" class="flex items-center justify-between p-2 rounded bg-white/5 hover:bg-white/10 text-white font-bold transition text-xs">
+              <span>3. Модерен АгроТех Стил</span>
+              <i data-lucide="chevron-right" class="w-3.5 h-3.5 text-slate-400"></i>
+            </a>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="pt-6 border-t border-white/10 flex flex-col sm:flex-row items-center justify-between gap-3 text-[11px] text-slate-400">
+        <p>© 2026 AGRO DEMETRA. Всички права запазени. Лиценз БАБХ № 1042-ПРЗ.</p>
+        <div class="flex items-center gap-4">
+          <a href="index.html" class="hover:underline">Home 1</a>
+          <span>·</span>
+          <a href="home-2.html" class="text-white font-bold hover:underline">Home 2 (JYSK)</a>
+          <span>·</span>
+          <a href="home-3.html" class="hover:underline">Home 3 (AgroTech)</a>
+        </div>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/products-data.js"></script>
+  <script>
+    lucide.createIcons();
+
+    let currentDealFilter = 'all';
+
+    function renderJyskDeals() {
+      const container = document.getElementById('jyskProductGrid');
+      if (!container || !window.AGRO_PRODUCTS) return;
+
+      let items = window.AGRO_PRODUCTS.filter(p => {
+        if (currentDealFilter === 'all') {
+          return p.badge && (p.badge.includes('Промо') || p.badge.includes('Топ') || p.price > 40);
+        }
+        return p.category === currentDealFilter;
+      }).slice(0, 8);
+
+      container.innerHTML = items.map(p => `
+        <div class="bg-white rounded-xl border border-slate-200 hover:border-jysk-blue hover:shadow-xl transition-all flex flex-col justify-between overflow-hidden group">
+          
+          <div class="relative p-5 bg-white flex items-center justify-center h-52 border-b border-slate-100">
+            <div class="absolute top-3 left-3 flex flex-col gap-1">
+              <span class="bg-jysk-yellow text-slate-950 font-black text-[10px] uppercase px-2 py-0.5 rounded shadow-sm">
+                СПЕСТЕТЕ 20%
+              </span>
+              <span class="bg-slate-100 text-slate-700 font-bold text-[9px] uppercase px-1.5 py-0.2 rounded">
+                ${p.brandName.split(' ')[0]}
+              </span>
+            </div>
+
+            <a href="product.html?prod=${p.id}" class="h-full w-full flex items-center justify-center group-hover:scale-105 transition duration-300">
+              <img src="${p.image}" alt="${p.name}" class="max-h-44 max-w-full object-contain" loading="lazy">
+            </a>
+          </div>
+
+          <div class="p-5 flex-1 flex flex-col justify-between">
+            <div>
+              <div class="text-[11px] font-bold text-slate-400 uppercase tracking-wider mb-1">${p.categoryName}</div>
+              <a href="product.html?prod=${p.id}" class="text-sm font-black text-slate-900 group-hover:text-jysk-blue transition line-clamp-2 leading-snug">
+                ${p.name}
+              </a>
+              <p class="text-xs text-slate-500 mt-1 line-clamp-2 leading-relaxed">
+                ${p.active ? `${p.active}. ` : ''}${p.desc}
+              </p>
+              <div class="mt-2 text-[11px] text-slate-600 font-semibold">
+                Опаковка: <span class="bg-slate-100 text-slate-900 px-1.5 py-0.5 rounded font-bold">${p.unit}</span>
+              </div>
+            </div>
+
+            <div class="mt-5 pt-4 border-t border-slate-100 flex items-end justify-between">
+              <div>
+                <span class="text-[11px] text-slate-400 line-through">€ ${(p.price * 1.25).toFixed(2)}</span>
+                <div class="text-xl font-black text-jysk-red leading-none">
+                  € ${p.price.toFixed(2)}
+                </div>
+                <span class="text-[10px] font-bold text-slate-500 mt-0.5 block">
+                  ${(p.price * 1.95583).toFixed(2)} лв.
+                </span>
+              </div>
+
+              <button onclick="addToCartDeal('${p.name.replace(/'/g, "\\'")}', ${p.price})" class="bg-jysk-blue hover:bg-jysk-darkblue text-white p-2.5 rounded-lg transition shadow-sm" title="Добави в количка">
+                <i data-lucide="shopping-cart" class="w-4 h-4"></i>
+              </button>
+            </div>
+          </div>
+
+        </div>
+      `).join('');
+
+      lucide.createIcons();
+    }
+
+    function filterJyskDeals(cat) {
+      currentDealFilter = cat;
+      document.querySelectorAll('.jysk-tab-btn').forEach(btn => {
+        btn.classList.remove('bg-jysk-blue', 'text-white');
+        btn.classList.add('bg-white', 'text-slate-700');
+      });
+      event.currentTarget.classList.add('bg-jysk-blue', 'text-white');
+      event.currentTarget.classList.remove('bg-white', 'text-slate-700');
+      renderJyskDeals();
+    }
+
+    function addToCartDeal(name, price) {
+      alert(`Добавено в количката:\n${name}\nЦена: € ${price.toFixed(2)} (${(price * 1.95583).toFixed(2)} лв.)`);
+    }
+
+    window.addEventListener('DOMContentLoaded', () => {
+      renderJyskDeals();
+    });
+  </script>
+</body>
+</html>

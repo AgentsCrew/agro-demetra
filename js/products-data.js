@@ -28,7 +28,7 @@ window.AGRO_PRODUCTS = [
     "quarantine": "14 дни",
     "reg": "БАБХ: № 01100-ПРЗ",
     "badge": "Промо -10%",
-    "image": "https://images.unsplash.com/photo-1585314062340-f1a5a7c9328d?auto=format&fit=crop&w=600&q=80",
+    "image": "/images/products/sachet-wg.jpg",
     "desc": "Системен фунгицид за контрол на брашнеста мана (оидиум) и струпясване.",
     "dose": "200-250 г/дка",
     "rates": [
@@ -73,7 +73,7 @@ window.AGRO_PRODUCTS = [
     "quarantine": "14 дни",
     "reg": "БАБХ: № 01107-ПРЗ",
     "badge": "Премиум Защита",
-    "image": "https://images.unsplash.com/photo-1592417817098-8f3d6910985c?auto=format&fit=crop&w=600&q=80",
+    "image": "/images/products/bottle-1l.jpg",
     "desc": "Комбиниран фунгицид срещу брашнеста мана, кафяво гниене и бяла ръжда.",
     "dose": "40-60 мл/дка",
     "rates": [
@@ -118,7 +118,7 @@ window.AGRO_PRODUCTS = [
     "quarantine": "14 дни",
     "reg": "БАБХ: № 01114-ПРЗ",
     "badge": "Оригинален",
-    "image": "https://images.unsplash.com/photo-1587293852726-70cdb56c2866?auto=format&fit=crop&w=600&q=80",
+    "image": "/images/products/bottle-250ml.jpg",
     "desc": "Златен стандарт срещу струпясване по ябълка и круша и алтернария.",
     "dose": "20-30 мл/дка",
     "rates": [
@@ -163,7 +163,7 @@ window.AGRO_PRODUCTS = [
     "quarantine": "14 дни",
     "reg": "БАБХ: № 01121-ПРЗ",
     "badge": "Оригинален",
-    "image": "https://images.unsplash.com/photo-1596755094514-f87e34085b2c?auto=format&fit=crop&w=600&q=80",
+    "image": "/images/products/bottle-250ml.jpg",
     "desc": "Фунгицид с газова фаза за стопиране на оидиум и брашнеста мана.",
     "dose": "25-30 мл/дка",
     "rates": [
@@ -207,7 +207,7 @@ window.AGRO_PRODUCTS = [
     "quarantine": "20 дни",
     "reg": "БАБХ: № 01128-ПРЗ",
     "badge": "Оригинален",
-    "image": "https://images.unsplash.com/photo-1628352081506-83c43123ed6d?auto=format&fit=crop&w=600&q=80",
+    "image": "/images/products/sachet-wg.jpg",
     "desc": "Едновременна защита срещу обикновена мана и оидиум при лозя.",
     "dose": "200 г/дка",
     "rates": [
@@ -252,7 +252,7 @@ window.AGRO_PRODUCTS = [
     "quarantine": "20 дни",
     "reg": "БАБХ: № 01135-ПРЗ",
     "badge": "Оригинален",
-    "image": "https://images.unsplash.com/photo-1585314062340-f1a5a7c9328d?auto=format&fit=crop&w=600&q=80",
+    "image": "/images/products/sachet-wg.jpg",
     "desc": "Лидер срещу обикновена мана и картофена мана (фитофтора).",
     "dose": "500 г/дка",
     "rates": [
@@ -297,7 +297,7 @@ window.AGRO_PRODUCTS = [
     "quarantine": "7 дни",
     "reg": "БАБХ: № 01142-ПРЗ",
     "badge": "Оригинален",
-    "image": "https://images.unsplash.com/photo-1592417817098-8f3d6910985c?auto=format&fit=crop&w=600&q=80",
+    "image": "/images/products/bottle-1l.jpg",
     "desc": "Едновременно предпазва от мани, оидиум, алтернария и дава зелен ефект.",
     "dose": "80-100 мл/дка",
     "rates": [
@@ -342,7 +342,7 @@ window.AGRO_PRODUCTS = [
     "quarantine": "21 дни",
     "reg": "БАБХ: № 01149-ПРЗ",
     "badge": "Топ Продукт",
-    "image": "https://images.unsplash.com/photo-1587293852726-70cdb56c2866?auto=format&fit=crop&w=600&q=80",
+    "image": "/images/products/sachet-wg.jpg",
     "desc": "Готов неутрализиран син камък за зимни и предцъфтежни пръскания.",
     "dose": "1.5% (1.5 кг/100 л)",
     "rates": [
@@ -387,7 +387,7 @@ window.AGRO_PRODUCTS = [
     "quarantine": "20 дни",
     "reg": "БАБХ: № 01156-ПРЗ",
     "badge": "Оригинален",
-    "image": "https://images.unsplash.com/photo-1596755094514-f87e34085b2c?auto=format&fit=crop&w=600&q=80",
+    "image": "/images/products/sachet-wg.jpg",
     "desc": "Контактен защитен фунгицид с микроелементи цинк и манган срещу мани.",
     "dose": "200 г/дка",
     "rates": [
@@ -431,7 +431,7 @@ window.AGRO_PRODUCTS = [
     "quarantine": "28 дни",
     "reg": "БАБХ: № 01163-ПРЗ",
     "badge": "Оригинален",
-    "image": "https://images.unsplash.com/photo-1628352081506-83c43123ed6d?auto=format&fit=crop&w=600&q=80",
+    "image": "/images/products/sachet-wg.jpg",
     "desc": "Двойна защита с AgCelence ефект срещу мана, оидиум и черно гниене.",
     "dose": "150-200 г/дка",
     "rates": [
@@ -475,7 +475,7 @@ window.AGRO_PRODUCTS = [
     "quarantine": "14 дни",
     "reg": "БАБХ: № 01170-ПРЗ",
     "badge": "Оригинален",
-    "image": "https://images.unsplash.com/photo-1585314062340-f1a5a7c9328d?auto=format&fit=crop&w=600&q=80",
+    "image": "/images/products/sachet-wg.jpg",
     "desc": "Мезосистемен препарат с бързо поглъщане и изпарение срещу оидиум.",
     "dose": "16-20 г/дка",
     "rates": [
@@ -519,7 +519,7 @@ window.AGRO_PRODUCTS = [
     "quarantine": "35 дни",
     "reg": "БАБХ: № 01177-ПРЗ",
     "badge": "Промо -10%",
-    "image": "https://images.unsplash.com/photo-1592417817098-8f3d6910985c?auto=format&fit=crop&w=600&q=80",
+    "image": "/images/products/bottle-1l.jpg",
     "desc": "SDHI иновация с пълна мобилност в тъканите срещу струпясване.",
     "dose": "25-30 мл/дка",
     "rates": [
@@ -562,7 +562,7 @@ window.AGRO_PRODUCTS = [
     "quarantine": "7 дни",
     "reg": "БАБХ: № 01184-ПРЗ",
     "badge": "Премиум Защита",
-    "image": "https://images.unsplash.com/photo-1587293852726-70cdb56c2866?auto=format&fit=crop&w=600&q=80",
+    "image": "/images/products/sachet-wg.jpg",
     "desc": "Предпазва плодовете от струпясване и гниене при дълго лагеруване.",
     "dose": "80 г/дка",
     "rates": [
@@ -606,7 +606,7 @@ window.AGRO_PRODUCTS = [
     "quarantine": "7 дни",
     "reg": "БАБХ: № 01191-ПРЗ",
     "badge": "Оригинален",
-    "image": "https://images.unsplash.com/photo-1596755094514-f87e34085b2c?auto=format&fit=crop&w=600&q=80",
+    "image": "/images/products/bottle-1l.jpg",
     "desc": "Пълен контрол на маната по клубените и листата на картофи и краставици.",
     "dose": "120-160 мл/дка",
     "rates": [
@@ -651,7 +651,7 @@ window.AGRO_PRODUCTS = [
     "quarantine": "3 дни",
     "reg": "БАБХ: № 01198-ПРЗ",
     "badge": "Топ Продукт",
-    "image": "https://images.unsplash.com/photo-1628352081506-83c43123ed6d?auto=format&fit=crop&w=600&q=80",
+    "image": "/images/products/bottle-1l.jpg",
     "desc": "LOK-FLO свързване с восъчния налеп. Устойчив на дъжд 1 час след пръскане.",
     "dose": "50-60 мл/дка",
     "rates": [
@@ -696,7 +696,7 @@ window.AGRO_PRODUCTS = [
     "quarantine": "14 дни",
     "reg": "БАБХ: № 01205-ПРЗ",
     "badge": "100% БИО",
-    "image": "https://images.unsplash.com/photo-1585314062340-f1a5a7c9328d?auto=format&fit=crop&w=600&q=80",
+    "image": "/images/products/sachet-wg.jpg",
     "desc": "Най-фините биосъвместими медни частици за предпазване от бактериози.",
     "dose": "155-200 г/дка",
     "rates": [
@@ -741,7 +741,7 @@ window.AGRO_PRODUCTS = [
     "quarantine": "14 дни",
     "reg": "БАБХ: № 01212-ПРЗ",
     "badge": "Оригинален",
-    "image": "https://images.unsplash.com/photo-1592417817098-8f3d6910985c?auto=format&fit=crop&w=600&q=80",
+    "image": "/images/products/sachet-wg.jpg",
     "desc": "Ефикасен меден фунгицид срещу ранно кафяво гниене и къдравост.",
     "dose": "150-200 г/дка",
     "rates": [
@@ -786,7 +786,7 @@ window.AGRO_PRODUCTS = [
     "quarantine": "14 дни",
     "reg": "БАБХ: № 01219-ПРЗ",
     "badge": "Оригинален",
-    "image": "https://images.unsplash.com/photo-1587293852726-70cdb56c2866?auto=format&fit=crop&w=600&q=80",
+    "image": "/images/products/sachet-wg.jpg",
     "desc": "Надеждна защита от бактериални и гъбни болести преди и след цъфтеж.",
     "dose": "150-300 г/дка",
     "rates": [
@@ -831,7 +831,7 @@ window.AGRO_PRODUCTS = [
     "quarantine": "1 ден",
     "reg": "БАБХ: № 01226-ПРЗ",
     "badge": "100% БИО",
-    "image": "https://images.unsplash.com/photo-1596755094514-f87e34085b2c?auto=format&fit=crop&w=600&q=80",
+    "image": "/images/products/sachet-wg.jpg",
     "desc": "100% биосертифициран контактен фунгицид срещу оидиум и сиво гниене.",
     "dose": "500-1000 г/дка",
     "rates": [
@@ -875,7 +875,7 @@ window.AGRO_PRODUCTS = [
     "quarantine": "20 дни",
     "reg": "БАБХ: № 01233-ПРЗ",
     "badge": "Оригинален",
-    "image": "https://images.unsplash.com/photo-1628352081506-83c43123ed6d?auto=format&fit=crop&w=600&q=80",
+    "image": "/images/products/sachet-wg.jpg",
     "desc": "Комбиниран препарат с лечебно действие до 48 часа след заразяване.",
     "dose": "150-175 г/дка",
     "rates": [
@@ -918,7 +918,7 @@ window.AGRO_PRODUCTS = [
     "quarantine": "28 дни",
     "reg": "БАБХ: № 01240-ПРЗ",
     "badge": "Премиум Защита",
-    "image": "https://images.unsplash.com/photo-1585314062340-f1a5a7c9328d?auto=format&fit=crop&w=600&q=80",
+    "image": "/images/products/sachet-wg.jpg",
     "desc": "Специфичен фунгицид за пълен блокаж на сивото гниене по гроздето.",
     "dose": "100-120 г/дка",
     "rates": [
@@ -962,7 +962,7 @@ window.AGRO_PRODUCTS = [
     "quarantine": "21 дни",
     "reg": "БАБХ: № 01247-ПРЗ",
     "badge": "Топ Продукт",
-    "image": "https://images.unsplash.com/photo-1592417817098-8f3d6910985c?auto=format&fit=crop&w=600&q=80",
+    "image": "/images/products/bottle-1l.jpg",
     "desc": "Работи при ниски температури от 5°C срещу сиво гниене и струпясване.",
     "dose": "150-200 мл/дка",
     "rates": [
@@ -1007,7 +1007,7 @@ window.AGRO_PRODUCTS = [
     "quarantine": "1 ден",
     "reg": "БАБХ: № 01254-ПРЗ",
     "badge": "Промо -10%",
-    "image": "https://images.unsplash.com/photo-1587293852726-70cdb56c2866?auto=format&fit=crop&w=600&q=80",
+    "image": "/images/products/sachet-wg.jpg",
     "desc": "Ултра кратка карантина от 1 ден при праскови и домати срещу монилиоза.",
     "dose": "80-120 г/дка",
     "rates": [
@@ -1052,7 +1052,7 @@ window.AGRO_PRODUCTS = [
     "quarantine": "14 дни",
     "reg": "БАБХ: № 01261-ПРЗ",
     "badge": "Оригинален",
-    "image": "https://images.unsplash.com/photo-1596755094514-f87e34085b2c?auto=format&fit=crop&w=600&q=80",
+    "image": "/images/products/bottle-250ml.jpg",
     "desc": "Мощно лечебно действие до 96 часа срещу брашнеста мана и струпясване.",
     "dose": "20-25 мл/дка",
     "rates": [
@@ -1097,7 +1097,7 @@ window.AGRO_PRODUCTS = [
     "quarantine": "21 дни",
     "reg": "БАБХ: № 01268-ПРЗ",
     "badge": "Оригинален",
-    "image": "https://images.unsplash.com/photo-1628352081506-83c43123ed6d?auto=format&fit=crop&w=600&q=80",
+    "image": "/images/products/sachet-wg.jpg",
     "desc": "Ненадминат ботритицид за защита на грозде и ягодоплодни от загниване.",
     "dose": "80-100 г/дка",
     "rates": [
@@ -1140,7 +1140,7 @@ window.AGRO_PRODUCTS = [
     "quarantine": "56 дни",
     "reg": "БАБХ: № 01275-ПРЗ",
     "badge": "Премиум Защита",
-    "image": "https://images.unsplash.com/photo-1585314062340-f1a5a7c9328d?auto=format&fit=crop&w=600&q=80",
+    "image": "/images/products/bottle-1l.jpg",
     "desc": "Максимална реколта и контрол на склеротиния при маслодайни култури.",
     "dose": "80-100 мл/дка",
     "rates": [
@@ -1185,7 +1185,7 @@ window.AGRO_PRODUCTS = [
     "quarantine": "35 дни",
     "reg": "БАБХ: № 01282-ПРЗ",
     "badge": "Оригинален",
-    "image": "https://images.unsplash.com/photo-1592417817098-8f3d6910985c?auto=format&fit=crop&w=600&q=80",
+    "image": "/images/products/bottle-1l.jpg",
     "desc": "Икономичен триазолов фунгицид с растежно-регулиращ ефект при рапица.",
     "dose": "100 мл/дка",
     "rates": [
@@ -1229,7 +1229,7 @@ window.AGRO_PRODUCTS = [
     "quarantine": "35 дни",
     "reg": "БАБХ: № 01289-ПРЗ",
     "badge": "Оригинален",
-    "image": "https://images.unsplash.com/photo-1587293852726-70cdb56c2866?auto=format&fit=crop&w=600&q=80",
+    "image": "/images/products/bottle-1l.jpg",
     "desc": "Еталон срещу фузариоза по класа на житните и силен антистрес ефект.",
     "dose": "100 мл/дка",
     "rates": [
@@ -1274,7 +1274,7 @@ window.AGRO_PRODUCTS = [
     "quarantine": "28 дни",
     "reg": "БАБХ: № 01296-ПРЗ",
     "badge": "Топ Продукт",
-    "image": "https://images.unsplash.com/photo-1596755094514-f87e34085b2c?auto=format&fit=crop&w=600&q=80",
+    "image": "/images/products/sachet-wg.jpg",
     "desc": "Контактен препарат с високо съдържание на цинк (14%) за имунитет.",
     "dose": "200 г/дка",
     "rates": [
@@ -1319,7 +1319,7 @@ window.AGRO_PRODUCTS = [
     "quarantine": "14 дни",
     "reg": "БАБХ: № 01303-ПРЗ",
     "badge": "Оригинален",
-    "image": "https://images.unsplash.com/photo-1628352081506-83c43123ed6d?auto=format&fit=crop&w=600&q=80",
+    "image": "/images/products/sachet-wg.jpg",
     "desc": "Водоразтворима сяра. Контролира брашнеста мана и подтиска акарите.",
     "dose": "300 г/дка",
     "rates": [
@@ -1363,7 +1363,7 @@ window.AGRO_PRODUCTS = [
     "quarantine": "14 дни",
     "reg": "БАБХ: № 01310-ПРЗ",
     "badge": "Оригинален",
-    "image": "https://images.unsplash.com/photo-1585314062340-f1a5a7c9328d?auto=format&fit=crop&w=600&q=80",
+    "image": "/images/products/sachet-wg.jpg",
     "desc": "Гранулирана сяра без прашене за надеждна защита на лозята.",
     "dose": "300-500 г/дка",
     "rates": [
@@ -1408,7 +1408,7 @@ window.AGRO_PRODUCTS = [
     "quarantine": "20 дни",
     "reg": "БАБХ: № 01317-ПРЗ",
     "badge": "Оригинален",
-    "image": "https://images.unsplash.com/photo-1592417817098-8f3d6910985c?auto=format&fit=crop&w=600&q=80",
+    "image": "/images/products/sachet-wg.jpg",
     "desc": "Доказана комбинация между мед и манкозеб с бактерициден ефект.",
     "dose": "250 г/дка",
     "rates": [
@@ -1453,7 +1453,7 @@ window.AGRO_PRODUCTS = [
     "quarantine": "14 дни",
     "reg": "БАБХ: № 01324-ПРЗ",
     "badge": "Оригинален",
-    "image": "https://images.unsplash.com/photo-1587293852726-70cdb56c2866?auto=format&fit=crop&w=600&q=80",
+    "image": "/images/products/bottle-250ml.jpg",
     "desc": "Специализиран срещу сиво гниене. Не влияе на вкуса и ферментацията.",
     "dose": "100 мл/дка",
     "rates": [
@@ -1497,7 +1497,7 @@ window.AGRO_PRODUCTS = [
     "quarantine": "20 дни",
     "reg": "БАБХ: № 01331-ПРЗ",
     "badge": "Промо -10%",
-    "image": "https://images.unsplash.com/photo-1596755094514-f87e34085b2c?auto=format&fit=crop&w=600&q=80",
+    "image": "/images/products/sachet-wg.jpg",
     "desc": "Мултисайт контактен фунгицид, към който патогените нямат резистентност.",
     "dose": "150 г/дка",
     "rates": [
@@ -1542,7 +1542,7 @@ window.AGRO_PRODUCTS = [
     "quarantine": "20 дни",
     "reg": "БАБХ: № 01338-ПРЗ",
     "badge": "Оригинален",
-    "image": "https://images.unsplash.com/photo-1628352081506-83c43123ed6d?auto=format&fit=crop&w=600&q=80",
+    "image": "/images/products/sachet-wg.jpg",
     "desc": "Спира маната дори когато петната вече са видими по листата.",
     "dose": "200-250 г/дка",
     "rates": [
@@ -1587,7 +1587,7 @@ window.AGRO_PRODUCTS = [
     "quarantine": "7 дни",
     "reg": "БАБХ: № 01345-ПРЗ",
     "badge": "Топ Продукт",
-    "image": "https://images.unsplash.com/photo-1585314062340-f1a5a7c9328d?auto=format&fit=crop&w=600&q=80",
+    "image": "/images/products/bottle-1l.jpg",
     "desc": "Всичко-в-едно фунгицид за зеленчукопроизводители: мана, оидиум и алтернария.",
     "dose": "100 мл/дка",
     "rates": [
@@ -1630,7 +1630,7 @@ window.AGRO_PRODUCTS = [
     "quarantine": "35 дни",
     "reg": "БАБХ: № 01352-ПРЗ",
     "badge": "Оригинален",
-    "image": "https://images.unsplash.com/photo-1592417817098-8f3d6910985c?auto=format&fit=crop&w=600&q=80",
+    "image": "/images/products/bottle-1l.jpg",
     "desc": "Изключителна защита от струпясване по ябълка с вграден имунен активатор.",
     "dose": "250 мл/дка",
     "rates": [
@@ -1674,7 +1674,7 @@ window.AGRO_PRODUCTS = [
     "quarantine": "0 дни",
     "reg": "БАБХ: № 01359-ПРЗ",
     "badge": "Оригинален",
-    "image": "https://images.unsplash.com/photo-1587293852726-70cdb56c2866?auto=format&fit=crop&w=600&q=80",
+    "image": "/images/products/bottle-1l.jpg",
     "desc": "Биологичен активатор на фитоалексини за устойчивост срещу мана.",
     "dose": "200-300 мл/дка",
     "rates": [
@@ -1720,7 +1720,7 @@ window.AGRO_PRODUCTS = [
     "quarantine": "3 дни",
     "reg": "БАБХ: № 01366-ПРЗ",
     "badge": "Оригинален",
-    "image": "https://images.unsplash.com/photo-1596755094514-f87e34085b2c?auto=format&fit=crop&w=600&q=80",
+    "image": "/images/products/sachet-wg.jpg",
     "desc": "Най-популярният системен инсектицид срещу колорадски бръмбар, въшки и трипс.",
     "dose": "12.5-25 г/дка",
     "rates": [
@@ -1766,7 +1766,7 @@ window.AGRO_PRODUCTS = [
     "quarantine": "3 дни",
     "reg": "БАБХ: № 01373-ПРЗ",
     "badge": "Оригинален",
-    "image": "https://images.unsplash.com/photo-1585314062340-f1a5a7c9328d?auto=format&fit=crop&w=600&q=80",
+    "image": "/images/products/bottle-250ml.jpg",
     "desc": "Бърз нокдаун пиретроид срещу плодови червеи, нощенки и листозавивачки.",
     "dose": "12.5-17.5 мл/дка",
     "rates": [
@@ -1812,7 +1812,7 @@ window.AGRO_PRODUCTS = [
     "quarantine": "1 ден",
     "reg": "БАБХ: № 01380-ПРЗ",
     "badge": "Оригинален",
-    "image": "https://images.unsplash.com/photo-1592417817098-8f3d6910985c?auto=format&fit=crop&w=600&q=80",
+    "image": "/images/products/bottle-250ml.jpg",
     "desc": "Пълен контрол на доматен молец (Tuta absoluta) и ябълков плодов червей.",
     "dose": "16-20 мл/дка",
     "rates": [
@@ -1858,7 +1858,7 @@ window.AGRO_PRODUCTS = [
     "quarantine": "7 дни",
     "reg": "БАБХ: № 01387-ПРЗ",
     "badge": "Оригинален",
-    "image": "https://images.unsplash.com/photo-1587293852726-70cdb56c2866?auto=format&fit=crop&w=600&q=80",
+    "image": "/images/products/bottle-250ml.jpg",
     "desc": "Микрокапсулна Zeon формула срещу въшки, трипси и скакалци с удължен ефект.",
     "dose": "15-20 мл/дка",
     "rates": [
@@ -1903,7 +1903,7 @@ window.AGRO_PRODUCTS = [
     "quarantine": "3 дни",
     "reg": "БАБХ: № 01394-ПРЗ",
     "badge": "Топ Продукт",
-    "image": "https://images.unsplash.com/photo-1596755094514-f87e34085b2c?auto=format&fit=crop&w=600&q=80",
+    "image": "/images/products/bottle-250ml.jpg",
     "desc": "Безопасен за пчели инсектицид срещу белокрилка и листни въшки.",
     "dose": "50-90 мл/дка",
     "rates": [
@@ -1948,7 +1948,7 @@ window.AGRO_PRODUCTS = [
     "quarantine": "1 ден",
     "reg": "БАБХ: № 01401-ПРЗ",
     "badge": "Оригинален",
-    "image": "https://images.unsplash.com/photo-1585314062340-f1a5a7c9328d?auto=format&fit=crop&w=600&q=80",
+    "image": "/images/products/sachet-wg.jpg",
     "desc": "Спира храненето на листните въшки до 1 час след опръскване.",
     "dose": "10-14 г/дка",
     "rates": [
@@ -1993,7 +1993,7 @@ window.AGRO_PRODUCTS = [
     "quarantine": "10 дни",
     "reg": "БАБХ: № 01408-ПРЗ",
     "badge": "Промо -10%",
-    "image": "https://images.unsplash.com/photo-1592417817098-8f3d6910985c?auto=format&fit=crop&w=600&q=80",
+    "image": "/images/products/bottle-250ml.jpg",
     "desc": "Ови-ларвицид срещу гроздови молци и нощенки, устойчив на летни жеги.",
     "dose": "25-33 мл/дка",
     "rates": [
@@ -2038,7 +2038,7 @@ window.AGRO_PRODUCTS = [
     "quarantine": "3 дни",
     "reg": "БАБХ: № 01415-ПРЗ",
     "badge": "Оригинален",
-    "image": "https://images.unsplash.com/photo-1587293852726-70cdb56c2866?auto=format&fit=crop&w=600&q=80",
+    "image": "/images/products/bottle-250ml.jpg",
     "desc": "Трансламинарен акарицид от естествен произход срещу червен паяк.",
     "dose": "80-120 мл/дка",
     "rates": [
@@ -2083,7 +2083,7 @@ window.AGRO_PRODUCTS = [
     "quarantine": "30 дни",
     "reg": "БАБХ: № 01422-ПРЗ",
     "badge": "Оригинален",
-    "image": "https://images.unsplash.com/photo-1596755094514-f87e34085b2c?auto=format&fit=crop&w=600&q=80",
+    "image": "/images/products/sachet-wg.jpg",
     "desc": "Специфичен акарицид, който унищожава яйцата и стерилизира възрастните.",
     "dose": "50 г/дка",
     "rates": [
@@ -2127,7 +2127,7 @@ window.AGRO_PRODUCTS = [
     "quarantine": "14 дни",
     "reg": "БАБХ: № 01429-ПРЗ",
     "badge": "Оригинален",
-    "image": "https://images.unsplash.com/photo-1585314062340-f1a5a7c9328d?auto=format&fit=crop&w=600&q=80",
+    "image": "/images/products/bottle-250ml.jpg",
     "desc": "Бързо парализира подвижните форми на акарите с дълго последействие.",
     "dose": "100 мл/дка",
     "rates": [
@@ -2171,7 +2171,7 @@ window.AGRO_PRODUCTS = [
     "quarantine": "21 дни",
     "reg": "БАБХ: № 01436-ПРЗ",
     "badge": "Оригинален",
-    "image": "https://images.unsplash.com/photo-1592417817098-8f3d6910985c?auto=format&fit=crop&w=600&q=80",
+    "image": "/images/products/sachet-wg.jpg",
     "desc": "Унищожава всички фази на червения овощен и лозов акар.",
     "dose": "25-30 г/дка",
     "rates": [
@@ -2216,7 +2216,7 @@ window.AGRO_PRODUCTS = [
     "quarantine": "1 ден",
     "reg": "БАБХ: № 01443-ПРЗ",
     "badge": "Топ Продукт",
-    "image": "https://images.unsplash.com/photo-1587293852726-70cdb56c2866?auto=format&fit=crop&w=600&q=80",
+    "image": "/images/products/bottle-250ml.jpg",
     "desc": "Ликвидира листни въшки и белокрилки, устойчиви на неоникотиноиди.",
     "dose": "20-40 мл/дка",
     "rates": [
@@ -2260,7 +2260,7 @@ window.AGRO_PRODUCTS = [
     "quarantine": "3 дни",
     "reg": "БАБХ: № 01450-ПРЗ",
     "badge": "Оригинален",
-    "image": "https://images.unsplash.com/photo-1596755094514-f87e34085b2c?auto=format&fit=crop&w=600&q=80",
+    "image": "/images/products/bottle-250ml.jpg",
     "desc": "Едновременен пълен контрол на гъсеници, Tuta absoluta и акари.",
     "dose": "80 мл/дка",
     "rates": [
@@ -2304,7 +2304,7 @@ window.AGRO_PRODUCTS = [
     "quarantine": "7 дни",
     "reg": "БАБХ: № 01457-ПРЗ",
     "badge": "Оригинален",
-    "image": "https://images.unsplash.com/photo-1585314062340-f1a5a7c9328d?auto=format&fit=crop&w=600&q=80",
+    "image": "/images/products/sachet-wg.jpg",
     "desc": "Биопроизход Jemvelva за плодови червеи и крушова листна бълха.",
     "dose": "30 г/дка",
     "rates": [
@@ -2349,7 +2349,7 @@ window.AGRO_PRODUCTS = [
     "quarantine": "3 дни",
     "reg": "БАБХ: № 01464-ПРЗ",
     "badge": "100% БИО",
-    "image": "https://images.unsplash.com/photo-1592417817098-8f3d6910985c?auto=format&fit=crop&w=600&q=80",
+    "image": "/images/products/bottle-250ml.jpg",
     "desc": "Органичен инсектицид от ферментация срещу колорадски бръмбар и трипс.",
     "dose": "20-40 мл/дка",
     "rates": [
@@ -2394,7 +2394,7 @@ window.AGRO_PRODUCTS = [
     "quarantine": "3 дни",
     "reg": "БАБХ: № 01471-ПРЗ",
     "badge": "100% БИО",
-    "image": "https://images.unsplash.com/photo-1587293852726-70cdb56c2866?auto=format&fit=crop&w=600&q=80",
+    "image": "/images/products/bottle-250ml.jpg",
     "desc": "Органичен екстракт от дървото Нийм. Спира линеенето на неприятелите.",
     "dose": "250-300 мл/дка",
     "rates": [
@@ -2439,7 +2439,7 @@ window.AGRO_PRODUCTS = [
     "quarantine": "0 дни",
     "reg": "БАБХ: № 01478-ПРЗ",
     "badge": "100% БИО",
-    "image": "https://images.unsplash.com/photo-1596755094514-f87e34085b2c?auto=format&fit=crop&w=600&q=80",
+    "image": "/images/products/sachet-wg.jpg",
     "desc": "100% биологичен бактериален препарат срещу гъсеници без карантина.",
     "dose": "100 г/дка",
     "rates": [
@@ -2484,7 +2484,7 @@ window.AGRO_PRODUCTS = [
     "quarantine": "1 ден",
     "reg": "БАБХ: № 01485-ПРЗ",
     "badge": "Промо -10%",
-    "image": "https://images.unsplash.com/photo-1585314062340-f1a5a7c9328d?auto=format&fit=crop&w=600&q=80",
+    "image": "/images/products/bottle-250ml.jpg",
     "desc": "3-в-1 биопрепарат: изсушава въшки, белокрилки и спори на брашнеста мана.",
     "dose": "200-400 мл/дка",
     "rates": [
@@ -2527,7 +2527,7 @@ window.AGRO_PRODUCTS = [
     "quarantine": "0 дни",
     "reg": "БАБХ: № 01492-ПРЗ",
     "badge": "Топ Продукт",
-    "image": "https://images.unsplash.com/photo-1592417817098-8f3d6910985c?auto=format&fit=crop&w=600&q=80",
+    "image": "/images/products/bottle-250ml.jpg",
     "desc": "Вирусна защита срещу ябълков и източен плодов червей без остатъци.",
     "dose": "10 мл/дка",
     "rates": [
@@ -2572,7 +2572,7 @@ window.AGRO_PRODUCTS = [
     "quarantine": "7 дни",
     "reg": "БАБХ: № 01499-ПРЗ",
     "badge": "Оригинален",
-    "image": "https://images.unsplash.com/photo-1587293852726-70cdb56c2866?auto=format&fit=crop&w=600&q=80",
+    "image": "/images/products/sachet-wg.jpg",
     "desc": "Бързо стопира храненето на гроздовия молец и нощенките.",
     "dose": "150 г/дка",
     "rates": [
@@ -2616,7 +2616,7 @@ window.AGRO_PRODUCTS = [
     "quarantine": "3 дни",
     "reg": "БАБХ: № 01506-ПРЗ",
     "badge": "Оригинален",
-    "image": "https://images.unsplash.com/photo-1596755094514-f87e34085b2c?auto=format&fit=crop&w=600&q=80",
+    "image": "/images/products/bottle-250ml.jpg",
     "desc": "Ефективен акарицид и инсектицид срещу червен паяк и листоминиращи мухи.",
     "dose": "100 мл/дка",
     "rates": [
@@ -2660,7 +2660,7 @@ window.AGRO_PRODUCTS = [
     "quarantine": "7 дни",
     "reg": "БАБХ: № 01513-ПРЗ",
     "badge": "Оригинален",
-    "image": "https://images.unsplash.com/photo-1585314062340-f1a5a7c9328d?auto=format&fit=crop&w=600&q=80",
+    "image": "/images/products/sachet-wg.jpg",
     "desc": "Контактен и стомашен инсектицид с незабавен блокиращ ефект.",
     "dose": "30-50 г/дка",
     "rates": [
@@ -2704,7 +2704,7 @@ window.AGRO_PRODUCTS = [
     "quarantine": "3 дни",
     "reg": "БАБХ: № 01520-ПРЗ",
     "badge": "Оригинален",
-    "image": "https://images.unsplash.com/photo-1592417817098-8f3d6910985c?auto=format&fit=crop&w=600&q=80",
+    "image": "/images/products/bottle-250ml.jpg",
     "desc": "Български делтаметрин с висока стабилност за борба с листни въшки.",
     "dose": "12.5-15 мл/дка",
     "rates": [
@@ -2748,7 +2748,7 @@ window.AGRO_PRODUCTS = [
     "quarantine": "14 дни",
     "reg": "БАБХ: № 01527-ПРЗ",
     "badge": "Оригинален",
-    "image": "https://images.unsplash.com/photo-1587293852726-70cdb56c2866?auto=format&fit=crop&w=600&q=80",
+    "image": "/images/products/bottle-250ml.jpg",
     "desc": "Напълно щадящ пчелите пиретроид. Разрешен за пръскане по време на цъфтеж!",
     "dose": "20-30 мл/дка",
     "rates": [
@@ -2792,7 +2792,7 @@ window.AGRO_PRODUCTS = [
     "quarantine": "14 дни",
     "reg": "БАБХ: № 01534-ПРЗ",
     "badge": "Оригинален",
-    "image": "https://images.unsplash.com/photo-1596755094514-f87e34085b2c?auto=format&fit=crop&w=600&q=80",
+    "image": "/images/products/bottle-250ml.jpg",
     "desc": "Хормонален ювеноиден инсектицид срещу щитоносни въшки и белокрилка.",
     "dose": "30-40 мл/дка",
     "rates": [
@@ -2836,7 +2836,7 @@ window.AGRO_PRODUCTS = [
     "quarantine": "7 дни",
     "reg": "БАБХ: № 01541-ПРЗ",
     "badge": "Топ Продукт",
-    "image": "https://images.unsplash.com/photo-1585314062340-f1a5a7c9328d?auto=format&fit=crop&w=600&q=80",
+    "image": "/images/products/bottle-250ml.jpg",
     "desc": "Класически японски пиретроид срещу гъсеници и бръмбари.",
     "dose": "20-30 мл/дка",
     "rates": [
@@ -2880,7 +2880,7 @@ window.AGRO_PRODUCTS = [
     "quarantine": "14 дни",
     "reg": "БАБХ: № 01548-ПРЗ",
     "badge": "Оригинален",
-    "image": "https://images.unsplash.com/photo-1592417817098-8f3d6910985c?auto=format&fit=crop&w=600&q=80",
+    "image": "/images/products/bottle-250ml.jpg",
     "desc": "Широкоспектърен инсектицид за стръв и защита на селскостопански площи.",
     "dose": "30-40 мл/дка",
     "rates": [
@@ -2923,7 +2923,7 @@ window.AGRO_PRODUCTS = [
     "quarantine": "21 дни",
     "reg": "БАБХ: № 01555-ПРЗ",
     "badge": "Оригинален",
-    "image": "https://images.unsplash.com/photo-1587293852726-70cdb56c2866?auto=format&fit=crop&w=600&q=80",
+    "image": "/images/products/bottle-250ml.jpg",
     "desc": "Прекъсва жизнения цикъл на калифорнийската щитоносна въшка.",
     "dose": "40 мл/дка",
     "rates": [
@@ -2967,7 +2967,7 @@ window.AGRO_PRODUCTS = [
     "quarantine": "3 дни",
     "reg": "БАБХ: № 01562-ПРЗ",
     "badge": "Промо -10%",
-    "image": "https://images.unsplash.com/photo-1596755094514-f87e34085b2c?auto=format&fit=crop&w=600&q=80",
+    "image": "/images/products/bottle-250ml.jpg",
     "desc": "Икономичен пиретроид за градинари срещу листни бълхи и гъсеници.",
     "dose": "30-50 мл/дка",
     "rates": [
@@ -3011,7 +3011,7 @@ window.AGRO_PRODUCTS = [
     "quarantine": "21 дни",
     "reg": "БАБХ: № 01569-ПРЗ",
     "badge": "Оригинален",
-    "image": "https://images.unsplash.com/photo-1585314062340-f1a5a7c9328d?auto=format&fit=crop&w=600&q=80",
+    "image": "/images/products/sachet-wg.jpg",
     "desc": "Японски акарицид с шоков ефект върху всички подвижни фази на акарите.",
     "dose": "50-75 г/дка",
     "rates": [
@@ -3055,7 +3055,7 @@ window.AGRO_PRODUCTS = [
     "quarantine": "14 дни",
     "reg": "БАБХ: № 01576-ПРЗ",
     "badge": "Оригинален",
-    "image": "https://images.unsplash.com/photo-1592417817098-8f3d6910985c?auto=format&fit=crop&w=600&q=80",
+    "image": "/images/products/bottle-250ml.jpg",
     "desc": "Липиден инхибитор с продължителна защита срещу червен паяк.",
     "dose": "40-60 мл/дка",
     "rates": [
@@ -3099,7 +3099,7 @@ window.AGRO_PRODUCTS = [
     "quarantine": "3 дни",
     "reg": "БАБХ: № 01583-ПРЗ",
     "badge": "Премиум Защита",
-    "image": "https://images.unsplash.com/photo-1587293852726-70cdb56c2866?auto=format&fit=crop&w=600&q=80",
+    "image": "/images/products/bottle-250ml.jpg",
     "desc": "Двойна защита: инсектицид срещу трипс и молец + имунизация срещу TSWV вирус.",
     "dose": "100-125 мл/дка",
     "rates": [
@@ -3143,7 +3143,7 @@ window.AGRO_PRODUCTS = [
     "quarantine": "0 дни",
     "reg": "БАБХ: № 01590-ПРЗ",
     "badge": "Топ Продукт",
-    "image": "https://images.unsplash.com/photo-1596755094514-f87e34085b2c?auto=format&fit=crop&w=600&q=80",
+    "image": "/images/products/bottle-250ml.jpg",
     "desc": "Биовирус за унищожаване на памуковата нощенка по домати и пипер.",
     "dose": "10-20 мл/дка",
     "rates": [
@@ -3187,7 +3187,7 @@ window.AGRO_PRODUCTS = [
     "quarantine": "0 дни",
     "reg": "БАБХ: № 01597-ПРЗ",
     "badge": "100% БИО",
-    "image": "https://images.unsplash.com/photo-1585314062340-f1a5a7c9328d?auto=format&fit=crop&w=600&q=80",
+    "image": "/images/products/bottle-250ml.jpg",
     "desc": "Течна биоформулация за третиране на плодови червеи и молец.",
     "dose": "100-150 мл/дка",
     "rates": [
@@ -3231,7 +3231,7 @@ window.AGRO_PRODUCTS = [
     "quarantine": "21 дни",
     "reg": "БАБХ: № 01604-ПРЗ",
     "badge": "Оригинален",
-    "image": "https://images.unsplash.com/photo-1592417817098-8f3d6910985c?auto=format&fit=crop&w=600&q=80",
+    "image": "/images/products/bottle-250ml.jpg",
     "desc": "Органофосфорен инсектицид за контрол на вредители по складово зърно и овошки.",
     "dose": "100 мл/дка",
     "rates": [
@@ -3275,7 +3275,7 @@ window.AGRO_PRODUCTS = [
     "quarantine": "0 дни",
     "reg": "БАБХ: № 01611-ПРЗ",
     "badge": "100% БИО",
-    "image": "https://images.unsplash.com/photo-1587293852726-70cdb56c2866?auto=format&fit=crop&w=600&q=80",
+    "image": "/images/products/bottle-250ml.jpg",
     "desc": "Варовито-серен разтвор за зимна и ранно-пролетна дезинфекция срещу акари и щитоносни.",
     "dose": "1.5-2 л/дка",
     "rates": [
@@ -3319,7 +3319,7 @@ window.AGRO_PRODUCTS = [
     "quarantine": "1 ден",
     "reg": "БАБХ: № 01618-ПРЗ",
     "badge": "100% БИО",
-    "image": "https://images.unsplash.com/photo-1596755094514-f87e34085b2c?auto=format&fit=crop&w=600&q=80",
+    "image": "/images/products/bottle-250ml.jpg",
     "desc": "Естествен пиретрин за био градини. Бърз шоков ефект върху въшки и трипси.",
     "dose": "75-100 мл/дка",
     "rates": [
@@ -3363,7 +3363,7 @@ window.AGRO_PRODUCTS = [
     "quarantine": "28 дни",
     "reg": "БАБХ: № 01625-ПРЗ",
     "badge": "Оригинален",
-    "image": "https://images.unsplash.com/photo-1585314062340-f1a5a7c9328d?auto=format&fit=crop&w=600&q=80",
+    "image": "/images/products/bottle-250ml.jpg",
     "desc": "Контактен газов акарицид с отлично действие при високи температури над 25°C.",
     "dose": "100 мл/дка",
     "rates": [
@@ -3408,7 +3408,7 @@ window.AGRO_PRODUCTS = [
     "quarantine": "Преди засяване",
     "reg": "БАБХ: № 01632-ПРЗ",
     "badge": "Оригинален",
-    "image": "https://images.unsplash.com/photo-1587293852726-70cdb56c2866?auto=format&fit=crop&w=600&q=80",
+    "image": "/images/products/canister-5l.jpg",
     "desc": "Тотален системен хербицид срещу всички едногодишни и многогодишни плевели.",
     "dose": "300-800 мл/дка",
     "rates": [
@@ -3452,7 +3452,7 @@ window.AGRO_PRODUCTS = [
     "quarantine": "Преди засяване",
     "reg": "БАБХ: № 01639-ПРЗ",
     "badge": "Промо -10%",
-    "image": "https://images.unsplash.com/photo-1592417817098-8f3d6910985c?auto=format&fit=crop&w=600&q=80",
+    "image": "/images/products/canister-5l.jpg",
     "desc": "Концентриран глифозат с калиева сол: поглъща се за 1 час, действа при хладно време.",
     "dose": "200-500 мл/дка",
     "rates": [
@@ -3496,7 +3496,7 @@ window.AGRO_PRODUCTS = [
     "quarantine": "Не се изисква",
     "reg": "БАБХ: № 01646-ПРЗ",
     "badge": "Оригинален",
-    "image": "https://images.unsplash.com/photo-1585314062340-f1a5a7c9328d?auto=format&fit=crop&w=600&q=80",
+    "image": "/images/products/canister-5l.jpg",
     "desc": "Икономичен тотален хербицид за почистване на редове в лозя и овощни градини.",
     "dose": "400-800 мл/дка",
     "rates": [
@@ -3542,7 +3542,7 @@ window.AGRO_PRODUCTS = [
     "quarantine": "Почвено",
     "reg": "БАБХ: № 01653-ПРЗ",
     "badge": "Оригинален",
-    "image": "https://images.unsplash.com/photo-1596755094514-f87e34085b2c?auto=format&fit=crop&w=600&q=80",
+    "image": "/images/products/canister-5l.jpg",
     "desc": "Почвен капсулован хербицид на водна основа за чист екран до 60 дни.",
     "dose": "250-400 мл/дка",
     "rates": [
@@ -3587,7 +3587,7 @@ window.AGRO_PRODUCTS = [
     "quarantine": "30 дни",
     "reg": "БАБХ: № 01660-ПРЗ",
     "badge": "Оригинален",
-    "image": "https://images.unsplash.com/photo-1587293852726-70cdb56c2866?auto=format&fit=crop&w=600&q=80",
+    "image": "/images/products/canister-5l.jpg",
     "desc": "Селективен вегетационен противожитен хербицид срещу балур от коренища.",
     "dose": "100-250 мл/дка",
     "rates": [
@@ -3632,7 +3632,7 @@ window.AGRO_PRODUCTS = [
     "quarantine": "30 дни",
     "reg": "БАБХ: № 01667-ПРЗ",
     "badge": "Оригинален",
-    "image": "https://images.unsplash.com/photo-1592417817098-8f3d6910985c?auto=format&fit=crop&w=600&q=80",
+    "image": "/images/products/canister-5l.jpg",
     "desc": "Един от най-силните противожитни препарати срещу троскот и пирей.",
     "dose": "80-160 мл/дка",
     "rates": [
@@ -3677,7 +3677,7 @@ window.AGRO_PRODUCTS = [
     "quarantine": "Почвено",
     "reg": "БАБХ: № 01674-ПРЗ",
     "badge": "Оригинален",
-    "image": "https://images.unsplash.com/photo-1585314062340-f1a5a7c9328d?auto=format&fit=crop&w=600&q=80",
+    "image": "/images/products/canister-5l.jpg",
     "desc": "Златен стандарт за почвен контрол на едногодишни житни и широколистни.",
     "dose": "120-150 мл/дка",
     "rates": [
@@ -3721,7 +3721,7 @@ window.AGRO_PRODUCTS = [
     "quarantine": "42 дни",
     "reg": "БАБХ: № 01681-ПРЗ",
     "badge": "Оригинален",
-    "image": "https://images.unsplash.com/photo-1596755094514-f87e34085b2c?auto=format&fit=crop&w=600&q=80",
+    "image": "/images/products/canister-5l.jpg",
     "desc": "Селективен почвен и вегетационен хербицид за картофи и домати.",
     "dose": "40-60 мл/дка",
     "rates": [
@@ -3764,7 +3764,7 @@ window.AGRO_PRODUCTS = [
     "quarantine": "Не се изисква",
     "reg": "БАБХ: № 01688-ПРЗ",
     "badge": "Топ Продукт",
-    "image": "https://images.unsplash.com/photo-1587293852726-70cdb56c2866?auto=format&fit=crop&w=600&q=80",
+    "image": "/images/products/canister-5l.jpg",
     "desc": "Ултра селективен към царевицата от 2-ри до 8-ми лист с избелващ ефект.",
     "dose": "200-220 мл/дка",
     "rates": [
@@ -3807,7 +3807,7 @@ window.AGRO_PRODUCTS = [
     "quarantine": "60 дни",
     "reg": "БАБХ: № 01695-ПРЗ",
     "badge": "Оригинален",
-    "image": "https://images.unsplash.com/photo-1592417817098-8f3d6910985c?auto=format&fit=crop&w=600&q=80",
+    "image": "/images/products/canister-5l.jpg",
     "desc": "Унищожава лепка, паламида и самосевки от слънчоглед в житни култури.",
     "dose": "50-80 мл/дка",
     "rates": [
@@ -3850,7 +3850,7 @@ window.AGRO_PRODUCTS = [
     "quarantine": "Не се изисква",
     "reg": "БАБХ: № 01702-ПРЗ",
     "badge": "Оригинален",
-    "image": "https://images.unsplash.com/photo-1585314062340-f1a5a7c9328d?auto=format&fit=crop&w=600&q=80",
+    "image": "/images/products/sachet-wg.jpg",
     "desc": "Минимална доза от 3.3 г/дка срещу всички широколистни плевели при пшеница.",
     "dose": "3.3 г/дка",
     "rates": [
@@ -3894,7 +3894,7 @@ window.AGRO_PRODUCTS = [
     "quarantine": "40 дни",
     "reg": "БАБХ: № 01709-ПРЗ",
     "badge": "Оригинален",
-    "image": "https://images.unsplash.com/photo-1596755094514-f87e34085b2c?auto=format&fit=crop&w=600&q=80",
+    "image": "/images/products/canister-5l.jpg",
     "desc": "Контактен вегетационен хербицид за бобови култури, грах, фасул и царевица.",
     "dose": "200-300 мл/дка",
     "rates": [
@@ -3937,7 +3937,7 @@ window.AGRO_PRODUCTS = [
     "quarantine": "Почвено",
     "reg": "БАБХ: № 01716-ПРЗ",
     "badge": "Промо -10%",
-    "image": "https://images.unsplash.com/photo-1587293852726-70cdb56c2866?auto=format&fit=crop&w=600&q=80",
+    "image": "/images/products/canister-5l.jpg",
     "desc": "Хербицид с презареждащ ефект при дъжд за пълна чистота на царевицата.",
     "dose": "40-42 мл/дка",
     "rates": [
@@ -3980,7 +3980,7 @@ window.AGRO_PRODUCTS = [
     "quarantine": "Не се изисква",
     "reg": "БАБХ: № 01723-ПРЗ",
     "badge": "Оригинален",
-    "image": "https://images.unsplash.com/photo-1592417817098-8f3d6910985c?auto=format&fit=crop&w=600&q=80",
+    "image": "/images/products/canister-5l.jpg",
     "desc": "Пълен вегетационен контрол на балур от коренища и широколистни в царевица.",
     "dose": "200-250 мл/дка",
     "rates": [
@@ -4023,7 +4023,7 @@ window.AGRO_PRODUCTS = [
     "quarantine": "Не се изисква",
     "reg": "БАБХ: № 01730-ПРЗ",
     "badge": "Премиум Защита",
-    "image": "https://images.unsplash.com/photo-1585314062340-f1a5a7c9328d?auto=format&fit=crop&w=600&q=80",
+    "image": "/images/products/canister-5l.jpg",
     "desc": "Топ комбинация за царевица с почвено и вегетационно последействие.",
     "dose": "25-30 мл/дка",
     "rates": [
@@ -4067,7 +4067,7 @@ window.AGRO_PRODUCTS = [
     "quarantine": "Почвено",
     "reg": "БАБХ: № 01737-ПРЗ",
     "badge": "Топ Продукт",
-    "image": "https://images.unsplash.com/photo-1596755094514-f87e34085b2c?auto=format&fit=crop&w=600&q=80",
+    "image": "/images/products/canister-5l.jpg",
     "desc": "Селективен за картофи, нахут, грах, лук и слънчоглед срещу щир и лобода.",
     "dose": "400 мл/дка",
     "rates": [
@@ -4110,7 +4110,7 @@ window.AGRO_PRODUCTS = [
     "quarantine": "60 дни",
     "reg": "БАБХ: № 01744-ПРЗ",
     "badge": "Оригинален",
-    "image": "https://images.unsplash.com/photo-1587293852726-70cdb56c2866?auto=format&fit=crop&w=600&q=80",
+    "image": "/images/products/canister-5l.jpg",
     "desc": "Специалистът срещу див овес и ветрушка в пшеница и ечемик.",
     "dose": "100 мл/дка",
     "rates": [
@@ -4153,7 +4153,7 @@ window.AGRO_PRODUCTS = [
     "quarantine": "Не се изисква",
     "reg": "БАБХ: № 01751-ПРЗ",
     "badge": "Оригинален",
-    "image": "https://images.unsplash.com/photo-1592417817098-8f3d6910985c?auto=format&fit=crop&w=600&q=80",
+    "image": "/images/products/sachet-wg.jpg",
     "desc": "Широкоспектърен хербицид за пшеница срещу овсига, лисича опашка и широколистни.",
     "dose": "25 г/дка",
     "rates": [
@@ -4198,7 +4198,7 @@ window.AGRO_PRODUCTS = [
     "quarantine": "30 дни",
     "reg": "БАБХ: № 01758-ПРЗ",
     "badge": "Оригинален",
-    "image": "https://images.unsplash.com/photo-1585314062340-f1a5a7c9328d?auto=format&fit=crop&w=600&q=80",
+    "image": "/images/products/canister-5l.jpg",
     "desc": "Противожитен вегетационен хербицид с прилепител Даш за упорити житни треви.",
     "dose": "100-200 мл/дка",
     "rates": [
@@ -4242,7 +4242,7 @@ window.AGRO_PRODUCTS = [
     "quarantine": "30 дни",
     "reg": "БАБХ: № 01765-ПРЗ",
     "badge": "Оригинален",
-    "image": "https://images.unsplash.com/photo-1596755094514-f87e34085b2c?auto=format&fit=crop&w=600&q=80",
+    "image": "/images/products/canister-5l.jpg",
     "desc": "Унищожава троскот, балур и пирей в овощни насаждения и лозя.",
     "dose": "150-200 мл/дка",
     "rates": [
@@ -4285,7 +4285,7 @@ window.AGRO_PRODUCTS = [
     "quarantine": "60 дни",
     "reg": "БАБХ: № 01772-ПРЗ",
     "badge": "Оригинален",
-    "image": "https://images.unsplash.com/photo-1587293852726-70cdb56c2866?auto=format&fit=crop&w=600&q=80",
+    "image": "/images/products/canister-5l.jpg",
     "desc": "Селективен за червено и захарно цвекло срещу упорити широколистни плевели.",
     "dose": "200-500 мл/дка",
     "rates": [
@@ -4329,7 +4329,7 @@ window.AGRO_PRODUCTS = [
     "quarantine": "30 дни",
     "reg": "БАБХ: № 01779-ПРЗ",
     "badge": "Оригинален",
-    "image": "https://images.unsplash.com/photo-1592417817098-8f3d6910985c?auto=format&fit=crop&w=600&q=80",
+    "image": "/images/products/canister-5l.jpg",
     "desc": "Японски противожитен хербицид с бързо поглъщане от листата.",
     "dose": "150-200 мл/дка",
     "rates": [
@@ -4372,7 +4372,7 @@ window.AGRO_PRODUCTS = [
     "quarantine": "Не се изисква",
     "reg": "БАБХ: № 01786-ПРЗ",
     "badge": "Топ Продукт",
-    "image": "https://images.unsplash.com/photo-1585314062340-f1a5a7c9328d?auto=format&fit=crop&w=600&q=80",
+    "image": "/images/products/canister-5l.jpg",
     "desc": "Еталон при царевица срещу бутрак, паламида, щир и лобода с почвено действие.",
     "dose": "25-30 мл/дка",
     "rates": [
@@ -4415,7 +4415,7 @@ window.AGRO_PRODUCTS = [
     "quarantine": "60 дни",
     "reg": "БАБХ: № 01793-ПРЗ",
     "badge": "Промо -10%",
-    "image": "https://images.unsplash.com/photo-1596755094514-f87e34085b2c?auto=format&fit=crop&w=600&q=80",
+    "image": "/images/products/canister-5l.jpg",
     "desc": "Маслена O-TEQ дисперсия за контрол на широколистни в пшеница и ечемик.",
     "dose": "10-11 мл/дка",
     "rates": [
@@ -4458,7 +4458,7 @@ window.AGRO_PRODUCTS = [
     "quarantine": "45 дни",
     "reg": "БАБХ: № 01800-ПРЗ",
     "badge": "Оригинален",
-    "image": "https://images.unsplash.com/photo-1587293852726-70cdb56c2866?auto=format&fit=crop&w=600&q=80",
+    "image": "/images/products/sachet-wg.jpg",
     "desc": "Микродозов хербицид за соя и царевица с пълно разграждане в почвата.",
     "dose": "2-3 г/дка",
     "rates": [
@@ -4503,7 +4503,7 @@ window.AGRO_PRODUCTS = [
     "quarantine": "30 дни",
     "reg": "БАБХ: № 01807-ПРЗ",
     "badge": "Оригинален",
-    "image": "https://images.unsplash.com/photo-1592417817098-8f3d6910985c?auto=format&fit=crop&w=600&q=80",
+    "image": "/images/products/canister-5l.jpg",
     "desc": "Системен граминицид за селективна борба с житни треви сред домати и картофи.",
     "dose": "150-200 мл/дка",
     "rates": [
@@ -4546,7 +4546,7 @@ window.AGRO_PRODUCTS = [
     "quarantine": "90 дни",
     "reg": "БАБХ: № 01814-ПРЗ",
     "badge": "Оригинален",
-    "image": "https://images.unsplash.com/photo-1585314062340-f1a5a7c9328d?auto=format&fit=crop&w=600&q=80",
+    "image": "/images/products/canister-5l.jpg",
     "desc": "Оригинална Clearfield технология за слънчоглед срещу синя китка и плевели.",
     "dose": "120 мл/дка",
     "rates": [
@@ -4590,7 +4590,7 @@ window.AGRO_PRODUCTS = [
     "quarantine": "60 дни",
     "reg": "БАБХ: № 01821-ПРЗ",
     "badge": "Оригинален",
-    "image": "https://images.unsplash.com/photo-1596755094514-f87e34085b2c?auto=format&fit=crop&w=600&q=80",
+    "image": "/images/products/canister-5l.jpg",
     "desc": "Най-ефективният продукт срещу повитица (Convolvulus) и лепка в житни.",
     "dose": "100-150 мл/дка",
     "rates": [
@@ -4633,7 +4633,7 @@ window.AGRO_PRODUCTS = [
     "quarantine": "60 дни",
     "reg": "БАБХ: № 01828-ПРЗ",
     "badge": "Оригинален",
-    "image": "https://images.unsplash.com/photo-1587293852726-70cdb56c2866?auto=format&fit=crop&w=600&q=80",
+    "image": "/images/products/canister-5l.jpg",
     "desc": "Селективен вегетационен хербицид за цвекло с висока чистота на редовете.",
     "dose": "100-150 мл/дка",
     "rates": [
@@ -4676,7 +4676,7 @@ window.AGRO_PRODUCTS = [
     "quarantine": "Не се изисква",
     "reg": "БАБХ: № 01835-ПРЗ",
     "badge": "Топ Продукт",
-    "image": "https://images.unsplash.com/photo-1592417817098-8f3d6910985c?auto=format&fit=crop&w=600&q=80",
+    "image": "/images/products/canister-5l.jpg",
     "desc": "Традиционен български хербицид за широколистни плевели в пшеница и ливади.",
     "dose": "100-120 мл/дка",
     "rates": [
@@ -4721,7 +4721,7 @@ window.AGRO_PRODUCTS = [
     "quarantine": "Почвено",
     "reg": "БАБХ: № 01842-ПРЗ",
     "badge": "Оригинален",
-    "image": "https://images.unsplash.com/photo-1585314062340-f1a5a7c9328d?auto=format&fit=crop&w=600&q=80",
+    "image": "/images/products/canister-5l.jpg",
     "desc": "Контактен почвен и ранен вегетационен щит за лук, чесън и трайни насаждения.",
     "dose": "80-100 мл/дка",
     "rates": [
@@ -4765,7 +4765,7 @@ window.AGRO_PRODUCTS = [
     "quarantine": "Не се изисква",
     "reg": "БАБХ: № 01849-ПРЗ",
     "badge": "Оригинален",
-    "image": "https://images.unsplash.com/photo-1596755094514-f87e34085b2c?auto=format&fit=crop&w=600&q=80",
+    "image": "/images/products/canister-5l.jpg",
     "desc": "Надежден тотален хербицид за предсеитбено почистване на полето.",
     "dose": "400-600 мл/дка",
     "rates": [
@@ -4808,7 +4808,7 @@ window.AGRO_PRODUCTS = [
     "quarantine": "2 часа",
     "reg": "БАБХ: № 01856-ПРЗ",
     "badge": "Оригинален",
-    "image": "https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?auto=format&fit=crop&w=600&q=80",
+    "image": "/images/products/spray-biocide.jpg",
     "desc": "№1 микрокапсулован препарат срещу хлебарки, дървеници, бълхи и кърлежи.",
     "dose": "20 мл / 5 л вода",
     "rates": [
@@ -4851,7 +4851,7 @@ window.AGRO_PRODUCTS = [
     "quarantine": "2 часа",
     "reg": "БАБХ: № 01863-ПРЗ",
     "badge": "Премиум Защита",
-    "image": "https://images.unsplash.com/photo-1585314062340-f1a5a7c9328d?auto=format&fit=crop&w=600&q=80",
+    "image": "/images/products/spray-biocide.jpg",
     "desc": "Професионална опаковка за ДДД оператори за третиране на големи площи.",
     "dose": "250 мл / 100 л вода",
     "rates": [
@@ -4894,7 +4894,7 @@ window.AGRO_PRODUCTS = [
     "quarantine": "2 часа",
     "reg": "БАБХ: № 01870-ПРЗ",
     "badge": "Промо -10%",
-    "image": "https://images.unsplash.com/photo-1592417817098-8f3d6910985c?auto=format&fit=crop&w=600&q=80",
+    "image": "/images/products/spray-biocide.jpg",
     "desc": "Кристална технология за трайно полепване по стени и подове до 3 месеца.",
     "dose": "25 мл / 5 л вода",
     "rates": [
@@ -4937,7 +4937,7 @@ window.AGRO_PRODUCTS = [
     "quarantine": "2 часа",
     "reg": "БАБХ: № 01877-ПРЗ",
     "badge": "Оригинален",
-    "image": "https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?auto=format&fit=crop&w=600&q=80",
+    "image": "/images/products/spray-biocide.jpg",
     "desc": "Шоков битов инсектицид срещу мухи, комари, оси и кърлежи в двора.",
     "dose": "50 мл / 5 л вода",
     "rates": [
@@ -4980,7 +4980,7 @@ window.AGRO_PRODUCTS = [
     "quarantine": "2 часа",
     "reg": "БАБХ: № 01884-ПРЗ",
     "badge": "Топ Продукт",
-    "image": "https://images.unsplash.com/photo-1585314062340-f1a5a7c9328d?auto=format&fit=crop&w=600&q=80",
+    "image": "/images/products/spray-biocide.jpg",
     "desc": "Тройна синергична формула: мигновен нокдаун и прогонващ ефект.",
     "dose": "50-100 мл / 10 л",
     "rates": [
@@ -5025,7 +5025,7 @@ window.AGRO_PRODUCTS = [
     "quarantine": "14 дни",
     "reg": "БАБХ: № 01891-ПРЗ",
     "badge": "Оригинален",
-    "image": "https://images.unsplash.com/photo-1592417817098-8f3d6910985c?auto=format&fit=crop&w=600&q=80",
+    "image": "/images/products/spray-biocide.jpg",
     "desc": "Влагоустойчиви гранули с Bitrex срещу голи охлюви в зеленчуковите лехи.",
     "dose": "300-500 г/дка",
     "rates": [
@@ -5070,7 +5070,7 @@ window.AGRO_PRODUCTS = [
     "quarantine": "0 дни",
     "reg": "БАБХ: № 01898-ПРЗ",
     "badge": "100% БИО",
-    "image": "https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?auto=format&fit=crop&w=600&q=80",
+    "image": "/images/products/spray-biocide.jpg",
     "desc": "100% безопасен за кучета, таралежи и птици биопрепарат за голи охлюви.",
     "dose": "500 г/дка",
     "rates": [
@@ -5113,7 +5113,7 @@ window.AGRO_PRODUCTS = [
     "quarantine": "Дератизационни кутии",
     "reg": "БАБХ: № 01905-ПРЗ",
     "badge": "Оригинален",
-    "image": "https://images.unsplash.com/photo-1585314062340-f1a5a7c9328d?auto=format&fit=crop&w=600&q=80",
+    "image": "/images/products/spray-biocide.jpg",
     "desc": "Парафинизирани водоустойчиви блокчета с мумифициращ ефект за плъхове.",
     "dose": "20-50 г на точка",
     "rates": [
@@ -5156,7 +5156,7 @@ window.AGRO_PRODUCTS = [
     "quarantine": "В кутии",
     "reg": "БАБХ: № 01912-ПРЗ",
     "badge": "Оригинален",
-    "image": "https://images.unsplash.com/photo-1592417817098-8f3d6910985c?auto=format&fit=crop&w=600&q=80",
+    "image": "/images/products/spray-biocide.jpg",
     "desc": "Най-силният еднократен антикоагулант за мишки и упорити плъхове.",
     "dose": "1-2 сашета на точка",
     "rates": [
@@ -5199,7 +5199,7 @@ window.AGRO_PRODUCTS = [
     "quarantine": "0 дни",
     "reg": "БАБХ: № 01919-ПРЗ",
     "badge": "100% БИО",
-    "image": "https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?auto=format&fit=crop&w=600&q=80",
+    "image": "/images/products/spray-biocide.jpg",
     "desc": "Обезводнява дървениците за 24 часа без никаква отрова и миризма.",
     "dose": "Опрашване по шевове",
     "rates": [
@@ -5242,7 +5242,7 @@ window.AGRO_PRODUCTS = [
     "quarantine": "0 дни",
     "reg": "БАБХ: № 01926-ПРЗ",
     "badge": "100% БИО",
-    "image": "https://images.unsplash.com/photo-1585314062340-f1a5a7c9328d?auto=format&fit=crop&w=600&q=80",
+    "image": "/images/products/spray-biocide.jpg",
     "desc": "Биопудра за кокоши акари. Яйцата се консумират веднага.",
     "dose": "Опрашване в курника",
     "rates": [
@@ -5285,7 +5285,7 @@ window.AGRO_PRODUCTS = [
     "quarantine": "0 дни",
     "reg": "БАБХ: № 01933-ПРЗ",
     "badge": "Топ Продукт",
-    "image": "https://images.unsplash.com/photo-1592417817098-8f3d6910985c?auto=format&fit=crop&w=600&q=80",
+    "image": "/images/products/spray-biocide.jpg",
     "desc": "Безопасно обезпаразитяване на помещения с кучета и котки.",
     "dose": "Третиране на килими и легла",
     "rates": [
@@ -5328,7 +5328,7 @@ window.AGRO_PRODUCTS = [
     "quarantine": "0 дни",
     "reg": "БАБХ: № 01940-ПРЗ",
     "badge": "100% БИО",
-    "image": "https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?auto=format&fit=crop&w=600&q=80",
+    "image": "/images/products/spray-biocide.jpg",
     "desc": "Биозащита от ларви на колорадски бръмбар без пестициди.",
     "dose": "Опрашване на листата",
     "rates": [
@@ -5372,7 +5372,7 @@ window.AGRO_PRODUCTS = [
     "quarantine": "0 дни",
     "reg": "БАБХ: № 01947-ПРЗ",
     "badge": "Промо -10%",
-    "image": "https://images.unsplash.com/photo-1585314062340-f1a5a7c9328d?auto=format&fit=crop&w=600&q=80",
+    "image": "/images/products/spray-biocide.jpg",
     "desc": "Ентомопатогенна гъба срещу белокрилки, трипси и акари.",
     "dose": "100-150 мл/дка",
     "rates": [
@@ -5416,7 +5416,7 @@ window.AGRO_PRODUCTS = [
     "quarantine": "0 дни",
     "reg": "БАБХ: № 01954-ПРЗ",
     "badge": "100% БИО",
-    "image": "https://images.unsplash.com/photo-1592417817098-8f3d6910985c?auto=format&fit=crop&w=600&q=80",
+    "image": "/images/products/spray-biocide.jpg",
     "desc": "Очиства почвата от галови нематоди и телени червеи.",
     "dose": "2-3 кг/дка",
     "rates": [
@@ -5460,7 +5460,7 @@ window.AGRO_PRODUCTS = [
     "quarantine": "0 дни",
     "reg": "БАБХ: № 01961-ПРЗ",
     "badge": "100% БИО",
-    "image": "https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?auto=format&fit=crop&w=600&q=80",
+    "image": "/images/products/spray-biocide.jpg",
     "desc": "Биофунгицид срещу сиво гниене Botrytis без карантинен срок.",
     "dose": "150-200 мл/дка",
     "rates": [
@@ -5504,7 +5504,7 @@ window.AGRO_PRODUCTS = [
     "quarantine": "0 дни",
     "reg": "БАБХ: № 01968-ПРЗ",
     "badge": "100% БИО",
-    "image": "https://images.unsplash.com/photo-1585314062340-f1a5a7c9328d?auto=format&fit=crop&w=600&q=80",
+    "image": "/images/products/spray-biocide.jpg",
     "desc": "Биологичен антибактериален щит срещу бактериален пригор и огнен пригор.",
     "dose": "200-300 мл/дка",
     "rates": [
@@ -5548,7 +5548,7 @@ window.AGRO_PRODUCTS = [
     "quarantine": "0 дни",
     "reg": "БАБХ: № 01975-ПРЗ",
     "badge": "100% БИО",
-    "image": "https://images.unsplash.com/photo-1592417817098-8f3d6910985c?auto=format&fit=crop&w=600&q=80",
+    "image": "/images/products/spray-biocide.jpg",
     "desc": "Стимулира имунитета на растенията срещу оидиум и мана.",
     "dose": "200 мл/дка",
     "rates": [
@@ -5593,7 +5593,7 @@ window.AGRO_PRODUCTS = [
     "quarantine": "1 ден",
     "reg": "БАБХ: № 01982-ПРЗ",
     "badge": "Топ Продукт",
-    "image": "https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?auto=format&fit=crop&w=600&q=80",
+    "image": "/images/products/spray-biocide.jpg",
     "desc": "Стартов спасителен пакет за хоби градинари за пълен био контрол.",
     "dose": "За 100 л разтвор",
     "rates": [
@@ -5637,7 +5637,7 @@ window.AGRO_PRODUCTS = [
     "quarantine": "0 дни",
     "reg": "БАБХ: № 01989-ПРЗ",
     "badge": "Оригинален",
-    "image": "https://images.unsplash.com/photo-1585314062340-f1a5a7c9328d?auto=format&fit=crop&w=600&q=80",
+    "image": "/images/products/spray-biocide.jpg",
     "desc": "Жълти лепливи плоскости за мониторинг и улавяне на белокрилки и листни въшки.",
     "dose": "1 табела на 10 кв.м",
     "rates": [
@@ -5681,7 +5681,7 @@ window.AGRO_PRODUCTS = [
     "quarantine": "0 дни",
     "reg": "БАБХ: № 01996-ПРЗ",
     "badge": "Оригинален",
-    "image": "https://images.unsplash.com/photo-1592417817098-8f3d6910985c?auto=format&fit=crop&w=600&q=80",
+    "image": "/images/products/spray-biocide.jpg",
     "desc": "Специфичен син спектър за привличане и масово улавяне на западния цветен трипс.",
     "dose": "1 табела на 10 кв.м",
     "rates": [
@@ -5724,7 +5724,7 @@ window.AGRO_PRODUCTS = [
     "quarantine": "0 дни",
     "reg": "БАБХ: № 011003-ПРЗ",
     "badge": "Оригинален",
-    "image": "https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?auto=format&fit=crop&w=600&q=80",
+    "image": "/images/products/spray-biocide.jpg",
     "desc": "Прогонва къртиците и сляпото куче от двора и моравата без отрови.",
     "dose": "Поставяне в къртичините",
     "rates": [
@@ -5767,7 +5767,7 @@ window.AGRO_PRODUCTS = [
     "quarantine": "0 дни",
     "reg": "БАБХ: № 011010-ПРЗ",
     "badge": "Оригинален",
-    "image": "https://images.unsplash.com/photo-1585314062340-f1a5a7c9328d?auto=format&fit=crop&w=600&q=80",
+    "image": "/images/products/spray-biocide.jpg",
     "desc": "Отказва животните от маркиране и ровене в цветните и зеленчукови лехи.",
     "dose": "Опръскване на огради и лехи",
     "rates": [
@@ -5810,7 +5810,7 @@ window.AGRO_PRODUCTS = [
     "quarantine": "В дупките",
     "reg": "БАБХ: № 011017-ПРЗ",
     "badge": "Оригинален",
-    "image": "https://images.unsplash.com/photo-1592417817098-8f3d6910985c?auto=format&fit=crop&w=600&q=80",
+    "image": "/images/products/spray-biocide.jpg",
     "desc": "Газифицира тунелите на къртици, водни плъхове и сляпо куче.",
     "dose": "1 патрон на активен вход",
     "rates": [
@@ -5854,7 +5854,7 @@ window.AGRO_PRODUCTS = [
     "quarantine": "0 дни",
     "reg": "БАБХ: № 011024-ПРЗ",
     "badge": "Промо -10%",
-    "image": "https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?auto=format&fit=crop&w=600&q=80",
+    "image": "/images/products/spray-biocide.jpg",
     "desc": "Улавя осите и стършелите преди да надупчат зреещото десертно грозде.",
     "dose": "Окачване близо до гроздето",
     "rates": [
@@ -5897,7 +5897,7 @@ window.AGRO_PRODUCTS = [
     "quarantine": "2 часа",
     "reg": "БАБХ: № 011031-ПРЗ",
     "badge": "Топ Продукт",
-    "image": "https://images.unsplash.com/photo-1585314062340-f1a5a7c9328d?auto=format&fit=crop&w=600&q=80",
+    "image": "/images/products/spray-biocide.jpg",
     "desc": "Професионален пиретроид без цвят и мирис срещу летящи и пълзящи гадини.",
     "dose": "50 мл / 5 л вода",
     "rates": [
@@ -5940,7 +5940,7 @@ window.AGRO_PRODUCTS = [
     "quarantine": "0 дни",
     "reg": "БАБХ: № 011038-ПРЗ",
     "badge": "Оригинален",
-    "image": "https://images.unsplash.com/photo-1592417817098-8f3d6910985c?auto=format&fit=crop&w=600&q=80",
+    "image": "/images/products/spray-biocide.jpg",
     "desc": "Определя точния момент за пръскане срещу ябълков плодов червей.",
     "dose": "1 уловка на 2-3 дървета",
     "rates": [
@@ -5983,7 +5983,7 @@ window.AGRO_PRODUCTS = [
     "quarantine": "0 дни",
     "reg": "БАБХ: № 011045-ПРЗ",
     "badge": "Оригинален",
-    "image": "https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?auto=format&fit=crop&w=600&q=80",
+    "image": "/images/products/spray-biocide.jpg",
     "desc": "Улавя мъжките пеперуди на шарения гроздов молец в лозето.",
     "dose": "1 уловка на декар",
     "rates": [
@@ -6026,7 +6026,7 @@ window.AGRO_PRODUCTS = [
     "quarantine": "В кутии",
     "reg": "БАБХ: № 011052-ПРЗ",
     "badge": "Оригинален",
-    "image": "https://images.unsplash.com/photo-1585314062340-f1a5a7c9328d?auto=format&fit=crop&w=600&q=80",
+    "image": "/images/products/spray-biocide.jpg",
     "desc": "Апетитна маслена паста с аромат на ванилия за унищожаване на мишки.",
     "dose": "20-40 г на точка",
     "rates": [
@@ -6069,7 +6069,7 @@ window.AGRO_PRODUCTS = [
     "quarantine": "0 дни",
     "reg": "БАБХ: № 011059-ПРЗ",
     "badge": "100% БИО",
-    "image": "https://images.unsplash.com/photo-1592417817098-8f3d6910985c?auto=format&fit=crop&w=600&q=80",
+    "image": "/images/products/spray-biocide.jpg",
     "desc": "Подсилен щам грануловирус за пълно унищожение на резистентни червеи.",
     "dose": "10 мл/дка",
     "rates": [
@@ -6112,7 +6112,7 @@ window.AGRO_PRODUCTS = [
     "quarantine": "0 дни",
     "reg": "БАБХ: № 011066-ПРЗ",
     "badge": "Оригинален",
-    "image": "https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?auto=format&fit=crop&w=600&q=80",
+    "image": "/images/products/spray-biocide.jpg",
     "desc": "Без отрова! 100% безопасен капан за улавяне на хлебарки в кухнята.",
     "dose": "Под мивки и хладилници",
     "rates": [
@@ -6155,7 +6155,7 @@ window.AGRO_PRODUCTS = [
     "quarantine": "2 часа",
     "reg": "БАБХ: № 011073-ПРЗ",
     "badge": "Оригинален",
-    "image": "https://images.unsplash.com/photo-1585314062340-f1a5a7c9328d?auto=format&fit=crop&w=600&q=80",
+    "image": "/images/products/spray-biocide.jpg",
     "desc": "Ефективно битово третиране срещу кърлежи и бълхи в тревата.",
     "dose": "50 мл / 5 л вода",
     "rates": [
@@ -6201,7 +6201,7 @@ window.AGRO_PRODUCTS = [
     "quarantine": "0 дни",
     "reg": "БАБХ: № 011080-ПРЗ",
     "badge": "Топ Продукт",
-    "image": "https://images.unsplash.com/photo-1585314062340-f1a5a7c9328d?auto=format&fit=crop&w=600&q=80",
+    "image": "/images/products/fertilizer-sack.jpg",
     "desc": "Хлоридо-чист комбиниран гранулиран тор за зеленчуци, овощни и лозя.",
     "dose": "30-50 кг/дка",
     "rates": [
@@ -6246,7 +6246,7 @@ window.AGRO_PRODUCTS = [
     "quarantine": "0 дни",
     "reg": "БАБХ: № 011087-ПРЗ",
     "badge": "Оригинален",
-    "image": "https://images.unsplash.com/photo-1596755094514-f87e34085b2c?auto=format&fit=crop&w=600&q=80",
+    "image": "/images/products/fertilizer-sack.jpg",
     "desc": "Калциев нитрат с бор срещу върхово гниене при домати и ябълки.",
     "dose": "15-25 кг/дка",
     "rates": [
@@ -6292,7 +6292,7 @@ window.AGRO_PRODUCTS = [
     "quarantine": "0 дни",
     "reg": "БАБХ: № 011094-ПРЗ",
     "badge": "Оригинален",
-    "image": "https://images.unsplash.com/photo-1587293852726-70cdb56c2866?auto=format&fit=crop&w=600&q=80",
+    "image": "/images/products/fertilizer-sack.jpg",
     "desc": "100% водоразтворим балансиран тор за капково хранене и листно пръскане.",
     "dose": "200-400 г/дка",
     "rates": [
@@ -6337,7 +6337,7 @@ window.AGRO_PRODUCTS = [
     "quarantine": "0 дни",
     "reg": "БАБХ: № 011101-ПРЗ",
     "badge": "Промо -10%",
-    "image": "https://images.unsplash.com/photo-1592417817098-8f3d6910985c?auto=format&fit=crop&w=600&q=80",
+    "image": "/images/products/fertilizer-sack.jpg",
     "desc": "Богат на калий за наедряване на плодовете, цвят и захарност.",
     "dose": "300-500 г/дка",
     "rates": [
@@ -6382,7 +6382,7 @@ window.AGRO_PRODUCTS = [
     "quarantine": "0 дни",
     "reg": "БАБХ: № 011108-ПРЗ",
     "badge": "Оригинален",
-    "image": "https://images.unsplash.com/photo-1585314062340-f1a5a7c9328d?auto=format&fit=crop&w=600&q=80",
+    "image": "/images/products/fertilizer-sack.jpg",
     "desc": "Високо съдържание на фосфор за мощна коренова система при разсад.",
     "dose": "250-300 г/дка",
     "rates": [
@@ -6426,7 +6426,7 @@ window.AGRO_PRODUCTS = [
     "quarantine": "0 дни",
     "reg": "БАБХ: № 011115-ПРЗ",
     "badge": "Оригинален",
-    "image": "https://images.unsplash.com/photo-1596755094514-f87e34085b2c?auto=format&fit=crop&w=600&q=80",
+    "image": "/images/products/fertilizer-sack.jpg",
     "desc": "За финално зреене и устойчивост на суша и транспортиране.",
     "dose": "250-400 г/дка",
     "rates": [
@@ -6471,7 +6471,7 @@ window.AGRO_PRODUCTS = [
     "quarantine": "0 дни",
     "reg": "БАБХ: № 011122-ПРЗ",
     "badge": "Оригинален",
-    "image": "https://images.unsplash.com/photo-1587293852726-70cdb56c2866?auto=format&fit=crop&w=600&q=80",
+    "image": "/images/products/bottle-1l.jpg",
     "desc": "Суспензионен листен калций с адюванти срещу върхово гниене.",
     "dose": "300-500 мл/дка",
     "rates": [
@@ -6516,7 +6516,7 @@ window.AGRO_PRODUCTS = [
     "quarantine": "0 дни",
     "reg": "БАБХ: № 011129-ПРЗ",
     "badge": "Топ Продукт",
-    "image": "https://images.unsplash.com/photo-1592417817098-8f3d6910985c?auto=format&fit=crop&w=600&q=80",
+    "image": "/images/products/bottle-1l.jpg",
     "desc": "Универсална балансирана суспензия за листно подхранване през целия сезон.",
     "dose": "200-300 мл/дка",
     "rates": [
@@ -6562,7 +6562,7 @@ window.AGRO_PRODUCTS = [
     "quarantine": "0 дни",
     "reg": "БАБХ: № 011136-ПРЗ",
     "badge": "Оригинален",
-    "image": "https://images.unsplash.com/photo-1585314062340-f1a5a7c9328d?auto=format&fit=crop&w=600&q=80",
+    "image": "/images/products/canister-5l.jpg",
     "desc": "Възстановява растенията след градушка, слана, суша или пестициден шок.",
     "dose": "150-250 мл/дка",
     "rates": [
@@ -6607,7 +6607,7 @@ window.AGRO_PRODUCTS = [
     "quarantine": "0 дни",
     "reg": "БАБХ: № 011143-ПРЗ",
     "badge": "Оригинален",
-    "image": "https://images.unsplash.com/photo-1596755094514-f87e34085b2c?auto=format&fit=crop&w=600&q=80",
+    "image": "/images/products/canister-5l.jpg",
     "desc": "Биостимулатор за максимално развиване на корените при разсаждане.",
     "dose": "250 мл / 100 л вода",
     "rates": [
@@ -6652,7 +6652,7 @@ window.AGRO_PRODUCTS = [
     "quarantine": "0 дни",
     "reg": "БАБХ: № 011150-ПРЗ",
     "badge": "Оригинален",
-    "image": "https://images.unsplash.com/photo-1587293852726-70cdb56c2866?auto=format&fit=crop&w=600&q=80",
+    "image": "/images/products/canister-5l.jpg",
     "desc": "Укрепва естествените защитни стени на растенията срещу гъбни и бактериални атаки.",
     "dose": "150-200 мл/дка",
     "rates": [
@@ -6697,7 +6697,7 @@ window.AGRO_PRODUCTS = [
     "quarantine": "0 дни",
     "reg": "БАБХ: № 011157-ПРЗ",
     "badge": "Оригинален",
-    "image": "https://images.unsplash.com/photo-1592417817098-8f3d6910985c?auto=format&fit=crop&w=600&q=80",
+    "image": "/images/products/canister-5l.jpg",
     "desc": "Спира хлорозата и пожълтяването на листата дори при варовити почви с високо pH.",
     "dose": "10-20 г на корен",
     "rates": [
@@ -6742,7 +6742,7 @@ window.AGRO_PRODUCTS = [
     "quarantine": "0 дни",
     "reg": "БАБХ: № 011164-ПРЗ",
     "badge": "Оригинален",
-    "image": "https://images.unsplash.com/photo-1585314062340-f1a5a7c9328d?auto=format&fit=crop&w=600&q=80",
+    "image": "/images/products/bottle-1l.jpg",
     "desc": "Обогатява почвата с полезна микрофлора и стимулира вкуса на доматите.",
     "dose": "80-100 мл/дка",
     "rates": [
@@ -6786,7 +6786,7 @@ window.AGRO_PRODUCTS = [
     "quarantine": "0 дни",
     "reg": "БАБХ: № 011171-ПРЗ",
     "badge": "Оригинален",
-    "image": "https://images.unsplash.com/photo-1596755094514-f87e34085b2c?auto=format&fit=crop&w=600&q=80",
+    "image": "/images/products/bottle-1l.jpg",
     "desc": "Течен калций с бор за предпазване от пукане на плодовете и върхово гниене.",
     "dose": "200-300 мл/дка",
     "rates": [
@@ -6831,7 +6831,7 @@ window.AGRO_PRODUCTS = [
     "quarantine": "0 дни",
     "reg": "БАБХ: № 011178-ПРЗ",
     "badge": "Промо -10%",
-    "image": "https://images.unsplash.com/photo-1587293852726-70cdb56c2866?auto=format&fit=crop&w=600&q=80",
+    "image": "/images/products/bottle-1l.jpg",
     "desc": "Висококонцентриран калий за наедряване, интензивен цвят и сладост.",
     "dose": "250-350 мл/дка",
     "rates": [
@@ -6875,7 +6875,7 @@ window.AGRO_PRODUCTS = [
     "quarantine": "0 дни",
     "reg": "БАБХ: № 011185-ПРЗ",
     "badge": "Оригинален",
-    "image": "https://images.unsplash.com/photo-1592417817098-8f3d6910985c?auto=format&fit=crop&w=600&q=80",
+    "image": "/images/products/bottle-1l.jpg",
     "desc": "Органичен гел за буен растеж на домати, пипер и градински цветя.",
     "dose": "15 мл в 2 л вода",
     "rates": [
@@ -6920,7 +6920,7 @@ window.AGRO_PRODUCTS = [
     "quarantine": "0 дни",
     "reg": "БАБХ: № 011192-ПРЗ",
     "badge": "Оригинален",
-    "image": "https://images.unsplash.com/photo-1585314062340-f1a5a7c9328d?auto=format&fit=crop&w=600&q=80",
+    "image": "/images/products/bottle-1l.jpg",
     "desc": "Течен бор за обилен цъфтеж, опрашване и завързване на плодовете.",
     "dose": "100-150 мл/дка",
     "rates": [
@@ -6965,7 +6965,7 @@ window.AGRO_PRODUCTS = [
     "quarantine": "0 дни",
     "reg": "БАБХ: № 011199-ПРЗ",
     "badge": "Оригинален",
-    "image": "https://images.unsplash.com/photo-1596755094514-f87e34085b2c?auto=format&fit=crop&w=600&q=80",
+    "image": "/images/products/fertilizer-sack.jpg",
     "desc": "Спира прегарянето на листата и пожълтяването между жилките.",
     "dose": "300-500 г/дка",
     "rates": [
@@ -7009,7 +7009,7 @@ window.AGRO_PRODUCTS = [
     "quarantine": "0 дни",
     "reg": "БАБХ: № 011206-ПРЗ",
     "badge": "Оригинален",
-    "image": "https://images.unsplash.com/photo-1587293852726-70cdb56c2866?auto=format&fit=crop&w=600&q=80",
+    "image": "/images/products/fertilizer-sack.jpg",
     "desc": "Специализиран тор за фертигация на домати, пипер и патладжан.",
     "dose": "2-4 кг/дка капково",
     "rates": [
@@ -7053,7 +7053,7 @@ window.AGRO_PRODUCTS = [
     "quarantine": "0 дни",
     "reg": "БАБХ: № 011213-ПРЗ",
     "badge": "100% БИО",
-    "image": "https://images.unsplash.com/photo-1592417817098-8f3d6910985c?auto=format&fit=crop&w=600&q=80",
+    "image": "/images/products/bottle-1l.jpg",
     "desc": "Български биостимулатор за максимално усвояване на торовете.",
     "dose": "150-200 мл/дка",
     "rates": [
@@ -7097,7 +7097,7 @@ window.AGRO_PRODUCTS = [
     "quarantine": "0 дни",
     "reg": "БАБХ: № 011220-ПРЗ",
     "badge": "Оригинален",
-    "image": "https://images.unsplash.com/photo-1585314062340-f1a5a7c9328d?auto=format&fit=crop&w=600&q=80",
+    "image": "/images/products/bottle-1l.jpg",
     "desc": "Специализиран за зеле, броколи, карфиол и рапица.",
     "dose": "200-300 мл/дка",
     "rates": [
@@ -7141,7 +7141,7 @@ window.AGRO_PRODUCTS = [
     "quarantine": "0 дни",
     "reg": "БАБХ: № 011227-ПРЗ",
     "badge": "Топ Продукт",
-    "image": "https://images.unsplash.com/photo-1596755094514-f87e34085b2c?auto=format&fit=crop&w=600&q=80",
+    "image": "/images/products/bottle-1l.jpg",
     "desc": "Предотвратява напукването на череши, домати и ябълки.",
     "dose": "200-300 мл/дка",
     "rates": [
@@ -7185,7 +7185,7 @@ window.AGRO_PRODUCTS = [
     "quarantine": "0 дни",
     "reg": "БАБХ: № 011234-ПРЗ",
     "badge": "Оригинален",
-    "image": "https://images.unsplash.com/photo-1587293852726-70cdb56c2866?auto=format&fit=crop&w=600&q=80",
+    "image": "/images/products/canister-5l.jpg",
     "desc": "100% органичен тор за внасяне при засаждане на разсад.",
     "dose": "50-100 г в гнездото",
     "rates": [
@@ -7228,7 +7228,7 @@ window.AGRO_PRODUCTS = [
     "quarantine": "0 дни",
     "reg": "БАБХ: № 011241-ПРЗ",
     "badge": "Оригинален",
-    "image": "https://images.unsplash.com/photo-1592417817098-8f3d6910985c?auto=format&fit=crop&w=600&q=80",
+    "image": "/images/products/bottle-1l.jpg",
     "desc": "Предизвиква естествен опад на листата през есента и дезинфекцира раните.",
     "dose": "500 мл/дка",
     "rates": [
@@ -7272,7 +7272,7 @@ window.AGRO_PRODUCTS = [
     "quarantine": "0 дни",
     "reg": "БАБХ: № 011248-ПРЗ",
     "badge": "Оригинален",
-    "image": "https://images.unsplash.com/photo-1585314062340-f1a5a7c9328d?auto=format&fit=crop&w=600&q=80",
+    "image": "/images/products/bottle-1l.jpg",
     "desc": "Бързо усвоим фосфор и калий за стимулиране на цъфтежа.",
     "dose": "200-300 мл/дка",
     "rates": [
@@ -7316,7 +7316,7 @@ window.AGRO_PRODUCTS = [
     "quarantine": "0 дни",
     "reg": "БАБХ: № 011255-ПРЗ",
     "badge": "Промо -10%",
-    "image": "https://images.unsplash.com/photo-1596755094514-f87e34085b2c?auto=format&fit=crop&w=600&q=80",
+    "image": "/images/products/bottle-1l.jpg",
     "desc": "Професионален немски торфен субстрат за сеитба и разсад.",
     "dose": "За пикиране и тарелки",
     "rates": [
@@ -7359,7 +7359,7 @@ window.AGRO_PRODUCTS = [
     "quarantine": "0 дни",
     "reg": "БАБХ: № 011262-ПРЗ",
     "badge": "Оригинален",
-    "image": "https://images.unsplash.com/photo-1587293852726-70cdb56c2866?auto=format&fit=crop&w=600&q=80",
+    "image": "/images/products/canister-5l.jpg",
     "desc": "Набъбват с вода за 5 минути. Засаждане директно в почвата без стрес за корена.",
     "dose": "1 таблетка на семе",
     "rates": [
@@ -7403,7 +7403,7 @@ window.AGRO_PRODUCTS = [
     "quarantine": "0 дни",
     "reg": "БАБХ: № 011269-ПРЗ",
     "badge": "Оригинален",
-    "image": "https://images.unsplash.com/photo-1592417817098-8f3d6910985c?auto=format&fit=crop&w=600&q=80",
+    "image": "/images/products/fertilizer-sack.jpg",
     "desc": "Напълно разтворим калций за оранжерии с капково напояване.",
     "dose": "2-3 кг/дка капково",
     "rates": [
@@ -7447,7 +7447,7 @@ window.AGRO_PRODUCTS = [
     "quarantine": "0 дни",
     "reg": "БАБХ: № 011276-ПРЗ",
     "badge": "Топ Продукт",
-    "image": "https://images.unsplash.com/photo-1585314062340-f1a5a7c9328d?auto=format&fit=crop&w=600&q=80",
+    "image": "/images/products/bottle-1l.jpg",
     "desc": "100% органичен растителен биостимулатор, сертифициран за био земеделие.",
     "dose": "200-300 мл/дка",
     "rates": [
@@ -7491,7 +7491,7 @@ window.AGRO_PRODUCTS = [
     "quarantine": "0 дни",
     "reg": "БАБХ: № 011283-ПРЗ",
     "badge": "Оригинален",
-    "image": "https://images.unsplash.com/photo-1596755094514-f87e34085b2c?auto=format&fit=crop&w=600&q=80",
+    "image": "/images/products/fertilizer-sack.jpg",
     "desc": "Нисък азот и висок калий за прецизно дохранване в края на лятото.",
     "dose": "200-400 г/дка",
     "rates": [
@@ -7535,7 +7535,7 @@ window.AGRO_PRODUCTS = [
     "quarantine": "0 дни",
     "reg": "БАБХ: № 011290-ПРЗ",
     "badge": "Оригинален",
-    "image": "https://images.unsplash.com/photo-1587293852726-70cdb56c2866?auto=format&fit=crop&w=600&q=80",
+    "image": "/images/products/canister-5l.jpg",
     "desc": "Предотвратява издребняването на листата при овошки и белосърдечност при царевица.",
     "dose": "50-100 г/дка",
     "rates": [
@@ -7579,7 +7579,7 @@ window.AGRO_PRODUCTS = [
     "quarantine": "0 дни",
     "reg": "БАБХ: № 011297-ПРЗ",
     "badge": "Оригинален",
-    "image": "https://images.unsplash.com/photo-1592417817098-8f3d6910985c?auto=format&fit=crop&w=600&q=80",
+    "image": "/images/products/canister-5l.jpg",
     "desc": "Пълен комплект от 6 микроелемента за листно подхранване срещу скрит глад.",
     "dose": "100 г/дка",
     "rates": [
@@ -7623,7 +7623,7 @@ window.AGRO_PRODUCTS = [
     "quarantine": "0 дни",
     "reg": "БАБХ: № 011304-ПРЗ",
     "badge": "Оригинален",
-    "image": "https://images.unsplash.com/photo-1585314062340-f1a5a7c9328d?auto=format&fit=crop&w=600&q=80",
+    "image": "/images/products/bottle-1l.jpg",
     "desc": "Суспензия за бързо коригиране на дефицити на желязо, магнезий и манган.",
     "dose": "100-150 мл/дка",
     "rates": [
@@ -7667,7 +7667,7 @@ window.AGRO_PRODUCTS = [
     "quarantine": "0 дни",
     "reg": "БАБХ: № 011311-ПРЗ",
     "badge": "100% БИО",
-    "image": "https://images.unsplash.com/photo-1596755094514-f87e34085b2c?auto=format&fit=crop&w=600&q=80",
+    "image": "/images/products/canister-5l.jpg",
     "desc": "Микориза за 3-кратно увеличение на всмукателната повърхност на корените.",
     "dose": "100-200 г/дка",
     "rates": [
@@ -7711,7 +7711,7 @@ window.AGRO_PRODUCTS = [
     "quarantine": "0 дни",
     "reg": "БАБХ: № 011318-ПРЗ",
     "badge": "Оригинален",
-    "image": "https://images.unsplash.com/photo-1587293852726-70cdb56c2866?auto=format&fit=crop&w=600&q=80",
+    "image": "/images/products/bottle-1l.jpg",
     "desc": "За максимално братене на пшеницата и защита от пролетни мразове.",
     "dose": "100 мл/дка",
     "rates": [
@@ -7755,7 +7755,7 @@ window.AGRO_PRODUCTS = [
     "quarantine": "0 дни",
     "reg": "БАБХ: № 011325-ПРЗ",
     "badge": "Топ Продукт",
-    "image": "https://images.unsplash.com/photo-1592417817098-8f3d6910985c?auto=format&fit=crop&w=600&q=80",
+    "image": "/images/products/bottle-1l.jpg",
     "desc": "Ензимно хидролизирани аминокиселини за стимулиране на фотосинтезата.",
     "dose": "200 мл/дка",
     "rates": [
@@ -7798,7 +7798,7 @@ window.AGRO_PRODUCTS = [
     "quarantine": "0 дни",
     "reg": "БАБХ: № 011332-ПРЗ",
     "badge": "Промо -10%",
-    "image": "https://images.unsplash.com/photo-1597362925123-77861d3fbac7?auto=format&fit=crop&w=600&q=80",
+    "image": "/images/products/seed-packet.jpg",
     "desc": "Традиционният български розов гигант с форма на сърце. 400-800 грама.",
     "dose": "25-30 г за декар разсад",
     "rates": [
@@ -7841,7 +7841,7 @@ window.AGRO_PRODUCTS = [
     "quarantine": "0 дни",
     "reg": "БАБХ: № 011339-ПРЗ",
     "badge": "Оригинален",
-    "image": "https://images.unsplash.com/photo-1592417817098-8f3d6910985c?auto=format&fit=crop&w=600&q=80",
+    "image": "/images/products/seed-packet.jpg",
     "desc": "Най-ранният и харесван розов хибрид за оранжерии с форма на ръгби топка.",
     "dose": "20-25 г за декар",
     "rates": [
@@ -7884,7 +7884,7 @@ window.AGRO_PRODUCTS = [
     "quarantine": "0 дни",
     "reg": "БАБХ: № 011346-ПРЗ",
     "badge": "Оригинален",
-    "image": "https://images.unsplash.com/photo-1597362925123-77861d3fbac7?auto=format&fit=crop&w=600&q=80",
+    "image": "/images/products/seed-packet.jpg",
     "desc": "Автентичният класически български вкус от 1938 г. Сочен, сладък и ароматен.",
     "dose": "30 г за декар",
     "rates": [
@@ -7927,7 +7927,7 @@ window.AGRO_PRODUCTS = [
     "quarantine": "0 дни",
     "reg": "БАБХ: № 011353-ПРЗ",
     "badge": "Оригинален",
-    "image": "https://images.unsplash.com/photo-1592417817098-8f3d6910985c?auto=format&fit=crop&w=600&q=80",
+    "image": "/images/products/seed-packet.jpg",
     "desc": "Месест едър розов домат с нежна ципа и превъзходен сладък вкус.",
     "dose": "25-30 г/дка",
     "rates": [
@@ -7970,7 +7970,7 @@ window.AGRO_PRODUCTS = [
     "quarantine": "0 дни",
     "reg": "БАБХ: № 011360-ПРЗ",
     "badge": "Оригинален",
-    "image": "https://images.unsplash.com/photo-1597362925123-77861d3fbac7?auto=format&fit=crop&w=600&q=80",
+    "image": "/images/products/seed-packet.jpg",
     "desc": "Класически червен хибрид за оранжерии и открито с твърди, изравнени плодове.",
     "dose": "20-25 г/дка",
     "rates": [
@@ -8013,7 +8013,7 @@ window.AGRO_PRODUCTS = [
     "quarantine": "0 дни",
     "reg": "БАБХ: № 011367-ПРЗ",
     "badge": "Оригинален",
-    "image": "https://images.unsplash.com/photo-1592417817098-8f3d6910985c?auto=format&fit=crop&w=600&q=80",
+    "image": "/images/products/seed-packet.jpg",
     "desc": "Дългоплодна тъмнозелена краставица (30 см). Никога не нагарча!",
     "dose": "120-150 г/дка",
     "rates": [
@@ -8056,7 +8056,7 @@ window.AGRO_PRODUCTS = [
     "quarantine": "0 дни",
     "reg": "БАБХ: № 011374-ПРЗ",
     "badge": "Топ Продукт",
-    "image": "https://images.unsplash.com/photo-1597362925123-77861d3fbac7?auto=format&fit=crop&w=600&q=80",
+    "image": "/images/products/seed-packet.jpg",
     "desc": "Високодобивна салатна краставица с гладка повърхност и изключителен добив.",
     "dose": "100-120 г/дка",
     "rates": [
@@ -8099,7 +8099,7 @@ window.AGRO_PRODUCTS = [
     "quarantine": "0 дни",
     "reg": "БАБХ: № 011381-ПРЗ",
     "badge": "Оригинален",
-    "image": "https://images.unsplash.com/photo-1592417817098-8f3d6910985c?auto=format&fit=crop&w=600&q=80",
+    "image": "/images/products/seed-packet.jpg",
     "desc": "Традиционен дълъг салат сорт с малка семенна кухина и хрупкавост.",
     "dose": "150 г/дка",
     "rates": [
@@ -8142,7 +8142,7 @@ window.AGRO_PRODUCTS = [
     "quarantine": "0 дни",
     "reg": "БАБХ: № 011388-ПРЗ",
     "badge": "Оригинален",
-    "image": "https://images.unsplash.com/photo-1597362925123-77861d3fbac7?auto=format&fit=crop&w=600&q=80",
+    "image": "/images/products/seed-packet.jpg",
     "desc": "Перфектен за буркани: остава твърд, хрупкав и без горчивина след стерилизация.",
     "dose": "80-100 г/дка",
     "rates": [
@@ -8185,7 +8185,7 @@ window.AGRO_PRODUCTS = [
     "quarantine": "0 дни",
     "reg": "БАБХ: № 011395-ПРЗ",
     "badge": "Оригинален",
-    "image": "https://images.unsplash.com/photo-1592417817098-8f3d6910985c?auto=format&fit=crop&w=600&q=80",
+    "image": "/images/products/seed-packet.jpg",
     "desc": "Ранен сорт с фини брадавици и висока устойчивост на брашнеста мана.",
     "dose": "120 г/дка",
     "rates": [
@@ -8228,7 +8228,7 @@ window.AGRO_PRODUCTS = [
     "quarantine": "0 дни",
     "reg": "БАБХ: № 011402-ПРЗ",
     "badge": "Оригинален",
-    "image": "https://images.unsplash.com/photo-1597362925123-77861d3fbac7?auto=format&fit=crop&w=600&q=80",
+    "image": "/images/products/seed-packet.jpg",
     "desc": "№1 за печене и лютеници: дебели стени, лесно белене и меден вкус.",
     "dose": "120-150 г/дка",
     "rates": [
@@ -8271,7 +8271,7 @@ window.AGRO_PRODUCTS = [
     "quarantine": "0 дни",
     "reg": "БАБХ: № 011409-ПРЗ",
     "badge": "Промо -10%",
-    "image": "https://images.unsplash.com/photo-1592417817098-8f3d6910985c?auto=format&fit=crop&w=600&q=80",
+    "image": "/images/products/seed-packet.jpg",
     "desc": "Светлозелена тънка и дълга чушка за пресни салати, пълнене и пържене.",
     "dose": "150 г/дка",
     "rates": [
@@ -8314,7 +8314,7 @@ window.AGRO_PRODUCTS = [
     "quarantine": "0 дни",
     "reg": "БАБХ: № 011416-ПРЗ",
     "badge": "Оригинален",
-    "image": "https://images.unsplash.com/photo-1597362925123-77861d3fbac7?auto=format&fit=crop&w=600&q=80",
+    "image": "/images/products/seed-packet.jpg",
     "desc": "Едра, изправена двукамерна капия, достигаща над 200 грама.",
     "dose": "130-150 г/дка",
     "rates": [
@@ -8357,7 +8357,7 @@ window.AGRO_PRODUCTS = [
     "quarantine": "0 дни",
     "reg": "БАБХ: № 011423-ПРЗ",
     "badge": "Топ Продукт",
-    "image": "https://images.unsplash.com/photo-1592417817098-8f3d6910985c?auto=format&fit=crop&w=600&q=80",
+    "image": "/images/products/seed-packet.jpg",
     "desc": "Традиционни български пукани люти чушлета с остър пикантен вкус.",
     "dose": "100 г/дка",
     "rates": [
@@ -8400,7 +8400,7 @@ window.AGRO_PRODUCTS = [
     "quarantine": "0 дни",
     "reg": "БАБХ: № 011430-ПРЗ",
     "badge": "Оригинален",
-    "image": "https://images.unsplash.com/photo-1597362925123-77861d3fbac7?auto=format&fit=crop&w=600&q=80",
+    "image": "/images/products/seed-packet.jpg",
     "desc": "Лъскав тъмнолилав патладжан с плътна бяла вътрешност без горчивина.",
     "dose": "30-40 г/дка",
     "rates": [
@@ -8443,7 +8443,7 @@ window.AGRO_PRODUCTS = [
     "quarantine": "0 дни",
     "reg": "БАБХ: № 011437-ПРЗ",
     "badge": "Оригинален",
-    "image": "https://images.unsplash.com/photo-1592417817098-8f3d6910985c?auto=format&fit=crop&w=600&q=80",
+    "image": "/images/products/seed-packet.jpg",
     "desc": "Едър крушовиден сорт за кьопоолу и консервиране.",
     "dose": "40 г/дка",
     "rates": [
@@ -8486,7 +8486,7 @@ window.AGRO_PRODUCTS = [
     "quarantine": "0 дни",
     "reg": "БАБХ: № 011444-ПРЗ",
     "badge": "Оригинален",
-    "image": "https://images.unsplash.com/photo-1597362925123-77861d3fbac7?auto=format&fit=crop&w=600&q=80",
+    "image": "/images/products/seed-packet.jpg",
     "desc": "Ранен храстовиден сорт с непрекъснато раждане до първите есенни слани.",
     "dose": "300-400 г/дка",
     "rates": [
@@ -8529,7 +8529,7 @@ window.AGRO_PRODUCTS = [
     "quarantine": "0 дни",
     "reg": "БАБХ: № 011451-ПРЗ",
     "badge": "Оригинален",
-    "image": "https://images.unsplash.com/photo-1592417817098-8f3d6910985c?auto=format&fit=crop&w=600&q=80",
+    "image": "/images/products/seed-packet.jpg",
     "desc": "Цилиндрични тъмнозелени тиквички с малки семки, идеални за печене на скара.",
     "dose": "350 г/дка",
     "rates": [
@@ -8572,7 +8572,7 @@ window.AGRO_PRODUCTS = [
     "quarantine": "0 дни",
     "reg": "БАБХ: № 011458-ПРЗ",
     "badge": "Оригинален",
-    "image": "https://images.unsplash.com/photo-1597362925123-77861d3fbac7?auto=format&fit=crop&w=600&q=80",
+    "image": "/images/products/seed-packet.jpg",
     "desc": "Най-доброто зеле за бидон и каца: крехко, втасва бързо и прави бистър сок.",
     "dose": "40-50 г/дка",
     "rates": [
@@ -8615,7 +8615,7 @@ window.AGRO_PRODUCTS = [
     "quarantine": "0 дни",
     "reg": "БАБХ: № 011465-ПРЗ",
     "badge": "Оригинален",
-    "image": "https://images.unsplash.com/photo-1592417817098-8f3d6910985c?auto=format&fit=crop&w=600&q=80",
+    "image": "/images/products/seed-packet.jpg",
     "desc": "Студоустойчиво зеле за късно есенно прибиране и съхранение през зимата.",
     "dose": "40-50 г/дка",
     "rates": [
@@ -8658,7 +8658,7 @@ window.AGRO_PRODUCTS = [
     "quarantine": "0 дни",
     "reg": "БАБХ: № 011472-ПРЗ",
     "badge": "Топ Продукт",
-    "image": "https://images.unsplash.com/photo-1597362925123-77861d3fbac7?auto=format&fit=crop&w=600&q=80",
+    "image": "/images/products/seed-packet.jpg",
     "desc": "Снежнобяла плътна глава с нежен вкус за туршии и готвене.",
     "dose": "30-40 г/дка",
     "rates": [
@@ -8701,7 +8701,7 @@ window.AGRO_PRODUCTS = [
     "quarantine": "0 дни",
     "reg": "БАБХ: № 011479-ПРЗ",
     "badge": "Оригинален",
-    "image": "https://images.unsplash.com/photo-1592417817098-8f3d6910985c?auto=format&fit=crop&w=600&q=80",
+    "image": "/images/products/seed-packet.jpg",
     "desc": "Зимуващ на открито сорт с едри тъмнозелени листа. Не стрелкува бързо.",
     "dose": "1.5-2.5 кг/дка",
     "rates": [
@@ -8744,7 +8744,7 @@ window.AGRO_PRODUCTS = [
     "quarantine": "0 дни",
     "reg": "БАБХ: № 011486-ПРЗ",
     "badge": "Промо -10%",
-    "image": "https://images.unsplash.com/photo-1597362925123-77861d3fbac7?auto=format&fit=crop&w=600&q=80",
+    "image": "/images/products/seed-packet.jpg",
     "desc": "Сочни моркови без жилаво сърце за бебешки пюрета и пресни сокове.",
     "dose": "450-600 г/дка",
     "rates": [
@@ -8787,7 +8787,7 @@ window.AGRO_PRODUCTS = [
     "quarantine": "0 дни",
     "reg": "БАБХ: № 011493-ПРЗ",
     "badge": "Оригинален",
-    "image": "https://images.unsplash.com/photo-1592417817098-8f3d6910985c?auto=format&fit=crop&w=600&q=80",
+    "image": "/images/products/seed-packet.jpg",
     "desc": "Хрупкави репички за пролетни салати: готови само за 25 дни от поникването.",
     "dose": "1-1.5 кг/дка",
     "rates": [
@@ -8830,7 +8830,7 @@ window.AGRO_PRODUCTS = [
     "quarantine": "0 дни",
     "reg": "БАБХ: № 011500-ПРЗ",
     "badge": "Оригинален",
-    "image": "https://images.unsplash.com/photo-1597362925123-77861d3fbac7?auto=format&fit=crop&w=600&q=80",
+    "image": "/images/products/seed-packet.jpg",
     "desc": "Едър сладък воден воден лук, незаменим за шопска салата.",
     "dose": "400-500 г/дка",
     "rates": [
@@ -8873,7 +8873,7 @@ window.AGRO_PRODUCTS = [
     "quarantine": "0 дни",
     "reg": "БАБХ: № 011507-ПРЗ",
     "badge": "Оригинален",
-    "image": "https://images.unsplash.com/photo-1592417817098-8f3d6910985c?auto=format&fit=crop&w=600&q=80",
+    "image": "/images/products/seed-packet.jpg",
     "desc": "Крехка маслена главеста салата със светлозелени листа, които не горчат.",
     "dose": "30-40 г/дка",
     "rates": [
@@ -8916,7 +8916,7 @@ window.AGRO_PRODUCTS = [
     "quarantine": "0 дни",
     "reg": "БАБХ: № 011514-ПРЗ",
     "badge": "Оригинален",
-    "image": "https://images.unsplash.com/photo-1597362925123-77861d3fbac7?auto=format&fit=crop&w=600&q=80",
+    "image": "/images/products/seed-packet.jpg",
     "desc": "Много ранен захарен грах с фини сладки зърна за замразяване.",
     "dose": "10-12 кг/дка",
     "rates": [
@@ -8959,7 +8959,7 @@ window.AGRO_PRODUCTS = [
     "quarantine": "0 дни",
     "reg": "БАБХ: № 011521-ПРЗ",
     "badge": "Топ Продукт",
-    "image": "https://images.unsplash.com/photo-1592417817098-8f3d6910985c?auto=format&fit=crop&w=600&q=80",
+    "image": "/images/products/seed-packet.jpg",
     "desc": "Нисък храстовиден фасул с кръгли жълти чушки без жилки и лико.",
     "dose": "8-10 кг/дка",
     "rates": [
@@ -9002,7 +9002,7 @@ window.AGRO_PRODUCTS = [
     "quarantine": "0 дни",
     "reg": "БАБХ: № 011528-ПРЗ",
     "badge": "Оригинален",
-    "image": "https://images.unsplash.com/photo-1597362925123-77861d3fbac7?auto=format&fit=crop&w=600&q=80",
+    "image": "/images/products/seed-packet.jpg",
     "desc": "Българска сладка диня с тънка кора, огненочервено месо и дребни семки.",
     "dose": "250-300 г/дка",
     "rates": [
@@ -9045,7 +9045,7 @@ window.AGRO_PRODUCTS = [
     "quarantine": "0 дни",
     "reg": "БАБХ: № 011535-ПРЗ",
     "badge": "Оригинален",
-    "image": "https://images.unsplash.com/photo-1592417817098-8f3d6910985c?auto=format&fit=crop&w=600&q=80",
+    "image": "/images/products/seed-packet.jpg",
     "desc": "Силно ароматен летен пъпеш с разтапяща се медена консистенция.",
     "dose": "200 г/дка",
     "rates": [
@@ -9088,7 +9088,7 @@ window.AGRO_PRODUCTS = [
     "quarantine": "0 дни",
     "reg": "БАБХ: № 011542-ПРЗ",
     "badge": "Оригинален",
-    "image": "https://images.unsplash.com/photo-1597362925123-77861d3fbac7?auto=format&fit=crop&w=600&q=80",
+    "image": "/images/products/seed-packet.jpg",
     "desc": "Издръжлива датска тревна смеска за интензивно натоварване в двора.",
     "dose": "30-40 г на кв.м",
     "rates": [
@@ -9131,7 +9131,7 @@ window.AGRO_PRODUCTS = [
     "quarantine": "0 дни",
     "reg": "БАБХ: № 011549-ПРЗ",
     "badge": "Оригинален",
-    "image": "https://images.unsplash.com/photo-1592417817098-8f3d6910985c?auto=format&fit=crop&w=600&q=80",
+    "image": "/images/products/seed-packet.jpg",
     "desc": "Гъст смарагдово-зелен килим под короните на дървета и високи сгради.",
     "dose": "35 г на кв.м",
     "rates": [
@@ -9174,7 +9174,7 @@ window.AGRO_PRODUCTS = [
     "quarantine": "0 дни",
     "reg": "БАБХ: № 011556-ПРЗ",
     "badge": "Оригинален",
-    "image": "https://images.unsplash.com/photo-1510812431401-41d2bd2722f3?auto=format&fit=crop&w=600&q=80",
+    "image": "/images/products/wine-bottle.jpg",
     "desc": "Световен лидер: работи при 10-30°C, ферментира до 18% алкохол и спасява спрели ферментации.",
     "dose": "20-25 г за 100 л мъст",
     "rates": [
@@ -9217,7 +9217,7 @@ window.AGRO_PRODUCTS = [
     "quarantine": "0 дни",
     "reg": "БАБХ: № 011563-ПРЗ",
     "badge": "Промо -10%",
-    "image": "https://images.unsplash.com/photo-1506377247377-2a5b3b417ebb?auto=format&fit=crop&w=600&q=80",
+    "image": "/images/products/wine-bottle.jpg",
     "desc": "Отключва тропически и цитрусови аромати за Совиньон Блан и Мускат.",
     "dose": "20 г за 100 л",
     "rates": [
@@ -9260,7 +9260,7 @@ window.AGRO_PRODUCTS = [
     "quarantine": "0 дни",
     "reg": "БАБХ: № 011570-ПРЗ",
     "badge": "Топ Продукт",
-    "image": "https://images.unsplash.com/photo-1510812431401-41d2bd2722f3?auto=format&fit=crop&w=600&q=80",
+    "image": "/images/products/wine-bottle.jpg",
     "desc": "За плътни рубинени червени вина: Каберне, Мерло и Мавруд.",
     "dose": "20-25 г за 100 кг каша",
     "rates": [
@@ -9303,7 +9303,7 @@ window.AGRO_PRODUCTS = [
     "quarantine": "0 дни",
     "reg": "БАБХ: № 011577-ПРЗ",
     "badge": "Оригинален",
-    "image": "https://images.unsplash.com/photo-1506377247377-2a5b3b417ebb?auto=format&fit=crop&w=600&q=80",
+    "image": "/images/products/wine-bottle.jpg",
     "desc": "Килър щам (унищожава дивите бактерии), устойчив на екстремни температури.",
     "dose": "20-25 г за 100 л",
     "rates": [
@@ -9346,7 +9346,7 @@ window.AGRO_PRODUCTS = [
     "quarantine": "0 дни",
     "reg": "БАБХ: № 011584-ПРЗ",
     "badge": "Оригинален",
-    "image": "https://images.unsplash.com/photo-1510812431401-41d2bd2722f3?auto=format&fit=crop&w=600&q=80",
+    "image": "/images/products/wine-bottle.jpg",
     "desc": "Придава маслена плътност, нотки на круша и зряла ябълка при Шардоне.",
     "dose": "20 г за 100 л",
     "rates": [
@@ -9389,7 +9389,7 @@ window.AGRO_PRODUCTS = [
     "quarantine": "0 дни",
     "reg": "БАБХ: № 011591-ПРЗ",
     "badge": "Оригинален",
-    "image": "https://images.unsplash.com/photo-1506377247377-2a5b3b417ebb?auto=format&fit=crop&w=600&q=80",
+    "image": "/images/products/wine-bottle.jpg",
     "desc": "Храна за дрожди: предпазва от поява на сероводород (миризма на развалени яйца).",
     "dose": "20-30 г за 100 л",
     "rates": [
@@ -9432,7 +9432,7 @@ window.AGRO_PRODUCTS = [
     "quarantine": "0 дни",
     "reg": "БАБХ: № 011598-ПРЗ",
     "badge": "Оригинален",
-    "image": "https://images.unsplash.com/photo-1510812431401-41d2bd2722f3?auto=format&fit=crop&w=600&q=80",
+    "image": "/images/products/wine-bottle.jpg",
     "desc": "Придава кехлибарен цвят и аромати на ванилия, карамел и печени ядки.",
     "dose": "2-4 г на литър",
     "rates": [
@@ -9475,7 +9475,7 @@ window.AGRO_PRODUCTS = [
     "quarantine": "0 дни",
     "reg": "БАБХ: № 011605-ПРЗ",
     "badge": "Оригинален",
-    "image": "https://images.unsplash.com/photo-1506377247377-2a5b3b417ebb?auto=format&fit=crop&w=600&q=80",
+    "image": "/images/products/wine-bottle.jpg",
     "desc": "Сладък ванилов тон, който омекотява парещия спиртен вкус на ракията.",
     "dose": "3-5 г на литър ракия",
     "rates": [
@@ -9518,7 +9518,7 @@ window.AGRO_PRODUCTS = [
     "quarantine": "0 дни",
     "reg": "БАБХ: № 011612-ПРЗ",
     "badge": "Оригинален",
-    "image": "https://images.unsplash.com/photo-1510812431401-41d2bd2722f3?auto=format&fit=crop&w=600&q=80",
+    "image": "/images/products/wine-bottle.jpg",
     "desc": "Серниста киселина на прах: спира оцетното вкисване и предпазва от потъмняване.",
     "dose": "5-10 г за 100 л",
     "rates": [
@@ -9561,7 +9561,7 @@ window.AGRO_PRODUCTS = [
     "quarantine": "0 дни",
     "reg": "БАБХ: № 011619-ПРЗ",
     "badge": "Топ Продукт",
-    "image": "https://images.unsplash.com/photo-1506377247377-2a5b3b417ebb?auto=format&fit=crop&w=600&q=80",
+    "image": "/images/products/wine-bottle.jpg",
     "desc": "Утаява мътилката и термолабилните белтъци за 7-10 дни за кристален блясък.",
     "dose": "80-120 г за 100 л",
     "rates": [
@@ -9604,7 +9604,7 @@ window.AGRO_PRODUCTS = [
     "quarantine": "0 дни",
     "reg": "БАБХ: № 011626-ПРЗ",
     "badge": "Оригинален",
-    "image": "https://images.unsplash.com/photo-1510812431401-41d2bd2722f3?auto=format&fit=crop&w=600&q=80",
+    "image": "/images/products/wine-bottle.jpg",
     "desc": "Премахва стипчивостта и омекотява прекомерно тръпчивите червени вина.",
     "dose": "5-10 г за 100 л",
     "rates": [
@@ -9647,7 +9647,7 @@ window.AGRO_PRODUCTS = [
     "quarantine": "0 дни",
     "reg": "БАБХ: № 011633-ПРЗ",
     "badge": "Оригинален",
-    "image": "https://images.unsplash.com/photo-1506377247377-2a5b3b417ebb?auto=format&fit=crop&w=600&q=80",
+    "image": "/images/products/wine-bottle.jpg",
     "desc": "Стабилизира цвета и повишава антиоксидантния потенциал на червените вина.",
     "dose": "5-15 г за 100 л",
     "rates": [
@@ -9690,7 +9690,7 @@ window.AGRO_PRODUCTS = [
     "quarantine": "0 дни",
     "reg": "БАБХ: № 011640-ПРЗ",
     "badge": "Промо -10%",
-    "image": "https://images.unsplash.com/photo-1510812431401-41d2bd2722f3?auto=format&fit=crop&w=600&q=80",
+    "image": "/images/products/wine-bottle.jpg",
     "desc": "Придава благороден мускатов букет на обикновена домашна гроздова ракия.",
     "dose": "20 мл за 50 л ракия",
     "rates": [
@@ -9733,7 +9733,7 @@ window.AGRO_PRODUCTS = [
     "quarantine": "0 дни",
     "reg": "БАБХ: № 011647-ПРЗ",
     "badge": "Оригинален",
-    "image": "https://images.unsplash.com/photo-1506377247377-2a5b3b417ebb?auto=format&fit=crop&w=600&q=80",
+    "image": "/images/products/wine-bottle.jpg",
     "desc": "Традиционен наситен аромат за подсилване на гроздовия дестилат.",
     "dose": "20 мл за 50 л ракия",
     "rates": [
@@ -9776,7 +9776,7 @@ window.AGRO_PRODUCTS = [
     "quarantine": "0 дни",
     "reg": "БАБХ: № 011654-ПРЗ",
     "badge": "Оригинален",
-    "image": "https://images.unsplash.com/photo-1510812431401-41d2bd2722f3?auto=format&fit=crop&w=600&q=80",
+    "image": "/images/products/wine-bottle.jpg",
     "desc": "Автентичен троянски сливов характер за плодова ракия.",
     "dose": "20 мл за 50 л ракия",
     "rates": [
@@ -9819,7 +9819,7 @@ window.AGRO_PRODUCTS = [
     "quarantine": "0 дни",
     "reg": "БАБХ: № 011661-ПРЗ",
     "badge": "Оригинален",
-    "image": "https://images.unsplash.com/photo-1506377247377-2a5b3b417ebb?auto=format&fit=crop&w=600&q=80",
+    "image": "/images/products/wine-bottle.jpg",
     "desc": "Интензивен и благоуханен аромат на прясна узряла дюля.",
     "dose": "20 мл за 50 л ракия",
     "rates": [
@@ -9862,7 +9862,7 @@ window.AGRO_PRODUCTS = [
     "quarantine": "0 дни",
     "reg": "БАБХ: № 011668-ПРЗ",
     "badge": "Топ Продукт",
-    "image": "https://images.unsplash.com/photo-1510812431401-41d2bd2722f3?auto=format&fit=crop&w=600&q=80",
+    "image": "/images/products/wine-bottle.jpg",
     "desc": "Придава естествен златист отлежал цвят на ракията без утайка.",
     "dose": "50-100 мл за 100 л",
     "rates": [
@@ -9905,7 +9905,7 @@ window.AGRO_PRODUCTS = [
     "quarantine": "0 дни",
     "reg": "БАБХ: № 011675-ПРЗ",
     "badge": "Оригинален",
-    "image": "https://images.unsplash.com/photo-1506377247377-2a5b3b417ebb?auto=format&fit=crop&w=600&q=80",
+    "image": "/images/products/wine-bottle.jpg",
     "desc": "Предотвратява кипенето на джибрите и замърсяването на лулата при дестилация.",
     "dose": "10-20 мл на казан",
     "rates": [
@@ -9948,7 +9948,7 @@ window.AGRO_PRODUCTS = [
     "quarantine": "0 дни",
     "reg": "БАБХ: № 011682-ПРЗ",
     "badge": "Оригинален",
-    "image": "https://images.unsplash.com/photo-1510812431401-41d2bd2722f3?auto=format&fit=crop&w=600&q=80",
+    "image": "/images/products/wine-bottle.jpg",
     "desc": "Точно отчитане на алкохолния градус с температурна корекционна скала.",
     "dose": "Измерване в мензура",
     "rates": [
@@ -9991,7 +9991,7 @@ window.AGRO_PRODUCTS = [
     "quarantine": "0 дни",
     "reg": "БАБХ: № 011689-ПРЗ",
     "badge": "Оригинален",
-    "image": "https://images.unsplash.com/photo-1506377247377-2a5b3b417ebb?auto=format&fit=crop&w=600&q=80",
+    "image": "/images/products/wine-bottle.jpg",
     "desc": "За определяне на захарността на гроздето и точния ден за гроздобер.",
     "dose": "Потапяне в мъстта",
     "rates": [
@@ -10034,7 +10034,7 @@ window.AGRO_PRODUCTS = [
     "quarantine": "0 дни",
     "reg": "БАБХ: № 011696-ПРЗ",
     "badge": "Оригинален",
-    "image": "https://images.unsplash.com/photo-1510812431401-41d2bd2722f3?auto=format&fit=crop&w=600&q=80",
+    "image": "/images/products/wine-bottle.jpg",
     "desc": "Спира вторичната ферментация при подсладени бели и червени вина.",
     "dose": "15-20 г за 100 л",
     "rates": [
@@ -10077,7 +10077,7 @@ window.AGRO_PRODUCTS = [
     "quarantine": "0 дни",
     "reg": "БАБХ: № 011703-ПРЗ",
     "badge": "Оригинален",
-    "image": "https://images.unsplash.com/photo-1506377247377-2a5b3b417ebb?auto=format&fit=crop&w=600&q=80",
+    "image": "/images/products/wine-bottle.jpg",
     "desc": "Коригира свежестта и киселинността на нискокиселинни южни гроздови мъсти.",
     "dose": "50-100 г за 100 л",
     "rates": [
@@ -10100,24 +10100,11 @@ window.AGRO_PRODUCTS = [
   }
 ];
 
-// Helper: Get product by ID slug with aliases
+// Helper: Get product by ID slug
 window.getProductById = function(id) {
   if (!id) return null;
   const cleanId = id.toLowerCase().trim();
-  const aliasMap = {
-    'luna': 'luna-kear-vg',
-    'mospilan': 'mospilan-20-sp',
-    'decis': 'detsis-100-ek',
-    'detsis': 'detsis-100-ek',
-    'roundup': 'raundap-klasik-pro',
-    'raundap': 'raundap-klasik-pro',
-    'score': 'skor-250-ek',
-    'skor': 'skor-250-ek'
-  };
-  const targetId = aliasMap[cleanId] || cleanId;
-  return window.AGRO_PRODUCTS.find(p => p.id === targetId) ||
-         window.AGRO_PRODUCTS.find(p => p.id.startsWith(targetId)) ||
-         window.AGRO_PRODUCTS.find(p => p.id.includes(targetId)) || null;
+  return window.AGRO_PRODUCTS.find(p => p.id === cleanId) || null;
 };
 
 // Helper: Get products by category

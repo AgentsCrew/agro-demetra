@@ -9,6 +9,8 @@
     { "source": "/product", "destination": "/product.html" },
     { "source": "/news", "destination": "/news.html" },
     { "source": "/blog", "destination": "/news.html" },
-    { "source": "/admin", "destination": "/admin.html" }
+    { "source": "/admin", "destination": "/admin.html" },
+    { "source": "/home-2", "destination": "/home-2.html" },
+    { "source": "/home-3", "destination": "/home-3.html" }
   ]
 }
