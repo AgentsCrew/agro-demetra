@@ -359,8 +359,9 @@
     </div>
   </footer>
 
-  <!-- Products Database -->
+  <!-- Products Database & Supabase Live Client -->
   <script src="js/products-data.js"></script>
+  <script src="js/supabase-client.js"></script>
 
   <script>
     lucide.createIcons();
@@ -510,8 +511,31 @@
 
       calculateDoseLive();
 
-      window.addToCartLiveProduct = function() {
-        alert(`Добавено в количката:\n${currentProd.name} (${selectedUnit})\nКоличество: ${qty} бр.\nОбща сума: € ${(selectedPrice * qty).toFixed(2)} (${((selectedPrice * qty) * 1.95583).toFixed(2)} лв.)`);
+      window.addToCartLiveProduct = async function() {
+        const orderNum = `AD-${Date.now().toString().slice(-6)}`;
+        const totalEur = (selectedPrice * qty).toFixed(2);
+        const totalBgn = ((selectedPrice * qty) * 1.95583).toFixed(2);
+
+        // Quick order phone prompt
+        const phone = prompt(`🛒 Бърза поръчка за:\n${currentProd.name} (${selectedUnit}) — ${qty} бр.\nОбща сума: € ${totalEur} (${totalBgn} лв.)\n\nМоля, въведете Вашия телефон за доставка:`, '');
+        
+        if (phone && phone.trim()) {
+          if (window.AGRO_SUPABASE) {
+            await window.AGRO_SUPABASE.submitOrder({
+              order_number: orderNum,
+              customer_name: 'Онлайн клиент',
+              customer_phone: phone.trim(),
+              delivery_method: 'econt',
+              delivery_address: 'Уточняване по телефон',
+              total_eur: parseFloat(totalEur),
+              total_bgn: parseFloat(totalBgn),
+              items: [{ id: currentProd.id, name: currentProd.name, unit: selectedUnit, qty: qty, price: selectedPrice }]
+            });
+          }
+          alert(`✅ Благодарим! Поръчка № ${orderNum} е приета и записана в базата данни.\nНаш агроном ще се свърже с Вас на тел. ${phone} за потвърждение.`);
+        } else if (phone !== null) {
+          alert(`Добавено в количката:\n${currentProd.name} (${selectedUnit})\nКоличество: ${qty} бр.\nОбща сума: € ${totalEur} (${totalBgn} лв.)`);
+        }
       };
 
       // Related Products

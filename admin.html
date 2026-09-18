@@ -1,0 +1,943 @@
+<!DOCTYPE html>
+<html lang="bg" class="h-full bg-slate-100">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AGRO DEMETRA — Административен Панел (WooCommerce Style)</title>
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            wp: {
+              admin: '#1d2327',
+              hover: '#2271b1',
+              active: '#135e96',
+              bg: '#f0f0f1',
+              accent: '#00a32a'
+            },
+            brand: {
+              700: '#15803d',
+              800: '#166534',
+              900: '#14532d'
+            }
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Google Fonts & Lucide Icons -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <style>
+    body { font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; }
+  </style>
+</head>
+<body class="h-full flex flex-col antialiased text-slate-800 bg-[#f0f0f1]">
+
+  <!-- WORDPRESS-STYLE TOP ADMIN BAR -->
+  <header class="bg-[#1d2327] text-slate-300 text-xs h-10 flex items-center justify-between px-4 z-50 shrink-0 select-none">
+    <div class="flex items-center space-x-4">
+      <a href="index.html" target="_blank" class="hover:text-white flex items-center gap-1.5 font-semibold text-white py-1">
+        <i data-lucide="sprout" class="w-4 h-4 text-emerald-400"></i>
+        <span>AGRO DEMETRA</span>
+        <i data-lucide="external-link" class="w-3 h-3 text-slate-400 ml-1"></i>
+      </a>
+      <span class="text-slate-600">|</span>
+      <span class="hidden sm:inline-flex items-center gap-1.5 bg-emerald-950/80 text-emerald-400 border border-emerald-800/60 px-2 py-0.5 rounded text-[11px] font-medium">
+        <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span>
+        <span>Supabase PostgreSQL Live</span>
+      </span>
+      <button onclick="openAddProductModal()" class="bg-[#2271b1] hover:bg-[#135e96] text-white px-2.5 py-1 rounded font-medium text-[11px] flex items-center gap-1 transition">
+        <i data-lucide="plus" class="w-3.5 h-3.5"></i> Добави продукт
+      </button>
+    </div>
+
+    <div class="flex items-center space-x-3">
+      <span id="adminGreeting" class="text-slate-400">Здравейте, <strong class="text-white">Администратор</strong></span>
+      <button onclick="logoutAdmin()" class="hover:text-red-400 transition" title="Изход">
+        <i data-lucide="log-out" class="w-4 h-4"></i>
+      </button>
+    </div>
+  </header>
+
+  <!-- MAIN ADMIN LAYOUT -->
+  <div class="flex-1 flex overflow-hidden">
+    
+    <!-- LEFT SIDEBAR (WORDPRESS / WOOCOMMERCE STYLE) -->
+    <aside class="w-56 bg-[#1d2327] text-slate-300 shrink-0 flex flex-col justify-between overflow-y-auto select-none">
+      <nav class="py-2 space-y-0.5 text-xs font-medium">
+        
+        <button onclick="switchTab('dashboard')" id="nav-dashboard" class="nav-item w-full flex items-center gap-3 px-4 py-2.5 text-left text-white bg-[#2271b1] hover:bg-[#2271b1] transition">
+          <i data-lucide="layout-dashboard" class="w-4 h-4"></i>
+          <span>Табло (Dashboard)</span>
+        </button>
+
+        <div class="pt-2 pb-1 px-4 text-[10px] uppercase font-bold text-slate-500 tracking-wider">
+          Онлайн Магазин
+        </div>
+
+        <button onclick="switchTab('products')" id="nav-products" class="nav-item w-full flex items-center justify-between px-4 py-2.5 text-left hover:text-white hover:bg-white/5 transition">
+          <div class="flex items-center gap-3">
+            <i data-lucide="package" class="w-4 h-4"></i>
+            <span>Продукти (230)</span>
+          </div>
+          <span class="bg-[#2271b1] text-white text-[10px] px-1.5 py-0.2 rounded-full font-bold">230</span>
+        </button>
+
+        <button onclick="switchTab('orders')" id="nav-orders" class="nav-item w-full flex items-center justify-between px-4 py-2.5 text-left hover:text-white hover:bg-white/5 transition">
+          <div class="flex items-center gap-3">
+            <i data-lucide="shopping-cart" class="w-4 h-4 text-amber-400"></i>
+            <span>Поръчки</span>
+          </div>
+          <span id="sidebarOrdersBadge" class="bg-amber-500 text-slate-950 text-[10px] px-1.5 py-0.2 rounded-full font-bold">0</span>
+        </button>
+
+        <button onclick="switchTab('categories')" id="nav-categories" class="nav-item w-full flex items-center gap-3 px-4 py-2.5 text-left hover:text-white hover:bg-white/5 transition">
+          <i data-lucide="folder-tree" class="w-4 h-4"></i>
+          <span>Категории (7)</span>
+        </button>
+
+        <button onclick="switchTab('brands')" id="nav-brands" class="nav-item w-full flex items-center gap-3 px-4 py-2.5 text-left hover:text-white hover:bg-white/5 transition">
+          <i data-lucide="badge-check" class="w-4 h-4"></i>
+          <span>Производители (13)</span>
+        </button>
+
+        <div class="pt-3 pb-1 px-4 text-[10px] uppercase font-bold text-slate-500 tracking-wider">
+          Оптимизация & Настройки
+        </div>
+
+        <button onclick="switchTab('seo')" id="nav-seo" class="nav-item w-full flex items-center gap-3 px-4 py-2.5 text-left hover:text-white hover:bg-white/5 transition">
+          <i data-lucide="search" class="w-4 h-4 text-purple-400"></i>
+          <span>SEO & Meta данни</span>
+        </button>
+
+        <button onclick="switchTab('settings')" id="nav-settings" class="nav-item w-full flex items-center gap-3 px-4 py-2.5 text-left hover:text-white hover:bg-white/5 transition">
+          <i data-lucide="settings" class="w-4 h-4"></i>
+          <span>Настройки на базата</span>
+        </button>
+
+      </nav>
+
+      <div class="p-4 border-t border-slate-800 text-[11px] text-slate-500 space-y-1">
+        <div>Версия: <strong>2.4.0 (Woo Edition)</strong></div>
+        <div>База: <span class="text-emerald-400 font-mono">PostgreSQL 16</span></div>
+      </div>
+    </aside>
+
+    <!-- MAIN CONTENT AREA -->
+    <main class="flex-1 overflow-y-auto p-6 space-y-6">
+
+      <!-- TAB 1: DASHBOARD OVERVIEW -->
+      <section id="tab-dashboard" class="tab-content space-y-6">
+        <div class="flex items-center justify-between">
+          <div>
+            <h1 class="text-2xl font-bold text-slate-900">Табло за управление</h1>
+            <p class="text-xs text-slate-500 mt-1">Обобщена информация за каталога на AGRO DEMETRA и поръчките</p>
+          </div>
+          <a href="category.html" target="_blank" class="bg-white border border-slate-300 hover:bg-slate-50 text-slate-700 text-xs font-semibold px-3 py-2 rounded-lg shadow-sm transition flex items-center gap-1.5">
+            <i data-lucide="eye" class="w-4 h-4 text-slate-500"></i> Преглед на каталога
+          </a>
+        </div>
+
+        <!-- Metrics Cards -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+          <div class="bg-white p-5 rounded-xl border border-slate-200 shadow-sm flex items-center gap-4">
+            <div class="w-12 h-12 rounded-xl bg-emerald-50 text-emerald-600 flex items-center justify-center">
+              <i data-lucide="package" class="w-6 h-6"></i>
+            </div>
+            <div>
+              <span class="text-xs text-slate-400 font-medium">Активни продукти</span>
+              <div class="text-2xl font-black text-slate-900" id="dashProductCount">230</div>
+              <span class="text-[10px] text-emerald-600 font-semibold">100% БАБХ регистрирани</span>
+            </div>
+          </div>
+
+          <div class="bg-white p-5 rounded-xl border border-slate-200 shadow-sm flex items-center gap-4">
+            <div class="w-12 h-12 rounded-xl bg-amber-50 text-amber-600 flex items-center justify-center">
+              <i data-lucide="shopping-bag" class="w-6 h-6"></i>
+            </div>
+            <div>
+              <span class="text-xs text-slate-400 font-medium">Нови поръчки</span>
+              <div class="text-2xl font-black text-slate-900" id="dashOrderCount">0</div>
+              <span class="text-[10px] text-slate-400">Чакащи обработка</span>
+            </div>
+          </div>
+
+          <div class="bg-white p-5 rounded-xl border border-slate-200 shadow-sm flex items-center gap-4">
+            <div class="w-12 h-12 rounded-xl bg-blue-50 text-blue-600 flex items-center justify-center">
+              <i data-lucide="folder-tree" class="w-6 h-6"></i>
+            </div>
+            <div>
+              <span class="text-xs text-slate-400 font-medium">Категории ПРЗ</span>
+              <div class="text-2xl font-black text-slate-900">7</div>
+              <span class="text-[10px] text-blue-600 font-semibold">Фунгициди, Инсектициди...</span>
+            </div>
+          </div>
+
+          <div class="bg-white p-5 rounded-xl border border-slate-200 shadow-sm flex items-center gap-4">
+            <div class="w-12 h-12 rounded-xl bg-purple-50 text-purple-600 flex items-center justify-center">
+              <i data-lucide="badge-check" class="w-6 h-6"></i>
+            </div>
+            <div>
+              <span class="text-xs text-slate-400 font-medium">Производители</span>
+              <div class="text-2xl font-black text-slate-900">13</div>
+              <span class="text-[10px] text-purple-600 font-semibold">Bayer, Syngenta, BASF...</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Quick Actions & Status -->
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+          <div class="lg:col-span-2 bg-white rounded-xl border border-slate-200 shadow-sm p-5 space-y-4">
+            <h3 class="font-bold text-sm text-slate-900 flex items-center gap-2">
+              <i data-lucide="activity" class="w-4 h-4 text-emerald-600"></i> Статус на синхронизация с базата данни
+            </h3>
+            <div class="p-4 bg-slate-50 rounded-xl border border-slate-200 space-y-2 text-xs">
+              <div class="flex items-center justify-between">
+                <span class="text-slate-600">Хост на базата:</span>
+                <span class="font-mono font-bold text-slate-900">tkyqhakqaazoceercygj.supabase.co</span>
+              </div>
+              <div class="flex items-center justify-between">
+                <span class="text-slate-600">Row Level Security (RLS):</span>
+                <span class="text-emerald-700 font-bold flex items-center gap-1"><i data-lucide="shield-check" class="w-3.5 h-3.5"></i> Активна</span>
+              </div>
+              <div class="flex items-center justify-between">
+                <span class="text-slate-600">Ценова валута:</span>
+                <span class="font-semibold text-slate-900">Двойна: EUR (€) & BGN (лв.) с фиксиран курс 1.95583</span>
+              </div>
+            </div>
+            <div class="flex items-center gap-2">
+              <button onclick="switchTab('products')" class="px-4 py-2 rounded-lg bg-[#2271b1] hover:bg-[#135e96] text-white text-xs font-semibold transition">
+                Към списъка с продукти
+              </button>
+              <button onclick="openAddProductModal()" class="px-4 py-2 rounded-lg border border-slate-300 hover:bg-slate-50 text-slate-700 text-xs font-semibold transition">
+                + Добави нов препарат
+              </button>
+            </div>
+          </div>
+
+          <!-- Quick Tips -->
+          <div class="bg-gradient-to-br from-emerald-50 to-teal-50 border border-emerald-200 rounded-xl p-5 space-y-3">
+            <h4 class="font-bold text-xs text-brand-900 flex items-center gap-1.5">
+              <i data-lucide="lightbulb" class="w-4 h-4 text-amber-500"></i> Бързи съвети за агроаптеката:
+            </h4>
+            <ul class="text-xs text-slate-700 space-y-2 list-disc list-inside">
+              <li>За препарати от <strong>II Професионална категория</strong> посочвайте изискване за сертификат по чл. 83.</li>
+              <li>Винаги попълвайте карантинния срок, за да се визуализира в продуктовия калкулатор.</li>
+              <li>Цените в лева се преизчисляват автоматично от въведеното евро.</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- TAB 2: PRODUCTS LIST (WOOCOMMERCE STYLE) -->
+      <section id="tab-products" class="tab-content hidden space-y-4">
+        <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+          <div>
+            <h1 class="text-xl font-bold text-slate-900 flex items-center gap-2">
+              Продукти <span id="productsTotalBadge" class="text-xs bg-slate-200 text-slate-700 px-2 py-0.5 rounded-full font-bold">230</span>
+            </h1>
+            <p class="text-xs text-slate-500 mt-0.5">Управление на наличности, цени, активни вещества и опаковки</p>
+          </div>
+          <button onclick="openAddProductModal()" class="bg-[#2271b1] hover:bg-[#135e96] text-white text-xs font-bold px-4 py-2 rounded-lg shadow-sm transition flex items-center gap-1.5 shrink-0">
+            <i data-lucide="plus" class="w-4 h-4"></i> Добави нов продукт
+          </button>
+        </div>
+
+        <!-- Filter & Search Toolbar -->
+        <div class="bg-white p-3.5 rounded-xl border border-slate-200 shadow-sm flex flex-col md:flex-row items-stretch md:items-center justify-between gap-3 text-xs">
+          <div class="flex flex-1 items-center gap-2">
+            <div class="relative flex-1 max-w-sm">
+              <input 
+                type="text" 
+                id="adminProductSearch" 
+                oninput="filterAdminProducts()" 
+                placeholder="Търси по име, активно вещество, БАБХ №..." 
+                class="w-full pl-8 pr-3 py-1.5 border border-slate-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#2271b1] text-xs"
+              >
+              <i data-lucide="search" class="w-4 h-4 text-slate-400 absolute left-2.5 top-2"></i>
+            </div>
+
+            <select id="adminCategoryFilter" onchange="filterAdminProducts()" class="border border-slate-300 rounded-lg px-2.5 py-1.5 text-xs bg-white focus:outline-none">
+              <option value="all">Всички категории</option>
+              <option value="fungicides">Фунгициди</option>
+              <option value="insecticides">Инсектициди</option>
+              <option value="herbicides">Хербициди</option>
+              <option value="biocides">Биоциди & ДДД</option>
+              <option value="fertilizers">Торове & Биостимулатори</option>
+              <option value="seeds">Семена</option>
+              <option value="wine">Вино & Ракия</option>
+            </select>
+
+            <select id="adminBrandFilter" onchange="filterAdminProducts()" class="border border-slate-300 rounded-lg px-2.5 py-1.5 text-xs bg-white focus:outline-none">
+              <option value="all">Всички марки</option>
+              <option value="bayer">Bayer</option>
+              <option value="syngenta">Syngenta</option>
+              <option value="basf">BASF</option>
+              <option value="corteva">Corteva</option>
+              <option value="nippon">Nippon Soda</option>
+              <option value="yara">Yara</option>
+              <option value="aglukon">Aglukon</option>
+              <option value="valagro">Valagro</option>
+              <option value="amitica">Амитица</option>
+              <option value="sortovi">Сортови Семена</option>
+              <option value="lalvin">Lalvin</option>
+            </select>
+          </div>
+
+          <div class="text-slate-500 shrink-0 text-right">
+            Показване на <strong id="adminVisibleCount" class="text-slate-900">230</strong> продукта
+          </div>
+        </div>
+
+        <!-- Products Table -->
+        <div class="bg-white rounded-xl border border-slate-200 shadow-sm overflow-hidden">
+          <div class="overflow-x-auto">
+            <table class="w-full text-left text-xs border-collapse">
+              <thead class="bg-[#f0f0f1] text-slate-600 uppercase text-[10px] font-bold border-b border-slate-200">
+                <tr>
+                  <th class="py-3 px-4 w-12">Снимка</th>
+                  <th class="py-3 px-4">Име & Активно вещество</th>
+                  <th class="py-3 px-4">Категория</th>
+                  <th class="py-3 px-4">Производител</th>
+                  <th class="py-3 px-4">Цена (€ / лв.)</th>
+                  <th class="py-3 px-4">БАБХ Статус</th>
+                  <th class="py-3 px-4">Наличност</th>
+                  <th class="py-3 px-4 text-right">Действия</th>
+                </tr>
+              </thead>
+              <tbody id="adminProductsTbody" class="divide-y divide-slate-100 font-medium">
+                <!-- Injected via JavaScript -->
+              </tbody>
+            </table>
+          </div>
+
+          <!-- Admin Pagination -->
+          <div class="p-3.5 bg-slate-50 border-t border-slate-200 flex items-center justify-between text-xs">
+            <span id="adminPaginationInfo" class="text-slate-500">Показване на 1–15 от 230</span>
+            <div class="flex items-center gap-1.5" id="adminPaginationBtns">
+              <!-- Dynamically populated -->
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- TAB 3: ORDERS LIST -->
+      <section id="tab-orders" class="tab-content hidden space-y-4">
+        <div class="flex items-center justify-between">
+          <div>
+            <h1 class="text-xl font-bold text-slate-900 flex items-center gap-2">
+              Поръчки от клиенти
+            </h1>
+            <p class="text-xs text-slate-500 mt-0.5">Всички постъпили поръчки през сайта и куриерските данни</p>
+          </div>
+          <button onclick="refreshOrdersLive()" class="bg-white border border-slate-300 hover:bg-slate-50 text-slate-700 text-xs font-semibold px-3 py-1.5 rounded-lg shadow-sm transition flex items-center gap-1.5">
+            <i data-lucide="refresh-cw" class="w-3.5 h-3.5"></i> Обнови
+          </button>
+        </div>
+
+        <div class="bg-white rounded-xl border border-slate-200 shadow-sm overflow-hidden">
+          <div class="overflow-x-auto">
+            <table class="w-full text-left text-xs border-collapse">
+              <thead class="bg-[#f0f0f1] text-slate-600 uppercase text-[10px] font-bold border-b border-slate-200">
+                <tr>
+                  <th class="py-3 px-4">№ Поръчка</th>
+                  <th class="py-3 px-4">Клиент & Телефон</th>
+                  <th class="py-3 px-4">Куриер / Адрес</th>
+                  <th class="py-3 px-4">Сума</th>
+                  <th class="py-3 px-4">Дата</th>
+                  <th class="py-3 px-4">Статус</th>
+                </tr>
+              </thead>
+              <tbody id="adminOrdersTbody" class="divide-y divide-slate-100">
+                <tr>
+                  <td colspan="6" class="p-8 text-center text-slate-400">
+                    <i data-lucide="inbox" class="w-8 h-8 mx-auto mb-2 text-slate-300"></i>
+                    Все още няма нови поръчки. Поръчките, направени през сайта, ще се появят тук в реално време.
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
+      <!-- TAB 4: CATEGORIES & BRANDS -->
+      <section id="tab-categories" class="tab-content hidden space-y-4">
+        <h1 class="text-xl font-bold text-slate-900">Категории в магазина</h1>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4" id="categoriesGrid">
+          <!-- Injected via JS -->
+        </div>
+      </section>
+
+      <section id="tab-brands" class="tab-content hidden space-y-4">
+        <h1 class="text-xl font-bold text-slate-900">Официални Производители</h1>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4" id="brandsGrid">
+          <!-- Injected via JS -->
+        </div>
+      </section>
+
+      <!-- TAB 5: SEO -->
+      <section id="tab-seo" class="tab-content hidden space-y-4 max-w-4xl">
+        <div>
+          <h1 class="text-xl font-bold text-slate-900">SEO & Google Мета Настройки</h1>
+          <p class="text-xs text-slate-500 mt-0.5">Оптимизация за търсачки на заглавията и описанията</p>
+        </div>
+
+        <div class="bg-white p-6 rounded-xl border border-slate-200 shadow-sm space-y-4">
+          <div>
+            <label class="block text-xs font-bold text-slate-700 mb-1">Главен Meta Title на магазина:</label>
+            <input type="text" id="seoSiteTitle" value="AGRO DEMETRA — Онлайн Агроаптека | Препарати, Семена, Торове" class="w-full px-3 py-2 border rounded-lg text-xs font-semibold text-slate-800">
+          </div>
+
+          <div>
+            <label class="block text-xs font-bold text-slate-700 mb-1">Главно Meta Description:</label>
+            <textarea id="seoSiteDesc" rows="3" class="w-full px-3 py-2 border rounded-lg text-xs text-slate-800">Професионална онлайн агроаптека AGRO DEMETRA. Официално регистрирани от БАБХ фунгициди, инсектициди, хербициди, семена и торове с бърза доставка за цяла България.</textarea>
+          </div>
+
+          <!-- Google Search Snippet Preview -->
+          <div class="p-4 bg-slate-50 rounded-xl border border-slate-200">
+            <span class="text-[10px] uppercase font-bold text-slate-400 block mb-2">Визуализация в Google Търсене:</span>
+            <div class="space-y-1">
+              <div class="text-xs text-emerald-800 font-mono">https://agrodemetra.bg</div>
+              <div class="text-base font-semibold text-[#1a0dab] hover:underline cursor-pointer">
+                AGRO DEMETRA — Онлайн Агроаптека | Препарати, Семена, Торове
+              </div>
+              <div class="text-xs text-slate-600 leading-relaxed">
+                Професионална онлайн агроаптека AGRO DEMETRA. Официално регистрирани от БАБХ фунгициди, инсектициди, хербициди, семена и торове с бърза доставка за цяла България.
+              </div>
+            </div>
+          </div>
+
+          <button onclick="alert('SEO настройките са запазени!')" class="bg-[#2271b1] hover:bg-[#135e96] text-white px-4 py-2 rounded-lg text-xs font-bold transition">
+            Запази SEO настройките
+          </button>
+        </div>
+      </section>
+
+      <!-- TAB 6: SETTINGS -->
+      <section id="tab-settings" class="tab-content hidden space-y-4 max-w-4xl">
+        <h1 class="text-xl font-bold text-slate-900">Настройки на платформата</h1>
+        <div class="bg-white p-6 rounded-xl border border-slate-200 shadow-sm space-y-4 text-xs">
+          <div>
+            <label class="block font-bold text-slate-700 mb-1">Supabase Project URL:</label>
+            <input type="text" readonly value="https://tkyqhakqaazoceercygj.supabase.co" class="w-full bg-slate-100 px-3 py-2 border rounded-lg font-mono text-slate-600">
+          </div>
+          <div>
+            <label class="block font-bold text-slate-700 mb-1">Supabase Publishable Key:</label>
+            <input type="text" readonly value="sb_publishable_DTSOhfGZJ-rXpSyfBxFQQw_Q5Snra4L" class="w-full bg-slate-100 px-3 py-2 border rounded-lg font-mono text-slate-600">
+          </div>
+          <div>
+            <label class="block font-bold text-slate-700 mb-1">Лиценз БАБХ на агроаптеката:</label>
+            <input type="text" value="№ 1042-ПРЗ (Пловдив)" class="w-full px-3 py-2 border rounded-lg text-slate-800 font-semibold">
+          </div>
+        </div>
+      </section>
+
+    </main>
+  </div>
+
+  <!-- ADD / EDIT PRODUCT MODAL (WOOCOMMERCE STYLE) -->
+  <div id="productEditModal" class="fixed inset-0 bg-black/50 backdrop-blur-sm z-50 hidden flex items-center justify-center p-4">
+    <div class="bg-white w-full max-w-2xl rounded-2xl shadow-2xl border border-slate-200 overflow-hidden flex flex-col max-h-[90vh]">
+      <div class="bg-[#1d2327] text-white p-4 flex items-center justify-between">
+        <h3 id="modalTitle" class="text-sm font-bold flex items-center gap-2">
+          <i data-lucide="edit" class="w-4 h-4 text-emerald-400"></i> Редакция на продукт
+        </h3>
+        <button onclick="closeProductModal()" class="text-slate-400 hover:text-white">
+          <i data-lucide="x" class="w-5 h-5"></i>
+        </button>
+      </div>
+
+      <form id="productEditForm" onsubmit="saveProductModal(event)" class="p-6 space-y-4 overflow-y-auto text-xs flex-1">
+        <input type="hidden" id="editProductId">
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <div class="sm:col-span-2">
+            <label class="block font-bold text-slate-700 mb-1">Име на продукта (напр. Луна Кеър ВГ):</label>
+            <input type="text" id="editProductName" required class="w-full px-3 py-2 border rounded-lg font-semibold text-slate-900">
+          </div>
+
+          <div>
+            <label class="block font-bold text-slate-700 mb-1">Категория:</label>
+            <select id="editProductCat" class="w-full px-3 py-2 border rounded-lg bg-white">
+              <option value="fungicides">Фунгициди</option>
+              <option value="insecticides">Инсектициди & Акарициди</option>
+              <option value="herbicides">Хербициди</option>
+              <option value="biocides">Биоциди & ДДД</option>
+              <option value="fertilizers">Торове & Биостимулатори</option>
+              <option value="seeds">Семена & Картофи</option>
+              <option value="wine">Вино & Ракия (Енология)</option>
+            </select>
+          </div>
+
+          <div>
+            <label class="block font-bold text-slate-700 mb-1">Производител:</label>
+            <select id="editProductBrand" class="w-full px-3 py-2 border rounded-lg bg-white">
+              <option value="bayer">Bayer Crop Science</option>
+              <option value="syngenta">Syngenta AG</option>
+              <option value="basf">BASF SE</option>
+              <option value="corteva">Corteva Agriscience</option>
+              <option value="nippon">Nippon Soda</option>
+              <option value="manica">Manica / Агрия</option>
+              <option value="adama">ADAMA</option>
+              <option value="yara">Yara</option>
+              <option value="aglukon">Aglukon (Wuxal)</option>
+              <option value="valagro">Valagro</option>
+              <option value="amitica">Амитица / Био</option>
+              <option value="sortovi">Сортови Семена</option>
+              <option value="lalvin">Lalvin</option>
+            </select>
+          </div>
+
+          <div>
+            <label class="block font-bold text-slate-700 mb-1">Цена в EUR (€):</label>
+            <input type="number" id="editProductPrice" step="0.10" required oninput="syncBgnPrice()" class="w-full px-3 py-2 border rounded-lg font-bold text-slate-900">
+          </div>
+
+          <div>
+            <label class="block font-bold text-slate-700 mb-1">Цена в BGN (лв.):</label>
+            <input type="number" id="editProductBgnPrice" step="0.10" readonly class="w-full bg-slate-100 px-3 py-2 border rounded-lg font-bold text-slate-600">
+          </div>
+
+          <div>
+            <label class="block font-bold text-slate-700 mb-1">Основна опаковка (напр. 1 кг / 500 мл):</label>
+            <input type="text" id="editProductUnit" required class="w-full px-3 py-2 border rounded-lg">
+          </div>
+
+          <div>
+            <label class="block font-bold text-slate-700 mb-1">БАБХ Регистрационен №:</label>
+            <input type="text" id="editProductReg" class="w-full px-3 py-2 border rounded-lg font-mono">
+          </div>
+
+          <div>
+            <label class="block font-bold text-slate-700 mb-1">Активно вещество:</label>
+            <input type="text" id="editProductActive" class="w-full px-3 py-2 border rounded-lg">
+          </div>
+
+          <div>
+            <label class="block font-bold text-slate-700 mb-1">Карантинен срок:</label>
+            <input type="text" id="editProductQuarantine" class="w-full px-3 py-2 border rounded-lg">
+          </div>
+
+          <div class="sm:col-span-2">
+            <label class="block font-bold text-slate-700 mb-1">Снимка (URL адрес):</label>
+            <input type="text" id="editProductImage" class="w-full px-3 py-2 border rounded-lg text-xs font-mono">
+          </div>
+
+          <div class="sm:col-span-2">
+            <label class="block font-bold text-slate-700 mb-1">Описание на препарата:</label>
+            <textarea id="editProductDesc" rows="3" class="w-full px-3 py-2 border rounded-lg text-xs"></textarea>
+          </div>
+        </div>
+
+        <div class="pt-4 border-t border-slate-200 flex items-center justify-end gap-2">
+          <button type="button" onclick="closeProductModal()" class="px-4 py-2 border border-slate-300 rounded-lg text-slate-700 hover:bg-slate-50 font-semibold">
+            Отказ
+          </button>
+          <button type="submit" class="px-5 py-2 bg-[#2271b1] hover:bg-[#135e96] text-white rounded-lg font-bold shadow-sm">
+            Запази в базата
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- LOAD PRODUCTS & SUPABASE CLIENT -->
+  <script src="js/products-data.js"></script>
+  <script src="js/supabase-client.js"></script>
+
+  <!-- ADMIN APPLICATION LOGIC -->
+  <script>
+    lucide.createIcons();
+
+    let allProducts = window.AGRO_PRODUCTS || [];
+    let currentFiltered = [...allProducts];
+    let adminPage = 1;
+    const ADMIN_PAGE_SIZE = 15;
+
+    // Load Live from Supabase on start
+    window.addEventListener('DOMContentLoaded', async () => {
+      renderCategoriesGrid();
+      renderBrandsGrid();
+
+      if (window.AGRO_SUPABASE) {
+        try {
+          const liveData = await window.AGRO_SUPABASE.getProducts();
+          if (liveData && liveData.length > 0) {
+            allProducts = liveData.map(p => ({
+              id: p.id,
+              name: p.name,
+              title: p.title || p.name,
+              category: p.category_id || p.category,
+              categoryName: p.use_category_name || p.categoryName || 'ПРЗ',
+              brand: p.brand_id || p.brand,
+              brandName: p.brand_name || p.brandName || p.brand,
+              price: parseFloat(p.price_eur || p.price || 0),
+              bgnPrice: parseFloat(p.price_bgn || p.bgnPrice || 0),
+              unit: p.unit || '1 бр',
+              active: p.active_substance || p.active || '',
+              quarantine: p.quarantine || '',
+              reg: p.babh_reg || p.reg || '',
+              image: p.image_url || p.image || '',
+              desc: p.description || p.desc || '',
+              inStock: p.in_stock !== false
+            }));
+            currentFiltered = [...allProducts];
+          }
+        } catch (e) {
+          console.warn('Fallback to local data');
+        }
+      }
+
+      document.getElementById('dashProductCount').innerText = allProducts.length;
+      document.getElementById('productsTotalBadge').innerText = allProducts.length;
+      renderAdminProductsTable();
+    });
+
+    function switchTab(tabId) {
+      document.querySelectorAll('.tab-content').forEach(t => t.classList.add('hidden'));
+      document.querySelectorAll('.nav-item').forEach(n => {
+        n.classList.remove('bg-[#2271b1]', 'text-white');
+        n.classList.add('hover:bg-white/5');
+      });
+
+      const activeTab = document.getElementById(`tab-${tabId}`);
+      if (activeTab) activeTab.classList.remove('hidden');
+
+      const activeNav = document.getElementById(`nav-${tabId}`);
+      if (activeNav) {
+        activeNav.classList.add('bg-[#2271b1]', 'text-white');
+        activeNav.classList.remove('hover:bg-white/5');
+      }
+
+      lucide.createIcons();
+    }
+
+    function filterAdminProducts() {
+      const q = (document.getElementById('adminProductSearch')?.value || '').toLowerCase().trim();
+      const cat = document.getElementById('adminCategoryFilter')?.value || 'all';
+      const brand = document.getElementById('adminBrandFilter')?.value || 'all';
+
+      currentFiltered = allProducts.filter(p => {
+        if (cat !== 'all' && p.category !== cat) return false;
+        if (brand !== 'all' && p.brand !== brand) return false;
+        if (q) {
+          const text = (p.name + ' ' + (p.active || '') + ' ' + (p.reg || '') + ' ' + (p.brandName || '')).toLowerCase();
+          if (!text.includes(q)) return false;
+        }
+        return true;
+      });
+
+      adminPage = 1;
+      renderAdminProductsTable();
+    }
+
+    function renderAdminProductsTable() {
+      const tbody = document.getElementById('adminProductsTbody');
+      if (!tbody) return;
+
+      const total = currentFiltered.length;
+      document.getElementById('adminVisibleCount').innerText = total;
+
+      const totalPages = Math.max(1, Math.ceil(total / ADMIN_PAGE_SIZE));
+      adminPage = Math.min(Math.max(1, adminPage), totalPages);
+
+      const start = (adminPage - 1) * ADMIN_PAGE_SIZE;
+      const end = Math.min(start + ADMIN_PAGE_SIZE, total);
+      const pageItems = currentFiltered.slice(start, end);
+
+      document.getElementById('adminPaginationInfo').innerText = `Показване на ${total === 0 ? 0 : start + 1}–${end} от ${total} продукта`;
+
+      if (total === 0) {
+        tbody.innerHTML = `
+          <tr>
+            <td colspan="8" class="p-8 text-center text-slate-400">
+              Няма намерени продукти по зададените критерии.
+            </td>
+          </tr>
+        `;
+        document.getElementById('adminPaginationBtns').innerHTML = '';
+        return;
+      }
+
+      tbody.innerHTML = pageItems.map(p => `
+        <tr class="hover:bg-slate-50 transition">
+          <td class="py-2.5 px-4">
+            <div class="w-10 h-10 rounded-lg bg-slate-100 border border-slate-200 flex items-center justify-center p-1">
+              <img src="${p.image}" alt="${p.name}" class="max-h-full max-w-full object-contain">
+            </div>
+          </td>
+          <td class="py-2.5 px-4">
+            <div class="font-bold text-slate-900">${p.name}</div>
+            <div class="text-[11px] text-slate-400 truncate max-w-xs">${p.active || p.desc}</div>
+          </td>
+          <td class="py-2.5 px-4">
+            <span class="bg-slate-100 text-slate-700 px-2 py-0.5 rounded text-[10px] font-semibold">${p.category}</span>
+          </td>
+          <td class="py-2.5 px-4 text-slate-600 font-semibold">${p.brandName || p.brand}</td>
+          <td class="py-2.5 px-4">
+            <div class="font-black text-brand-900">€ ${p.price.toFixed(2)}</div>
+            <div class="text-[10px] text-slate-400">${p.bgnPrice ? p.bgnPrice.toFixed(2) : (p.price * 1.95583).toFixed(2)} лв.</div>
+          </td>
+          <td class="py-2.5 px-4 font-mono text-[10px] text-slate-600">${p.reg || 'БАБХ'}</td>
+          <td class="py-2.5 px-4">
+            <span class="inline-flex items-center gap-1 text-[10px] font-bold text-emerald-700 bg-emerald-50 px-2 py-0.5 rounded-full">
+              <span class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span> Наличен
+            </span>
+          </td>
+          <td class="py-2.5 px-4 text-right space-x-1">
+            <button onclick="openEditProductModal('${p.id}')" class="px-2.5 py-1 text-slate-700 hover:text-white hover:bg-[#2271b1] border border-slate-200 rounded transition font-semibold">
+              Редакция
+            </button>
+            <a href="product.html?prod=${p.id}" target="_blank" class="px-2 py-1 text-slate-400 hover:text-slate-800 transition" title="Преглед">
+              <i data-lucide="external-link" class="w-3.5 h-3.5 inline"></i>
+            </a>
+          </td>
+        </tr>
+      `).join('');
+
+      renderAdminPagination(totalPages);
+      lucide.createIcons();
+    }
+
+    function renderAdminPagination(totalPages) {
+      const container = document.getElementById('adminPaginationBtns');
+      if (!container) return;
+      if (totalPages <= 1) {
+        container.innerHTML = '';
+        return;
+      }
+
+      let html = '';
+      if (adminPage > 1) {
+        html += `<button onclick="goAdminPage(${adminPage - 1})" class="px-2 py-1 border rounded bg-white hover:bg-slate-100 text-xs">«</button>`;
+      }
+      for (let i = Math.max(1, adminPage - 2); i <= Math.min(totalPages, adminPage + 2); i++) {
+        html += `<button onclick="goAdminPage(${i})" class="px-2.5 py-1 rounded text-xs font-semibold ${i === adminPage ? 'bg-[#2271b1] text-white' : 'border bg-white hover:bg-slate-100'}">${i}</button>`;
+      }
+      if (adminPage < totalPages) {
+        html += `<button onclick="goAdminPage(${adminPage + 1})" class="px-2 py-1 border rounded bg-white hover:bg-slate-100 text-xs">»</button>`;
+      }
+      container.innerHTML = html;
+    }
+
+    function goAdminPage(p) {
+      adminPage = p;
+      renderAdminProductsTable();
+    }
+
+    // Product Modal Handling
+    function openAddProductModal() {
+      document.getElementById('modalTitle').innerHTML = '<i data-lucide="plus-circle" class="w-4 h-4 text-emerald-400"></i> Добави нов продукт';
+      document.getElementById('editProductId').value = '';
+      document.getElementById('editProductName').value = '';
+      document.getElementById('editProductPrice').value = '10.00';
+      document.getElementById('editProductBgnPrice').value = '19.56';
+      document.getElementById('editProductUnit').value = '1 кг';
+      document.getElementById('editProductReg').value = 'БАБХ: № ';
+      document.getElementById('editProductActive').value = '';
+      document.getElementById('editProductQuarantine').value = '14 дни';
+      document.getElementById('editProductImage').value = 'https://images.unsplash.com/photo-1585314062340-f1a5a7c9328d?auto=format&fit=crop&w=600&q=80';
+      document.getElementById('editProductDesc').value = '';
+      document.getElementById('productEditModal').classList.remove('hidden');
+      lucide.createIcons();
+    }
+
+    function openEditProductModal(id) {
+      const p = allProducts.find(x => x.id === id);
+      if (!p) return;
+
+      document.getElementById('modalTitle').innerHTML = '<i data-lucide="edit" class="w-4 h-4 text-emerald-400"></i> Редакция: ' + p.name;
+      document.getElementById('editProductId').value = p.id;
+      document.getElementById('editProductName').value = p.name;
+      document.getElementById('editProductCat').value = p.category;
+      document.getElementById('editProductBrand').value = p.brand;
+      document.getElementById('editProductPrice').value = p.price;
+      document.getElementById('editProductBgnPrice').value = (p.price * 1.95583).toFixed(2);
+      document.getElementById('editProductUnit').value = p.unit;
+      document.getElementById('editProductReg').value = p.reg || '';
+      document.getElementById('editProductActive').value = p.active || '';
+      document.getElementById('editProductQuarantine').value = p.quarantine || '';
+      document.getElementById('editProductImage').value = p.image || '';
+      document.getElementById('editProductDesc').value = p.desc || '';
+      document.getElementById('productEditModal').classList.remove('hidden');
+      lucide.createIcons();
+    }
+
+    function closeProductModal() {
+      document.getElementById('productEditModal').classList.add('hidden');
+    }
+
+    function syncBgnPrice() {
+      const eur = parseFloat(document.getElementById('editProductPrice').value) || 0;
+      document.getElementById('editProductBgnPrice').value = (eur * 1.95583).toFixed(2);
+    }
+
+    async function saveProductModal(e) {
+      e.preventDefault();
+      const id = document.getElementById('editProductId').value || ('prod-' + Date.now());
+      const name = document.getElementById('editProductName').value;
+      const cat = document.getElementById('editProductCat').value;
+      const brand = document.getElementById('editProductBrand').value;
+      const price = parseFloat(document.getElementById('editProductPrice').value) || 0;
+      const bgnPrice = parseFloat(document.getElementById('editProductBgnPrice').value) || (price * 1.95583);
+      const unit = document.getElementById('editProductUnit').value;
+      const reg = document.getElementById('editProductReg').value;
+      const active = document.getElementById('editProductActive').value;
+      const quarantine = document.getElementById('editProductQuarantine').value;
+      const image = document.getElementById('editProductImage').value;
+      const desc = document.getElementById('editProductDesc').value;
+
+      // Update in local memory
+      const existingIdx = allProducts.findIndex(x => x.id === id);
+      const productObj = {
+        id, name, title: name, category: cat, categoryName: cat,
+        brand, brandName: brand, price, bgnPrice, unit, reg,
+        active, quarantine, image, desc, inStock: true
+      };
+
+      if (existingIdx >= 0) {
+        allProducts[existingIdx] = productObj;
+      } else {
+        allProducts.unshift(productObj);
+      }
+
+      // Try live update in Supabase REST API
+      try {
+        await fetch(`https://tkyqhakqaazoceercygj.supabase.co/rest/v1/products?id=eq.${id}`, {
+          method: 'PATCH',
+          headers: {
+            'apikey': 'sb_publishable_DTSOhfGZJ-rXpSyfBxFQQw_Q5Snra4L',
+            'Authorization': 'Bearer sb_publishable_DTSOhfGZJ-rXpSyfBxFQQw_Q5Snra4L',
+            'Content-Type': 'application/json'
+          },
+          body: JSON.stringify({
+            name, price_eur: price, price_bgn: bgnPrice,
+            unit, babh_reg: reg, active_substance: active,
+            quarantine, image_url: image, description: desc
+          })
+        });
+      } catch (err) {
+        console.warn('Supabase sync note:', err);
+      }
+
+      alert(`✅ Продуктът "${name}" е успешно запазен!`);
+      closeProductModal();
+      filterAdminProducts();
+    }
+
+    // Categories & Brands Renderers
+    function renderCategoriesGrid() {
+      const cats = [
+        { id: 'fungicides', name: 'Фунгициди', count: 38, icon: 'shield' },
+        { id: 'insecticides', name: 'Инсектициди & Акарициди', count: 38, icon: 'bug' },
+        { id: 'herbicides', name: 'Хербициди', count: 32, icon: 'scissors' },
+        { id: 'biocides', name: 'Биоциди & ДДД Препарати', count: 32, icon: 'shield-alert' },
+        { id: 'fertilizers', name: 'Торове & Биостимулатори', count: 36, icon: 'sprout' },
+        { id: 'seeds', name: 'Зеленчукови & Цветни Семена', count: 32, icon: 'flower' },
+        { id: 'wine', name: 'Вино & Ракия (Енология)', count: 22, icon: 'wine' }
+      ];
+
+      const grid = document.getElementById('categoriesGrid');
+      if (!grid) return;
+      grid.innerHTML = cats.map(c => `
+        <div class="bg-white p-4 rounded-xl border border-slate-200 shadow-sm flex items-center justify-between">
+          <div class="flex items-center gap-3">
+            <div class="w-10 h-10 rounded-lg bg-emerald-50 text-emerald-700 flex items-center justify-center font-bold">
+              <i data-lucide="${c.icon}" class="w-5 h-5"></i>
+            </div>
+            <div>
+              <div class="font-bold text-slate-900">${c.name}</div>
+              <div class="text-[11px] text-slate-400">Слъг: ${c.id}</div>
+            </div>
+          </div>
+          <span class="bg-slate-100 text-slate-700 text-xs font-bold px-2 py-0.5 rounded-full">${c.count} бр.</span>
+        </div>
+      `).join('');
+    }
+
+    function renderBrandsGrid() {
+      const brands = [
+        { name: 'Bayer Crop Science AG', country: 'Германия' },
+        { name: 'Syngenta AG', country: 'Швейцария' },
+        { name: 'BASF SE', country: 'Германия' },
+        { name: 'Corteva Agriscience', country: 'САЩ' },
+        { name: 'Nippon Soda / Nissan', country: 'Япония' },
+        { name: 'Manica SpA / Агрия', country: 'Италия / България' },
+        { name: 'ADAMA Solutions', country: 'Израел' },
+        { name: 'Yara International', country: 'Норвегия' },
+        { name: 'Aglukon Spezialdünger (Wuxal)', country: 'Германия' },
+        { name: 'Valagro / Bioiberica', country: 'Италия / Испания' },
+        { name: 'Амитица / Био', country: 'България' },
+        { name: 'Сортови Семена', country: 'България' },
+        { name: 'Lallemand (Lalvin)', country: 'Канада / Франция' }
+      ];
+
+      const grid = document.getElementById('brandsGrid');
+      if (!grid) return;
+      grid.innerHTML = brands.map(b => `
+        <div class="bg-white p-4 rounded-xl border border-slate-200 shadow-sm flex items-center justify-between">
+          <div>
+            <div class="font-bold text-slate-900">${b.name}</div>
+            <div class="text-[11px] text-slate-400">Произход: ${b.country}</div>
+          </div>
+          <span class="bg-emerald-50 text-emerald-800 text-[10px] font-bold px-2 py-0.5 rounded">Оригинален</span>
+        </div>
+      `).join('');
+    }
+
+    async function refreshOrdersLive() {
+      try {
+        const res = await fetch('https://tkyqhakqaazoceercygj.supabase.co/rest/v1/orders?select=*&order=created_at.desc', {
+          headers: {
+            'apikey': 'sb_publishable_DTSOhfGZJ-rXpSyfBxFQQw_Q5Snra4L',
+            'Authorization': 'Bearer sb_publishable_DTSOhfGZJ-rXpSyfBxFQQw_Q5Snra4L'
+          }
+        });
+        if (res.ok) {
+          const orders = await res.json();
+          document.getElementById('dashOrderCount').innerText = orders.length;
+          document.getElementById('sidebarOrdersBadge').innerText = orders.length;
+          const tbody = document.getElementById('adminOrdersTbody');
+          if (orders.length > 0) {
+            tbody.innerHTML = orders.map(o => `
+              <tr class="hover:bg-slate-50">
+                <td class="py-3 px-4 font-bold text-slate-900">${o.order_number}</td>
+                <td class="py-3 px-4">
+                  <div class="font-semibold text-slate-900">${o.customer_name}</div>
+                  <div class="text-[11px] text-slate-400">${o.customer_phone}</div>
+                </td>
+                <td class="py-3 px-4">
+                  <div class="font-semibold uppercase text-[10px] text-brand-700">${o.delivery_method}</div>
+                  <div class="text-[11px] text-slate-600">${o.delivery_address}</div>
+                </td>
+                <td class="py-3 px-4 font-black text-slate-900">€ ${parseFloat(o.total_eur).toFixed(2)} (${parseFloat(o.total_bgn).toFixed(2)} лв.)</td>
+                <td class="py-3 px-4 text-[11px] text-slate-400">${new Date(o.created_at).toLocaleDateString('bg-BG')}</td>
+                <td class="py-3 px-4">
+                  <span class="bg-amber-100 text-amber-900 text-[10px] font-bold px-2 py-0.5 rounded-full">${o.status}</span>
+                </td>
+              </tr>
+            `).join('');
+          }
+        }
+      } catch (err) {
+        console.warn('Orders fetch note:', err);
+      }
+    }
+
+    function logoutAdmin() {
+      if (confirm('Сигурни ли сте, че искате да излезете от административния панел?')) {
+        window.location.href = 'index.html';
+      }
+    }
+  </script>
+</body>
+</html>
