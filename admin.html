@@ -104,11 +104,29 @@
 
       <!-- STEP 2: Enter 6-digit Code -->
       <div id="loginStepCode" class="hidden space-y-4">
-        <div class="p-3 bg-emerald-950/60 border border-emerald-800/60 rounded-xl text-xs text-emerald-300 flex items-start gap-2.5">
+        <!-- Live Sent Notice -->
+        <div id="codeSentSuccessNotice" class="hidden p-3 bg-emerald-950/60 border border-emerald-800/60 rounded-xl text-xs text-emerald-300 flex items-start gap-2.5">
           <i data-lucide="check-circle-2" class="w-4 h-4 text-emerald-400 shrink-0 mt-0.5"></i>
           <div>
-            Кодът беше изпратен през <strong>onboarding@resend.dev</strong> до:
+            Кодът беше изпратен на вашия имейл през <strong>onboarding@resend.dev</strong>:
             <div id="codeRecipientDisplay" class="font-mono font-bold text-white mt-0.5"></div>
+          </div>
+        </div>
+
+        <!-- Dev Mode / Missing Key Notice -->
+        <div id="codeDevModeNotice" class="p-3.5 bg-amber-950/80 border border-amber-600/70 rounded-2xl text-xs text-amber-200 space-y-2">
+          <div class="font-bold flex items-center gap-1.5 text-amber-300 text-xs">
+            <i data-lucide="alert-triangle" class="w-4 h-4 text-amber-400"></i> Resend акаунтът все още няма въведен API ключ!
+          </div>
+          <p class="text-[11px] text-amber-200/90 leading-relaxed">
+            Имейлът не е изпратен до Gmail пощата ви, тъй като Resend изисква въведен ключ (<code class="bg-black/40 px-1 py-0.5 rounded text-amber-300">re_...</code>).
+          </p>
+          <div class="p-2.5 bg-slate-950/90 border border-amber-500/30 rounded-xl flex items-center justify-between gap-2">
+            <span class="text-[11px] text-slate-400">Код за вход:</span>
+            <span id="devCodeDisplay" class="font-mono text-xl text-amber-400 font-black tracking-widest"></span>
+            <button type="button" onclick="autoFillDevCode()" class="px-2.5 py-1 bg-amber-500 hover:bg-amber-400 text-slate-950 font-black rounded-lg text-[10px] transition shrink-0">
+              Въведи автоматично
+            </button>
           </div>
         </div>
 
@@ -995,11 +1013,19 @@
           document.getElementById('loginStepCode').classList.remove('hidden');
           document.getElementById('codeRecipientDisplay').innerText = data.email;
 
-          let alertMsg = data.message;
-          if (data.devCode) {
-            alertMsg += `<div class="mt-1 font-mono text-amber-300 bg-amber-950/60 p-1.5 rounded">Тестов код: <strong>${data.devCode}</strong></div>`;
+          if (data.emailSent) {
+            document.getElementById('codeSentSuccessNotice').classList.remove('hidden');
+            document.getElementById('codeDevModeNotice').classList.add('hidden');
+            showLoginAlert('✅ Кодът е изпратен успешно до ' + data.email + ' през Resend!', true);
+          } else {
+            document.getElementById('codeSentSuccessNotice').classList.add('hidden');
+            document.getElementById('codeDevModeNotice').classList.remove('hidden');
+            document.getElementById('devCodeDisplay').innerText = data.devCode || '';
+            if (data.devCode) {
+              document.getElementById('loginCodeInput').value = data.devCode;
+            }
+            showLoginAlert('⚠️ Resend ключ липсва: за да влезете сега, използвайте готовия код: <strong>' + (data.devCode || '') + '</strong>', true);
           }
-          showLoginAlert(alertMsg, true);
 
           setTimeout(() => {
             const codeInput = document.getElementById('loginCodeInput');
@@ -1118,6 +1144,14 @@
       document.getElementById('loginStepEmail').classList.remove('hidden');
       document.getElementById('loginStatusAlert').classList.add('hidden');
       lucide.createIcons();
+    }
+
+    function autoFillDevCode() {
+      const devCode = document.getElementById('devCodeDisplay')?.innerText;
+      if (devCode) {
+        document.getElementById('loginCodeInput').value = devCode;
+        handleVerifyLoginCode();
+      }
     }
 
     function resendCode() {
