@@ -753,9 +753,116 @@
               <input type="text" id="editProductQuarantine" class="w-full px-3 py-2 border rounded-lg">
             </div>
 
-            <div class="sm:col-span-2">
-              <label class="block font-bold text-slate-700 mb-1">Снимка (URL адрес):</label>
-              <input type="text" id="editProductImage" class="w-full px-3 py-2 border rounded-lg text-xs font-mono">
+            <!-- ADVANCED PRODUCT IMAGE UPLOADER & MANAGER -->
+            <div class="sm:col-span-2 space-y-3">
+              <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2">
+                <label class="block font-bold text-slate-800 text-xs">
+                  Снимка на продукта:
+                </label>
+                <div class="flex items-center gap-1 text-[11px]">
+                  <button type="button" onclick="setImageUploadTab('upload')" id="tabBtnUpload" class="px-2.5 py-1 rounded-md font-bold bg-[#2271b1] text-white transition flex items-center gap-1">
+                    <i data-lucide="upload" class="w-3 h-3"></i> Качи от компютъра
+                  </button>
+                  <button type="button" onclick="setImageUploadTab('preset')" id="tabBtnPreset" class="px-2.5 py-1 rounded-md font-semibold bg-slate-100 hover:bg-slate-200 text-slate-700 transition flex items-center gap-1">
+                    <i data-lucide="package" class="w-3 h-3"></i> Стандартни опаковки
+                  </button>
+                  <button type="button" onclick="setImageUploadTab('url')" id="tabBtnUrl" class="px-2.5 py-1 rounded-md font-semibold bg-slate-100 hover:bg-slate-200 text-slate-700 transition flex items-center gap-1">
+                    <i data-lucide="link" class="w-3 h-3"></i> URL линк
+                  </button>
+                </div>
+              </div>
+
+              <!-- Active Image Preview Card -->
+              <div id="productImagePreviewCard" class="flex items-center gap-3 p-3 bg-slate-50 border border-slate-200 rounded-xl">
+                <div class="w-16 h-16 rounded-lg bg-white p-1 border border-slate-200 flex items-center justify-center overflow-hidden shrink-0 shadow-sm">
+                  <img id="editProductPreviewImg" src="/images/products/bottle-1l.jpg" alt="Преглед на снимка" class="max-h-full max-w-full object-contain">
+                </div>
+                <div class="flex-1 min-w-0">
+                  <div class="text-[10px] uppercase font-bold text-slate-400">Активно изображение:</div>
+                  <div id="editProductPreviewName" class="font-bold text-slate-800 text-xs truncate">Снимка на препарата</div>
+                  <div id="editProductPreviewSize" class="text-[10px] text-emerald-600 font-semibold mt-0.5">Готово за публикуване</div>
+                </div>
+                <button type="button" onclick="clearProductImage()" class="p-2 text-slate-400 hover:text-red-600 hover:bg-red-50 rounded-lg transition" title="Премахни снимката">
+                  <i data-lucide="trash-2" class="w-4 h-4"></i>
+                </button>
+              </div>
+
+              <!-- Sub-panel 1: File Upload (Drag & Drop + Clipboard Paste) -->
+              <div id="imagePanelUpload" class="space-y-2">
+                <div 
+                  id="imageDropZone" 
+                  ondragover="handleImageDragOver(event)" 
+                  ondragleave="handleImageDragLeave(event)" 
+                  ondrop="handleImageDrop(event)" 
+                  onclick="triggerFileInput()"
+                  class="border-2 border-dashed border-slate-300 hover:border-emerald-500 rounded-xl p-5 text-center cursor-pointer bg-slate-50/70 hover:bg-emerald-50/20 transition group"
+                >
+                  <input type="file" id="imageFileInput" accept="image/png, image/jpeg, image/webp, image/jpg" class="hidden" onchange="handleImageFileSelect(event)">
+                  <div class="w-10 h-10 rounded-full bg-emerald-100/70 text-emerald-700 flex items-center justify-center mx-auto mb-2 group-hover:scale-110 transition">
+                    <i data-lucide="upload-cloud" class="w-5 h-5"></i>
+                  </div>
+                  <div class="text-xs font-bold text-slate-800">
+                    Кликнете за избор на файл или го пуснете тук (Drag & Drop)
+                  </div>
+                  <div class="text-[10px] text-slate-400 mt-1">
+                    Поддържа JPG, PNG, WebP · Автоматично оразмеряване до WebP · Можете да поставите и с <kbd class="px-1 py-0.5 bg-slate-200 rounded text-[9px] font-mono">Ctrl+V</kbd>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Sub-panel 2: Pre-made Official Packshots -->
+              <div id="imagePanelPreset" class="hidden space-y-2">
+                <div class="text-[11px] text-slate-500 mb-1">Изберете студийна опаковка на чист бял фон за вашия тип препарат:</div>
+                <div class="grid grid-cols-4 sm:grid-cols-8 gap-2">
+                  <button type="button" onclick="selectPresetImage('/images/products/bottle-1l.jpg', '1L Бутилка')" class="p-1.5 border border-slate-200 hover:border-emerald-500 rounded-lg bg-white flex flex-col items-center gap-1 transition group" title="1-литрова бутилка за фунгициди/инсектициди">
+                    <img src="/images/products/bottle-1l.jpg" alt="1L" class="h-10 w-10 object-contain group-hover:scale-105 transition">
+                    <span class="text-[9px] text-slate-600 font-medium truncate w-full text-center">1L Бутилка</span>
+                  </button>
+                  <button type="button" onclick="selectPresetImage('/images/products/canister-5l.jpg', '5L Туба')" class="p-1.5 border border-slate-200 hover:border-emerald-500 rounded-lg bg-white flex flex-col items-center gap-1 transition group" title="5-литрова туба за хербициди">
+                    <img src="/images/products/canister-5l.jpg" alt="5L" class="h-10 w-10 object-contain group-hover:scale-105 transition">
+                    <span class="text-[9px] text-slate-600 font-medium truncate w-full text-center">5L Туба</span>
+                  </button>
+                  <button type="button" onclick="selectPresetImage('/images/products/bottle-250ml.jpg', '250мл Шише')" class="p-1.5 border border-slate-200 hover:border-emerald-500 rounded-lg bg-white flex flex-col items-center gap-1 transition group" title="250 мл концентрат">
+                    <img src="/images/products/bottle-250ml.jpg" alt="250ml" class="h-10 w-10 object-contain group-hover:scale-105 transition">
+                    <span class="text-[9px] text-slate-600 font-medium truncate w-full text-center">250мл Шише</span>
+                  </button>
+                  <button type="button" onclick="selectPresetImage('/images/products/sachet-wg.jpg', 'ВГ Сашет')" class="p-1.5 border border-slate-200 hover:border-emerald-500 rounded-lg bg-white flex flex-col items-center gap-1 transition group" title="Фолиен сашет с цип (ВГ/ВП)">
+                    <img src="/images/products/sachet-wg.jpg" alt="Сашет" class="h-10 w-10 object-contain group-hover:scale-105 transition">
+                    <span class="text-[9px] text-slate-600 font-medium truncate w-full text-center">ВГ Сашет</span>
+                  </button>
+                  <button type="button" onclick="selectPresetImage('/images/products/fertilizer-sack.jpg', '25кг Тор')" class="p-1.5 border border-slate-200 hover:border-emerald-500 rounded-lg bg-white flex flex-col items-center gap-1 transition group" title="25 кг чувал тор (NPK)">
+                    <img src="/images/products/fertilizer-sack.jpg" alt="Тор" class="h-10 w-10 object-contain group-hover:scale-105 transition">
+                    <span class="text-[9px] text-slate-600 font-medium truncate w-full text-center">25кг Чувал</span>
+                  </button>
+                  <button type="button" onclick="selectPresetImage('/images/products/seed-packet.jpg', 'Семена')" class="p-1.5 border border-slate-200 hover:border-emerald-500 rounded-lg bg-white flex flex-col items-center gap-1 transition group" title="Опаковка за хибридни семена">
+                    <img src="/images/products/seed-packet.jpg" alt="Семена" class="h-10 w-10 object-contain group-hover:scale-105 transition">
+                    <span class="text-[9px] text-slate-600 font-medium truncate w-full text-center">Семена</span>
+                  </button>
+                  <button type="button" onclick="selectPresetImage('/images/products/spray-biocide.jpg', 'Спрей')" class="p-1.5 border border-slate-200 hover:border-emerald-500 rounded-lg bg-white flex flex-col items-center gap-1 transition group" title="Спрей бутилка с пулверизатор">
+                    <img src="/images/products/spray-biocide.jpg" alt="Спрей" class="h-10 w-10 object-contain group-hover:scale-105 transition">
+                    <span class="text-[9px] text-slate-600 font-medium truncate w-full text-center">Спрей</span>
+                  </button>
+                  <button type="button" onclick="selectPresetImage('/images/products/wine-bottle.jpg', 'Вино/Ракия')" class="p-1.5 border border-slate-200 hover:border-emerald-500 rounded-lg bg-white flex flex-col items-center gap-1 transition group" title="Енологична стъклена бутилка">
+                    <img src="/images/products/wine-bottle.jpg" alt="Вино" class="h-10 w-10 object-contain group-hover:scale-105 transition">
+                    <span class="text-[9px] text-slate-600 font-medium truncate w-full text-center">Енология</span>
+                  </button>
+                </div>
+              </div>
+
+              <!-- Sub-panel 3: URL Link Input -->
+              <div id="imagePanelUrl" class="hidden space-y-1">
+                <input 
+                  type="text" 
+                  id="editProductImageUrlInput" 
+                  placeholder="https://example.com/product-image.jpg" 
+                  oninput="handleImageUrlInput(this.value)" 
+                  class="w-full px-3 py-2 border rounded-lg text-xs font-mono text-slate-800 bg-white"
+                >
+                <div class="text-[10px] text-slate-400">Поставете директен URL адрес на изображение в интернет</div>
+              </div>
+
+              <!-- Hidden input that holds the final image payload for the product form -->
+              <input type="hidden" id="editProductImage">
             </div>
 
             <div class="sm:col-span-2">
@@ -1630,6 +1737,184 @@
 
 
     // ===================================================================
+    // IMAGE UPLOADER & MANAGER LOGIC
+    // ===================================================================
+    function setImageUploadTab(tab) {
+      document.getElementById('imagePanelUpload')?.classList.add('hidden');
+      document.getElementById('imagePanelPreset')?.classList.add('hidden');
+      document.getElementById('imagePanelUrl')?.classList.add('hidden');
+
+      ['Upload', 'Preset', 'Url'].forEach(t => {
+        const btn = document.getElementById('tabBtn' + t);
+        if (btn) {
+          btn.className = 'px-2.5 py-1 rounded-md font-semibold bg-slate-100 hover:bg-slate-200 text-slate-700 transition flex items-center gap-1';
+        }
+      });
+
+      const activeBtn = document.getElementById('tabBtn' + tab.charAt(0).toUpperCase() + tab.slice(1));
+      if (activeBtn) {
+        activeBtn.className = 'px-2.5 py-1 rounded-md font-bold bg-[#2271b1] text-white transition flex items-center gap-1';
+      }
+
+      const activePanel = document.getElementById('imagePanel' + tab.charAt(0).toUpperCase() + tab.slice(1));
+      if (activePanel) {
+        activePanel.classList.remove('hidden');
+      }
+
+      lucide.createIcons();
+    }
+
+    function setProductImagePreview(url, name = '', sizeDesc = '') {
+      document.getElementById('editProductImage').value = url || '';
+      const previewImg = document.getElementById('editProductPreviewImg');
+      const previewCard = document.getElementById('productImagePreviewCard');
+      const nameEl = document.getElementById('editProductPreviewName');
+      const sizeEl = document.getElementById('editProductPreviewSize');
+      const urlInput = document.getElementById('editProductImageUrlInput');
+
+      if (url) {
+        previewImg.src = url;
+        previewCard.classList.remove('hidden');
+        nameEl.innerText = name || (url.startsWith('data:') ? 'Качено локално изображение' : url.split('/').pop().split('?')[0]);
+        sizeEl.innerText = sizeDesc || 'Активна снимка за продукта';
+        if (urlInput && !url.startsWith('data:')) {
+          urlInput.value = url;
+        }
+      } else {
+        previewImg.src = '';
+        previewCard.classList.add('hidden');
+        if (urlInput) urlInput.value = '';
+      }
+    }
+
+    function clearProductImage() {
+      setProductImagePreview('');
+    }
+
+    function selectPresetImage(path, label) {
+      setProductImagePreview(path, label, 'Оригинална студийна опаковка на Agro Demetra');
+    }
+
+    function handleImageUrlInput(val) {
+      const trimmed = (val || '').trim();
+      if (trimmed) {
+        setProductImagePreview(trimmed, trimmed.split('/').pop().split('?')[0], 'Външен URL адрес');
+      } else {
+        clearProductImage();
+      }
+    }
+
+    function triggerFileInput() {
+      document.getElementById('imageFileInput')?.click();
+    }
+
+    function handleImageFileSelect(e) {
+      const file = e.target.files?.[0];
+      if (file) processSelectedImageFile(file);
+    }
+
+    function handleImageDragOver(e) {
+      e.preventDefault();
+      document.getElementById('imageDropZone')?.classList.add('border-emerald-500', 'bg-emerald-50/40');
+    }
+
+    function handleImageDragLeave(e) {
+      e.preventDefault();
+      document.getElementById('imageDropZone')?.classList.remove('border-emerald-500', 'bg-emerald-50/40');
+    }
+
+    function handleImageDrop(e) {
+      e.preventDefault();
+      document.getElementById('imageDropZone')?.classList.remove('border-emerald-500', 'bg-emerald-50/40');
+      const file = e.dataTransfer?.files?.[0];
+      if (file && file.type.startsWith('image/')) {
+        processSelectedImageFile(file);
+      }
+    }
+
+    // Client-side image optimizer using Canvas (resizes & compresses to WebP)
+    function processSelectedImageFile(file) {
+      const dropZone = document.getElementById('imageDropZone');
+      if (dropZone) {
+        dropZone.innerHTML = '<div class="py-3 text-xs font-bold text-emerald-700 flex items-center justify-center gap-2"><span class="animate-spin inline-block">⟳</span> Оптимизиране и компресиране на снимката...</div>';
+      }
+
+      const reader = new FileReader();
+      reader.onload = function(evt) {
+        const rawDataUrl = evt.target.result;
+        const img = new Image();
+        img.onload = function() {
+          const canvas = document.createElement('canvas');
+          const MAX_SIZE = 800; // Optimal for e-commerce
+          let w = img.width;
+          let h = img.height;
+
+          if (w > h) {
+            if (w > MAX_SIZE) {
+              h = Math.round((h * MAX_SIZE) / w);
+              w = MAX_SIZE;
+            }
+          } else {
+            if (h > MAX_SIZE) {
+              w = Math.round((w * MAX_SIZE) / h);
+              h = MAX_SIZE;
+            }
+          }
+
+          canvas.width = w;
+          canvas.height = h;
+          const ctx = canvas.getContext('2d');
+          ctx.drawImage(img, 0, 0, w, h);
+
+          // Export as compressed WebP
+          const optimizedWebp = canvas.toDataURL('image/webp', 0.85);
+          const sizeKb = Math.round((optimizedWebp.length * 3 / 4) / 1024);
+
+          setProductImagePreview(optimizedWebp, file.name, `Качен файл (${w}x${h}px · ~${sizeKb} KB WebP)`);
+
+          // Restore drop zone markup
+          if (dropZone) {
+            dropZone.innerHTML = `
+              <input type="file" id="imageFileInput" accept="image/png, image/jpeg, image/webp, image/jpg" class="hidden" onchange="handleImageFileSelect(event)">
+              <div class="w-10 h-10 rounded-full bg-emerald-100/70 text-emerald-700 flex items-center justify-center mx-auto mb-2 group-hover:scale-110 transition">
+                <i data-lucide="upload-cloud" class="w-5 h-5"></i>
+              </div>
+              <div class="text-xs font-bold text-slate-800">
+                Кликнете за избор на файл или го пуснете тук (Drag & Drop)
+              </div>
+              <div class="text-[10px] text-slate-400 mt-1">
+                Снимката "${file.name}" е успешно прикачена! Можете да качите друга по всяко време.
+              </div>
+            `;
+            lucide.createIcons();
+          }
+        };
+        img.src = rawDataUrl;
+      };
+      reader.readAsDataURL(file);
+    }
+
+    // Support Ctrl+V paste from clipboard
+    window.addEventListener('paste', (e) => {
+      const modal = document.getElementById('productEditModal');
+      if (modal && !modal.classList.contains('hidden')) {
+        const items = e.clipboardData?.items;
+        if (items) {
+          for (let i = 0; i < items.length; i++) {
+            if (items[i].type.indexOf('image') !== -1) {
+              const file = items[i].getAsFile();
+              if (file) {
+                processSelectedImageFile(file);
+                setImageUploadTab('upload');
+                break;
+              }
+            }
+          }
+        }
+      }
+    });
+
+    // ===================================================================
     // PRODUCT MODAL (ADD & EDIT)
     // ===================================================================
     function openAddProductModal() {
@@ -1641,8 +1926,11 @@
       document.getElementById('editProductReg').value = 'БАБХ: № ';
       document.getElementById('editProductActive').value = '';
       document.getElementById('editProductQuarantine').value = '14 дни';
-      document.getElementById('editProductImage').value = 'https://images.unsplash.com/photo-1585314062340-f1a5a7c9328d?auto=format&fit=crop&w=600&q=80';
       document.getElementById('editProductDesc').value = '';
+      
+      setProductImagePreview('/images/products/bottle-1l.jpg', '1L Бутилка', 'Стандартна агро опаковка');
+      setImageUploadTab('upload');
+
       document.getElementById('productEditModal').classList.remove('hidden');
       lucide.createIcons();
     }
@@ -1661,8 +1949,11 @@
       document.getElementById('editProductReg').value = p.reg || '';
       document.getElementById('editProductActive').value = p.active || '';
       document.getElementById('editProductQuarantine').value = p.quarantine || '';
-      document.getElementById('editProductImage').value = p.image || '';
       document.getElementById('editProductDesc').value = p.desc || '';
+
+      setProductImagePreview(p.image || '/images/products/bottle-1l.jpg', p.name, 'Текущо изображение');
+      setImageUploadTab('upload');
+
       document.getElementById('productEditModal').classList.remove('hidden');
       lucide.createIcons();
     }
