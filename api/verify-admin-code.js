@@ -1,6 +1,11 @@
 const crypto = require('crypto');
 
-const ALLOWED_ADMINS = ['emil9030@gmail.com', 'agents.crew.ai@gmail.com'];
+const ALLOWED_ADMINS = [
+  'emil9030@gmail.com',
+  'agents.crew.ai@gmail.com',
+  'agrodemetra@abv.bg',
+  'iliyanasavcheva91@gmail.com'
+];
 const AUTH_SECRET = process.env.ADMIN_AUTH_SECRET || 'agro-demetra-resend-otp-secret-2026';
 
 module.exports = async (req, res) => {

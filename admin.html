@@ -73,7 +73,7 @@
             <input 
               type="email" 
               id="loginEmailInput" 
-              placeholder="напр. emil9030@gmail.com" 
+              placeholder="напр. admin@agrodemetra.bg" 
               class="w-full pl-10 pr-4 py-3 rounded-xl bg-slate-800/90 border border-slate-700 text-white placeholder-slate-500 text-sm focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:border-transparent transition"
             >
             <i data-lucide="mail" class="w-4 h-4 text-slate-400 absolute left-3.5 top-3.5"></i>
@@ -82,13 +82,10 @@
 
         <div class="p-3 rounded-xl bg-slate-800/60 border border-slate-700/60 text-[11px] text-slate-400 space-y-1">
           <div class="font-semibold text-slate-300 flex items-center gap-1.5">
-            <i data-lucide="lock" class="w-3.5 h-3.5 text-emerald-400"></i> Оторизирани администратори:
+            <i data-lucide="shield-check" class="w-3.5 h-3.5 text-emerald-400"></i> Защитен администраторски достъп
           </div>
-          <div class="font-mono text-emerald-400 flex items-center gap-1.5">
-            <span class="w-1.5 h-1.5 rounded-full bg-emerald-400"></span> emil9030@gmail.com
-          </div>
-          <div class="font-mono text-emerald-400 flex items-center gap-1.5">
-            <span class="w-1.5 h-1.5 rounded-full bg-emerald-400"></span> agents.crew.ai@gmail.com
+          <div class="text-slate-400 leading-relaxed">
+            Входът е ограничен само за регистрирани администратори на Agro Demetra. След въвеждане на имейла ще получите еднократен код за сигурност.
           </div>
         </div>
 
@@ -207,7 +204,7 @@
         <span id="adminGreeting" class="text-slate-400 flex items-center gap-1.5">
           <i data-lucide="user-check" class="w-3.5 h-3.5 text-emerald-400"></i>
           <span>Админ:</span>
-          <strong id="adminUserEmail" class="text-white font-mono">emil9030@gmail.com</strong>
+          <strong id="adminUserEmail" class="text-white font-mono">Администратор</strong>
         </span>
         <button onclick="logoutAdmin()" class="bg-red-950/60 hover:bg-red-900 border border-red-800/60 text-red-300 px-2.5 py-1 rounded text-[11px] font-semibold flex items-center gap-1 transition" title="Изход от системата">
           <i data-lucide="log-out" class="w-3.5 h-3.5"></i> Изход
@@ -657,10 +654,12 @@
                 </p>
               </div>
               <div>
-                <span class="block font-bold text-slate-700 mb-1">Оторизирани администратори:</span>
-                <div class="p-2.5 bg-white rounded-lg border border-emerald-200 font-mono text-emerald-800 font-bold space-y-1">
-                  <div>✓ emil9030@gmail.com</div>
-                  <div>✓ agents.crew.ai@gmail.com</div>
+                <span class="block font-bold text-slate-700 mb-1">Контрол на достъпа:</span>
+                <div class="p-2.5 bg-white rounded-lg border border-emerald-200 text-slate-700 text-xs">
+                  <div class="flex items-center gap-1.5 font-semibold text-emerald-800">
+                    <i data-lucide="shield-check" class="w-4 h-4 text-emerald-600"></i>
+                    <span>Списъкът с оторизирани администратори е активен и защитен на сървърно ниво.</span>
+                  </div>
                 </div>
               </div>
             </div>
@@ -995,7 +994,12 @@
     // ===================================================================
     // CONSTANTS & STATE
     // ===================================================================
-    const ALLOWED_ADMINS = ['emil9030@gmail.com', 'agents.crew.ai@gmail.com'];
+    const ALLOWED_ADMINS = [
+      'emil9030@gmail.com',
+      'agents.crew.ai@gmail.com',
+      'agrodemetra@abv.bg',
+      'iliyanasavcheva91@gmail.com'
+    ];
     let currentAuthSession = null;
     let pendingOtpData = null; // { email, expiresAt, token }
 
@@ -1091,7 +1095,7 @@
       }
 
       if (!ALLOWED_ADMINS.includes(email)) {
-        showLoginAlert('❌ Грешка: Имейлът <strong>' + email + '</strong> няма администраторски права. Разрешени са само emil9030@gmail.com и agents.crew.ai@gmail.com.');
+        showLoginAlert('❌ Грешка: Имейлът <strong>' + email + '</strong> няма администраторски права за достъп.');
         return;
       }
 
