@@ -994,12 +994,6 @@
     // ===================================================================
     // CONSTANTS & STATE
     // ===================================================================
-    const ALLOWED_ADMINS = [
-      'emil9030@gmail.com',
-      'agents.crew.ai@gmail.com',
-      'agrodemetra@abv.bg',
-      'iliyanasavcheva91@gmail.com'
-    ];
     let currentAuthSession = null;
     let pendingOtpData = null; // { email, expiresAt, token }
 
@@ -1047,12 +1041,10 @@
     function checkAuth() {
       try {
         const saved = JSON.parse(localStorage.getItem('agro_admin_auth') || 'null');
-        if (saved && saved.email && saved.expiresAt && Date.now() < saved.expiresAt) {
-          if (ALLOWED_ADMINS.includes(saved.email.toLowerCase())) {
-            currentAuthSession = saved;
-            showAdminApp(saved.email);
-            return;
-          }
+        if (saved && saved.email && saved.token && saved.expiresAt && Date.now() < saved.expiresAt) {
+          currentAuthSession = saved;
+          showAdminApp(saved.email);
+          return;
         }
       } catch (e) {}
 
@@ -1094,13 +1086,8 @@
         return;
       }
 
-      if (!ALLOWED_ADMINS.includes(email)) {
-        showLoginAlert('❌ Грешка: Имейлът <strong>' + email + '</strong> няма администраторски права за достъп.');
-        return;
-      }
-
       btn.disabled = true;
-      btn.innerHTML = '<span class="inline-block animate-spin mr-2">⟳</span> Изпращане през Resend...';
+      btn.innerHTML = '<span class="inline-block animate-spin mr-2">⟳</span> Проверка и изпращане на код...';
 
       const customApiKey = localStorage.getItem('agro_resend_api_key') || '';
 
